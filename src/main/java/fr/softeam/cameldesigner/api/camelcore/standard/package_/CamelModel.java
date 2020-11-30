@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 

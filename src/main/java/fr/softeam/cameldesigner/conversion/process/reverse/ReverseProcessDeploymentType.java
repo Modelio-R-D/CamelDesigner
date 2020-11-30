@@ -224,10 +224,10 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
             return reverse ((SoftwareComponent) element);
         } else if  (element instanceof VM){
             return reverse ((VM) element);
-        } 
+        }
         else if  (element instanceof Communication){
             return reverse ((Communication) element);
-        } 
+        }
         else if  (element instanceof BuildConfiguration){
             return reverse ((BuildConfiguration) element);
         }  else if (element instanceof ClusterConfiguration){
@@ -246,7 +246,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
             return reverse ((LocationCoupling) element);
         }  else if (element instanceof RequirementSet){
             return reverse ((RequirementSet) element);
-        } 
+        }
         else if  (element instanceof CommunicationPort){
             if(element instanceof ProvidedCommunication){
                 return reverse ((ProvidedCommunication) element);
@@ -294,7 +294,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
             proxyProvidedCommunication = reverse(communication.getProvidedCommunication());
             if(proxyProvidedCommunication != null) {
                 proxyProvidedCommunication.getElement().setName(communication.getProvidedCommunication().getName());
-                this.processedCamelElements.put(communication.getProvidedCommunication(), proxyProvidedCommunication);                
+                this.processedCamelElements.put(communication.getProvidedCommunication(), proxyProvidedCommunication);
             }
         }
         
@@ -305,7 +305,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
             proxyRequiredCommunication = reverse(communication.getRequiredCommunication());
             if(proxyRequiredCommunication != null) {
                 proxyRequiredCommunication.getElement().setName(communication.getRequiredCommunication().getName());
-                this.processedCamelElements.put(communication.getRequiredCommunication(), proxyProvidedCommunication);                
+                this.processedCamelElements.put(communication.getRequiredCommunication(), proxyProvidedCommunication);
             }
         }
         
@@ -313,7 +313,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         
         
         
-        IUmlModel umlModel = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel(); 
+        IUmlModel umlModel = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel();
         
         ConnectorEnd endSource = umlModel.createConnectorEnd();
         ConnectorEnd endTarget = umlModel.createConnectorEnd();
@@ -321,8 +321,8 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         
         
         
-        endSource.setSource((Instance) proxyRequiredCommunication.getElement());
-        endSource.setTarget((Instance) proxyProvidedCommunication.getElement());
+        endSource.setSource((Instance) proxyProvidedCommunication.getElement());
+        endSource.setTarget((Instance) proxyRequiredCommunication.getElement());
         
         proxyCommunication.getElement().getLinkEnd().add(endTarget);
         
@@ -352,7 +352,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
                     this.processedCamelElements.put(providedCommunication, umlProvidedCommunication);
                 }
             }
-            
+        
             this.setUmlElementParent(umlProvidedCommunication.getElement());
         }
         super.updateOwner(reversedElement, element);
@@ -364,7 +364,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         
             referencedRequirement = (fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement) this.processedCamelElements.get(requirementElement);
         } else {
-            
+        
             referencedRequirement = (fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement) (new ReverseProcessRequirement(null, this.processedCamelElements)).switchReverse(requirementElement);
             referencedRequirement.getElement().setName(requirementElement.getName());
             this.processedCamelElements.put(requirementElement, referencedRequirement);
@@ -378,7 +378,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         
             referencedRequirementSet = (fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) this.processedCamelElements.get(requirementSet);
         } else {
-            
+        
             referencedRequirementSet = (fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) this.switchReverse(requirementSet);
             referencedRequirementSet.getElement().setName(requirementSet.getName());
             this.processedCamelElements.put(requirementSet, referencedRequirementSet);

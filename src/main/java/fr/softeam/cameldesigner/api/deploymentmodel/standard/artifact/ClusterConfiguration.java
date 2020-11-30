@@ -1,16 +1,18 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -59,10 +61,9 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Artifact
      * @return a {@link ClusterConfiguration} proxy or <i>null</i>.
      */
@@ -71,19 +72,33 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Artifact}
      * @return a {@link ClusterConfiguration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ClusterConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ClusterConfiguration.canInstantiate(obj))
-            return new ClusterConfiguration(obj);
+        	return new ClusterConfiguration(obj);
         else
-            throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'configParameters' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addConfigParameters(final AttributeAttribute obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), ClusterConfiguration.MdaTypes.MDAASSOCDEP);
+            d.setName("configParameters");
+            d.putTagValue(ClusterConfiguration.MdaTypes.MDAASSOCDEP_ROLE, "configParameters");
+        }
     }
 
     @Override
@@ -102,6 +117,23 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
+     * Get the values of the 'configParameters' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<AttributeAttribute> getConfigParameters() {
+        List<AttributeAttribute> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(ClusterConfiguration.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(ClusterConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "configParameters")
+              && AttributeAttribute.canInstantiate(d.getDependsOn()))
+                results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), AttributeAttribute.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
      * Getter for string property 'downloadURL'
      * <p>Property description:
      * <br/><i>null</i></p>
@@ -111,8 +143,7 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}.
-     * 
+     * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
     @Override
@@ -123,6 +154,25 @@ public class ClusterConfiguration extends Configuration {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Remove a value from the 'configParameters' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeConfigParameters(final AttributeAttribute obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(ClusterConfiguration.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ClusterConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
     }
 
     /**
@@ -155,11 +205,11 @@ public class ClusterConfiguration extends Configuration {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

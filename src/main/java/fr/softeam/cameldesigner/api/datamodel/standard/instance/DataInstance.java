@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.instance;
 
@@ -13,6 +13,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
+import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataSourceInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -59,10 +60,9 @@ public class DataInstance extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link DataInstance} proxy or <i>null</i>.
      */
@@ -71,19 +71,18 @@ public class DataInstance extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link DataInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static DataInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (DataInstance.canInstantiate(obj))
-            return new DataInstance(obj);
+        	return new DataInstance(obj);
         else
-            throw new IllegalArgumentException("DataInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DataInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -105,6 +104,7 @@ public class DataInstance extends Feature {
      * Get the value of the 'dataSourceInstance' role.<p>
      * Role description:
      * null
+     * 
      */
     public DataSourceInstance getDataSourceInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -118,8 +118,7 @@ public class DataInstance extends Feature {
     }
 
     /**
-     * Get the underlying {@link Instance}.
-     * 
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -131,6 +130,7 @@ public class DataInstance extends Feature {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
     public Data getType() {
         return (Data)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), Data.STEREOTYPE_NAME);
@@ -145,6 +145,7 @@ public class DataInstance extends Feature {
      * Set the value of the 'dataSourceInstance' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setDataSourceInstance(final DataSourceInstance obj) {
         Dependency dep = null;
@@ -169,6 +170,7 @@ public class DataInstance extends Feature {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setType(final Data obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
@@ -192,11 +194,11 @@ public class DataInstance extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

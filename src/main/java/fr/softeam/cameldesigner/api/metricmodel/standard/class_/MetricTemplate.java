@@ -1,28 +1,30 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.List;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
+import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -113,6 +115,22 @@ public class MetricTemplate extends Feature {
     }
 
     /**
+     * Get the value of the 'unit' role.<p>
+     * Role description:
+     * null
+     */
+    public Unit getUnit() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "unit")
+                  && Unit.canInstantiate(d.getDependsOn())) {
+                     return (Unit)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Unit.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    /**
      * Getter for string property 'valueDirection'
      * <p>Property description:
      * <br/><i>null</i></p>
@@ -127,12 +145,136 @@ public class MetricTemplate extends Feature {
     }
 
     /**
+     * Set the value of the 'attribute' role.<p>
+     * Role description:
+     * null
+     */
+    public void setAttribute(final MeasurableAttribute obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "attribute")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
+              dep.setName("attribute");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "attribute");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
+     * Set the value of the 'unit' role.<p>
+     * Role description:
+     * null
+     */
+    public void setUnit(final Unit obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "unit")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
+              dep.setName("unit");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "unit");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
      * Setter for string property 'valueDirection'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
     public void setValueDirection(final String value) {
         this.elt.putTagValue(MetricTemplate.MdaTypes.VALUEDIRECTION_TAGTYPE_ELT, value);
+    }
+
+    /**
+     * Set the value of the 'valueType' role.<p>
+     * Role description:
+     * null
+     */
+    public void setValueType(final ValueType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "valueType")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
+              dep.setName("valueType");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "valueType");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
+     * Get the value of the 'attribute' role.<p>
+     * Role description:
+     * null
+     */
+    public MeasurableAttribute getAttribute() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+            if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "attribute")
+                    && MeasurableAttribute.canInstantiate(d.getDependsOn())) {
+                return (MeasurableAttribute)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), MeasurableAttribute.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the value of the 'valueType' role.<p>
+     * Role description:
+     * null
+     */
+    public ValueType getValueType() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+            if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "valueType")
+                    && d.getDependsOn().isStereotyped(ValueType.MdaTypes.STEREOTYPE_ELT)) {
+                ModelElement attribut = d.getDependsOn();
+        
+                //BooleanValueType
+                if (BooleanValueType.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, BooleanValueType.MdaTypes.STEREOTYPE_ELT.getName());
+        
+                //List
+                if (List.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, List.MdaTypes.STEREOTYPE_ELT.getName());
+        
+                //Range
+                if (Range.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, Range.MdaTypes.STEREOTYPE_ELT.getName());
+        
+                //RangeUnion
+                if (RangeUnion.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, RangeUnion.MdaTypes.STEREOTYPE_ELT.getName());
+        
+                //StringValueType
+                if (StringValueType.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, StringValueType.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
     }
 
     protected MetricTemplate(final Class elt) {

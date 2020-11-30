@@ -16,24 +16,7 @@ public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
     }
 
     @Override
-    public CDOObject process(ModelElement element) {
-        CDOObject processedElement = null;
-        
-        
-        if(this.processedUmlElements.containsKey(element)) {
-            processedElement = this.processedUmlElements.get(element);
-        } else {
-            processedElement = switchGenerate (element);
-            if(processedElement != null) {
-        
-                this.processedUmlElements.put(element, processedElement);
-            }        
-        }
-        //this.updateOwner(processedElement);
-        return processedElement;
-    }
-
-    private CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(ModelElement element) {
         if (element instanceof Package) {
             return generate ((Package) element);
         }
@@ -86,6 +69,11 @@ public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
 
     private CDOObject generate(Class umlClass) {
         return null;
+    }
+
+    @Override
+    protected void updateParent(CDOObject processedElement) {
+        // TODO Auto-generated method stub
     }
 
 }

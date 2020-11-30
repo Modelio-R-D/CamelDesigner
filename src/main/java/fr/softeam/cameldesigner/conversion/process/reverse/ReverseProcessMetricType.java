@@ -50,11 +50,31 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate reverse(MetricTemplate element) {
-        return fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate.create();
+        fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate metricTemplateProxy = fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate.create();
+        
+        if(element.getAttribute() != null) {
+            MeasurableAttribute referencedMeasurableAttribute = retrievReferencedMeasurableAttribute(element.getAttribute());
+            if(referencedMeasurableAttribute != null) {
+                // TODO
+            }
+        }
+        
+        if(element.getUnit() != null) {
+            // TODO
+        }
+        
+        if(element.getValueType() != null) {
+            // TODO
+        }
+        metricTemplateProxy.setValueDirection(Short.toString(element.getValueDirection()));
+        return metricTemplateProxy;
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor reverse(Sensor element) {
-        return fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor.create();
+        fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor sensorProxy = fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor.create() ;                //sensorProxy
+        sensorProxy.setIsPush(Boolean.toString(element.isIsPush()));
+        sensorProxy.setConfiguration(element.getConfiguration());
+        return sensorProxy;
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule reverse(Schedule element) {
@@ -62,7 +82,25 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window reverse(Window element) {
-        return fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window.create();
+        fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window windowProxy = fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window.create();
+        
+        windowProxy.setMeasurementSize(Long.toString(element.getMeasurementSize()));
+        
+        if(element.getSizeType() != null) {
+            // TODO
+        }
+        
+        windowProxy.setTimeSize(Long.toString(element.getTimeSize()));
+        
+        
+        if(element.getTimeUnit() != null) {
+            // TODO
+        }
+        
+        if(element.getWindowType() != null) {
+            // TODO
+        }
+        return windowProxy;
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable reverse(MetricVariable element) {
@@ -74,6 +112,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetric reverse(RawMetric element) {
+        // TODO add dependencies
         return fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetric.create();
     }
 
@@ -82,6 +121,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext reverse(CompositeMetricContext element) {
+        // TODO add dependencies
         return fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext.create();
     }
 
@@ -90,7 +130,13 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     private fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute reverse(MeasurableAttribute element) {
-        return fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.create();
+        fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute measurableAttributeProxy = fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.create();
+        return measurableAttributeProxy;
+    }
+
+    private MeasurableAttribute retrievReferencedMeasurableAttribute(MeasurableAttribute attribute) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

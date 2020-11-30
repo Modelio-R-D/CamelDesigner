@@ -1,17 +1,21 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.component;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -34,6 +38,51 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 public abstract class CamelComponent extends Feature {
     public static final String STEREOTYPE_NAME = "CamelComponent";
 
+    /**
+     * Add a value to the 'configurations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addConfigurations(final Configuration obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), CamelComponent.MdaTypes.MDAASSOCDEP);
+            d.setName("configurations");
+            d.putTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE, "configurations");
+        }
+    }
+
+    /**
+     * Add a value to the 'providedCommunications' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addProvidedCommunications(final CommunicationPort obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), CamelComponent.MdaTypes.MDAASSOCDEP);
+            d.setName("providedCommunications");
+            d.putTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE, "providedCommunications");
+        }
+    }
+
+    /**
+     * Add a value to the 'providedHosts' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addProvidedHosts(final HostingPort obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), CamelComponent.MdaTypes.MDAASSOCDEP);
+            d.setName("providedHosts");
+            d.putTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE, "providedHosts");
+        }
+    }
+
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -50,8 +99,24 @@ public abstract class CamelComponent extends Feature {
     }
 
     /**
-     * Get the underlying {@link Component}.
+     * Get the values of the 'configurations' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    public List<Configuration> getConfigurations() {
+        List<Configuration> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "configurations")
+              && Configuration.canInstantiate(d.getDependsOn()))
+                results.add((Configuration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Configuration.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the underlying {@link Component}. 
      * @return the Component represented by this proxy, never null.
      */
     @Override
@@ -59,9 +124,100 @@ public abstract class CamelComponent extends Feature {
         return (Component)super.getElement();
     }
 
+    /**
+     * Get the values of the 'providedCommunications' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<CommunicationPort> getProvidedCommunications() {
+        List<CommunicationPort> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedCommunications")
+              && CommunicationPort.canInstantiate(d.getDependsOn()))
+                results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the values of the 'providedHosts' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<HostingPort> getProvidedHosts() {
+        List<HostingPort> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedHosts")
+              && HostingPort.canInstantiate(d.getDependsOn()))
+                results.add((HostingPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), HostingPort.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Remove a value from the 'configurations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeConfigurations(final Configuration obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'providedCommunications' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeProvidedCommunications(final CommunicationPort obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'providedHosts' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeProvidedHosts(final HostingPort obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
     }
 
     protected CamelComponent(final Component elt) {
@@ -82,11 +238,11 @@ public abstract class CamelComponent extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

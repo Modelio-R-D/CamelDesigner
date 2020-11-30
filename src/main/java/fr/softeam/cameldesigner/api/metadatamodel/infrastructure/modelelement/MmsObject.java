@@ -1,24 +1,28 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -49,8 +53,7 @@ public abstract class MmsObject extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
-     * 
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
     @Override
@@ -103,64 +106,6 @@ public abstract class MmsObject extends NamedElement {
         super(elt);
     }
 
-    /**
-     * Tells whether a {@link MMSObject proxy} can be instantiated from a {@link MObject} checking it is a {@link } stereotyped << MMSObject>>.
-     * <p>
-     * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
-     * @param elt a model object
-     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
-     */
-    public static boolean canInstantiate(final MObject elt) {
-        return ((elt instanceof ModelElement) && (
-                ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConcept.STEREOTYPE_NAME) ||
-                ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConceptInstance.STEREOTYPE_NAME) ||
-                ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsProperty.STEREOTYPE_NAME) ||
-                ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsPropertyInstance.STEREOTYPE_NAME) ));
-    }
-
-    /**
-     * Tries to instantiate a {@link MmsObject} proxy from a {@link ModelElement} stereotyped << MMSObject >> checking its metaclass and its stereotype.
-     * <p>
-     * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
-     * @param obj a ModelElement
-     * @return a {@link Feature} proxy or <i>null</i>.
-     */
-    public static MmsObject instantiate(final ModelElement obj) {
-        if (MmsConcept.canInstantiate(obj)) {
-            return MmsConcept.instantiate(obj);
-        }else if (MmsConceptInstance.canInstantiate(obj)) {
-            return MmsConceptInstance.instantiate(obj);
-        }else if (MmsProperty.canInstantiate(obj)) {
-            return MmsProperty.instantiate(obj);
-        }else if (MmsPropertyInstance.canInstantiate(obj)) {
-            return MmsPropertyInstance.instantiate(obj);
-        }
-        return null;
-    }
-
-    /**
-     * Tries to instantiate a {@link MmsObject} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
-     * <p>
-     * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
-     * @param obj a Class
-     * @return a {@link MmsObject} proxy or <i>null</i>.
-     */
-    public static MmsObject safeinstantiate(final ModelElement obj) throws IllegalArgumentException {
-        if (MmsConcept.canInstantiate(obj)) {
-            return MmsConcept.instantiate(obj);
-        }else if (MmsConceptInstance.canInstantiate(obj)) {
-            return MmsConceptInstance.instantiate(obj);
-        }else if (MmsProperty.canInstantiate(obj)) {
-            return MmsProperty.instantiate(obj);
-        }else if (MmsPropertyInstance.canInstantiate(obj)) {
-            return MmsPropertyInstance.instantiate(obj);
-        }
-        throw new IllegalArgumentException("FeaMmsObjectture: Cannot instantiate "+obj+": wrong element type or stereotype");
-    }
-
     public static final class MdaTypes {
         public static Stereotype STEREOTYPE_ELT;
 
@@ -181,11 +126,11 @@ public abstract class MmsObject extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

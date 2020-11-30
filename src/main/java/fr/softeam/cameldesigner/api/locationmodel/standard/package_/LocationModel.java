@@ -1,18 +1,21 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.package_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.CloudLocation;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -59,10 +62,9 @@ public class LocationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Package
      * @return a {@link LocationModel} proxy or <i>null</i>.
      */
@@ -71,19 +73,48 @@ public class LocationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Package}
      * @return a {@link LocationModel} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static LocationModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (LocationModel.canInstantiate(obj))
-            return new LocationModel(obj);
+        	return new LocationModel(obj);
         else
-            throw new IllegalArgumentException("LocationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("LocationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'cloudLocations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addCloudLocations(final CloudLocation obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), LocationModel.MdaTypes.MDAASSOCDEP);
+            d.setName("cloudLocations");
+            d.putTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE, "cloudLocations");
+        }
+    }
+
+    /**
+     * Add a value to the 'regions' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addRegions(final GeographicalRegion obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), LocationModel.MdaTypes.MDAASSOCDEP);
+            d.setName("regions");
+            d.putTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE, "regions");
+        }
     }
 
     @Override
@@ -105,19 +136,53 @@ public class LocationModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
 
     /**
-     * Get the underlying {@link Package}.
+     * Get the values of the 'cloudLocations' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    public List<CloudLocation> getCloudLocations() {
+        List<CloudLocation> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(LocationModel.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE), "cloudLocations")
+              && CloudLocation.canInstantiate(d.getDependsOn()))
+                results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CloudLocation.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
     @Override
     public Package getElement() {
         return (Package)super.getElement();
+    }
+
+    /**
+     * Get the values of the 'regions' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<GeographicalRegion> getRegions() {
+        List<GeographicalRegion> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(LocationModel.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE), "regions")
+              && GeographicalRegion.canInstantiate(d.getDependsOn()))
+                results.add((GeographicalRegion)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), GeographicalRegion.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
     }
 
     @Override
@@ -126,9 +191,48 @@ public class LocationModel extends SubModel {
     }
 
     /**
+     * Remove a value from the 'cloudLocations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeCloudLocations(final CloudLocation obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(LocationModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'regions' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeRegions(final GeographicalRegion obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(LocationModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(LocationModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
@@ -152,11 +256,11 @@ public class LocationModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

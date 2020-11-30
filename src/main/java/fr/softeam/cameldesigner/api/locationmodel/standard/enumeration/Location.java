@@ -1,17 +1,28 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Enumeration;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -24,58 +35,6 @@ public abstract class Location extends Feature {
     public static final String STEREOTYPE_NAME = "Location";
 
     public static final String ID_TAGTYPE = "id";
-
-    @Override
-    public boolean equals(final Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Location other = (Location) obj;
-        return java.util.Objects.equals(getElement(), other.getElement());
-    }
-
-    /**
-     * Get the underlying {@link Enumeration}.
-     * 
-     * @return the Enumeration represented by this proxy, never null.
-     */
-    @Override
-    public Enumeration getElement() {
-        return (Enumeration)super.getElement();
-    }
-
-    /**
-     * Getter for string property 'id'
-     * <p>Property description:
-     * <br/><i>null</i></p>
-     */
-    public String getId() {
-        return this.elt.getTagValue(Location.MdaTypes.ID_TAGTYPE_ELT);
-    }
-
-    @Override
-    public int hashCode() {
-        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-    }
-
-    /**
-     * Setter for string property 'id'
-     * <p>Property description:
-     * <br/><i>null</i></p>
-     */
-    public void setId(final String value) {
-        this.elt.putTagValue(Location.MdaTypes.ID_TAGTYPE_ELT, value);
-    }
-
-    protected Location(final Enumeration elt) {
-        super(elt);
-    }
 
     /**
      * Tells whether a {@link Location proxy} can be instantiated from a {@link MObject} checking it is a {@link Enumeration} stereotyped << Location >> or << GeographicalRegion >>.
@@ -127,6 +86,57 @@ public abstract class Location extends Feature {
         throw new IllegalArgumentException("Location: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Location other = (Location) obj;
+        return java.util.Objects.equals(getElement(), other.getElement());
+    }
+
+    /**
+     * Get the underlying {@link Enumeration}. 
+     * @return the Enumeration represented by this proxy, never null.
+     */
+    @Override
+    public Enumeration getElement() {
+        return (Enumeration)super.getElement();
+    }
+
+    /**
+     * Getter for string property 'id'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    public String getId() {
+        return this.elt.getTagValue(Location.MdaTypes.ID_TAGTYPE_ELT);
+    }
+
+    @Override
+    public int hashCode() {
+        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Setter for string property 'id'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    public void setId(final String value) {
+        this.elt.putTagValue(Location.MdaTypes.ID_TAGTYPE_ELT, value);
+    }
+
+    protected Location(final Enumeration elt) {
+        super(elt);
+    }
+
     public static final class MdaTypes {
         public static Stereotype STEREOTYPE_ELT;
 
@@ -144,11 +154,11 @@ public abstract class Location extends Feature {
         }
 
 
-static {
-            if(CamelDesignerModule.getInstance() != null) {
-                init(CamelDesignerModule.getInstance().getModuleContext());
-            }
-        }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

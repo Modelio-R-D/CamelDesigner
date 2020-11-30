@@ -1,21 +1,29 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Enumeration;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -53,10 +61,9 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link Location} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Enumeration
      * @return a {@link CloudLocation} proxy or <i>null</i>.
      */
@@ -65,19 +72,33 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Enumeration}
      * @return a {@link CloudLocation} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static CloudLocation safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (CloudLocation.canInstantiate(obj))
-            return new CloudLocation(obj);
+        	return new CloudLocation(obj);
         else
-            throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'subLocations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addSubLocations(final CloudLocation obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), CloudLocation.MdaTypes.MDAASSOCDEP);
+            d.setName("subLocations");
+            d.putTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE, "subLocations");
+        }
     }
 
     @Override
@@ -96,8 +117,7 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}.
-     * 
+     * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
     @Override
@@ -109,6 +129,7 @@ public class CloudLocation extends Location {
      * Get the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
+     * 
      */
     public GeographicalRegion getGeographicalRegion() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -122,12 +143,37 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Getter for string property 'isAssignable'
-     * <p>Property description:
-     * <br/><i>null</i></p>
+     * Get the value of the 'parent' role.<p>
+     * Role description:
+     * null
+     * 
      */
-    public String getIsAssignable() {
-        return this.elt.getTagValue(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT);
+    public CloudLocation getParent() {
+        for (Dependency d : this.elt.getImpactedDependency()) {
+          if (d.isStereotyped(CloudLocation.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE), "subLocations")
+              && CloudLocation.canInstantiate(d.getImpacted())) {
+                  return (CloudLocation)CamelDesignerProxyFactory.instantiate(d.getImpacted(), CloudLocation.MdaTypes.STEREOTYPE_ELT.getName());
+          }
+        }
+        return null;
+    }
+
+    /**
+     * Get the values of the 'subLocations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<CloudLocation> getSubLocations() {
+        List<CloudLocation> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(CloudLocation.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE), "subLocations")
+              && CloudLocation.canInstantiate(d.getDependsOn()))
+                results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CloudLocation.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
     }
 
     @Override
@@ -136,9 +182,38 @@ public class CloudLocation extends Location {
     }
 
     /**
+     * Getter for boolean property 'isAssignable'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    public boolean isIsAssignable() {
+        return this.elt.isTagged(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT);
+    }
+
+    /**
+     * Remove a value from the 'subLocations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeSubLocations(final CloudLocation obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(CloudLocation.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE), "parent")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
      * Set the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setGeographicalRegion(final GeographicalRegion obj) {
         Dependency dep = null;
@@ -160,12 +235,41 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Setter for string property 'isAssignable'
+     * Setter for boolean property 'isAssignable'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    public void setIsAssignable(final String value) {
-        this.elt.putTagValue(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT, value);
+    public void setIsAssignable(final boolean value) {
+        if (value)
+          CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT, this.elt);
+        else
+          this.elt.removeTags(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT);
+    }
+
+    /**
+     * Set the value of the 'parent' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setParent(final CloudLocation obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getImpactedDependency())
+          if (d.isStereotyped(CloudLocation.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE), "subLocations")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if (dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(obj.getElement(), this.elt, CloudLocation.MdaTypes.MDAASSOCDEP);
+              dep.setName("subLocations");
+              dep.putTagValue(CloudLocation.MdaTypes.MDAASSOCDEP_ROLE, "subLocations");
+          }
+          dep.setImpacted(obj.getElement());
+        }
     }
 
     protected CloudLocation(final Enumeration elt) {
@@ -189,11 +293,11 @@ public class CloudLocation extends Location {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

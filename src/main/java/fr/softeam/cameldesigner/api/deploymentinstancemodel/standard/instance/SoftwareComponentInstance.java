@@ -1,16 +1,21 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataInstance;
+import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataSourceInstance;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -57,10 +62,9 @@ public class SoftwareComponentInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentInstance} proxy from a {@link Instance} stereotyped << SoftwareComponentInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SoftwareComponentInstance} proxy from a {@link Instance} stereotyped << SoftwareComponentInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link SoftwareComponentInstance} proxy or <i>null</i>.
      */
@@ -69,19 +73,78 @@ public class SoftwareComponentInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentInstance} proxy from a {@link Instance} stereotyped << SoftwareComponentInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SoftwareComponentInstance} proxy from a {@link Instance} stereotyped << SoftwareComponentInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link SoftwareComponentInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static SoftwareComponentInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (SoftwareComponentInstance.canInstantiate(obj))
-            return new SoftwareComponentInstance(obj);
+        	return new SoftwareComponentInstance(obj);
         else
-            throw new IllegalArgumentException("SoftwareComponentInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SoftwareComponentInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'consumesDataInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addConsumesDataInstances(final DataInstance obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), SoftwareComponentInstance.MdaTypes.MDAASSOCDEP);
+            d.setName("consumesDataInstances");
+            d.putTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE, "consumesDataInstances");
+        }
+    }
+
+    /**
+     * Add a value to the 'generatesDataInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addGeneratesDataInstance(final DataInstance obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), SoftwareComponentInstance.MdaTypes.MDAASSOCDEP);
+            d.setName("generatesDataInstance");
+            d.putTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE, "generatesDataInstance");
+        }
+    }
+
+    /**
+     * Add a value to the 'managesDataSourceInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addManagesDataSourceInstance(final DataSourceInstance obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), SoftwareComponentInstance.MdaTypes.MDAASSOCDEP);
+            d.setName("managesDataSourceInstance");
+            d.putTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE, "managesDataSourceInstance");
+        }
+    }
+
+    /**
+     * Add a value to the 'requiredCommunicationsInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addRequiredCommunicationsInstances(final CommunicationPort obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), SoftwareComponentInstance.MdaTypes.MDAASSOCDEP);
+            d.setName("requiredCommunicationsInstances");
+            d.putTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE, "requiredCommunicationsInstances");
+        }
     }
 
     @Override
@@ -100,8 +163,24 @@ public class SoftwareComponentInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}.
+     * Get the values of the 'consumesDataInstances' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    public List<DataInstance> getConsumesDataInstances() {
+        List<DataInstance> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "consumesDataInstances")
+              && DataInstance.canInstantiate(d.getDependsOn()))
+                results.add((DataInstance)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DataInstance.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -109,9 +188,178 @@ public class SoftwareComponentInstance extends ComponentInstance {
         return (Instance)super.getElement();
     }
 
+    /**
+     * Get the values of the 'generatesDataInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<DataInstance> getGeneratesDataInstance() {
+        List<DataInstance> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "generatesDataInstance")
+              && DataInstance.canInstantiate(d.getDependsOn()))
+                results.add((DataInstance)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DataInstance.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the values of the 'managesDataSourceInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<DataSourceInstance> getManagesDataSourceInstance() {
+        List<DataSourceInstance> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "managesDataSourceInstance")
+              && DataSourceInstance.canInstantiate(d.getDependsOn()))
+                results.add((DataSourceInstance)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DataSourceInstance.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the values of the 'requiredCommunicationsInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<CommunicationPort> getRequiredCommunicationsInstances() {
+        List<CommunicationPort> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredCommunicationsInstances")
+              && CommunicationPort.canInstantiate(d.getDependsOn()))
+                results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the value of the 'requiredHostInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public HostingPort getRequiredHostInstance() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostInstance")
+                  && HostingPort.canInstantiate(d.getDependsOn())) {
+                     return (HostingPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), HostingPort.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Remove a value from the 'consumesDataInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeConsumesDataInstances(final DataInstance obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'generatesDataInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeGeneratesDataInstance(final DataInstance obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'managesDataSourceInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeManagesDataSourceInstance(final DataSourceInstance obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Remove a value from the 'requiredCommunicationsInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeRequiredCommunicationsInstances(final CommunicationPort obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Set the value of the 'requiredHostInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setRequiredHostInstance(final HostingPort obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostInstance")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), SoftwareComponentInstance.MdaTypes.MDAASSOCDEP);
+              dep.setName("requiredHostInstance");      dep.putTagValue(SoftwareComponentInstance.MdaTypes.MDAASSOCDEP_ROLE, "requiredHostInstance");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     protected SoftwareComponentInstance(final Instance elt) {
@@ -132,11 +380,11 @@ public class SoftwareComponentInstance extends ComponentInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

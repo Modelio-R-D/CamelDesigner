@@ -29,23 +29,7 @@ public class GenerateProcess extends AbstractGenerateProcess {
     }
 
     @Override
-    public CDOObject process(ModelElement element) {
-        CDOObject processedElement = null;
-        
-        
-        if(this.processedUmlElements.containsKey(element)) {
-            processedElement = this.processedUmlElements.get(element);
-        } else {
-            processedElement = switchGenerate (element);
-            if(processedElement != null) {
-        
-                this.processedUmlElements.put(element, processedElement);
-            }        
-        }
-        return processedElement;
-    }
-
-    private CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(ModelElement element) {
         if (element instanceof Package) {
             Package umlPackage = (Package) element;
         
@@ -244,6 +228,46 @@ public class GenerateProcess extends AbstractGenerateProcess {
         CamelModel camelModelParent = (CamelModel) this.getCamelElementParent();
         camelModelParent.getDeploymentModels().add(deploymentTypeModel);
         return deploymentTypeModel;
+    }
+
+    @Override
+    protected void updateParent(CDOObject processedElement) {
+        if(this.getCamelElementParent() instanceof camel.core.CamelModel) {
+            CamelModel camelModelParent = (CamelModel) this.getCamelElementParent();
+            if(processedElement instanceof camel.deployment.DeploymentTypeModel) {
+                camelModelParent.getDeploymentModels().add((camel.deployment.DeploymentTypeModel)processedElement);
+            } else if(processedElement instanceof camel.deployment.DeploymentInstanceModel) {
+                camelModelParent.getDeploymentModels().add((camel.deployment.DeploymentInstanceModel)processedElement);
+            } else if(processedElement instanceof camel.requirement.RequirementModel) {
+                camelModelParent.getRequirementModels().add((camel.requirement.RequirementModel)processedElement);
+            } else if(processedElement instanceof camel.metric.MetricTypeModel) {
+                camelModelParent.getMetricModels().add((camel.metric.MetricTypeModel)processedElement);
+            } else if(processedElement instanceof camel.metric.MetricInstanceModel) {
+                camelModelParent.getMetricModels().add((camel.metric.MetricInstanceModel)processedElement);
+            } else if(processedElement instanceof camel.mms.MetaDataModel) {
+                camelModelParent.getMetadataModels().add((camel.mms.MetaDataModel)processedElement);
+            } else if(processedElement instanceof camel.constraint.ConstraintModel) {
+                camelModelParent.getConstraintModels().add((camel.constraint.ConstraintModel)processedElement);
+            } else if(processedElement instanceof camel.data.DataTypeModel) {
+                camelModelParent.getDataModels().add((camel.data.DataTypeModel)processedElement);
+            } else if(processedElement instanceof camel.data.DataInstanceModel) {
+                camelModelParent.getDataModels().add((camel.data.DataInstanceModel)processedElement);
+            } else if(processedElement instanceof camel.execution.ExecutionModel) {
+                camelModelParent.getExecutionModels().add((camel.execution.ExecutionModel)processedElement);
+            } else if(processedElement instanceof camel.location.LocationModel) {
+                camelModelParent.getLocationModels().add((camel.location.LocationModel)processedElement);
+            } else if(processedElement instanceof camel.organisation.OrganisationModel) {
+                camelModelParent.getOrganisationModels().add((camel.organisation.OrganisationModel)processedElement);
+            } else if(processedElement instanceof camel.scalability.ScalabilityModel) {
+                camelModelParent.getScalabilityModels().add((camel.scalability.ScalabilityModel)processedElement);
+            } else if(processedElement instanceof camel.security.SecurityModel) {
+                camelModelParent.getSecurityModels().add((camel.security.SecurityModel)processedElement);
+            } else if(processedElement instanceof camel.type.TypeModel) {
+                camelModelParent.getTypeModels().add((camel.type.TypeModel)processedElement);
+            } else if(processedElement instanceof camel.unit.UnitModel) {
+                camelModelParent.getUnitModels().add((camel.unit.UnitModel)processedElement);
+            }
+        }
     }
 
 }

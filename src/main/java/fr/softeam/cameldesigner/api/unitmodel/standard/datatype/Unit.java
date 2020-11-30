@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -15,11 +15,17 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link DataType} with << Unit >> stereotype.
@@ -33,6 +39,7 @@ public abstract class Unit extends Feature {
      * Add a value of the 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
     public void addMultipleOf(final Unit obj) {
         if (obj != null) {
@@ -59,8 +66,7 @@ public abstract class Unit extends Feature {
     }
 
     /**
-     * Get the underlying {@link DataType}.
-     * 
+     * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -72,21 +78,15 @@ public abstract class Unit extends Feature {
      * Get the values of the 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
     public List<Unit> getMultipleOf() {
         List<Unit> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
           if (d.isStereotyped(Unit.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(Unit.MdaTypes.MDAASSOCDEP_ROLE), "")) {
-        
-            //DimensionedUnit
-              if ( d.getDependsOn().isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DimensionedUnit.STEREOTYPE_NAME))
-                  results.add((DimensionedUnit)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DimensionedUnit.MdaTypes.STEREOTYPE_ELT.getName()));
-        
-              //DimensionedUnit
-              if ( d.getDependsOn().isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DimensionedUnit.STEREOTYPE_NAME))
-                  results.add((DimensionedUnit)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DimensionedUnit.MdaTypes.STEREOTYPE_ELT.getName()));
-        
+              && Objects.equals(d.getTagValue(Unit.MdaTypes.MDAASSOCDEP_ROLE), "")
+              && Unit.canInstantiate(d.getImpacted())) {
+                 results.add((Unit)CamelDesignerProxyFactory.instantiate(d.getImpacted(), Unit.STEREOTYPE_NAME));
           }
         }
         return Collections.unmodifiableList(results);
@@ -101,6 +101,7 @@ public abstract class Unit extends Feature {
      * Remove a value from 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
     public boolean removeMultipleOf(final Unit obj) {
         if (obj != null) {
@@ -133,11 +134,11 @@ public abstract class Unit extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

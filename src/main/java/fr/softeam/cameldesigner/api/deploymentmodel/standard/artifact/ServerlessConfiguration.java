@@ -1,16 +1,20 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -61,10 +65,9 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Artifact
      * @return a {@link ServerlessConfiguration} proxy or <i>null</i>.
      */
@@ -73,19 +76,33 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Artifact}
      * @return a {@link ServerlessConfiguration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ServerlessConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ServerlessConfiguration.canInstantiate(obj))
-            return new ServerlessConfiguration(obj);
+        	return new ServerlessConfiguration(obj);
         else
-            throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'environmentConfigParams' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addEnvironmentConfigParams(final AttributeAttribute obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), ServerlessConfiguration.MdaTypes.MDAASSOCDEP);
+            d.setName("environmentConfigParams");
+            d.putTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE, "environmentConfigParams");
+        }
     }
 
     @Override
@@ -113,6 +130,23 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
+     * Get the value of the 'buildConfiguration' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public BuildConfiguration getBuildConfiguration() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "buildConfiguration")
+                  && BuildConfiguration.canInstantiate(d.getDependsOn())) {
+                     return (BuildConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), BuildConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    /**
      * Getter for string property 'continuousDeployment'
      * <p>Property description:
      * <br/><i>null</i></p>
@@ -122,8 +156,7 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}.
-     * 
+     * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
     @Override
@@ -131,9 +164,62 @@ public class ServerlessConfiguration extends Configuration {
         return (Artifact)super.getElement();
     }
 
+    /**
+     * Get the values of the 'environmentConfigParams' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<AttributeAttribute> getEnvironmentConfigParams() {
+        List<AttributeAttribute> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "environmentConfigParams")
+              && AttributeAttribute.canInstantiate(d.getDependsOn()))
+                results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), AttributeAttribute.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the value of the 'eventConfiguration' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public EventConfiguration getEventConfiguration() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "eventConfiguration")
+                  && EventConfiguration.canInstantiate(d.getDependsOn())) {
+                     return (EventConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), EventConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Remove a value from the 'environmentConfigParams' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeEnvironmentConfigParams(final AttributeAttribute obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
     }
 
     /**
@@ -146,12 +232,62 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
+     * Set the value of the 'buildConfiguration' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setBuildConfiguration(final BuildConfiguration obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "buildConfiguration")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), ServerlessConfiguration.MdaTypes.MDAASSOCDEP);
+              dep.setName("buildConfiguration");      dep.putTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE, "buildConfiguration");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
      * Setter for string property 'continuousDeployment'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
     public void setContinuousDeployment(final String value) {
         this.elt.putTagValue(ServerlessConfiguration.MdaTypes.CONTINUOUSDEPLOYMENT_TAGTYPE_ELT, value);
+    }
+
+    /**
+     * Set the value of the 'eventConfiguration' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setEventConfiguration(final EventConfiguration obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(ServerlessConfiguration.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE), "eventConfiguration")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), ServerlessConfiguration.MdaTypes.MDAASSOCDEP);
+              dep.setName("eventConfiguration");      dep.putTagValue(ServerlessConfiguration.MdaTypes.MDAASSOCDEP_ROLE, "eventConfiguration");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     protected ServerlessConfiguration(final Artifact elt) {
@@ -178,11 +314,11 @@ public class ServerlessConfiguration extends Configuration {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

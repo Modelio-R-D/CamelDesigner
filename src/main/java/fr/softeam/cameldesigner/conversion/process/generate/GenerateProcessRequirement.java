@@ -28,69 +28,33 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
     }
 
     @Override
-    public CDOObject process(ModelElement element) {
-        CDOObject processedElement = null;
-        
-        if(this.processedUmlElements.containsKey(element)) {
-            processedElement = this.processedUmlElements.get(element);
-        } else {
-            processedElement = switchGenerate (element);
-            if(processedElement != null) {
-                this.processedUmlElements.put(element, processedElement);
-            }        
-        }
-        return processedElement;
-    }
-
-    private CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(ModelElement element) {
         if (element instanceof Class) {
             Class umlClass = (Class) element;
-            if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    HorizontalScaleRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScaleRequirement.STEREOTYPE_NAME)) {
                 return generate((HorizontalScaleRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    LocationRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LocationRequirement.STEREOTYPE_NAME)) {
                 return generate((LocationRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    OSRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OSRequirement.STEREOTYPE_NAME) ) {
                 return generate((OSRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    PaaSRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaSRequirement.STEREOTYPE_NAME)) {
                 return generate((PaaSRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    ProviderRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ProviderRequirement.STEREOTYPE_NAME)) {
                 return generate((ProviderRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    ResourceRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ResourceRequirement.STEREOTYPE_NAME)) {
                 return generate((ResourceRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    VerticalScaleRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VerticalScaleRequirement.STEREOTYPE_NAME)) {
                 return generate((VerticalScaleRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    SecurityRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityRequirement.STEREOTYPE_NAME)) {
                 return generate((SecurityRequirement.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    ServiceLevelObjective.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ServiceLevelObjective.STEREOTYPE_NAME)) {
                 return generate((ServiceLevelObjective.instantiate(umlClass)));
-            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    OptimisationRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            } else if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OptimisationRequirement.STEREOTYPE_NAME)) {
                 return generate((OptimisationRequirement.instantiate(umlClass)));
             }
         } else if (element instanceof Enumeration) {
             Enumeration umlEnumeration = (Enumeration) element;
-            if(umlEnumeration.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    ImageRequirement.STEREOTYPE_NAME)
-                    && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            if(umlEnumeration.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ImageRequirement.STEREOTYPE_NAME)) {
                 return generate((ImageRequirement.instantiate(umlEnumeration)));
             }
         }
@@ -106,7 +70,9 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
                 imageRequirement.getImages().add(image);
             }
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(imageRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(imageRequirement);
+        }
         return imageRequirement;
     }
 
@@ -121,7 +87,9 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
             // TODO
             //optimisationRequirement.setMetriVariable(optimisationRequirementProxy.getMetricVariable());
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(optimisationRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(optimisationRequirement);
+        }
         return optimisationRequirement;
     }
 
@@ -130,7 +98,9 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
         serviceLevelObjective.setName(serviceLevelObjectiveProxy.getElement().getName());
         //TODO
         // set constrain & ViolatingEvent
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(serviceLevelObjective);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(serviceLevelObjective);
+        }
         return serviceLevelObjective;
     }
 
@@ -138,21 +108,27 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
         camel.requirement.SecurityRequirement securityRequirement = camel.requirement.RequirementFactory.eINSTANCE.createSecurityRequirement();
         securityRequirement.setName(securityRequirementProxy.getElement().getName());
         // TODO set Security Control
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(securityRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(securityRequirement);
+        }
         return securityRequirement;
     }
 
     private CDOObject generate(VerticalScaleRequirement verticalScaleRequirementProxy) {
         camel.requirement.VerticalScaleRequirement verticalScaleRequirement = camel.requirement.RequirementFactory.eINSTANCE.createVerticalScaleRequirement();
         verticalScaleRequirement.setName(verticalScaleRequirementProxy.getElement().getName());
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(verticalScaleRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(verticalScaleRequirement);
+        }
         return verticalScaleRequirement;
     }
 
     private CDOObject generate(ResourceRequirement resourceRequirementProxy) {
         camel.requirement.ResourceRequirement resourceRequirement = camel.requirement.RequirementFactory.eINSTANCE.createResourceRequirement();
         resourceRequirement.setName(resourceRequirementProxy.getElement().getName());
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(resourceRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(resourceRequirement);
+        }
         return resourceRequirement;
     }
 
@@ -168,14 +144,18 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
                 providerRequirement.getProviderNames().add(providerName);
             }
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(providerRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(providerRequirement);
+        }
         return providerRequirement;
     }
 
     private CDOObject generate(PaaSRequirement paaSRequirementProxy) {
         camel.requirement.PaaSRequirement paaSRequirement = camel.requirement.RequirementFactory.eINSTANCE.createPaaSRequirement();
         paaSRequirement.setName(paaSRequirementProxy.getElement().getName());
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(paaSRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(paaSRequirement);
+        }
         return paaSRequirement;
     }
 
@@ -188,7 +168,9 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
         if(StringUtils.isBoolean(osRequirementProxy.getIs64os())) {
             osRequirement.setIs64os(Boolean.parseBoolean(osRequirementProxy.getIs64os()));
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(osRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(osRequirement);
+        }
         return osRequirement;
     }
 
@@ -202,7 +184,9 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
                 //locationRequirement.getLocations().add(locationElement)
             }
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(locationRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(locationRequirement);
+        }
         return locationRequirement;
     }
 
@@ -217,8 +201,39 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
                 && StringUtils.isNumeric(horizontalScaleRequirementProxy.getMaxInstances())) {
             horizontalScaleRequirement.setMaxInstances(Integer.parseInt(horizontalScaleRequirementProxy.getMaxInstances()));
         }
-        ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(horizontalScaleRequirement);
+        if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add(horizontalScaleRequirement);
+        }
         return horizontalScaleRequirement;
+    }
+
+    @Override
+    protected void updateParent(CDOObject processedElement) {
+        if(this.getCamelElementParent() instanceof camel.requirement.RequirementModel) {
+            if(processedElement instanceof camel.requirement.HorizontalScaleRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.HorizontalScaleRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.LocationRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.LocationRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.OSRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.OSRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.PaaSRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.PaaSRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.ProviderRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.ProviderRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.ResourceRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.ResourceRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.VerticalScaleRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.VerticalScaleRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.SecurityRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.SecurityRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.ServiceLevelObjective) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.ServiceLevelObjective)processedElement);
+            } else if(processedElement instanceof camel.requirement.OptimisationRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.OptimisationRequirement)processedElement);
+            } else if(processedElement instanceof camel.requirement.ImageRequirement) {
+                ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.ImageRequirement)processedElement);
+            } 
+        }
     }
 
 }

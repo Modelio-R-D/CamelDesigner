@@ -1,16 +1,19 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -57,10 +60,9 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link ContainerInstance} proxy or <i>null</i>.
      */
@@ -69,19 +71,33 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link ContainerInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ContainerInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (ContainerInstance.canInstantiate(obj))
-            return new ContainerInstance(obj);
+        	return new ContainerInstance(obj);
         else
-            throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'requiredCommunicationInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addRequiredCommunicationInstances(final CommunicationPort obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), ContainerInstance.MdaTypes.MDAASSOCDEP);
+            d.setName("requiredCommunicationInstances");
+            d.putTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE, "requiredCommunicationInstances");
+        }
     }
 
     @Override
@@ -100,8 +116,7 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}.
-     * 
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -109,9 +124,87 @@ public class ContainerInstance extends ComponentInstance {
         return (Instance)super.getElement();
     }
 
+    /**
+     * Get the values of the 'requiredCommunicationInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public List<CommunicationPort> getRequiredCommunicationInstances() {
+        List<CommunicationPort> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(ContainerInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredCommunicationInstances")
+              && CommunicationPort.canInstantiate(d.getDependsOn()))
+                results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the value of the 'requiredHostInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public HostingPort getRequiredHostInstance() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(ContainerInstance.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostInstance")
+                  && HostingPort.canInstantiate(d.getDependsOn())) {
+                     return (HostingPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), HostingPort.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Remove a value from the 'requiredCommunicationInstances' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeRequiredCommunicationInstances(final CommunicationPort obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(ContainerInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Set the value of the 'requiredHostInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setRequiredHostInstance(final HostingPort obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(ContainerInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostInstance")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), ContainerInstance.MdaTypes.MDAASSOCDEP);
+              dep.setName("requiredHostInstance");      dep.putTagValue(ContainerInstance.MdaTypes.MDAASSOCDEP_ROLE, "requiredHostInstance");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     protected ContainerInstance(final Instance elt) {
@@ -132,11 +225,11 @@ public class ContainerInstance extends ComponentInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

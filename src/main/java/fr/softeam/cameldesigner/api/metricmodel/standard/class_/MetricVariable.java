@@ -1,16 +1,19 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -63,10 +66,9 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link MetricVariable} proxy or <i>null</i>.
      */
@@ -75,19 +77,33 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link MetricVariable} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MetricVariable safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricVariable.canInstantiate(obj))
-            return new MetricVariable(obj);
+        	return new MetricVariable(obj);
         else
-            throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Add a value to the 'componentMetrics' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void addComponentMetrics(final Metric obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), MetricVariable.MdaTypes.MDAASSOCDEP);
+            d.setName("componentMetrics");
+            d.putTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE, "componentMetrics");
+        }
     }
 
     @Override
@@ -106,17 +122,41 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Getter for string property 'currentConfiguration'
-     * <p>Property description:
-     * <br/><i>null</i></p>
+     * Get the value of the 'component' role.<p>
+     * Role description:
+     * null
+     * 
      */
-    public String getCurrentConfiguration() {
-        return this.elt.getTagValue(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT);
+    public CamelComponent getComponent() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), "component")
+                  && CamelComponent.canInstantiate(d.getDependsOn())) {
+                     return (CamelComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CamelComponent.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
     }
 
     /**
-     * Get the underlying {@link Class}.
+     * Get the values of the 'componentMetrics' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    public List<Metric> getComponentMetrics() {
+        List<Metric> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), "componentMetrics")
+              && Metric.canInstantiate(d.getDependsOn()))
+                results.add((Metric)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Metric.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -133,27 +173,83 @@ public class MetricVariable extends Metric {
         return this.elt.getTagValue(MetricVariable.MdaTypes.FORMULA_TAGTYPE_ELT);
     }
 
-    /**
-     * Getter for string property 'onNodeCandidates'
-     * <p>Property description:
-     * <br/><i>null</i></p>
-     */
-    public String getOnNodeCandidates() {
-        return this.elt.getTagValue(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT);
-    }
-
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
     /**
-     * Setter for string property 'currentConfiguration'
+     * Getter for boolean property 'currentConfiguration'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    public void setCurrentConfiguration(final String value) {
-        this.elt.putTagValue(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT, value);
+    public boolean isCurrentConfiguration() {
+        return this.elt.isTagged(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT);
+    }
+
+    /**
+     * Getter for boolean property 'onNodeCandidates'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    public boolean isOnNodeCandidates() {
+        return this.elt.isTagged(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT);
+    }
+
+    /**
+     * Remove a value from the 'componentMetrics' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public boolean removeComponentMetrics(final Metric obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
+    }
+
+    /**
+     * Set the value of the 'component' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setComponent(final CamelComponent obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), "component")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricVariable.MdaTypes.MDAASSOCDEP);
+              dep.setName("component");      dep.putTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE, "component");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
+     * Setter for boolean property 'currentConfiguration'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    public void setCurrentConfiguration(final boolean value) {
+        if (value)
+          CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT, this.elt);
+        else
+          this.elt.removeTags(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT);
     }
 
     /**
@@ -166,12 +262,15 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Setter for string property 'onNodeCandidates'
+     * Setter for boolean property 'onNodeCandidates'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    public void setOnNodeCandidates(final String value) {
-        this.elt.putTagValue(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT, value);
+    public void setOnNodeCandidates(final boolean value) {
+        if (value)
+          CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT, this.elt);
+        else
+          this.elt.removeTags(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT);
     }
 
     protected MetricVariable(final Class elt) {
@@ -201,11 +300,11 @@ public class MetricVariable extends Metric {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

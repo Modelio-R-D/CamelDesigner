@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -15,7 +15,6 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -25,40 +24,6 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 public abstract class Feature extends NamedElement {
     public static final String STEREOTYPE_NAME = "Feature";
-
-    @Override
-    public boolean equals(final Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Feature other = (Feature) obj;
-        return java.util.Objects.equals(getElement(), other.getElement());
-    }
-
-    /**
-     * Get the underlying {@link ModelElement}.
-     * 
-     * @return the ModelElement represented by this proxy, never null.
-     */
-    @Override
-    public ModelElement getElement() {
-        return (ModelElement)super.getElement();
-    }
-
-    @Override
-    public int hashCode() {
-        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-    }
-
-    protected Feature(final ModelElement elt) {
-        super(elt);
-    }
 
     /**
      * Tells whether a {@link Feature proxy} can be instantiated from a {@link MObject} checking it is a {@link } stereotyped << Feature>>.
@@ -111,6 +76,40 @@ public abstract class Feature extends NamedElement {
             return FeaturePort.instantiate(obj);
         }
         throw new IllegalArgumentException("Feature: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Feature other = (Feature) obj;
+        return java.util.Objects.equals(getElement(), other.getElement());
+    }
+
+    /**
+     * Get the underlying {@link ModelElement}.
+     * 
+     * @return the ModelElement represented by this proxy, never null.
+     */
+    @Override
+    public ModelElement getElement() {
+        return (ModelElement)super.getElement();
+    }
+
+    @Override
+    public int hashCode() {
+        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    protected Feature(final ModelElement elt) {
+        super(elt);
     }
 
     public static final class MdaTypes {

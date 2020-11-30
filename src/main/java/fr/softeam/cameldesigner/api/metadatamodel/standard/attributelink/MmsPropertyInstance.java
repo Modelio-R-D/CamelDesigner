@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink;
 
@@ -12,6 +12,7 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -60,10 +61,9 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a AttributeLink
      * @return a {@link MmsPropertyInstance} proxy or <i>null</i>.
      */
@@ -72,19 +72,18 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link AttributeLink}
      * @return a {@link MmsPropertyInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MmsPropertyInstance safeInstantiate(final AttributeLink obj) throws IllegalArgumentException {
         if (MmsPropertyInstance.canInstantiate(obj))
-            return new MmsPropertyInstance(obj);
+        	return new MmsPropertyInstance(obj);
         else
-            throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -103,8 +102,24 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link AttributeLink}.
+     * Get the value of the 'conceptInstance' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    public MmsConceptInstance getConceptInstance() {
+        for (Dependency d : this.elt.getImpactedDependency()) {
+          if (d.isStereotyped(MmsPropertyInstance.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(MmsPropertyInstance.MdaTypes.MDAASSOCDEP_ROLE), "propertyInstance")
+              && MmsConceptInstance.canInstantiate(d.getImpacted())) {
+                  return (MmsConceptInstance)CamelDesignerProxyFactory.instantiate(d.getImpacted(), MmsConceptInstance.MdaTypes.STEREOTYPE_ELT.getName());
+          }
+        }
+        return null;
+    }
+
+    /**
+     * Get the underlying {@link AttributeLink}. 
      * @return the AttributeLink represented by this proxy, never null.
      */
     @Override
@@ -124,6 +139,32 @@ public class MmsPropertyInstance extends MmsObject {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
+    /**
+     * Set the value of the 'conceptInstance' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    public void setConceptInstance(final MmsConceptInstance obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getImpactedDependency())
+          if (d.isStereotyped(MmsPropertyInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MmsPropertyInstance.MdaTypes.MDAASSOCDEP_ROLE), "propertyInstance")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if (dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(obj.getElement(), this.elt, MmsPropertyInstance.MdaTypes.MDAASSOCDEP);
+              dep.setName("propertyInstance");
+              dep.putTagValue(MmsPropertyInstance.MdaTypes.MDAASSOCDEP_ROLE, "propertyInstance");
+          }
+          dep.setImpacted(obj.getElement());
+        }
     }
 
     /**
@@ -156,11 +197,11 @@ public class MmsPropertyInstance extends MmsObject {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

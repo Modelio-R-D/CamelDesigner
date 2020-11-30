@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.04
+ * Module: CamelDesigner v0.1.06
 
- * This file was generated on 11/9/20 11:45 AM by Modelio Studio.
+ * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.class_;
 
@@ -67,10 +67,9 @@ public class RequirementSet extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link RequirementSet} proxy or <i>null</i>.
      */
@@ -79,19 +78,18 @@ public class RequirementSet extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link RequirementSet} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static RequirementSet safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RequirementSet.canInstantiate(obj))
-            return new RequirementSet(obj);
+        	return new RequirementSet(obj);
         else
-            throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -110,8 +108,7 @@ public class RequirementSet extends Feature {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -123,6 +120,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public HorizontalScaleRequirement getHorizontalScaleRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -139,6 +137,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public ImageRequirement getImageRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -155,6 +154,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public LocationRequirement getLocationRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -171,6 +171,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'osRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public OSRequirement getOsRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -187,6 +188,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public PaaSRequirement getPaasRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -203,6 +205,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public ProviderRequirement getProviderRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -219,6 +222,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public ResourceRequirement getResourceRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -235,6 +239,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public SecurityRequirement getSecurityRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -251,6 +256,7 @@ public class RequirementSet extends Feature {
      * Get the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public VerticalScaleRequirement getVerticalScaleRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -272,6 +278,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setHorizontalScaleRequirement(final HorizontalScaleRequirement obj) {
         Dependency dep = null;
@@ -296,6 +303,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setImageRequirement(final ImageRequirement obj) {
         Dependency dep = null;
@@ -320,6 +328,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setLocationRequirement(final LocationRequirement obj) {
         Dependency dep = null;
@@ -344,6 +353,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'osRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setOsRequirement(final OSRequirement obj) {
         Dependency dep = null;
@@ -368,6 +378,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setPaasRequirement(final PaaSRequirement obj) {
         Dependency dep = null;
@@ -392,6 +403,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setProviderRequirement(final ProviderRequirement obj) {
         Dependency dep = null;
@@ -416,6 +428,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setResourceRequirement(final ResourceRequirement obj) {
         Dependency dep = null;
@@ -440,6 +453,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setSecurityRequirement(final SecurityRequirement obj) {
         Dependency dep = null;
@@ -464,6 +478,7 @@ public class RequirementSet extends Feature {
      * Set the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
+     * 
      */
     public void setVerticalScaleRequirement(final VerticalScaleRequirement obj) {
         Dependency dep = null;
@@ -502,11 +517,11 @@ public class RequirementSet extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
