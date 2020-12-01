@@ -1,6 +1,11 @@
 package fr.softeam.cameldesigner.impl;
 
+import java.io.File;
+import java.nio.file.Path;
 import java.util.Map;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.modelio.api.modelio.mc.IModelComponentDescriptor;
+import org.modelio.api.modelio.mc.IModelComponentService;
 import org.modelio.api.module.lifecycle.DefaultModuleLifeCycleHandler;
 import org.modelio.api.module.lifecycle.ModuleException;
 import org.modelio.vbasic.version.Version;
@@ -14,9 +19,7 @@ public class CamelDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
 
     @Override
     public boolean start() throws ModuleException {
-        //IModelingSession modelingSession = this.module.getModuleContext().getModelingSession();
-        //this.modelChangeHandler = new CamelModelChangeHandler();
-        //modelingSession.addModelHandler(this.modelChangeHandler);
+        installRamc();
         return super.start();
     }
 
@@ -45,6 +48,25 @@ public class CamelDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
     @Override
     public void unselect() throws ModuleException {
         super.unselect();
+    }
+
+    private void installRamc() {
+        Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
+        
+        final IModelComponentService modelComponentService = CamelDesignerModule.getInstance().getModuleContext().getModelioServices().getModelComponentService();
+        for (IModelComponentDescriptor mc : modelComponentService.getModelComponents()) {
+            if (mc.getName().equals("MetaDataSchema")) {
+                if (new Version(mc.getVersion()).isOlderThan(new Version("1.0.00"))) {
+                    modelComponentService.deployModelComponent(new File(mdaplugsPath.resolve("res" + File.separator + "ramc" + File.separator + "MetaDataSchema.ramc").toString()), new NullProgressMonitor());
+                } else {
+                    // Ramc already deployed...
+                    return;
+                }
+            }
+        }
+        
+        // No ramc found, deploy it
+        modelComponentService.deployModelComponent(new File(mdaplugsPath.resolve("res" + File.separator + "ramc" + File.separator + "MetaDataSchema.ramc").toString()), new NullProgressMonitor());
     }
 
 }

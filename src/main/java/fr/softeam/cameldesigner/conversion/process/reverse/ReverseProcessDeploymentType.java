@@ -271,6 +271,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort requiredCommunication = fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.create();
         requiredCommunication.getElement().setDirection(PortOrientation.IN);
         requiredCommunication.getElement().setValue(Integer.toString(element.getPortNumber()));
+        requiredCommunication.setIsMandatory(requiredCommunication.isIsMandatory());
         return requiredCommunication;
     }
 

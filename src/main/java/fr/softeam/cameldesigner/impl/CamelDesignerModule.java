@@ -77,7 +77,7 @@ public class CamelDesignerModule extends AbstractJavaModule {
      */
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+            default: return null;
         }
     }
 
