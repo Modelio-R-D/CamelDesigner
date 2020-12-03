@@ -63,9 +63,6 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement resourceRequirementProxy = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement.create();
         
         
-        
-        //Class umlResourceRequirement = resourceRequirementProxy.getElement();
-        
         for(camel.core.Feature feature : element.getSubFeatures()) {
             FeatureClass featureClassProxy = FeatureClass.create();
             Class featureClass = featureClassProxy.getElement();
