@@ -63,7 +63,7 @@ public abstract class AbstractGenerateProcess implements IElementProcess {
     protected abstract void updateParent(CDOObject processedElement);
 
     /**
-     * Generate Camel Element and update its container
+     * Generate Camel Element and update its container (parent).
      * @param ModelElement element from Modelio Model Tree
      * 
      * @return generated Camel Element

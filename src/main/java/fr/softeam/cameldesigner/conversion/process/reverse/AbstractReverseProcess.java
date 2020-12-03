@@ -74,40 +74,45 @@ public abstract class AbstractReverseProcess implements IElementProcess {
         //                    System.out.println(sb.toString());
         //                }
         //        System.out.println(map);
-                
-                CamelElement processedElement = null;
-                if(this.processedCamelElements.containsKey(element)) {
-                    processedElement = this.processedCamelElements.get(element);
-                } else {
-                    processedElement = this.switchReverse (element);
-                
-                    /*
-                     *  update name and add annotations
-                     */
-                    if(processedElement != null) {
-                
-                        if(element instanceof NamedElement) {
-                            NamedElement namedElement = (NamedElement)element;
-                            processedElement.getElement().setName(((NamedElement)element).getName());
-                
-                            EList<MmsObject> annotations = namedElement.getAnnotations();
         
-                
-                        } else if (element instanceof MmsObject) {
-                            processedElement.getElement().setName(((MmsObject)element).getName());
-                
-                
-                
-                        }
-                        this.processedCamelElements.put(element, processedElement);
-                    }
-                
+        CamelElement processedElement = null;
+        if(this.processedCamelElements.containsKey(element)) {
+            processedElement = this.processedCamelElements.get(element);
+        } else {
+            processedElement = this.switchReverse (element);
+        
+            /*
+             *  update name and add annotations
+             */
+            if(processedElement != null) {
+        
+                if(element instanceof NamedElement) {
+                    NamedElement namedElement = (NamedElement)element;
+                    processedElement.getElement().setName(((NamedElement)element).getName());
+        
+                    EList<MmsObject> annotations = namedElement.getAnnotations();
+        
+        
+                } else if (element instanceof MmsObject) {
+                    processedElement.getElement().setName(((MmsObject)element).getName());
+        
+        
+        
                 }
-                
-                this.updateOwner(processedElement.getElement(), element);
+                this.processedCamelElements.put(element, processedElement);
+            }
+        
+        }
+        if(processedElement != null) {
+            this.updateOwner(processedElement.getElement(), element);
+        }
         return processedElement;
     }
 
+    /**
+     * switchReverse will only reverse the element (and its dependencies) without updating the parent. Updating the parent will happen in method process
+     * @return
+     */
     protected abstract CamelElement switchReverse(CDOObject element);
 
 }
