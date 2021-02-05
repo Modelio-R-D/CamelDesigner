@@ -1,0 +1,25 @@
+image:readme//logo-modelio-v4.png[] 
+
+= **CamelDesigner**
+
+**Camel Designer**  is an Open Source extension of Modelio Modelling Tool for conceiving Camel Models. The Cloud Application Modelling and Execution Language (CAMEL) is a multi-domain-specific language (DSL) allowing users to specify multiple aspects/domains related to multi-/cross-cloud applications, such as the domains of deployment, requirement, metric, scalability, security, organisation and execution.
+
+For more information, visit our link:https://github.com/Modelio-R-D/CamelDesigner/wiki[**Wiki**] page.  
+
+== **Dependencies**
+
+* link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 JDK] 
+* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]       
+
+== **Contributing**
+
+Contributions are welcome. 
+Please fork and make your changes. For major changes, please open an issue and discuss it with the other authors.
+
+
+== **Affiliation**
+
+
+This module is developed by Softeam R&D Department and this work is supported by the European Commission through the link:https://www.morphemic.cloud/[MORPHEMIC H2020 project].
+
+
