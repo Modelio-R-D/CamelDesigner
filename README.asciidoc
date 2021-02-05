@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 image:readme//logo-modelio-v4.png[] 
 
 = **CamelDesigner**
@@ -23,3 +24,6 @@ Please fork and make your changes. For major changes, please open an issue and d
 This module is developed by Softeam R&D Department and this work is supported by the European Commission through the link:https://www.morphemic.cloud/[MORPHEMIC H2020 project].
 
 
+=======
+# CamelDesigner
+>>>>>>> 2784097468158d8485d269847048c62baa58724b
