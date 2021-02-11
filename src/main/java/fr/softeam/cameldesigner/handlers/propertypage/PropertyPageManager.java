@@ -66,7 +66,9 @@ public class PropertyPageManager {
             result = new OptimisationRequirementPropertyPage(OptimisationRequirement.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
         
         } else if (CommunicationPort.canInstantiate(elt)) {
+        
             CommunicationPort commPort = CommunicationPort.instantiate((org.modelio.metamodel.uml.statik.Port) elt);
+        
             if (commPort.getElement().getDirection().equals(PortOrientation.IN))
                 result = new ProvidedCommunicationPropertyPage(commPort);
             else  if (commPort.getElement().getDirection().equals(PortOrientation.OUT))
@@ -87,6 +89,9 @@ public class PropertyPageManager {
         
         } else if (AttributeAttribute.canInstantiate(elt)) {
             result = new AttributeAttributePropertyPage(AttributeAttribute.instantiate((org.modelio.metamodel.uml.statik.Attribute) elt));
+        
+        } else if (SoftwareComponent.canInstantiate(elt)) {
+            result = new SoftwareComponentPropertyPage(SoftwareComponent.instantiate((org.modelio.metamodel.uml.statik.Component) elt));
         }
         return result;
     }

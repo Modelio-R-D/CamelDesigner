@@ -1,10 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypage.deploymentproperties;
 
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
-import fr.softeam.cameldesigner.handlers.propertypage.coreproperties.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class ScriptConfigurationPropertyPage<T extends ScriptConfiguration> extends NamedElementPropertyPage<T> {
+public class ScriptConfigurationPropertyPage<T extends ScriptConfiguration> extends ConfigurationPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

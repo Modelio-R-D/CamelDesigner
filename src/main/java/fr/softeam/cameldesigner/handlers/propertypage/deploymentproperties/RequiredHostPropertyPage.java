@@ -1,10 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypage.deploymentproperties;
 
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
-import fr.softeam.cameldesigner.handlers.propertypage.coreproperties.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class RequiredHostPropertyPage<T extends HostingPort> extends NamedElementPropertyPage<T> {
+public class RequiredHostPropertyPage<T extends HostingPort> extends HostingPortPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -26,7 +25,7 @@ public class RequiredHostPropertyPage<T extends HostingPort> extends NamedElemen
      */
     @Override
     public void update(IModulePropertyTable table) {
-        // TODO Auto-generated method stub
+        super.update(table);
     }
 
     public RequiredHostPropertyPage(T elt) {

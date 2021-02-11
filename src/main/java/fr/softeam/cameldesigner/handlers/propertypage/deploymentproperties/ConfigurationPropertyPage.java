@@ -1,9 +1,14 @@
 package fr.softeam.cameldesigner.handlers.propertypage.deploymentproperties;
 
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.handlers.propertypage.coreproperties.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class RequiredCommunicationPropertyPage<T extends CommunicationPort> extends CommunicationPortPropertyPage<T> {
+public abstract class ConfigurationPropertyPage<T extends Configuration> extends FeaturePropertyPage<T> {
+    public ConfigurationPropertyPage(T elt) {
+        super(elt);
+    }
+
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -14,15 +19,7 @@ public class RequiredCommunicationPropertyPage<T extends CommunicationPort> exte
      */
     @Override
     public int changeProperty(int row, String value) {
-        int currentRow = super.changeProperty(row, value);
-        
-        switch (currentRow) {
-        
-        case 1 :
-            this.element.setIsMandatory(Boolean.valueOf(value));
-        
-        }
-        return currentRow - 1;
+        return super.changeProperty(row, value);
     }
 
     /**
@@ -34,12 +31,6 @@ public class RequiredCommunicationPropertyPage<T extends CommunicationPort> exte
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        
-        table.addProperty("isMandatory", this.element.isIsMandatory());
-    }
-
-    public RequiredCommunicationPropertyPage(T elt) {
-        super(elt);
     }
 
 }
