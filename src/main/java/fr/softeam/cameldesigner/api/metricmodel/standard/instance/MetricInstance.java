@@ -61,9 +61,10 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MetricInstance} proxy or <i>null</i>.
      */
@@ -72,25 +73,25 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MetricInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MetricInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MetricInstance.canInstantiate(obj))
-        	return new MetricInstance(obj);
+            return new MetricInstance(obj);
         else
-        	throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addCompositngMetricInstances(final MetricInstance obj) {
         if (obj != null) {
@@ -120,7 +121,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the values of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MetricInstance> getCompositngMetricInstances() {
         List<MetricInstance> results = new ArrayList<>();
@@ -135,7 +135,8 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -147,7 +148,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     public MetricContext getMetricContext() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -164,7 +164,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
     public MetricObjectBinding getObjectBinding() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -186,7 +185,6 @@ public class MetricInstance extends FeatureInstance {
      * Remove a value from 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeCompositngMetricInstances(final MetricInstance obj) {
         if (obj != null) {
@@ -205,7 +203,6 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setMetricContext(final MetricContext obj) {
         Dependency dep = null;
@@ -230,7 +227,6 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setObjectBinding(final MetricObjectBinding obj) {
         Dependency dep = null;
@@ -269,11 +265,11 @@ public class MetricInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

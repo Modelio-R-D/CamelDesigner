@@ -13,7 +13,6 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -66,9 +65,10 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricVariable} proxy or <i>null</i>.
      */
@@ -77,25 +77,25 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricVariable} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MetricVariable safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricVariable.canInstantiate(obj))
-        	return new MetricVariable(obj);
+            return new MetricVariable(obj);
         else
-        	throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addComponentMetrics(final Metric obj) {
         if (obj != null) {
@@ -125,7 +125,6 @@ public class MetricVariable extends Metric {
      * Get the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     public CamelComponent getComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -142,7 +141,6 @@ public class MetricVariable extends Metric {
      * Get the values of the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Metric> getComponentMetrics() {
         List<Metric> results = new ArrayList<>();
@@ -156,7 +154,8 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -200,7 +199,6 @@ public class MetricVariable extends Metric {
      * Remove a value from the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeComponentMetrics(final Metric obj) {
         if (obj != null) {
@@ -219,7 +217,6 @@ public class MetricVariable extends Metric {
      * Set the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setComponent(final CamelComponent obj) {
         Dependency dep = null;
@@ -300,11 +297,11 @@ public class MetricVariable extends Metric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

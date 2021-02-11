@@ -60,9 +60,10 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MmsConceptInstance} proxy or <i>null</i>.
      */
@@ -71,25 +72,25 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MmsConceptInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MmsConceptInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MmsConceptInstance.canInstantiate(obj))
-        	return new MmsConceptInstance(obj);
+            return new MmsConceptInstance(obj);
         else
-        	throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addPropertyInstance(final MmsPropertyInstance obj) {
         if (obj != null) {
@@ -116,7 +117,8 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -128,7 +130,6 @@ public class MmsConceptInstance extends MmsObject {
      * Get the values of the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MmsPropertyInstance> getPropertyInstance() {
         List<MmsPropertyInstance> results = new ArrayList<>();
@@ -150,7 +151,6 @@ public class MmsConceptInstance extends MmsObject {
      * Remove a value from the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removePropertyInstance(final MmsPropertyInstance obj) {
         if (obj != null) {
@@ -183,11 +183,11 @@ public class MmsConceptInstance extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

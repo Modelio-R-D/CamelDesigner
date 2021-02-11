@@ -145,30 +145,6 @@ public class MetricTemplate extends Feature {
     }
 
     /**
-     * Set the value of the 'attribute' role.<p>
-     * Role description:
-     * null
-     */
-    public void setAttribute(final MeasurableAttribute obj) {
-        Dependency dep = null;
-        for (Dependency d : this.elt.getDependsOnDependency())
-          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "attribute")) {
-             dep = d;
-             break;
-          }
-        if (obj == null) {
-           if(dep != null) dep.delete();
-        } else {
-          if (dep == null) {
-              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
-              dep.setName("attribute");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "attribute");
-          }
-          dep.setDependsOn(obj.getElement());
-        }
-    }
-
-    /**
      * Set the value of the 'unit' role.<p>
      * Role description:
      * null
@@ -199,30 +175,6 @@ public class MetricTemplate extends Feature {
      */
     public void setValueDirection(final String value) {
         this.elt.putTagValue(MetricTemplate.MdaTypes.VALUEDIRECTION_TAGTYPE_ELT, value);
-    }
-
-    /**
-     * Set the value of the 'valueType' role.<p>
-     * Role description:
-     * null
-     */
-    public void setValueType(final ValueType obj) {
-        Dependency dep = null;
-        for (Dependency d : this.elt.getDependsOnDependency())
-          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "valueType")) {
-             dep = d;
-             break;
-          }
-        if (obj == null) {
-           if(dep != null) dep.delete();
-        } else {
-          if (dep == null) {
-              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
-              dep.setName("valueType");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "valueType");
-          }
-          dep.setDependsOn(obj.getElement());
-        }
     }
 
     /**
@@ -279,6 +231,54 @@ public class MetricTemplate extends Feature {
 
     protected MetricTemplate(final Class elt) {
         super(elt);
+    }
+
+    /**
+     * Set the value of the 'attribute' role.<p>
+     * Role description:
+     * null
+     */
+    public void setAttribute(final MeasurableAttribute obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "attribute")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
+              dep.setName("attribute");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "attribute");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
+     * Set the value of the 'valueType' role.<p>
+     * Role description:
+     * null
+     */
+    public void setValueType(final ValueType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "valueType")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), MetricTemplate.MdaTypes.MDAASSOCDEP);
+              dep.setName("valueType");      dep.putTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE, "valueType");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     public static final class MdaTypes {

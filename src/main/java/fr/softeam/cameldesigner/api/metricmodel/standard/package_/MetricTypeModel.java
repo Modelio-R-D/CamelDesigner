@@ -67,9 +67,10 @@ public class MetricTypeModel extends MetricModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link MetricTypeModel} proxy or <i>null</i>.
      */
@@ -78,25 +79,25 @@ public class MetricTypeModel extends MetricModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link MetricTypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MetricTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (MetricTypeModel.canInstantiate(obj))
-        	return new MetricTypeModel(obj);
+            return new MetricTypeModel(obj);
         else
-        	throw new IllegalArgumentException("MetricTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addAttributContexts(final AttributeContext obj) {
         if (obj != null) {
@@ -111,7 +112,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addFunctions(final Function obj) {
         if (obj != null) {
@@ -126,7 +126,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addMetricContexts(final MetricContext obj) {
         if (obj != null) {
@@ -141,7 +140,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addMetrics(final Metric obj) {
         if (obj != null) {
@@ -156,7 +154,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addObjectContexts(final ObjectContext obj) {
         if (obj != null) {
@@ -171,7 +168,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addSchedules(final Schedule obj) {
         if (obj != null) {
@@ -186,7 +182,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addSensors(final Sensor obj) {
         if (obj != null) {
@@ -201,7 +196,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addTemplates(final MetricTemplate obj) {
         if (obj != null) {
@@ -216,7 +210,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addWindows(final Window obj) {
         if (obj != null) {
@@ -246,7 +239,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<AttributeContext> getAttributContexts() {
         List<AttributeContext> results = new ArrayList<>();
@@ -260,7 +252,8 @@ public class MetricTypeModel extends MetricModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -272,7 +265,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Function> getFunctions() {
         List<Function> results = new ArrayList<>();
@@ -289,7 +281,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MetricContext> getMetricContexts() {
         List<MetricContext> results = new ArrayList<>();
@@ -306,7 +297,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Metric> getMetrics() {
         List<Metric> results = new ArrayList<>();
@@ -323,7 +313,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<ObjectContext> getObjectContexts() {
         List<ObjectContext> results = new ArrayList<>();
@@ -340,7 +329,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Schedule> getSchedules() {
         List<Schedule> results = new ArrayList<>();
@@ -357,7 +345,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Sensor> getSensors() {
         List<Sensor> results = new ArrayList<>();
@@ -374,7 +361,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MetricTemplate> getTemplates() {
         List<MetricTemplate> results = new ArrayList<>();
@@ -391,7 +377,6 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Window> getWindows() {
         List<Window> results = new ArrayList<>();
@@ -413,7 +398,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeAttributContexts(final AttributeContext obj) {
         if (obj != null) {
@@ -432,7 +416,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeFunctions(final Function obj) {
         if (obj != null) {
@@ -451,7 +434,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeMetricContexts(final MetricContext obj) {
         if (obj != null) {
@@ -470,7 +452,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeMetrics(final Metric obj) {
         if (obj != null) {
@@ -489,7 +470,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeObjectContexts(final ObjectContext obj) {
         if (obj != null) {
@@ -508,7 +488,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeSchedules(final Schedule obj) {
         if (obj != null) {
@@ -527,7 +506,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeSensors(final Sensor obj) {
         if (obj != null) {
@@ -546,7 +524,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeTemplates(final MetricTemplate obj) {
         if (obj != null) {
@@ -565,7 +542,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeWindows(final Window obj) {
         if (obj != null) {
@@ -598,11 +574,11 @@ public class MetricTypeModel extends MetricModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

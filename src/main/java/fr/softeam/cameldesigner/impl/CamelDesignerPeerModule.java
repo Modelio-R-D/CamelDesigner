@@ -14,18 +14,22 @@ public class CamelDesignerPeerModule implements ICamelDesignerPeerModule {
         this.peerConfiguration = peerConfiguration;
     }
 
+    @Override
     public IModuleAPIConfiguration getConfiguration() {
         return this.peerConfiguration;
     }
 
+    @Override
     public String getDescription() {
         return this.module.getDescription();
     }
 
+    @Override
     public String getName() {
         return this.module.getName();
     }
 
+    @Override
     public Version getVersion() {
         return this.module.getVersion();
     }

@@ -12,7 +12,6 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -59,9 +58,10 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityAttribute} proxy or <i>null</i>.
      */
@@ -70,18 +70,19 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static SecurityAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityAttribute.canInstantiate(obj))
-        	return new SecurityAttribute(obj);
+            return new SecurityAttribute(obj);
         else
-        	throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -103,7 +104,6 @@ public class SecurityAttribute extends QualityAttribute {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -117,7 +117,8 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -134,7 +135,6 @@ public class SecurityAttribute extends QualityAttribute {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
@@ -173,11 +173,11 @@ public class SecurityAttribute extends QualityAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

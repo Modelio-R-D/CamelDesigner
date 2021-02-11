@@ -57,9 +57,10 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Class} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Class} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link NonFunctionalEventInstance} proxy or <i>null</i>.
      */
@@ -68,18 +69,19 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Class} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Class} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link NonFunctionalEventInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static NonFunctionalEventInstance safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (NonFunctionalEventInstance.canInstantiate(obj))
-        	return new NonFunctionalEventInstance(obj);
+            return new NonFunctionalEventInstance(obj);
         else
-        	throw new IllegalArgumentException("NonFunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("NonFunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -98,7 +100,8 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -129,11 +132,11 @@ public class NonFunctionalEventInstance extends EventInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

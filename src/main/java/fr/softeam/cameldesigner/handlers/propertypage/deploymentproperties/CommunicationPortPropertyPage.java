@@ -4,7 +4,7 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationP
 import fr.softeam.cameldesigner.handlers.propertypage.coreproperties.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class CommunicationPortPropertyPage<T extends CommunicationPort> extends NamedElementPropertyPage<T> {
+public abstract class CommunicationPortPropertyPage<T extends CommunicationPort> extends NamedElementPropertyPage<T> {
     public CommunicationPortPropertyPage(T elt) {
         super(elt);
     }
@@ -19,7 +19,17 @@ public class CommunicationPortPropertyPage<T extends CommunicationPort> extends 
      */
     @Override
     public int changeProperty(int row, String value) {
-        return super.changeProperty(row, value);
+        int currentRow = super.changeProperty(row, value);
+        
+        switch (currentRow) {
+        
+        case 1 :
+            this.element.setLowPortNumber(value);
+        
+        case 2 :
+            this.element.setHighPortNumber(value);
+        }
+        return currentRow - 2;
     }
 
     /**
@@ -31,6 +41,10 @@ public class CommunicationPortPropertyPage<T extends CommunicationPort> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Low Port Number", getValue(this.element.getLowPortNumber()));
+        
+        table.addProperty("High Port Number", getValue(this.element.getHighPortNumber()));
     }
 
 }

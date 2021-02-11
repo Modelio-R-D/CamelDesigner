@@ -32,20 +32,6 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 public abstract class NamedElement extends CamelElement {
     public static final String STEREOTYPE_NAME = "NamedElement";
 
-    /**
-     * Add a value to the 'annotations' role.<p>
-     * Role description:
-     * null
-     */
-    public void addAnnotations(final MmsObject obj) {
-        if (obj != null) {
-            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
-            d.setName("annotations");
-            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
-        }
-    }
-
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -74,24 +60,6 @@ public abstract class NamedElement extends CamelElement {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-    }
-
-    /**
-     * Remove a value from the 'annotations' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeAnnotations(final MmsObject obj) {
-        if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), ""))
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
-        }
-        return false;
     }
 
     /**
@@ -126,6 +94,38 @@ public abstract class NamedElement extends CamelElement {
 
     protected NamedElement(final ModelElement elt) {
         super(elt);
+    }
+
+    /**
+     * Add a value to the 'annotations' role.<p>
+     * Role description:
+     * null
+     */
+    public void addAnnotations(final MmsObject obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
+            d.setName("annotations");
+            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
+        }
+    }
+
+    /**
+     * Remove a value from the 'annotations' role.<p>
+     * Role description:
+     * null
+     */
+    public boolean removeAnnotations(final MmsObject obj) {
+        if (obj != null) {
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), ""))
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
+        }
+        return false;
     }
 
     public static final class MdaTypes {

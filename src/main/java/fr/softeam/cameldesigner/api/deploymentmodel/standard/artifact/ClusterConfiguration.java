@@ -61,9 +61,10 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ClusterConfiguration} proxy or <i>null</i>.
      */
@@ -72,25 +73,25 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ClusterConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ClusterConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ClusterConfiguration.canInstantiate(obj))
-        	return new ClusterConfiguration(obj);
+            return new ClusterConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addConfigParameters(final AttributeAttribute obj) {
         if (obj != null) {
@@ -120,7 +121,6 @@ public class ClusterConfiguration extends Configuration {
      * Get the values of the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<AttributeAttribute> getConfigParameters() {
         List<AttributeAttribute> results = new ArrayList<>();
@@ -143,7 +143,8 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @Override
@@ -160,7 +161,6 @@ public class ClusterConfiguration extends Configuration {
      * Remove a value from the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeConfigParameters(final AttributeAttribute obj) {
         if (obj != null) {
@@ -205,11 +205,11 @@ public class ClusterConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

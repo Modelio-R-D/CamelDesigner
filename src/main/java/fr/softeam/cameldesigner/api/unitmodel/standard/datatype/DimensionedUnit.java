@@ -11,7 +11,6 @@ import java.util.Collections;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -53,7 +52,6 @@ public abstract class DimensionedUnit extends Unit {
      * Get the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
     public UnitDimension getDimension() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -67,7 +65,8 @@ public abstract class DimensionedUnit extends Unit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -84,7 +83,6 @@ public abstract class DimensionedUnit extends Unit {
      * Set the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setDimension(final UnitDimension obj) {
         Dependency dep = null;
@@ -123,11 +121,11 @@ public abstract class DimensionedUnit extends Unit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

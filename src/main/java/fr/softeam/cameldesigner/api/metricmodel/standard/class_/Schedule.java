@@ -67,9 +67,10 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Schedule} proxy or <i>null</i>.
      */
@@ -78,18 +79,19 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Schedule} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static Schedule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Schedule.canInstantiate(obj))
-        	return new Schedule(obj);
+            return new Schedule(obj);
         else
-        	throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -108,7 +110,8 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -156,7 +159,6 @@ public class Schedule extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     public Unit getTimeUnit() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -214,7 +216,6 @@ public class Schedule extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setTimeUnit(final Unit obj) {
         Dependency dep = null;
@@ -265,11 +266,11 @@ public class Schedule extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

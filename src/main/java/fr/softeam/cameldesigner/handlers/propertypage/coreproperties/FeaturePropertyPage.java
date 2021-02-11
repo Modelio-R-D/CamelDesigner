@@ -3,7 +3,7 @@ package fr.softeam.cameldesigner.handlers.propertypage.coreproperties;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class FeaturePropertyPage<T extends Feature> extends NamedElementPropertyPage<T> {
+public abstract class FeaturePropertyPage<T extends Feature> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

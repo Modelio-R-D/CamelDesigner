@@ -57,9 +57,10 @@ public class List extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link List} proxy from a {@link DataType} stereotyped << List >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link List} proxy from a {@link DataType} stereotyped << List >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link List} proxy or <i>null</i>.
      */
@@ -68,18 +69,19 @@ public class List extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link List} proxy from a {@link DataType} stereotyped << List >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link List} proxy from a {@link DataType} stereotyped << List >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link List} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static List safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (List.canInstantiate(obj))
-        	return new List(obj);
+            return new List(obj);
         else
-        	throw new IllegalArgumentException("List: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("List: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -98,7 +100,8 @@ public class List extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -129,11 +132,11 @@ public class List extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

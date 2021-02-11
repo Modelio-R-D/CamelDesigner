@@ -61,9 +61,10 @@ public class MetricObjectBinding extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricObjectBinding} proxy or <i>null</i>.
      */
@@ -72,18 +73,19 @@ public class MetricObjectBinding extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricObjectBinding} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MetricObjectBinding safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricObjectBinding.canInstantiate(obj))
-        	return new MetricObjectBinding(obj);
+            return new MetricObjectBinding(obj);
         else
-        	throw new IllegalArgumentException("MetricObjectBinding: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricObjectBinding: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -105,7 +107,6 @@ public class MetricObjectBinding extends Feature {
      * Get the value of the 'communicationInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public CommunicationInstance getCommunicationInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -122,7 +123,6 @@ public class MetricObjectBinding extends Feature {
      * Get the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public ComponentInstance getComponentInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -136,7 +136,8 @@ public class MetricObjectBinding extends Feature {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -148,7 +149,6 @@ public class MetricObjectBinding extends Feature {
      * Get the value of the 'executionModel' role.<p>
      * Role description:
      * null
-     * 
      */
     public ExecutionModel getExecutionModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -170,7 +170,6 @@ public class MetricObjectBinding extends Feature {
      * Set the value of the 'communicationInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setCommunicationInstance(final CommunicationInstance obj) {
         Dependency dep = null;
@@ -195,7 +194,6 @@ public class MetricObjectBinding extends Feature {
      * Set the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setComponentInstance(final ComponentInstance obj) {
         Dependency dep = null;
@@ -220,7 +218,6 @@ public class MetricObjectBinding extends Feature {
      * Set the value of the 'executionModel' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setExecutionModel(final ExecutionModel obj) {
         Dependency dep = null;
@@ -259,11 +256,11 @@ public class MetricObjectBinding extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

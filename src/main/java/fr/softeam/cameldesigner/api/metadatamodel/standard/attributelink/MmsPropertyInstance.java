@@ -61,9 +61,10 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a AttributeLink
      * @return a {@link MmsPropertyInstance} proxy or <i>null</i>.
      */
@@ -72,18 +73,19 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link AttributeLink}
      * @return a {@link MmsPropertyInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MmsPropertyInstance safeInstantiate(final AttributeLink obj) throws IllegalArgumentException {
         if (MmsPropertyInstance.canInstantiate(obj))
-        	return new MmsPropertyInstance(obj);
+            return new MmsPropertyInstance(obj);
         else
-        	throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -105,7 +107,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Get the value of the 'conceptInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public MmsConceptInstance getConceptInstance() {
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -119,7 +120,8 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link AttributeLink}. 
+     * Get the underlying {@link AttributeLink}.
+     * 
      * @return the AttributeLink represented by this proxy, never null.
      */
     @Override
@@ -145,7 +147,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Set the value of the 'conceptInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setConceptInstance(final MmsConceptInstance obj) {
         Dependency dep = null;
@@ -197,11 +198,11 @@ public class MmsPropertyInstance extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

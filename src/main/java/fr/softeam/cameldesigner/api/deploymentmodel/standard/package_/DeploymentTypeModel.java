@@ -66,9 +66,10 @@ public class DeploymentTypeModel extends DeploymentModel {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link DeploymentTypeModel} proxy or <i>null</i>.
      */
@@ -77,25 +78,25 @@ public class DeploymentTypeModel extends DeploymentModel {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link DeploymentTypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static DeploymentTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DeploymentTypeModel.canInstantiate(obj))
-        	return new DeploymentTypeModel(obj);
+            return new DeploymentTypeModel(obj);
         else
-        	throw new IllegalArgumentException("DeploymentTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DeploymentTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addCommunications(final Communication obj) {
         if (obj != null) {
@@ -110,7 +111,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addContainers(final Container obj) {
         if (obj != null) {
@@ -125,7 +125,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addHostings(final Hosting obj) {
         if (obj != null) {
@@ -140,7 +139,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addLocationCouplings(final LocationCoupling obj) {
         if (obj != null) {
@@ -155,7 +153,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addPaases(final PaaS obj) {
         if (obj != null) {
@@ -170,7 +167,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addRequirementSets(final RequirementSet obj) {
         if (obj != null) {
@@ -185,7 +181,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
@@ -200,7 +195,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addVms(final VM obj) {
         if (obj != null) {
@@ -230,7 +224,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Communication> getCommunications() {
         List<Communication> results = new ArrayList<>();
@@ -247,7 +240,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Container> getContainers() {
         List<Container> results = new ArrayList<>();
@@ -261,7 +253,8 @@ public class DeploymentTypeModel extends DeploymentModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -273,7 +266,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the value of the 'globalRequirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     public RequirementSet getGlobalRequirementSet() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -290,7 +282,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Hosting> getHostings() {
         List<Hosting> results = new ArrayList<>();
@@ -307,7 +298,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<LocationCoupling> getLocationCouplings() {
         List<LocationCoupling> results = new ArrayList<>();
@@ -324,7 +314,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<PaaS> getPaases() {
         List<PaaS> results = new ArrayList<>();
@@ -341,7 +330,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<RequirementSet> getRequirementSets() {
         List<RequirementSet> results = new ArrayList<>();
@@ -358,7 +346,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<SoftwareComponent> getSoftwareComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
@@ -375,7 +362,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<VM> getVms() {
         List<VM> results = new ArrayList<>();
@@ -397,7 +383,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeCommunications(final Communication obj) {
         if (obj != null) {
@@ -416,7 +401,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeContainers(final Container obj) {
         if (obj != null) {
@@ -435,7 +419,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeHostings(final Hosting obj) {
         if (obj != null) {
@@ -454,7 +437,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeLocationCouplings(final LocationCoupling obj) {
         if (obj != null) {
@@ -473,7 +455,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removePaases(final PaaS obj) {
         if (obj != null) {
@@ -492,7 +473,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeRequirementSets(final RequirementSet obj) {
         if (obj != null) {
@@ -511,7 +491,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
@@ -530,7 +509,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeVms(final VM obj) {
         if (obj != null) {
@@ -549,7 +527,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Set the value of the 'globalRequirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setGlobalRequirementSet(final RequirementSet obj) {
         Dependency dep = null;
@@ -588,11 +565,11 @@ public class DeploymentTypeModel extends DeploymentModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

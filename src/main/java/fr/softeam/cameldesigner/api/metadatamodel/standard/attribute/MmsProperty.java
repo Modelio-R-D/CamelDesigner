@@ -63,9 +63,10 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link MmsProperty} proxy or <i>null</i>.
      */
@@ -74,18 +75,19 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link MmsProperty} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MmsProperty safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (MmsProperty.canInstantiate(obj))
-        	return new MmsProperty(obj);
+            return new MmsProperty(obj);
         else
-        	throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -107,7 +109,6 @@ public class MmsProperty extends MmsObject {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     public MmsConcept getDomain() {
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -121,7 +122,8 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Attribute}. 
+     * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @Override
@@ -142,7 +144,6 @@ public class MmsProperty extends MmsObject {
      * Get the value of the 'range' role.<p>
      * Role description:
      * null
-     * 
      */
     public MmsConcept getRange() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -173,7 +174,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setDomain(final MmsConcept obj) {
         Dependency dep = null;
@@ -208,7 +208,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'range' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setRange(final MmsConcept obj) {
         Dependency dep = null;
@@ -262,11 +261,11 @@ public class MmsProperty extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

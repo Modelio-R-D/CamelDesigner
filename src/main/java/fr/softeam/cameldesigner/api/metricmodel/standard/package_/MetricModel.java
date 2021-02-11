@@ -51,17 +51,8 @@ public abstract class MetricModel extends SubModel {
     }
 
     /**
-     * Get the value to the 'camelModel' role.<p>
-     * Role description:
-     * null
+     * Get the underlying {@link Package}.
      * 
-     */
-    public CamelModel getCamelModel() {
-        return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
-    }
-
-    /**
-     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -74,18 +65,26 @@ public abstract class MetricModel extends SubModel {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
+    protected MetricModel(final Package elt) {
+        super(elt);
+    }
+
+    /**
+     * Get the value to the 'camelModel' role.<p>
+     * Role description:
+     * null
+     */
+    public CamelModel getCamelModel() {
+        return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
+    }
+
     /**
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
-    }
-
-    protected MetricModel(final Package elt) {
-        super(elt);
     }
 
     public static final class MdaTypes {
@@ -102,11 +101,11 @@ public abstract class MetricModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

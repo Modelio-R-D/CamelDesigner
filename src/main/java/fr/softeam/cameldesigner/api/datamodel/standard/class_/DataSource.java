@@ -61,9 +61,10 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link DataSource} proxy or <i>null</i>.
      */
@@ -72,18 +73,19 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link DataSource} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static DataSource safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataSource.canInstantiate(obj))
-        	return new DataSource(obj);
+            return new DataSource(obj);
         else
-        	throw new IllegalArgumentException("DataSource: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataSource: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -102,7 +104,8 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -123,7 +126,6 @@ public class DataSource extends FeatureClass {
      * Get the value of the 'SoftwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     public SoftwareComponent getSoftwareComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -154,7 +156,6 @@ public class DataSource extends FeatureClass {
      * Set the value of the 'SoftwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setSoftwareComponent(final SoftwareComponent obj) {
         Dependency dep = null;
@@ -196,11 +197,11 @@ public class DataSource extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

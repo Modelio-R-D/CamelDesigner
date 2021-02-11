@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -61,9 +60,10 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Enumeration
      * @return a {@link CloudLocation} proxy or <i>null</i>.
      */
@@ -72,25 +72,25 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Enumeration}
      * @return a {@link CloudLocation} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static CloudLocation safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (CloudLocation.canInstantiate(obj))
-        	return new CloudLocation(obj);
+            return new CloudLocation(obj);
         else
-        	throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addSubLocations(final CloudLocation obj) {
         if (obj != null) {
@@ -117,7 +117,8 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @Override
@@ -129,7 +130,6 @@ public class CloudLocation extends Location {
      * Get the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
-     * 
      */
     public GeographicalRegion getGeographicalRegion() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -146,7 +146,6 @@ public class CloudLocation extends Location {
      * Get the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     public CloudLocation getParent() {
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -163,7 +162,6 @@ public class CloudLocation extends Location {
      * Get the values of the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<CloudLocation> getSubLocations() {
         List<CloudLocation> results = new ArrayList<>();
@@ -194,7 +192,6 @@ public class CloudLocation extends Location {
      * Remove a value from the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeSubLocations(final CloudLocation obj) {
         if (obj != null) {
@@ -213,7 +210,6 @@ public class CloudLocation extends Location {
      * Set the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setGeographicalRegion(final GeographicalRegion obj) {
         Dependency dep = null;
@@ -250,7 +246,6 @@ public class CloudLocation extends Location {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setParent(final CloudLocation obj) {
         Dependency dep = null;
@@ -293,11 +288,11 @@ public class CloudLocation extends Location {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

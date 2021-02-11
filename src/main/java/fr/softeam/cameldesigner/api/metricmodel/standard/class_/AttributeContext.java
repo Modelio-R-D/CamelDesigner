@@ -129,30 +129,6 @@ public class AttributeContext extends Feature {
     }
 
     /**
-     * Set the value of the 'attribute' role.<p>
-     * Role description:
-     * null
-     */
-    public void setAttribute(final CamelAttribute obj) {
-        Dependency dep = null;
-        for (Dependency d : this.elt.getDependsOnDependency())
-          if (d.isStereotyped(AttributeContext.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(AttributeContext.MdaTypes.MDAASSOCDEP_ROLE), "attribute")) {
-             dep = d;
-             break;
-          }
-        if (obj == null) {
-           if(dep != null) dep.delete();
-        } else {
-          if (dep == null) {
-              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-              dep = session.getModel().createDependency(this.elt, obj.getElement(), AttributeContext.MdaTypes.MDAASSOCDEP);
-              dep.setName("attribute");      dep.putTagValue(AttributeContext.MdaTypes.MDAASSOCDEP_ROLE, "attribute");
-          }
-          dep.setDependsOn(obj.getElement());
-        }
-    }
-
-    /**
      * Set the value of the 'objectContext' role.<p>
      * Role description:
      * null
@@ -202,6 +178,30 @@ public class AttributeContext extends Feature {
 
     protected AttributeContext(final Class elt) {
         super(elt);
+    }
+
+    /**
+     * Set the value of the 'attribute' role.<p>
+     * Role description:
+     * null
+     */
+    public void setAttribute(final CamelAttribute obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(AttributeContext.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(AttributeContext.MdaTypes.MDAASSOCDEP_ROLE), "attribute")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), AttributeContext.MdaTypes.MDAASSOCDEP);
+              dep.setName("attribute");      dep.putTagValue(AttributeContext.MdaTypes.MDAASSOCDEP_ROLE, "attribute");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     public static final class MdaTypes {

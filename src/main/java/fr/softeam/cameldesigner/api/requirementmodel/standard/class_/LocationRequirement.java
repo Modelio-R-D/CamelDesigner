@@ -62,9 +62,10 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link LocationRequirement} proxy or <i>null</i>.
      */
@@ -73,25 +74,25 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link LocationRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static LocationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (LocationRequirement.canInstantiate(obj))
-        	return new LocationRequirement(obj);
+            return new LocationRequirement(obj);
         else
-        	throw new IllegalArgumentException("LocationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LocationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addLocations(final Location obj) {
         if (obj != null) {
@@ -118,7 +119,8 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -130,7 +132,6 @@ public class LocationRequirement extends HardRequirement {
      * Get the values of the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Location> getLocations() {
         List<Location> results = new ArrayList<>();
@@ -161,7 +162,6 @@ public class LocationRequirement extends HardRequirement {
      * Remove a value from the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeLocations(final Location obj) {
         if (obj != null) {
@@ -209,11 +209,11 @@ public class LocationRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

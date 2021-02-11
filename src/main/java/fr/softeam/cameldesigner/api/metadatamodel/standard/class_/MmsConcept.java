@@ -61,9 +61,10 @@ public class MmsConcept extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MmsConcept} proxy or <i>null</i>.
      */
@@ -72,25 +73,25 @@ public class MmsConcept extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MmsConcept} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static MmsConcept safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MmsConcept.canInstantiate(obj))
-        	return new MmsConcept(obj);
+            return new MmsConcept(obj);
         else
-        	throw new IllegalArgumentException("MmsConcept: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsConcept: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addConcept(final MmsConcept obj) {
         if (obj != null) {
@@ -105,7 +106,6 @@ public class MmsConcept extends MmsObject {
      * Add a value to the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addInstance(final MmsConceptInstance obj) {
         if (obj != null) {
@@ -120,7 +120,6 @@ public class MmsConcept extends MmsObject {
      * Add a value to the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addProperty(final MmsProperty obj) {
         if (obj != null) {
@@ -150,7 +149,6 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MmsConcept> getConcept() {
         List<MmsConcept> results = new ArrayList<>();
@@ -165,7 +163,8 @@ public class MmsConcept extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -177,7 +176,6 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MmsConceptInstance> getInstance() {
         List<MmsConceptInstance> results = new ArrayList<>();
@@ -194,7 +192,6 @@ public class MmsConcept extends MmsObject {
      * Get the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     public MmsConcept getParent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -211,7 +208,6 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<MmsProperty> getProperty() {
         List<MmsProperty> results = new ArrayList<>();
@@ -233,7 +229,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeConcept(final MmsConcept obj) {
         if (obj != null) {
@@ -252,7 +247,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeInstance(final MmsConceptInstance obj) {
         if (obj != null) {
@@ -271,7 +265,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeProperty(final MmsProperty obj) {
         if (obj != null) {
@@ -290,7 +283,6 @@ public class MmsConcept extends MmsObject {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setParent(final MmsConcept obj) {
         Dependency dep = null;
@@ -329,11 +321,11 @@ public class MmsConcept extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

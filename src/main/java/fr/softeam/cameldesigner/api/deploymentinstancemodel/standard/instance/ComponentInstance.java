@@ -46,7 +46,6 @@ public abstract class ComponentInstance extends Feature {
      * Add a value to the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addProvidedCommunicationInstances(final CommunicationPort obj) {
         if (obj != null) {
@@ -61,7 +60,6 @@ public abstract class ComponentInstance extends Feature {
      * Add a value to the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addProvidedHostInstances(final HostingPort obj) {
         if (obj != null) {
@@ -97,7 +95,8 @@ public abstract class ComponentInstance extends Feature {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -118,7 +117,6 @@ public abstract class ComponentInstance extends Feature {
      * Get the values of the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<CommunicationPort> getProvidedCommunicationInstances() {
         List<CommunicationPort> results = new ArrayList<>();
@@ -135,7 +133,6 @@ public abstract class ComponentInstance extends Feature {
      * Get the values of the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<HostingPort> getProvidedHostInstances() {
         List<HostingPort> results = new ArrayList<>();
@@ -152,7 +149,6 @@ public abstract class ComponentInstance extends Feature {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     public CamelComponent getType() {
         return (CamelComponent)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), CamelComponent.STEREOTYPE_NAME);
@@ -167,7 +163,6 @@ public abstract class ComponentInstance extends Feature {
      * Remove a value from the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeProvidedCommunicationInstances(final CommunicationPort obj) {
         if (obj != null) {
@@ -186,7 +181,6 @@ public abstract class ComponentInstance extends Feature {
      * Remove a value from the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeProvidedHostInstances(final HostingPort obj) {
         if (obj != null) {
@@ -223,7 +217,6 @@ public abstract class ComponentInstance extends Feature {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setType(final CamelComponent obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
@@ -253,11 +246,11 @@ public abstract class ComponentInstance extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -34,8 +34,7 @@ public class LocationRequirementPropertyPage<T extends LocationRequirement> exte
         //            }
         
         case 2 :
-            Boolean allRequirement = Boolean.valueOf(value);
-            this.element.setAllRequired(allRequirement);
+            this.element.setAllRequired(Boolean.valueOf(value));
         }
         return currentRow - 2;
     }

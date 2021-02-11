@@ -42,7 +42,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addConfigurations(final Configuration obj) {
         if (obj != null) {
@@ -57,7 +56,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addProvidedCommunications(final CommunicationPort obj) {
         if (obj != null) {
@@ -72,7 +70,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addProvidedHosts(final HostingPort obj) {
         if (obj != null) {
@@ -102,7 +99,6 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<Configuration> getConfigurations() {
         List<Configuration> results = new ArrayList<>();
@@ -116,7 +112,8 @@ public abstract class CamelComponent extends Feature {
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @Override
@@ -128,7 +125,6 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<CommunicationPort> getProvidedCommunications() {
         List<CommunicationPort> results = new ArrayList<>();
@@ -145,7 +141,6 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<HostingPort> getProvidedHosts() {
         List<HostingPort> results = new ArrayList<>();
@@ -167,7 +162,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeConfigurations(final Configuration obj) {
         if (obj != null) {
@@ -186,7 +180,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeProvidedCommunications(final CommunicationPort obj) {
         if (obj != null) {
@@ -205,7 +198,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeProvidedHosts(final HostingPort obj) {
         if (obj != null) {
@@ -238,11 +230,11 @@ public abstract class CamelComponent extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

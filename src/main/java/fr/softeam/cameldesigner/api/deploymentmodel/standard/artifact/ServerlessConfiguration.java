@@ -13,8 +13,6 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -65,9 +63,10 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ServerlessConfiguration} proxy or <i>null</i>.
      */
@@ -76,25 +75,25 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ServerlessConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ServerlessConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ServerlessConfiguration.canInstantiate(obj))
-        	return new ServerlessConfiguration(obj);
+            return new ServerlessConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addEnvironmentConfigParams(final AttributeAttribute obj) {
         if (obj != null) {
@@ -133,7 +132,6 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value of the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     public BuildConfiguration getBuildConfiguration() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -156,7 +154,8 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @Override
@@ -168,7 +167,6 @@ public class ServerlessConfiguration extends Configuration {
      * Get the values of the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<AttributeAttribute> getEnvironmentConfigParams() {
         List<AttributeAttribute> results = new ArrayList<>();
@@ -185,7 +183,6 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value of the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     public EventConfiguration getEventConfiguration() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -207,7 +204,6 @@ public class ServerlessConfiguration extends Configuration {
      * Remove a value from the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeEnvironmentConfigParams(final AttributeAttribute obj) {
         if (obj != null) {
@@ -235,7 +231,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setBuildConfiguration(final BuildConfiguration obj) {
         Dependency dep = null;
@@ -269,7 +264,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setEventConfiguration(final EventConfiguration obj) {
         Dependency dep = null;
@@ -314,11 +308,11 @@ public class ServerlessConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

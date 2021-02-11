@@ -101,16 +101,6 @@ public class CamelModel extends NamedElement {
     }
 
     /**
-     * Add a value to the 'dataModels' role.<p>
-     * Role description:
-     * null
-     */
-    public void addDataModels(final DataModel obj) {
-        if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
-    }
-
-    /**
      * Add a value to the 'deploymentModels' role.<p>
      * Role description:
      * null
@@ -146,16 +136,6 @@ public class CamelModel extends NamedElement {
      * null
      */
     public void addMetaDataModels(final MetaDataModel obj) {
-        if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
-    }
-
-    /**
-     * Add a value to the 'metricModels' role.<p>
-     * Role description:
-     * null
-     */
-    public void addMetricModels(final MetricModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
@@ -399,15 +379,6 @@ public class CamelModel extends NamedElement {
     }
 
     /**
-     * Remove a value from the 'dataModels' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeDataModels(final DataModel obj) {
-        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
-    }
-
-    /**
      * Remove a value from the 'deploymentModels' role.<p>
      * Role description:
      * null
@@ -440,15 +411,6 @@ public class CamelModel extends NamedElement {
      * null
      */
     public boolean removeMetaDataModels(final MetaDataModel obj) {
-        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
-    }
-
-    /**
-     * Remove a value from the 'metricModels' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeMetricModels(final MetricModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
 
@@ -558,6 +520,44 @@ public class CamelModel extends NamedElement {
 
     protected CamelModel(final Package elt) {
         super(elt);
+    }
+
+    /**
+     * Add a value to the 'dataModels' role.<p>
+     * Role description:
+     * null
+     */
+    public void addDataModels(final DataModel obj) {
+        if (obj!=null)
+          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+    }
+
+    /**
+     * Add a value to the 'metricModels' role.<p>
+     * Role description:
+     * null
+     */
+    public void addMetricModels(final MetricModel obj) {
+        if (obj!=null)
+          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+    }
+
+    /**
+     * Remove a value from the 'dataModels' role.<p>
+     * Role description:
+     * null
+     */
+    public boolean removeDataModels(final DataModel obj) {
+        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
+    }
+
+    /**
+     * Remove a value from the 'metricModels' role.<p>
+     * Role description:
+     * null
+     */
+    public boolean removeMetricModels(final MetricModel obj) {
+        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
 
     public static final class MdaTypes {

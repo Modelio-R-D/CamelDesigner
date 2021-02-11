@@ -12,7 +12,6 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -51,7 +50,8 @@ public abstract class Metric extends Feature {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -63,7 +63,6 @@ public abstract class Metric extends Feature {
      * Get the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
-     * 
      */
     public MetricTemplate getMetricTemplate() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -85,7 +84,6 @@ public abstract class Metric extends Feature {
      * Set the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setMetricTemplate(final MetricTemplate obj) {
         Dependency dep = null;
@@ -124,11 +122,11 @@ public abstract class Metric extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -14,9 +14,9 @@ import org.modelio.metamodel.uml.statik.Classifier;
 import org.modelio.metamodel.uml.statik.Port;
 
 public abstract class AbstractReverseProcess implements IElementProcess {
-    protected ModelElement umlElementParent;
-
     protected Map<CDOObject, CamelElement> processedCamelElements;
+
+    protected ModelElement umlElementParent;
 
     public AbstractReverseProcess(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
         this.umlElementParent = umlElementParent;

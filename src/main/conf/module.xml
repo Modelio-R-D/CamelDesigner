@@ -2,54 +2,69 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/api-1.7.2.jar"/>
-        <PathEntry path="lib/xmi-2.13.0.jar"/>
-        <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/common-3.9.0.jar"/>
-        <PathEntry path="lib/ecore-2.13.0.jar"/>
-        <PathEntry path="lib/util-3.7.0.jar"/>
-        <PathEntry path="lib/annotation-2.1.150.jar"/>
-        <PathEntry path="lib/osgi-3.12.100.jar"/>
-        <PathEntry path="lib/common-2.13.0.jar"/>
-        <PathEntry path="lib/security-4.3.200.jar"/>
-        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
-        <PathEntry path="lib/state-1.1.0.jar"/>
-        <PathEntry path="lib/cdo-4.6.0.jar"/>
-        <PathEntry path="lib/app-1.3.400.jar"/>
-        <PathEntry path="lib/net4j-4.6.0.jar"/>
-        <PathEntry path="lib/ocl-3.6.200.jar"/>
-        <PathEntry path="lib/pivot-1.3.0.jar"/>
-        <PathEntry path="lib/common-1.4.200.jar"/>
-        <PathEntry path="lib/net4j-4.1.500.jar"/>
-        <PathEntry path="lib/base-1.3.0.jar"/>
-        <PathEntry path="lib/expressions-4.3.200.jar"/>
-        <PathEntry path="lib/util-2.12.0.jar"/>
-        <PathEntry path="lib/contenttype-3.6.0.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/preferences-3.7.0.jar"/>
-        <PathEntry path="lib/log4j-1.2.15.jar"/>
-        <PathEntry path="lib/completeocl-1.3.0.jar"/>
-        <PathEntry path="lib/runtime-3.13.0.jar"/>
-        <PathEntry path="lib/jobs-3.9.3.jar"/>
-        <PathEntry path="lib/ecore-3.6.200.jar"/>
-        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
-        <PathEntry path="lib/inject-3.0.0.jar"/>
-        <PathEntry path="lib/change-2.11.0.jar"/>
-        <PathEntry path="lib/tcp-4.1.500.jar"/>
-        <PathEntry path="lib/common-4.6.0.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/java-2.0.17.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/edit-2.12.0.jar"/>
-        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
-        <PathEntry path="lib/runtime-3.2.0.jar"/>
-        <PathEntry path="lib/xtext-2.12.0.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/uml-5.2.200.jar"/>
-        <PathEntry path="lib/cli-1.2.0.jar"/>
+        <PathEntry path="lib/inject-3.0.0.jar"/>
+        <PathEntry path="lib/registry-3.7.0.jar"/>
+        <PathEntry path="lib/xtext-2.12.0.jar"/>
         <PathEntry path="lib/inject-1.0.0.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/jobs-3.9.3.jar"/>
+        <PathEntry path="lib/completeocl-1.3.0.jar"/>
+        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
+        <PathEntry path="lib/state-1.1.0.jar"/>
+        <PathEntry path="lib/java-2.0.17.jar"/>
+        <PathEntry path="lib/net4j-4.6.0.jar"/>
+        <PathEntry path="lib/osgi-3.12.100.jar"/>
+        <PathEntry path="lib/common-3.9.0.jar"/>
+        <PathEntry path="lib/ecore-2.13.0.jar"/>
+        <PathEntry path="lib/preferences-3.7.0.jar"/>
+        <PathEntry path="lib/log4j-1.2.15.jar"/>
+        <PathEntry path="lib/runtime-3.13.0.jar"/>
+        <PathEntry path="lib/edit-2.12.0.jar"/>
+        <PathEntry path="lib/net4j-4.1.500.jar"/>
         <PathEntry path="lib/multibindings-3.0.0.jar"/>
+        <PathEntry path="lib/app-1.3.400.jar"/>
+        <PathEntry path="lib/pivot-1.3.0.jar"/>
+        <PathEntry path="lib/ocl-3.6.200.jar"/>
+        <PathEntry path="lib/common-2.13.0.jar"/>
+        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/base-1.3.0.jar"/>
+        <PathEntry path="lib/security-4.3.200.jar"/>
+        <PathEntry path="lib/cli-1.2.0.jar"/>
+        <PathEntry path="lib/expressions-4.3.200.jar"/>
+        <PathEntry path="lib/common-1.4.200.jar"/>
+        <PathEntry path="lib/xmi-2.13.0.jar"/>
+        <PathEntry path="lib/cdo-4.6.0.jar"/>
+        <PathEntry path="lib/util-2.12.0.jar"/>
+        <PathEntry path="lib/common-4.6.0.jar"/>
+        <PathEntry path="lib/api-1.7.2.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/tcp-4.1.500.jar"/>
+        <PathEntry path="lib/runtime-3.2.0.jar"/>
+        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/util-3.7.0.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/contenttype-3.6.0.jar"/>
+        <PathEntry path="lib/ecore-3.6.200.jar"/>
+        <PathEntry path="lib/annotation-2.1.150.jar"/>
+        <PathEntry path="lib/change-2.11.0.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="28a1b85d-93b2-47f7-845a-f4883b71ded5" id="CamelCore">
@@ -206,6 +221,46 @@
         <Profile uid="48587c66-74f8-44e2-b83a-e97a53204f84" id="ConstraintModel">
             <Stereotype name="ConstraintModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ConstraintModel.label" uid="0a13db20-02d0-45a2-954a-db10f14d206b" is-abstract="false">
                 <Icon path="res/icon/gui/constraintModel_24.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="UnaryConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnaryConstraint.label" uid="e8928d56-f64c-4a1f-90b0-929dc78cd231" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="validity" uid="ce4ae655-ac63-4f75-acac-fc8ab479de0f" label="%tagtype.validity.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="comparisonOperator" uid="c145ec8b-ed85-4f7b-b6f7-9caf11d3a14d" label="%tagtype.comparisonOperator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="threshold" uid="5a404e89-57d0-48c8-af7d-412703aed4c0" label="%tagtype.threshold.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="MetricConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {e8928d56-f64c-4a1f-90b0-929dc78cd231} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricConstraint.label" uid="713a32d2-c7ee-4caa-9f5d-94fcb7820b94" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="AttributeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {e8928d56-f64c-4a1f-90b0-929dc78cd231} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.AttributeConstraint.label" uid="310d656e-d693-4ec1-b186-66894464b4b3" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="CompositeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CompositeConstraint.label" uid="95f69da8-e7d7-494b-90a7-db1618fa56fc" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="IfThenConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {95f69da8-e7d7-494b-90a7-db1618fa56fc} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.IfThenConstraint.label" uid="da516708-1c56-443a-addc-f474b2e61c28" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="MetricVariableConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {e8928d56-f64c-4a1f-90b0-929dc78cd231} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricVariableConstraint.label" uid="80ac8ced-a3d3-4519-b015-f0726e46e256" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="LogicalConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {95f69da8-e7d7-494b-90a7-db1618fa56fc} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.LogicalConstraint.label" uid="a266bdba-acc2-4ce2-81a0-4b2f404f7db7" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="logicalOperator" uid="eb2e6178-406b-46d5-80d2-5453be9fce45" label="%tagtype.logicalOperator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="CamelConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CamelConstraint.label" uid="4afa0df7-c748-4db8-b9a7-a082a8419c00" is-abstract="true">
+                <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
         </Profile>
@@ -1407,7 +1462,7 @@
                 </Handler>
             </Tool>
             <Tool id="Build_Configuration" label="%tool.Build_Configuration.label" tooltip="%tool.Build_Configuration.tooltip" image="res/icon/gui/BuildConfiguration_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#CamelComponent"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#BuildConfiguration"/>
                     <HParameter name="metaclass" value="Standard.Artifact"/>
@@ -1447,7 +1502,7 @@
                 </Handler>
             </Tool>
             <Tool id="Cluster_Configuration" label="%tool.Cluster_Configuration.label" tooltip="%tool.Cluster_Configuration.tooltip" image="res/icon/gui/ClusterConfiguration_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#CamelComponent"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ClusterConfiguration"/>
                     <HParameter name="metaclass" value="Standard.Artifact"/>
@@ -1494,7 +1549,7 @@
                     <HParameter name="name" value="Constraint Model"/>
                 </Handler>
             </Tool>
-            <Tool id="Container" label="%tool.Container.label" tooltip="%tool.Container.tooltip" image="res/icon/gui/deploymentModelEmpty_24.png">
+            <Tool id="Container" label="%tool.Container.label" tooltip="%tool.Container.tooltip" image="res/icon/gui/Container_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Container"/>
@@ -1616,7 +1671,7 @@
                 </Handler>
             </Tool>
             <Tool id="Event_Configuration" label="%tool.Event_Configuration.label" tooltip="%tool.Event_Configuration.tooltip" image="res/icon/gui/executionModel_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#CamelComponent"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#EventConfiguration"/>
                     <HParameter name="metaclass" value="Standard.Artifact"/>
@@ -1905,7 +1960,7 @@
                 </Handler>
             </Tool>
             <Tool id="PaaS_Configuration" label="%tool.PaaS_Configuration.label" tooltip="%tool.PaaS_Configuration.tooltip" image="res/icon/gui/paasConfiguration_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#PaaS"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#PaaSConfiguration"/>
                     <HParameter name="metaclass" value="Standard.Artifact"/>
@@ -1930,14 +1985,14 @@
                 </Handler>
             </Tool>
             <Tool id="ProvidedCommunication" label="%tool.ProvidedCommunication.label" tooltip="%tool.ProvidedCommunication.tooltip" image="res/icon/gui/ProvidedCommunication_24.png">
-                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.CreateProvidedCommunication">
                     <HParameter name="stereotype" value="CamelDesigner#CommunicationPort"/>
                     <HParameter name="metaclass" value="Standard.Port"/>
                     <HParameter name="name" value="ProvidedCommunication"/>
                 </Handler>
             </Tool>
-            <Tool id="ProvidedHost" label="%tool.ProvidedHost.label" tooltip="%tool.ProvidedHost.tooltip" image="res/icon/gui/RequiredHost_24.png">
+            <Tool id="ProvidedHost" label="%tool.ProvidedHost.label" tooltip="%tool.ProvidedHost.tooltip" image="res/icon/gui/ProvidedHost_24.png">
                 <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.CreateProvidedHost">
                     <HParameter name="stereotype" value="CamelDesigner#HostingPort"/>
@@ -1995,7 +2050,7 @@
             </Tool>
             <Tool id="RequiredHost" label="%tool.RequiredHost.label" tooltip="%tool.RequiredHost.tooltip" image="res/icon/gui/RequiredHost_24.png">
                 <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.CreateRequiredHost">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.RequiredHostTool">
                     <HParameter name="stereotype" value="CamelDesigner#HostingPort"/>
                     <HParameter name="metaclass" value="Standard.Port"/>
                     <HParameter name="name" value="Required Host"/>
@@ -2003,7 +2058,7 @@
             </Tool>
             <Tool id="RequirementSet" label="%tool.RequirementSet.label" tooltip="%tool.RequirementSet.tooltip" image="res/icon/gui/RequirementSet_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.CreateRequirementSet">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.deploymenttools.RequirementSetTool">
                     <HParameter name="stereotype" value="CamelDesigner#RequirementSet"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Requirement Set"/>
@@ -2130,7 +2185,7 @@
                 </Handler>
             </Tool>
             <Tool id="Serverless_Configuration" label="%tool.Serverless_Configuration.label" tooltip="%tool.Serverless_Configuration.tooltip" image="res/icon/gui/ServerlessConfiguration_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#CamelComponent"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ServerlessConfiguration"/>
                     <HParameter name="metaclass" value="Standard.Artifact"/>
@@ -2265,6 +2320,13 @@
                     <HParameter name="name" value="Window"/>
                 </Handler>
             </Tool>
+            <Tool id="Constraint" label="%tool.Constraint.label" tooltip="%tool.Constraint.tooltip" image="res/icon/gui/constraint.png">
+                <Scope-source metaclass="Standard.Class" stereotype="CamelDesigner#MetricContext"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.ConstraintTool">
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="Constraint"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Camel_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
@@ -2334,22 +2396,21 @@
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="SoftwareComponent" group="%group.Deployment_Type.label"/>
-                    <ToolRef refid="RequiredHost" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="RequirementSet" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="ScriptConfiguration" group="%group.Deployment_Type.label"/>
-                    <ToolRef refid="ProvidedHost" group="%group.Deployment_Type.label"/>
-                    <ToolRef refid="RequiredCommunication" group="%group.Deployment_Type.label"/>
-                    <ToolRef refid="ProvidedCommunication" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="Container" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="PaaS" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="VM" group="%group.Deployment_Type.label"/>
-                    <ToolRef refid="Script_Configuration" group="%group.Configuration.label"/>
                     <ToolRef refid="Serverless_Configuration" group="%group.Configuration.label"/>
                     <ToolRef refid="Build_Configuration" group="%group.Configuration.label"/>
                     <ToolRef refid="Cluster_Configuration" group="%group.Configuration.label"/>
                     <ToolRef refid="Event_Configuration" group="%group.Configuration.label"/>
                     <ToolRef refid="PaaS_Configuration" group="%group.Configuration.label"/>
-                    <ToolRef refid="CREATE_CONNECTOR" group="%group.Link.label"/>
+                    <ToolRef refid="RequiredHost" group="%group.Communication.label"/>
+                    <ToolRef refid="ProvidedHost" group="%group.Communication.label"/>
+                    <ToolRef refid="RequiredCommunication" group="%group.Communication.label"/>
+                    <ToolRef refid="ProvidedCommunication" group="%group.Communication.label"/>
+                    <ToolRef refid="CREATE_CONNECTOR" group="%group.Communication.label"/>
                     <ToolRef refid="CREATE_TRACEABILITY" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_EXTERNDOCUMENT" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>

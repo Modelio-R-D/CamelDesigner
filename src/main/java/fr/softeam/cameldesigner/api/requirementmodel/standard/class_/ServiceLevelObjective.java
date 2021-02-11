@@ -59,9 +59,10 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ServiceLevelObjective} proxy or <i>null</i>.
      */
@@ -70,18 +71,19 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ServiceLevelObjective} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ServiceLevelObjective safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ServiceLevelObjective.canInstantiate(obj))
-        	return new ServiceLevelObjective(obj);
+            return new ServiceLevelObjective(obj);
         else
-        	throw new IllegalArgumentException("ServiceLevelObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ServiceLevelObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -100,7 +102,8 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -112,7 +115,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Get the value of the 'violationEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     public Event getViolationEvent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -134,7 +136,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Set the value of the 'violationEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setViolationEvent(final Event obj) {
         Dependency dep = null;
@@ -173,11 +174,11 @@ public class ServiceLevelObjective extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

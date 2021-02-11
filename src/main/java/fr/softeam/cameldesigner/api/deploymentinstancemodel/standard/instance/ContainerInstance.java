@@ -60,9 +60,10 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link ContainerInstance} proxy or <i>null</i>.
      */
@@ -71,25 +72,25 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link ContainerInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ContainerInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (ContainerInstance.canInstantiate(obj))
-        	return new ContainerInstance(obj);
+            return new ContainerInstance(obj);
         else
-        	throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public void addRequiredCommunicationInstances(final CommunicationPort obj) {
         if (obj != null) {
@@ -116,7 +117,8 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -128,7 +130,6 @@ public class ContainerInstance extends ComponentInstance {
      * Get the values of the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public List<CommunicationPort> getRequiredCommunicationInstances() {
         List<CommunicationPort> results = new ArrayList<>();
@@ -145,7 +146,6 @@ public class ContainerInstance extends ComponentInstance {
      * Get the value of the 'requiredHostInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public HostingPort getRequiredHostInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -167,7 +167,6 @@ public class ContainerInstance extends ComponentInstance {
      * Remove a value from the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     public boolean removeRequiredCommunicationInstances(final CommunicationPort obj) {
         if (obj != null) {
@@ -186,7 +185,6 @@ public class ContainerInstance extends ComponentInstance {
      * Set the value of the 'requiredHostInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setRequiredHostInstance(final HostingPort obj) {
         Dependency dep = null;
@@ -225,11 +223,11 @@ public class ContainerInstance extends ComponentInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

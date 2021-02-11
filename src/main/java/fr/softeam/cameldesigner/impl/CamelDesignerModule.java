@@ -16,11 +16,13 @@ public class CamelDesignerModule extends AbstractJavaModule {
 
     private CamelDesignerPeerModule peerModule = null;
 
+    public static CamelLogService logService;
+
     public CamelDesignerModule(final IModuleContext moduleContext) {
         super(moduleContext);
         
         CamelDesignerModule.instance = this;
-        
+        CamelDesignerModule.logService = new CamelLogService(this.getModuleContext().getLogService(), this);
         this.lifeCycleHandler  = new CamelDesignerLifeCycleHandler(this);
         this.peerModule = new CamelDesignerPeerModule(this, moduleContext.getPeerConfiguration());
         init();

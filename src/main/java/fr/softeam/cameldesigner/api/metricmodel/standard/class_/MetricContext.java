@@ -12,10 +12,6 @@ import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -54,7 +50,8 @@ public abstract class MetricContext extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -66,7 +63,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'metric' role.<p>
      * Role description:
      * null
-     * 
      */
     public Metric getMetric() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -83,7 +79,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     public ObjectContext getObjectContext() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -100,7 +95,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'schedule' role.<p>
      * Role description:
      * null
-     * 
      */
     public Schedule getSchedule() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -117,7 +111,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'window' role.<p>
      * Role description:
      * null
-     * 
      */
     public Window getWindow() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -139,7 +132,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'metric' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setMetric(final Metric obj) {
         Dependency dep = null;
@@ -164,7 +156,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setObjectContext(final ObjectContext obj) {
         Dependency dep = null;
@@ -189,7 +180,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'schedule' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setSchedule(final Schedule obj) {
         Dependency dep = null;
@@ -214,7 +204,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'window' role.<p>
      * Role description:
      * null
-     * 
      */
     public void setWindow(final Window obj) {
         Dependency dep = null;
@@ -253,11 +242,11 @@ public abstract class MetricContext extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

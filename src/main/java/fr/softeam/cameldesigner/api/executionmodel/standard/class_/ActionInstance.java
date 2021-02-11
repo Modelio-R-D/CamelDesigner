@@ -64,9 +64,10 @@ public class ActionInstance extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Class} stereotyped << ActionInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Class} stereotyped << ActionInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ActionInstance} proxy or <i>null</i>.
      */
@@ -75,18 +76,19 @@ public class ActionInstance extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Class} stereotyped << ActionInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Class} stereotyped << ActionInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ActionInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     public static ActionInstance safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ActionInstance.canInstantiate(obj))
-        	return new ActionInstance(obj);
+            return new ActionInstance(obj);
         else
-        	throw new IllegalArgumentException("ActionInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ActionInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @Override
@@ -105,7 +107,8 @@ public class ActionInstance extends Feature {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -199,11 +202,11 @@ public class ActionInstance extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }
