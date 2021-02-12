@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.package_;
 
@@ -11,7 +11,6 @@ import java.util.Collections;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,24 +66,6 @@ public abstract class MetricModel extends SubModel {
 
     protected MetricModel(final Package elt) {
         super(elt);
-    }
-
-    /**
-     * Get the value to the 'camelModel' role.<p>
-     * Role description:
-     * null
-     */
-    public CamelModel getCamelModel() {
-        return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
-    }
-
-    /**
-     * Set the value of the 'camelModel' role.<p>
-     * Role description:
-     * null
-     */
-    public void setCamelModel(final CamelModel obj) {
-        ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
     public static final class MdaTypes {

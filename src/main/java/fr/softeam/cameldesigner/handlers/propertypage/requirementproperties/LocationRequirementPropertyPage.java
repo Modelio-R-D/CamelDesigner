@@ -23,20 +23,9 @@ public class LocationRequirementPropertyPage<T extends LocationRequirement> exte
         switch (currentRow) {
         
         case 1 :
-        //            ModelElement elt = getModelElt(this._annotations, value);
-        //            if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsObject.STEREOTYPE_NAME)) {
-        //                Object mmsObj = CamelDesignerProxyFactory.instantiate(elt);
-        //                if (value.startsWith(this.add)) {
-        //                    this.element.addAnnotations((MmsObject) mmsObj);
-        //                }else {
-        //                    this.element.removeAnnotations((MmsObject) mmsObj);
-        //                }
-        //            }
-        
-        case 2 :
             this.element.setAllRequired(Boolean.valueOf(value));
         }
-        return currentRow - 2;
+        return currentRow - 1;
     }
 
     /**
@@ -49,17 +38,12 @@ public class LocationRequirementPropertyPage<T extends LocationRequirement> exte
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-              //Locations
-        //                table.addProperty("Locations", this.element);
-        //                table.addProperty("Annotations", getCamelValue(this.element.getAnnotations()), getAddRemove(this._annotations, this.element.getAnnotations()));
-        
-              //AllRequired
+        //AllRequired
         table.addProperty("AllRequired", this.element.isAllRequired());
     }
 
     public LocationRequirementPropertyPage(T elt) {
         super(elt);
-        //        this._locations = CamelDesignerAbstractProxy.getLocations();
     }
 
 }

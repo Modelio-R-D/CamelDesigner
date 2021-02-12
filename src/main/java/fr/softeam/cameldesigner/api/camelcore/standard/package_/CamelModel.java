@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
@@ -520,44 +520,6 @@ public class CamelModel extends NamedElement {
 
     protected CamelModel(final Package elt) {
         super(elt);
-    }
-
-    /**
-     * Add a value to the 'dataModels' role.<p>
-     * Role description:
-     * null
-     */
-    public void addDataModels(final DataModel obj) {
-        if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
-    }
-
-    /**
-     * Add a value to the 'metricModels' role.<p>
-     * Role description:
-     * null
-     */
-    public void addMetricModels(final MetricModel obj) {
-        if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
-    }
-
-    /**
-     * Remove a value from the 'dataModels' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeDataModels(final DataModel obj) {
-        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
-    }
-
-    /**
-     * Remove a value from the 'metricModels' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeMetricModels(final MetricModel obj) {
-        return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
 
     public static final class MdaTypes {

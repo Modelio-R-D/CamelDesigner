@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.00
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 12/10/20 11:37 AM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 

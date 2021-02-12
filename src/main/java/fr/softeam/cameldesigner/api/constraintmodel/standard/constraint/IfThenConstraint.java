@@ -1,22 +1,28 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.00
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 12/10/20 11:37 AM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -103,6 +109,11 @@ public class IfThenConstraint extends CompositeConstraint {
         return (Constraint)super.getElement();
     }
 
+    @Override
+    public int hashCode() {
+        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
     /**
      * Get the value of the 'else' role.<p>
      * Role description:
@@ -149,11 +160,6 @@ public class IfThenConstraint extends CompositeConstraint {
               }
         }
         return null;
-    }
-
-    @Override
-    public int hashCode() {
-        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
     /**

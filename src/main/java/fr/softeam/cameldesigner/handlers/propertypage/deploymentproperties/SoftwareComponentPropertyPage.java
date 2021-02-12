@@ -1,10 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypage.deploymentproperties;
 
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
-import fr.softeam.cameldesigner.handlers.propertypage.coreproperties.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-public class SoftwareComponentPropertyPage<T extends SoftwareComponent> extends NamedElementPropertyPage<T> {
+public class SoftwareComponentPropertyPage<T extends SoftwareComponent> extends CamelComponentPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

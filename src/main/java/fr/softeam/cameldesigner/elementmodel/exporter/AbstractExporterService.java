@@ -37,7 +37,7 @@ public abstract class AbstractExporterService {
         IWalker umlWalker = new UmlWalker (generateProcess);
         umlWalker.walk(camelUMLModel);
         
-        //String fileExtension = ".xmi";
+        
         String filePath = directoryOutputPath + File.separatorChar + camelUMLModel.getName() + this.fileExtension;
         
         this.exportCamel(camelModel, filePath);

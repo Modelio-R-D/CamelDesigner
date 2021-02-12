@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -15,7 +15,6 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**

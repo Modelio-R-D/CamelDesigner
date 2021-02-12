@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -63,6 +63,20 @@ public abstract class NamedElement extends CamelElement {
     }
 
     /**
+     * Add a value to the 'annotations' role.<p>
+     * Role description:
+     * null
+     */
+    public void addAnnotations(final MmsObject obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
+            d.setName("annotations");
+            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
+        }
+    }
+
+    /**
      * Get the values of the 'annotations' role.<p>
      * Role description:
      * null
@@ -92,24 +106,6 @@ public abstract class NamedElement extends CamelElement {
         return Collections.unmodifiableList(results);
     }
 
-    protected NamedElement(final ModelElement elt) {
-        super(elt);
-    }
-
-    /**
-     * Add a value to the 'annotations' role.<p>
-     * Role description:
-     * null
-     */
-    public void addAnnotations(final MmsObject obj) {
-        if (obj != null) {
-            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
-            d.setName("annotations");
-            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
-        }
-    }
-
     /**
      * Remove a value from the 'annotations' role.<p>
      * Role description:
@@ -126,6 +122,10 @@ public abstract class NamedElement extends CamelElement {
           }
         }
         return false;
+    }
+
+    protected NamedElement(final ModelElement elt) {
+        super(elt);
     }
 
     public static final class MdaTypes {

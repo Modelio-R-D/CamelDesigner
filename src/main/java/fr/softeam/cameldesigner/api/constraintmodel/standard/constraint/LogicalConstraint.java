@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.00
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 12/10/20 11:37 AM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -14,12 +14,16 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -83,20 +87,6 @@ public class LogicalConstraint extends CompositeConstraint {
             throw new IllegalArgumentException("LogicalConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    /**
-     * Add a value to the 'constraints' role.<p>
-     * Role description:
-     * null
-     */
-    public void addConstraints(final CamelConstraint obj) {
-        if (obj != null) {
-            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), LogicalConstraint.MdaTypes.MDAASSOCDEP);
-            d.setName("constraints");
-            d.putTagValue(LogicalConstraint.MdaTypes.MDAASSOCDEP_ROLE, "constraints");
-        }
-    }
-
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,22 +100,6 @@ public class LogicalConstraint extends CompositeConstraint {
         }
         LogicalConstraint other = (LogicalConstraint) obj;
         return java.util.Objects.equals(getElement(), other.getElement());
-    }
-
-    /**
-     * Get the values of the 'constraints' role.<p>
-     * Role description:
-     * null
-     */
-    public List<CamelConstraint> getConstraints() {
-        List<CamelConstraint> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(LogicalConstraint.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(LogicalConstraint.MdaTypes.MDAASSOCDEP_ROLE), "constraints")
-              && d.getDependsOn().isStereotyped(CamelConstraint.MdaTypes.STEREOTYPE_ELT))
-                results.add((CamelConstraint)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CamelConstraint.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
     }
 
     /**
@@ -153,30 +127,42 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Remove a value from the 'constraints' role.<p>
-     * Role description:
-     * null
-     */
-    public boolean removeConstraints(final CamelConstraint obj) {
-        if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(LogicalConstraint.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(LogicalConstraint.MdaTypes.MDAASSOCDEP_ROLE), ""))
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
-        }
-        return false;
-    }
-
-    /**
      * Setter for string property 'logicalOperator'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
     public void setLogicalOperator(final String value) {
         this.elt.putTagValue(LogicalConstraint.MdaTypes.LOGICALOPERATOR_TAGTYPE_ELT, value);
+    }
+
+    /**
+     * Add a value to the 'constraints' role.<p>
+     * Role description:
+     * null
+     */
+    public void addConstraints(final CamelConstraint obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), LogicalConstraint.MdaTypes.MDAASSOCDEP);
+            d.setName("constraints");
+            d.putTagValue(LogicalConstraint.MdaTypes.MDAASSOCDEP_ROLE, "constraints");
+        }
+    }
+
+    /**
+     * Get the values of the 'constraints' role.<p>
+     * Role description:
+     * null
+     */
+    public List<CamelConstraint> getConstraints() {
+        List<CamelConstraint> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(LogicalConstraint.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(LogicalConstraint.MdaTypes.MDAASSOCDEP_ROLE), "constraints")
+              && d.getDependsOn().isStereotyped(CamelConstraint.MdaTypes.STEREOTYPE_ELT))
+                results.add((CamelConstraint)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CamelConstraint.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
     }
 
     protected LogicalConstraint(final Constraint elt) {

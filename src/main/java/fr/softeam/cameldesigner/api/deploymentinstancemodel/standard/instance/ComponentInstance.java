@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-public abstract class ComponentInstance extends Feature {
+public abstract class ComponentInstance extends FeatureInstance {
     public static final String STEREOTYPE_NAME = "ComponentInstance";
 
     public static final String DESTROYEDON_TAGTYPE = "destroyedOn";

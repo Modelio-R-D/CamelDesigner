@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
+ * Module: CamelDesigner v1.0.01
 
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+ * This file was generated on 2/12/21 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -229,10 +229,6 @@ public class MetricTemplate extends Feature {
         return null;
     }
 
-    protected MetricTemplate(final Class elt) {
-        super(elt);
-    }
-
     /**
      * Set the value of the 'attribute' role.<p>
      * Role description:
@@ -279,6 +275,10 @@ public class MetricTemplate extends Feature {
           }
           dep.setDependsOn(obj.getElement());
         }
+    }
+
+    protected MetricTemplate(final Class elt) {
+        super(elt);
     }
 
     public static final class MdaTypes {

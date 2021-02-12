@@ -363,7 +363,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  * </ul>
  */
 public class CamelDesignerPropertyPageFactory {
-    private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
+    private static final PropertyPageVisitor propertyVisitor = new PropertyPageVisitor();
 
     /**
      * Instantiates the right proxy class the given element.
@@ -393,16 +393,12 @@ public class CamelDesignerPropertyPageFactory {
      * @return the right proxy or <i>null</i>.
      */
     public static final Object instantiate(final Element e, final String stName) {
-        instantiateVisitor.setStereotype(stName);
-        return e.accept(instantiateVisitor);
+        propertyVisitor.setStereotype(stName);
+        return e.accept(propertyVisitor);
     }
 
-    private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
+    private static class PropertyPageVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
         private String stName;
-
-        public final void setStereotype(final String stName) {
-            this.stName = stName;
-        }
 
         @Override
         public final Object visitGeneralClass(GeneralClass obj) {
@@ -416,7 +412,6 @@ public class CamelDesignerPropertyPageFactory {
         @Override
         public final Object visitDependency(Dependency obj) {
             switch (this.stName) {
-                case fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.PropertyDependency.STEREOTYPE_NAME: return fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.PropertyDependency.instantiate(obj);
                 case fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation.STEREOTYPE_NAME: return fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation.instantiate(obj);
                 default:
                     break;
@@ -711,6 +706,10 @@ public class CamelDesignerPropertyPageFactory {
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;
+        }
+
+        public final void setStereotype(final String stName) {
+            this.stName = stName;
         }
 
     }
