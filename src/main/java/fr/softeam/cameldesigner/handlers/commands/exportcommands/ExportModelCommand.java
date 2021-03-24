@@ -1,15 +1,16 @@
 package fr.softeam.cameldesigner.handlers.commands.exportcommands;
 
 import java.util.List;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.elementmodel.exporter.AbstractExporterService;
-import fr.softeam.cameldesigner.utils.FileSystemManager;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.DefaultModuleCommandHandler;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.elementmodel.exporter.AbstractExporterService;
+import fr.softeam.cameldesigner.utils.FileSystemManager;
 
 public abstract class ExportModelCommand extends DefaultModuleCommandHandler {
+
     private String directoryOutputPath;
 
     private AbstractExporterService exporterService;
@@ -24,9 +25,9 @@ public abstract class ExportModelCommand extends DefaultModuleCommandHandler {
         this.directoryOutputPath = FileSystemManager.getDialogDirectoryPath("Select Directory");
         if(this.directoryOutputPath != null) {
             Package camelUMLModel = (Package) selectedElements.get(0);
-            
+
             this.exporterService.exportCamelUMLModelToFile(camelUMLModel, this.directoryOutputPath);
-            
+
         }
     }
 

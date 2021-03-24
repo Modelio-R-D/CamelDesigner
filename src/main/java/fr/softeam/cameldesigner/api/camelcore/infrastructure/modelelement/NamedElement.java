@@ -10,6 +10,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
@@ -17,12 +23,6 @@ import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsProp
 import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
 
 /**
  * Proxy class to handle a {@link ModelElement} with << NamedElement >> stereotype.
@@ -49,7 +49,7 @@ public abstract class NamedElement extends CamelElement {
 
     /**
      * Get the underlying {@link ModelElement}.
-     * 
+     *
      * @return the ModelElement represented by this proxy, never null.
      */
     @Override
@@ -87,20 +87,20 @@ public abstract class NamedElement extends CamelElement {
             if ((d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP)
                     && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), "annotations")
                     && d.getDependsOn().isStereotyped(MmsObject.MdaTypes.STEREOTYPE_ELT))) {
-        
+
                 ModelElement mObj = d.getDependsOn();
                 if (MmsConceptInstance.canInstantiate(mObj))
                     results.add((MmsConceptInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsConceptInstance.STEREOTYPE_NAME));
-        
+
                 if (MmsConcept.canInstantiate(mObj))
                     results.add((MmsConcept)CamelDesignerProxyFactory.instantiate(mObj, MmsConcept.STEREOTYPE_NAME));
-        
+
                 if (MmsProperty.canInstantiate(mObj))
                     results.add((MmsProperty)CamelDesignerProxyFactory.instantiate(mObj, MmsProperty.STEREOTYPE_NAME));
-        
+
                 if (MmsPropertyInstance.canInstantiate(mObj))
                     results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
-        
+
             }
         }
         return Collections.unmodifiableList(results);
@@ -113,19 +113,31 @@ public abstract class NamedElement extends CamelElement {
      */
     public boolean removeAnnotations(final MmsObject obj) {
         if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), ""))
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
+            for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+                if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), ""))
+                    if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                        d.delete();
+                        return true;
+                    }
+            }
         }
         return false;
     }
 
     protected NamedElement(final ModelElement elt) {
         super(elt);
+    }
+
+    public void setName(String name) {
+        this.elt.setName(name);
+    }
+
+    public String getName() {
+        return this.elt.getName();
+    }
+
+    public void setDefaultName(String name) {
+        CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().getDefaultNameService().setDefaultName(this.elt, name);
     }
 
     public static final class MdaTypes {
@@ -142,11 +154,11 @@ public abstract class NamedElement extends CamelElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
-    }
     }
 
 }

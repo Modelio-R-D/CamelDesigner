@@ -6,16 +6,16 @@
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
-import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
+import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link ModelElement} with << Feature >> stereotype.
@@ -29,7 +29,7 @@ public abstract class Feature extends NamedElement {
      * Tells whether a {@link Feature proxy} can be instantiated from a {@link MObject} checking it is a {@link } stereotyped << Feature>>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -44,7 +44,7 @@ public abstract class Feature extends NamedElement {
      * Tries to instantiate a {@link Feature} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link FeatureClass} proxy or <i>null</i>.
      */
@@ -63,7 +63,7 @@ public abstract class Feature extends NamedElement {
      * Tries to instantiate a {@link Feature} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link FeatureClass} proxy or <i>null</i>.
      */
@@ -95,7 +95,7 @@ public abstract class Feature extends NamedElement {
 
     /**
      * Get the underlying {@link ModelElement}.
-     * 
+     *
      * @return the ModelElement represented by this proxy, never null.
      */
     @Override
@@ -126,11 +126,11 @@ public abstract class Feature extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
-    }
     }
 
 }

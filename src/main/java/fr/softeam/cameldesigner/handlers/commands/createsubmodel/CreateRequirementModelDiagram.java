@@ -1,11 +1,11 @@
-package fr.softeam.cameldesigner.handlers.commands;
+package fr.softeam.cameldesigner.handlers.commands.createsubmodel;
 
 import java.util.List;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.ElementCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-public class CreateDataInstanceModelCommand extends ElementCreationStandardHandler {
+public class CreateRequirementModelDiagram extends ElementCreationStandardHandler {
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in Studio.

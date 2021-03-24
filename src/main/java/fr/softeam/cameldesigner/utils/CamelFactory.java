@@ -28,13 +28,13 @@
  **/
 package fr.softeam.cameldesigner.utils;
 
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.statik.Classifier;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
-import org.modelio.metamodel.uml.statik.Classifier;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * This class handles the creation of abstract Camel elements
@@ -44,19 +44,19 @@ public class CamelFactory {
     /**
      * Method createCamelFeature
      * @author ebrosse
-     * 
+     *
      * @param owner : the owner of the Feature
      * @return the created Feature
      */
     public static Feature createCamelFeature(MObject owner) {
         try {
-        
+
             Feature feature = null;
             if (owner instanceof ModelTree) {
                 feature = FeatureClass.create();
                 ((ModelTree) owner ).getOwnedElement().add((ModelTree) feature.getElement());
             }
-        
+
             return  feature;
         }catch(Exception e){
             CamelDesignerModule.logService.error(e);
@@ -67,21 +67,22 @@ public class CamelFactory {
     /**
      * Method createCamelAttribute
      * @author ebrosse
-     * 
+     *
      * @param owner : the owner of the Attribute
      * @return the created Feature
      */
     public static AttributeAttribute createCamelAttribute(MObject owner) {
+
         try {
-        
+
             AttributeAttribute attribute = null;
             if (owner instanceof Classifier) {
                 attribute = AttributeAttribute.create();
                 ((Classifier) owner ).getOwnedAttribute().add(attribute.getElement());
             }
-        
+
             return  attribute;
-        
+
         }catch(Exception e){
             CamelDesignerModule.logService.error(e);
         }

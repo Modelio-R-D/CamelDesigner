@@ -6,22 +6,21 @@
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Artifact;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Artifact} with << BuildConfiguration >> stereotype.
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-public class BuildConfiguration extends FeatureClass {
+public class BuildConfiguration extends Configuration {
     public static final String STEREOTYPE_NAME = "BuildConfiguration";
 
     public static final String ARTIFACTID_TAGTYPE = "artifactId";
@@ -38,7 +37,7 @@ public class BuildConfiguration extends FeatureClass {
      * Tells whether a {@link BuildConfiguration proxy} can be instantiated from a {@link MObject} checking it is a {@link Artifact} stereotyped << BuildConfiguration >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -48,7 +47,7 @@ public class BuildConfiguration extends FeatureClass {
 
     /**
      * Create a new {@link Artifact} stereotyped << BuildConfiguration >> then instantiate a {@link BuildConfiguration} proxy.
-     * 
+     *
      * @return a {@link BuildConfiguration} proxy on the created {@link Artifact}.
      */
     public static BuildConfiguration create() {
@@ -61,7 +60,7 @@ public class BuildConfiguration extends FeatureClass {
      * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Artifact
      * @return a {@link BuildConfiguration} proxy or <i>null</i>.
      */
@@ -73,7 +72,7 @@ public class BuildConfiguration extends FeatureClass {
      * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Artifact}
      * @return a {@link BuildConfiguration} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -120,7 +119,7 @@ public class BuildConfiguration extends FeatureClass {
 
     /**
      * Get the underlying {@link Artifact}.
-     * 
+     *
      * @return the Artifact represented by this proxy, never null.
      */
     @Override

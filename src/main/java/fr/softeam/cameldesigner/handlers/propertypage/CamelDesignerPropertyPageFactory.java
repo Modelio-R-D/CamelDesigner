@@ -6,6 +6,27 @@
  */
 package fr.softeam.cameldesigner.handlers.propertypage;
 
+import org.modelio.metamodel.diagrams.ClassDiagram;
+import org.modelio.metamodel.mda.ModuleComponent;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.Element;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.AttributeLink;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import org.modelio.metamodel.uml.statik.GeneralClass;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
+import org.modelio.metamodel.visitors.IDefaultModelVisitor;
+import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.PropertyDependency;
@@ -21,6 +42,7 @@ import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ConstraintModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentModelDiagram;
@@ -34,7 +56,6 @@ import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.Scalabil
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.SecurityModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.TypeModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.UnitModelDiagram;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.staticdiagram.DataInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource;
@@ -170,27 +191,6 @@ import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
-import org.modelio.metamodel.diagrams.ClassDiagram;
-import org.modelio.metamodel.mda.ModuleComponent;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.Element;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Artifact;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.AttributeLink;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.metamodel.uml.statik.Connector;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.metamodel.uml.statik.Enumeration;
-import org.modelio.metamodel.uml.statik.GeneralClass;
-import org.modelio.metamodel.uml.statik.Instance;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
-import org.modelio.metamodel.visitors.IDefaultModelVisitor;
-import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 
 /**
  * Factory that instantiates the right proxy class for a model element stereotyped by a 'CamelDesigner' module stereotype.
@@ -369,7 +369,7 @@ public class CamelDesignerPropertyPageFactory {
      * Instantiates the right proxy class the given element.
      * <br/>The model element must be stereotyped by a 'CamelDesigner' module stereotype.
      * <br/>In the other case the method will return <i>null</i>.
-     * 
+     *
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
@@ -387,7 +387,7 @@ public class CamelDesignerPropertyPageFactory {
      * Instantiates the right proxy class the given element with a stereotype name.
      * The stereotype must be one of the 'CamelDesigner' module stereotypes.
      * In the other case the method will return <i>null</i>.
-     * 
+     *
      * @param e A model element.
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
@@ -700,7 +700,7 @@ public class CamelDesignerPropertyPageFactory {
         /**
          * Get the visitor to delegate to when a {@link IInfrastructureVisitor} is needed.
          * <p>If null is returned the caller will return null.
-         * 
+         *
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
         @Override

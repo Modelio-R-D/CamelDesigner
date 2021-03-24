@@ -7,13 +7,10 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.RequirementModelDiagram;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataInstanceModelDiagram;
+import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel;
 
-/**
- * @author kchaabouni
- */
-public class CreateRequirementModelCommand extends CreateSubModelCommand{
+public class CreateDataInstanceModelCommand extends CreateSubModelCommand{
 
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
@@ -23,20 +20,23 @@ public class CreateRequirementModelCommand extends CreateSubModelCommand{
         IModuleContext moduleContext = module.getModuleContext();
         IModelingSession session = moduleContext.getModelingSession();
 
-        try( ITransaction transaction = session.createTransaction("Create Requirement Model")){
+        try( ITransaction transaction = session.createTransaction("Create Data Instance Model")){
 
-            RequirementModel subModel = RequirementModel.create();
-            RequirementModelDiagram diagram = RequirementModelDiagram.create();
+            DataInstanceModel subModel = DataInstanceModel.create();
+            DataInstanceModelDiagram diagram = DataInstanceModelDiagram.create();
 
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
 
-            subModel.setDefaultName("Requirement Type Model");
-            diagram.setDefaultName("Requirement Type Diagram");
+            subModel.setDefaultName("Data Instance Model");
+            diagram.setDefaultName("Data Instance Diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
 
             transaction.commit();
         }
 
     }
+
+
+
 }
