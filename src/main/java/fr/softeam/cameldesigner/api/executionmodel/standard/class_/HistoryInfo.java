@@ -6,32 +6,23 @@
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Class} with << HistoryInfo >> stereotype.
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-public class HistoryInfo extends Feature {
+public class HistoryInfo extends FeatureClass {
+
     public static final String STEREOTYPE_NAME = "HistoryInfo";
 
     public static final String ENDTIME_TAGTYPE = "endTime";
@@ -44,7 +35,7 @@ public class HistoryInfo extends Feature {
      * Tells whether a {@link HistoryInfo proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << HistoryInfo >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -54,7 +45,7 @@ public class HistoryInfo extends Feature {
 
     /**
      * Create a new {@link Class} stereotyped << HistoryInfo >> then instantiate a {@link HistoryInfo} proxy.
-     * 
+     *
      * @return a {@link HistoryInfo} proxy on the created {@link Class}.
      */
     public static HistoryInfo create() {
@@ -67,7 +58,7 @@ public class HistoryInfo extends Feature {
      * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link HistoryInfo} proxy or <i>null</i>.
      */
@@ -79,7 +70,7 @@ public class HistoryInfo extends Feature {
      * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Class}
      * @return a {@link HistoryInfo} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -108,7 +99,7 @@ public class HistoryInfo extends Feature {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
