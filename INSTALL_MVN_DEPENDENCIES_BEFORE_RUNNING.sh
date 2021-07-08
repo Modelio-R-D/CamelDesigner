@@ -28,7 +28,7 @@ mvn install:install-file -Dfile=./src/main/lib/common-3.9.0.jar -DgroupId=org.ec
 mvn install:install-file -Dfile=./src/main/lib/preferences-3.7.0.jar -DgroupId=org.eclipse.equinox  -DartifactId=preferences  -Dversion=3.7.0  -Dpackaging=jar 
 mvn install:install-file -Dfile=./src/main/lib/registry-3.7.0.jar -DgroupId=org.eclipse.equinox  -DartifactId=registry  -Dversion=3.7.0  -Dpackaging=jar 
 mvn install:install-file -Dfile=./src/main/lib/annotation-2.1.150.jar -DgroupId=org.eclipse.jdt  -DartifactId=annotation  -Dversion=2.1.150  -Dpackaging=jar 
-mvn install:install-file -Dfile=./src/main/lib/net4j-4.6.0.jar -DgroupId=org.eclipse  -DartifactId=net4j  -Dversion=4.6.0  
+mvn install:install-file -Dfile=./src/main/lib/net4j-4.6.0.jar -DgroupId=org.eclipse  -DartifactId=net4j  -Dversion=4.6.0  -Dpackaging=jar
 mvn install:install-file -Dfile=./src/main/lib/tcp-4.1.500.jar -DgroupId=org.eclipse.net4j  -DartifactId=tcp  -Dversion=4.1.500  -Dpackaging=jar 
 mvn install:install-file -Dfile=./src/main/lib/util-3.7.0.jar -DgroupId=org.eclipse.net4j  -DartifactId=util  -Dversion=3.7.0  -Dpackaging=jar 
 mvn install:install-file -Dfile=./src/main/lib/ocl-3.6.200.jar -DgroupId=org.eclipse  -DartifactId=ocl  -Dversion=3.6.200  -Dpackaging=jar 
