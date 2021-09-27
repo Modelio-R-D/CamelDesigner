@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Objects;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -137,6 +138,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public java.util.List<CamelElement> getChilds() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

@@ -7,24 +7,17 @@
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link DataType} with << UnitDimension >> stereotype.
@@ -38,7 +31,7 @@ public class UnitDimension extends Feature {
      * Tells whether a {@link UnitDimension proxy} can be instantiated from a {@link MObject} checking it is a {@link DataType} stereotyped << UnitDimension >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -48,7 +41,7 @@ public class UnitDimension extends Feature {
 
     /**
      * Create a new {@link DataType} stereotyped << UnitDimension >> then instantiate a {@link UnitDimension} proxy.
-     * 
+     *
      * @return a {@link UnitDimension} proxy on the created {@link DataType}.
      */
     public static UnitDimension create() {
@@ -61,7 +54,7 @@ public class UnitDimension extends Feature {
      * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a DataType
      * @return a {@link UnitDimension} proxy or <i>null</i>.
      */
@@ -73,7 +66,7 @@ public class UnitDimension extends Feature {
      * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link DataType}
      * @return a {@link UnitDimension} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -102,7 +95,7 @@ public class UnitDimension extends Feature {
 
     /**
      * Get the underlying {@link DataType}.
-     * 
+     *
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -138,6 +131,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

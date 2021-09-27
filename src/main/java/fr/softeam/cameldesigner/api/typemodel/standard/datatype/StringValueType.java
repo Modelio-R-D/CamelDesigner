@@ -7,23 +7,16 @@
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link DataType} with << StringValueType >> stereotype.
@@ -37,7 +30,7 @@ public class StringValueType extends ValueType {
      * Tells whether a {@link StringValueType proxy} can be instantiated from a {@link MObject} checking it is a {@link DataType} stereotyped << StringValueType >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -47,7 +40,7 @@ public class StringValueType extends ValueType {
 
     /**
      * Create a new {@link DataType} stereotyped << StringValueType >> then instantiate a {@link StringValueType} proxy.
-     * 
+     *
      * @return a {@link StringValueType} proxy on the created {@link DataType}.
      */
     public static StringValueType create() {
@@ -60,7 +53,7 @@ public class StringValueType extends ValueType {
      * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a DataType
      * @return a {@link StringValueType} proxy or <i>null</i>.
      */
@@ -72,7 +65,7 @@ public class StringValueType extends ValueType {
      * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link DataType}
      * @return a {@link StringValueType} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -101,7 +94,7 @@ public class StringValueType extends ValueType {
 
     /**
      * Get the underlying {@link DataType}.
-     * 
+     *
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -137,6 +130,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

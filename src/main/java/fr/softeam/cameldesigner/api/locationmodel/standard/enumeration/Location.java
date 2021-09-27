@@ -6,25 +6,14 @@
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Enumeration;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Enumeration} with << Location >> stereotype.
@@ -40,7 +29,7 @@ public abstract class Location extends Feature {
      * Tells whether a {@link Location proxy} can be instantiated from a {@link MObject} checking it is a {@link Enumeration} stereotyped << Location >> or << GeographicalRegion >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -54,16 +43,16 @@ public abstract class Location extends Feature {
      * Tries to instantiate a {@link Location} proxy from a {@link Enumeration} stereotyped << Location >> or << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
-     * @param obj a Enumeration
+     *
+     * @param enumeration a Enumeration
      * @return a {@link Location} proxy or <i>null</i>.
      */
-    public static Location instantiate(final Enumeration obj) {
-        if (CloudLocation.canInstantiate(obj))
-            return new CloudLocation(obj);
-        
-        if (GeographicalRegion.canInstantiate(obj))
-            return new GeographicalRegion(obj);
+    public static Location instantiate(final Enumeration enumeration) {
+        if (CloudLocation.canInstantiate(enumeration))
+            return new CloudLocation(enumeration);
+
+        if (GeographicalRegion.canInstantiate(enumeration))
+            return new GeographicalRegion(enumeration);
         return null;
     }
 
@@ -71,7 +60,7 @@ public abstract class Location extends Feature {
      * Tries to instantiate a {@link Location} proxy from a {@link Enumeration} stereotyped << Location >> or << GeographicalRegion >>checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Enumeration}
      * @return a {@link Location} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -79,10 +68,10 @@ public abstract class Location extends Feature {
     public static Location safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (CloudLocation.canInstantiate(obj))
             return new CloudLocation(obj);
-        
+
         if (GeographicalRegion.canInstantiate(obj))
             return new GeographicalRegion(obj);
-        
+
         throw new IllegalArgumentException("Location: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
@@ -103,7 +92,7 @@ public abstract class Location extends Feature {
 
     /**
      * Get the underlying {@link Enumeration}.
-     * 
+     *
      * @return the Enumeration represented by this proxy, never null.
      */
     @Override

@@ -8,6 +8,7 @@ import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataSourceInstan
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 
 public class DataInstancePropertyPage<T extends DataInstance> extends NamedElementPropertyPage<T> {
+
     private List<ModelElement> _dataSourceInstances;
 
     /**
@@ -42,13 +43,13 @@ public class DataInstancePropertyPage<T extends DataInstance> extends NamedEleme
         super.update(table);
 
         //DataSource
+        this._dataSourceInstances = DataSourceInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Data Source Instance", getCamelName(this._element.getDataSourceInstance()));
     }
 
     public DataInstancePropertyPage(T elt) {
         super(elt);
 
-        this._dataSourceInstances = DataSourceInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
     }
 
 }

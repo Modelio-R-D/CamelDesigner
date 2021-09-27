@@ -7,8 +7,18 @@
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
@@ -19,14 +29,6 @@ import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Class} with << MetricTemplate >> stereotype.
@@ -42,7 +44,7 @@ public class MetricTemplate extends Feature {
      * Tells whether a {@link MetricTemplate proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << MetricTemplate >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -52,7 +54,7 @@ public class MetricTemplate extends Feature {
 
     /**
      * Create a new {@link Class} stereotyped << MetricTemplate >> then instantiate a {@link MetricTemplate} proxy.
-     * 
+     *
      * @return a {@link MetricTemplate} proxy on the created {@link Class}.
      */
     public static MetricTemplate create() {
@@ -65,7 +67,7 @@ public class MetricTemplate extends Feature {
      * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link MetricTemplate} proxy or <i>null</i>.
      */
@@ -77,7 +79,7 @@ public class MetricTemplate extends Feature {
      * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Class}
      * @return a {@link MetricTemplate} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -106,7 +108,7 @@ public class MetricTemplate extends Feature {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -124,7 +126,7 @@ public class MetricTemplate extends Feature {
               if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
                   && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "unit")
                   && Unit.canInstantiate(d.getDependsOn())) {
-                     return (Unit)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Unit.MdaTypes.STEREOTYPE_ELT.getName());
+                     return Unit.instantiate((DataType) d.getDependsOn());
               }
         }
         return null;
@@ -204,23 +206,23 @@ public class MetricTemplate extends Feature {
                     && Objects.equals(d.getTagValue(MetricTemplate.MdaTypes.MDAASSOCDEP_ROLE), "valueType")
                     && d.getDependsOn().isStereotyped(ValueType.MdaTypes.STEREOTYPE_ELT)) {
                 ModelElement attribut = d.getDependsOn();
-        
+
                 //BooleanValueType
                 if (BooleanValueType.canInstantiate(attribut))
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, BooleanValueType.MdaTypes.STEREOTYPE_ELT.getName());
-        
+
                 //List
                 if (List.canInstantiate(attribut))
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, List.MdaTypes.STEREOTYPE_ELT.getName());
-        
+
                 //Range
                 if (Range.canInstantiate(attribut))
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, Range.MdaTypes.STEREOTYPE_ELT.getName());
-        
+
                 //RangeUnion
                 if (RangeUnion.canInstantiate(attribut))
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, RangeUnion.MdaTypes.STEREOTYPE_ELT.getName());
-        
+
                 //StringValueType
                 if (StringValueType.canInstantiate(attribut))
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, StringValueType.MdaTypes.STEREOTYPE_ELT.getName());
@@ -303,6 +305,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public java.util.List<CamelElement> getChilds() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

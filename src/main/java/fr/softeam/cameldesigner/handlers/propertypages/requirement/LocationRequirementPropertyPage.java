@@ -3,9 +3,13 @@ package fr.softeam.cameldesigner.handlers.propertypages.requirement;
 import java.util.List;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
 
 public class LocationRequirementPropertyPage<T extends LocationRequirement> extends HardRequirementPropertyPage<T> {
+
     private List<ModelElement> _locations = null;
 
     /**
@@ -23,7 +27,19 @@ public class LocationRequirementPropertyPage<T extends LocationRequirement> exte
         if(this._currentRow == 1) {
             this._element.setAllRequired(Boolean.valueOf(value));
         }
-        this._currentRow -= 1;
+
+        else if(this._currentRow == 2) {
+            Enumeration elt = (Enumeration) getModelElt(this._locations, value);
+            if ((elt != null) && (Location.canInstantiate(elt))) {
+                Object loc = Location.instantiate(elt);
+                if (value.startsWith(this._add)) {
+                    this._element.addLocations((Location) loc);
+                }else {
+                    this._element.removeLocations((Location) loc);
+                }
+            }
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -38,6 +54,10 @@ public class LocationRequirementPropertyPage<T extends LocationRequirement> exte
 
         //AllRequired
         table.addProperty("AllRequired", this._element.isAllRequired());
+
+        //Location
+        this._locations = CamelDesignerAbstractProxy.getLocations();
+        table.addProperty("Locations", getCamelValue(this._element.getLocations()), getAddRemove(this._locations, this._element.getLocations()));
     }
 
     public LocationRequirementPropertyPage(T elt) {

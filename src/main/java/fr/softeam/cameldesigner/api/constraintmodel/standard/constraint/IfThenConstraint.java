@@ -7,23 +7,20 @@
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Constraint} with << IfThenConstraint >> stereotype.
@@ -37,7 +34,7 @@ public class IfThenConstraint extends CompositeConstraint {
      * Tells whether a {@link IfThenConstraint proxy} can be instantiated from a {@link MObject} checking it is a {@link Constraint} stereotyped << IfThenConstraint >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -47,7 +44,7 @@ public class IfThenConstraint extends CompositeConstraint {
 
     /**
      * Create a new {@link Constraint} stereotyped << IfThenConstraint >> then instantiate a {@link IfThenConstraint} proxy.
-     * 
+     *
      * @return a {@link IfThenConstraint} proxy on the created {@link Constraint}.
      */
     public static IfThenConstraint create() {
@@ -60,7 +57,7 @@ public class IfThenConstraint extends CompositeConstraint {
      * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Constraint
      * @return a {@link IfThenConstraint} proxy or <i>null</i>.
      */
@@ -72,7 +69,7 @@ public class IfThenConstraint extends CompositeConstraint {
      * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Constraint}
      * @return a {@link IfThenConstraint} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -101,7 +98,7 @@ public class IfThenConstraint extends CompositeConstraint {
 
     /**
      * Get the underlying {@link Constraint}.
-     * 
+     *
      * @return the Constraint represented by this proxy, never null.
      */
     @Override
@@ -257,6 +254,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

@@ -7,24 +7,17 @@
 package fr.softeam.cameldesigner.api.camelcore.standard.class_;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Class} with << Attribute_Class >> stereotype.
@@ -38,7 +31,7 @@ public class AttributeClass extends CamelAttribute {
      * Tells whether a {@link AttributeClass proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << Attribute_Class >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -48,7 +41,7 @@ public class AttributeClass extends CamelAttribute {
 
     /**
      * Create a new {@link Class} stereotyped << Attribute_Class >> then instantiate a {@link AttributeClass} proxy.
-     * 
+     *
      * @return a {@link AttributeClass} proxy on the created {@link Class}.
      */
     public static AttributeClass create() {
@@ -61,7 +54,7 @@ public class AttributeClass extends CamelAttribute {
      * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link AttributeClass} proxy or <i>null</i>.
      */
@@ -73,7 +66,7 @@ public class AttributeClass extends CamelAttribute {
      * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Class}
      * @return a {@link AttributeClass} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -102,7 +95,7 @@ public class AttributeClass extends CamelAttribute {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -133,11 +126,29 @@ public class AttributeClass extends CamelAttribute {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
     }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
+    }
+
+    @Override
+    public String getValue() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void setValue(String value) {
+        // TODO Auto-generated method stub
+
     }
 
 }

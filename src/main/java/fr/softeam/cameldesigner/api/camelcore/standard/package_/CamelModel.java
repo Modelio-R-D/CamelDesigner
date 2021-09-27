@@ -9,13 +9,23 @@ package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
+import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentModel;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel;
@@ -29,13 +39,6 @@ import fr.softeam.cameldesigner.api.securitymodel.standard.package_.SecurityMode
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Package} with << CamelModel >> stereotype.
@@ -53,7 +56,7 @@ public class CamelModel extends NamedElement {
      * Tells whether a {@link CamelModel proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << CamelModel >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -63,7 +66,7 @@ public class CamelModel extends NamedElement {
 
     /**
      * Create a new {@link Package} stereotyped << CamelModel >> then instantiate a {@link CamelModel} proxy.
-     * 
+     *
      * @return a {@link CamelModel} proxy on the created {@link Package}.
      */
     public static CamelModel create() {
@@ -76,7 +79,7 @@ public class CamelModel extends NamedElement {
      * Tries to instantiate a {@link CamelModel} proxy from a {@link Package} stereotyped << CamelModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Package
      * @return a {@link CamelModel} proxy or <i>null</i>.
      */
@@ -88,7 +91,7 @@ public class CamelModel extends NamedElement {
      * Tries to instantiate a {@link CamelModel} proxy from a {@link Package} stereotyped << CamelModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Package}
      * @return a {@link CamelModel} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -107,7 +110,7 @@ public class CamelModel extends NamedElement {
      */
     public void addDeploymentModels(final DeploymentModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -117,7 +120,7 @@ public class CamelModel extends NamedElement {
      */
     public void addExecutionModels(final ExecutionModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -127,7 +130,7 @@ public class CamelModel extends NamedElement {
      */
     public void addLocationModels(final LocationModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -137,7 +140,7 @@ public class CamelModel extends NamedElement {
      */
     public void addMetaDataModels(final MetaDataModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -147,7 +150,7 @@ public class CamelModel extends NamedElement {
      */
     public void addOrganisationModels(final OrganisationModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -157,7 +160,7 @@ public class CamelModel extends NamedElement {
      */
     public void addRequirementModels(final RequirementModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -167,7 +170,7 @@ public class CamelModel extends NamedElement {
      */
     public void addScalabilityModels(final ScalabilityModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -177,7 +180,7 @@ public class CamelModel extends NamedElement {
      */
     public void addSecurityModels(final SecurityModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -187,7 +190,7 @@ public class CamelModel extends NamedElement {
      */
     public void addTypeModels(final TypeModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     /**
@@ -197,7 +200,7 @@ public class CamelModel extends NamedElement {
      */
     public void addUnitModels(final UnitModel obj) {
         if (obj!=null)
-          ((Package) this.elt).getOwnedElement().add(obj.getElement());
+            ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
     @Override
@@ -241,14 +244,16 @@ public class CamelModel extends NamedElement {
     public List<DeploymentModel> getDeploymentModels() {
         List<DeploymentModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-            if (DeploymentModel.canInstantiate(mObj))
-                    results.add((DeploymentModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentModel.STEREOTYPE_NAME));
+            if (DeploymentTypeModel.canInstantiate(mObj))
+                results.add((DeploymentModel) CamelDesignerProxyFactory.instantiate(mObj, DeploymentTypeModel.STEREOTYPE_NAME));
+            else if (DeploymentInstanceModel.canInstantiate(mObj))
+                results.add((DeploymentModel) CamelDesignerProxyFactory.instantiate(mObj, DeploymentInstanceModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
      * Get the underlying {@link Package}.
-     * 
+     *
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -265,7 +270,7 @@ public class CamelModel extends NamedElement {
         List<ExecutionModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (ExecutionModel.canInstantiate(mObj))
-                    results.add((ExecutionModel)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModel.STEREOTYPE_NAME));
+                results.add((ExecutionModel)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -278,7 +283,7 @@ public class CamelModel extends NamedElement {
         List<LocationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (LocationModel.canInstantiate(mObj))
-                    results.add((LocationModel)CamelDesignerProxyFactory.instantiate(mObj, LocationModel.STEREOTYPE_NAME));
+                results.add((LocationModel)CamelDesignerProxyFactory.instantiate(mObj, LocationModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -291,7 +296,7 @@ public class CamelModel extends NamedElement {
         List<MetaDataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (MetaDataModel.canInstantiate(mObj))
-                    results.add((MetaDataModel)CamelDesignerProxyFactory.instantiate(mObj, MetaDataModel.STEREOTYPE_NAME));
+                results.add((MetaDataModel)CamelDesignerProxyFactory.instantiate(mObj, MetaDataModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -304,7 +309,7 @@ public class CamelModel extends NamedElement {
         List<OrganisationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (OrganisationModel.canInstantiate(mObj))
-                    results.add((OrganisationModel)CamelDesignerProxyFactory.instantiate(mObj, OrganisationModel.STEREOTYPE_NAME));
+                results.add((OrganisationModel)CamelDesignerProxyFactory.instantiate(mObj, OrganisationModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -317,7 +322,7 @@ public class CamelModel extends NamedElement {
         List<RequirementModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (RequirementModel.canInstantiate(mObj))
-                    results.add((RequirementModel)CamelDesignerProxyFactory.instantiate(mObj, RequirementModel.STEREOTYPE_NAME));
+                results.add((RequirementModel)CamelDesignerProxyFactory.instantiate(mObj, RequirementModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -330,7 +335,7 @@ public class CamelModel extends NamedElement {
         List<ScalabilityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (ScalabilityModel.canInstantiate(mObj))
-                    results.add((ScalabilityModel)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityModel.STEREOTYPE_NAME));
+                results.add((ScalabilityModel)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -343,7 +348,7 @@ public class CamelModel extends NamedElement {
         List<SecurityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (SecurityModel.canInstantiate(mObj))
-                    results.add((SecurityModel)CamelDesignerProxyFactory.instantiate(mObj, SecurityModel.STEREOTYPE_NAME));
+                results.add((SecurityModel)CamelDesignerProxyFactory.instantiate(mObj, SecurityModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -356,7 +361,7 @@ public class CamelModel extends NamedElement {
         List<TypeModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (TypeModel.canInstantiate(mObj))
-                    results.add((TypeModel)CamelDesignerProxyFactory.instantiate(mObj, TypeModel.STEREOTYPE_NAME));
+                results.add((TypeModel)CamelDesignerProxyFactory.instantiate(mObj, TypeModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -369,7 +374,7 @@ public class CamelModel extends NamedElement {
         List<UnitModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
             if (UnitModel.canInstantiate(mObj))
-                    results.add((UnitModel)CamelDesignerProxyFactory.instantiate(mObj, UnitModel.STEREOTYPE_NAME));
+                results.add((UnitModel)CamelDesignerProxyFactory.instantiate(mObj, UnitModel.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -495,7 +500,7 @@ public class CamelModel extends NamedElement {
         List<DataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()) {
             if (DataInstanceModel.canInstantiate(mObj))
-                    results.add((DataInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceModel.STEREOTYPE_NAME));
+                results.add((DataInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceModel.STEREOTYPE_NAME));
             if (DataTypeModel.canInstantiate(mObj))
                 results.add((DataTypeModel)CamelDesignerProxyFactory.instantiate(mObj, DataTypeModel.STEREOTYPE_NAME));
         }
@@ -511,7 +516,7 @@ public class CamelModel extends NamedElement {
         List<MetricModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()) {
             if (MetricTypeModel.canInstantiate(mObj))
-                    results.add((MetricTypeModel)CamelDesignerProxyFactory.instantiate(mObj, MetricTypeModel.STEREOTYPE_NAME));
+                results.add((MetricTypeModel)CamelDesignerProxyFactory.instantiate(mObj, MetricTypeModel.STEREOTYPE_NAME));
             if (MetricInstanceModel.canInstantiate(mObj))
                 results.add((MetricInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, MetricInstanceModel.STEREOTYPE_NAME));
         }
@@ -542,11 +547,21 @@ public class CamelModel extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
     }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(getDeploymentModels());
+        result.addAll(getDataModels());
+        result.addAll(getMetricModels());
+        result.addAll(getRequirementModels());
+        return result;
     }
 
 }

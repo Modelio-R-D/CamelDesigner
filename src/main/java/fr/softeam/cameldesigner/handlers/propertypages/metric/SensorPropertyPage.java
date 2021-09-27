@@ -16,6 +16,16 @@ public class SensorPropertyPage<T extends Sensor> extends SoftwareComponentPrope
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+
+        if(this._currentRow == 1){
+            this._element.setConfiguration(value);
+          }
+
+        else if(this._currentRow == 2){
+            this._element.setIsPush(Boolean.valueOf(value));
+          }
+
+          this._currentRow -= 2;
     }
 
     /**
@@ -27,6 +37,12 @@ public class SensorPropertyPage<T extends Sensor> extends SoftwareComponentPrope
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+
+        //Configuration
+        table.addProperty("Configuration", this._element.getConfiguration());
+
+        //isPush
+        table.addProperty("IsPush", Boolean.valueOf(this._element.getIsPush()));
     }
 
     public SensorPropertyPage(T elt) {

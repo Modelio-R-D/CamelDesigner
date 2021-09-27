@@ -10,23 +10,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Instance} with << MmsConceptInstance >> stereotype.
@@ -40,7 +37,7 @@ public class MmsConceptInstance extends MmsObject {
      * Tells whether a {@link MmsConceptInstance proxy} can be instantiated from a {@link MObject} checking it is a {@link Instance} stereotyped << MmsConceptInstance >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -50,7 +47,7 @@ public class MmsConceptInstance extends MmsObject {
 
     /**
      * Create a new {@link Instance} stereotyped << MmsConceptInstance >> then instantiate a {@link MmsConceptInstance} proxy.
-     * 
+     *
      * @return a {@link MmsConceptInstance} proxy on the created {@link Instance}.
      */
     public static MmsConceptInstance create() {
@@ -63,7 +60,7 @@ public class MmsConceptInstance extends MmsObject {
      * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Instance
      * @return a {@link MmsConceptInstance} proxy or <i>null</i>.
      */
@@ -75,7 +72,7 @@ public class MmsConceptInstance extends MmsObject {
      * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Instance}
      * @return a {@link MmsConceptInstance} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -118,7 +115,7 @@ public class MmsConceptInstance extends MmsObject {
 
     /**
      * Get the underlying {@link Instance}.
-     * 
+     *
      * @return the Instance represented by this proxy, never null.
      */
     @Override
@@ -155,7 +152,7 @@ public class MmsConceptInstance extends MmsObject {
     public boolean removePropertyInstance(final MmsPropertyInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MmsConceptInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MmsConceptInstance.MdaTypes.MDAASSOCDEP_ROLE), "conceptInstance")) 
+            if (d.isStereotyped(MmsConceptInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MmsConceptInstance.MdaTypes.MDAASSOCDEP_ROLE), "conceptInstance"))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -188,6 +185,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

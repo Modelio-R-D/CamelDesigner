@@ -7,23 +7,16 @@
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link ClassDiagram} with << SecurityModelDiagram >> stereotype.
@@ -37,7 +30,7 @@ public class SecurityModelDiagram extends AbstractCamelDiagram {
      * Tells whether a {@link SecurityModelDiagram proxy} can be instantiated from a {@link MObject} checking it is a {@link ClassDiagram} stereotyped << SecurityModelDiagram >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -47,7 +40,7 @@ public class SecurityModelDiagram extends AbstractCamelDiagram {
 
     /**
      * Create a new {@link ClassDiagram} stereotyped << SecurityModelDiagram >> then instantiate a {@link SecurityModelDiagram} proxy.
-     * 
+     *
      * @return a {@link SecurityModelDiagram} proxy on the created {@link ClassDiagram}.
      */
     public static SecurityModelDiagram create() {
@@ -60,7 +53,7 @@ public class SecurityModelDiagram extends AbstractCamelDiagram {
      * Tries to instantiate a {@link SecurityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << SecurityModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a ClassDiagram
      * @return a {@link SecurityModelDiagram} proxy or <i>null</i>.
      */
@@ -72,7 +65,7 @@ public class SecurityModelDiagram extends AbstractCamelDiagram {
      * Tries to instantiate a {@link SecurityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << SecurityModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link ClassDiagram}
      * @return a {@link SecurityModelDiagram} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -101,7 +94,7 @@ public class SecurityModelDiagram extends AbstractCamelDiagram {
 
     /**
      * Get the underlying {@link ClassDiagram}.
-     * 
+     *
      * @return the ClassDiagram represented by this proxy, never null.
      */
     @Override
@@ -139,4 +132,9 @@ static {
     }
     }
 
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
+    }
 }

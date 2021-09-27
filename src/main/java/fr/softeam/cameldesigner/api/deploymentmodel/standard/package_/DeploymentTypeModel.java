@@ -7,11 +7,24 @@
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS;
@@ -21,18 +34,6 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communica
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Hosting;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Package} with << DeploymentTypeModel >> stereotype.
@@ -46,7 +47,7 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Tells whether a {@link DeploymentTypeModel proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << DeploymentTypeModel >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -56,7 +57,7 @@ public class DeploymentTypeModel extends DeploymentModel {
 
     /**
      * Create a new {@link Package} stereotyped << DeploymentTypeModel >> then instantiate a {@link DeploymentTypeModel} proxy.
-     * 
+     *
      * @return a {@link DeploymentTypeModel} proxy on the created {@link Package}.
      */
     public static DeploymentTypeModel create() {
@@ -69,7 +70,7 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Package
      * @return a {@link DeploymentTypeModel} proxy or <i>null</i>.
      */
@@ -81,7 +82,7 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Package}
      * @return a {@link DeploymentTypeModel} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -236,25 +237,25 @@ public class DeploymentTypeModel extends DeploymentModel {
         return Collections.unmodifiableList(results);
     }
 
-    /**
-     * Get the values of the 'containers' role.<p>
-     * Role description:
-     * null
-     */
-    public List<Container> getContainers() {
-        List<Container> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "containers")
-              && Container.canInstantiate(d.getDependsOn()))
-                results.add((Container)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Container.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'containers' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<Container> getContainers() {
+//        List<Container> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "containers")
+//              && Container.canInstantiate(d.getDependsOn()))
+//                results.add((Container)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Container.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
     /**
      * Get the underlying {@link Package}.
-     * 
+     *
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -310,53 +311,53 @@ public class DeploymentTypeModel extends DeploymentModel {
         return Collections.unmodifiableList(results);
     }
 
-    /**
-     * Get the values of the 'paases' role.<p>
-     * Role description:
-     * null
-     */
-    public List<PaaS> getPaases() {
-        List<PaaS> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "paases")
-              && PaaS.canInstantiate(d.getDependsOn()))
-                results.add((PaaS)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaS.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'paases' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<PaaS> getPaases() {
+//        List<PaaS> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "paases")
+//              && PaaS.canInstantiate(d.getDependsOn()))
+//                results.add((PaaS)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaS.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
+//
+//    /**
+//     * Get the values of the 'requirementSets' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<RequirementSet> getRequirementSets() {
+//        List<RequirementSet> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "requirementSets")
+//              && RequirementSet.canInstantiate(d.getDependsOn()))
+//                results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), RequirementSet.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
-    /**
-     * Get the values of the 'requirementSets' role.<p>
-     * Role description:
-     * null
-     */
-    public List<RequirementSet> getRequirementSets() {
-        List<RequirementSet> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "requirementSets")
-              && RequirementSet.canInstantiate(d.getDependsOn()))
-                results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), RequirementSet.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
-
-    /**
-     * Get the values of the 'softwareComponents' role.<p>
-     * Role description:
-     * null
-     */
-    public List<SoftwareComponent> getSoftwareComponents() {
-        List<SoftwareComponent> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "softwareComponents")
-              && SoftwareComponent.canInstantiate(d.getDependsOn()))
-                results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'softwareComponents' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<SoftwareComponent> getSoftwareComponents() {
+//        List<SoftwareComponent> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "softwareComponents")
+//              && SoftwareComponent.canInstantiate(d.getDependsOn()))
+//                results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
     /**
      * Get the values of the 'vms' role.<p>
@@ -387,7 +388,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeCommunications(final Communication obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -405,7 +406,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeContainers(final Container obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -423,7 +424,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeHostings(final Hosting obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -441,7 +442,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeLocationCouplings(final LocationCoupling obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -459,7 +460,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removePaases(final PaaS obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -477,7 +478,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeRequirementSets(final RequirementSet obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -495,7 +496,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -513,7 +514,7 @@ public class DeploymentTypeModel extends DeploymentModel {
     public boolean removeVms(final VM obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(DeploymentTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(DeploymentTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -522,6 +523,66 @@ public class DeploymentTypeModel extends DeploymentModel {
         }
         return false;
     }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(getSoftwareComponents());
+        result.addAll(getVMs());
+        result.addAll(getPaases());
+        result.addAll(getContainers());
+        result.addAll(getRequirementSets());
+        return result;
+    }
+
+    public Collection<SoftwareComponent> getSoftwareComponents() {
+        List<SoftwareComponent> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (SoftwareComponent.canInstantiate(mObj))
+                results.add(SoftwareComponent.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+
+    public Collection<VM> getVMs() {
+        List<VM> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (VM.canInstantiate(mObj))
+                results.add(VM.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<PaaS> getPaases() {
+        List<PaaS> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (PaaS.canInstantiate(mObj))
+                results.add(PaaS.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<Container> getContainers() {
+        List<Container> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (Container.canInstantiate(mObj))
+                results.add(Container.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+
+    public Collection<RequirementSet> getRequirementSets() {
+        List<RequirementSet> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (RequirementSet.canInstantiate(mObj))
+                results.add(RequirementSet.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+
 
     /**
      * Set the value of the 'globalRequirementSet' role.<p>

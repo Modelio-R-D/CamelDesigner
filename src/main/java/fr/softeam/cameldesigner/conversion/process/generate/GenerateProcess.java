@@ -1,6 +1,9 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Package;
 import camel.core.CamelModel;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel;
@@ -19,9 +22,6 @@ import fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_.Scalabili
 import fr.softeam.cameldesigner.api.securitymodel.standard.package_.SecurityModel;
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Package;
 
 public class GenerateProcess extends AbstractGenerateProcess {
     public GenerateProcess(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
@@ -29,74 +29,77 @@ public class GenerateProcess extends AbstractGenerateProcess {
     }
 
     @Override
-    protected CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
+
+        ModelElement element = camelElement.getElement();
+
         if (element instanceof Package) {
             Package umlPackage = (Package) element;
-        
-            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     DeploymentTypeModel.STEREOTYPE_NAME)) {
                 return generate((DeploymentTypeModel.instantiate(umlPackage)));
-                
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     DeploymentInstanceModel.STEREOTYPE_NAME)) {
                 return generate((DeploymentInstanceModel.instantiate(umlPackage)));
-        
-            } else if (umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if (umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     RequirementModel.STEREOTYPE_NAME)) {
                 return generate((RequirementModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     MetricTypeModel.STEREOTYPE_NAME)) {
                 return generate((MetricTypeModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     MetricInstanceModel.STEREOTYPE_NAME)) {
                 return generate((MetricInstanceModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     MetaDataModel.STEREOTYPE_NAME)) {
                 return generate((MetaDataModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     ConstraintModel.STEREOTYPE_NAME)) {
                 return generate((ConstraintModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     DataTypeModel.STEREOTYPE_NAME)) {
                 return generate((DataTypeModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     DataInstanceModel.STEREOTYPE_NAME)) {
                 return generate((DataInstanceModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     ExecutionModel.STEREOTYPE_NAME)) {
                 return generate((ExecutionModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     LocationModel.STEREOTYPE_NAME)) {
                 return generate((LocationModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     OrganisationModel.STEREOTYPE_NAME)) {
                 return generate((OrganisationModel.instantiate(umlPackage)));
-        
-            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            } else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     ScalabilityModel.STEREOTYPE_NAME)) {
                 return generate((ScalabilityModel.instantiate(umlPackage)));
-        
-            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     SecurityModel.STEREOTYPE_NAME)) {
                 return generate((SecurityModel.instantiate(umlPackage)));
-        
-            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     TypeModel.STEREOTYPE_NAME)) {
                 return generate((TypeModel.instantiate(umlPackage)));
-        
-            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+
+            }else if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     UnitModel.STEREOTYPE_NAME)) {
                 return generate((UnitModel.instantiate(umlPackage)));
-        
+
             }
         }
         return null;

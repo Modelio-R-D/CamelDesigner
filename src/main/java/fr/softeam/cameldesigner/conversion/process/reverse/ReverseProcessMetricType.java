@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import camel.deployment.Component;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
@@ -19,8 +21,6 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 public class ReverseProcessMetricType extends AbstractReverseProcess {
     public ReverseProcessMetricType(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
@@ -32,46 +32,46 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         if(element instanceof camel.core.MeasurableAttribute) {
             return reverse ((camel.core.MeasurableAttribute)element);
         } else if (element instanceof camel.metric.RawMetricContext) {
-            return reverse ((camel.metric.RawMetricContext)element);            
+            return reverse ((camel.metric.RawMetricContext)element);
         } else if (element instanceof camel.metric.CompositeMetricContext) {
-            return reverse ((camel.metric.CompositeMetricContext)element);            
+            return reverse ((camel.metric.CompositeMetricContext)element);
         } else if (element instanceof camel.metric.ObjectContext) {
-            return reverse ((camel.metric.ObjectContext)element);            
+            return reverse ((camel.metric.ObjectContext)element);
         } else if (element instanceof camel.metric.RawMetric) {
-            return reverse ((camel.metric.RawMetric)element);            
+            return reverse ((camel.metric.RawMetric)element);
         } else if (element instanceof camel.metric.CompositeMetric) {
-            return reverse ((camel.metric.CompositeMetric)element);            
+            return reverse ((camel.metric.CompositeMetric)element);
         } else if (element instanceof camel.metric.MetricVariable) {
-            return reverse ((camel.metric.MetricVariable)element);            
+            return reverse ((camel.metric.MetricVariable)element);
         } else if (element instanceof camel.metric.Window) {
-            return reverse ((camel.metric.Window)element);            
+            return reverse ((camel.metric.Window)element);
         } else if (element instanceof camel.metric.Schedule) {
-            return reverse ((camel.metric.Schedule)element);            
+            return reverse ((camel.metric.Schedule)element);
         } else if (element instanceof camel.metric.Sensor) {
-            return reverse ((camel.metric.Sensor)element);            
+            return reverse ((camel.metric.Sensor)element);
         } else if (element instanceof camel.metric.MetricTemplate) {
-            return reverse ((camel.metric.MetricTemplate)element);            
+            return reverse ((camel.metric.MetricTemplate)element);
         }
         return null;
     }
 
     private MetricTemplate reverse(camel.metric.MetricTemplate element) {
         MetricTemplate metricTemplateProxy = MetricTemplate.create();
-        
+
         if(element.getAttribute() != null) {
             MeasurableAttribute referencedMeasurableAttribute = retrieveReferencedMeasurableAttribute(element.getAttribute());
             if(referencedMeasurableAttribute != null) {
                 metricTemplateProxy.setAttribute(referencedMeasurableAttribute);
             }
         }
-        
+
         if(element.getUnit() != null) {
             Unit referencedUnit = retrieveReferencedUnit(element.getUnit());
             if(referencedUnit != null) {
                 metricTemplateProxy.setUnit(referencedUnit);
             }
         }
-        
+
         if(element.getValueType() != null) {
             ValueType referencedValueType = retrieveReferencedValueType(element.getValueType());
             if(referencedValueType != null) {
@@ -84,7 +84,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
 
     private fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor reverse(camel.metric.Sensor element) {
         fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor sensorProxy = fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor.create() ;                //sensorProxy
-        sensorProxy.setIsPush(Boolean.toString(element.isIsPush()));
+        sensorProxy.setIsPush(element.isIsPush());
         sensorProxy.setConfiguration(element.getConfiguration());
         return sensorProxy;
     }
@@ -102,15 +102,15 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
 
     private Window reverse(camel.metric.Window element) {
         Window windowProxy = Window.create();
-        
+
         windowProxy.setMeasurementSize(Long.toString(element.getMeasurementSize()));
-        
+
         if(element.getSizeType() != null) {
             windowProxy.setWindowType(element.getSizeType().toString());
         }
-        
+
         windowProxy.setTimeSize(Long.toString(element.getTimeSize()));
-        
+
         // TODO
         //        if(element.getTimeUnit() != null) {
         //            Unit referencedTimeUnit = retrieveReferencedTimeUnit(element.getTimeUnit());
@@ -118,7 +118,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         //                windowProxy.setTimeUnit(referencedTimeUnit);
         //            }
         //        }
-        
+
         if(element.getWindowType() != null) {
             windowProxy.setWindowType(element.getWindowType().toString());
         }
@@ -129,15 +129,15 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         MetricVariable metricVariable = MetricVariable.create();
         if(element.getFormula() != null) {
             metricVariable.setFormula(element.getFormula());
-        }    
-        
+        }
+
         if(element.getComponent() != null) {
             CamelComponent referencedComponent = retrieveReferencedComponent(element.getComponent());
             if(referencedComponent != null) {
                 metricVariable.setComponent(referencedComponent);
             }
-        }   
-        
+        }
+
         metricVariable.setCurrentConfiguration(element.isCurrentConfiguration());
         return metricVariable;
     }
@@ -177,7 +177,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
 
     private CompositeMetricContext reverse(camel.metric.CompositeMetricContext element) {
         CompositeMetricContext compositeMetricContextProxy = (CompositeMetricContext) reverseMetricContext(element);
-        
+
         for(camel.metric.MetricContext metricContext : element.getComposingMetricContexts()) {
             MetricContext referencedMetricContext = retrievReferencedMetricContext(metricContext);
             if(referencedMetricContext != null) {
@@ -189,7 +189,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
 
     private RawMetricContext reverse(camel.metric.RawMetricContext element) {
         RawMetricContext rawMetricContextProxy = (RawMetricContext) reverseMetricContext(element);
-        
+
         if(element.getSensor() != null) {
             Sensor referencedSensor = retrieveReferencedSensor(element.getSensor());
             if(referencedSensor != null) {
@@ -305,34 +305,34 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
 
     private MetricContext reverseMetricContext(camel.metric.MetricContext element) {
         MetricContext metricContextProxy = null;
-        
+
         if(element instanceof camel.metric.CompositeMetricContext) {
             metricContextProxy = CompositeMetricContext.create();
         } else if(element instanceof camel.metric.RawMetricContext) {
             metricContextProxy = RawMetricContext.create();
         }
-        
+
         if(element.getMetric() != null) {
             Metric referencedMetric = retrieveReferencedMetric(element.getMetric());
             if(referencedMetric != null) {
                 metricContextProxy.setMetric(referencedMetric);
             }
         }
-        
+
         if(element.getWindow() != null) {
             Window referencedWindow = retrieveReferencedWindow(element.getWindow());
             if(referencedWindow != null) {
                 metricContextProxy.setWindow(referencedWindow);
             }
         }
-        
+
         if(element.getSchedule() != null) {
             Schedule referencedSchedule = retrieveReferencedSchedule(element.getSchedule());
             if(referencedSchedule != null) {
                 metricContextProxy.setSchedule(referencedSchedule);
             }
         }
-        
+
         if(element.getObjectContext() != null) {
             ObjectContext referencedObjectContext = retrieveReferencedObjectContext(element.getObjectContext());
             if(referencedObjectContext != null) {

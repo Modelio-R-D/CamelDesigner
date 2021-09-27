@@ -2,6 +2,10 @@ package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.List;
 import java.util.Map;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Enumeration;
 import camel.requirement.CloudType;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
@@ -17,10 +21,6 @@ import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLeve
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement;
 import fr.softeam.cameldesigner.utils.StringUtils;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Enumeration;
 
 public class GenerateProcessRequirement extends AbstractGenerateProcess {
     public GenerateProcessRequirement(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
@@ -28,7 +28,8 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
     }
 
     @Override
-    protected CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
+        ModelElement element = camelElement.getElement();
         if (element instanceof Class) {
             Class umlClass = (Class) element;
             if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScaleRequirement.STEREOTYPE_NAME)) {
@@ -232,7 +233,7 @@ public class GenerateProcessRequirement extends AbstractGenerateProcess {
                 ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.OptimisationRequirement)processedElement);
             } else if(processedElement instanceof camel.requirement.ImageRequirement) {
                 ((camel.requirement.RequirementModel)this.getCamelElementParent()).getRequirements().add((camel.requirement.ImageRequirement)processedElement);
-            } 
+            }
         }
     }
 

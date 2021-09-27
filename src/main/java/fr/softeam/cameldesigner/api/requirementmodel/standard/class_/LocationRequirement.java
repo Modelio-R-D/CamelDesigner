@@ -10,23 +10,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.HardRequirement;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Enumeration;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.HardRequirement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Class} with << LocationRequirement >> stereotype.
@@ -42,7 +39,7 @@ public class LocationRequirement extends HardRequirement {
      * Tells whether a {@link LocationRequirement proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << LocationRequirement >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -52,7 +49,7 @@ public class LocationRequirement extends HardRequirement {
 
     /**
      * Create a new {@link Class} stereotyped << LocationRequirement >> then instantiate a {@link LocationRequirement} proxy.
-     * 
+     *
      * @return a {@link LocationRequirement} proxy on the created {@link Class}.
      */
     public static LocationRequirement create() {
@@ -65,7 +62,7 @@ public class LocationRequirement extends HardRequirement {
      * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link LocationRequirement} proxy or <i>null</i>.
      */
@@ -77,7 +74,7 @@ public class LocationRequirement extends HardRequirement {
      * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Class}
      * @return a {@link LocationRequirement} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -120,7 +117,7 @@ public class LocationRequirement extends HardRequirement {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -139,7 +136,7 @@ public class LocationRequirement extends HardRequirement {
           if (d.isStereotyped(LocationRequirement.MdaTypes.MDAASSOCDEP)
               && Objects.equals(d.getTagValue(LocationRequirement.MdaTypes.MDAASSOCDEP_ROLE), "locations")
               && Location.canInstantiate(d.getDependsOn()))
-                results.add((Location)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Location.MdaTypes.STEREOTYPE_ELT.getName()));
+                results.add(Location.instantiate((Enumeration) d.getDependsOn()));
         }
         return Collections.unmodifiableList(results);
     }
@@ -166,7 +163,7 @@ public class LocationRequirement extends HardRequirement {
     public boolean removeLocations(final Location obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(LocationRequirement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(LocationRequirement.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(LocationRequirement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(LocationRequirement.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -214,6 +211,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

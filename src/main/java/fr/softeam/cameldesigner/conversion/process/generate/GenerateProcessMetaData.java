@@ -1,13 +1,13 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 
 public class GenerateProcessMetaData extends AbstractGenerateProcess {
     public GenerateProcessMetaData(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
@@ -15,7 +15,8 @@ public class GenerateProcessMetaData extends AbstractGenerateProcess {
     }
 
     @Override
-    protected CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
+        ModelElement element = camelElement.getElement();
         if (element instanceof Class) {
             Class umlClass = (Class) element;
             if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConcept.STEREOTYPE_NAME)) {
@@ -61,7 +62,7 @@ public class GenerateProcessMetaData extends AbstractGenerateProcess {
         if(mmsConceptProxy.getUri()!=null) {
             mmsConcept.setUri(mmsConceptProxy.getUri());
         }
-        if(this.getCamelElementParent() != null) { 
+        if(this.getCamelElementParent() != null) {
             if(this.getCamelElementParent() instanceof camel.mms.MmsConcept) {
                 ((camel.mms.MmsConcept)this.getCamelElementParent()).getConcept().add(mmsConcept);
             } else if(this.getCamelElementParent() instanceof camel.mms.MetaDataModel) {

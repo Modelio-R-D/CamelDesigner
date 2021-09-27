@@ -19,7 +19,7 @@ public class CamelModelPropertyPage<T extends CamelModel> extends NamedElementPr
 
         if(this._currentRow == 1){
             this._element.setApplicationName(value);
-        }else if (row == 2) {
+        }else if (this._currentRow == 2) {
             this._element.setApplicationVersion(value);
         }
         this._currentRow -= 2;

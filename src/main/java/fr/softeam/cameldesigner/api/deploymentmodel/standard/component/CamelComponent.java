@@ -10,25 +10,28 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ClusterConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Component} with << CamelComponent >> stereotype.
@@ -66,6 +69,7 @@ public abstract class CamelComponent extends Feature {
         }
     }
 
+
     /**
      * Add a value to the 'providedHosts' role.<p>
      * Role description:
@@ -95,30 +99,52 @@ public abstract class CamelComponent extends Feature {
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
-    /**
-     * Get the values of the 'configurations' role.<p>
-     * Role description:
-     * null
-     */
-    public List<Configuration> getConfigurations() {
-        List<Configuration> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "configurations")
-              && Configuration.canInstantiate(d.getDependsOn()))
-                results.add((Configuration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Configuration.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'configurations' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<Configuration> getConfigurations() {
+//        List<Configuration> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+//                    && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "configurations")
+//                    && Configuration.canInstantiate(d.getDependsOn()))
+//                results.add((Configuration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Configuration.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
     /**
      * Get the underlying {@link Component}.
-     * 
+     *
      * @return the Component represented by this proxy, never null.
      */
     @Override
     public Component getElement() {
         return (Component)super.getElement();
+    }
+
+    public static CamelComponent instantiate(final Component obj) {
+        if (SoftwareComponent.canInstantiate(obj)) {
+            return new SoftwareComponent(obj);
+        }else if (VM.canInstantiate(obj)) {
+            return new VM(obj);
+        }else if (Container.canInstantiate(obj)) {
+            return new Container(obj);
+        }else if (PaaS.canInstantiate(obj)) {
+            return new PaaS(obj);
+        }
+        return  null;
+    }
+
+
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof Component) && (
+                ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponent.STEREOTYPE_NAME) ||
+                ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponent.STEREOTYPE_NAME) ||
+                ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaS.STEREOTYPE_NAME) ||
+                ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Container.STEREOTYPE_NAME) ));
     }
 
     /**
@@ -129,9 +155,9 @@ public abstract class CamelComponent extends Feature {
     public List<CommunicationPort> getProvidedCommunications() {
         List<CommunicationPort> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedCommunications")
-              && CommunicationPort.canInstantiate(d.getDependsOn()))
+            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedCommunications")
+                    && CommunicationPort.canInstantiate(d.getDependsOn()))
                 results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName()));
         }
         return Collections.unmodifiableList(results);
@@ -145,9 +171,9 @@ public abstract class CamelComponent extends Feature {
     public List<HostingPort> getProvidedHosts() {
         List<HostingPort> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedHosts")
-              && HostingPort.canInstantiate(d.getDependsOn()))
+            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "providedHosts")
+                    && HostingPort.canInstantiate(d.getDependsOn()))
                 results.add((HostingPort)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), HostingPort.MdaTypes.STEREOTYPE_ELT.getName()));
         }
         return Collections.unmodifiableList(results);
@@ -165,13 +191,13 @@ public abstract class CamelComponent extends Feature {
      */
     public boolean removeConfigurations(final Configuration obj) {
         if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
+            for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+                if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), ""))
+                    if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                        d.delete();
+                        return true;
+                    }
+            }
         }
         return false;
     }
@@ -183,13 +209,13 @@ public abstract class CamelComponent extends Feature {
      */
     public boolean removeProvidedCommunications(final CommunicationPort obj) {
         if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
+            for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+                if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), ""))
+                    if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                        d.delete();
+                        return true;
+                    }
+            }
         }
         return false;
     }
@@ -201,13 +227,13 @@ public abstract class CamelComponent extends Feature {
      */
     public boolean removeProvidedHosts(final HostingPort obj) {
         if (obj != null) {
-          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), "")) 
-              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                d.delete();
-                return true;
-              }
-          }
+            for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+                if (d.isStereotyped(CamelComponent.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelComponent.MdaTypes.MDAASSOCDEP_ROLE), ""))
+                    if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                        d.delete();
+                        return true;
+                    }
+            }
         }
         return false;
     }
@@ -230,11 +256,78 @@ public abstract class CamelComponent extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
     }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(getConfigurations());
+        return result;
+    }
+
+    public List<Configuration> getConfigurations() {
+        List<Configuration> result = new ArrayList<>();
+        result.addAll(getScriptConfigurations());
+        result.addAll(getClusterConfigurations());
+        result.addAll(getPaaSConfigurations());
+        result.addAll(getServerlessConfigurations());
+        result.addAll(getBuildConfigurations());
+
+        return result;
+    }
+
+    public List<ScriptConfiguration> getScriptConfigurations() {
+        List<ScriptConfiguration> result = new ArrayList<>();
+
+        for (ModelTree mObj : this.getElement().getOwnedElement())
+            if (ScriptConfiguration.canInstantiate(mObj))
+                result.add(ScriptConfiguration.safeInstantiate((Artifact) mObj));
+        return result;
+    }
+
+
+    public List<ClusterConfiguration> getClusterConfigurations() {
+        List<ClusterConfiguration> result = new ArrayList<>();
+
+        for (ModelTree mObj : this.getElement().getOwnedElement())
+            if (ClusterConfiguration.canInstantiate(mObj))
+                result.add(ClusterConfiguration.safeInstantiate((Artifact) mObj));
+        return result;
+    }
+
+
+    public List<PaaSConfiguration> getPaaSConfigurations() {
+        List<PaaSConfiguration> result = new ArrayList<>();
+
+        for (ModelTree mObj : this.getElement().getOwnedElement())
+            if (PaaSConfiguration.canInstantiate(mObj))
+                result.add(PaaSConfiguration.safeInstantiate((Artifact) mObj));
+        return result;
+    }
+
+
+    public List<ServerlessConfiguration> getServerlessConfigurations() {
+        List<ServerlessConfiguration> result = new ArrayList<>();
+
+        for (ModelTree mObj : this.getElement().getOwnedElement())
+            if (ServerlessConfiguration.canInstantiate(mObj))
+                result.add(ServerlessConfiguration.safeInstantiate((Artifact) mObj));
+        return result;
+    }
+
+
+    public List<BuildConfiguration> getBuildConfigurations() {
+        List<BuildConfiguration> result = new ArrayList<>();
+
+        for (ModelTree mObj : this.getElement().getOwnedElement())
+            if (BuildConfiguration.canInstantiate(mObj))
+                result.add(BuildConfiguration.safeInstantiate((Artifact) mObj));
+        return result;
     }
 
 }

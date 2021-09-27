@@ -1,22 +1,23 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
-import camel.core.CamelModel;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Package;
+import camel.core.CamelModel;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 
-public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
+public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement, CDOObject>  {
     public GenerateProcessDeploymentInstance(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
         super(camelElementParent, processedUmlElements);
     }
 
     @Override
-    protected CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
+        ModelElement element = camelElement.getElement();
         if (element instanceof Package) {
             return generate ((Package) element);
         }
@@ -25,8 +26,8 @@ public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
         }
         else if (element instanceof Class) {
             return generate ((Class) element);
-        
-        
+
+
             //if(((ModelElement) packageElement).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RequirementModel.)) {
             //    return generateCamelModel(packageElement);
             //}
@@ -38,7 +39,7 @@ public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
         if(this.processedUmlElements.containsKey(umlPackage)) {
             return this.processedUmlElements.get(umlPackage);
         } else {
-            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, 
+            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                     DeploymentTypeModel.STEREOTYPE_NAME)) {
                 // factory
                 camel.deployment.DeploymentTypeModel deploymentTypeModel = camel.deployment.DeploymentFactory.eINSTANCE.createDeploymentTypeModel();
@@ -50,7 +51,7 @@ public class GenerateProcessDeploymentInstance extends AbstractGenerateProcess {
                 //
                 return deploymentTypeModel;
             }
-        
+
         }
         return null;
     }

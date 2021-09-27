@@ -6,25 +6,15 @@
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.component;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Component} with << Sensor >> stereotype.
@@ -42,7 +32,7 @@ public class Sensor extends SoftwareComponent {
      * Tells whether a {@link Sensor proxy} can be instantiated from a {@link MObject} checking it is a {@link Component} stereotyped << Sensor >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -52,7 +42,7 @@ public class Sensor extends SoftwareComponent {
 
     /**
      * Create a new {@link Component} stereotyped << Sensor >> then instantiate a {@link Sensor} proxy.
-     * 
+     *
      * @return a {@link Sensor} proxy on the created {@link Component}.
      */
     public static Sensor create() {
@@ -65,7 +55,7 @@ public class Sensor extends SoftwareComponent {
      * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Component
      * @return a {@link Sensor} proxy or <i>null</i>.
      */
@@ -77,7 +67,7 @@ public class Sensor extends SoftwareComponent {
      * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Component}
      * @return a {@link Sensor} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -115,7 +105,7 @@ public class Sensor extends SoftwareComponent {
 
     /**
      * Get the underlying {@link Component}.
-     * 
+     *
      * @return the Component represented by this proxy, never null.
      */
     @Override
@@ -128,8 +118,8 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    public String getIsPush() {
-        return this.elt.getTagValue(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT);
+    public Boolean getIsPush() {
+        return Boolean.valueOf(this.elt.getTagValue(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT));
     }
 
     @Override
@@ -151,8 +141,8 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    public void setIsPush(final String value) {
-        this.elt.putTagValue(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT, value);
+    public void setIsPush(final Boolean value) {
+        this.elt.putTagValue(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT, value.toString());
     }
 
     protected Sensor(final Component elt) {

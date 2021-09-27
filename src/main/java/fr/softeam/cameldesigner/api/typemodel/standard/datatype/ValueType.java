@@ -6,25 +6,14 @@
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link DataType} with << ValueType >> stereotype.
@@ -51,9 +40,33 @@ public abstract class ValueType extends NamedElement {
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
+    public static ValueType instantiate(final DataType obj) {
+        if (BooleanValueType.canInstantiate(obj)) {
+            return new BooleanValueType(obj);
+        }else if (List.canInstantiate(obj)) {
+            return new List(obj);
+        }else if (Range.canInstantiate(obj)) {
+            return new Range(obj);
+        }else if (RangeUnion.canInstantiate(obj)) {
+            return new RangeUnion(obj);
+        }else if (StringValueType.canInstantiate(obj)) {
+            return new StringValueType(obj);
+        }
+        return  null;
+    }
+
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof DataType) && (
+                ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, BooleanValueType.STEREOTYPE_NAME) ||
+                ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, List.STEREOTYPE_NAME) ||
+                ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Range.STEREOTYPE_NAME) ||
+                ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RangeUnion.STEREOTYPE_NAME) ||
+                ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, StringValueType.STEREOTYPE_NAME) ));
+    }
+
     /**
      * Get the underlying {@link DataType}.
-     * 
+     *
      * @return the DataType represented by this proxy, never null.
      */
     @Override

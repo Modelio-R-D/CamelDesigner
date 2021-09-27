@@ -11,9 +11,10 @@ import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.Optimisatio
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 
 public class OptimisationRequirementPropertyPage<T extends OptimisationRequirement> extends NamedElementPropertyPage<T> {
-    private static List<ModelElement> _metricContexts;
 
-    private static List<ModelElement> _metricVariables;
+    private List<ModelElement> _metricContexts;
+
+    private List<ModelElement> _metricVariables;
 
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
@@ -70,9 +71,11 @@ public class OptimisationRequirementPropertyPage<T extends OptimisationRequireme
         super.update(table);
 
         //MetricContext
+        this._metricContexts = CamelDesignerAbstractProxy.getMetricContexts();
         table.addProperty("Metric Context", getCamelName(this._element.getMetricContext()), getCamelNames(this._metricContexts));
 
         //MetricVariable
+        this._metricVariables = MetricVariable.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Metric Variable", getCamelName(this._element.getMetricVariable()), getCamelNames(this._metricVariables));
 
         //Mimimise
@@ -81,10 +84,6 @@ public class OptimisationRequirementPropertyPage<T extends OptimisationRequireme
 
     public OptimisationRequirementPropertyPage(T elt) {
         super(elt);
-
-        _metricContexts = CamelDesignerAbstractProxy.getMetricContexts();
-
-        _metricVariables = MetricVariable.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
     }
 
 }

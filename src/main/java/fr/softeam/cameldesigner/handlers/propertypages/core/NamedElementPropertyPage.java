@@ -10,6 +10,7 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedE
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 
 public class NamedElementPropertyPage<T extends NamedElement> extends CamelElementPropertyPage<T> {
+
     private List<ModelElement> _annotations = null;
 
     /**
@@ -49,13 +50,12 @@ public class NamedElementPropertyPage<T extends NamedElement> extends CamelEleme
         super.update(table);
 
         //Annotations
+        this._annotations = CamelDesignerAbstractProxy.getMMSObject();
         table.addProperty("Annotations", getCamelValue(this._element.getAnnotations()), getAddRemove(this._annotations, this._element.getAnnotations()));
     }
 
     public NamedElementPropertyPage(T elt) {
         super(elt);
-
-        this._annotations = CamelDesignerAbstractProxy.getMMSObject();
     }
 
 }

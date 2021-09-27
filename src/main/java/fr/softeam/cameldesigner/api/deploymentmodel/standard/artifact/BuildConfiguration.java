@@ -6,6 +6,8 @@
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -13,6 +15,7 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Artifact;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
@@ -242,6 +245,12 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        return result;
     }
 
 }

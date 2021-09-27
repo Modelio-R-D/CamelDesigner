@@ -1,7 +1,8 @@
 package fr.softeam.cameldesigner.conversion.process;
 
 
-public interface IElementProcess {
-    Object process(Object element);
+public interface IElementProcess<T,V> {
+
+    T process(V element);
 
 }

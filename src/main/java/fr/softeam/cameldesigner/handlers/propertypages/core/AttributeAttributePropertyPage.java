@@ -15,6 +15,12 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+
+        if(this._currentRow == 1){
+          this._element.setValue(value);
+        }
+
+        this._currentRow -= 1;
     }
 
     /**
@@ -26,6 +32,10 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+
+        //Value
+        table.addProperty("Value", this._element.getValue());
+
     }
 
     public AttributeAttributePropertyPage(T elt) {

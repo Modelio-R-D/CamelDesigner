@@ -6,24 +6,15 @@
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link DataType} with << DimensionedUnit >> stereotype.
@@ -66,7 +57,7 @@ public abstract class DimensionedUnit extends Unit {
 
     /**
      * Get the underlying {@link DataType}.
-     * 
+     *
      * @return the DataType represented by this proxy, never null.
      */
     @Override
@@ -101,6 +92,15 @@ public abstract class DimensionedUnit extends Unit {
           }
           dep.setDependsOn(obj.getElement());
         }
+    }
+
+    public static DimensionedUnit instantiate(final DataType obj) {
+        if (SingleUnit.canInstantiate(obj)) {
+            return new SingleUnit(obj);
+        }else if (CompositeUnit.canInstantiate(obj)) {
+            return new CompositeUnit(obj);
+        }
+        return  null;
     }
 
     protected DimensionedUnit(final DataType elt) {

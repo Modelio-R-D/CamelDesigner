@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.handlers.propertypages.requirement;
 
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.Constraint;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective;
 
 public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> extends HardRequirementPropertyPage<T> {
@@ -15,6 +16,18 @@ public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+
+
+        switch (this._currentRow) {
+
+        case 1 :
+            for( Constraint constraint: this._element.getElement().getConstraintDefinition()) {
+                constraint.setName(value);
+            }
+            break;
+        }
+        this._currentRow -= 1;
+
     }
 
     /**
@@ -26,6 +39,14 @@ public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+
+        //Constraint
+        String constraintName = "";
+        for( Constraint constraint: this._element.getElement().getConstraintDefinition()) {
+            constraintName = constraint.getName();
+        }
+
+        table.addProperty("Constraint", constraintName);
     }
 
     public ServiceLevelObjectivePropertyPage(T elt) {

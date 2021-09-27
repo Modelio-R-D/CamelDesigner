@@ -15,6 +15,13 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+
+        if(this._currentRow == 1){
+            this._element.setCloudType(value);
+        }
+
+
+        this._currentRow -= 1;
     }
 
     /**
@@ -26,6 +33,9 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+
+        //Cloud Type
+        table.addProperty("Cloud Type", this._element.getCloudType());
     }
 
     public ProviderRequirementPropertyPage(T elt) {

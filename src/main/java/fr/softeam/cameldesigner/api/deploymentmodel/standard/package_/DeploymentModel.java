@@ -7,25 +7,29 @@
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
-import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
-import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
+import java.util.List;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
+import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Package} with << DeploymentModel >> stereotype.
@@ -39,7 +43,7 @@ public class DeploymentModel extends SubModel {
      * Tells whether a {@link DeploymentModel proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << DeploymentModel >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -49,7 +53,7 @@ public class DeploymentModel extends SubModel {
 
     /**
      * Create a new {@link Package} stereotyped << DeploymentModel >> then instantiate a {@link DeploymentModel} proxy.
-     * 
+     *
      * @return a {@link DeploymentModel} proxy on the created {@link Package}.
      */
     public static DeploymentModel create() {
@@ -62,7 +66,7 @@ public class DeploymentModel extends SubModel {
      * Tries to instantiate a {@link DeploymentModel} proxy from a {@link Package} stereotyped << DeploymentModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Package
      * @return a {@link DeploymentModel} proxy or <i>null</i>.
      */
@@ -74,7 +78,7 @@ public class DeploymentModel extends SubModel {
      * Tries to instantiate a {@link DeploymentModel} proxy from a {@link Package} stereotyped << DeploymentModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Package}
      * @return a {@link DeploymentModel} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -112,7 +116,7 @@ public class DeploymentModel extends SubModel {
 
     /**
      * Get the underlying {@link Package}.
-     * 
+     *
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -152,11 +156,70 @@ public class DeploymentModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+        static {
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
     }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(getSoftwareComponents());
+        result.addAll(getVMs());
+        result.addAll(getPaases());
+        result.addAll(getContainers());
+        result.addAll(getRequirementSets());
+        return result;
     }
+
+    public Collection<SoftwareComponent> getSoftwareComponents() {
+        List<SoftwareComponent> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (SoftwareComponent.canInstantiate(mObj))
+                results.add(SoftwareComponent.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+
+    public Collection<VM> getVMs() {
+        List<VM> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (VM.canInstantiate(mObj))
+                results.add(VM.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<PaaS> getPaases() {
+        List<PaaS> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (PaaS.canInstantiate(mObj))
+                results.add(PaaS.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<Container> getContainers() {
+        List<Container> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (Container.canInstantiate(mObj))
+                results.add(Container.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+
+    public Collection<RequirementSet> getRequirementSets() {
+        List<RequirementSet> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (RequirementSet.canInstantiate(mObj))
+                results.add(RequirementSet.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
 
 }

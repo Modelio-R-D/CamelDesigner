@@ -28,7 +28,6 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Monitor;
 import org.eclipse.swt.widgets.Shell;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
 import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
@@ -56,7 +55,7 @@ public abstract class AbstractSwtWizardWindow extends Dialog {
 
     protected String path = "";
 
-    protected ModelElement selectedElt = null;
+    protected org.modelio.metamodel.uml.statik.Package selectedElt = null;
 
     protected Shell shell = null;
 
@@ -209,7 +208,7 @@ public abstract class AbstractSwtWizardWindow extends Dialog {
     /**
      * @param selectedElt : set the selected element
      */
-    public void setSelectedElt(final ModelElement selectedElt) {
+    public void setSelectedElt(final org.modelio.metamodel.uml.statik.Package selectedElt) {
         this.selectedElt = selectedElt;
     }
 

@@ -29,8 +29,9 @@
 package fr.softeam.cameldesigner.utils;
 
 import java.io.File;
-import fr.softeam.cameldesigner.i18n.I18nMessages;
 import org.modelio.api.module.IModule;
+import fr.softeam.cameldesigner.i18n.I18nMessages;
+import fr.softeam.cameldesigner.ui.CamelFormat;
 
 /**
  * This class handles the Camel Designer resources i.e. images, styles, property names, etc.
@@ -40,6 +41,10 @@ public class CamelDesignerResourcesManager {
     private static CamelDesignerResourcesManager instance = null;
 
     private IModule _mdac;
+
+    private static String camelFile = "ICON_SchedulerAndWorkers.camel";
+
+    private static String xmiFile = "ICON_SchedulerAndWorkers.xmi";
 
     /**
      * Method ResourcesManager
@@ -51,7 +56,7 @@ public class CamelDesignerResourcesManager {
     /**
      * Method getInstance
      * @author ebrosse
-     * 
+     *
      * @return the SysMLResourcesManager.java instance
      */
     public static CamelDesignerResourcesManager getInstance() {
@@ -63,7 +68,7 @@ public class CamelDesignerResourcesManager {
 
     /**
      * This method sets the current module
-     * 
+     *
      * @param module : the current module
      */
     public void setJMDAC(IModule module) {
@@ -73,18 +78,31 @@ public class CamelDesignerResourcesManager {
     /**
      * Method getImage
      * @author ebrosse
-     * 
+     *
      * @param imageName : the name of the image file
      * @return the complete path of the image file
      */
     public String getImage(String imageName) {
-        return this._mdac.getModuleContext().getConfiguration().getModuleResourcesPath() + File.separator + "res" + File.separator + "icons" + File.separator + imageName;
+        return this._mdac.getModuleContext().getConfiguration().getModuleResourcesPath() + File.separator + "res" + File.separator + "icon" + File.separator + imageName;
     }
+
+
+    public String getFile(CamelFormat format) {
+
+        if (format.equals(CamelFormat.XMI)){
+            return this._mdac.getModuleContext().getConfiguration().getModuleResourcesPath() + File.separator + "res" + File.separator + xmiFile;
+
+        }else {
+            return this._mdac.getModuleContext().getConfiguration().getModuleResourcesPath() + File.separator + "res" + File.separator + camelFile;
+
+        }
+      }
+
 
     /**
      * Method getStyle
      * @author ebrosse
-     * 
+     *
      * @param styleName : the name of the style file
      * @return the absolute path of the style file
      */
@@ -95,7 +113,7 @@ public class CamelDesignerResourcesManager {
     /**
      * Method getPropertyName
      * @author ebrosse
-     * 
+     *
      * @param propertyName : the name of the property
      * @return the internationalized name of the property
      */

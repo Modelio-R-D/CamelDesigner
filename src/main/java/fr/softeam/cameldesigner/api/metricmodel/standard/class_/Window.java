@@ -6,25 +6,20 @@
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Class} with << Window >> stereotype.
@@ -46,7 +41,7 @@ public class Window extends FeatureClass {
      * Tells whether a {@link Window proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << Window >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -56,7 +51,7 @@ public class Window extends FeatureClass {
 
     /**
      * Create a new {@link Class} stereotyped << Window >> then instantiate a {@link Window} proxy.
-     * 
+     *
      * @return a {@link Window} proxy on the created {@link Class}.
      */
     public static Window create() {
@@ -69,7 +64,7 @@ public class Window extends FeatureClass {
      * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Class
      * @return a {@link Window} proxy or <i>null</i>.
      */
@@ -81,7 +76,7 @@ public class Window extends FeatureClass {
      * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Class}
      * @return a {@link Window} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -110,7 +105,7 @@ public class Window extends FeatureClass {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -134,6 +129,46 @@ public class Window extends FeatureClass {
      */
     public String getSizeType() {
         return this.elt.getTagValue(Window.MdaTypes.SIZETYPE_TAGTYPE_ELT);
+    }
+
+    /**
+     * Get the value of the 'timeUnit' role.<p>
+     * Role description:
+     * null
+     */
+    public Unit getTimeUnit() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(Window.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(Window.MdaTypes.MDAASSOCDEP_ROLE), "timeUnit")
+                  && Unit.canInstantiate(d.getDependsOn())) {
+                     return Unit.instantiate((DataType)d.getDependsOn());
+              }
+        }
+        return null;
+    }
+
+    /**
+     * Set the value of the 'timeUnit' role.<p>
+     * Role description:
+     * null
+     */
+    public void setTimeUnit(final Unit obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(Window.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Window.MdaTypes.MDAASSOCDEP_ROLE), "timeUnit")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), Window.MdaTypes.MDAASSOCDEP);
+              dep.setName("timeUnit");      dep.putTagValue(Window.MdaTypes.MDAASSOCDEP_ROLE, "timeUnit");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     /**

@@ -89,7 +89,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
      *
      * @return the array of Camel name
      */
-    protected String[] getCamelNames(List<ModelElement> elts) {
+    protected String[] getCamelNames(List<? extends ModelElement> elts) {
         List<String> result = new ArrayList<>();
         result.add(" ");
         for (ModelElement elt : elts) {

@@ -1,0 +1,257 @@
+/*
+ * Copyright 2013 Modeliosoft
+ *
+ * This file is part of Modelio.
+ *
+ * Modelio is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Modelio is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Modelio.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+
+package fr.softeam.cameldesigner.ui;
+
+import java.io.File;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.layout.FormAttachment;
+import org.eclipse.swt.layout.FormData;
+import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.layout.RowData;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Shell;
+import org.modelio.api.module.IModule;
+import fr.softeam.cameldesigner.exchange.AbstractExporterService;
+import fr.softeam.cameldesigner.exchange.CamelExporterService;
+import fr.softeam.cameldesigner.exchange.XMIExporterService;
+import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
+import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
+
+/**
+ * This class provides the Camel export dialog
+ * @author ebrosse
+ */
+public class WizardExport extends AbstractSwtWizardWindow {
+
+    private Group _formatGroup = null;
+
+    private CamelFormat _format = CamelFormat.XMI;
+
+    private Button _XMIButton = null;
+
+    private Button _CamelButton = null;
+
+    private IModule _module = null;
+
+    private void createContents() {
+        setLabels();
+
+        this.shell = new Shell(getParent(), 67696 | SWT.APPLICATION_MODAL | SWT.RESIZE | SWT.TITLE);
+        this.shell.setLayout( new FormLayout());
+        this.shell.setText(this.frametitle);
+
+        // File chooser composite
+        this.fileChooserComposite = new FileChooserComposite(this.shell, SWT.NONE, SWT.OPEN);
+
+
+        // Validation Composite
+        this. validateComposite = new ValidationBoutonComposite(this.shell, SWT.NONE, this.cancelButton, this.validateButton);
+
+        this.validateComposite.getValidationButton().addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+
+                if (getFileChooserComposite().getCurrentFile() != null) {
+                    validationAction();
+                } else {
+                    selectAFile();
+                }
+            }
+        });
+
+        this.validateComposite.getCancelButton().addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                setCancellation(true);
+                cancelAction();
+            }
+        });
+
+        final FormData fd_fileChooserComposite = new FormData();
+        fd_fileChooserComposite.right = new FormAttachment(100, 0);
+        fd_fileChooserComposite.bottom = new FormAttachment(0, 30);
+        fd_fileChooserComposite.top = new FormAttachment(0, 0);
+        fd_fileChooserComposite.left = new FormAttachment(0, 0);
+        this.fileChooserComposite.setLayoutData(fd_fileChooserComposite);
+
+        this.fileChooserComposite.getSearch().addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                WizardExport.this.fileChooserComposite.searchFile();
+            }
+        });
+
+        this._formatGroup = new Group(this.shell,  SWT.NONE);
+        this._formatGroup.setToolTipText("Export Format");
+        this._formatGroup.setText("Export Format");
+
+        final FormData fd_formatChooserComposite = new FormData();
+        fd_formatChooserComposite.top = new FormAttachment(this.fileChooserComposite, 5);
+        fd_formatChooserComposite.bottom = new FormAttachment(this.fileChooserComposite, 50, SWT.BOTTOM);
+        fd_formatChooserComposite.left = new FormAttachment(this.fileChooserComposite, 5, SWT.LEFT);
+        fd_formatChooserComposite.right = new FormAttachment(this.fileChooserComposite, -5, SWT.RIGHT);
+        this._formatGroup.setLayoutData(fd_formatChooserComposite);
+
+        final RowLayout fd_groupExtension = new RowLayout(2);
+        fd_groupExtension.fill = true;
+        fd_groupExtension.marginLeft = 30;
+        fd_groupExtension.marginRight = 30;
+        fd_groupExtension.justify = true;
+        fd_groupExtension.type = SWT.HORIZONTAL;
+
+        this._formatGroup.setLayout(fd_groupExtension);
+
+        this._XMIButton = new Button(this._formatGroup, SWT.RADIO);
+
+        final RowData fd_xmi = new RowData();
+        fd_xmi.height = 25;
+        this._XMIButton.setLayoutData(fd_xmi);
+
+        this._XMIButton.setText(CamelFormat.XMI.toString());
+        this._XMIButton.setSelection(true);
+        this._XMIButton.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent event) {
+                WizardExport.this._format = CamelFormat.XMI;
+                WizardExport.this._CamelButton.setSelection(false);
+                WizardExport.this._XMIButton.setSelection(true);
+                WizardExport.this.fileChooserComposite.setText(WizardExport.this.fileChooserComposite.getText().replace(".camel", ".xmi"));
+                WizardExport.this.fileChooserComposite.getDialog().setFilterNames(new String[] { "XMI Files (*.xmi)" });
+                WizardExport.this.fileChooserComposite.getDialog().setFilterExtensions(new String[] {  "*.xmi" });
+            }
+        });
+
+        this._CamelButton = new Button(this._formatGroup, SWT.RADIO);
+        final RowData fd_uml = new RowData();
+        fd_uml.height = 25;
+        this._CamelButton.setLayoutData(fd_uml);
+        this._CamelButton.setText(CamelFormat.Camel.toString());
+        this._CamelButton.setSelection(false);
+        this._CamelButton.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent event) {
+                WizardExport.this._format = CamelFormat.Camel;
+                WizardExport.this._XMIButton.setSelection(false);
+                WizardExport.this._CamelButton.setSelection(true);
+                WizardExport.this.fileChooserComposite.setText(WizardExport.this.fileChooserComposite.getText().replace(".xmi", ".camel"));
+                WizardExport.this.fileChooserComposite.getDialog().setFilterNames(new String[] { "Camel Files (*.camel)" });
+                WizardExport.this.fileChooserComposite.getDialog().setFilterExtensions(new String[] { "*.camel" });
+            }
+        });
+
+        final FormData fd_validateComposite = new FormData();
+        fd_validateComposite.top = new FormAttachment(this._formatGroup, 5);
+        fd_validateComposite.bottom = new FormAttachment(100, -5);
+        fd_validateComposite.left = new FormAttachment(this._formatGroup, 0, SWT.LEFT);
+        fd_validateComposite.right = new FormAttachment(this._formatGroup, 0, SWT.RIGHT);
+        this.validateComposite.setLayoutData(fd_validateComposite);
+
+        setDefaultDialog();
+        this.shell.pack();
+        this.shell.setMinimumSize(new Point(400, this.shell.getBounds().height));
+
+        this.validateComposite.getValidationButton().setFocus();
+    }
+
+
+    @objid ("54e9a756-61db-4392-8c51-ae214789dce8")
+    @Override
+    public void validationAction() {
+
+        File dest = getFileChooserComposite().getCurrentFile();
+        this.path = dest.getParent();
+
+        if (!dest.getParentFile().exists()){
+            dest.getParentFile().mkdirs();
+        }
+
+        AbstractExporterService exporterService = null;
+
+
+
+        if (this._format.equals(CamelFormat.XMI)){
+            exporterService = new XMIExporterService();
+        }else {
+            exporterService = new CamelExporterService();
+        }
+        fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel rootProxy = fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.instantiate(this.selectedElt);
+        exporterService.exportCamelUMLModelToFile(rootProxy, dest.getAbsolutePath());
+
+        //Complete
+        completeBox();
+
+
+    }
+
+    @Override
+    public void setLabels() {
+        setTitle("Title");
+        setDescription("description");
+        setFrametitle("Camel Export");
+        setCancelButton("Cancel");
+        setValidateButton("Export");
+    }
+
+    @Override
+
+    public void setPath() {
+
+        if (this.path.equals(""))
+            this.path = this._module.getModuleContext().getProjectStructure().getPath().toAbsolutePath().toString();
+
+        String fileName = this.selectedElt.getName() + ".xmi";
+        this.fileChooserComposite.getDialog().setFilterPath(this.path);
+        this.fileChooserComposite.getDialog().setFileName(fileName);
+        this.path = checkAndReplaceEndPath(this.path);
+        this.fileChooserComposite.setText(this.path + java.io.File.separator + fileName);
+    }
+
+
+    @Override
+    public void setDefaultDialog() {
+        this.fileChooserComposite.getDialog().setFilterNames(new String[] { "XMI Files (*.xmi)" });
+        this.fileChooserComposite.getDialog().setFilterExtensions(new String[] {  "*.xmi" });
+        setPath();
+    }
+
+    /**
+     * @param parent : the parent shell
+     * @param style : the SWT style
+     */
+    public WizardExport(final Shell parent, final IModule module) {
+        super(parent);
+        this._module = module;
+    }
+
+    @Override
+    public Object open() {
+        createContents();
+        return super.open();
+    }
+
+}

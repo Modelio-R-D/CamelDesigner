@@ -7,33 +7,40 @@
 package fr.softeam.cameldesigner.api.metricmodel.standard.package_;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.AttributeContext;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetric;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Function;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetric;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Package} with << MetricTypeModel >> stereotype.
@@ -47,7 +54,7 @@ public class MetricTypeModel extends MetricModel {
      * Tells whether a {@link MetricTypeModel proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << MetricTypeModel >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -57,7 +64,7 @@ public class MetricTypeModel extends MetricModel {
 
     /**
      * Create a new {@link Package} stereotyped << MetricTypeModel >> then instantiate a {@link MetricTypeModel} proxy.
-     * 
+     *
      * @return a {@link MetricTypeModel} proxy on the created {@link Package}.
      */
     public static MetricTypeModel create() {
@@ -70,7 +77,7 @@ public class MetricTypeModel extends MetricModel {
      * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Package
      * @return a {@link MetricTypeModel} proxy or <i>null</i>.
      */
@@ -82,7 +89,7 @@ public class MetricTypeModel extends MetricModel {
      * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Package}
      * @return a {@link MetricTypeModel} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -253,7 +260,7 @@ public class MetricTypeModel extends MetricModel {
 
     /**
      * Get the underlying {@link Package}.
-     * 
+     *
      * @return the Package represented by this proxy, never null.
      */
     @Override
@@ -309,53 +316,53 @@ public class MetricTypeModel extends MetricModel {
         return Collections.unmodifiableList(results);
     }
 
-    /**
-     * Get the values of the 'objectContexts' role.<p>
-     * Role description:
-     * null
-     */
-    public List<ObjectContext> getObjectContexts() {
-        List<ObjectContext> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "objectContexts")
-              && ObjectContext.canInstantiate(d.getDependsOn()))
-                results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ObjectContext.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'objectContexts' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<ObjectContext> getObjectContexts() {
+//        List<ObjectContext> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "objectContexts")
+//              && ObjectContext.canInstantiate(d.getDependsOn()))
+//                results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ObjectContext.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
-    /**
-     * Get the values of the 'schedules' role.<p>
-     * Role description:
-     * null
-     */
-    public List<Schedule> getSchedules() {
-        List<Schedule> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "schedules")
-              && Schedule.canInstantiate(d.getDependsOn()))
-                results.add((Schedule)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Schedule.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+    // /**
+    // * Get the values of the 'schedules' role.<p>
+    // * Role description:
+    // * null
+    // */
+    // public List<Schedule> getSchedules() {
+    // List<Schedule> results = new ArrayList<>();
+    // for (Dependency d : this.elt.getDependsOnDependency()) {
+    // if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
+    // && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "schedules")
+    // && Schedule.canInstantiate(d.getDependsOn()))
+    // results.add((Schedule)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Schedule.MdaTypes.STEREOTYPE_ELT.getName()));
+    // }
+    // return Collections.unmodifiableList(results);
+    // }
 
-    /**
-     * Get the values of the 'sensors' role.<p>
-     * Role description:
-     * null
-     */
-    public List<Sensor> getSensors() {
-        List<Sensor> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "sensors")
-              && Sensor.canInstantiate(d.getDependsOn()))
-                results.add((Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'sensors' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<Sensor> getSensors() {
+//        List<Sensor> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "sensors")
+//              && Sensor.canInstantiate(d.getDependsOn()))
+//                results.add((Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
     /**
      * Get the values of the 'templates' role.<p>
@@ -373,21 +380,21 @@ public class MetricTypeModel extends MetricModel {
         return Collections.unmodifiableList(results);
     }
 
-    /**
-     * Get the values of the 'windows' role.<p>
-     * Role description:
-     * null
-     */
-    public List<Window> getWindows() {
-        List<Window> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
-              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "windows")
-              && Window.canInstantiate(d.getDependsOn()))
-                results.add((Window)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Window.MdaTypes.STEREOTYPE_ELT.getName()));
-        }
-        return Collections.unmodifiableList(results);
-    }
+//    /**
+//     * Get the values of the 'windows' role.<p>
+//     * Role description:
+//     * null
+//     */
+//    public List<Window> getWindows() {
+//        List<Window> results = new ArrayList<>();
+//        for (Dependency d : this.elt.getDependsOnDependency()) {
+//          if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP)
+//              && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "windows")
+//              && Window.canInstantiate(d.getDependsOn()))
+//                results.add((Window)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Window.MdaTypes.STEREOTYPE_ELT.getName()));
+//        }
+//        return Collections.unmodifiableList(results);
+//    }
 
     @Override
     public int hashCode() {
@@ -402,7 +409,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeAttributContexts(final AttributeContext obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -420,7 +427,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeFunctions(final Function obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -438,7 +445,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeMetricContexts(final MetricContext obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -456,7 +463,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeMetrics(final Metric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -474,7 +481,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeObjectContexts(final ObjectContext obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -492,7 +499,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeSchedules(final Schedule obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -510,7 +517,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeSensors(final Sensor obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -528,7 +535,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeTemplates(final MetricTemplate obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -546,7 +553,7 @@ public class MetricTypeModel extends MetricModel {
     public boolean removeWindows(final Window obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricTypeModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricTypeModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -579,6 +586,123 @@ static {
             init(CamelDesignerModule.getInstance().getModuleContext());
         }
     }
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(getMeasurableAttributes());
+        result.addAll(getSensors());
+        result.addAll(getRawMetrics());
+        result.addAll(getMetricTemplates());
+        result.addAll(getObjectContexts());
+        result.addAll(getSchedules());
+        result.addAll(getRawMetricContexts());
+        result.addAll(getWindows());
+        result.addAll(getCompositeMetrics());
+        result.addAll(getCompositeMetricContexts());
+        result.addAll(getMetricVariables());
+
+        return result;
+    }
+
+    public Collection<MeasurableAttribute> getMeasurableAttributes() {
+        List<MeasurableAttribute> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (MeasurableAttribute.canInstantiate(mObj))
+                results.add(MeasurableAttribute.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<Sensor> getSensors() {
+        List<Sensor> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (Sensor.canInstantiate(mObj))
+                results.add(Sensor.safeInstantiate((Component) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<RawMetric> getRawMetrics() {
+        List<RawMetric> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (RawMetric.canInstantiate(mObj))
+                results.add(RawMetric.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<MetricTemplate> getMetricTemplates() {
+        List<MetricTemplate> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (MetricTemplate.canInstantiate(mObj))
+                results.add(MetricTemplate.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<ObjectContext> getObjectContexts() {
+        List<ObjectContext> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (ObjectContext.canInstantiate(mObj))
+                results.add(ObjectContext.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<Schedule> getSchedules() {
+        List<Schedule> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (Schedule.canInstantiate(mObj))
+                results.add(Schedule.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<RawMetricContext> getRawMetricContexts() {
+        List<RawMetricContext> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (RawMetricContext.canInstantiate(mObj))
+                results.add(RawMetricContext.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<Window> getWindows() {
+        List<Window> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (Window.canInstantiate(mObj))
+                results.add(Window.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<CompositeMetric> getCompositeMetrics() {
+        List<CompositeMetric> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (CompositeMetric.canInstantiate(mObj))
+                results.add(CompositeMetric.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<CompositeMetricContext> getCompositeMetricContexts() {
+        List<CompositeMetricContext> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (CompositeMetricContext.canInstantiate(mObj))
+                results.add(CompositeMetricContext.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
+    }
+
+    public Collection<MetricVariable> getMetricVariables() {
+        List<MetricVariable> results = new ArrayList<>();
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (MetricVariable.canInstantiate(mObj))
+                results.add(MetricVariable.safeInstantiate((Class) mObj));
+
+        return Collections.unmodifiableList(results);
     }
 
 }

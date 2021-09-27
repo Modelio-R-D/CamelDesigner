@@ -1,6 +1,10 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetric;
@@ -13,10 +17,6 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
 
 public class GenerateProcessMetricType extends AbstractGenerateProcess {
     public GenerateProcessMetricType(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
@@ -24,7 +24,8 @@ public class GenerateProcessMetricType extends AbstractGenerateProcess {
     }
 
     @Override
-    protected CDOObject switchGenerate(ModelElement element) {
+    protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
+        ModelElement element = camelElement.getElement();
         if (element instanceof Class) {
             Class umlClass = (Class) element;
             if(umlClass.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MeasurableAttribute.STEREOTYPE_NAME)) {

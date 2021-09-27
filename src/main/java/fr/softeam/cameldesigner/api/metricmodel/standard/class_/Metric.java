@@ -6,25 +6,18 @@
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Class} with << Metric >> stereotype.
@@ -51,7 +44,7 @@ public abstract class Metric extends Feature {
 
     /**
      * Get the underlying {@link Class}.
-     * 
+     *
      * @return the Class represented by this proxy, never null.
      */
     @Override
@@ -102,6 +95,25 @@ public abstract class Metric extends Feature {
           }
           dep.setDependsOn(obj.getElement());
         }
+    }
+
+
+    public static Metric instantiate(final Class obj) {
+        if (CompositeMetric.canInstantiate(obj)) {
+            return new CompositeMetric(obj);
+        }else if (RawMetric.canInstantiate(obj)) {
+            return new RawMetric(obj);
+        }else if (MetricVariable.canInstantiate(obj)) {
+            return new MetricVariable(obj);
+        }
+        return  null;
+    }
+
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof Class) && (
+                ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeMetric.STEREOTYPE_NAME) ||
+                ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RawMetric.STEREOTYPE_NAME) ||
+                ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricVariable.STEREOTYPE_NAME) ));
     }
 
     protected Metric(final Class elt) {

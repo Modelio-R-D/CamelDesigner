@@ -3,7 +3,6 @@ package fr.softeam.cameldesigner.utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
@@ -23,12 +22,11 @@ public class FileSystemManager {
         return directoryDialog.open();
     }
 
-    public static List<String> getFileDialogPath(String dialogText, String extension) {
-        FileDialog fileDialog = new FileDialog(Display.getDefault().getActiveShell(), SWT.MULTI);
+    public static List<String> getFileDialogPath(String dialogText, String[] filterExtension) {
+        FileDialog fileDialog = new FileDialog(Display.getDefault().getActiveShell());
         fileDialog.setText(dialogText);
-        String[] filterExtension = { extension };
         fileDialog.setFilterExtensions(filterExtension);
-        
+
         List<String> selectedfilesPaths = new ArrayList<>();
         if (fileDialog.open() != null) {
           String[] filesPaths = fileDialog.getFileNames();
