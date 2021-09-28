@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="PaaSMeasurement.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\CommunicationMeasurement_24.png"
+   inkscape:export-xdpi="18.091095"
+   inkscape:export-ydpi="18.091095">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="-2.0130888"
+     inkscape:cy="65.499104"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     inkscape:connector-curvature="0"
+     id="path4"
+     style="fill:#4285f4"
+     d="M 126.47,58.12 100.17,12.38 C 98.157561,8.811194 93.206435,6.5742145 89.11,6.5 H 38.7 c -4.097011,0.072195 -8.849064,2.3097272 -10.86,5.88 L 1.53,58 c -2.0353442,3.541745 -2.0353442,7.898255 0,11.44 l 26.3,46 c 1.990324,3.61954 6.732395,5.93082 10.86,6.09 H 89.3 c 4.127386,-0.14167 8.876176,-2.44336 10.87,-6.06 l 26.3,-45.74 c 2.04949,-3.598656 2.04949,-8.011344 0,-11.61 z"
+     sodipodi:nodetypes="ccccccccccccc" />
+  <path
+     style="fill:#aaffc3;fill-opacity:1;stroke-width:0.201979"
+     d="m 37.993191,127.3969 c -3.166753,-0.56311 -6.221268,-2.26608 -8.09035,-4.51054 C 29.1042,121.92732 26.073471,116.21131 15.845169,96.373349 1.5300488,68.608941 1.517401,68.583751 1.0496361,66.902887 0.54974139,65.106569 0.58515669,61.661411 1.1228991,59.77595 1.4318404,58.692721 5.2505035,51.153037 15.130365,32.119179 28.240926,6.8612827 28.762747,5.8954744 30.141203,4.3365279 31.788533,2.4735034 33.80152,1.2370766 36.345984,0.52539402 37.825346,0.11161933 38.51869,0.10122615 64.438498,0.10429323 c 28.942054,0.003431 27.556148,-0.0516254 30.314994,1.20415367 1.803301,0.8208314 3.602288,2.1639669 4.672272,3.4883488 0.653066,0.8083405 4.983316,8.9739763 14.432696,27.2160113 7.42483,14.333653 13.67509,26.579622 13.88946,27.213264 0.92553,2.735754 0.9095,6.348837 -0.0401,9.039162 -0.21048,0.596318 -6.48167,12.855547 -13.93597,27.242731 -10.63942,20.534656 -13.773789,26.423036 -14.579007,27.388876 -1.324336,1.58852 -3.304912,2.94476 -5.589898,3.82782 l -1.821699,0.70402 -26.65433,0.0267 c -14.659882,0.0147 -26.870058,-0.0117 -27.133725,-0.0584 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\PaasMeasurement.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:18.6954px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747817"
+     x="24.268663"
+     y="61.407246"
+     id="text5085"
+     transform="scale(0.74781653,1.3372264)"><tspan
+       sodipodi:role="line"
+       id="tspan5083"
+       x="24.268663"
+       y="61.407246"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.747817">Com</tspan></text>
+  <g
+     transform="matrix(0.09981485,0,0,0.07349166,35.026349,89.090105)"
+     id="surface1">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 186.74219,198.04687 c 45.125,0 81.92578,-27.71093 81.92578,-61.66015 0,-33.95313 -36.69141,-61.664064 -81.92578,-61.664064 -45.23438,0 -81.92578,27.710934 -81.92578,61.664064 0,33.94922 36.80078,61.66015 81.92578,61.66015 z m 0,-101.42187 c 32.85547,0 60.01953,18.18359 60.01953,39.75781 0,21.57813 -27.49219,39.75781 -60.01953,39.75781 -32.53125,0 -60.02344,-18.17968 -60.02344,-39.75781 0,-21.57422 27.49219,-39.867185 60.02344,-39.867185 z m 0,0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path5310" />
+    <path
+       inkscape:connector-curvature="0"
+       d="M 534.04687,250.29297 H 372.38672 V 136.27344 C 372.38672,61.359375 289.03906,0.355469 186.19531,0.355469 83.347656,0.355469 0,61.359375 0,136.27344 v 134.71875 c 0,69 70.644531,125.95312 161.66016,134.60547 h 1.86328 c 7.55468,0.66015 15.22265,1.20703 23,1.20703 h 347.52343 c 6.04688,0 10.95313,-4.90625 10.95313,-10.95313 V 261.24219 c 0,-6.04297 -4.90625,-10.94922 -10.95313,-10.94922 z M 186.74219,22.367188 c 90.35547,0 164.28906,51.148437 164.28906,114.019532 0,62.86719 -73.49219,114.01562 -164.28906,114.01562 -90.796878,0 -164.289065,-51.14843 -164.289065,-114.01953 0,-62.867185 74.039063,-114.015622 164.289065,-114.015622 z M 351.03125,200.23828 v 50.05469 h -63.52734 c 24.79687,-11.23828 46.42968,-28.4336 62.97656,-50.05469 z m 172.0625,184.66016 H 501.1875 v -55.42188 c 0,-6.04297 -4.90625,-10.95312 -10.94922,-10.95312 -6.04687,0 -10.95312,4.90625 -10.95312,10.95312 v 55.53125 h -43.8125 v -30.12109 c 0,-6.04688 -4.90625,-10.95313 -10.95313,-10.95313 -6.04687,0 -10.95312,4.90625 -10.95312,10.95313 v 30.12109 h -43.8086 v -30.12109 c 0,-6.04688 -4.90625,-10.95313 -10.95312,-10.95313 -6.04688,0 -10.95313,4.90625 -10.95313,10.95313 v 30.12109 h -43.8125 v -55.53125 c 0,-6.04297 -4.90625,-10.95312 -10.95312,-10.95312 -6.04297,0 -10.95313,4.90625 -10.95313,10.95312 v 55.53125 H 240.1875 v -30.12109 c 0,-6.04688 -4.91016,-10.95313 -10.95313,-10.95313 -6.04687,0 -10.95312,4.90625 -10.95312,10.95313 v 30.12109 h -31.54688 c -4.16015,0 -8.21093,0 -12.26562,0 v -30.12109 c 0,-6.04688 -4.90625,-10.95313 -10.95313,-10.95313 -6.04687,0 -10.95312,4.90625 -10.95312,10.95313 v 27.49219 C 78.640625,371.42578 23,325.64453 23,270.88281 v -70.64453 c 31.324219,42.82422 92.98828,71.95703 164.28906,71.95703 h 335.80469 z m 0,0"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path5312" />
+  </g>
+</svg>
