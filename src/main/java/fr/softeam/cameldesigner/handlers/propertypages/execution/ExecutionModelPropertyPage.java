@@ -16,6 +16,22 @@ public class ExecutionModelPropertyPage<T extends ExecutionModel> extends SubMod
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        switch (this._currentRow) {
+
+        case 1 :
+            this._element.setStartTime(value);
+            break;
+
+        case 2 :
+            this._element.setEndTime(value);
+            break;
+
+        case 3 :
+            this._element.setTotalCost(value);
+            break;
+        }
+
+        this._currentRow -= 3;
     }
 
     /**
@@ -27,6 +43,12 @@ public class ExecutionModelPropertyPage<T extends ExecutionModel> extends SubMod
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Start time", getValue(this._element.getStartTime()));
+        table.addProperty("End time", getValue(this._element.getEndTime()));
+        table.addProperty("Total Cost", getValue(this._element.getTotalCost()));
+   
+
     }
 
     public ExecutionModelPropertyPage(T elt) {

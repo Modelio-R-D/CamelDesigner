@@ -15,9 +15,9 @@
    version="1.1"
    sodipodi:docname="PaaSMeasurement.svg"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
-   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\CommunicationMeasurement_24.png"
-   inkscape:export-xdpi="18.091095"
-   inkscape:export-ydpi="18.091095">
+   inkscape:export-filename="C:\Project\Recherche\MORPHEMIC\PaaSMeasurement_48.png"
+   inkscape:export-xdpi="36"
+   inkscape:export-ydpi="36">
   <metadata
      id="metadata25">
     <rdf:RDF>
@@ -46,7 +46,7 @@
      id="namedview21"
      showgrid="false"
      inkscape:zoom="1.84375"
-     inkscape:cx="-2.0130888"
+     inkscape:cx="115.41064"
      inkscape:cy="65.499104"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -62,27 +62,27 @@
      d="M 126.47,58.12 100.17,12.38 C 98.157561,8.811194 93.206435,6.5742145 89.11,6.5 H 38.7 c -4.097011,0.072195 -8.849064,2.3097272 -10.86,5.88 L 1.53,58 c -2.0353442,3.541745 -2.0353442,7.898255 0,11.44 l 26.3,46 c 1.990324,3.61954 6.732395,5.93082 10.86,6.09 H 89.3 c 4.127386,-0.14167 8.876176,-2.44336 10.87,-6.06 l 26.3,-45.74 c 2.04949,-3.598656 2.04949,-8.011344 0,-11.61 z"
      sodipodi:nodetypes="ccccccccccccc" />
   <path
-     style="fill:#aaffc3;fill-opacity:1;stroke-width:0.201979"
-     d="m 37.993191,127.3969 c -3.166753,-0.56311 -6.221268,-2.26608 -8.09035,-4.51054 C 29.1042,121.92732 26.073471,116.21131 15.845169,96.373349 1.5300488,68.608941 1.517401,68.583751 1.0496361,66.902887 0.54974139,65.106569 0.58515669,61.661411 1.1228991,59.77595 1.4318404,58.692721 5.2505035,51.153037 15.130365,32.119179 28.240926,6.8612827 28.762747,5.8954744 30.141203,4.3365279 31.788533,2.4735034 33.80152,1.2370766 36.345984,0.52539402 37.825346,0.11161933 38.51869,0.10122615 64.438498,0.10429323 c 28.942054,0.003431 27.556148,-0.0516254 30.314994,1.20415367 1.803301,0.8208314 3.602288,2.1639669 4.672272,3.4883488 0.653066,0.8083405 4.983316,8.9739763 14.432696,27.2160113 7.42483,14.333653 13.67509,26.579622 13.88946,27.213264 0.92553,2.735754 0.9095,6.348837 -0.0401,9.039162 -0.21048,0.596318 -6.48167,12.855547 -13.93597,27.242731 -10.63942,20.534656 -13.773789,26.423036 -14.579007,27.388876 -1.324336,1.58852 -3.304912,2.94476 -5.589898,3.82782 l -1.821699,0.70402 -26.65433,0.0267 c -14.659882,0.0147 -26.870058,-0.0117 -27.133725,-0.0584 z"
+     style="fill:#aaffc3;fill-opacity:1;stroke-width:0.202126"
+     d="m 37.450818,129.12502 c -3.166753,-0.56393 -6.221268,-2.26939 -8.09035,-4.51714 -0.798641,-0.96044 -3.82937,-6.68479 -14.057672,-26.551755 C 0.98767589,70.251131 0.97502814,70.225904 0.50726317,68.542583 0.00736851,66.74364 0.04278381,63.293447 0.58052618,61.405229 0.88946755,60.320415 4.7081306,52.769709 14.587992,33.708029 27.698553,8.4132105 28.220374,7.4459903 29.59883,5.8847648 31.24616,4.0190172 33.259147,2.7807831 35.803611,2.06806 37.282973,1.6536805 37.976317,1.6432722 63.896125,1.6463437 c 28.942054,0.00343 27.556148,-0.051701 30.314994,1.2059139 1.803301,0.8220313 3.602288,2.1671303 4.672272,3.493448 0.653069,0.809523 4.983319,8.9870934 14.432699,27.2557954 7.42483,14.354606 13.67509,26.618477 13.88946,27.253045 0.92553,2.739753 0.9095,6.358119 -0.0401,9.052375 -0.21048,0.59719 -6.48167,12.874339 -13.93597,27.282554 -10.63942,20.564675 -13.773792,26.461655 -14.57901,27.428905 -1.324336,1.59085 -3.304912,2.94907 -5.589898,3.83341 l -1.821699,0.70505 -26.65433,0.0268 c -14.659882,0.0147 -26.870058,-0.0116 -27.133725,-0.0585 z"
      id="path8"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\PaasMeasurement.png"
-     inkscape:export-xdpi="36.074654"
-     inkscape:export-ydpi="36.074654" />
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\PaasMeasurement_24.png"
+     inkscape:export-xdpi="18.037327"
+     inkscape:export-ydpi="18.037327" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:18.6954px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747817"
-     x="24.268663"
-     y="61.407246"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.4048px;line-height:17.4918px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.699673"
+     x="22.720669"
+     y="60.709705"
      id="text5085"
-     transform="scale(0.74781653,1.3372264)"><tspan
+     transform="scale(0.73884842,1.3534576)"><tspan
        sodipodi:role="line"
        id="tspan5083"
-       x="24.268663"
-       y="61.407246"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.747817">Com</tspan></text>
+       x="22.720669"
+       y="60.709705"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.4048px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.699673">PaaS</tspan></text>
   <g
-     transform="matrix(0.09981485,0,0,0.07349166,35.026349,89.090105)"
+     transform="matrix(0.07895525,0,0,0.07349166,79.500925,90.717224)"
      id="surface1">
     <path
        inkscape:connector-curvature="0"

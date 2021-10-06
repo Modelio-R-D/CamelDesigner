@@ -2,6 +2,26 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
@@ -479,7 +499,7 @@
         </Profile>
         <Profile uid="529aca05-46d5-4f0c-84e5-010f52582ab9" id="ExecutionModel">
             <Stereotype name="ExecutionModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExecutionModel.label" uid="e68f7e04-ff66-47dd-af65-5c017645cb8d" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
+                <Icon path="res/icon/gui/executionModel_24.png"/>
                 <Image path="res/icon/gui/executionModel_48.png"/>
                 <TagTypes>
                     <TagType name="startTime" uid="8a1a55fb-6fdd-41a1-8b7f-0402a36c1c5a" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -497,48 +517,48 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="Measurement" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Measurement.label" uid="481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/Measurement_24.png"/>
+                <Image path="res/icon/gui/Measurement_48.png"/>
                 <TagTypes>
                     <TagType name="value" uid="03f06745-0e69-475c-a468-9f73b761a5d0" label="%tagtype.value.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="measurementTime" uid="501b05dc-7f34-42e0-9da5-3a581c881e5c" label="%tagtype.measurementTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype name="ApplicationMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ApplicationMeasurement.label" uid="8962d6e6-e540-41c6-bf79-3df6530aae2e" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/ApplicationMeasurement_24.png"/>
+                <Image path="res/icon/gui/ApplicationMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="CommunicationMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CommunicationMeasurement.label" uid="438c005e-3455-4a76-ba8b-3791473a3e5a" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/CommunicationMeasurement_24.png"/>
+                <Image path="res/icon/gui/CommunicationMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="HistoryRecord" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HistoryRecord.label" uid="fe3e6072-933d-456c-bd5a-77cd25aeb183" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/HistoryRecord_24.png"/>
+                <Image path="res/icon/gui/HistoryRecord_48.png"/>
                 <TagTypes>
                     <TagType name="startTime" uid="d4316e17-4ce7-49fa-8ef0-c2743e111a0b" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="endTime" uid="bb514f2c-6871-49ad-a376-0f3411c9acca" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype name="PaaSMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PaaSMeasurement.label" uid="726f03cf-0c34-448c-a300-42d54277a37d" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/PaasMeasurement_24.png"/>
+                <Image path="res/icon/gui/PaasMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="ContainerMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ContainerMeasurement.label" uid="85629f9a-c7b9-455f-a948-e90a070e6b60" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/ContainerMeasurement_24.png"/>
+                <Image path="res/icon/gui/ContainerMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="SoftwareComponentMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentMeasurement.label" uid="cef53d47-e830-42d6-9834-bfc960dc6abe" is-abstract="false">
                 <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
                 <Image path="res/icon/gui/executionModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="VMMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VMMeasurement.label" uid="a33f8ce2-8fb0-4642-be2c-588ae287f860" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/VMMeasurement_24.png"/>
+                <Image path="res/icon/gui/VMMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="HistoryInfo" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HistoryInfo.label" uid="acef265d-7979-416d-8e8d-bc2a20331822" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/HistoryInfo_24.png"/>
+                <Image path="res/icon/gui/HistoryInfo_48.png"/>
                 <TagTypes>
                     <TagType name="object" uid="b459f0a0-04c3-4f41-ba76-aca6f5dc6dda" label="%tagtype.object.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="startTime" uid="3888f8fe-984d-4fcb-a8f4-ed0071eb91c0" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -546,20 +566,20 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="SLOViolation" metaclass="Standard.Class" owner-stereotype="mref#'' {fc44bcb6-59df-49ef-9ed6-13f1d2b85393} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SLOViolation.label" uid="fe591c4e-317f-4202-9f7a-43dff0e6d7fe" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/SLOViolation_24.png"/>
+                <Image path="res/icon/gui/SLOViolation_48.png"/>
             </Stereotype>
             <Stereotype name="Cause" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Cause.label" uid="fc44bcb6-59df-49ef-9ed6-13f1d2b85393" is-abstract="false">
                 <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
                 <Image path="res/icon/gui/executionModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="DataMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataMeasurement.label" uid="fe1fd247-1047-4137-8ff6-90ed2e79ac91" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/DataMeasurement_24.png"/>
+                <Image path="res/icon/gui/DataMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="RuleTrigger" metaclass="Standard.Class" owner-stereotype="mref#'' {fc44bcb6-59df-49ef-9ed6-13f1d2b85393} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RuleTrigger.label" uid="6feb668e-fc53-4354-93a8-d98b00fdb186" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/RuleTrigger_24.png"/>
+                <Image path="res/icon/gui/RuleTrigger_48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="27e07c22-7b2a-4cfa-a3d8-859eb4eb2db1" id="LocationModel">
@@ -1404,7 +1424,7 @@
             </Command>
         </Commands>
         <Tools>
-            <Tool id="Action_Instance" label="%tool.Action_Instance.label" tooltip="%tool.Action_Instance.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="Action_Instance" label="%tool.Action_Instance.label" tooltip="%tool.Action_Instance.tooltip" image="res/icon/gui/ActionInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ActionInstance"/>
@@ -1813,7 +1833,7 @@
                     <HParameter name="name" value="property instance"/>
                 </Handler>
             </Tool>
-            <Tool id="Measurement" label="%tool.Measurement.label" tooltip="%tool.Measurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="Measurement" label="%tool.Measurement.label" tooltip="%tool.Measurement.tooltip" image="res/icon/gui/Measurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Measurement"/>
@@ -2310,7 +2330,7 @@
                     <HParameter name="name" value="Window"/>
                 </Handler>
             </Tool>
-            <Tool id="PaasMeasurement" label="%tool.PaasMeasurement.label" tooltip="%tool.PaasMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="PaasMeasurement" label="%tool.PaasMeasurement.label" tooltip="%tool.PaasMeasurement.tooltip" image="res/icon/gui/PaasMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#PaaSMeasurement"/>
@@ -2318,92 +2338,92 @@
                     <HParameter name="name" value="PaaSMeasurement"/>
                 </Handler>
             </Tool>
-            <Tool id="CommunicationMeasurement" label="%tool.CommunicationMeasurement.label" tooltip="%tool.CommunicationMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="CommunicationMeasurement" label="%tool.CommunicationMeasurement.label" tooltip="%tool.CommunicationMeasurement.tooltip" image="res/icon/gui/CommunicationMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#CommunicationMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Communication Measurement"/>
                 </Handler>
             </Tool>
-            <Tool id="ApplicationMeasurement" label="%tool.ApplicationMeasurement.label" tooltip="%tool.ApplicationMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="ApplicationMeasurement" label="%tool.ApplicationMeasurement.label" tooltip="%tool.ApplicationMeasurement.tooltip" image="res/icon/gui/ApplicationMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ApplicationMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Application MeasurementElement"/>
                 </Handler>
             </Tool>
-            <Tool id="HistoryRecord" label="%tool.HistoryRecord.label" tooltip="%tool.HistoryRecord.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="HistoryRecord" label="%tool.HistoryRecord.label" tooltip="%tool.HistoryRecord.tooltip" image="res/icon/gui/HistoryRecord_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#HistoryRecord"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="History Record"/>
                 </Handler>
             </Tool>
-            <Tool id="ContainerMeasurement" label="%tool.ContainerMeasurement.label" tooltip="%tool.ContainerMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="ContainerMeasurement" label="%tool.ContainerMeasurement.label" tooltip="%tool.ContainerMeasurement.tooltip" image="res/icon/gui/ContainerMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ContainerMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Container Measurement"/>
                 </Handler>
             </Tool>
-            <Tool id="SoftwareComponentMeasurement" label="%tool.SoftwareComponentMeasurement.label" tooltip="%tool.SoftwareComponentMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="SoftwareComponentMeasurement" label="%tool.SoftwareComponentMeasurement.label" tooltip="%tool.SoftwareComponentMeasurement.tooltip" image="res/icon/gui/SoftwareComponentMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SoftwareComponentMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Software Component Measurement"/>
                 </Handler>
             </Tool>
-            <Tool id="VMMeasurement" label="%tool.VMMeasurement.label" tooltip="%tool.VMMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="VMMeasurement" label="%tool.VMMeasurement.label" tooltip="%tool.VMMeasurement.tooltip" image="res/icon/gui/VMMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#VMMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="VM Measurement"/>
                 </Handler>
             </Tool>
-            <Tool id="HistoryInfo" label="%tool.HistoryInfo.label" tooltip="%tool.HistoryInfo.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="HistoryInfo" label="%tool.HistoryInfo.label" tooltip="%tool.HistoryInfo.tooltip" image="res/icon/gui/HistoryInfo_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#HistoryInfo"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="History Info"/>
                 </Handler>
             </Tool>
-            <Tool id="SLOViolation" label="%tool.SLOViolation.label" tooltip="%tool.SLOViolation.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="SLOViolation" label="%tool.SLOViolation.label" tooltip="%tool.SLOViolation.tooltip" image="res/icon/gui/SLOViolation_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SLOViolation"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="SLO Violation"/>
                 </Handler>
             </Tool>
-            <Tool id="Cause" label="%tool.Cause.label" tooltip="%tool.Cause.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="Cause" label="%tool.Cause.label" tooltip="%tool.Cause.tooltip" image="res/icon/gui/Cause_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Cause"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Cause"/>
                 </Handler>
             </Tool>
-            <Tool id="DataMeasurement" label="%tool.DataMeasurement.label" tooltip="%tool.DataMeasurement.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="DataMeasurement" label="%tool.DataMeasurement.label" tooltip="%tool.DataMeasurement.tooltip" image="res/icon/gui/DataMeasurement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#DataMeasurement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Data Measurement"/>
                 </Handler>
             </Tool>
-            <Tool id="RuleTrigger" label="%tool.RuleTrigger.label" tooltip="%tool.RuleTrigger.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+            <Tool id="RuleTrigger" label="%tool.RuleTrigger.label" tooltip="%tool.RuleTrigger.tooltip" image="res/icon/gui/RuleTrigger_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#RuleTrigger"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Rule Trigger"/>
                 </Handler>
             </Tool>
         </Tools>
@@ -2567,15 +2587,15 @@
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ExecutionModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Action_Instance" group="%group.Execution.label"/>
-                    <ToolRef refid="PaasMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="CommunicationMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="HistoryRecord" group="%group.Execution.label"/>
                     <ToolRef refid="ApplicationMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="Cause" group="%group.Execution.label"/>
+                    <ToolRef refid="CommunicationMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="ContainerMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="DataMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="HistoryInfo" group="%group.Execution.label"/>
+                    <ToolRef refid="HistoryRecord" group="%group.Execution.label"/>
                     <ToolRef refid="Measurement" group="%group.Execution.label"/>
+                    <ToolRef refid="PaasMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="RuleTrigger" group="%group.Execution.label"/>
                     <ToolRef refid="SLOViolation" group="%group.Execution.label"/>
                     <ToolRef refid="SoftwareComponentMeasurement" group="%group.Execution.label"/>
