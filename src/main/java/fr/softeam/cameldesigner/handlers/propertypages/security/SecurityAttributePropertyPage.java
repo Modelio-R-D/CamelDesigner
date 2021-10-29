@@ -16,6 +16,14 @@ public class SecurityAttributePropertyPage<T extends SecurityAttribute> extends 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow==1) {
+        	this._element.getDomain().setName(value);;
+        }
+
+	    	
+
+        this._currentRow -= 1;
     }
 
     /**
@@ -27,6 +35,8 @@ public class SecurityAttributePropertyPage<T extends SecurityAttribute> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Domain",getValue(this._element.getDomain().getName()));
+
     }
 
     public SecurityAttributePropertyPage(T elt) {

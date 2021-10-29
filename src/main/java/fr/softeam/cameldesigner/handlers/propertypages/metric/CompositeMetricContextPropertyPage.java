@@ -63,7 +63,11 @@ public class CompositeMetricContextPropertyPage<T extends CompositeMetricContext
         table.addProperty("Grouping Type", this._element.getGroupingType());
 
         //Composing Metric Context
-        table.addProperty("Composing Metric Context", getCamelValue(this._element.getComposingMetricContexts()), getAddRemove(this._metricsContext, this._element.getComposingMetricContexts()));
+        table.addProperty(
+        		"Composing Metric Context", 
+        		getCamelValue(this._element.getComposingMetricContexts()), 
+        		getAddRemove(this._metricsContext,this._element.getComposingMetricContexts()));
+    
     }
 
     public CompositeMetricContextPropertyPage(T elt) {

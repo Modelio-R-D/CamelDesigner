@@ -47,7 +47,7 @@ public class DataPropertyPage<T extends Data> extends NamedElementPropertyPage<T
         super.update(table);
 
         //DataSource
-        this._dataSources = DataSource.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+        this._dataSources= DataSource.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("DataSource", getCamelName(this._element.getDataSource()));
     }
 

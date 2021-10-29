@@ -27,6 +27,8 @@ public class SecurityModelPropertyPage<T extends SecurityModel> extends SubModel
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+      
     }
 
     public SecurityModelPropertyPage(T elt) {

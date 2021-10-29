@@ -16,6 +16,12 @@ public class RawSecurityMetricPropertyPage<T extends RawSecurityMetric> extends 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow==1) {
+        	this._element.getDomain().setName(value);
+        }	    
+
+        
     }
 
     /**
@@ -27,6 +33,8 @@ public class RawSecurityMetricPropertyPage<T extends RawSecurityMetric> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Domain",getValue(this._element.getDomain().getName()));
+
     }
 
     public RawSecurityMetricPropertyPage(T elt) {

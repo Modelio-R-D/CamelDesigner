@@ -15,6 +15,19 @@ public class ModelResourceFilterPropertyPage<T extends ModelResourceFilter> exte
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+        case 1 :
+        	this._element.setInformationResourcePath(value);
+        	break;
+        
+        case 2 :
+        	this._element.setEveryInformationResource(value);
+        	break;
+        
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -26,6 +39,9 @@ public class ModelResourceFilterPropertyPage<T extends ModelResourceFilter> exte
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Information Resource Path",getValue(this._element.getInformationResourcePath()));
+        table.addProperty("Every Information Resource",getValue(this._element.getEveryInformationResource()));
     }
 
     public ModelResourceFilterPropertyPage(T elt) {

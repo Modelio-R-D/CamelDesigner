@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="EventInstance.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\Measurement_48.png"
+   inkscape:export-xdpi="36.157539"
+   inkscape:export-ydpi="36.157539">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1015"
+       x="-1.0787319e-05"
+       width="1.0000216"
+       y="-1.0812709e-05"
+       height="1.0000216">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00057416526"
+         id="feGaussianBlur1017" />
+    </filter>
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-3" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-2" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-1" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-5" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="96.361616"
+     inkscape:cy="136.89799"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     style="opacity:0.981;fill:#bcec4c;fill-opacity:0.960784;stroke-width:0.202048;filter:url(#filter1015)"
+     d="M 37.992121,127.48372 C 34.815778,126.92021 31.732259,125.21609 29.824934,122.9701 29.009957,122.0104 25.881855,116.29049 15.315617,96.439004 0.52753456,68.655656 0.51445756,68.630448 0.01805956,66.948442 c -0.530496,-1.797546 -0.553767,-5.245046 -0.04815,-7.131801 C 0.26039756,58.732672 3.9506226,51.187854 13.506246,32.14101 26.18654,6.865891 26.691907,5.8994242 28.043811,4.3394151 c 1.615593,-1.8642952 3.607511,-3.1015652 6.139857,-3.81373329 1.472312,-0.4140573 2.165474,-0.4244576 28.085337,-0.4213887 28.942115,0.00346 27.555265,-0.051665 30.335515,1.20497549 1.81728,0.8213911 3.63914,2.1654422 4.73169,3.4907287 0.66684,0.8088912 5.13619,8.9800947 14.89632,27.2345647 7.669,14.343437 14.12787,26.597751 14.35304,27.231832 0.97213,2.737616 1.01765,6.353161 0.11388,9.045318 -0.20033,0.596725 -6.26268,12.864322 -13.4719,27.261312 -10.28961,20.548666 -13.323669,26.441056 -14.112439,27.407566 -1.297281,1.5896 -3.254751,2.94675 -5.524691,3.83042 l -1.8097,0.7045 -26.65388,0.0267 c -14.659629,0.0147 -26.870257,-0.0117 -27.134724,-0.0585 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\DataMeasurement_48.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+  <style
+     type="text/css"
+     id="style1245">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style>
+  <path
+     d="m 115.36078,102.54395 -1.24756,-0.58606 c -3.11366,-1.442 -6.79928,-1.44156 -9.91245,7.2e-4 l -1.6923,0.79508 -1.69471,-0.79619 c -3.11367,-1.44199 -6.799282,-1.44155 -9.912459,7.3e-4 l -1.24537,0.58517 c -0.657398,0.30736 -1.069851,0.92297 -1.068395,1.59458 v 14.77036 c 0,0.62619 0.359046,1.20719 0.947742,1.53307 0.588698,0.32588 1.321839,0.34969 1.93457,0.0628 2.756076,-1.27686 6.018792,-1.2773 8.775112,-0.001 l 1.97754,0.92936 c 0.007,0.004 0.0153,0.006 0.0226,0.009 0.01,0.004 0.0199,0.008 0.0301,0.0121 0.0153,0.006 0.0311,0.0104 0.0464,0.0148 0.01,0.003 0.0197,0.006 0.0296,0.008 0.0175,0.004 0.035,0.007 0.0527,0.01 0.008,0.001 0.0167,0.003 0.0252,0.004 0.0525,0.007 0.10559,0.007 0.15803,0 0.008,-0.001 0.017,-0.003 0.0255,-0.004 0.0175,-0.003 0.035,-0.006 0.0525,-0.01 0.01,-0.002 0.0196,-0.005 0.0296,-0.008 0.0157,-0.004 0.0311,-0.009 0.0465,-0.0148 0.01,-0.004 0.0199,-0.008 0.0299,-0.0121 0.007,-0.004 0.0152,-0.006 0.0226,-0.009 l 1.97536,-0.92803 c 2.75607,-1.27686 6.01879,-1.2773 8.77511,-0.001 0.61297,0.28818 1.3466,0.26504 1.93602,-0.0607 0.58943,-0.32588 0.9492,-0.90732 0.9492,-1.53395 v -14.77063 c 0.002,-0.67161 -0.41099,-1.28743 -1.06863,-1.59458 z m -19.501312,15.87457 c -1.723609,-5.3e-4 -3.422942,0.3702 -4.958167,1.08238 -0.227469,0.10694 -0.499848,0.0983 -0.718577,-0.0227 -0.218728,-0.12083 -0.352247,-0.33669 -0.352247,-0.56931 v -14.77032 c -7.3e-4,-0.24938 0.152697,-0.4778 0.396673,-0.59179 l 1.24294,-0.58409 c 2.756075,-1.27662 6.01879,-1.27707 8.77511,-7.2e-4 l 1.6418,0.7715 v 16.27078 l -1.07324,-0.50404 c -1.53401,-0.71151 -3.23189,-1.08215 -4.954292,-1.08128 z m 19.327002,0.49037 c 0,0.23305 -0.13401,0.44914 -0.35347,0.56996 -0.21945,0.12083 -0.49231,0.12877 -0.71978,0.021 -3.11366,-1.442 -6.79928,-1.44157 -9.91245,0.001 l -1.07082,0.50315 v -16.27085 l 1.63936,-0.77039 c 2.75608,-1.27663 6.0188,-1.27707 8.77512,-7.2e-4 l 1.24537,0.58518 c 0.24397,0.11399 0.3974,0.34242 0.39667,0.59179 z m 0,0"
+     id="path1820"
+     style="stroke-width:0.0592271" />
+  <g
+     id="g1971"
+     transform="matrix(0.17373193,0,0,0.18001323,24.312851,21.354488)">
+    <g
+       id="g1915">
+	<path
+   d="m 362.296,125.055 c -2.851,-2.853 -6.092,-4.28 -9.706,-4.287 -0.77,0 -1.902,0.193 -3.432,0.572 L 236.1,149.319 284.917,17.13 c 0.951,-1.903 1.431,-3.614 1.431,-5.139 0,-3.234 -1.242,-6.04 -3.713,-8.42 C 280.161,1.188 277.115,0 273.501,0 h -93.645 c -3.045,0 -5.708,0.855 -7.994,2.568 -2.284,1.715 -3.809,3.905 -4.568,6.567 l -57.386,235.546 c -0.953,4.564 0.284,8.277 3.711,11.135 2.473,2.099 5.421,3.139 8.848,3.139 1.524,0 2.666,-0.089 3.427,-0.281 l 115.914,-28.838 -56.244,230.691 c -0.76,3.045 -0.333,5.899 1.287,8.562 1.619,2.669 4.047,4.476 7.281,5.427 1.903,0.377 3.239,0.568 3.999,0.568 5.52,0 9.514,-2.375 11.991,-7.136 L 364.294,137.616 c 2.095,-4.567 1.434,-8.756 -1.998,-12.561 z"
+   id="path1913" />
+
+</g>
+    <g
+       id="g1917">
+</g>
+    <g
+       id="g1919">
+</g>
+    <g
+       id="g1921">
+</g>
+    <g
+       id="g1923">
+</g>
+    <g
+       id="g1925">
+</g>
+    <g
+       id="g1927">
+</g>
+    <g
+       id="g1929">
+</g>
+    <g
+       id="g1931">
+</g>
+    <g
+       id="g1933">
+</g>
+    <g
+       id="g1935">
+</g>
+    <g
+       id="g1937">
+</g>
+    <g
+       id="g1939">
+</g>
+    <g
+       id="g1941">
+</g>
+    <g
+       id="g1943">
+</g>
+    <g
+       id="g1945">
+</g>
+  </g>
+</svg>

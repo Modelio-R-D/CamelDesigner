@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="ScalabilityModelEmpty.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\Measurement_48.png"
+   inkscape:export-xdpi="36.157539"
+   inkscape:export-ydpi="36.157539">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1015"
+       x="-1.0787319e-05"
+       width="1.0000216"
+       y="-1.0812709e-05"
+       height="1.0000216">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00057416526"
+         id="feGaussianBlur1017" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="-13.658328"
+     inkscape:cy="92.990824"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     style="opacity:0.981;fill:#bcec4c;fill-opacity:0.96078432;stroke-width:0.202048;filter:url(#filter1015)"
+     d="M 39.61924,127.48372 C 36.442897,126.92021 33.359378,125.21609 31.452053,122.9701 30.637076,122.0104 27.508974,116.29049 16.942736,96.439004 2.1546532,68.655656 2.1415762,68.630448 1.6451782,66.948442 1.1146822,65.150896 1.0914112,61.703396 1.5970282,59.816641 1.8875162,58.732672 5.5777412,51.187854 15.133365,32.14101 27.813659,6.865891 28.319026,5.8994242 29.67093,4.3394151 c 1.615593,-1.8642952 3.607511,-3.1015652 6.139857,-3.81373329 1.472312,-0.4140573 2.165474,-0.4244576 28.085337,-0.4213887 28.942115,0.00346 27.555265,-0.051665 30.335515,1.20497549 1.81728,0.8213911 3.63914,2.1654422 4.73169,3.4907287 0.66684,0.8088912 5.136191,8.9800947 14.896321,27.2345647 7.669,14.343437 14.12787,26.597751 14.35304,27.231832 0.97213,2.737616 1.01765,6.353161 0.11388,9.045318 -0.20033,0.596725 -6.26268,12.864322 -13.4719,27.261312 -10.28961,20.548666 -13.32367,26.441056 -14.11244,27.407566 -1.297281,1.5896 -3.254751,2.94675 -5.524691,3.83042 l -1.8097,0.7045 -26.65388,0.0267 c -14.659629,0.0147 -26.870257,-0.0117 -27.134724,-0.0585 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\DataMeasurement_48.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+</svg>

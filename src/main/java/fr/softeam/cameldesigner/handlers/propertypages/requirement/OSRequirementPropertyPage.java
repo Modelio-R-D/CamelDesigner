@@ -15,6 +15,20 @@ public class OSRequirementPropertyPage<T extends OSRequirement> extends HardRequ
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	this._element.setOs(value);
+	    	break;
+	    
+	    case 2 :
+	    	this._element.setIs64os(value);
+	    	break;
+	    
+	    }
+        
+        this._currentRow -= 2;
     }
 
     /**
@@ -26,6 +40,10 @@ public class OSRequirementPropertyPage<T extends OSRequirement> extends HardRequ
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("OS",getValue(this._element.getOs()));
+        table.addProperty("IS 64 OS",getValue(this._element.getIs64os()));
+
     }
 
     public OSRequirementPropertyPage(T elt) {

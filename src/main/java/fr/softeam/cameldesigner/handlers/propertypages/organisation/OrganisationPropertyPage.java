@@ -15,6 +15,24 @@ public class OrganisationPropertyPage<T extends Organisation> extends EntityProp
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+  
+        switch (this._currentRow) {
+
+		    case 1 :
+		    	this._element.setWww(value);
+		    	break;
+		    
+		    case 2 :
+		    	this._element.setPostalAddress(value);
+		    	break;
+		    
+		    case 3 :
+		    	this._element.setEmail(value);
+		    	break;
+		    	
+		   
+    }
+    this._currentRow -= 3;
     }
 
     /**
@@ -26,6 +44,13 @@ public class OrganisationPropertyPage<T extends Organisation> extends EntityProp
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("WWW",getValue(this._element.getWww()));
+        table.addProperty("Postal Address",getValue(this._element.getPostalAddress()));
+        table.addProperty("Email",getValue(this._element.getEmail()));
+
+        // Cloud Credentials
+
     }
 
     public OrganisationPropertyPage(T elt) {

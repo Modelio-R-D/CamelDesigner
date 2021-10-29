@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="Timer.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\Measurement_48.png"
+   inkscape:export-xdpi="36.157539"
+   inkscape:export-ydpi="36.157539">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1015"
+       x="-1.0787319e-05"
+       width="1.0000216"
+       y="-1.0812709e-05"
+       height="1.0000216">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00057416526"
+         id="feGaussianBlur1017" />
+    </filter>
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-3" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-2" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-1" />
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern-5" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="60.760554"
+     inkscape:cy="27.906078"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     style="opacity:0.981;fill:#bcec4c;fill-opacity:0.960784;stroke-width:0.202048;filter:url(#filter1015)"
+     d="M 37.992121,127.48372 C 34.815778,126.92021 31.732259,125.21609 29.824934,122.9701 29.009957,122.0104 25.881855,116.29049 15.315617,96.439004 0.52753456,68.655656 0.51445756,68.630448 0.01805956,66.948442 c -0.530496,-1.797546 -0.553767,-5.245046 -0.04815,-7.131801 C 0.26039756,58.732672 3.9506226,51.187854 13.506246,32.14101 26.18654,6.865891 26.691907,5.8994242 28.043811,4.3394151 c 1.615593,-1.8642952 3.607511,-3.1015652 6.139857,-3.81373329 1.472312,-0.4140573 2.165474,-0.4244576 28.085337,-0.4213887 28.942115,0.00346 27.555265,-0.051665 30.335515,1.20497549 1.81728,0.8213911 3.63914,2.1654422 4.73169,3.4907287 0.66684,0.8088912 5.13619,8.9800947 14.89632,27.2345647 7.669,14.343437 14.12787,26.597751 14.35304,27.231832 0.97213,2.737616 1.01765,6.353161 0.11388,9.045318 -0.20033,0.596725 -6.26268,12.864322 -13.4719,27.261312 -10.28961,20.548666 -13.323669,26.441056 -14.112439,27.407566 -1.297281,1.5896 -3.254751,2.94675 -5.524691,3.83042 l -1.8097,0.7045 -26.65388,0.0267 c -14.659629,0.0147 -26.870257,-0.0117 -27.134724,-0.0585 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\DataMeasurement_48.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+  <style
+     type="text/css"
+     id="style1245">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style>
+  <path
+     class="st0"
+     d="M 84.742723,27.057084 37.0703,48.530525 34.249317,39.920566 81.922302,18.48037 Z m 4.476949,59.409488 -51.410348,0.873306 -0.651463,-38.350786 51.410348,-0.873305 z m -7.422145,-59.309571 -0.125097,-7.364277 -3.367136,1.503866 0.125567,7.391993 z m -6.70556,3.04052 -0.125567,-7.391994 -3.381493,1.487488 0.126603,7.452944 z m -6.941436,2.966924 -0.12425,-7.314414 -3.381204,1.504115 0.124814,7.34765 z m 19.603273,23.085406 -2.257203,-6.912352 -3.626262,0.0616 2.257204,6.912353 z m -7.407331,0.125828 -2.257202,-6.912352 -3.640335,0.06184 2.271277,6.912114 z M 61.39657,36.394234 l -0.12585,-7.408611 -3.376522,1.504035 0.125568,7.391984 z m 11.805277,20.102811 -2.257202,-6.912353 -3.626261,0.0616 2.257202,6.912353 z m -18.746999,-17.152514 -0.124815,-7.34766 -3.418735,1.504753 0.125567,7.391984 z m 11.339669,17.278342 -2.257198,-6.912353 -3.635645,0.06176 2.257198,6.912353 z m -17.977672,-14.128114 -0.125943,-7.41415 -3.403811,1.554376 0.124814,7.34766 z m 10.678236,14.252109 -2.257199,-6.912352 -3.626267,0.0616 2.257209,6.912352 z m -17.657482,-11.301174 -0.124815,-7.34766 -3.381493,1.487487 0.12585,7.408616 z m 10.292374,11.426285 -2.294733,-6.911715 -3.598111,0.06112 2.219674,6.91299 z m -7.224377,0.12272 -2.294733,-6.911715 -3.626257,0.0616 2.257198,6.912353 z"
+     id="path1247"
+     style="stroke-width:0.509924" />
+</svg>

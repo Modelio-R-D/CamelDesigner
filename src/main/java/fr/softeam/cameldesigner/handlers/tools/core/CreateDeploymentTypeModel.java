@@ -1,25 +1,25 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.model.ITransaction;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * @author kchaabouni
  */
-@objid ("d55fbc99-67a6-48d4-8f38-e928d620d567")
+@objid ("3a4b14ed-fb6c-4c30-97df-f67e1b86e375")
 public class CreateDeploymentTypeModel extends CreateSubModelTool {
-    @objid ("607e14ef-828a-4f7a-bee8-40bbdd893a7a")
+    @objid ("f5535515-77b8-4985-9adc-9736c0b1844e")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
         try( ITransaction transaction = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().createTransaction(" Create Deployment Type Model")){
-
+        
             DeploymentTypeModel.create();
-
+        
         //            MObject element =  parent.getElement();
         //
         //            if (element instanceof AbstractDiagram) {
@@ -37,7 +37,7 @@ public class CreateDeploymentTypeModel extends CreateSubModelTool {
         }
     }
 
-    @objid ("ba437630-306a-484d-9469-cc3ba4a52b62")
+    @objid ("2cfe3496-b7fe-422a-b419-f3286ed3a1a9")
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         return super.acceptElement(arg1);

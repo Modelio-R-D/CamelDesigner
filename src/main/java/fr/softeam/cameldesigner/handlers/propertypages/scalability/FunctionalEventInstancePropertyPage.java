@@ -16,6 +16,13 @@ public class FunctionalEventInstancePropertyPage<T extends FunctionalEventInstan
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if (this._currentRow==1) {
+	    	//this._element.SE(value);;
+
+        }
+        this._currentRow -= 1;
+
     }
 
     /**
@@ -27,6 +34,9 @@ public class FunctionalEventInstancePropertyPage<T extends FunctionalEventInstan
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Component Instance",getValue(this._element.));
+
     }
 
     public FunctionalEventInstancePropertyPage(T elt) {

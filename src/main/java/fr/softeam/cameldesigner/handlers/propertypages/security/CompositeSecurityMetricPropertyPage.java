@@ -16,6 +16,11 @@ public class CompositeSecurityMetricPropertyPage<T extends CompositeSecurityMetr
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if (this._currentRow==1) {
+	    	this._element.getDomain().setName(value);
+
+        }
     }
 
     /**
@@ -27,6 +32,9 @@ public class CompositeSecurityMetricPropertyPage<T extends CompositeSecurityMetr
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+
+        table.addProperty("Domain",getValue(this._element.getDomain().getName()));
+
     }
 
     public CompositeSecurityMetricPropertyPage(T elt) {

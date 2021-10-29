@@ -16,6 +16,38 @@ public class SecurityControlPropertyPage<T extends SecurityControl> extends Feat
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	this._element.setId(value);
+	    	break;
+	    
+	    case 2 :
+	    	this._element.getDomain().setName(value);
+	    	break;
+	    
+	    case 3 :
+	    	this._element.getSubDomain().setName(value);
+	    	break;
+	    	
+	    case 4:
+	    	this._element.setSpecification(value);
+	    	break;
+	    	
+	    case 5 :
+	    	//this._element.(value);
+	    	break;
+	    
+	    case 6 :
+	    	//this._element.(value);
+	    	break;
+	    	
+	    case 7:
+	    	//this._element.(value);
+	    	break;
+        }
+        this._currentRow -= 7;
     }
 
     /**
@@ -27,6 +59,16 @@ public class SecurityControlPropertyPage<T extends SecurityControl> extends Feat
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Id",getValue(this._element.getId()));
+        table.addProperty("Domain",getValue(this._element.getDomain().getName()));
+        
+        table.addProperty("Sub Domain",getValue(this._element.getSubDomain().getName()));
+        table.addProperty("Specification",getValue(this._element.getSpecification()));
+        table.addProperty("Security Properties",getValue(this._element.));
+        table.addProperty("Raw Security Metrics",getValue(this._element.));
+        table.addProperty("Composite Security Metrics",getValue(this._element.));
+
     }
 
     public SecurityControlPropertyPage(T elt) {

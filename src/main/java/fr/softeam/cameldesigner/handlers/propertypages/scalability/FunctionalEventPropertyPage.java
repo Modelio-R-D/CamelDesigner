@@ -16,6 +16,20 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	//this._element.;
+	    	break;
+	    	
+	    case 2 :
+	    	//this._element.;
+	    	break;
+	    
+	
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -27,6 +41,9 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Functional Type",getValue(this._element.get));
+        table.addProperty("Component",getValue(this._element.getUpperOccurrenceBound()));
+       
     }
 
     public FunctionalEventPropertyPage(T elt) {

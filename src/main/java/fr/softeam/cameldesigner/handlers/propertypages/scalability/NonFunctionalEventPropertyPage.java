@@ -16,6 +16,20 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	//this._element.get;
+	    	break;
+	    	
+	    case 2 :
+	    	this._element.getIsViolation();
+	    	break;
+	    
+	
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -27,6 +41,10 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+         table.addProperty("Metric Constraint",getValue(this._element.get));
+         table.addProperty("Is Violation",getValue(this._element.getIsViolation()));
+        
     }
 
     public NonFunctionalEventPropertyPage(T elt) {

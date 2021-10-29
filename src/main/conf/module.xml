@@ -2,77 +2,88 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/inject-3.0.0.jar"/>
-        <PathEntry path="lib/registry-3.7.0.jar"/>
-        <PathEntry path="lib/xtext-2.12.0.jar"/>
-        <PathEntry path="lib/inject-1.0.0.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
-        <PathEntry path="lib/state-1.1.0.jar"/>
-        <PathEntry path="lib/java-2.0.17.jar"/>
-        <PathEntry path="lib/net4j-4.6.0.jar"/>
-        <PathEntry path="lib/osgi-3.12.100.jar"/>
-        <PathEntry path="lib/common-3.9.0.jar"/>
-        <PathEntry path="lib/ecore-2.13.0.jar"/>
-        <PathEntry path="lib/uml-5.2.200.jar"/>
-        <PathEntry path="lib/log4j-1.2.15.jar"/>
-        <PathEntry path="lib/runtime-3.13.0.jar"/>
-        <PathEntry path="lib/edit-2.12.0.jar"/>
-        <PathEntry path="lib/net4j-4.1.500.jar"/>
-        <PathEntry path="lib/multibindings-3.0.0.jar"/>
-        <PathEntry path="lib/app-1.3.400.jar"/>
-        <PathEntry path="lib/pivot-1.3.0.jar"/>
-        <PathEntry path="lib/jobs-3.9.3.jar"/>
-        <PathEntry path="lib/completeocl-1.3.0.jar"/>
-        <PathEntry path="lib/common-2.13.0.jar"/>
-        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/base-1.3.0.jar"/>
-        <PathEntry path="lib/security-4.3.200.jar"/>
-        <PathEntry path="lib/cli-1.2.0.jar"/>
-        <PathEntry path="lib/expressions-4.3.200.jar"/>
-        <PathEntry path="lib/common-1.4.200.jar"/>
-        <PathEntry path="lib/xmi-2.13.0.jar"/>
-        <PathEntry path="lib/preferences-3.7.0.jar"/>
-        <PathEntry path="lib/common-4.6.0.jar"/>
-        <PathEntry path="lib/api-1.7.2.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/tcp-4.1.500.jar"/>
-        <PathEntry path="lib/runtime-3.2.0.jar"/>
-        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/util-3.7.0.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/contenttype-3.6.0.jar"/>
-        <PathEntry path="lib/ocl-3.6.200.jar"/>
-        <PathEntry path="lib/ecore-3.6.200.jar"/>
         <PathEntry path="lib/annotation-2.1.150.jar"/>
-        <PathEntry path="lib/change-2.11.0.jar"/>
+        <PathEntry path="lib/api-1.7.2.jar"/>
+        <PathEntry path="lib/app-1.3.400.jar"/>
+        <PathEntry path="lib/base-1.3.0.jar"/>
         <PathEntry path="lib/cdo-4.6.0.jar"/>
+        <PathEntry path="lib/change-2.11.0.jar"/>
+        <PathEntry path="lib/cli-1.2.0.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/common-1.4.200.jar"/>
+        <PathEntry path="lib/common-2.13.0.jar"/>
+        <PathEntry path="lib/common-3.9.0.jar"/>
+        <PathEntry path="lib/common-4.6.0.jar"/>
+        <PathEntry path="lib/completeocl-1.3.0.jar"/>
+        <PathEntry path="lib/contenttype-3.6.0.jar"/>
+        <PathEntry path="lib/ecore-2.13.0.jar"/>
+        <PathEntry path="lib/ecore-3.6.200.jar"/>
+        <PathEntry path="lib/edit-2.12.0.jar"/>
+        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
+        <PathEntry path="lib/expressions-4.3.200.jar"/>
+        <PathEntry path="lib/inject-1.0.0.jar"/>
+        <PathEntry path="lib/inject-3.0.0.jar"/>
+        <PathEntry path="lib/java-2.0.17.jar"/>
+        <PathEntry path="lib/jobs-3.9.3.jar"/>
+        <PathEntry path="lib/log4j-1.2.15.jar"/>
+        <PathEntry path="lib/multibindings-3.0.0.jar"/>
+        <PathEntry path="lib/net4j-4.1.500.jar"/>
+        <PathEntry path="lib/net4j-4.6.0.jar"/>
+        <PathEntry path="lib/ocl-3.6.200.jar"/>
+        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
+        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/osgi-3.12.100.jar"/>
+        <PathEntry path="lib/pivot-1.3.0.jar"/>
+        <PathEntry path="lib/preferences-3.7.0.jar"/>
+        <PathEntry path="lib/registry-3.7.0.jar"/>
+        <PathEntry path="lib/runtime-3.13.0.jar"/>
+        <PathEntry path="lib/runtime-3.2.0.jar"/>
+        <PathEntry path="lib/security-4.3.200.jar"/>
+        <PathEntry path="lib/state-1.1.0.jar"/>
+        <PathEntry path="lib/tcp-4.1.500.jar"/>
+        <PathEntry path="lib/uml-5.2.200.jar"/>
         <PathEntry path="lib/util-2.12.0.jar"/>
+        <PathEntry path="lib/util-3.7.0.jar"/>
+        <PathEntry path="lib/xmi-2.13.0.jar"/>
+        <PathEntry path="lib/xtext-2.12.0.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="28a1b85d-93b2-47f7-845a-f4883b71ded5" id="CamelCore">
+            <Stereotype name="Action" metaclass="Standard.NameSpace" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Action.label" uid="b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Annotation" metaclass="Infrastructure.Dependency" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Annotation.label" uid="6ac7f831-f2b4-447b-ba9e-e58f7834bcf7" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Application" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Application.label" uid="46979e9e-2d44-4099-afdf-62d13a0b1d25" is-abstract="false">
+                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
+                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="version" uid="a33973d1-0249-418d-b3fd-1ccbbe910d72" label="%tagtype.version.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Attribute_Attribute" metaclass="Standard.Attribute" owner-stereotype="mref#'' {342512a5-ad9b-48b8-a454-5fd44237b8f2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Attribute_Attribute.label" uid="02d333e9-0603-47b3-87bb-b2a311cc65dd" is-abstract="false">
+                <Icon path="res/icon/gui/Attribute_24.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Attribute_Class" metaclass="Standard.Class" owner-stereotype="mref#'' {342512a5-ad9b-48b8-a454-5fd44237b8f2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Attribute_Class.label" uid="b062f4ef-e492-4b34-9caa-bdd63d717cb9" is-abstract="false">
+                <Icon path="res/icon/gui/Attribute_24.png"/>
+                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="CamelAttribute" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.CamelAttribute.label" uid="342512a5-ad9b-48b8-a454-5fd44237b8f2" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="CamelElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="true" label="%stereotype.CamelElement.label" uid="9aef4bd8-fa92-4231-9295-3eb5a619ceab" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
             <Stereotype name="CamelModel" metaclass="Standard.Package" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CamelModel.label" uid="e33cb0ef-7003-4579-8739-638c171ab891" is-abstract="false">
                 <Icon path="res/icon/gui/CamelModel_24.png"/>
                 <Image path=""/>
@@ -81,50 +92,11 @@
                     <TagType name="applicationVersion" uid="bd5b684e-453d-4203-a1ac-e24d368f74ad" label="%tagtype.applicationVersion.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="NamedElement" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.NamedElement.label" uid="f81fdaa1-17e1-49a4-bf1f-60c18563c100" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Attribute_Class" metaclass="Standard.Class" owner-stereotype="mref#'' {342512a5-ad9b-48b8-a454-5fd44237b8f2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Attribute_Class.label" uid="b062f4ef-e492-4b34-9caa-bdd63d717cb9" is-abstract="false">
-                <Icon path="res/icon/gui/Attribute_24.png"/>
-                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
-            </Stereotype>
             <Stereotype name="Feature" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Feature.label" uid="1ff10997-aa56-4f9b-b413-f32fadcc29bb" is-abstract="true">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="QualityAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {b062f4ef-e492-4b34-9caa-bdd63d717cb9} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.QualityAttribute.label" uid="ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4" is-abstract="false">
-                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
-                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="MeasurableAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MeasurableAttribute.label" uid="41f442d8-cf5f-4e6c-a842-47675cf36361" is-abstract="false">
-                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
-                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="Action" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Action.label" uid="b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Application" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Application.label" uid="46979e9e-2d44-4099-afdf-62d13a0b1d25" is-abstract="false">
-                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
-                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="version" uid="a33973d1-0249-418d-b3fd-1ccbbe910d72" label="%tagtype.version.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="PropertyDependency" metaclass="Infrastructure.Dependency" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PropertyDependency.label" uid="738c4b6c-0cf3-4276-b6d9-7fe4ec31ff01" is-abstract="false">
-                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
-                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="SubModel" metaclass="Standard.Package" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.SubModel.label" uid="577c153e-42b8-4f36-9686-1a6109ffdc16" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Annotation" metaclass="Infrastructure.Dependency" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Annotation.label" uid="6ac7f831-f2b4-447b-ba9e-e58f7834bcf7" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="CamelElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="true" label="%stereotype.CamelElement.label" uid="9aef4bd8-fa92-4231-9295-3eb5a619ceab" is-abstract="true">
+            <Stereotype name="Feature_Artifact" metaclass="Standard.Artifact" owner-stereotype="mref#'' {4fc85f6a-6ece-4e79-b662-e20cb7f28cea} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Artifact.label" uid="4fc85f6a-6ece-4e79-b662-e20cb7f28cea" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -132,79 +104,107 @@
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Feature_Port" metaclass="Standard.Port" owner-stereotype="mref#'' {df209aca-1325-4c99-b383-ca2650224ff6} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Port.label" uid="18d0504c-73e0-4c7c-8341-53038298af2c" is-abstract="false">
-                <Icon path="res/icon/gui/Feature_24.png"/>
+            <Stereotype name="Feature_Connector" metaclass="Standard.Connector" owner-stereotype="mref#'' {e94d1d27-429c-47ce-a373-e940bf1bf49b} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Connector.label" uid="e94d1d27-429c-47ce-a373-e940bf1bf49b" is-abstract="false">
+                <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="Feature_Instance" metaclass="Standard.Instance" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Instance.label" uid="df209aca-1325-4c99-b383-ca2650224ff6" is-abstract="false">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Attribute_Attribute" metaclass="Standard.Attribute" owner-stereotype="mref#'' {342512a5-ad9b-48b8-a454-5fd44237b8f2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Attribute_Attribute.label" uid="02d333e9-0603-47b3-87bb-b2a311cc65dd" is-abstract="false">
-                <Icon path="res/icon/gui/Attribute_24.png"/>
+            <Stereotype name="Feature_Port" metaclass="Standard.Port" owner-stereotype="mref#'' {df209aca-1325-4c99-b383-ca2650224ff6} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Port.label" uid="18d0504c-73e0-4c7c-8341-53038298af2c" is-abstract="false">
+                <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="CamelAttribute" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.CamelAttribute.label" uid="342512a5-ad9b-48b8-a454-5fd44237b8f2" is-abstract="true">
+            <Stereotype name="MeasurableAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MeasurableAttribute.label" uid="41f442d8-cf5f-4e6c-a842-47675cf36361" is-abstract="false">
+                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
+                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="NamedElement" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.NamedElement.label" uid="f81fdaa1-17e1-49a4-bf1f-60c18563c100" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Feature_Artifact" metaclass="Standard.Artifact" owner-stereotype="mref#'' {4fc85f6a-6ece-4e79-b662-e20cb7f28cea} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Artifact.label" uid="4fc85f6a-6ece-4e79-b662-e20cb7f28cea" is-abstract="false">
+            <Stereotype name="PropertyDependency" metaclass="Infrastructure.Dependency" owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PropertyDependency.label" uid="738c4b6c-0cf3-4276-b6d9-7fe4ec31ff01" is-abstract="false">
+                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
+                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="QualityAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {b062f4ef-e492-4b34-9caa-bdd63d717cb9} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.QualityAttribute.label" uid="ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4" is-abstract="false">
+                <Icon path="res/icon/gui/CoreModelEmpty_24.png"/>
+                <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="SubModel" metaclass="Standard.Package" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.SubModel.label" uid="577c153e-42b8-4f36-9686-1a6109ffdc16" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Feature_Connector" metaclass="Standard.Connector" owner-stereotype="mref#'' {e94d1d27-429c-47ce-a373-e940bf1bf49b} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Connector.label" uid="e94d1d27-429c-47ce-a373-e940bf1bf49b" is-abstract="false">
+            <Stereotype name="Feature_Enumeration" metaclass="Standard.Enumeration" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Enumeration.label" uid="56eb7780-c162-400f-8e4b-0a5178cef153" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Feature_DataType" metaclass="Standard.DataType" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_DataType.label" uid="eaf56346-fbac-4409-ad4f-4e1a6c4183d1" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
         </Profile>
         <Profile uid="87d25481-b81a-4679-9e56-88df8ddc5bc9" id="CamelDiagrams">
-            <Stereotype name="CamelViewPoint" metaclass="Standard.ClassDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.CamelViewPoint.label" uid="e46b07f3-2bf2-48c1-8218-3a31ce9fa75d" is-abstract="false">
-                <Icon path="res/icon/gui/CamelViewPoint_24.png"/>
-                <Image path="res/icon/gui/CamelViewPoint_48.png"/>
-            </Stereotype>
-            <Stereotype name="ExecutionModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExecutionModelDiagram.label" uid="40a6ab6a-6df9-40b0-a877-d1de85918a7d" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelDiagram_24.png"/>
-                <Image path="res/icon/gui/executionModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="MetricModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricModelDiagram.label" uid="41062298-9e86-4073-b4a8-713719cfcf90" is-abstract="false">
-                <Icon path="res/icon/gui/metricModelDiagram_24.png"/>
-                <Image path="res/icon/gui/metricModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="DataModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataModelDiagram.label" uid="fc779080-0243-43b7-a1e1-9ddf71de93d7" is-abstract="false">
-                <Icon path="res/icon/gui/dataModelDiagram_24.png"/>
-                <Image path="res/icon/gui/dataModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="LocationModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.LocationModelDiagram.label" uid="8417972e-6235-45f0-b45e-8f6202da12d9" is-abstract="false">
-                <Icon path="res/icon/gui/locationModelDiagram_24.png"/>
-                <Image path="res/icon/gui/locationModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="RequirementModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RequirementModelDiagram.label" uid="f8879e00-7139-4923-a7ff-67ebdb678e5b" is-abstract="false">
-                <Icon path="res/icon/gui/requirementModelDiagram_24.png"/>
-                <Image path="res/icon/gui/requirementModelDiagram_48.png"/>
-            </Stereotype>
             <Stereotype name="AbstractCamelDiagram" metaclass="Infrastructure.AbstractDiagram" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.AbstractCamelDiagram.label" uid="c147d6d3-8bd0-4b94-a9d6-164a947fa0b4" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
+            </Stereotype>
+            <Stereotype name="CamelModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CamelModelDiagram.label" uid="eec7381e-4c61-4f7c-9a1c-210f2fe38377" is-abstract="false">
+                <Icon path="res/icon/gui/CamelModelDiagram_24.png"/>
+                <Image path="res/icon/gui/CamelModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="CamelViewPoint" metaclass="Standard.ClassDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.CamelViewPoint.label" uid="e46b07f3-2bf2-48c1-8218-3a31ce9fa75d" is-abstract="false">
+                <Icon path="res/icon/gui/CamelViewPoint_24.png"/>
+                <Image path="res/icon/gui/CamelViewPoint_48.png"/>
             </Stereotype>
             <Stereotype name="ConstraintModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ConstraintModelDiagram.label" uid="62499a4d-4037-4aef-bb40-8b5495465a22" is-abstract="false">
                 <Icon path=""/>
                 <Image path="res/icon/gui/constraintModelDiagram_48.png"/>
             </Stereotype>
+            <Stereotype name="DataInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataInstanceModelDiagram.label" uid="827bb28e-042f-4c25-a5bb-cca9234a5c6b" is-abstract="false">
+                <Icon path="res/icon/gui/dataInstanceModelDiagram_24.png"/>
+                <Image path="res/icon/gui/dataInstanceModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="DataModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataModelDiagram.label" uid="fc779080-0243-43b7-a1e1-9ddf71de93d7" is-abstract="false">
+                <Icon path="res/icon/gui/dataModelDiagram_24.png"/>
+                <Image path="res/icon/gui/dataModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="DeploymentInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentInstanceModelDiagram.label" uid="a10a5950-4d32-42b8-8ee7-f596192afb1d" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="DeploymentTypeModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentTypeModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
+                <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
+                <Image path="res/icon/gui/DeploymentTypeModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="ExecutionModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExecutionModelDiagram.label" uid="40a6ab6a-6df9-40b0-a877-d1de85918a7d" is-abstract="false">
+                <Icon path="res/icon/gui/executionModelDiagram_24.png"/>
+                <Image path="res/icon/gui/executionModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="LocationModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.LocationModelDiagram.label" uid="8417972e-6235-45f0-b45e-8f6202da12d9" is-abstract="false">
+                <Icon path="res/icon/gui/locationModelDiagram_24.png"/>
+                <Image path="res/icon/gui/locationModelDiagram_48.png"/>
+            </Stereotype>
             <Stereotype name="MetadataModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetadataModelDiagram.label" uid="409ebd0d-ecd3-4a8a-95f0-0080c7137e1c" is-abstract="false">
                 <Icon path="res/icon/gui/metadataModelDiagram_24.png"/>
                 <Image path="res/icon/gui/metadataModelDiagram_48.png"/>
+            </Stereotype>
+            <Stereotype name="MetricModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricModelDiagram.label" uid="41062298-9e86-4073-b4a8-713719cfcf90" is-abstract="false">
+                <Icon path="res/icon/gui/metricModelDiagram_24.png"/>
+                <Image path="res/icon/gui/metricModelDiagram_48.png"/>
             </Stereotype>
             <Stereotype name="OrganisationModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.OrganisationModelDiagram.label" uid="866330db-6440-4bbe-bd93-4bb567e8f1e7" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModelDiagram_24.png"/>
                 <Image path="res/icon/gui/organisationModelDiagram_48.png"/>
             </Stereotype>
+            <Stereotype name="RequirementModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RequirementModelDiagram.label" uid="f8879e00-7139-4923-a7ff-67ebdb678e5b" is-abstract="false">
+                <Icon path="res/icon/gui/requirementModelDiagram_24.png"/>
+                <Image path="res/icon/gui/requirementModelDiagram_48.png"/>
+            </Stereotype>
             <Stereotype name="ScalabilityModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ScalabilityModelDiagram.label" uid="7f111587-b577-4533-9e55-41832442bd71" is-abstract="false">
                 <Icon path="res/icon/gui/scalabilityModelDiagram_24.png"/>
                 <Image path="res/icon/gui/scalabilityModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="DeploymentTypeModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentTypeModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
-                <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
-                <Image path="res/icon/gui/DeploymentTypeModelDiagram_48.png"/>
             </Stereotype>
             <Stereotype name="SecurityModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityModelDiagram.label" uid="f7228862-f56b-49a6-a404-f06dcb6a08fa" is-abstract="false">
                 <Icon path="res/icon/gui/securityModelDiagram_24.png"/>
@@ -217,18 +217,6 @@
             <Stereotype name="UnitModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnitModelDiagram.label" uid="447f259a-1b5e-46e1-8721-8c09653baaff" is-abstract="false">
                 <Icon path="res/icon/gui/unitModelDiagram_24.png"/>
                 <Image path="res/icon/gui/unitModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="CamelModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CamelModelDiagram.label" uid="eec7381e-4c61-4f7c-9a1c-210f2fe38377" is-abstract="false">
-                <Icon path="res/icon/gui/CamelModelDiagram_24.png"/>
-                <Image path="res/icon/gui/CamelModelDiagram_48.png"/>
-            </Stereotype>
-            <Stereotype name="DeploymentInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentInstanceModelDiagram.label" uid="a10a5950-4d32-42b8-8ee7-f596192afb1d" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="DataInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataInstanceModelDiagram.label" uid="827bb28e-042f-4c25-a5bb-cca9234a5c6b" is-abstract="false">
-                <Icon path="res/icon/gui/dataInstanceModelDiagram_24.png"/>
-                <Image path="res/icon/gui/dataInstanceModelDiagram_48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="48587c66-74f8-44e2-b83a-e97a53204f84" id="ConstraintModel">
@@ -315,6 +303,10 @@
                 <Icon path="res/icon/gui/DeploymentInstanceEmpty_24.png"/>
                 <Image path="res/icon/gui/DeploymentInstanceEmpty_48.png"/>
             </Stereotype>
+            <Stereotype name="CommunicationPortInstance" metaclass="Standard.Port" owner-stereotype="mref#'' {18d0504c-73e0-4c7c-8341-53038298af2c} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CommunicationPortInstance.label" uid="42bf761a-193d-48f8-b686-2c4b96a56384" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
             <Stereotype name="ComponentInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {df209aca-1325-4c99-b383-ca2650224ff6} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ComponentInstance.label" uid="aba476b3-2629-42d6-9138-1bf866332333" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
@@ -339,6 +331,10 @@
                 <Icon path="res/icon/gui/HostingInstance_24.png"/>
                 <Image path="res/icon/gui/HostingInstance_48.png"/>
             </Stereotype>
+            <Stereotype name="HostingPortInstance" metaclass="Standard.Port" owner-stereotype="mref#'' {18d0504c-73e0-4c7c-8341-53038298af2c} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HostingPortInstance.label" uid="b2bcf5bc-48d4-42cc-bc87-0ca2f2ca2812" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
             <Stereotype name="PaaSInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {aba476b3-2629-42d6-9138-1bf866332333} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PaaSInstance.label" uid="8d6e2b24-ed30-4aad-9c44-39b18b4c76d8" is-abstract="false">
                 <Icon path="res/icon/gui/DeploymentInstanceEmpty_24.png"/>
                 <Image path="res/icon/gui/DeploymentInstanceEmpty_48.png"/>
@@ -350,14 +346,6 @@
             <Stereotype name="VMInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {aba476b3-2629-42d6-9138-1bf866332333} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VMInstance.label" uid="a9a4550c-517a-4781-a3c9-5eb56d430f48" is-abstract="false">
                 <Icon path="res/icon/gui/VMInstance_24.png"/>
                 <Image path="res/icon/gui/VMInstance_48.png"/>
-            </Stereotype>
-            <Stereotype name="CommunicationPortInstance" metaclass="Standard.Port" owner-stereotype="mref#'' {18d0504c-73e0-4c7c-8341-53038298af2c} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CommunicationPortInstance.label" uid="42bf761a-193d-48f8-b686-2c4b96a56384" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="HostingPortInstance" metaclass="Standard.Port" owner-stereotype="mref#'' {18d0504c-73e0-4c7c-8341-53038298af2c} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HostingPortInstance.label" uid="b2bcf5bc-48d4-42cc-bc87-0ca2f2ca2812" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
             </Stereotype>
         </Profile>
         <Profile uid="6d816e3a-22b6-4451-801d-38a800e92932" id="DeploymentModel">
@@ -498,16 +486,7 @@
             </Stereotype>
         </Profile>
         <Profile uid="529aca05-46d5-4f0c-84e5-010f52582ab9" id="ExecutionModel">
-            <Stereotype name="ExecutionModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExecutionModel.label" uid="e68f7e04-ff66-47dd-af65-5c017645cb8d" is-abstract="false">
-                <Icon path="res/icon/gui/executionModel_24.png"/>
-                <Image path="res/icon/gui/executionModel_48.png"/>
-                <TagTypes>
-                    <TagType name="startTime" uid="8a1a55fb-6fdd-41a1-8b7f-0402a36c1c5a" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="endTime" uid="9eaffab4-ecb8-4197-8a10-fa6efdbce7f0" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="totalCost" uid="897470a5-3fb6-46aa-b4cc-d3aefb9903a1" label="%tagtype.totalCost.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="ActionInstance" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ActionInstance.label" uid="fe6343f1-1474-4d9e-a80f-e88b019c9e46" is-abstract="false">
+            <Stereotype name="ActionInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {df209aca-1325-4c99-b383-ca2650224ff6} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ActionInstance.label" uid="fe6343f1-1474-4d9e-a80f-e88b019c9e46" is-abstract="false">
                 <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
                 <Image path="res/icon/gui/executionModelEmpty_48.png"/>
                 <TagTypes>
@@ -516,45 +495,34 @@
                     <TagType name="successful" uid="652d15c6-5261-493e-a968-b981d7bee54a" label="%tagtype.successful.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="Measurement" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Measurement.label" uid="481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2" is-abstract="true">
-                <Icon path="res/icon/gui/Measurement_24.png"/>
-                <Image path="res/icon/gui/Measurement_48.png"/>
-                <TagTypes>
-                    <TagType name="value" uid="03f06745-0e69-475c-a468-9f73b761a5d0" label="%tagtype.value.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="measurementTime" uid="501b05dc-7f34-42e0-9da5-3a581c881e5c" label="%tagtype.measurementTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
             <Stereotype name="ApplicationMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ApplicationMeasurement.label" uid="8962d6e6-e540-41c6-bf79-3df6530aae2e" is-abstract="false">
                 <Icon path="res/icon/gui/ApplicationMeasurement_24.png"/>
                 <Image path="res/icon/gui/ApplicationMeasurement_48.png"/>
+            </Stereotype>
+            <Stereotype name="Cause" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Cause.label" uid="fc44bcb6-59df-49ef-9ed6-13f1d2b85393" is-abstract="false">
+                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
+                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="CommunicationMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CommunicationMeasurement.label" uid="438c005e-3455-4a76-ba8b-3791473a3e5a" is-abstract="false">
                 <Icon path="res/icon/gui/CommunicationMeasurement_24.png"/>
                 <Image path="res/icon/gui/CommunicationMeasurement_48.png"/>
             </Stereotype>
-            <Stereotype name="HistoryRecord" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HistoryRecord.label" uid="fe3e6072-933d-456c-bd5a-77cd25aeb183" is-abstract="false">
-                <Icon path="res/icon/gui/HistoryRecord_24.png"/>
-                <Image path="res/icon/gui/HistoryRecord_48.png"/>
-                <TagTypes>
-                    <TagType name="startTime" uid="d4316e17-4ce7-49fa-8ef0-c2743e111a0b" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="endTime" uid="bb514f2c-6871-49ad-a376-0f3411c9acca" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="PaaSMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PaaSMeasurement.label" uid="726f03cf-0c34-448c-a300-42d54277a37d" is-abstract="false">
-                <Icon path="res/icon/gui/PaasMeasurement_24.png"/>
-                <Image path="res/icon/gui/PaasMeasurement_48.png"/>
-            </Stereotype>
             <Stereotype name="ContainerMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ContainerMeasurement.label" uid="85629f9a-c7b9-455f-a948-e90a070e6b60" is-abstract="false">
                 <Icon path="res/icon/gui/ContainerMeasurement_24.png"/>
                 <Image path="res/icon/gui/ContainerMeasurement_48.png"/>
             </Stereotype>
-            <Stereotype name="SoftwareComponentMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentMeasurement.label" uid="cef53d47-e830-42d6-9834-bfc960dc6abe" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+            <Stereotype name="DataMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataMeasurement.label" uid="fe1fd247-1047-4137-8ff6-90ed2e79ac91" is-abstract="false">
+                <Icon path="res/icon/gui/DataMeasurement_24.png"/>
+                <Image path="res/icon/gui/DataMeasurement_48.png"/>
             </Stereotype>
-            <Stereotype name="VMMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VMMeasurement.label" uid="a33f8ce2-8fb0-4642-be2c-588ae287f860" is-abstract="false">
-                <Icon path="res/icon/gui/VMMeasurement_24.png"/>
-                <Image path="res/icon/gui/VMMeasurement_48.png"/>
+            <Stereotype name="ExecutionModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExecutionModel.label" uid="e68f7e04-ff66-47dd-af65-5c017645cb8d" is-abstract="false">
+                <Icon path="res/icon/gui/executionModel_24.png"/>
+                <Image path="res/icon/gui/executionModel_48.png"/>
+                <TagTypes>
+                    <TagType name="startTime" uid="8a1a55fb-6fdd-41a1-8b7f-0402a36c1c5a" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="endTime" uid="9eaffab4-ecb8-4197-8a10-fa6efdbce7f0" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="totalCost" uid="897470a5-3fb6-46aa-b4cc-d3aefb9903a1" label="%tagtype.totalCost.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="HistoryInfo" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HistoryInfo.label" uid="acef265d-7979-416d-8e8d-bc2a20331822" is-abstract="false">
                 <Icon path="res/icon/gui/HistoryInfo_24.png"/>
@@ -565,21 +533,47 @@
                     <TagType name="endTime" uid="e34ce3bc-ef22-4d6d-9c02-81f6bbd2268b" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="SLOViolation" metaclass="Standard.Class" owner-stereotype="mref#'' {fc44bcb6-59df-49ef-9ed6-13f1d2b85393} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SLOViolation.label" uid="fe591c4e-317f-4202-9f7a-43dff0e6d7fe" is-abstract="false">
-                <Icon path="res/icon/gui/SLOViolation_24.png"/>
-                <Image path="res/icon/gui/SLOViolation_48.png"/>
+            <Stereotype name="HistoryRecord" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HistoryRecord.label" uid="fe3e6072-933d-456c-bd5a-77cd25aeb183" is-abstract="false">
+                <Icon path="res/icon/gui/HistoryRecord_24.png"/>
+                <Image path="res/icon/gui/HistoryRecord_48.png"/>
+                <TagTypes>
+                    <TagType name="startTime" uid="d4316e17-4ce7-49fa-8ef0-c2743e111a0b" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="endTime" uid="bb514f2c-6871-49ad-a376-0f3411c9acca" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
-            <Stereotype name="Cause" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Cause.label" uid="fc44bcb6-59df-49ef-9ed6-13f1d2b85393" is-abstract="false">
-                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
-                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+            <Stereotype name="Measurement" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Measurement.label" uid="481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2" is-abstract="true">
+                <Icon path="res/icon/gui/Measurement_24.png"/>
+                <Image path="res/icon/gui/Measurement_48.png"/>
+                <TagTypes>
+                    <TagType name="value" uid="03f06745-0e69-475c-a468-9f73b761a5d0" label="%tagtype.value.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="measurementTime" uid="501b05dc-7f34-42e0-9da5-3a581c881e5c" label="%tagtype.measurementTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
-            <Stereotype name="DataMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataMeasurement.label" uid="fe1fd247-1047-4137-8ff6-90ed2e79ac91" is-abstract="false">
-                <Icon path="res/icon/gui/DataMeasurement_24.png"/>
-                <Image path="res/icon/gui/DataMeasurement_48.png"/>
+            <Stereotype name="PaaSMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PaaSMeasurement.label" uid="726f03cf-0c34-448c-a300-42d54277a37d" is-abstract="false">
+                <Icon path="res/icon/gui/PaasMeasurement_24.png"/>
+                <Image path="res/icon/gui/PaasMeasurement_48.png"/>
             </Stereotype>
             <Stereotype name="RuleTrigger" metaclass="Standard.Class" owner-stereotype="mref#'' {fc44bcb6-59df-49ef-9ed6-13f1d2b85393} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RuleTrigger.label" uid="6feb668e-fc53-4354-93a8-d98b00fdb186" is-abstract="false">
                 <Icon path="res/icon/gui/RuleTrigger_24.png"/>
                 <Image path="res/icon/gui/RuleTrigger_48.png"/>
+                <TagTypes>
+                    <TagType name="TriggeringTime" uid="222df9b1-1654-420c-9e13-31a2c7f0da8d" label="%tagtype.TriggeringTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="SLOViolation" metaclass="Standard.Class" owner-stereotype="mref#'' {fc44bcb6-59df-49ef-9ed6-13f1d2b85393} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SLOViolation.label" uid="fe591c4e-317f-4202-9f7a-43dff0e6d7fe" is-abstract="false">
+                <Icon path="res/icon/gui/SLOViolation_24.png"/>
+                <Image path="res/icon/gui/SLOViolation_48.png"/>
+                <TagTypes>
+                    <TagType name="assessmentTime" uid="fc352744-f101-466f-a61c-0b32b9269a34" label="%tagtype.assessmentTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="SoftwareComponentMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentMeasurement.label" uid="cef53d47-e830-42d6-9834-bfc960dc6abe" is-abstract="false">
+                <Icon path="res/icon/gui/executionModelEmpty_24.png"/>
+                <Image path="res/icon/gui/executionModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="VMMeasurement" metaclass="Standard.Class" owner-stereotype="mref#'' {481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VMMeasurement.label" uid="a33f8ce2-8fb0-4642-be2c-588ae287f860" is-abstract="false">
+                <Icon path="res/icon/gui/VMMeasurement_24.png"/>
+                <Image path="res/icon/gui/VMMeasurement_48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="27e07c22-7b2a-4cfa-a3d8-859eb4eb2db1" id="LocationModel">
@@ -587,7 +581,7 @@
                 <Icon path="res/icon/gui/locationModel_24.png"/>
                 <Image path="res/icon/gui/locationModel_48.png"/>
             </Stereotype>
-            <Stereotype name="Location" metaclass="Standard.Enumeration" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Location.label" uid="451ac0cf-b5d0-488a-8f05-43139794aa83" is-abstract="true">
+            <Stereotype name="Location" metaclass="Standard.Enumeration" owner-stereotype="mref#'' {56eb7780-c162-400f-8e4b-0a5178cef153} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Location.label" uid="451ac0cf-b5d0-488a-8f05-43139794aa83" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
@@ -611,6 +605,14 @@
                 <Icon path="res/icon/gui/metadataModel_24.png"/>
                 <Image path="res/icon/gui/metadataModel_48.png"/>
             </Stereotype>
+            <Stereotype name="MmsConcept" metaclass="Standard.Class" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsConcept.label" uid="6f3091ee-3a3b-4157-8b89-872f99b970f9" is-abstract="false">
+                <Icon path="res/icon/gui/metadataConcept_24.png"/>
+                <Image path="res/icon/gui/metadataConcept_48.png"/>
+            </Stereotype>
+            <Stereotype name="MmsConceptInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsConceptInstance.label" uid="81bc1a2f-1255-41fb-b517-5ca503ccc73e" is-abstract="false">
+                <Icon path="res/icon/gui/metadataConceptInstance_24.png"/>
+                <Image path="res/icon/gui/metadataConceptInstance_48.png"/>
+            </Stereotype>
             <Stereotype name="MmsObject" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.MmsObject.label" uid="907f72a5-eb52-4908-953e-7f9a66b9939d" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
@@ -619,10 +621,6 @@
                     <TagType name="uri" uid="5cff0fda-7e85-46ea-af8b-de500c800a21" label="%tagtype.uri.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="MmsConcept" metaclass="Standard.Class" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsConcept.label" uid="6f3091ee-3a3b-4157-8b89-872f99b970f9" is-abstract="false">
-                <Icon path="res/icon/gui/metadataConcept_24.png"/>
-                <Image path="res/icon/gui/metadataConcept_48.png"/>
-            </Stereotype>
             <Stereotype name="MmsProperty" metaclass="Standard.Attribute" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsProperty.label" uid="2fd479fe-3531-4636-aba9-b8fb0976fe66" is-abstract="false">
                 <Icon path="res/icon/gui/metadataProperty_24.png"/>
                 <Image path="res/icon/gui/metadataProperty_48.png"/>
@@ -630,10 +628,6 @@
                     <TagType name="rangeUri" uid="d51c3381-6675-4439-9ba0-f0c7da269bcf" label="%tagtype.rangeUri.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="propertyType" uid="fb35b00c-ff5a-4b21-b9bf-fdb16ef500e5" label="%tagtype.propertyType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
-            </Stereotype>
-            <Stereotype name="MmsConceptInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsConceptInstance.label" uid="81bc1a2f-1255-41fb-b517-5ca503ccc73e" is-abstract="false">
-                <Icon path="res/icon/gui/metadataConceptInstance_24.png"/>
-                <Image path="res/icon/gui/metadataConceptInstance_48.png"/>
             </Stereotype>
             <Stereotype name="MmsPropertyInstance" metaclass="Standard.AttributeLink" owner-stereotype="mref#'' {907f72a5-eb52-4908-953e-7f9a66b9939d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MmsPropertyInstance.label" uid="f4953787-31fa-4eed-88df-83d5ad51d82e" is-abstract="false">
                 <Icon path="res/icon/gui/metadataPropertyInstance_24.png"/>
@@ -644,7 +638,7 @@
             </Stereotype>
         </Profile>
         <Profile uid="7b7cc375-db0a-4b93-8d14-6adbc5f5618b" id="MetricModel">
-            <Stereotype name="AttributeContext" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.AttributeContext.label" uid="817ee7bc-b7e6-432e-af4a-bbc95f4162be" is-abstract="false">
+            <Stereotype name="AttributeContext" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.AttributeContext.label" uid="817ee7bc-b7e6-432e-af4a-bbc95f4162be" is-abstract="false">
                 <Icon path="res/icon/gui/AttributeContext_24.png"/>
                 <Image path="res/icon/gui/AttributeContext_48.png"/>
             </Stereotype>
@@ -670,7 +664,7 @@
                     <TagType name="arguments" uid="e6a87341-c973-4532-970a-be2e90fe9dda" label="%tagtype.arguments.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="Metric" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Metric.label" uid="1603af9c-7b21-4da2-96b7-6607aa8066cc" is-abstract="true">
+            <Stereotype name="Metric" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Metric.label" uid="1603af9c-7b21-4da2-96b7-6607aa8066cc" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -690,11 +684,11 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="MetricObjectBinding" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricObjectBinding.label" uid="53d4e08f-3c02-461e-91e7-e2adf292b0c2" is-abstract="false">
+            <Stereotype name="MetricObjectBinding" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricObjectBinding.label" uid="53d4e08f-3c02-461e-91e7-e2adf292b0c2" is-abstract="false">
                 <Icon path="res/icon/gui/MetricObjectBinding_24.png"/>
                 <Image path="res/icon/gui/MetricObjectBinding_48.png"/>
             </Stereotype>
-            <Stereotype name="MetricTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricTemplate.label" uid="9f394e40-1b72-4bd0-a2e6-b02a67cf87fd" is-abstract="false">
+            <Stereotype name="MetricTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.MetricTemplate.label" uid="9f394e40-1b72-4bd0-a2e6-b02a67cf87fd" is-abstract="false">
                 <Icon path="res/icon/gui/MetricTemplate_24.png"/>
                 <Image path="res/icon/gui/MetricTemplate_48.png"/>
                 <TagTypes>
@@ -756,39 +750,17 @@
             </Stereotype>
         </Profile>
         <Profile uid="5db99bc2-85e7-4b01-bda0-109f45e1fd70" id="OrganisationModel">
-            <Stereotype name="OrganisationModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.OrganisationModel.label" uid="e44c4759-0924-40bc-95d9-3cf51944eccf" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModel_24.png"/>
-                <Image path=""/>
-                <TagTypes>
-                    <TagType name="organisationName" uid="f8f457b3-49af-40e8-8af6-d2a7c8a961ae" label="%tagtype.organisationName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="organisationEmail" uid="9449c6de-b56a-409f-ad60-bb01d80d128e" label="%tagtype.organisationEmail.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="organisationWebsite" uid="cd62f8b6-56da-4e63-b459-3bace5101527" label="%tagtype.organisationWebsite.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="securityLevel" uid="faa375ab-b4ac-4c59-95c5-592a98011b70" label="%tagtype.securityLevel.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="Credentials" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Credentials.label" uid="ff07e549-20c1-4871-863d-c00d48790863" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="ExternalIdentifier" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExternalIdentifier.label" uid="9e9641f0-08c0-4453-a828-314b9d3e7682" is-abstract="false">
+            <Stereotype name="CloudCredentials" metaclass="Standard.Class" owner-stereotype="mref#'' {ff07e549-20c1-4871-863d-c00d48790863} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CloudCredentials.label" uid="1ac06bbb-e680-411d-9dd2-26838d4ec854" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
                 <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
                 <TagTypes>
-                    <TagType name="identifier" uid="79f66d2e-b870-4d06-81b9-8851077fb522" label="%tagtype.identifier.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="cloudProviderName" uid="d30c4942-657d-4e40-b794-bcad379adfe3" label="%tagtype.cloudProviderName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="securityGroup" uid="f0d9b3a8-180f-4577-b22e-2aff1b401636" label="%tagtype.securityGroup.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="publicSSHKey" uid="467685e9-1975-4ab8-80f3-6f8a9e088e88" label="%tagtype.publicSSHKey.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="privateSSHKey" uid="bc33f941-e476-464e-8924-377efbc04526" label="%tagtype.privateSSHKey.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="username" uid="ee879df8-6973-4292-a98c-ce1d07b26d43" label="%tagtype.username.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="password" uid="65bb8183-11c0-49de-84f2-e0c3eccbff14" label="%tagtype.password.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
-            </Stereotype>
-            <Stereotype name="Permission" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Permission.label" uid="6ae08256-a803-41d5-b777-25c632563818" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="startTime" uid="1cd5d4cb-89a8-4de9-bb2b-b8c6c32eb886" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="endTime" uid="915d1bbf-4329-4bc3-808f-6a5c16adb930" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="action" uid="d9e1084c-4454-4058-8d17-2a224a9d9315" label="%tagtype.action.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="Entity" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Entity.label" uid="8edda027-b2f3-43bb-b101-0058aaa1550f" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="CloudProvider" metaclass="Standard.Class" owner-stereotype="mref#'' {fa6ac57f-ab05-4b55-81ec-f129e360b94d} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CloudProvider.label" uid="eb3e5683-72bd-4e46-8bda-1ea07af0c09e" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
@@ -800,19 +772,34 @@
                     <TagType name="IaaS" uid="e33192b2-ce6c-499c-98c5-167d63c32690" label="%tagtype.IaaS.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
+            <Stereotype name="Credentials" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Credentials.label" uid="ff07e549-20c1-4871-863d-c00d48790863" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="DataResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataResourceFilter.label" uid="db53c8ff-ef9a-4bc2-bbfa-af051fcaa66d" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="everyData" uid="224a9d86-f0da-48c2-aee2-621dc2822fd3" label="%tagtype.everyData.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Entity" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Entity.label" uid="8edda027-b2f3-43bb-b101-0058aaa1550f" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="ExternalIdentifier" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExternalIdentifier.label" uid="9e9641f0-08c0-4453-a828-314b9d3e7682" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="identifier" uid="79f66d2e-b870-4d06-81b9-8851077fb522" label="%tagtype.identifier.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
             <Stereotype name="ModelResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ModelResourceFilter.label" uid="b2deaba4-8571-4400-b47d-f0a5b91b3149" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
                 <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
                 <TagTypes>
                     <TagType name="informationResourcePath" uid="cbea7d8d-42de-41a1-808c-4a3c6505d00f" label="%tagtype.informationResourcePath.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="everyInformationResource" uid="bffb0548-bcf3-4966-9260-825f28edb4db" label="%tagtype.everyInformationResource.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="ResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ResourceFilter.label" uid="ce775666-60ae-48ab-94dd-b9a12b9edf2f" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-                <TagTypes>
-                    <TagType name="resourcePattern" uid="4a71ce8e-6fc5-476d-8f32-ccf11be3149c" label="%tagtype.resourcePattern.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype name="Organisation" metaclass="Standard.Class" owner-stereotype="mref#'' {8edda027-b2f3-43bb-b101-0058aaa1550f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Organisation.label" uid="fa6ac57f-ab05-4b55-81ec-f129e360b94d" is-abstract="false">
@@ -822,6 +809,67 @@
                     <TagType name="www" uid="79c63438-ac0f-42ea-aead-1ff7c9210f58" label="%tagtype.www.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="postalAddress" uid="cfbc93ca-abc2-46b7-954e-feedaadfd214" label="%tagtype.postalAddress.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="email" uid="6cb9f211-07e7-4de9-b4b1-4da86857332f" label="%tagtype.email.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="OrganisationModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.OrganisationModel.label" uid="e44c4759-0924-40bc-95d9-3cf51944eccf" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModel_24.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="organisationName" uid="f8f457b3-49af-40e8-8af6-d2a7c8a961ae" label="%tagtype.organisationName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="organisationEmail" uid="9449c6de-b56a-409f-ad60-bb01d80d128e" label="%tagtype.organisationEmail.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="organisationWebsite" uid="cd62f8b6-56da-4e63-b459-3bace5101527" label="%tagtype.organisationWebsite.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="securityLevel" uid="faa375ab-b4ac-4c59-95c5-592a98011b70" label="%tagtype.securityLevel.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Permission" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Permission.label" uid="6ae08256-a803-41d5-b777-25c632563818" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="startTime" uid="1cd5d4cb-89a8-4de9-bb2b-b8c6c32eb886" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="endTime" uid="915d1bbf-4329-4bc3-808f-6a5c16adb930" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="action" uid="d9e1084c-4454-4058-8d17-2a224a9d9315" label="%tagtype.action.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="PlatformCredentials" metaclass="Standard.Class" owner-stereotype="mref#'' {ff07e549-20c1-4871-863d-c00d48790863} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PlatformCredentials.label" uid="18028ade-34c8-4575-802c-163035bf0bb0" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="password" uid="82175de9-34de-4e30-ba3e-d13cdf0653d1" label="%tagtype.password.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ResourceFilter.label" uid="ce775666-60ae-48ab-94dd-b9a12b9edf2f" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="resourcePattern" uid="4a71ce8e-6fc5-476d-8f32-ccf11be3149c" label="%tagtype.resourcePattern.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Role" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Role.label" uid="858f6212-589e-4b36-9150-2e764f0e91b5" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+            </Stereotype>
+            <Stereotype name="RoleAssignment" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RoleAssignment.label" uid="25d04405-c94a-44a0-848d-8563ca51ba23" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="startTime" uid="18d4111c-a2ed-4810-84d3-509d97db6890" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="endTime" uid="a5dd39e5-3525-409a-86ca-821144af3aab" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="assignmentTime" uid="a10d5c66-ff1b-405a-a713-cd6e0515e09d" label="%tagtype.assignmentTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ServiceResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ServiceResourceFilter.label" uid="0012ff53-c300-4f0c-bdce-8583f97e3236" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="serviceURL" uid="1b4c10c8-5621-4bb6-aa2e-3f00deea0d5e" label="%tagtype.serviceURL.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="everyService" uid="a2aaca30-b509-469a-b65c-99a30cd09e16" label="%tagtype.everyService.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="SoftwareComponentResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentResourceFilter.label" uid="d2a3f527-691b-4b04-a5c2-63f39b55c173" is-abstract="false">
+                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
+                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <TagTypes>
+                    <TagType name="everyComponent" uid="726ba30c-05cc-4f4b-b31a-4c9238661a62" label="%tagtype.everyComponent.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype name="User" metaclass="Standard.Class" owner-stereotype="mref#'' {8edda027-b2f3-43bb-b101-0058aaa1550f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.User.label" uid="a36b6005-fc91-4d36-bf4a-4b39194d892b" is-abstract="false">
@@ -836,63 +884,9 @@
                     <TagType name="platformCredentialPassword" uid="fde2e502-b458-4bd0-a9f4-2617c9bada0a" label="%tagtype.platformCredentialPassword.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="Role" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Role.label" uid="858f6212-589e-4b36-9150-2e764f0e91b5" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="ServiceResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ServiceResourceFilter.label" uid="0012ff53-c300-4f0c-bdce-8583f97e3236" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="serviceURL" uid="1b4c10c8-5621-4bb6-aa2e-3f00deea0d5e" label="%tagtype.serviceURL.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="everyService" uid="a2aaca30-b509-469a-b65c-99a30cd09e16" label="%tagtype.everyService.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="RoleAssignment" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RoleAssignment.label" uid="25d04405-c94a-44a0-848d-8563ca51ba23" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-                <TagTypes>
-                    <TagType name="startTime" uid="18d4111c-a2ed-4810-84d3-509d97db6890" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="endTime" uid="a5dd39e5-3525-409a-86ca-821144af3aab" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="assignmentTime" uid="a10d5c66-ff1b-405a-a713-cd6e0515e09d" label="%tagtype.assignmentTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
             <Stereotype name="UserGroup" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UserGroup.label" uid="a69e85bc-a398-4ffb-a9d6-267bdf5cf5b2" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
                 <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="PlatformCredentials" metaclass="Standard.Class" owner-stereotype="mref#'' {ff07e549-20c1-4871-863d-c00d48790863} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PlatformCredentials.label" uid="18028ade-34c8-4575-802c-163035bf0bb0" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="password" uid="82175de9-34de-4e30-ba3e-d13cdf0653d1" label="%tagtype.password.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="DataResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataResourceFilter.label" uid="db53c8ff-ef9a-4bc2-bbfa-af051fcaa66d" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="everyData" uid="224a9d86-f0da-48c2-aee2-621dc2822fd3" label="%tagtype.everyData.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="CloudCredentials" metaclass="Standard.Class" owner-stereotype="mref#'' {ff07e549-20c1-4871-863d-c00d48790863} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CloudCredentials.label" uid="1ac06bbb-e680-411d-9dd2-26838d4ec854" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="cloudProviderName" uid="d30c4942-657d-4e40-b794-bcad379adfe3" label="%tagtype.cloudProviderName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="securityGroup" uid="f0d9b3a8-180f-4577-b22e-2aff1b401636" label="%tagtype.securityGroup.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="publicSSHKey" uid="467685e9-1975-4ab8-80f3-6f8a9e088e88" label="%tagtype.publicSSHKey.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="privateSSHKey" uid="bc33f941-e476-464e-8924-377efbc04526" label="%tagtype.privateSSHKey.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="username" uid="ee879df8-6973-4292-a98c-ce1d07b26d43" label="%tagtype.username.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="password" uid="65bb8183-11c0-49de-84f2-e0c3eccbff14" label="%tagtype.password.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="SoftwareComponentResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentResourceFilter.label" uid="d2a3f527-691b-4b04-a5c2-63f39b55c173" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="everyComponent" uid="726ba30c-05cc-4f4b-b31a-4c9238661a62" label="%tagtype.everyComponent.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
             </Stereotype>
         </Profile>
         <Profile uid="002a1553-9258-4f57-a0b9-fdcebc63a8ae" id="RequirementModel">
@@ -986,133 +980,138 @@
             </Stereotype>
         </Profile>
         <Profile uid="52523797-c57c-422d-a15b-f19ec79f5d24" id="ScalabilityModel">
-            <Stereotype name="ScalabilityModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ScalabilityModel.label" uid="0e1f4eeb-63ca-467d-b99c-92a54f34fcb5" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModel_24.png"/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Event" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Event.label" uid="79c08ab1-4e04-44ee-b88e-ddc638947bfd" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="UnaryEventPattern" metaclass="Standard.Class" owner-stereotype="mref#'' {46e221ca-8a8f-458b-8018-009a273cc009} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnaryEventPattern.label" uid="3956e53e-cf9e-4b4c-9b9c-16e18a3c53d6" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="occurrenceNum" uid="bd5fbe3f-41f7-445c-99e7-d6dc54c00545" label="%tagtype.occurrenceNum.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                    <TagType name="operator" uid="d81a946e-890b-49ba-87e2-6b173e3400d3" label="%tagtype.operator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="FunctionalEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {40acd9bb-daad-41f6-96cd-d9267430eabf} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.FunctionalEvent.label" uid="8d4865c6-d973-416b-ba6e-62311853e410" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
-            </Stereotype>
             <Stereotype name="BinaryEventPattern" metaclass="Standard.Class" owner-stereotype="mref#'' {46e221ca-8a8f-458b-8018-009a273cc009} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.BinaryEventPattern.label" uid="af833114-4bf1-4889-8ad0-621bb63e44c6" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/BinaryEventPattern_24.png"/>
+                <Image path="res/icon/gui/BinaryEventPattern_48.png"/>
                 <TagTypes>
                     <TagType name="lowerOccurrenceBound" uid="93e3f728-14c6-4561-9b94-3abf79c5863c" label="%tagtype.lowerOccurrenceBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="upperOccurrenceBound" uid="617103f2-a083-48d1-9655-6e2384b75bd6" label="%tagtype.upperOccurrenceBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="operator" uid="759de975-2a14-4a02-af62-115d703de355" label="%tagtype.operator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="EventPattern" metaclass="Standard.Class" owner-stereotype="mref#'' {79c08ab1-4e04-44ee-b88e-ddc638947bfd} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.EventPattern.label" uid="46e221ca-8a8f-458b-8018-009a273cc009" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="Event" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Event.label" uid="79c08ab1-4e04-44ee-b88e-ddc638947bfd" is-abstract="true">
+                <Icon path="res/icon/gui/Event_24.png"/>
+                <Image path="res/icon/gui/Event_48.png"/>
             </Stereotype>
-            <Stereotype name="SingleEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {79c08ab1-4e04-44ee-b88e-ddc638947bfd} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.SingleEvent.label" uid="40acd9bb-daad-41f6-96cd-d9267430eabf" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="NonFunctionalEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {40acd9bb-daad-41f6-96cd-d9267430eabf} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.NonFunctionalEvent.label" uid="af2fc032-7f83-4251-9a0c-8ef45959bb71" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="isViolation" uid="7adb963c-c7f7-4e56-9770-80f01813f2b5" label="%tagtype.isViolation.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype name="EventInstance" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.EventInstance.label" uid="7cddc4dd-ed72-4a04-85c5-54fe85e4ef38" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="EventInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {df209aca-1325-4c99-b383-ca2650224ff6} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.EventInstance.label" uid="7cddc4dd-ed72-4a04-85c5-54fe85e4ef38" is-abstract="true">
+                <Icon path="res/icon/gui/EventInstance_24.png"/>
+                <Image path="res/icon/gui/EventInstance_48.png"/>
                 <TagTypes>
                     <TagType name="status" uid="4747fc7f-ba00-4b26-b582-d03b1ba48082" label="%tagtype.status.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="layer" uid="cb82d86d-41ee-47ee-b272-0c8093a8fadf" label="%tagtype.layer.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="ScalabilityRule" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ScalabilityRule.label" uid="cf2a4cc5-0c2d-4f57-9f3e-35cf455ef4cb" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+            <Stereotype name="EventPattern" metaclass="Standard.Class" owner-stereotype="mref#'' {79c08ab1-4e04-44ee-b88e-ddc638947bfd} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.EventPattern.label" uid="46e221ca-8a8f-458b-8018-009a273cc009" is-abstract="true">
+                <Icon path="res/icon/gui/EventPattern_24.png"/>
+                <Image path="res/icon/gui/EventPattern_48.png"/>
             </Stereotype>
-            <Stereotype name="NonFunctionalEventInstance" metaclass="Standard.Class" owner-stereotype="mref#'' {7cddc4dd-ed72-4a04-85c5-54fe85e4ef38} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.NonFunctionalEventInstance.label" uid="d6b986dc-6dc7-40b3-b2a3-c0fe9f6add0e" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+            <Stereotype name="FunctionalEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {40acd9bb-daad-41f6-96cd-d9267430eabf} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.FunctionalEvent.label" uid="8d4865c6-d973-416b-ba6e-62311853e410" is-abstract="false">
+                <Icon path="res/icon/gui/FunctionnalEvent_24.png"/>
+                <Image path="res/icon/gui/FunctionnalEvent_48.png"/>
             </Stereotype>
-            <Stereotype name="FunctionalEventInstance" metaclass="Standard.Class" owner-stereotype="mref#'' {7cddc4dd-ed72-4a04-85c5-54fe85e4ef38} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.FunctionalEventInstance.label" uid="b88afca5-ed15-48f1-a81b-29da4a453701" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="ScalingAction" metaclass="Standard.Class" owner-stereotype="mref#'' {b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ScalingAction.label" uid="25bf81ac-b13e-4716-b766-42a9b7e05150" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="FunctionalEventInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {7cddc4dd-ed72-4a04-85c5-54fe85e4ef38} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.FunctionalEventInstance.label" uid="b88afca5-ed15-48f1-a81b-29da4a453701" is-abstract="false">
+                <Icon path="res/icon/gui/FunctionnalEventInstance_24.png"/>
+                <Image path="res/icon/gui/FunctionnalEventInstance_48.png"/>
             </Stereotype>
             <Stereotype name="HorizontalScalingAction" metaclass="Standard.Class" owner-stereotype="mref#'' {25bf81ac-b13e-4716-b766-42a9b7e05150} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.HorizontalScalingAction.label" uid="99008d6c-2622-4467-8283-6059df42c240" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/HorizontalScalingAction_24.png"/>
+                <Image path="res/icon/gui/HorizontalScalingAction_48.png"/>
                 <TagTypes>
                     <TagType name="count" uid="d52b6541-1841-4607-96a8-591ad329e65f" label="%tagtype.count.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="VerticalScalingAction" metaclass="Standard.Class" owner-stereotype="mref#'' {25bf81ac-b13e-4716-b766-42a9b7e05150} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VerticalScalingAction.label" uid="725de5f4-a090-41c9-b326-f573c1d3b15d" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+            <Stereotype name="NonFunctionalEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {40acd9bb-daad-41f6-96cd-d9267430eabf} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.NonFunctionalEvent.label" uid="af2fc032-7f83-4251-9a0c-8ef45959bb71" is-abstract="false">
+                <Icon path="res/icon/gui/NonFunctionnalEvent_24.png"/>
+                <Image path="res/icon/gui/NonFunctionnalEvent_48.png"/>
+                <TagTypes>
+                    <TagType name="isViolation" uid="7adb963c-c7f7-4e56-9770-80f01813f2b5" label="%tagtype.isViolation.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
-            <Stereotype name="Timer" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Timer.label" uid="ee279c12-3256-430d-b3f9-146318d3e947" is-abstract="false">
-                <Icon path="res/icon/gui/scalabilityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/scalabilityModelEmpty_48.png"/>
+            <Stereotype name="NonFunctionalEventInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {7cddc4dd-ed72-4a04-85c5-54fe85e4ef38} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.NonFunctionalEventInstance.label" uid="d6b986dc-6dc7-40b3-b2a3-c0fe9f6add0e" is-abstract="false">
+                <Icon path="res/icon/gui/NonFunctionnalEventInstance_24.png"/>
+                <Image path="res/icon/gui/NonFunctionnalEventInstance_48.png"/>
+            </Stereotype>
+            <Stereotype name="ScalabilityModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ScalabilityModel.label" uid="0e1f4eeb-63ca-467d-b99c-92a54f34fcb5" is-abstract="false">
+                <Icon path="res/icon/gui/scalabilityModel_24.png"/>
+                <Image path="res/icon/gui/scalabilityModel_48.png"/>
+            </Stereotype>
+            <Stereotype name="ScalabilityRule" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ScalabilityRule.label" uid="cf2a4cc5-0c2d-4f57-9f3e-35cf455ef4cb" is-abstract="false">
+                <Icon path="res/icon/gui/ScalabilityRule_24.png"/>
+                <Image path="res/icon/gui/ScalabilityRule_48.png"/>
+            </Stereotype>
+            <Stereotype name="ScalingAction" metaclass="Standard.NameSpace" owner-stereotype="mref#'' {b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ScalingAction.label" uid="25bf81ac-b13e-4716-b766-42a9b7e05150" is-abstract="true">
+                <Icon path="res/icon/gui/ScalingAction_24.png"/>
+                <Image path="res/icon/gui/ScalingAction_48.png"/>
+            </Stereotype>
+            <Stereotype name="SingleEvent" metaclass="Standard.Class" owner-stereotype="mref#'' {79c08ab1-4e04-44ee-b88e-ddc638947bfd} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.SingleEvent.label" uid="40acd9bb-daad-41f6-96cd-d9267430eabf" is-abstract="true">
+                <Icon path="res/icon/gui/SingleEvent_24.png"/>
+                <Image path="res/icon/gui/SingleEvent_48.png"/>
+            </Stereotype>
+            <Stereotype name="Timer" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Timer.label" uid="ee279c12-3256-430d-b3f9-146318d3e947" is-abstract="false">
+                <Icon path="res/icon/gui/Timer_24.png"/>
+                <Image path="res/icon/gui/Timer_48.png"/>
+                <TagTypes>
+                    <TagType name="type" uid="1442a037-e5a4-4248-bc4d-20d6cc5568e0" label="%tagtype.type.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="timeValue" uid="4898fefb-c185-478e-b8cf-96025bfe5971" label="%tagtype.timeValue.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="maxOccurrenceNum" uid="94fa8f95-4a9e-4209-b10c-b8c31176f9af" label="%tagtype.maxOccurrenceNum.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="UnaryEventPattern" metaclass="Standard.Class" owner-stereotype="mref#'' {46e221ca-8a8f-458b-8018-009a273cc009} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnaryEventPattern.label" uid="3956e53e-cf9e-4b4c-9b9c-16e18a3c53d6" is-abstract="false">
+                <Icon path="res/icon/gui/UnaryEventPattern_24.png"/>
+                <Image path="res/icon/gui/UnaryEventPattern_48.png"/>
+                <TagTypes>
+                    <TagType name="occurrenceNum" uid="bd5fbe3f-41f7-445c-99e7-d6dc54c00545" label="%tagtype.occurrenceNum.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="operator" uid="d81a946e-890b-49ba-87e2-6b173e3400d3" label="%tagtype.operator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="VerticalScalingAction" metaclass="Standard.Class" owner-stereotype="mref#'' {25bf81ac-b13e-4716-b766-42a9b7e05150} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.VerticalScalingAction.label" uid="725de5f4-a090-41c9-b326-f573c1d3b15d" is-abstract="false">
+                <Icon path="res/icon/gui/VerticalScalingAction_24.png"/>
+                <Image path="res/icon/gui/VerticalScalingAction_48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="3da8a4bd-0057-41b3-89b8-5c8e337fe153" id="SecurityModel">
-            <Stereotype name="SecurityModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityModel.label" uid="61f4f16b-0ac0-4a06-a279-b5b28dc86d01" is-abstract="false">
-                <Icon path="res/icon/gui/securityModel_24.png"/>
-                <Image path=""/>
+            <Stereotype name="Certifiable" metaclass="Standard.Class" owner-stereotype="mref#'' {59943cbd-62e2-4183-8973-e15130bcb7d3} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Certifiable.label" uid="2ded821f-dd6d-4a25-82d8-46091a835fa0" is-abstract="false">
+                <Icon path="res/icon/gui/Certifiable_24.png"/>
+                <Image path="res/icon/gui/Certifiable_48.png"/>
             </Stereotype>
-            <Stereotype name="SecurityDomain" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityDomain.label" uid="1487e8d9-e360-40e9-85a2-46b131aa86ef" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
-                <TagTypes>
-                    <TagType name="id" uid="c7e2415a-e07a-4b88-8369-3496216f8174" label="%tagtype.id.label" parameter-card="1" is-hidden="false" is-signed="false"/>
-                </TagTypes>
+            <Stereotype name="CompositeSecurityMetric" metaclass="Standard.Class" owner-stereotype="mref#'' {680d667b-9545-40d8-9c12-84675bc68fc4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CompositeSecurityMetric.label" uid="49dfe43f-0fa8-476b-a6ba-03b62463e361" is-abstract="false">
+                <Icon path="res/icon/gui/CompositeSecurityMetric_24.png"/>
+                <Image path="res/icon/gui/CompositeSecurityMetric_48.png"/>
             </Stereotype>
-            <Stereotype name="SecurityControl" metaclass="Standard.Class" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityControl.label" uid="0cf7fb23-2fb5-4c33-8d52-c3db4e05bb34" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
+            <Stereotype name="RawSecurityMetric" metaclass="Standard.Class" owner-stereotype="mref#'' {01e0501b-37c4-4e17-af3c-6a30e6ad9290} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RawSecurityMetric.label" uid="01bb4068-95c3-463c-bfc3-5e98fbd8bf98" is-abstract="false">
+                <Icon path="res/icon/gui/RawSecurityMetric_24.png"/>
+                <Image path="res/icon/gui/RawSecurityMetric_48.png"/>
+            </Stereotype>
+            <Stereotype name="SecurityAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityAttribute.label" uid="59943cbd-62e2-4183-8973-e15130bcb7d3" is-abstract="false">
+                <Icon path="res/icon/gui/SecurityControl_24.png"/>
+                <Image path="res/icon/gui/SecurityAttribute_48.png"/>
+            </Stereotype>
+            <Stereotype name="SecurityControl" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityControl.label" uid="0cf7fb23-2fb5-4c33-8d52-c3db4e05bb34" is-abstract="false">
+                <Icon path="res/icon/gui/SecurityControl_24.png"/>
+                <Image path="res/icon/gui/SecurityControl_48.png"/>
                 <TagTypes>
                     <TagType name="id" uid="d0865d90-2ead-4a1b-825d-1611f8206fcb" label="%tagtype.id.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="specification" uid="2caf403e-3e13-413c-9bb9-2e53d9d92f78" label="%tagtype.specification.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="SecurityMetricInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {52b2d53f-cfda-455d-ae3d-dd97fed6fa84} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityMetricInstance.label" uid="4cb7cfa4-64dc-42a4-9178-af3560cfcf40" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
+            <Stereotype name="SecurityDomain" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityDomain.label" uid="1487e8d9-e360-40e9-85a2-46b131aa86ef" is-abstract="false">
+                <Icon path="res/icon/gui/SecurityDomain_24.png"/>
+                <Image path="res/icon/gui/SecurityDomain_48.png"/>
+                <TagTypes>
+                    <TagType name="id" uid="c7e2415a-e07a-4b88-8369-3496216f8174" label="%tagtype.id.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
-            <Stereotype name="RawSecurityMetric" metaclass="Standard.Class" owner-stereotype="mref#'' {01e0501b-37c4-4e17-af3c-6a30e6ad9290} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RawSecurityMetric.label" uid="01bb4068-95c3-463c-bfc3-5e98fbd8bf98" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
+            <Stereotype name="SecurityMetricInstance" metaclass="Standard.Instance" owner-stereotype="mref#'' {52b2d53f-cfda-455d-ae3d-dd97fed6fa84} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityMetricInstance.label" uid="4cb7cfa4-64dc-42a4-9178-af3560cfcf40" is-abstract="true">
+                <Icon path="res/icon/gui/SecurityMetricInstance_24.png"/>
+                <Image path="res/icon/gui/SecurityMetricInstance_48.png"/>
             </Stereotype>
-            <Stereotype name="SecurityAttribute" metaclass="Standard.Class" owner-stereotype="mref#'' {ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityAttribute.label" uid="59943cbd-62e2-4183-8973-e15130bcb7d3" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="Certifiable" metaclass="Standard.Class" owner-stereotype="mref#'' {59943cbd-62e2-4183-8973-e15130bcb7d3} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Certifiable.label" uid="2ded821f-dd6d-4a25-82d8-46091a835fa0" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
-            </Stereotype>
-            <Stereotype name="CompositeSecurityMetric" metaclass="Standard.Class" owner-stereotype="mref#'' {680d667b-9545-40d8-9c12-84675bc68fc4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CompositeSecurityMetric.label" uid="49dfe43f-0fa8-476b-a6ba-03b62463e361" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
+            <Stereotype name="SecurityModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecurityModel.label" uid="61f4f16b-0ac0-4a06-a279-b5b28dc86d01" is-abstract="false">
+                <Icon path="res/icon/gui/securityModel_24.png"/>
+                <Image path="res/icon/gui/securityModel_48.png"/>
             </Stereotype>
             <Stereotype name="SecuritySLO" metaclass="Standard.Class" owner-stereotype="mref#'' {72de5d29-7d68-48f4-a3ac-eace289da2c6} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SecuritySLO.label" uid="8fcb0a39-47f5-4d53-9540-bede515f2431" is-abstract="false">
-                <Icon path="res/icon/gui/securityModelEmpty_24.png"/>
-                <Image path="res/icon/gui/securityModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/SecuritySLO_24.png"/>
+                <Image path="res/icon/gui/SecuritySLO_48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="8f4434b2-3c4c-47a4-b563-0899d678993d" id="TypeModel">
@@ -1208,7 +1207,7 @@
                 <Icon path="res/icon/gui/unitModel_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Unit" metaclass="Standard.DataType" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Unit.label" uid="56c9f56b-274d-4816-80c8-72536d1d7295" is-abstract="true">
+            <Stereotype name="Unit" metaclass="Standard.DataType" owner-stereotype="mref#'' {eaf56346-fbac-4409-ad4f-4e1a6c4183d1} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Unit.label" uid="56c9f56b-274d-4816-80c8-72536d1d7295" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -1216,7 +1215,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="UnitDimension" metaclass="Standard.DataType" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnitDimension.label" uid="ce437f2d-07f2-4127-9702-da4eb627b157" is-abstract="false">
+            <Stereotype name="UnitDimension" metaclass="Standard.DataType" owner-stereotype="mref#'' {eaf56346-fbac-4409-ad4f-4e1a6c4183d1} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnitDimension.label" uid="ce437f2d-07f2-4127-9702-da4eb627b157" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -1428,8 +1427,16 @@
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ActionInstance"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="metaclass" value="Standard.Instance"/>
                     <HParameter name="name" value="Action Instance"/>
+                </Handler>
+            </Tool>
+            <Tool id="ApplicationMeasurement" label="%tool.ApplicationMeasurement.label" tooltip="%tool.ApplicationMeasurement.tooltip" image="res/icon/gui/ApplicationMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#ApplicationMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Application MeasurementElement"/>
                 </Handler>
             </Tool>
             <Tool id="Attribute_Attribute" label="%tool.Attribute_Attribute.label" tooltip="%tool.Attribute_Attribute.tooltip" image="res/icon/gui/Attribute_24.png">
@@ -1448,7 +1455,7 @@
                     <HParameter name="name" value="Attribute Context"/>
                 </Handler>
             </Tool>
-            <Tool id="Binary_Event_Pattern" label="%tool.Binary_Event_Pattern.label" tooltip="%tool.Binary_Event_Pattern.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Binary_Event_Pattern" label="%tool.Binary_Event_Pattern.label" tooltip="%tool.Binary_Event_Pattern.tooltip" image="res/icon/gui/BinaryEventPattern_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#BinaryEventPattern"/>
@@ -1464,7 +1471,15 @@
                     <HParameter name="name" value="Build Configuration"/>
                 </Handler>
             </Tool>
-            <Tool id="Certifiable" label="%tool.Certifiable.label" tooltip="%tool.Certifiable.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Cause" label="%tool.Cause.label" tooltip="%tool.Cause.tooltip" image="res/icon/gui/executionModelEmpty_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#Cause"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Cause"/>
+                </Handler>
+            </Tool>
+            <Tool id="Certifiable" label="%tool.Certifiable.label" tooltip="%tool.Certifiable.tooltip" image="res/icon/gui/Certifiable_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Certifiable"/>
@@ -1504,6 +1519,14 @@
                     <HParameter name="name" value="Cluster Configuration"/>
                 </Handler>
             </Tool>
+            <Tool id="CommunicationMeasurement" label="%tool.CommunicationMeasurement.label" tooltip="%tool.CommunicationMeasurement.tooltip" image="res/icon/gui/CommunicationMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#CommunicationMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Communication Measurement"/>
+                </Handler>
+            </Tool>
             <Tool id="Composite_Metric" label="%tool.Composite_Metric.label" tooltip="%tool.Composite_Metric.tooltip" image="res/icon/gui/CompositeMetric_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#MetricTypeModel"/>
                 <Handler class="Box">
@@ -1520,7 +1543,7 @@
                     <HParameter name="name" value="Composite Metric Context"/>
                 </Handler>
             </Tool>
-            <Tool id="Composite_Security_Metric" label="%tool.Composite_Security_Metric.label" tooltip="%tool.Composite_Security_Metric.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Composite_Security_Metric" label="%tool.Composite_Security_Metric.label" tooltip="%tool.Composite_Security_Metric.tooltip" image="res/icon/gui/CompositeSecurityMetric_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#CompositeSecurityMetric"/>
@@ -1559,6 +1582,14 @@
                     <HParameter name="name" value="Container"/>
                 </Handler>
             </Tool>
+            <Tool id="ContainerMeasurement" label="%tool.ContainerMeasurement.label" tooltip="%tool.ContainerMeasurement.tooltip" image="res/icon/gui/ContainerMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#ContainerMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Container Measurement"/>
+                </Handler>
+            </Tool>
             <Tool id="Container_Instance" label="%tool.Container_Instance.label" tooltip="%tool.Container_Instance.tooltip" image="res/icon/gui/ContainerInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentInstanceModel"/>
                 <Handler class="Box">
@@ -1590,6 +1621,14 @@
                     <HParameter name="stereotype" value="CamelDesigner#DataInstanceModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="Data Instance Model"/>
+                </Handler>
+            </Tool>
+            <Tool id="DataMeasurement" label="%tool.DataMeasurement.label" tooltip="%tool.DataMeasurement.tooltip" image="res/icon/gui/DataMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#DataMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Data Measurement"/>
                 </Handler>
             </Tool>
             <Tool id="DataTypeModel" label="%tool.DataTypeModel.label" tooltip="%tool.DataTypeModel.tooltip" image="res/icon/gui/dataModel_24.png">
@@ -1664,7 +1703,7 @@
                     <HParameter name="name" value="Entity"/>
                 </Handler>
             </Tool>
-            <Tool id="Event" label="%tool.Event.label" tooltip="%tool.Event.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Event" label="%tool.Event.label" tooltip="%tool.Event.tooltip" image="res/icon/gui/Event_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Event"/>
@@ -1680,15 +1719,15 @@
                     <HParameter name="name" value="Event Configuration"/>
                 </Handler>
             </Tool>
-            <Tool id="Event_Instance" label="%tool.Event_Instance.label" tooltip="%tool.Event_Instance.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Event_Instance" label="%tool.Event_Instance.label" tooltip="%tool.Event_Instance.tooltip" image="res/icon/gui/EventInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#EventInstance"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="metaclass" value="Standard.Instance"/>
                     <HParameter name="name" value="Event Instance"/>
                 </Handler>
             </Tool>
-            <Tool id="Event_Pattern" label="%tool.Event_Pattern.label" tooltip="%tool.Event_Pattern.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Event_Pattern" label="%tool.Event_Pattern.label" tooltip="%tool.Event_Pattern.tooltip" image="res/icon/gui/EventPattern_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#EventPattern"/>
@@ -1697,8 +1736,8 @@
                 </Handler>
             </Tool>
             <Tool id="ExecutionModel" label="%tool.ExecutionModel.label" tooltip="%tool.ExecutionModel.tooltip" image="res/icon/gui/executionModel_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype=""/>
-                <Handler class="Box">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateExecutionModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#ExecutionModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="ExecutionModel"/>
@@ -1728,7 +1767,7 @@
                     <HParameter name="name" value="Function"/>
                 </Handler>
             </Tool>
-            <Tool id="Functional_Event" label="%tool.Functional_Event.label" tooltip="%tool.Functional_Event.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Functional_Event" label="%tool.Functional_Event.label" tooltip="%tool.Functional_Event.tooltip" image="res/icon/gui/FunctionnalEvent_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#FunctionalEvent"/>
@@ -1736,11 +1775,11 @@
                     <HParameter name="name" value="Functional Event"/>
                 </Handler>
             </Tool>
-            <Tool id="Functional_Event_Instance" label="%tool.Functional_Event_Instance.label" tooltip="%tool.Functional_Event_Instance.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Functional_Event_Instance" label="%tool.Functional_Event_Instance.label" tooltip="%tool.Functional_Event_Instance.tooltip" image="res/icon/gui/FunctionnalEventInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#FunctionalEventInstance"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="metaclass" value="Standard.Instance"/>
                     <HParameter name="name" value="Functional Event Instance"/>
                 </Handler>
             </Tool>
@@ -1752,6 +1791,22 @@
                     <HParameter name="name" value="Region"/>
                 </Handler>
             </Tool>
+            <Tool id="HistoryInfo" label="%tool.HistoryInfo.label" tooltip="%tool.HistoryInfo.tooltip" image="res/icon/gui/HistoryInfo_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#HistoryInfo"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="History Info"/>
+                </Handler>
+            </Tool>
+            <Tool id="HistoryRecord" label="%tool.HistoryRecord.label" tooltip="%tool.HistoryRecord.tooltip" image="res/icon/gui/HistoryRecord_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#HistoryRecord"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="History Record"/>
+                </Handler>
+            </Tool>
             <Tool id="HorizontalScaleRequirement" label="%tool.HorizontalScaleRequirement.label" tooltip="%tool.HorizontalScaleRequirement.tooltip" image="res/icon/gui/horizontalScaleRequirement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#RequirementModel"/>
                 <Handler class="Box">
@@ -1760,7 +1815,7 @@
                     <HParameter name="name" value="Horizontal Scale Requirement"/>
                 </Handler>
             </Tool>
-            <Tool id="Horizontal_Scaling_Action" label="%tool.Horizontal_Scaling_Action.label" tooltip="%tool.Horizontal_Scaling_Action.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Horizontal_Scaling_Action" label="%tool.Horizontal_Scaling_Action.label" tooltip="%tool.Horizontal_Scaling_Action.tooltip" image="res/icon/gui/HorizontalScalingAction_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#HorizontalScalingAction"/>
@@ -1905,7 +1960,7 @@
                     <HParameter name="name" value="Model Resource Filter"/>
                 </Handler>
             </Tool>
-            <Tool id="Non_Functional_Event" label="%tool.Non_Functional_Event.label" tooltip="%tool.Non_Functional_Event.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Non_Functional_Event" label="%tool.Non_Functional_Event.label" tooltip="%tool.Non_Functional_Event.tooltip" image="res/icon/gui/NonFunctionnalEvent_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#NonFunctionalEvent"/>
@@ -1913,11 +1968,11 @@
                     <HParameter name="name" value="Non Functional Avent"/>
                 </Handler>
             </Tool>
-            <Tool id="Non_Functional_Event_Instance" label="%tool.Non_Functional_Event_Instance.label" tooltip="%tool.Non_Functional_Event_Instance.tooltip" image="">
+            <Tool id="Non_Functional_Event_Instance" label="%tool.Non_Functional_Event_Instance.label" tooltip="%tool.Non_Functional_Event_Instance.tooltip" image="res/icon/gui/NonFunctionnalEventInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#NonFunctionalEventInstance"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="metaclass" value="Standard.Instance"/>
                     <HParameter name="name" value="Non Functional Event Instance"/>
                 </Handler>
             </Tool>
@@ -1985,6 +2040,14 @@
                     <HParameter name="name" value="PaaS Requirement"/>
                 </Handler>
             </Tool>
+            <Tool id="PaasMeasurement" label="%tool.PaasMeasurement.label" tooltip="%tool.PaasMeasurement.tooltip" image="res/icon/gui/PaasMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#PaaSMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="PaaSMeasurement"/>
+                </Handler>
+            </Tool>
             <Tool id="PropertyDependency" label="%tool.PropertyDependency.label" tooltip="%tool.PropertyDependency.tooltip" image="res/icon/gui/propertyDependency2_48.ICON.png">
                 <Scope-source metaclass="Standard.Class" stereotype=""/>
                 <Scope-target metaclass="Standard.Class" stereotype=""/>
@@ -2042,7 +2105,7 @@
                     <HParameter name="name" value="Raw Metric Context"/>
                 </Handler>
             </Tool>
-            <Tool id="Raw_Secutiry_Metric" label="%tool.Raw_Secutiry_Metric.label" tooltip="%tool.Raw_Secutiry_Metric.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Raw_Secutiry_Metric" label="%tool.Raw_Secutiry_Metric.label" tooltip="%tool.Raw_Secutiry_Metric.tooltip" image="res/icon/gui/RawSecurityMetric_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#RawSecurityMetric"/>
@@ -2090,6 +2153,22 @@
                     <HParameter name="name" value="Resource Requirement"/>
                 </Handler>
             </Tool>
+            <Tool id="RuleTrigger" label="%tool.RuleTrigger.label" tooltip="%tool.RuleTrigger.tooltip" image="res/icon/gui/RuleTrigger_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#RuleTrigger"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Rule Trigger"/>
+                </Handler>
+            </Tool>
+            <Tool id="SLOViolation" label="%tool.SLOViolation.label" tooltip="%tool.SLOViolation.tooltip" image="res/icon/gui/SLOViolation_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#SLOViolation"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="SLO Violation"/>
+                </Handler>
+            </Tool>
             <Tool id="ScalabilityModel" label="%tool.ScalabilityModel.label" tooltip="%tool.ScalabilityModel.tooltip" image="res/icon/gui/scalabilityModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
@@ -2098,7 +2177,7 @@
                     <HParameter name="name" value="ScalabilityModel"/>
                 </Handler>
             </Tool>
-            <Tool id="Scalability_Rule" label="%tool.Scalability_Rule.label" tooltip="%tool.Scalability_Rule.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Scalability_Rule" label="%tool.Scalability_Rule.label" tooltip="%tool.Scalability_Rule.tooltip" image="res/icon/gui/ScalabilityRule_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ScalabilityRule"/>
@@ -2106,7 +2185,7 @@
                     <HParameter name="name" value="Scalability Rue"/>
                 </Handler>
             </Tool>
-            <Tool id="Scaling_Action" label="%tool.Scaling_Action.label" tooltip="%tool.Scaling_Action.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Scaling_Action" label="%tool.Scaling_Action.label" tooltip="%tool.Scaling_Action.tooltip" image="res/icon/gui/ScalingAction_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ScalingAction"/>
@@ -2138,7 +2217,7 @@
                     <HParameter name="name" value="SecurityModel"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_Attribute" label="%tool.Security_Attribute.label" tooltip="%tool.Security_Attribute.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Security_Attribute" label="%tool.Security_Attribute.label" tooltip="%tool.Security_Attribute.tooltip" image="res/icon/gui/SecurityAttribute_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityAttribute"/>
@@ -2146,7 +2225,7 @@
                     <HParameter name="name" value="Secutiry Attribute"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_Control" label="%tool.Security_Control.label" tooltip="%tool.Security_Control.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Security_Control" label="%tool.Security_Control.label" tooltip="%tool.Security_Control.tooltip" image="res/icon/gui/SecurityControl_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityControl"/>
@@ -2154,7 +2233,7 @@
                     <HParameter name="name" value="Secutity Control"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_Domain" label="%tool.Security_Domain.label" tooltip="%tool.Security_Domain.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Security_Domain" label="%tool.Security_Domain.label" tooltip="%tool.Security_Domain.tooltip" image="res/icon/gui/SecurityDomain_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityDomain"/>
@@ -2162,7 +2241,7 @@
                     <HParameter name="name" value="Security Domain"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_Metric_Instance" label="%tool.Security_Metric_Instance.label" tooltip="%tool.Security_Metric_Instance.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Security_Metric_Instance" label="%tool.Security_Metric_Instance.label" tooltip="%tool.Security_Metric_Instance.tooltip" image="res/icon/gui/SecurityMetricInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityMetricInstance"/>
@@ -2178,7 +2257,7 @@
                     <HParameter name="name" value="Security Requirement"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_SLO" label="%tool.Security_SLO.label" tooltip="%tool.Security_SLO.tooltip" image="res/icon/gui/securityModelEmpty_24.png">
+            <Tool id="Security_SLO" label="%tool.Security_SLO.label" tooltip="%tool.Security_SLO.tooltip" image="res/icon/gui/SecuritySLO_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SecuritySLO"/>
@@ -2218,7 +2297,7 @@
                     <HParameter name="name" value="Service Level Objective"/>
                 </Handler>
             </Tool>
-            <Tool id="Single_Event" label="%tool.Single_Event.label" tooltip="%tool.Single_Event.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Single_Event" label="%tool.Single_Event.label" tooltip="%tool.Single_Event.tooltip" image="res/icon/gui/SingleEvent_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SingleEvent"/>
@@ -2234,6 +2313,14 @@
                     <HParameter name="name" value="Element"/>
                 </Handler>
             </Tool>
+            <Tool id="SoftwareComponentMeasurement" label="%tool.SoftwareComponentMeasurement.label" tooltip="%tool.SoftwareComponentMeasurement.tooltip" image="res/icon/gui/SoftwareComponentMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#SoftwareComponentMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Software Component Measurement"/>
+                </Handler>
+            </Tool>
             <Tool id="Software_Component" label="%tool.Software_Component.label" tooltip="%tool.Software_Component.tooltip" image="res/icon/gui/SoftwareComponent_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
                 <Handler class="Box">
@@ -2242,7 +2329,7 @@
                     <HParameter name="name" value="Software Component"/>
                 </Handler>
             </Tool>
-            <Tool id="Timer" label="%tool.Timer.label" tooltip="%tool.Timer.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Timer" label="%tool.Timer.label" tooltip="%tool.Timer.tooltip" image="res/icon/gui/Timer_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Timer"/>
@@ -2258,7 +2345,7 @@
                     <HParameter name="name" value="Type Model"/>
                 </Handler>
             </Tool>
-            <Tool id="Unary_Event_Pattern" label="%tool.Unary_Event_Pattern.label" tooltip="%tool.Unary_Event_Pattern.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Unary_Event_Pattern" label="%tool.Unary_Event_Pattern.label" tooltip="%tool.Unary_Event_Pattern.tooltip" image="res/icon/gui/UnaryEventPattern_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#UnaryEventPattern"/>
@@ -2298,6 +2385,14 @@
                     <HParameter name="name" value="VM"/>
                 </Handler>
             </Tool>
+            <Tool id="VMMeasurement" label="%tool.VMMeasurement.label" tooltip="%tool.VMMeasurement.tooltip" image="res/icon/gui/VMMeasurement_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="CamelDesigner#VMMeasurement"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="VM Measurement"/>
+                </Handler>
+            </Tool>
             <Tool id="VM_Instance" label="%tool.VM_Instance.label" tooltip="%tool.VM_Instance.tooltip" image="res/icon/gui/VMInstance_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentInstanceModel"/>
                 <Handler class="Box">
@@ -2306,7 +2401,7 @@
                     <HParameter name="name" value="VM Instance"/>
                 </Handler>
             </Tool>
-            <Tool id="Vertical_Scaling_Action" label="%tool.Vertical_Scaling_Action.label" tooltip="%tool.Vertical_Scaling_Action.tooltip" image="res/icon/gui/scalabilityModelEmpty_24.png">
+            <Tool id="Vertical_Scaling_Action" label="%tool.Vertical_Scaling_Action.label" tooltip="%tool.Vertical_Scaling_Action.tooltip" image="res/icon/gui/VerticalScalingAction_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#VerticalScalingAction"/>
@@ -2328,102 +2423,6 @@
                     <HParameter name="stereotype" value="CamelDesigner#Window"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Window"/>
-                </Handler>
-            </Tool>
-            <Tool id="PaasMeasurement" label="%tool.PaasMeasurement.label" tooltip="%tool.PaasMeasurement.tooltip" image="res/icon/gui/PaasMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#PaaSMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="PaaSMeasurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="CommunicationMeasurement" label="%tool.CommunicationMeasurement.label" tooltip="%tool.CommunicationMeasurement.tooltip" image="res/icon/gui/CommunicationMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#CommunicationMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Communication Measurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="ApplicationMeasurement" label="%tool.ApplicationMeasurement.label" tooltip="%tool.ApplicationMeasurement.tooltip" image="res/icon/gui/ApplicationMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#ApplicationMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Application MeasurementElement"/>
-                </Handler>
-            </Tool>
-            <Tool id="HistoryRecord" label="%tool.HistoryRecord.label" tooltip="%tool.HistoryRecord.tooltip" image="res/icon/gui/HistoryRecord_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#HistoryRecord"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="History Record"/>
-                </Handler>
-            </Tool>
-            <Tool id="ContainerMeasurement" label="%tool.ContainerMeasurement.label" tooltip="%tool.ContainerMeasurement.tooltip" image="res/icon/gui/ContainerMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#ContainerMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Container Measurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="SoftwareComponentMeasurement" label="%tool.SoftwareComponentMeasurement.label" tooltip="%tool.SoftwareComponentMeasurement.tooltip" image="res/icon/gui/SoftwareComponentMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#SoftwareComponentMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Software Component Measurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="VMMeasurement" label="%tool.VMMeasurement.label" tooltip="%tool.VMMeasurement.tooltip" image="res/icon/gui/VMMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#VMMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="VM Measurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="HistoryInfo" label="%tool.HistoryInfo.label" tooltip="%tool.HistoryInfo.tooltip" image="res/icon/gui/HistoryInfo_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#HistoryInfo"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="History Info"/>
-                </Handler>
-            </Tool>
-            <Tool id="SLOViolation" label="%tool.SLOViolation.label" tooltip="%tool.SLOViolation.tooltip" image="res/icon/gui/SLOViolation_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#SLOViolation"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="SLO Violation"/>
-                </Handler>
-            </Tool>
-            <Tool id="Cause" label="%tool.Cause.label" tooltip="%tool.Cause.tooltip" image="res/icon/gui/Cause_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#Cause"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Cause"/>
-                </Handler>
-            </Tool>
-            <Tool id="DataMeasurement" label="%tool.DataMeasurement.label" tooltip="%tool.DataMeasurement.tooltip" image="res/icon/gui/DataMeasurement_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#DataMeasurement"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Data Measurement"/>
-                </Handler>
-            </Tool>
-            <Tool id="RuleTrigger" label="%tool.RuleTrigger.label" tooltip="%tool.RuleTrigger.tooltip" image="res/icon/gui/RuleTrigger_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#RuleTrigger"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Rule Trigger"/>
                 </Handler>
             </Tool>
         </Tools>
@@ -2710,6 +2709,22 @@
             </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ScalabilityModelDiagram">
                 <Palette keepBasePalette="false">
+                    <ToolRef refid="ScalabilityModel" group="%group.Scalability.label"/>
+                    <ToolRef refid="Scalability_Rule" group="%group.Scalability.label"/>
+                    <ToolRef refid="Scaling_Action" group="%group.Scalability.label"/>
+                    <ToolRef refid="Single_Event" group="%group.Scalability.label"/>
+                    <ToolRef refid="Timer" group="%group.Scalability.label"/>
+                    <ToolRef refid="Unary_Event_Pattern" group="%group.Scalability.label"/>
+                    <ToolRef refid="Vertical_Scaling_Action" group="%group.Scalability.label"/>
+                    <ToolRef refid="Binary_Event_Pattern" group="%group.Scalability.label"/>
+                    <ToolRef refid="Event" group="%group.Scalability.label"/>
+                    <ToolRef refid="Event_Instance" group="%group.Scalability.label"/>
+                    <ToolRef refid="Event_Pattern" group="%group.Scalability.label"/>
+                    <ToolRef refid="Functional_Event" group="%group.Scalability.label"/>
+                    <ToolRef refid="Functional_Event_Instance" group="%group.Scalability.label"/>
+                    <ToolRef refid="Horizontal_Scaling_Action" group="%group.Scalability.label"/>
+                    <ToolRef refid="Non_Functional_Event" group="%group.Scalability.label"/>
+                    <ToolRef refid="Non_Functional_Event_Instance" group="%group.Scalability.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
@@ -2726,6 +2741,15 @@
             </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#SecurityModelDiagram">
                 <Palette keepBasePalette="false">
+                    <ToolRef refid="SecurityModel" group="%group.Security.label"/>
+                    <ToolRef refid="Security_Attribute" group="%group.Security.label"/>
+                    <ToolRef refid="Security_Control" group="%group.Security.label"/>
+                    <ToolRef refid="Security_Domain" group="%group.Security.label"/>
+                    <ToolRef refid="Security_Metric_Instance" group="%group.Security.label"/>
+                    <ToolRef refid="Certifiable" group="%group.Security.label"/>
+                    <ToolRef refid="Composite_Security_Metric" group="%group.Security.label"/>
+                    <ToolRef refid="Raw_Secutiry_Metric" group="%group.Security.label"/>
+                    <ToolRef refid="Security_SLO" group="%group.Security.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>

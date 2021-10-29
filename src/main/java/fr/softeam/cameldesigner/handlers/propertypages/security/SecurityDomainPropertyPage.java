@@ -16,6 +16,19 @@ public class SecurityDomainPropertyPage<T extends SecurityDomain> extends Featur
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	this._element.setId(value);
+	    	break;
+	    
+	    case 2 :
+	    	//this._element.(value);
+	    	break;
+
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -27,6 +40,10 @@ public class SecurityDomainPropertyPage<T extends SecurityDomain> extends Featur
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Id",getValue(this._element.getId()));
+        table.addProperty("Sub Domains",getValue(this._element.get()));
+
     }
 
     public SecurityDomainPropertyPage(T elt) {

@@ -16,6 +16,20 @@ public class FunctionPropertyPage<T extends Function> extends FeaturePropertyPag
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+        case 1 :
+        	this._element.setExpression(value);;
+        	break;
+        
+        case 2 :
+        	this._element.setArguments(value);
+        	break;
+       
+        }
+        this._currentRow -= 2;
+
     }
 
     /**
@@ -27,6 +41,10 @@ public class FunctionPropertyPage<T extends Function> extends FeaturePropertyPag
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Expression",getValue(this._element.getExpression()));
+        table.addProperty("Arguments",getValue(this._element.getArguments()));
+
     }
 
     public FunctionPropertyPage(T elt) {

@@ -16,6 +16,30 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	//this._element.setId(value);
+	    	break;
+	    	
+	    case 2 :
+	    	//this._element.getDomain().setName(value);
+	    	break;
+	    
+	    case 3 :
+	    	this._element.setLowerOccurrenceBound(value);;
+	    	break;
+	    	
+	    case 4:
+	    	this._element.setUpperOccurrenceBound(value);;
+	    	break;
+	    	
+	    case 5 :
+	    	this._element.setOperator(value);;
+	    	break;
+        }
+        this._currentRow -= 5;
     }
 
     /**
@@ -27,6 +51,13 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Left Event",getValue(this._element));
+        table.addProperty("Right Event",getValue(this._element.get));
+        table.addProperty("Lower Occurrence Bound",getValue(this._element.getLowerOccurrenceBound()));
+        table.addProperty("Upper Occurence Bound",getValue(this._element.getUpperOccurrenceBound()));
+        table.addProperty("Operator",getValue(this._element.getOperator()));
+
     }
 
     public BinaryEventPatternPropertyPage(T elt) {

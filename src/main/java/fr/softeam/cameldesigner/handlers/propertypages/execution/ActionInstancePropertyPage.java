@@ -16,6 +16,28 @@ public class ActionInstancePropertyPage<T extends ActionInstance> extends Featur
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+        case 1 :
+            this._element.setStartTime(value);
+            break;
+         
+        case 2 :
+            this._element.setEndTime(value);
+            break;
+            
+        case 3 :
+            this._element.setSuccessful(value);
+            break;
+         
+        case 4 :
+            //this._element.SET;
+            break;
+        }
+        
+        this._currentRow -= 4;
+
     }
 
     /**
@@ -27,6 +49,14 @@ public class ActionInstancePropertyPage<T extends ActionInstance> extends Featur
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Start Time",  getValue(this._element.getStartTime()));
+        table.addProperty("End Time",  getValue(this._element.getEndTime()));
+        table.addProperty("Successful",  getValue(this._element.getSuccessful()));
+
+
+        table.addProperty("Action",  getValue(this._element.get));
+
     }
 
     public ActionInstancePropertyPage(T elt) {

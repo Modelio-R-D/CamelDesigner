@@ -16,6 +16,7 @@ public class ExecutionModelPropertyPage<T extends ExecutionModel> extends SubMod
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
         switch (this._currentRow) {
 
         case 1 :
@@ -28,6 +29,15 @@ public class ExecutionModelPropertyPage<T extends ExecutionModel> extends SubMod
 
         case 3 :
             this._element.setTotalCost(value);
+            break;
+        
+        case 4 :
+            break;
+        case 5 :
+            break;
+        case 6 :
+            break;
+        case 7 :
             break;
         }
 
@@ -47,8 +57,13 @@ public class ExecutionModelPropertyPage<T extends ExecutionModel> extends SubMod
         table.addProperty("Start time", getValue(this._element.getStartTime()));
         table.addProperty("End time", getValue(this._element.getEndTime()));
         table.addProperty("Total Cost", getValue(this._element.getTotalCost()));
-   
-
+        
+       
+        table.addProperty("Cost Unit", getValue(this._element.get));
+        table.addProperty("Deployment Type Model", getValue(this._element.getName()));
+        table.addProperty("Requirement Model", getValue(this._element.getName()));
+        table.addProperty("Data Type Model", getValue(this._element.gett));
+		*/
     }
 
     public ExecutionModelPropertyPage(T elt) {

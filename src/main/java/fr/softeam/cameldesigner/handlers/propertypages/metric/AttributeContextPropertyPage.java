@@ -16,6 +16,19 @@ public class AttributeContextPropertyPage<T extends AttributeContext> extends Fe
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+        case 1 :
+        	this._element.getAttribute().setName(value);;
+        	break;
+        
+        case 2 :
+        	this._element.getObjectContext().setName(value);;
+        	break;
+        }
+        this._currentRow -=2;
+
     }
 
     /**
@@ -27,6 +40,10 @@ public class AttributeContextPropertyPage<T extends AttributeContext> extends Fe
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Attribute",getValue(this._element.getAttribute().getName()));
+        table.addProperty("Object Context",getValue(this._element.getObjectContext().getName()));
+
     }
 
     public AttributeContextPropertyPage(T elt) {

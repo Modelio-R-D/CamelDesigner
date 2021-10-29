@@ -16,7 +16,24 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	//this._element.(value);
+	    	break;
+	    	
+	    case 2 :
+	    	this._element.setOccurrenceNum(value);;
+	    	break;
+	    
+	    case 3 :
+	    	this._element.setOperator(value);;
+	    	break;
+	    	
+        }
+        this._currentRow -= 3;
     }
+    
 
     /**
      * This method handles the construction of the property table of a selected element
@@ -27,6 +44,11 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Event",getValue(this._element.get));
+        table.addProperty("Occurence Num",getValue(this._element.getOccurrenceNum()));
+        table.addProperty("Operator",getValue(this._element.getOperator()));
+
     }
 
     public UnaryEventPatternPropertyPage(T elt) {

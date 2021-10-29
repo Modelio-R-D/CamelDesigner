@@ -15,6 +15,28 @@ public class CloudProviderPropertyPage<T extends CloudProvider> extends Organisa
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        switch (this._currentRow) {
+
+        case 1 :
+        	this._element.setPublic(value);
+        	break;
+        
+        case 2 :
+        	this._element.setSaaS(value);
+        	break;
+        
+        case 3 :
+        	this._element.setPaaS(value);
+        	break;
+        	
+        case 4:
+        	this._element.setIaaS(value);
+        	break;
+        }
+        this._currentRow -= 4;
+
+    
+    
     }
 
     /**
@@ -26,6 +48,12 @@ public class CloudProviderPropertyPage<T extends CloudProvider> extends Organisa
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Public",getValue(this._element.getPublic()));
+        table.addProperty("SaaS",getValue(this._element.getSaaS()));
+        table.addProperty("PaaS",getValue(this._element.getPaaS()));
+        table.addProperty("IaaS",getValue(this._element.getIaaS()));
+
     }
 
     public CloudProviderPropertyPage(T elt) {

@@ -16,6 +16,13 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if (this._currentRow==1) {
+	    	//this._element.SE(value);;
+
+        }
+        this._currentRow -= 1;
+
     }
 
     /**
@@ -27,6 +34,8 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Metric Instance",getValue(this._element.get));
+
     }
 
     public NonFunctionalEventInstancePropertyPage(T elt) {

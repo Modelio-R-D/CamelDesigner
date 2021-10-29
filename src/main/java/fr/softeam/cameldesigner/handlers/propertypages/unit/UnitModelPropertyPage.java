@@ -27,6 +27,8 @@ public class UnitModelPropertyPage<T extends UnitModel> extends SubModelProperty
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        //table.addProperty("Multiple Of",getValue(this._element.));
     }
 
     public UnitModelPropertyPage(T elt) {

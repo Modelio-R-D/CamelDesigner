@@ -15,6 +15,35 @@ public class CloudCredentialsPropertyPage<T extends CloudCredentials> extends Cr
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        switch (this._currentRow) {
+
+        case 1 :
+        	this._element.setCloudProviderName(value);
+        	break;
+        
+        case 2 :
+        	this._element.setSecurityGroup(value);
+        	break;
+        
+        case 3 :
+        	this._element.setPublicSSHKey(value);
+        	break;
+        
+        case 4 :
+        	this._element.setPrivateSSHKey(value);
+        	break;
+        
+        case 5 :
+        	this._element.setUsername(value);
+        	break;
+        
+        case 6 :
+        	this._element.setPassword(value);
+        	break;
+        }
+        this._currentRow -= 6;
+
+    
     }
 
     /**
@@ -26,6 +55,14 @@ public class CloudCredentialsPropertyPage<T extends CloudCredentials> extends Cr
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Cloud Provider Name",getValue(this._element.getCloudProviderName()));
+        table.addProperty("Security Group",getValue(this._element.getSecurityGroup()));
+        table.addProperty("Public SSH Key",getValue(this._element.getPublicSSHKey()));
+        table.addProperty("Private SSH Key",getValue(this._element.getPrivateSSHKey()));
+        table.addProperty("Username",getValue(this._element.getUsername()));
+        table.addProperty("Password",getValue(this._element.getPassword()));
+
     }
 
     public CloudCredentialsPropertyPage(T elt) {

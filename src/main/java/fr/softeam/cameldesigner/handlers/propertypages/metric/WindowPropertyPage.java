@@ -48,9 +48,13 @@ public class WindowPropertyPage<T extends Window> extends FeaturePropertyPage<T>
         else if(this._currentRow == 5){
             this._element.setTimeSize(value);
         }
+        
+        else if(this._currentRow == 6){
+            this._element.setMeasurementSize(value);
+        }
 
 
-        this._currentRow -= 5;
+        this._currentRow -= 6;
     }
 
     /**
@@ -78,6 +82,10 @@ public class WindowPropertyPage<T extends Window> extends FeaturePropertyPage<T>
 
         //Time Size
         table.addProperty("Time Size", this._element.getTimeSize());
+        
+        //Measurement Size
+        table.addProperty("Measurement Size", this._element.getMeasurementSize());
+
     }
 
     public WindowPropertyPage(T elt) {

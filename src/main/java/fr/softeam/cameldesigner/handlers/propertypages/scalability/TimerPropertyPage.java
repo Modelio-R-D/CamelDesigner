@@ -16,6 +16,27 @@ public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+
+	    case 1 :
+	    	//this._element.
+	    	break;
+	    	
+	    case 2 :
+	    	//this._element.
+	    	break;
+	    
+	    case 3 :
+	    	//this._element.
+	    	break;
+	    	
+	    case 4:
+	    	//this._element.
+	    	break;
+
+        }
+        this._currentRow -= 4;
     }
 
     /**
@@ -27,6 +48,11 @@ public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Type",getValue(this._element.get));
+        table.addProperty("Time Value",getValue(this._element.get()));
+        table.addProperty("Max Occurence Num",getValue(this._element.get()));
+        table.addProperty("Unit",getValue(this._element.get()));
+
     }
 
     public TimerPropertyPage(T elt) {

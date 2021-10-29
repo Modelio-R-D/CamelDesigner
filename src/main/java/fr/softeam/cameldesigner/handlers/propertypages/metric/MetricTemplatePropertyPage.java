@@ -53,8 +53,13 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
                 this._element.setAttribute(MeasurableAttribute.safeInstantiate(elt));
             }
         }
+        else if(this._currentRow == 4){
+            this._element.setValueDirection(value);;
 
-        this._currentRow -= 3;
+        }
+        
+        this._currentRow -= 4;
+
     }
 
     /**
@@ -78,6 +83,12 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
         //Attribute
         this._attribute = MeasurableAttribute.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Attribute", getCamelName(this._element.getAttribute()), getCamelNames(this._attribute));
+        
+        //Value Direction
+        table.addProperty("Attribute",getValue(this._element.getValueDirection()));
+
+        
+    
     }
 
     public MetricTemplatePropertyPage(T elt) {

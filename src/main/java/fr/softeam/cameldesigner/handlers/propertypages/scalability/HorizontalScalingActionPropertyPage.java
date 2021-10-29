@@ -16,6 +16,12 @@ public class HorizontalScalingActionPropertyPage<T extends HorizontalScalingActi
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if (this._currentRow==1) {
+	    	this._element.setCount(value);
+
+        }
+        this._currentRow -= 1;
     }
 
     /**
@@ -27,6 +33,8 @@ public class HorizontalScalingActionPropertyPage<T extends HorizontalScalingActi
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        table.addProperty("Count",getValue(this._element.getCount()));
+
     }
 
     public HorizontalScalingActionPropertyPage(T elt) {
