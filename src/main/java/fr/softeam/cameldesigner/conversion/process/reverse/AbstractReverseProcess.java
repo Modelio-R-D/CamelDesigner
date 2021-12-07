@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.conversion.process.reverse;
 import java.util.Map;
 import camel.core.NamedElement;
 import camel.mms.MmsObject;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.IElementProcess;
 import org.eclipse.emf.cdo.CDOObject;
@@ -13,37 +14,47 @@ import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Classifier;
 import org.modelio.metamodel.uml.statik.Port;
 
+@objid ("8252e63d-68de-4dd8-8beb-0144ac974cd4")
 public abstract class AbstractReverseProcess implements IElementProcess {
+    @objid ("ba71fc6d-7f0c-4684-935c-9ff24767bc12")
     protected Map<CDOObject, CamelElement> processedCamelElements;
 
+    @objid ("80dc889f-6be4-4759-9b9b-0ab9de0cd75b")
     protected ModelElement umlElementParent;
 
+    @objid ("782dad31-8c48-40ff-9f85-f31298fa11ca")
     public AbstractReverseProcess(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
         this.umlElementParent = umlElementParent;
         this.processedCamelElements = processedCamelElements;
     }
 
+    @objid ("166a14f5-fbef-4804-8904-454eaafcad9a")
     public ModelElement getUmlElementParent() {
         return this.umlElementParent;
     }
 
+    @objid ("a1e94a39-0916-4ba0-be4e-682a48881898")
     public void setUmlElementParent(ModelElement umlElementParent) {
         this.umlElementParent = umlElementParent;
     }
 
+    @objid ("f12ba9a5-2ec1-4922-ab0a-9f7bf6f47590")
     public Map<CDOObject, CamelElement> getProcessedCamelElements() {
         return this.processedCamelElements;
     }
 
+    @objid ("b277d0c0-ecb1-411a-86a8-733cb06a97a2")
     public void setProcessedCamelElements(Map<CDOObject, CamelElement> processedCamelElements) {
         this.processedCamelElements = processedCamelElements;
     }
 
+    @objid ("c316b5d0-3bb1-46c7-aa3a-12227085b1a2")
     @Override
     public CamelElement process(Object element) {
         return process ((CDOObject) element);
     }
 
+    @objid ("f8aeb402-7d12-4730-ba5f-0316f4862ae3")
     protected void updateOwner(ModelElement reversedElement, CDOObject element) {
         if (this.umlElementParent != null) {
             if(reversedElement instanceof ModelTree) {
@@ -56,6 +67,7 @@ public abstract class AbstractReverseProcess implements IElementProcess {
         }
     }
 
+    @objid ("124a736b-6e07-4a67-9ed8-e07c8eaf2459")
     public CamelElement process(CDOObject element) {
         //        java.util.Map<EObject,java.util.Collection<Setting>> map = EcoreUtil.ExternalCrossReferencer.find(element);
         //                if(! map.isEmpty()) {
@@ -113,6 +125,7 @@ public abstract class AbstractReverseProcess implements IElementProcess {
      * switchReverse will only reverse the element (and its dependencies) without updating the parent. Updating the parent will happen in method process
      * @return
      */
+    @objid ("4efa9230-28fd-4774-8069-d1a47ebb24e4")
     protected abstract CamelElement switchReverse(CDOObject element);
 
 }

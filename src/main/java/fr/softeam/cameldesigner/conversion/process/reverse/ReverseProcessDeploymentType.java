@@ -23,6 +23,7 @@ import camel.deployment.ServerlessConfiguration;
 import camel.deployment.SoftwareComponent;
 import camel.deployment.VM;
 import camel.requirement.Requirement;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
@@ -41,11 +42,14 @@ import org.modelio.metamodel.uml.statik.ConnectorEnd;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.metamodel.uml.statik.PortOrientation;
 
+@objid ("5c7d0fea-5720-4505-9709-5bcfaec4af3e")
 public class ReverseProcessDeploymentType extends AbstractReverseProcess {
+    @objid ("413e1104-a89f-46c0-a8e5-b02d7b8a2222")
     public ReverseProcessDeploymentType(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
         super(umlElementParent, processedCamelElements);
     }
 
+    @objid ("749ed05e-d253-4563-ab86-1f1a98d1ed50")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet reverse(RequirementSet element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet proxyRequirementSet = fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet.create();
         
@@ -116,27 +120,32 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return proxyRequirementSet;
     }
 
+    @objid ("5e0d3ec1-fb5b-4d42-b79d-e7f8feff40df")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling reverse(LocationCoupling element) {
         // TODO
         return null;
     }
 
+    @objid ("486d927b-0830-4c5a-8a3b-029f586d3cbb")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort reverse(ProvidedHost element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort providedHost = fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.create();
         providedHost.getElement().setDirection(PortOrientation.OUT);
         return providedHost;
     }
 
+    @objid ("d8c78443-2729-498a-b70f-67e505c05870")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort reverse(RequiredHost element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort requiredHost = fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.create();
         requiredHost.getElement().setDirection(PortOrientation.IN);
         return requiredHost;
     }
 
+    @objid ("6159c34c-40e4-447f-be89-26f422f22293")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration reverse(ServerlessConfiguration element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration.create();
     }
 
+    @objid ("7b0c99c4-18e7-4428-b543-a8721adb17c4")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration reverse(ScriptConfiguration element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration proxyScriptConfiguration = null;
         proxyScriptConfiguration = fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration.create();
@@ -173,26 +182,32 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return null;
     }
 
+    @objid ("72e487b2-ee25-4fca-bd67-9015cdb6c84d")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration reverse(PaaSConfiguration element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration.create();
     }
 
+    @objid ("205d61ed-290b-459b-a351-c420b8ad511c")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration reverse(EventConfiguration element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration.create();
     }
 
+    @objid ("a76dbf27-6d93-4942-8357-c13bdc822b64")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ClusterConfiguration reverse(ClusterConfiguration element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ClusterConfiguration.create();
     }
 
+    @objid ("b66e9b4c-82a8-49b9-948b-aff42b0d568a")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration reverse(BuildConfiguration element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration.create();
     }
 
+    @objid ("dff4b391-3e21-4f47-a8df-be310e4c900e")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM reverse(VM element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM.create();
     }
 
+    @objid ("33fe6234-1942-4bfe-92c9-e8baf82a696d")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent reverse(SoftwareComponent element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent softwareComponentProxy = fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent.create();
         
@@ -206,14 +221,17 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return softwareComponentProxy;
     }
 
+    @objid ("5bc17562-b2e4-43e4-add0-1622d8ac2a8e")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS reverse(PaaS element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS.create();
     }
 
+    @objid ("4c14aa15-29f2-4b19-8602-f69dbf86a67b")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container reverse(Container element) {
         return fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container.create();
     }
 
+    @objid ("bdc5b341-0005-467b-8d53-6e7d8399374b")
     @Override
     public CamelElement switchReverse(CDOObject element) {
         if (element instanceof Container){
@@ -267,6 +285,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return null;
     }
 
+    @objid ("c32f9be8-1e64-4777-8f2e-4f54e476c0b7")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort reverse(RequiredCommunication element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort requiredCommunication = fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.create();
         requiredCommunication.getElement().setDirection(PortOrientation.IN);
@@ -275,6 +294,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return requiredCommunication;
     }
 
+    @objid ("c198498f-c869-4d6e-b451-c23b3377163a")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort reverse(ProvidedCommunication element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort providedCommunication = fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.create();
         providedCommunication.getElement().setDirection(PortOrientation.OUT);
@@ -282,11 +302,13 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return providedCommunication;
     }
 
+    @objid ("9797b513-fa61-46b2-af8b-f3b72f6116e0")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort reverse(Hosting element) {
         //return fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.Hosting.create();
         return null;
     }
 
+    @objid ("09fda022-85ff-4b32-8de1-098c0bb8e989")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communication reverse(Communication communication) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort proxyProvidedCommunication = null;
         if(this.processedCamelElements.containsKey(communication.getProvidedCommunication())) {
@@ -337,6 +359,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return proxyCommunication;
     }
 
+    @objid ("88931e9e-83f5-433d-b8aa-781e3fd777c7")
     @Override
     protected void updateOwner(ModelElement reversedElement, CDOObject element) {
         if(element instanceof Communication) {
@@ -359,6 +382,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         super.updateOwner(reversedElement, element);
     }
 
+    @objid ("13ff5233-2025-4b3d-993b-9cf182947bf2")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement retrieveReferencedRequirement(Requirement requirementElement) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = null;
         if(this.processedCamelElements.containsKey(requirementElement)) {
@@ -373,6 +397,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         return referencedRequirement;
     }
 
+    @objid ("99d53fae-8566-445e-abca-06806f88e74d")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet retrieveReferencedRequirementSet(RequirementSet requirementSet) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet referencedRequirementSet = null;
         if(this.processedCamelElements.containsKey(requirementSet)) {

@@ -1,5 +1,10 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
+import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
@@ -7,14 +12,6 @@ import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
-import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-
 
 @objid ("9cf64828-f178-4b24-8a39-c74af1c44abd")
 public class CreateExecutionModelTool extends CreateSubModelTool {
@@ -37,7 +34,7 @@ public class CreateExecutionModelTool extends CreateSubModelTool {
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName("Execution Model");
             diagram.setDefaultName("Execution Diagram");
-            
+        
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

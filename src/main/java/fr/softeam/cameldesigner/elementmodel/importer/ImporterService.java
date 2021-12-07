@@ -15,6 +15,7 @@ import camel.unit.CompositeUnit;
 import camel.unit.Unit;
 import camel.unit.UnitModel;
 import com.google.inject.Injector;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.CamelDslManager;
 import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcess;
@@ -27,14 +28,18 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.modelio.metamodel.uml.statik.Package;
 
+@objid ("5b349cf1-b0f8-4268-97a3-7db25ebb4143")
 public class ImporterService {
+    @objid ("2d9cf31a-94b3-4665-8182-dce22c28e3c1")
     private Object loadOption;
 
+    @objid ("dfa42005-9a3c-4787-93b5-1eb6774fdb3e")
     public ImporterService(Object loadOption) {
         super();
         this.loadOption = loadOption;
     }
 
+    @objid ("d852cd56-d3cc-4d76-9094-63c173dd453d")
     public void importModelFromFile(Package packageOwner, String filePath) {
         Injector injector = CamelDslManager.getInstance().getInjector();
         
@@ -57,6 +62,7 @@ public class ImporterService {
         camelWalker.walk(camelModel);
     }
 
+    @objid ("3b78e08a-0df1-4ba5-b1db-f15c62eebd9e")
     private static void enrichModel(final CamelModel camelModel) {
         EList<MetricModel> _metricModels = camelModel.getMetricModels();
         for (final MetricModel mm : _metricModels) {
@@ -70,6 +76,7 @@ public class ImporterService {
         }
     }
 
+    @objid ("20604d6f-0512-4579-bc55-99bcbc160acc")
     private static void enrichMetricModel(final MetricTypeModel mm) {
         final HashMap<String, Metric> metrics = new HashMap<>();
         final ArrayList<CompositeMetric> compMetrics = new ArrayList<>();
@@ -119,6 +126,7 @@ public class ImporterService {
         }
     }
 
+    @objid ("4e734ddb-f9ff-4ab8-9c8f-e43cd86b8daf")
     private static void enrichUnitModel(final UnitModel um) {
         final HashMap<String, Unit> units = new HashMap<>();
         final ArrayList<CompositeUnit> compUnits = new ArrayList<>();

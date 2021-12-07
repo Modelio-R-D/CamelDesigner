@@ -1,96 +1,85 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
-import java.util.List;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.DataType;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.statik.DataType;
 
+@objid ("3945a140-43a0-47da-b8ef-7175b26a4ad9")
 public class WindowPropertyPage<T extends Window> extends FeaturePropertyPage<T> {
-
-    private List<ModelElement> _unit = null;
-
-
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
      * @param MObject : the selected element
-     *
+     * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
+    @objid ("4068a9e5-386a-4747-997f-cd9b4350fd01")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
-
+        
         if(this._currentRow == 1){
-            DataType elt = (DataType) getModelElt(this._unit, value);
+            DataType elt = (DataType) getModelElt(CamelDesignerAbstractProxy.getUnits(), value);
             if (Unit.canInstantiate(elt)) {
                 this._element.setTimeUnit(Unit.instantiate(elt));
             }
         }
-
+        
         else if(this._currentRow == 2){
             this._element.setWindowType(value);
         }
-
+        
         else if(this._currentRow == 3){
             this._element.setSizeType(value);
         }
-
+        
         else if(this._currentRow == 4){
             this._element.setMeasurementSize(value);
         }
-
+        
         else if(this._currentRow == 5){
             this._element.setTimeSize(value);
         }
         
-        else if(this._currentRow == 6){
-            this._element.setMeasurementSize(value);
-        }
-
-
-        this._currentRow -= 6;
+        
+        this._currentRow -= 5;
     }
 
     /**
      * This method handles the construction of the property table of a selected element
      * @param MObject : the selected element
-     *
+     * 
      * @param table : the property table to fulfill
      */
+    @objid ("7699e556-9cd4-4994-96c5-9906ede4b2d5")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-
+        
         //Time Unit
-        this._unit = CamelDesignerAbstractProxy.getUnits();
-        table.addProperty("Time Unit", getCamelName(this._element.getTimeUnit()), getCamelNames(this._unit));
-
+        table.addProperty("Time Unit", getCamelName(this._element.getTimeUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));
+        
         //Window Type
         table.addProperty("Window Type", this._element.getWindowType());
-
+        
         //Size Type
         table.addProperty("Size Type", this._element.getSizeType());
-
-        //Measurement Size
-        table.addProperty("Start", this._element.getMeasurementSize());
-
-        //Time Size
-        table.addProperty("Time Size", this._element.getTimeSize());
         
         //Measurement Size
-        table.addProperty("Measurement Size", this._element.getMeasurementSize());
-
+        table.addProperty("Start", this._element.getMeasurementSize());
+        
+        //Time Size
+        table.addProperty("Time Size", this._element.getTimeSize());
     }
 
+    @objid ("5067070d-79e4-4c9e-9fe5-1a63c84db1f9")
     public WindowPropertyPage(T elt) {
         super(elt);
-
     }
 
 }

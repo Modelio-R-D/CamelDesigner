@@ -16,6 +16,7 @@ import camel.scalability.ScalabilityModel;
 import camel.security.SecurityModel;
 import camel.type.TypeModel;
 import camel.unit.UnitModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.reverse.AbstractReverseProcess;
 import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcessDataType;
@@ -24,11 +25,14 @@ import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcessMetaDat
 import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcessMetricType;
 import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcessRequirement;
 
+@objid ("f657c722-e33b-4d7c-8743-1d71eceff07f")
 public class CamelWalker extends AbstractCamelWalker {
+    @objid ("61f06f62-67d7-4cad-b3e6-318575615fac")
     public CamelWalker(AbstractReverseProcess reverseProcess) {
         this.reverseProcess = reverseProcess;
     }
 
+    @objid ("1fe683ee-2b93-433d-a56d-3e12a6e7a2a6")
     @Override
     protected void walkChildren(Object processedElement, CamelElement resultedElement) {
         //if(resultedElement instanceof Package) {
@@ -199,17 +203,7 @@ public class CamelWalker extends AbstractCamelWalker {
             //            }
             //            else if(processedElement instanceof DataInstanceModel ) {
             //
-            //                IElementProcess subModelProcess = new ReverseProcessDataInstance(packageOwner, this.reverseProcess.getProcessedCamelElements() );
-            //                AbstractWalker subModelWalker = new DataInstanceWalker (subModelProcess);
-            //                subModelWalker.walk(processedElement);
-            //
-            //            }
-            //            else if(processedElement instanceof MetricInstanceModel ) {
-            //
-            //                IElementProcess subModelProcess = new ReverseProcessMetricInstance(packageOwner, this.reverseProcess.getProcessedCamelElements() );
-            //                AbstractWalker subModelWalker = new MetricInstanceWalker (subModelProcess);
-            //                subModelWalker.walk(processedElement);
-            //
+            //                IElementProcess subModelProcess = new ReverseProcessDaxw
             //            }
         }
     }

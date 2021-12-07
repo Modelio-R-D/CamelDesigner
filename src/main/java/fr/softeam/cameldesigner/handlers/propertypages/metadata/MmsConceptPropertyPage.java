@@ -1,64 +1,38 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metadata;
 
-import java.util.List;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
+@objid ("4a0c17ac-03b9-405a-ae83-6619be1bb327")
 public class MmsConceptPropertyPage<T extends MmsConcept> extends MmsObjectPropertyPage<T> {
-    
-    private List<ModelElement> _parent = null;
-
-	/**
+    /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
      * @param MObject : the selected element
-     *
+     * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-	
-
+    @objid ("b3879bf8-9557-4e2e-9727-ef3fb7d5bcd2")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
-        
-
-        switch (this._currentRow) {
-
-        case 1 :
-        	 Class elt = (Class) getModelElt(this._parent, value);
-             if (MmsConcept.canInstantiate(elt)) {
-                 this._element.setParent(MmsConcept.safeInstantiate(elt));
-             }
-        	break;
-        }
-        this._currentRow -= 1;
-
     }
 
     /**
      * This method handles the construction of the property table of a selected element
      * @param MObject : the selected element
-     *
+     * 
      * @param table : the property table to fulfill
      */
+    @objid ("81f3dcc3-97ac-4f8c-ae7a-16208ee6cce5")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        
-        // Parent
-        this._parent = MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
-        table.addProperty("Parent", getCamelName(this._element.getParent()), getCamelNames(this._parent));
- 
-
     }
 
+    @objid ("46f4bb70-e5f0-4c71-b998-3cfcd96bf5d0")
     public MmsConceptPropertyPage(T elt) {
         super(elt);
     }

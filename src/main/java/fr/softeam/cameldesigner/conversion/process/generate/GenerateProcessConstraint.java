@@ -1,25 +1,26 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
+import camel.core.CamelModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Package;
-import camel.core.CamelModel;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 
-public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement, CDOObject> {
-
-
+@objid ("aa1968c7-ae1b-485a-9b39-abbc7e89a0f4")
+public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement,CDOObject> {
+    @objid ("59d852ab-9c3a-4c6f-8705-882cdba91215")
     public GenerateProcessConstraint(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
         super(camelElementParent, processedUmlElements);
     }
 
+    @objid ("cabc5520-bfd3-4dda-8bc0-26e04d99307a")
     @Override
     protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
-
         ModelElement element = camelElement.getElement();
         if (element instanceof Package) {
             return generate ((Package) element);
@@ -33,6 +34,7 @@ public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softea
         return null;
     }
 
+    @objid ("2661fa64-99e5-4b8f-ab3f-5a7a8826f0c3")
     private CDOObject generate(Package umlPackage) {
         if(this.processedUmlElements.containsKey(umlPackage)) {
             return this.processedUmlElements.get(umlPackage);
@@ -49,19 +51,22 @@ public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softea
                 //
                 return deploymentTypeModel;
             }
-
+        
         }
         return null;
     }
 
+    @objid ("fc40a606-14a9-4687-bf77-ad31d5f6c22e")
     private CDOObject generate(Component umlComponent) {
         return null;
     }
 
+    @objid ("c43584dd-9a97-4af9-a353-dfe04c5a384c")
     private CDOObject generate(Class umlClass) {
         return null;
     }
 
+    @objid ("f5abd8b6-8475-43a7-a9ce-afc5af3c5181")
     @Override
     protected void updateParent(CDOObject processedElement) {
         // TODO Auto-generated method stub

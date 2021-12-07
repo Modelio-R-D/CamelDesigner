@@ -1,19 +1,23 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 
+@objid ("1bf8b670-e777-43f9-b138-d0bf658c897c")
 public class GenerateProcessMetaData extends AbstractGenerateProcess {
+    @objid ("57a9fd7a-3a18-489f-959a-d125b8fa89c0")
     public GenerateProcessMetaData(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
         super(camelElementParent, processedUmlElements);
     }
 
+    @objid ("c299ce2c-053e-46ad-9f3f-be44e135cf02")
     @Override
     protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
         ModelElement element = camelElement.getElement();
@@ -31,6 +35,7 @@ public class GenerateProcessMetaData extends AbstractGenerateProcess {
         return null;
     }
 
+    @objid ("d6c6b19d-9977-4bb9-8929-a45ad2420e6f")
     private CDOObject generate(MmsProperty mmsPropertyProxy) {
         camel.mms.MmsProperty mmsProperty = camel.mms.MmsFactory.eINSTANCE.createMmsProperty();
         mmsProperty.setName(mmsPropertyProxy.getElement().getName());
@@ -53,6 +58,7 @@ public class GenerateProcessMetaData extends AbstractGenerateProcess {
         return mmsProperty;
     }
 
+    @objid ("3ca28d9e-516c-48af-9b3d-b2a026c1462d")
     private CDOObject generate(MmsConcept mmsConceptProxy) {
         camel.mms.MmsConcept mmsConcept = camel.mms.MmsFactory.eINSTANCE.createMmsConcept();
         mmsConcept.setName(mmsConceptProxy.getElement().getName());
@@ -72,6 +78,7 @@ public class GenerateProcessMetaData extends AbstractGenerateProcess {
         return mmsConcept;
     }
 
+    @objid ("cb1f5c3e-5d48-43ad-a24d-fde29dddda17")
     @Override
     protected void updateParent(CDOObject processedElement) {
         if(this.getCamelElementParent() instanceof camel.mms.MmsConcept) {

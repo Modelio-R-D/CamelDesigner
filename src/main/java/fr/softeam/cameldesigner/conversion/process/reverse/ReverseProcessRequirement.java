@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.conversion.process.reverse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
@@ -13,11 +14,14 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
 
+@objid ("132a82a4-f75b-47ae-a545-35c15633a632")
 public class ReverseProcessRequirement extends AbstractReverseProcess {
+    @objid ("f56b1ab8-eb06-46d7-b19b-8fcbd1a84aaa")
     public ReverseProcessRequirement(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
         super(umlElementParent, processedCamelElements);
     }
 
+    @objid ("5db5dda8-8320-42d7-8f30-c42855e7091f")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OptimisationRequirement reverse(camel.requirement.OptimisationRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OptimisationRequirement optimizationRequirementProxy = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OptimisationRequirement.create();
         
@@ -39,18 +43,22 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return optimizationRequirementProxy;
     }
 
+    @objid ("7e5f27a0-80ae-4366-8cc6-9e6cb91da275")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective reverse(camel.requirement.ServiceLevelObjective element) {
         return fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective.create();
     }
 
+    @objid ("ba1ebe7e-c410-4c35-b075-a5bb1fe27c3f")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityRequirement reverse(camel.requirement.SecurityRequirement element) {
         return fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityRequirement.create();
     }
 
+    @objid ("9f8776e0-9370-48ae-ad41-1abb8277ac2d")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement reverse(camel.requirement.VerticalScaleRequirement element) {
         return fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement.create();
     }
 
+    @objid ("c212d00d-80a0-4fa0-8122-be32408e6764")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement reverse(camel.requirement.HorizontalScaleRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement proxyHorizontalScaleRequirement =
                 fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement.create();
@@ -59,6 +67,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return proxyHorizontalScaleRequirement;
     }
 
+    @objid ("b250a518-e0c3-45e9-b222-e3b1e9526588")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement reverse(camel.requirement.ResourceRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement resourceRequirementProxy = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement.create();
         
@@ -83,6 +92,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return resourceRequirementProxy;
     }
 
+    @objid ("9f3cc381-8d12-4668-9fbe-894f3e0c3117")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement reverse(camel.requirement.ProviderRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement proxyProviderRequirement
         = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement.create();
@@ -90,10 +100,12 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return proxyProviderRequirement;
     }
 
+    @objid ("f05bbd46-d4c9-445d-b780-aef9872c0862")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement reverse(camel.requirement.PaaSRequirement element) {
         return fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement.create();
     }
 
+    @objid ("db2592e6-3b77-4227-852f-4124d59d1194")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement reverse(camel.requirement.OSRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement proxyOSRequirement
         = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement.create();
@@ -120,6 +132,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return proxyOSRequirement;
     }
 
+    @objid ("b96f88bb-51d3-4759-bb1f-3b2131901fcb")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement reverse(camel.requirement.LocationRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement proxyLocationRequirement =
                 fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement.create();
@@ -127,6 +140,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return proxyLocationRequirement;
     }
 
+    @objid ("b3dee2f4-8af7-4f84-b96f-25801817b9f1")
     private fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement reverse(camel.requirement.ImageRequirement element) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement proxyImageRequirement = fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement.create();
         List<String> values = new ArrayList<>();
@@ -137,6 +151,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return proxyImageRequirement;
     }
 
+    @objid ("aaa59fa3-6ec6-42d0-befe-25a14cfcb4c7")
     @Override
     protected CamelElement switchReverse(CDOObject element) {
         if (element instanceof camel.requirement.ImageRequirement) {
@@ -165,6 +180,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return null;
     }
 
+    @objid ("fbe803b5-16d6-4291-ab4d-8c81584bc629")
     private MetricVariable retrievReferencedMetricVariable(camel.metric.MetricVariable metricVariable) {
         MetricVariable referencedMetricVariable = null;
         if(this.processedCamelElements.containsKey(metricVariable)) {
@@ -179,6 +195,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return referencedMetricVariable;
     }
 
+    @objid ("2f65617b-9798-4d93-9411-841eb42c6239")
     private MetricContext retrievReferencedMetricContext(camel.metric.MetricContext metricContext) {
         MetricContext referencedMetricContext = null;
         if(this.processedCamelElements.containsKey(metricContext)) {

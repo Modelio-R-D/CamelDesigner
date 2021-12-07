@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.04
+ * Module: CamelDesigner v1.0.05
 
- * This file was generated on 10/19/21 2:54 PM by Modelio Studio.
+ * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -14,7 +14,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.instance.MetricInstance;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.EventInstance;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.EventInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -36,16 +36,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fd364a84-8a23-4f50-a661-f2ea77419f95")
 public abstract class Measurement extends FeatureClass {
-    @objid ("a8a9d3f7-629f-46a8-8d38-725a1d2ed1e5")
+    @objid ("284a8ab0-07cd-462b-bfbd-0de4a000185a")
     public static final String STEREOTYPE_NAME = "Measurement";
 
-    @objid ("5642469b-1e5a-479a-bfd7-668cd713154d")
+    @objid ("5086c77b-2485-413f-a528-82ec7901d088")
     public static final String MEASUREMENTTIME_TAGTYPE = "measurementTime";
 
-    @objid ("a490a12a-3d9b-4177-9f01-295a58521a81")
+    @objid ("19125c4e-6e5f-43b9-a942-c7cc30fb176f")
     public static final String VALUE_TAGTYPE = "value";
 
-    @objid ("f65ad091-8ac7-4709-9098-e6f2038b39fc")
+    @objid ("ebfd5bf3-69e7-4657-ba6a-aed6d72f9b5e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -66,7 +66,7 @@ public abstract class Measurement extends FeatureClass {
      * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("6bd3a576-7b47-4fc0-8d86-ab9e5dafc9b6")
+    @objid ("b978d9cd-425a-4fe6-bdf9-8d593a9cfcbe")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -77,7 +77,7 @@ public abstract class Measurement extends FeatureClass {
      * Role description:
      * null
      */
-    @objid ("fc1a5cb1-5f4c-4405-8869-fe1513bae8f3")
+    @objid ("a4c5d3b9-0802-44a0-be5d-9958ee464be6")
     public EventInstance getEventInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Measurement.MdaTypes.MDAASSOCDEP)
@@ -94,7 +94,7 @@ public abstract class Measurement extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("481141fb-b83c-46c6-b25b-7e2d6c71adb4")
+    @objid ("bbae0869-8389-4c02-8158-9c81a7157d2c")
     public String getMeasurementTime() {
         return this.elt.getTagValue(Measurement.MdaTypes.MEASUREMENTTIME_TAGTYPE_ELT);
     }
@@ -104,7 +104,7 @@ public abstract class Measurement extends FeatureClass {
      * Role description:
      * null
      */
-    @objid ("731534d1-f247-460c-9075-b6fda94eec8e")
+    @objid ("003aa0f5-e3d1-4c82-aaf4-00585d86ac72")
     public MetricInstance getMetricInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Measurement.MdaTypes.MDAASSOCDEP)
@@ -121,12 +121,12 @@ public abstract class Measurement extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f694ee03-1f11-41b8-9856-00025a2d583c")
+    @objid ("390f1286-dabb-47f4-a228-c48a68e16c67")
     public String getValue() {
         return this.elt.getTagValue(Measurement.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("183b554f-03ad-4e15-a25d-f0c6ada4e28e")
+    @objid ("c3cb1827-2393-4702-95e3-d3307ddab7b4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -137,7 +137,7 @@ public abstract class Measurement extends FeatureClass {
      * Role description:
      * null
      */
-    @objid ("01183136-7db3-4602-bd2a-ca56bbd5015c")
+    @objid ("fd68ad21-7af3-490e-b293-03df81635e3a")
     public void setEventInstance(final EventInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -162,7 +162,7 @@ public abstract class Measurement extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4631a2ad-e8ff-4fd8-9e96-8f924ff33a6f")
+    @objid ("c0892529-ea8e-42be-95ff-95ff895b57e5")
     public void setMeasurementTime(final String value) {
         this.elt.putTagValue(Measurement.MdaTypes.MEASUREMENTTIME_TAGTYPE_ELT, value);
     }
@@ -172,7 +172,7 @@ public abstract class Measurement extends FeatureClass {
      * Role description:
      * null
      */
-    @objid ("33e269cd-006d-4bd2-965a-1588f9af7e56")
+    @objid ("13b99288-c62f-4501-911c-def8b98db855")
     public void setMetricInstance(final MetricInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -197,34 +197,34 @@ public abstract class Measurement extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b4ffa278-febc-4b22-9db8-216d4d85b1ac")
+    @objid ("38f7bd73-6858-49bd-8eff-409a8fb37877")
     public void setValue(final String value) {
         this.elt.putTagValue(Measurement.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("9feb3ef2-15f3-4320-ae70-ec25546182f3")
+    @objid ("4cc7242e-d3a0-4c2b-a0ca-57d1a55538a8")
     protected Measurement(final Class elt) {
         super(elt);
     }
 
     @objid ("c5c12d99-af0a-463a-876e-c2847d9efbb0")
     public static final class MdaTypes {
-        @objid ("b815a035-2c12-4891-96b4-2530532bfb18")
+        @objid ("5076eaa2-973a-448c-9f51-ce353309d008")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2b5d50ca-1cab-4a88-95d2-6ef90c87472a")
+        @objid ("63509046-1137-4edf-9615-adc99bfa1cff")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("3aa759ad-7d7c-4d9e-b0df-990177d91a26")
+        @objid ("cdc08a75-0164-49ac-84d8-6b77a1691ab0")
         public static TagType MEASUREMENTTIME_TAGTYPE_ELT;
 
-        @objid ("9e8fecb0-40a6-465d-ad65-85e4a1e0ae9b")
+        @objid ("c4902b01-3127-4a5b-990a-215266c5da26")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c80d448f-a887-483d-a320-5f479561f187")
+        @objid ("da45bf9b-b57c-49b3-a089-b8bf66f6b475")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5a5c9a90-3a4d-4d27-9c88-6f7d2d1f1bde")
+        @objid ("ea3dd7b5-1d43-4a2c-8cd5-206054a4f6c4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "481e52bb-d5b3-4dcb-a365-8ca5d75d8ac2");
             VALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "03f06745-0e69-475c-a468-9f73b761a5d0");

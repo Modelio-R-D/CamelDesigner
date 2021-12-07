@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.04
+ * Module: CamelDesigner v1.0.05
 
- * This file was generated on 10/26/21 3:22 PM by Modelio Studio.
+ * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -37,16 +37,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8cafa6ee-69cd-4fb1-a69e-ae3b71f7dd61")
 public class Timer extends FeatureClass {
-    @objid ("6708e0a4-ba59-487c-96d4-44de1c81d258")
+    @objid ("5e08f4cc-8df6-4a1c-9d9a-a8d85579bd7e")
     public static final String STEREOTYPE_NAME = "Timer";
 
-    @objid ("dfea7221-d55e-41b5-a2c2-8c5559e9f231")
+    @objid ("6f9bc25a-755a-40b7-a99b-2c04bd7ee3cc")
     public static final String MAXOCCURRENCENUM_TAGTYPE = "maxOccurrenceNum";
 
-    @objid ("a9b1be49-0a1a-4a4b-b744-262a8a8b4f83")
+    @objid ("60a95a88-735a-42b2-8072-708470327cc4")
     public static final String TIMEVALUE_TAGTYPE = "timeValue";
 
-    @objid ("024a4f4c-30de-464b-aeec-410bd02c3197")
+    @objid ("6a3485c5-1737-488f-9268-22f2a142b73b")
     public static final String TYPE_TAGTYPE = "type";
 
     /**
@@ -57,7 +57,7 @@ public class Timer extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("897f1fc7-edb5-43ee-b422-cb656cf3de16")
+    @objid ("b57d750b-3a2c-47e5-9ac7-046cc06ea7cd")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Timer.STEREOTYPE_NAME));
     }
@@ -67,7 +67,7 @@ public class Timer extends FeatureClass {
      * 
      * @return a {@link Timer} proxy on the created {@link Class}.
      */
-    @objid ("911a1e10-58ca-40b0-9ccf-0b21237899c3")
+    @objid ("fd1be6ef-234d-46bf-9957-c0c5ba095878")
     public static Timer create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Timer.STEREOTYPE_NAME);
@@ -75,34 +75,36 @@ public class Timer extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Timer} proxy or <i>null</i>.
      */
-    @objid ("40527c81-0ee2-4fdf-928d-5f94fb753600")
+    @objid ("8fad0fe9-0421-4965-8974-4c64d2e7150d")
     public static Timer instantiate(final Class obj) {
         return Timer.canInstantiate(obj) ? new Timer(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Timer} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("61cd7e06-b969-4c3e-849a-643e6a53a609")
+    @objid ("a7351d52-7e78-409c-8379-f1cd30f271b2")
     public static Timer safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Timer.canInstantiate(obj))
-        	return new Timer(obj);
+            return new Timer(obj);
         else
-        	throw new IllegalArgumentException("Timer: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Timer: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("86c4d0db-6261-476f-8c57-336429b3345f")
+    @objid ("bcf7581d-7bc3-427d-b1d9-d3d2c866410e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -122,9 +124,8 @@ public class Timer extends FeatureClass {
      * Get the value of the '' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("ce65f2e7-0d6a-45ec-a4ce-e6983a5a0ae3")
+    @objid ("9b9d56d5-641f-4e99-aa87-581890a0f254")
     public Unit get() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Timer.MdaTypes.MDAASSOCDEP)
@@ -137,10 +138,11 @@ public class Timer extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("5c679086-772d-4ac3-bc19-0f6119890f4a")
+    @objid ("6ae9a2d7-ac3b-4ed0-b65b-7f000c055373")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -151,7 +153,7 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6d8925b0-977c-48ed-af24-00d4c983a69d")
+    @objid ("fdc54ee6-1d80-45c0-8dcb-d6ce2f3c4dc0")
     public String getMaxOccurrenceNum() {
         return this.elt.getTagValue(Timer.MdaTypes.MAXOCCURRENCENUM_TAGTYPE_ELT);
     }
@@ -161,7 +163,7 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("690923bf-2b82-4689-8b30-c75fe598b40f")
+    @objid ("90a78d24-f8b9-4794-84cd-7cf91c67ed63")
     public String getTimeValue() {
         return this.elt.getTagValue(Timer.MdaTypes.TIMEVALUE_TAGTYPE_ELT);
     }
@@ -171,12 +173,12 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9e60a137-6885-4e36-8085-5305a4cfb5a6")
+    @objid ("b1497447-5e5c-4ae3-a5f0-1ac6db1e51db")
     public String getType() {
         return this.elt.getTagValue(Timer.MdaTypes.TYPE_TAGTYPE_ELT);
     }
 
-    @objid ("042ce22b-ce77-4a58-92d1-6fe327e80524")
+    @objid ("caaf35e4-ff7d-48ab-8af0-f7e297e34b96")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -186,9 +188,8 @@ public class Timer extends FeatureClass {
      * Set the value of the '' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("72f48e9c-790d-489a-901f-205140e59e9a")
+    @objid ("f6e2694d-9ab8-4434-8f2e-aa75481876cc")
     public void set(final Unit obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -213,7 +214,7 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d5d4352e-28a6-402f-a5ef-b061065b5e81")
+    @objid ("09fcf499-b031-4076-8b2d-840bba822711")
     public void setMaxOccurrenceNum(final String value) {
         this.elt.putTagValue(Timer.MdaTypes.MAXOCCURRENCENUM_TAGTYPE_ELT, value);
     }
@@ -223,7 +224,7 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b45c212c-47d7-4d4a-a085-866ec25ab8b9")
+    @objid ("75f43cd3-a9b5-4c01-8467-c1ba5e0ab3ce")
     public void setTimeValue(final String value) {
         this.elt.putTagValue(Timer.MdaTypes.TIMEVALUE_TAGTYPE_ELT, value);
     }
@@ -233,7 +234,7 @@ public class Timer extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("dc8a9dad-9b84-4ac8-9477-5aa9fe4313a9")
+    @objid ("bc94312f-b893-4cb8-b564-f109d6122d76")
     public void setType(final String value) {
         this.elt.putTagValue(Timer.MdaTypes.TYPE_TAGTYPE_ELT, value);
     }
@@ -245,32 +246,32 @@ public class Timer extends FeatureClass {
         return result;
     }
 
-    @objid ("46f66c69-149c-451e-9ed0-7cc965cf0b06")
+    @objid ("b5c705ff-f4b4-43f9-9eae-2ef090f7eb0e")
     protected Timer(final Class elt) {
         super(elt);
     }
 
     @objid ("93fa2506-690b-41f3-a6df-8e0ad6afab5e")
     public static final class MdaTypes {
-        @objid ("94e586c4-fd6f-4dd6-85c0-f7f18c535618")
+        @objid ("ae2c2401-5a53-4d03-a661-792a007604a2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("323464ca-5baf-40c7-99ee-c73db8323801")
+        @objid ("40646fbf-c685-4d80-a77a-036b8f54bfa4")
         public static TagType TYPE_TAGTYPE_ELT;
 
-        @objid ("95786936-32a5-469c-ae5c-edcad0b8deb9")
+        @objid ("6da7638e-742d-4da4-b513-57d61f9c8a66")
         public static TagType TIMEVALUE_TAGTYPE_ELT;
 
-        @objid ("ad681611-f22f-4e70-916f-457de1277ce4")
+        @objid ("4479aced-cd70-4da8-8d0e-b65245874c4b")
         public static TagType MAXOCCURRENCENUM_TAGTYPE_ELT;
 
-        @objid ("dbf69394-9cd9-4297-be3a-c782d9d40f6e")
+        @objid ("97cf7ce1-6a7b-47f1-a78e-f76f66aa1ecd")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b81e067e-a94e-4985-b728-312fe7c13468")
+        @objid ("31780f4f-4c0b-477f-adae-8fb5ef15b15f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d5e9c498-c58d-4977-97d7-a3d5888dd932")
+        @objid ("8450d571-2b11-498a-83a0-c2afcfa1f406")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ee279c12-3256-430d-b3f9-146318d3e947");
             TYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1442a037-e5a4-4248-bc4d-20d6cc5568e0");
@@ -281,11 +282,11 @@ public class Timer extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

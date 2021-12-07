@@ -1,17 +1,9 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
 import java.util.Map;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Artifact;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.metamodel.uml.statik.ConnectorEnd;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.uml.statik.PortOrientation;
-import org.modelio.vcore.smkernel.mapi.MObject;
 import camel.deployment.DeploymentTypeModel;
 import camel.deployment.ProvidedCommunication;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
@@ -22,13 +14,24 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.ConnectorEnd;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.uml.statik.PortOrientation;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
+@objid ("f334256e-e2e4-4371-a04f-ed274076e208")
 public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
-
+    @objid ("74a5e7ec-5211-4906-858c-3216551224bd")
     public GenerateProcessDeploymentType(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
         super(camelElementParent, processedUmlElements);
     }
 
+    @objid ("684bf8da-da25-49b1-beec-9c054b4b922a")
     @Override
     protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
         ModelElement element = camelElement.getElement();
@@ -64,6 +67,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return null;
     }
 
+    @objid ("d4c22194-df76-429a-a6cd-98b79d1ba492")
     private CDOObject generate(CommunicationPort communicationPort) {
         if(communicationPort.getElement().getDirection().equals(PortOrientation.IN)) {
             camel.deployment.RequiredCommunication requiredCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createRequiredCommunication();
@@ -74,38 +78,38 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
             if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.SoftwareComponent) {
                 ((camel.deployment.SoftwareComponent)this.getCamelElementParent()).getRequiredCommunications().add(requiredCommunication);
             }
-
-
+        
+        
             /*
              * check for Communication Link
              */
             for(MObject umlChild : communicationPort.getElement().getCompositionChildren()) {
                 if (umlChild instanceof ConnectorEnd) {
                     ConnectorEnd connectorEnd = (ConnectorEnd) umlChild;
-
+        
                     if (connectorEnd.getTarget() instanceof Port
                             && ((Port) connectorEnd.getTarget()).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
                                     CommunicationPort.STEREOTYPE_NAME)
                             && ((Port) connectorEnd.getTarget()).getDirection().equals(PortOrientation.OUT)) {
-
+        
                         Port toUmlPort = (Port) connectorEnd.getTarget();
                         camel.deployment.ProvidedCommunication providedCommunication = null;
                         if( this.processedUmlElements.containsKey(toUmlPort)) {
-
+        
                             providedCommunication = (ProvidedCommunication) this.processedUmlElements.get(toUmlPort);
                         } else {
-
+        
                             providedCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createProvidedCommunication();
                             providedCommunication.setName(toUmlPort.getName());
                             this.processedUmlElements.put(toUmlPort,providedCommunication);
-
+        
                         }
-
+        
                         if(providedCommunication != null) {
                             camel.deployment.Communication communication = null;
-
+        
                             if( this.processedUmlElements.containsKey(connectorEnd)) {
-
+        
                                 communication = (camel.deployment.Communication) this.processedUmlElements.get(connectorEnd);
                             } else {
                                 communication = camel.deployment.DeploymentFactory.eINSTANCE.createCommunication();
@@ -115,9 +119,9 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
                                     communication.setRequiredCommunication(requiredCommunication);
                                 }
                                 this.processedUmlElements.put(connectorEnd,communication);
-
+        
                             }
-
+        
                             /*
                              * Add communication to parent : deploymentTypeModel
                              */
@@ -135,7 +139,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
                 }
             }
             return requiredCommunication;
-
+        
         } else if (communicationPort.getElement().getDirection().equals(PortOrientation.OUT)) {
             camel.deployment.ProvidedCommunication providedCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createProvidedCommunication();
             providedCommunication.setName(communicationPort.getElement().getName());
@@ -150,6 +154,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return null;
     }
 
+    @objid ("3d2a3854-a85e-4ed3-b81e-dbc4b5e04c0a")
     private CDOObject generate(HostingPort hostingPortProxy) {
         if(hostingPortProxy.getElement().getDirection().equals(PortOrientation.IN)) {
             camel.deployment.RequiredHost requiredHost = camel.deployment.DeploymentFactory.eINSTANCE.createRequiredHost();
@@ -169,10 +174,11 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return null;
     }
 
+    @objid ("8a38da90-2770-4305-b3d9-082f03fbb7aa")
     private CDOObject generate(ScriptConfiguration scriptConfigurationProxy) {
         camel.deployment.ScriptConfiguration scriptConfiguration = camel.deployment.DeploymentFactory.eINSTANCE.createScriptConfiguration();
         scriptConfiguration.setName(scriptConfigurationProxy.getElement().getName());
-
+        
         if(scriptConfigurationProxy.getDownloadCommandNote() != null) {
             scriptConfiguration.setDownloadCommand(scriptConfigurationProxy.getDownloadCommandNote());
         }
@@ -197,21 +203,22 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         if(scriptConfigurationProxy.getDownloadCommandNote() != null) {
             scriptConfiguration.setDownloadCommand(scriptConfigurationProxy.getDownloadCommandNote());
         }
-
-
+        
+        
         if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.Component) {
             ((camel.deployment.SoftwareComponent)this.getCamelElementParent()).getConfigurations().add(scriptConfiguration);
         }
         return scriptConfiguration;
     }
 
+    @objid ("32e44a3c-ec34-4196-90ad-1b05fc459f48")
     private CDOObject generate(RequirementSet requirementSetProxy) {
         camel.deployment.RequirementSet requirementSet = camel.deployment.DeploymentFactory.eINSTANCE.createRequirementSet();
         requirementSet.setName(requirementSetProxy.getElement().getName());
         if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.DeploymentTypeModel) {
             ((camel.deployment.DeploymentTypeModel)this.getCamelElementParent()).getRequirementSets().add(requirementSet);
         }
-
+        
         /*
          * Retrieve requirements links
          */
@@ -272,6 +279,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return requirementSet;
     }
 
+    @objid ("0bd5c125-42f6-4cb5-8db0-7cc0e85262b4")
     private CDOObject generate(VM vmProxy) {
         camel.deployment.VM vM = camel.deployment.DeploymentFactory.eINSTANCE.createVM();
         vM.setName(vmProxy.getElement().getName());
@@ -281,6 +289,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return vM;
     }
 
+    @objid ("4e2b626b-409f-4345-baba-29dc5b1c7320")
     private CDOObject generate(PaaS paaSProxy) {
         camel.deployment.PaaS paaS = camel.deployment.DeploymentFactory.eINSTANCE.createPaaS();
         paaS.setName(paaSProxy.getElement().getName());
@@ -290,6 +299,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return paaS;
     }
 
+    @objid ("3652cfcc-31d2-4306-be83-a065194ea399")
     private CDOObject generate(Container containerProxy) {
         camel.deployment.Container container = camel.deployment.DeploymentFactory.eINSTANCE.createContainer();
         container.setName(containerProxy.getElement().getName());
@@ -299,10 +309,11 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return container;
     }
 
+    @objid ("14dfbd7c-06a6-490a-9fa5-b24292deaed8")
     private CDOObject generate(SoftwareComponent softwareComponentProxy) {
         camel.deployment.SoftwareComponent softwareComponent = camel.deployment.DeploymentFactory.eINSTANCE.createSoftwareComponent();
         softwareComponent.setName(softwareComponentProxy.getElement().getName());
-
+        
         if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.DeploymentTypeModel) {
             ((camel.deployment.DeploymentTypeModel)this.getCamelElementParent()).getSoftwareComponents().add(softwareComponent);
         }
@@ -315,6 +326,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return softwareComponent;
     }
 
+    @objid ("8606ef48-b79f-4161-8e9c-d362d10087bf")
     private camel.deployment.RequirementSet retrieveReferencedRequirementSet(RequirementSet requirementSetProxy) {
         camel.deployment.RequirementSet referencedRequirementSet = null;
         if(this.processedUmlElements.containsKey(requirementSetProxy.getElement())) {
@@ -326,6 +338,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return referencedRequirementSet;
     }
 
+    @objid ("e5a640df-b126-4ef1-8ec9-4ffe79d1f8ba")
     private camel.requirement.Requirement retrieveReferencedRequirement(Requirement requirementProxy) {
         camel.requirement.Requirement referencedRequirement = null;
         if(this.processedUmlElements.containsKey(requirementProxy.getElement())) {
@@ -337,6 +350,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         return referencedRequirement;
     }
 
+    @objid ("6260eba4-5b15-41ed-8b0d-85ed198d68a1")
     @Override
     protected void updateParent(CDOObject processedElement) {
         if(this.getCamelElementParent() instanceof camel.deployment.DeploymentTypeModel) {
@@ -363,7 +377,7 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
             } else if(processedElement instanceof camel.deployment.ScriptConfiguration) {
                 ((camel.deployment.SoftwareComponent)this.getCamelElementParent()).getConfigurations().add((camel.deployment.ScriptConfiguration) processedElement);
             }
-
+        
         }
     }
 
