@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -23,7 +24,7 @@ public class CreateDeploymentInstanceModelTool extends CreateSubModelTool {
         IModuleContext moduleContext = CamelDesignerModule.getInstance().getModuleContext();
         IModelingSession session = moduleContext.getModelingSession();
         
-        try( ITransaction transaction = session.createTransaction("Create Data Instance Model")){
+        try( ITransaction transaction = session.createTransaction("Create Deployment Instance Model")){
         
             DeploymentInstanceModel subModel = DeploymentInstanceModel.create();
             DeploymentInstanceModelDiagram diagram = DeploymentInstanceModelDiagram.create();
@@ -31,9 +32,10 @@ public class CreateDeploymentInstanceModelTool extends CreateSubModelTool {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
-            subModel.setDefaultName("Data Instance Model");
-            diagram.setDefaultName("Data Instance Diagram");
+            subModel.setDefaultName("Deployment Instance Model");
+            diagram.setDefaultName("Deployment Instance Diagram");
         
+            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();
         }

@@ -12,6 +12,8 @@ import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Package;
 
 /**
  * @author kchaabouni
@@ -20,10 +22,18 @@ import org.modelio.metamodel.diagrams.AbstractDiagram;
 public abstract class CreateSubModelTool extends DefaultBoxTool {
     @objid ("af2b339a-4f9c-4d67-b8f7-5ca301eb6362")
     public boolean acceptElement(final IDiagramGraphic targetNode) {
-        return
-                targetNode.getElement() instanceof org.modelio.metamodel.uml.statik.Package
-                && ((org.modelio.metamodel.uml.statik.Package) targetNode.getElement())
-                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME);
+        //        ModelElement graphicOwner = (ModelElement)targetNode.getElement();
+        //        ModelElement owner =  null;
+        //        if(graphicOwner instanceof AbstractDiagram) {
+        //            owner = ((AbstractDiagram)graphicOwner).getOrigin();
+        //        }else {
+        //            owner = graphicOwner;
+        //        }
+        //        
+        //        return owner instanceof Package
+        //                && ((org.modelio.metamodel.uml.statik.Package) owner)
+        //                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME);
+        return true;
     }
 
     @objid ("c416efa7-7d50-45ed-b447-b2fb0ef61619")

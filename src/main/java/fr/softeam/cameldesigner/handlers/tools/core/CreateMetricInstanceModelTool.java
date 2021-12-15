@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -33,7 +34,7 @@ public class CreateMetricInstanceModelTool extends CreateSubModelTool {
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName(" Metric Instance Model");
             diagram.setDefaultName(" Metric Instance Diagram");
-        
+            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();
         }

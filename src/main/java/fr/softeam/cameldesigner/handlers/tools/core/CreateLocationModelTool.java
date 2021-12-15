@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram;
 import fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -34,6 +35,7 @@ public class CreateLocationModelTool extends CreateSubModelTool {
             subModel.setDefaultName(" Location Model");
             diagram.setDefaultName(" Location Diagram");
         
+            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();
         }
