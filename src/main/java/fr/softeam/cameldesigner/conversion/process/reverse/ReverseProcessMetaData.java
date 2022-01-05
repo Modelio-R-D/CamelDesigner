@@ -3,15 +3,19 @@ package fr.softeam.cameldesigner.conversion.process.reverse;
 import java.util.Map;
 import camel.mms.MmsConcept;
 import camel.mms.MmsProperty;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
+@objid ("104404a1-1c4c-4de7-9c51-f1739f69052d")
 public class ReverseProcessMetaData extends AbstractReverseProcess {
+    @objid ("695d1667-fac4-4f0c-891f-a906178c1f1f")
     public ReverseProcessMetaData(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {
         super(umlElementParent, processedCamelElements);
     }
 
+    @objid ("3f8f1312-6d19-45b5-93c5-f28bb6e1826f")
     private fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty reverse(MmsProperty element) {
         fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty proxyMmsProperty = fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty.create();
         if(element.getId()!=null) {
@@ -26,6 +30,7 @@ public class ReverseProcessMetaData extends AbstractReverseProcess {
         return proxyMmsProperty;
     }
 
+    @objid ("f9ee1ff5-9ec5-41b5-afce-0b7da1d2a263")
     private fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept reverse(MmsConcept element) {
         fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept proxyMmsConcept = fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept.create();
         if(element.getId()!=null) {
@@ -37,6 +42,7 @@ public class ReverseProcessMetaData extends AbstractReverseProcess {
         return  proxyMmsConcept;
     }
 
+    @objid ("8c5fdae0-c585-4b5a-8638-6f20310a95d9")
     @Override
     public CamelElement switchReverse(CDOObject element) {
         if(element instanceof MmsConcept) {

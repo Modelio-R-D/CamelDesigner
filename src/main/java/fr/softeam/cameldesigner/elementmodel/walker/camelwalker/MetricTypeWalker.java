@@ -1,13 +1,17 @@
 package fr.softeam.cameldesigner.elementmodel.walker.camelwalker;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.reverse.AbstractReverseProcess;
 
+@objid ("89aebb37-c46a-48de-8dd5-4338e0e94c39")
 public class MetricTypeWalker extends AbstractCamelWalker {
+    @objid ("54106300-6373-4052-b2f7-fbddc9d93e38")
     public MetricTypeWalker(AbstractReverseProcess reverseProcess) {
         this.reverseProcess = reverseProcess;
     }
 
+    @objid ("310c930d-d48f-49bb-9672-9dc27853cc09")
     @Override
     protected void walkChildren(Object processedElement, CamelElement resultedElement) {
         if( processedElement instanceof camel.metric.MetricTypeModel) {

@@ -1,26 +1,6 @@
-/*
- * Copyright 2013 Modeliosoft
- *
- * This file is part of Modelio.
- *
- * Modelio is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Modelio is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Modelio.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
-
-
 package fr.softeam.cameldesigner.ui.composite;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.layout.GridData;
@@ -28,25 +8,26 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
-
 /**
  * This class defines the file chooser composite.
  * This composite is composed of
  * - a text field in order to specify the desired file
  * - a file browser button for allowing file browsing
- *
+ * 
  * It is a SWT composite
  * @author ebrosse
  */
-
+@objid ("9859ccc1-0a19-4638-916e-87f11d0e3c85")
 public class NameComposite extends Composite {
-
+    @objid ("46d7b89c-e1a0-4bc2-a7eb-b7d46acaae4c")
     private Text text = null;
 
     /**
      * This method sets the label of the composite
+     * 
      * @param label : the label of the composite
      */
+    @objid ("87e07d7b-a95a-49ad-a355-c976bcb1b49f")
     public void setText(final String label) {
         if (label != null)
             this.text.setText(label);
@@ -58,10 +39,12 @@ public class NameComposite extends Composite {
      * - the parent composite
      * - its SWT style
      * - the selection type of the SWT FileDialog
+     * 
      * @param parent : the SWT composite owner
      * @param style : the SWT style
      * @param typeSelection : the SWT selection type
      */
+    @objid ("1662eb40-1286-4d01-bea4-e09df28383ce")
     public NameComposite(final Composite parent, final int style, final int typeSelection) {
         super(parent, style);
         setLayout(new FormLayout());
@@ -75,19 +58,22 @@ public class NameComposite extends Composite {
 
     /**
      * This methods returns the text available in the SWT FileDialog
+     * 
      * @return the text of the FileDialog
      */
+    @objid ("20a1256e-1657-454c-82b0-3763d1ffe884")
     public String getText() {
         return this.text.getText();
     }
 
     /**
      * This method returns the SWT Text owned by the FileChooserComposite
+     * 
      * @return the owned SWT TEXT
      */
+    @objid ("2c50221d-669a-4988-90fe-20520665fcd6")
     public Text getTextButton() {
         return this.text;
     }
-
 
 }

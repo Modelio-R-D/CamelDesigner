@@ -28,15 +28,19 @@
  **/
 package fr.softeam.cameldesigner.handlers.propertypages;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 
 /**
  * This abstract class defines the contract of all property pages
  * @author ebrosse
  */
+@objid ("8235ea2c-105a-4c92-8d60-34227355cf3b")
 public abstract class AbstractPropertyContent<T extends CamelElement> {
+    @objid ("27c5cd97-e944-4c35-879c-05fd182b5135")
     protected T elt;
 
+    @objid ("7a889238-da6b-40a9-883e-c0cab41976d0")
     public AbstractPropertyContent(T elt) {
         this.elt = elt;
     }

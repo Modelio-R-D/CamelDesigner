@@ -1,20 +1,20 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
-import java.util.Map;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Package;
-import camel.core.CamelModel;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 
-public class GenerateProcessSecurity extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement, CDOObject>  {
-    public GenerateProcessSecurity(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
-        super(camelElementParent, processedUmlElements);
+@objid ("563d466c-c6ef-45f4-a418-fdf221a1e784")
+public class GenerateProcessSecurity extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement,CDOObject> {
+    @objid ("29b5e1c8-72d0-4eaa-8f17-dc20ded4d2ca")
+    public GenerateProcessSecurity(CDOObject camelElementParent) {
+        super(camelElementParent);
     }
 
+    @objid ("9cd2be0a-64de-481f-ac3b-397aa62b9694")
     @Override
     protected CDOObject switchGenerate(fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement camelElement) {
         ModelElement element = camelElement.getElement();
@@ -30,35 +30,39 @@ public class GenerateProcessSecurity extends AbstractGenerateProcess<fr.softeam.
         return null;
     }
 
+    @objid ("39c5e748-f09e-40de-9fab-c74726a65dea")
     private CDOObject generate(Package umlPackage) {
-        if(this.processedUmlElements.containsKey(umlPackage)) {
-            return this.processedUmlElements.get(umlPackage);
-        } else {
-            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                    DeploymentTypeModel.STEREOTYPE_NAME)) {
-                // factory
-                camel.deployment.DeploymentTypeModel deploymentTypeModel = camel.deployment.DeploymentFactory.eINSTANCE.createDeploymentTypeModel();
-                // set name
-                deploymentTypeModel.setName(umlPackage.getName());
-                // update parent
-                CamelModel camelModelParent = (CamelModel) this.getCamelElementParent();
-                camelModelParent.getDeploymentModels().add(deploymentTypeModel);
-                //
-                return deploymentTypeModel;
-            }
-
-        }
+        //        if(this.processedUmlElements.containsKey(umlPackage)) {
+        //            return this.processedUmlElements.get(umlPackage);
+        //        } else {
+        //            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
+        //                    DeploymentTypeModel.STEREOTYPE_NAME)) {
+        //                // factory
+        //                camel.deployment.DeploymentTypeModel deploymentTypeModel = camel.deployment.DeploymentFactory.eINSTANCE.createDeploymentTypeModel();
+        //                // set name
+        //                deploymentTypeModel.setName(umlPackage.getName());
+        //                // update parent
+        //                CamelModel camelModelParent = (CamelModel) this.getCamelElementParent();
+        //                camelModelParent.getDeploymentModels().add(deploymentTypeModel);
+        //                //
+        //                return deploymentTypeModel;
+        //            }
+        //
+        //        }
         return null;
     }
 
+    @objid ("45d21cb4-9711-403e-9a2b-8cc367dd425f")
     private CDOObject generate(Component umlComponent) {
         return null;
     }
 
+    @objid ("05712a8f-aae0-4864-8f3d-a45faae5b66b")
     private CDOObject generate(Class umlClass) {
         return null;
     }
 
+    @objid ("31177c4a-df67-475e-a3fa-38a0c2cb88d0")
     @Override
     protected void updateParent(CDOObject processedElement) {
         // TODO Auto-generated method stub

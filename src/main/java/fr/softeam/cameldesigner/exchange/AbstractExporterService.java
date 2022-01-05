@@ -30,13 +30,12 @@ public abstract class AbstractExporterService {
 
     @objid ("86a9eda7-eff9-4f95-a189-c5b5ec63be29")
     public void exportCamelUMLModelToFile(fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel camelUMLModel, String filePath) {
-
         CamelModel camelModel = generateCamelModelRoot(camelUMLModel);
 
         Map<ModelElement, CDOObject> processedUmlElements = new HashMap<>();
         processedUmlElements.put(camelUMLModel.getElement(), camelModel);
 
-        GenerateProcess generateProcess = new GenerateProcess(null, processedUmlElements);
+        GenerateProcess generateProcess = new GenerateProcess(camelModel);
 
         IWalker<CamelElement> umlWalker = new UmlWalker (generateProcess);
         umlWalker.walk(camelUMLModel);

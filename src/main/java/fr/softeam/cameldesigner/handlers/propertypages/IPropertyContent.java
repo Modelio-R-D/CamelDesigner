@@ -28,27 +28,31 @@
  **/
 package fr.softeam.cameldesigner.handlers.propertypages;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 /**
  * This interface defines the contract of all property pages
  * @author ebrosse
  */
+@objid ("ee7a81b5-f2fe-42da-a719-df007001742c")
 public interface IPropertyContent {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     *
+     * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
+    @objid ("9d73477e-d053-464d-8dba-c66493b0655e")
     void changeProperty(int row, String value);
 
     /**
      * This method handles the construction of the property table of a selected element
-     *
+     * 
      * @param table : the property table to fulfill
      */
+    @objid ("173f3cf3-79e2-4d27-b375-6fd86210bbcd")
     void update(IModulePropertyTable table);
 
 }

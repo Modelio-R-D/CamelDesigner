@@ -1,0 +1,292 @@
+camel model FCRnew{
+    application FCRwithDLMSApp{
+        version '2.0'
+    }
+    deployment type model FCRDeployment{
+        software Component_App{
+            requirements AppRequirementSet
+            required host WM_AppHostReq
+            script configuration ComponentAppConfiguration{
+                download 'rm -rf ~/melodic && mkdir ~/melodic && cd ~/melodic && wget https://s3-eu-west-1.amazonaws.com/melodic.testing.data/FCR/vms/mel1/FCRAPP.sh && chmod +x ~/melodic/FCRAPP.sh'
+                configure 'mkdir ~/test2 && sudo ~/melodic/FCRAPP.sh install'
+                start 'printenv >> ~/melodic/env.txt && ~/melodic/FCRAPP.sh start'
+            }
+
+            provided communication ComponentAppPort port 8087
+            required communication ComponentPortDbReq port 3306 mandatory
+        }
+        software Component_LB {
+            [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Unmoveable]
+            requirements LBRequirementSet
+            required host WM_LBHostReq
+            script configuration ComponentLBConfiguration{
+                download 'sudo service tomcat7 stop && rm -rf ~/load_balancer && mkdir ~/load_balancer && cd ~/load_balancer && wget https://s3-eu-west-1.amazonaws.com/melodic.testing.data/FCR/vms/mel1/load_balancer.sh && chmod +x ~/load_balancer/load_balancer.sh && printenv >> ~/load_balancer/lb_download_env.txt'
+                install 'printenv >> ~/load_balancer/lb_install_env.txt'
+                configure 'printenv >> ~/load_balancer/lb_config_env.txt && export PUBLIC_APP_IPS=($PUBLIC_ComponentPortAppReq) && sudo ~/load_balancer/load_balancer.sh install ${PUBLIC_APP_IPS[@]} && mkdir ~/test2'
+                start 'printenv >> ~/load_balancer/lb_start_env.txt && sudo ~/load_balancer/load_balancer.sh start'
+                update 'printenv >> ~/load_balancer/communication_lb_env.txt && sudo ~/load_balancer/load_balancer.sh configure $PUBLIC_ComponentPortAppReq && sudo ~/load_balancer/load_balancer.sh start'
+
+            }
+
+            provided communication ComponentLBPort port 8087
+            required communication ComponentPortAppReq port 8087
+        }
+        software Component_DB{
+            [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Unmoveable]
+            data source [ FCR_DS_DataModel.TenantMySQLDS]
+            requirements DBRequirementSet
+            required host WM_DBHostReq
+            script configuration ComponentDBConfiguration{
+                download 'rm -rf ~/melodic && mkdir ~/melodic && cd ~/melodic && wget https://s3-eu-west-1.amazonaws.com/melodic.testing.data/FCR/FCRDB.sh && chmod +x ~/melodic/FCRDB.sh'
+                install '~/melodic/FCRDB.sh install'
+                configure '~/melodic/FCRDB.sh configure'
+                start '~/melodic/FCRDB.sh start'
+            }
+            provided communication ComponentDBPort port 3306
+            longLived
+        }
+        communication AppToDB from Component_App.ComponentPortDbReq to Component_DB.ComponentDBPort
+        communication  LBToApp from  Component_LB.ComponentPortAppReq to Component_App.ComponentAppPort
+        requirements AppRequirementSet{
+            resource FCR_Requirement.AppReqs
+            horizontal scale FCR_Requirement.HorizontalScaleFCRWApp
+            provider FCR_Requirement.PublicRequirement
+            image FCR_Requirement.FCRimage
+        }
+        requirements DBRequirementSet{
+            resource FCR_Requirement.DBReqs
+            horizontal scale FCR_Requirement.HorizontalScaleFCRDB
+ 			image FCR_Requirement.Ubuntu18
+
+        }
+        requirements LBRequirementSet{
+            resource FCR_Requirement.LBReqs
+            horizontal scale FCR_Requirement.HorizontalScaleFCRLB
+            provider FCR_Requirement.PublicRequirement
+            image FCR_Requirement.FCRimage
+        }
+    }
+    requirement model FCR_Requirement{
+
+        resource requirement AppReqs{
+            feature coresApp{
+            [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU]
+                attribute minCoresApp [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMinNumberofCores]: int 1
+                attribute maxCoresApp [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMaxNumberofCores]: int 2
+            }
+            feature ramApp{
+            [ MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM]
+                attribute minRamApp [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMin ]: int 8100
+                attribute maxRamApp [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMax]: int 10072
+            }
+        }
+        resource requirement DBReqs{
+            feature coresDB{
+            [ MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU]
+                attribute minCoresDB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMinNumberofCores]: int 1
+                attribute maxCoresDB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMaxNumberofCores]: int 2
+            }
+            feature ramDB{
+            [ MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM]
+                attribute minRamDB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMin]: int 1024
+                attribute maxRamDB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMax]: int 3100
+            }
+        }
+        resource requirement LBReqs{
+            feature coresLB{
+            [ MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU]
+                attribute minCoresLB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMinNumberofCores]: int 1
+                attribute maxCoresLB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU.hasMaxNumberofCores]: int 1
+            }
+            feature ramLB{
+            [ MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM]
+                attribute minRamLB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMin]: int 1024
+                attribute maxRamLB [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.RAM.TotalMemory.totalMemoryHasMax]: int 1030
+            }
+        }
+        horizontal scale requirement HorizontalScaleFCRWApp [1,10]
+        horizontal scale requirement HorizontalScaleFCRDB [1,1]
+        horizontal scale requirement HorizontalScaleFCRLB [1,1]
+
+        image requirement FCRimage ['fcr-RC-3.0-ami-UBUNTU-16.04-AMD64-LINUX_20200114-1']
+        image requirement Ubuntu18 ['ubuntu-bionic-18.04-amd64-server-20200114.1-disabled-unattented-upgrades-nmap', 'ubuntu-1804']
+
+        slo GlobalReconfigurationRule constraint FCRConstraintModel.ResponseTimeTooLowOrTooHigh
+
+        optimisation requirement maxUtility{
+           variable FCRMetricModel.Utility
+       }
+
+       os requirement UbuntuRequirement{
+           os 'UBUNTU'
+           64os
+           attribute ubuntu16 [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.PaaS.Environment.OSVersion]: string '1604'
+       }
+
+
+        provider requirement PublicRequirement{
+            cloud type public
+        }
+        location requirement EuRequirement [Locations.Europe]
+        }
+    data type model FCR_DS_DataModel{
+        data source TenantMySQLDS {
+            component FCRDeployment.Component_DB
+        }
+        data GlobalMySQL{
+            [MetaDataModel.MELODICMetadataSchema.Big_DataModel.DataManagement.DataStorage.DatabaseManagementSystems.RelationalStorage.RDBMS.MySQL]
+            source TenantMySQLDS
+        }
+    }
+    organisation model BullsOrganisation {
+        organisation Bulls{
+            email "contact@7bulls.com"
+            www "http://www.7bulls.com"
+        }
+        user johndoe{
+            first name John
+            last name Doe
+            email "john.doe@example.com"
+            platform credentials ExamplePassword: testtest123
+        }
+    }
+    metric type model FCRMetricModel{
+        measurable attribute utility
+        measurable attribute cardinality [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Cardinality]
+        measurable attribute price [ MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Cost]
+        measurable attribute responseTime sensors [FCRMetricModel.ResponseTime_Sensor]
+        measurable attribute dlmsDataCentre [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Utility.DLMSUtility.DataCentreAwareness]
+        measurable attribute cores [MetaDataModel.MELODICMetadataSchema.ApplicationPlacementModel.IaaS.Processing.CPU]
+        measurable attribute latitude [MetaDataModel.MELODICMetadataSchema.ContextAwareSecurityModel.Coordinates.latitude]
+		measurable attribute longitude [MetaDataModel.MELODICMetadataSchema.ContextAwareSecurityModel.Coordinates.longitude]
+        sensor ResponseTime_Sensor {
+            isPush
+            config '12345'
+        }
+        measurable attribute cardinality [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Cardinality]
+        template CardinalityTemplate{
+            attribute cardinality
+            unit UnitTemplateCamelModel.UnitTemplateModel.Instances
+            value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToHundredInteger
+        }
+        template PriceTemplate{
+            attribute price
+            unit UnitTemplateCamelModel.UnitTemplateModel.Euros
+            value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+        }
+        template RawResponseTimeTemplate{
+            attribute responseTime
+            unit UnitTemplateCamelModel.UnitTemplateModel.MilliSeconds
+            value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityInteger
+        }
+        template DataCentreTemplate{
+            attribute dlmsDataCentre
+            unit FCRDLMSUnitModel.DataCentreUnit
+            value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+        }
+        template CoresTemplate{
+            attribute cores
+            unit UnitTemplateCamelModel.UnitTemplateModel.Cores
+            value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityInteger
+        }
+        template LocationLatitudeTemplate{
+			attribute latitude
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template LocationLongitudeTemplate{
+			attribute longitude
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+        raw metric AppResponseTime{
+            template RawResponseTimeTemplate
+        }
+        raw metric context RawResponseTimeContext{
+            metric AppResponseTime
+            sensor FCRMetricModel.ResponseTime_Sensor
+            window ResponseTimeWindow
+            schedule ResponseTimeSchedule
+            object context ResponseTimeContext
+        }
+        window ResponseTimeWindow{
+            type sliding
+            size type time-only
+            time size 30
+            time unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+        }
+        schedule ResponseTimeSchedule{
+            interval 5
+            time unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+        }
+        schedule AvgResponseTimeSchedule{
+            interval 30
+            time unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+        }
+        object context ResponseTimeContext{
+            component FCRDeployment.Component_App
+        }
+        composite metric AvgResponseTime{
+            template MetricTemplateCamelModel.MetricTemplateModel.ResponseTimeTemplate
+            formula: ('mean(AppResponseTime)')
+        }
+        composite metric context AverageResponseTimeContext{
+            metric AvgResponseTime
+            grouping global
+            window ResponseTimeWindow
+            schedule AvgResponseTimeSchedule
+            composing contexts [RawResponseTimeContext]
+            //object context ResponseTimeContext
+        }
+        variable AppCardinality{
+            template CardinalityTemplate
+            component FCRDeployment.Component_App
+        }
+        variable AppActCardinality{
+            template CardinalityTemplate
+            component FCRDeployment.Component_App
+            current-config
+        }
+        variable AppActPrice{
+            template PriceTemplate
+            component FCRDeployment.Component_App
+            current-config
+        }
+        variable AppPrice{
+            template PriceTemplate
+            component FCRDeployment.Component_App
+        }
+        variable UtilityDataCentre{
+            template DataCentreTemplate
+            component FCRDeployment.Component_DB
+        }
+        variable AppLatitude{
+			template LocationLatitudeTemplate
+			component FCRDeployment.Component_App
+
+		}
+		variable AppLongitude {
+			template LocationLongitudeTemplate
+			component FCRDeployment.Component_App
+		}
+        
+//      utility function
+        variable Utility{
+            template MetricTemplateCamelModel.MetricTemplateModel.UtilityTemplate
+            formula:('0.1 * (-4.5 * (AppActCardinality * AvgResponseTime/AppCardinality/100)^2 + 4.5 * (AppActCardinality * AvgResponseTime/AppCardinality/100)) + 0.1 * ((AppActCardinality/AppActPrice)/(AppCardinality*AppPrice))+ 0.8* (1 - UtilityDataCentre)')
+        }
+    }
+    constraint model FCRConstraintModel{
+        metric constraint AverageResponseTimeTooHigh : [FCRMetricModel.AverageResponseTimeContext ] >  100.0
+        metric constraint AverageResponseTimeTooLow : [FCRMetricModel.AverageResponseTimeContext ] <  10.0
+        logical constraint ResponseTimeTooLowOrTooHigh : or (AverageResponseTimeTooHigh, AverageResponseTimeTooLow)
+    }
+    unit model FCRDLMSUnitModel{
+        single unit DataCentreUnit{
+            dimension DataCentreDimension
+        }
+        dimension DataCentreDimension{
+        }
+    }
+}

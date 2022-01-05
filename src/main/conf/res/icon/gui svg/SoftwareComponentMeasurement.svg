@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="SoftwareComponentMeasurement.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\SoftwareComponentMeasurement_48.png"
+   inkscape:export-xdpi="36.072632"
+   inkscape:export-ydpi="36.072632">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="122.84746"
+     inkscape:cy="75.021061"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     style="fill:#aaffc3;fill-opacity:1;stroke-width:0.202048"
+     d="m 38.534494,128.56846 c -3.176343,-0.56351 -6.259862,-2.26763 -8.167187,-4.51362 C 29.55233,123.09514 26.424228,117.37523 15.85799,97.523752 1.0699075,69.740404 1.0568305,69.715196 0.56043247,68.03319 0.02993647,66.235644 0.00666547,62.788144 0.51228547,60.901389 0.80277347,59.81742 4.4929985,52.272602 14.048622,33.225758 26.728916,7.9506405 27.234283,6.9841737 28.586187,5.4241646 30.20178,3.5598693 32.193698,2.3225994 34.726044,1.6104313 36.198356,1.1963739 36.891518,1.1859736 62.811381,1.1890425 c 28.942115,0.00346 27.555265,-0.051665 30.335515,1.2049756 1.81728,0.821391 3.63914,2.1654421 4.731692,3.4907287 0.66684,0.8088912 5.136192,8.9800932 14.896322,27.2345632 7.669,14.343437 14.12787,26.597751 14.35304,27.231832 0.97213,2.737616 1.01765,6.353161 0.11388,9.045318 -0.20033,0.596725 -6.26268,12.864322 -13.4719,27.261312 -10.28961,20.548658 -13.32367,26.441048 -14.112442,27.407558 -1.29728,1.5896 -3.254752,2.94675 -5.524692,3.83042 l -1.8097,0.7045 -26.65388,0.0267 c -14.659629,0.0147 -26.870257,-0.0117 -27.134724,-0.0585 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\DataMeasurement_48.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+  <g
+     id="g178"
+     transform="matrix(0.06508946,0,0,0.06347719,87.62234,97.264167)"
+     style="fill:#1a1a1a">
+    <path
+       d="M 183.801,219.469 C 216.195,225.795 249,211.406 249,196 c 0,-11.801 -20.955,-25 -49,-25 -26.242,0 -49,12.319 -49,25 0,9.737 14.102,19.827 32.801,23.469 z"
+       id="path170"
+       style="fill:#1a1a1a" />
+    <path
+       d="M 342.54,293 H 399 V 256.809 C 382.912,272.025 362.635,283.917 342.54,293 Z"
+       id="path172"
+       style="fill:#1a1a1a" />
+    <path
+       d="m 45.367,250.197 c 27.787,17.054 65.187,30.906 102.608,38.005 C 262.345,309.932 399,252.573 399,196 399,160.65 377.304,127.975 337.907,103.993 300.836,81.428 251.859,69 200,69 93.225,69 0,122.702 0,196 c 0,17.391 16.757,36.638 45.367,54.197 z m 76.293,-61.47 C 126.685,161.083 159.634,141 200,141 c 44.299,0 79,24.159 79,55 0,30.841 -34.701,55 -79,55 -7.47,0 -14.852,-0.701 -21.941,-2.086 C 143.933,242.268 121,221.002 121,196 c 0,-2.438 0.223,-4.886 0.66,-7.273 z"
+       id="path174"
+       style="fill:#1a1a1a" />
+    <path
+       d="m 200,323 c -19.641,0 -39.027,-1.791 -57.62,-5.324 C 95.29,308.743 35.318,287.039 0,254.41 V 348 c 0,28.588 20.419,54.918 55.683,74.142 19.902,10.844 41.913,17.638 65.423,20.193 1.133,0.123 0.205,0.083 23.895,0.12 v -54.031 c 0,-8.077 6.207,-15.027 14.275,-15.407 C 167.889,372.611 175,379.475 175,388 v 54.501 l 50,0.078 v -54.155 c 0,-8.077 6.207,-15.027 14.275,-15.407 C 247.889,372.611 255,379.475 255,388 v 54.625 l 50,0.078 v -54.279 c 0,-8.077 6.207,-15.027 14.275,-15.407 C 327.889,372.611 335,379.475 335,388 v 54.75 l 50,0.078 v -54.404 c 0,-8.077 6.207,-15.027 14.275,-15.407 C 407.889,372.611 415,379.475 415,388 v 54.874 L 496.977,443 C 504.825,443 512,436.854 512,427.744 V 338 c 0,-8.284 -6.716,-15 -15,-15 z"
+       id="path176"
+       style="fill:#1a1a1a" />
+  </g>
+  <g
+     id="g255"
+     transform="matrix(1.7175141,0,0,1.4236336,7.4124346,11.802518)"
+     style="fill:#1a1a1a">
+    <path
+       d="m 55.71,14.29 -2,-2 A 1.033,1.033 0 0 0 53,12 H 52 V 3 A 1,1 0 0 0 51,2 h -5 a 1,1 0 0 0 -1,1 v 9 H 41 V 3 A 1,1 0 0 0 40,2 h -5 a 1,1 0 0 0 -1,1 v 9 H 30 V 3 A 1,1 0 0 0 29,2 h -5 a 1,1 0 0 0 -1,1 v 9 H 19 V 3 A 1,1 0 0 0 18,2 h -5 a 1,1 0 0 0 -1,1 v 9 h -1 a 1.033,1.033 0 0 0 -0.71,0.29 l -2,2 A 1.033,1.033 0 0 0 8,15 v 34 a 1.033,1.033 0 0 0 0.29,0.71 l 2,2 A 1.033,1.033 0 0 0 11,52 h 1 v 9 a 1,1 0 0 0 1,1 h 5 a 1,1 0 0 0 1,-1 v -9 h 4 v 9 a 1,1 0 0 0 1,1 h 5 a 1,1 0 0 0 1,-1 v -9 h 4 v 9 a 1,1 0 0 0 1,1 h 5 a 1,1 0 0 0 1,-1 v -9 h 4 v 9 a 1,1 0 0 0 1,1 h 5 a 1,1 0 0 0 1,-1 v -9 h 1 a 1.033,1.033 0 0 0 0.71,-0.29 l 2,-2 A 1.033,1.033 0 0 0 56,49 V 15 A 1.033,1.033 0 0 0 55.71,14.29 Z M 47,4 h 3 v 2 h -3 z m 0,4 h 3 v 4 H 47 Z M 36,4 h 3 v 2 h -3 z m 0,4 h 3 v 4 H 36 Z M 25,4 h 3 v 2 h -3 z m 0,4 h 3 v 4 H 25 Z M 14,4 h 3 v 2 h -3 z m 0,4 h 3 v 4 h -3 z m 3,52 h -3 v -2 h 3 z m 0,-4 h -3 v -4 h 3 z m 11,4 h -3 v -2 h 3 z m 0,-4 h -3 v -4 h 3 z m 11,4 h -3 v -2 h 3 z m 0,-4 h -3 v -4 h 3 z m 11,4 h -3 v -2 h 3 z m 0,-4 h -3 v -4 h 3 z M 54,48.59 52.59,50 H 11.41 L 10,48.59 V 15.41 L 11.41,14 H 52.59 L 54,15.41 Z"
+       id="path239"
+       style="fill:#1a1a1a" />
+    <path
+       d="M 52,15 H 12 a 1,1 0 0 0 -1,1 v 32 a 1,1 0 0 0 1,1 h 40 a 1,1 0 0 0 1,-1 V 16 A 1,1 0 0 0 52,15 Z M 51,47 H 13 V 17 h 38 z"
+       id="path241"
+       style="fill:#1a1a1a" />
+    <circle
+       cx="16"
+       cy="44"
+       r="2"
+       id="circle243"
+       style="fill:#1a1a1a" />
+  </g>
+</svg>
