@@ -1,6 +1,14 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
+<<<<<<< HEAD
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+=======
+import java.util.Map;
+import camel.core.CamelModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
@@ -10,8 +18,13 @@ import org.modelio.metamodel.uml.statik.Package;
 @objid ("aa1968c7-ae1b-485a-9b39-abbc7e89a0f4")
 public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement,CDOObject> {
     @objid ("59d852ab-9c3a-4c6f-8705-882cdba91215")
+<<<<<<< HEAD
     public GenerateProcessConstraint(CDOObject camelElementParent) {
         super(camelElementParent);
+=======
+    public GenerateProcessConstraint(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
+        super(camelElementParent, processedUmlElements);
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
     @objid ("cabc5520-bfd3-4dda-8bc0-26e04d99307a")
@@ -32,6 +45,7 @@ public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softea
 
     @objid ("2661fa64-99e5-4b8f-ab3f-5a7a8826f0c3")
     private CDOObject generate(Package umlPackage) {
+<<<<<<< HEAD
         //        if(this.processedUmlElements.containsKey(umlPackage)) {
         //            return this.processedUmlElements.get(umlPackage);
         //        } else {
@@ -49,6 +63,25 @@ public class GenerateProcessConstraint extends AbstractGenerateProcess<fr.softea
         //            }
         //
         //        }
+=======
+        if(this.processedUmlElements.containsKey(umlPackage)) {
+            return this.processedUmlElements.get(umlPackage);
+        } else {
+            if(umlPackage.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
+                    DeploymentTypeModel.STEREOTYPE_NAME)) {
+                // factory
+                camel.deployment.DeploymentTypeModel deploymentTypeModel = camel.deployment.DeploymentFactory.eINSTANCE.createDeploymentTypeModel();
+                // set name
+                deploymentTypeModel.setName(umlPackage.getName());
+                // update parent
+                CamelModel camelModelParent = (CamelModel) this.getCamelElementParent();
+                camelModelParent.getDeploymentModels().add(deploymentTypeModel);
+                //
+                return deploymentTypeModel;
+            }
+        
+        }
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         return null;
     }
 

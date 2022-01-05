@@ -1,5 +1,9 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
+<<<<<<< HEAD
+=======
+import java.util.Map;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import camel.core.CamelModel;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -26,8 +30,13 @@ import org.modelio.metamodel.uml.statik.Package;
 @objid ("73d91623-84b7-4ac4-b17f-f478ca4f7ada")
 public class GenerateProcess extends AbstractGenerateProcess {
     @objid ("3fdbdd47-04a9-4119-a96a-e20dd6ddf771")
+<<<<<<< HEAD
     public GenerateProcess(CDOObject camelElementParent) {
         super(camelElementParent);
+=======
+    public GenerateProcess(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
+        super(camelElementParent, processedUmlElements);
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
     @objid ("e6f31ba8-d0fd-4a9a-a30e-a2ab9339263a")

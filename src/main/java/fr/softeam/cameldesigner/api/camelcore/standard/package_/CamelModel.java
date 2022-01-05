@@ -16,9 +16,11 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataModel;
+<<<<<<< HEAD
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
+=======
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentModel;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel;
@@ -31,12 +33,23 @@ import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+<<<<<<< HEAD
 import org.modelio.api.module.context.IModuleContext;
+=======
+import org.modelio.api.modelio.model.PropertyConverter;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+<<<<<<< HEAD
+=======
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -312,6 +325,7 @@ public class CamelModel extends NamedElement {
     @objid ("655a504a-b992-42ea-bdae-039c2f92ce45")
     public List<DeploymentModel> getDeploymentModels() {
         List<DeploymentModel> results = new ArrayList<>();
+<<<<<<< HEAD
         for (ModelTree mObj : getElement().getOwnedElement()) {
             if (DeploymentTypeModel.canInstantiate(mObj)) {
                     results.add(DeploymentTypeModel.instantiate((Package)mObj));
@@ -319,6 +333,11 @@ public class CamelModel extends NamedElement {
                 results.add(DeploymentInstanceModel.instantiate((Package)mObj));
             }
         }
+=======
+        for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
+            if (DeploymentModel.canInstantiate(mObj))
+                    results.add((DeploymentModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentModel.STEREOTYPE_NAME));
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         return Collections.unmodifiableList(results);
     }
 
@@ -491,7 +510,11 @@ public class CamelModel extends NamedElement {
     public boolean removeDataModels(final DataModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+<<<<<<< HEAD
             if (d.isStereotyped(CamelModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
+=======
+            if (d.isStereotyped(CamelModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -550,7 +573,11 @@ public class CamelModel extends NamedElement {
     public boolean removeMetricModels(final MetricModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+<<<<<<< HEAD
             if (d.isStereotyped(CamelModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelModel.MdaTypes.MDAASSOCDEP_ROLE), ""))
+=======
+            if (d.isStereotyped(CamelModel.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(CamelModel.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;

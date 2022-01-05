@@ -2,6 +2,7 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+<<<<<<< HEAD
         <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
@@ -47,6 +48,8 @@
         <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+=======
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         <PathEntry path="lib/inject-3.0.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
@@ -219,7 +222,11 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+<<<<<<< HEAD
             <Stereotype name="DeploymentTypeModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentTypeModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
+=======
+            <Stereotype name="DeploymentModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
                 <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
                 <Image path="res/icon/gui/DeploymentTypeModelDiagram_48.png"/>
             </Stereotype>
@@ -1330,7 +1337,7 @@
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentModel"/>
                 <Handler class="DiagramCreate">
                     <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#DeploymentModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
@@ -2626,7 +2633,7 @@
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentTypeModelDiagram">
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Software_Component" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="RequirementSet" group="%group.Deployment_Type.label"/>
@@ -2655,7 +2662,11 @@
                     <ToolRef refid="Deployment_Instance_Model" group="%group.Deployment_Instance.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
+<<<<<<< HEAD
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
+=======
+                    <HParameter name="stereotype" value="CamelDesigner#DeploymentModelDiagram"/>
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>

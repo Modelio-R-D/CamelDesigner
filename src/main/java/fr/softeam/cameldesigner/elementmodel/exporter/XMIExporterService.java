@@ -3,7 +3,11 @@ package fr.softeam.cameldesigner.elementmodel.exporter;
 import java.util.HashMap;
 import camel.core.CamelModel;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.exporter.AbstractExporterService;
+=======
+import fr.softeam.cameldesigner.exchange.AbstractExporterService;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;

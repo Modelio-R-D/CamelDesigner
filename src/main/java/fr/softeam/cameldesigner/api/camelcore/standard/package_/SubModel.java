@@ -6,9 +6,18 @@
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
+<<<<<<< HEAD
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+=======
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataModel;
@@ -94,12 +103,15 @@ public abstract class SubModel extends NamedElement {
         super(elt);
     }
 
+<<<<<<< HEAD
     @objid ("b4228aaa-4892-4e9d-a3d6-8bcebd43b6ea")
     @Override
     public List<CamelElement> getChilds() {
         return super.getChilds();
     }
 
+=======
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     @objid ("272d938f-b497-426d-a404-96b884126080")
     public static final class MdaTypes {
         @objid ("e7620485-8170-4477-8dd8-58c51826ab46")

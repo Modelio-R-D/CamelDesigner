@@ -29,10 +29,17 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetric;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.EventPattern;
+<<<<<<< HEAD
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.SingleEvent;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.FunctionalEventInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.NonFunctionalEventInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.namespace.ScalingAction;
+=======
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.ScalingAction;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.SingleEvent;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.FunctionalEventInstance;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.NonFunctionalEventInstance;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless;

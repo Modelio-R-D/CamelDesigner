@@ -692,9 +692,15 @@ public class CamelDesignerPropertyPageFactory {
         @Override
         public final Object visitEnumeration(Enumeration obj) {
             switch (this.stName) {
+<<<<<<< HEAD
             case fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.CloudLocation.STEREOTYPE_NAME: return new CloudLocationPropertyPage<>(fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.CloudLocation.instantiate(obj));
             case fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion.STEREOTYPE_NAME: return new GeographicalRegionPropertyPage<>(fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion.instantiate(obj));
             case fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement.STEREOTYPE_NAME: return new ImageRequirementPropertyPage<>(fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement.instantiate(obj));
+=======
+            case fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.CloudLocation.STEREOTYPE_NAME: return fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.CloudLocation.instantiate(obj);
+            case fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion.STEREOTYPE_NAME: return fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion.instantiate(obj);
+            case fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement.STEREOTYPE_NAME: return fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement.instantiate(obj);
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
             default:
                 break;
             }

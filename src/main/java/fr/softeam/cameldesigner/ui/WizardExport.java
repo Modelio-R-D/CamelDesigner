@@ -1,13 +1,24 @@
 package fr.softeam.cameldesigner.ui;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.exporter.AbstractExporterService;
 import fr.softeam.cameldesigner.exchange.exporter.CamelExporterService;
 import fr.softeam.cameldesigner.exchange.exporter.XMIExporterService;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
 import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
+=======
+import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
+import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
+import fr.softeam.cameldesigner.utils.CamelDesignerResourcesManager;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -190,6 +201,7 @@ public class WizardExport extends AbstractSwtWizardWindow {
         setFrametitle("Camel Export");
         setCancelButton("Cancel");
         setValidateButton("Export");
+<<<<<<< HEAD
     }
 
     @objid ("121c63b4-afc6-4e75-a82a-b969651992f0")
@@ -223,6 +235,52 @@ public class WizardExport extends AbstractSwtWizardWindow {
 
     @objid ("d2297878-f3a3-4e42-acbf-958cfbdf0e7b")
     @Override
+=======
+    }
+
+    @objid ("121c63b4-afc6-4e75-a82a-b969651992f0")
+    @Override
+    public void validationAction() {
+        File dest = getFileChooserComposite().getCurrentFile();
+        this.path = dest.getParent();
+        
+        if (!dest.getParentFile().exists()){
+            dest.getParentFile().mkdirs();
+        }
+        
+        File source = new File(CamelDesignerResourcesManager.getInstance().getFile(this._format));
+        try {
+            copyFileUsingStream(source, dest);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        try
+        {
+            Thread.sleep(2500);
+        }
+        catch(InterruptedException ex)
+        {
+            Thread.currentThread().interrupt();
+        }
+        
+        //        AbstractExporterService exporterService = null;
+        //
+        //        if (this._format.equals(CamelFormat.XMI)){
+        //            exporterService = new XMIExporterService();
+        //        }else {
+        //            exporterService = new CamelExporterService();
+        //        }
+        //        fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel rootProxy = fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.instantiate(this.selectedElt);
+        //        exporterService.exportCamelUMLModelToFile(rootProxy, dest.getAbsolutePath());
+        
+        //Complete
+        completeBox();
+    }
+
+    @objid ("d2297878-f3a3-4e42-acbf-958cfbdf0e7b")
+    @Override
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     public void setPath() {
         if (this.path.equals(""))
             this.path = this._module.getModuleContext().getProjectStructure().getPath().toAbsolutePath().toString();
@@ -242,4 +300,25 @@ public class WizardExport extends AbstractSwtWizardWindow {
         setPath();
     }
 
+<<<<<<< HEAD
+=======
+    @objid ("908caddd-77b7-41ce-a77c-7baefb0cee29")
+    private void copyFileUsingStream(File source, File dest) throws IOException {
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = new FileInputStream(source);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+        } finally {
+            is.close();
+            os.close();
+        }
+    }
+
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 }

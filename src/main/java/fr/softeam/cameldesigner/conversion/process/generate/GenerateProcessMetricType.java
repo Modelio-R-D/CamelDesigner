@@ -1,5 +1,9 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
+<<<<<<< HEAD
+=======
+import java.util.Map;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
@@ -21,8 +25,13 @@ import org.modelio.metamodel.uml.statik.Component;
 @objid ("18f4e824-7fcc-45ea-9e4c-bf54f2347d71")
 public class GenerateProcessMetricType extends AbstractGenerateProcess {
     @objid ("cb5a5618-865b-4c02-8cb4-ed59f157dbb3")
+<<<<<<< HEAD
     public GenerateProcessMetricType(CDOObject camelElementParent) {
         super(camelElementParent);
+=======
+    public GenerateProcessMetricType(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
+        super(camelElementParent, processedUmlElements);
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
     @objid ("b9b24abe-8554-4f8f-bf83-e19870850512")

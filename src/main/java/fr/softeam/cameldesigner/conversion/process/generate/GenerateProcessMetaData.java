@@ -1,5 +1,9 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
+<<<<<<< HEAD
+=======
+import java.util.Map;
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
@@ -12,8 +16,13 @@ import org.modelio.metamodel.uml.statik.Class;
 @objid ("1bf8b670-e777-43f9-b138-d0bf658c897c")
 public class GenerateProcessMetaData extends AbstractGenerateProcess {
     @objid ("57a9fd7a-3a18-489f-959a-d125b8fa89c0")
+<<<<<<< HEAD
     public GenerateProcessMetaData(CDOObject camelElementParent) {
         super(camelElementParent);
+=======
+    public GenerateProcessMetaData(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
+        super(camelElementParent, processedUmlElements);
+>>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
     @objid ("c299ce2c-053e-46ad-9f3f-be44e135cf02")
