@@ -5,10 +5,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 @objid ("d936de5f-7216-4279-ab45-bc08d06d9c73")
 public interface IElementProcess<T, V> {
     @objid ("45d4c163-ef7a-4d4c-aaa1-6cc268510b8c")
-<<<<<<< HEAD
     T process(V element, fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement context);
-=======
-    T process(V element);
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 
 }

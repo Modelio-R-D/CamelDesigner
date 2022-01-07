@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("5d24f16f-4ba4-443b-adf6-433e7f3de276")
 public abstract class ConfigurationExporter<T extends Configuration> extends FeatureExporter<T> {
@@ -27,11 +27,7 @@ public abstract class ConfigurationExporter<T extends Configuration> extends Fea
     @objid ("1637e301-a68d-4987-a5e6-e3c47ffaea35")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        if ((context instanceof camel.deployment.Component) && (elt instanceof camel.deployment.Configuration)) {
-            ((camel.deployment.Component)context).getConfigurations().add((camel.deployment.Configuration) elt);
-        }else {
-            super.attach(elt, context);
-        }
+        super.attach(elt, context);
     }
 
 }

@@ -2,10 +2,6 @@ package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling;
-<<<<<<< HEAD
-=======
-import fr.softeam.cameldesigner.handlers.propertypages.deploymentinstance.ComponentRelationPropertyPage;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("fc07e1d9-c99c-4c2d-a2a3-1fbc1d256c03")

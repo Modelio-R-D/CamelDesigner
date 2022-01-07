@@ -7,38 +7,16 @@
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
-import java.util.Collections;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.PropertyDependency;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.module.context.IModuleContext;
-=======
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.PropertyDependency;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-<<<<<<< HEAD
-=======
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -105,13 +83,9 @@ public abstract class CamelElement {
     }
 
     @objid ("030a2c20-cdf9-4226-a2af-5a26b172d361")
-<<<<<<< HEAD
     public List<CamelElement> getChilds() {
         return new ArrayList<>();
     }
-=======
-    public abstract List<CamelElement> getChilds();
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 
     @objid ("cb36ad31-a1d7-4502-99a3-e772c2e328e4")
     protected CamelElement(final ModelElement elt) {

@@ -1,8 +1,8 @@
 package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("601fa0b7-9bab-4d86-9d21-78c962ea7c6a")
 public class SoftwareComponentExporter<T extends SoftwareComponent> extends CamelComponentExporter<T> {
@@ -21,15 +21,6 @@ public class SoftwareComponentExporter<T extends SoftwareComponent> extends Came
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
-    }
-
-    @Override
-    public void attach(CDOObject elt, CDOObject context) {
-        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.SoftwareComponent)) {
-            ((camel.deployment.DeploymentTypeModel)context).getSoftwareComponents().add((camel.deployment.SoftwareComponent) elt);
-        }else {
-            super.attach(elt, context);
-        }
     }
 
 }

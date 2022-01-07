@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-<<<<<<< HEAD
-=======
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
@@ -27,7 +23,6 @@ import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptIn
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-<<<<<<< HEAD
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -38,21 +33,6 @@ import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.metamodel.uml.statik.Package;
-=======
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Constraint;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.vcore.smkernel.mapi.MObject;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 
 /**
  * Proxy class to handle a {@link ModelElement} with << NamedElement >> stereotype.
@@ -237,17 +217,10 @@ public abstract class NamedElement extends CamelElement {
 
 
 static {
-<<<<<<< HEAD
             if(CamelDesignerModule.getInstance() != null) {
                 init(CamelDesignerModule.getInstance().getModuleContext());
             }
         }
-=======
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
 }

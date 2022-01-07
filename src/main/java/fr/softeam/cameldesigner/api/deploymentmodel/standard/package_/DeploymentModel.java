@@ -7,10 +7,6 @@
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
 import java.util.List;
-<<<<<<< HEAD
-=======
-import java.util.Objects;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -18,23 +14,10 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-<<<<<<< HEAD
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-=======
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -159,7 +142,6 @@ public class DeploymentModel extends SubModel {
     @objid ("08c52df8-dbb1-4743-8e10-cee09f72507e")
     @Override
     public List<CamelElement> getChilds() {
-<<<<<<< HEAD
         return super.getChilds();
     }
 
@@ -194,76 +176,4 @@ static {
     }
     }
 
-=======
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(getSoftwareComponents());
-        result.addAll(getVMs());
-        result.addAll(getPaases());
-        result.addAll(getContainers());
-        result.addAll(getRequirementSets());
-        return result;
-    }
-
-    @objid ("ad667ad5-9278-4595-bc30-dffedf0b3ad8")
-    protected DeploymentModel(final Package elt) {
-        super(elt);
-    }
-
-    @objid ("cf8f5992-a07c-4f61-98e6-68278a5f38fb")
-    private Collection<? extends CamelElement> getContainers() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @objid ("2e7178f0-ca7b-4f97-bed1-99441d94433e")
-    private Collection<? extends CamelElement> getPaases() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @objid ("1fb8c136-e7b2-4bbb-a01e-9a9769f7c748")
-    private Collection<? extends CamelElement> getRequirementSets() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @objid ("69d8be33-20c0-4544-b649-b78e66ddb473")
-    private Collection<? extends CamelElement> getSoftwareComponents() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @objid ("c74d9c27-f267-49ef-a868-98d61f7b32db")
-    private Collection<? extends CamelElement> getVMs() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @objid ("bcfd6f5c-46e7-47aa-9a4b-79a22339b9f4")
-    public static final class MdaTypes {
-        @objid ("ae36dcd0-7fab-4442-94b1-b8edc0d2a8e7")
-        public static Stereotype STEREOTYPE_ELT;
-
-        @objid ("d7667c51-c15a-4073-8e4a-2c7d4ab016b1")
-        private static Stereotype MDAASSOCDEP;
-
-        @objid ("fdcfd7a8-d947-414c-b670-870793621901")
-        private static TagType MDAASSOCDEP_ROLE;
-
-        @objid ("0146236e-ca4a-4eb8-a74d-b16c22d5891f")
-        public static void init(final IModuleContext ctx) {
-            STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7d620068-3fc6-4fec-8829-0444c0c3186f");
-            MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
-            MDAASSOCDEP_ROLE = ctx.getModelingSession().findElementById(TagType.class, "7637f2fd-b750-43c1-a15c-5d0b084ca1cd");
-        }
-
-
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
-    }
-
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 }

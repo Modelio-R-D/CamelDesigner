@@ -2,12 +2,7 @@ package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentTypeModelDiagram;
-=======
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram;
-import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -35,22 +30,14 @@ public class CreateDeploymentTypeModelTool extends CreateSubModelTool {
         try( ITransaction transaction = session.createTransaction("Create Deployment Type Model")){
         
             DeploymentTypeModel subModel = DeploymentTypeModel.create();
-<<<<<<< HEAD
             DeploymentTypeModelDiagram diagram = DeploymentTypeModelDiagram.create();
-=======
-            DataModelDiagram diagram = DataModelDiagram.create();
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName("Deployment Type Model");
             diagram.setDefaultName("Deployment Type Diagram");
-<<<<<<< HEAD
         
-=======
-            
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

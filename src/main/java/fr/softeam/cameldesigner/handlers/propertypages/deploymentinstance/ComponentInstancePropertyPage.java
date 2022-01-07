@@ -6,11 +6,7 @@ import fr.softeam.cameldesigner.handlers.propertypages.core.FeatureInstancePrope
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("b2b789c7-eda0-4cca-b3c3-ca8d711cc7dc")
-<<<<<<< HEAD
 public abstract class ComponentInstancePropertyPage<T extends ComponentInstance> extends FeatureInstancePropertyPage<T> {
-=======
-public class ComponentInstancePropertyPage<T extends ComponentInstance> extends FeatureInstancePropertyPage<T> {
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

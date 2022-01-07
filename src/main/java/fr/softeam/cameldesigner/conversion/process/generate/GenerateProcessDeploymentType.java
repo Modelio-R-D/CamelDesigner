@@ -1,11 +1,5 @@
 package fr.softeam.cameldesigner.conversion.process.generate;
 
-<<<<<<< HEAD
-=======
-import java.util.Map;
-import camel.deployment.DeploymentTypeModel;
-import camel.deployment.ProvidedCommunication;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
@@ -22,26 +16,14 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Artifact;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
-<<<<<<< HEAD
 import org.modelio.metamodel.uml.statik.Port;
 import org.modelio.metamodel.uml.statik.PortOrientation;
-=======
-import org.modelio.metamodel.uml.statik.ConnectorEnd;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.uml.statik.PortOrientation;
-import org.modelio.vcore.smkernel.mapi.MObject;
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
 
 @objid ("f334256e-e2e4-4371-a04f-ed274076e208")
 public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
     @objid ("74a5e7ec-5211-4906-858c-3216551224bd")
-<<<<<<< HEAD
     public GenerateProcessDeploymentType(CDOObject camelElementParent) {
         super(camelElementParent);
-=======
-    public GenerateProcessDeploymentType(CDOObject camelElementParent, Map<ModelElement, CDOObject> processedUmlElements) {
-        super(camelElementParent, processedUmlElements);
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
     }
 
     @objid ("684bf8da-da25-49b1-beec-9c054b4b922a")
@@ -82,7 +64,6 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
 
     @objid ("d4c22194-df76-429a-a6cd-98b79d1ba492")
     private CDOObject generate(CommunicationPort communicationPort) {
-<<<<<<< HEAD
         //        if(communicationPort.getElement().getDirection().equals(PortOrientation.IN)) {
         //            camel.deployment.RequiredCommunication requiredCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createRequiredCommunication();
         //            requiredCommunication.setName(communicationPort.getElement().getName());
@@ -165,90 +146,6 @@ public class GenerateProcessDeploymentType extends AbstractGenerateProcess {
         //            }
         //            return providedCommunication;
         //        }
-=======
-        if(communicationPort.getElement().getDirection().equals(PortOrientation.IN)) {
-            camel.deployment.RequiredCommunication requiredCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createRequiredCommunication();
-            requiredCommunication.setName(communicationPort.getElement().getName());
-            if(communicationPort.getElement().getValue() != null) {
-                requiredCommunication.setPortNumber(Integer.parseInt(communicationPort.getElement().getValue()));
-            }
-            if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.SoftwareComponent) {
-                ((camel.deployment.SoftwareComponent)this.getCamelElementParent()).getRequiredCommunications().add(requiredCommunication);
-            }
-        
-        
-            /*
-             * check for Communication Link
-             */
-            for(MObject umlChild : communicationPort.getElement().getCompositionChildren()) {
-                if (umlChild instanceof ConnectorEnd) {
-                    ConnectorEnd connectorEnd = (ConnectorEnd) umlChild;
-        
-                    if (connectorEnd.getTarget() instanceof Port
-                            && ((Port) connectorEnd.getTarget()).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,
-                                    CommunicationPort.STEREOTYPE_NAME)
-                            && ((Port) connectorEnd.getTarget()).getDirection().equals(PortOrientation.OUT)) {
-        
-                        Port toUmlPort = (Port) connectorEnd.getTarget();
-                        camel.deployment.ProvidedCommunication providedCommunication = null;
-                        if( this.processedUmlElements.containsKey(toUmlPort)) {
-        
-                            providedCommunication = (ProvidedCommunication) this.processedUmlElements.get(toUmlPort);
-                        } else {
-        
-                            providedCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createProvidedCommunication();
-                            providedCommunication.setName(toUmlPort.getName());
-                            this.processedUmlElements.put(toUmlPort,providedCommunication);
-        
-                        }
-        
-                        if(providedCommunication != null) {
-                            camel.deployment.Communication communication = null;
-        
-                            if( this.processedUmlElements.containsKey(connectorEnd)) {
-        
-                                communication = (camel.deployment.Communication) this.processedUmlElements.get(connectorEnd);
-                            } else {
-                                communication = camel.deployment.DeploymentFactory.eINSTANCE.createCommunication();
-                                if(communicationPort.getElement().getCompositionOwner() != null && toUmlPort.getCompositionOwner() != null) {
-                                    communication.setName(communicationPort.getElement().getCompositionOwner().getName() + "To" + toUmlPort.getCompositionOwner().getName() );
-                                    communication.setProvidedCommunication(providedCommunication);
-                                    communication.setRequiredCommunication(requiredCommunication);
-                                }
-                                this.processedUmlElements.put(connectorEnd,communication);
-        
-                            }
-        
-                            /*
-                             * Add communication to parent : deploymentTypeModel
-                             */
-                            if(communication != null
-                                    && communicationPort.getElement().getCompositionOwner() != null
-                                    && communicationPort.getElement().getCompositionOwner().getCompositionOwner() != null) {
-                                MObject umlDeploymentTypeModel = communicationPort.getElement().getCompositionOwner().getCompositionOwner();
-                                if(this.processedUmlElements.containsKey(umlDeploymentTypeModel)) {
-                                    camel.deployment.DeploymentTypeModel deploymentTypeModel = (DeploymentTypeModel) this.processedUmlElements.get(umlDeploymentTypeModel);
-                                    deploymentTypeModel.getCommunications().add(communication);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            return requiredCommunication;
-        
-        } else if (communicationPort.getElement().getDirection().equals(PortOrientation.OUT)) {
-            camel.deployment.ProvidedCommunication providedCommunication = camel.deployment.DeploymentFactory.eINSTANCE.createProvidedCommunication();
-            providedCommunication.setName(communicationPort.getElement().getName());
-            if(communicationPort.getElement().getValue() != null) {
-                providedCommunication.setPortNumber(Integer.parseInt(communicationPort.getElement().getValue()));
-            }
-            if(this.getCamelElementParent() != null && this.getCamelElementParent() instanceof camel.deployment.SoftwareComponent) {
-                ((camel.deployment.SoftwareComponent)this.getCamelElementParent()).getProvidedCommunications().add(providedCommunication);
-            }
-            return providedCommunication;
-        }
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         return null;
     }
 
