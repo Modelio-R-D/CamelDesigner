@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("14a8b56f-d785-464c-a539-c3deadd856a3")
 public class DataMeasurement extends Measurement {
-    @objid ("c4dea4d9-8927-4fe9-803a-5c884369cf99")
+    @objid ("f2204509-bb94-4d64-873b-05490e90c4f9")
     public static final String STEREOTYPE_NAME = "DataMeasurement";
 
     /**
@@ -46,7 +46,7 @@ public class DataMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("071b469e-cd7a-48e0-b473-7a6fa1fc9c9e")
+    @objid ("9ff5e413-fa0f-448a-b22c-b81de15130ec")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataMeasurement.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class DataMeasurement extends Measurement {
      * 
      * @return a {@link DataMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("38e0bc99-6813-40ad-a1f3-534dd0053132")
+    @objid ("e6bd13a0-6ef2-4b73-8564-4ddfb7dca254")
     public static DataMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataMeasurement.STEREOTYPE_NAME);
@@ -64,36 +64,34 @@ public class DataMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link DataMeasurement} proxy or <i>null</i>.
      */
-    @objid ("ca79e34a-bb3f-4cec-b900-9715a00f56f1")
+    @objid ("4f4f6085-95eb-4985-a291-0def8b147e47")
     public static DataMeasurement instantiate(final Class obj) {
         return DataMeasurement.canInstantiate(obj) ? new DataMeasurement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link DataMeasurement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ddd94db3-2320-4f3d-84ad-3d1e1208e0c0")
+    @objid ("06a0c88e-2cb2-48db-a7d6-9994276a765c")
     public static DataMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataMeasurement.canInstantiate(obj))
-            return new DataMeasurement(obj);
+        	return new DataMeasurement(obj);
         else
-            throw new IllegalArgumentException("DataMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DataMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e53b2a63-f64c-4137-9dbc-a85572abe5aa")
+    @objid ("e88c914a-e21f-43ad-a952-87828aead63f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,8 +111,9 @@ public class DataMeasurement extends Measurement {
      * Get the value of the 'data' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d4c0764d-4278-408b-b8df-67a37d5a781c")
+    @objid ("3549a243-ef0c-45ac-b515-bb3bab5f7331")
     public Data getData() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataMeasurement.MdaTypes.MDAASSOCDEP)
@@ -130,8 +129,9 @@ public class DataMeasurement extends Measurement {
      * Get the value of the 'dataInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("44541830-ca6a-4c75-bb44-056fefc2fc6d")
+    @objid ("2eca9f5d-62c5-438b-84f9-49370eeb2b32")
     public DataInstance getDataInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataMeasurement.MdaTypes.MDAASSOCDEP)
@@ -144,17 +144,16 @@ public class DataMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("67073c07-13ed-4383-9d49-765f520bf9c6")
+    @objid ("b7a7adf6-526a-4768-85d1-d00f8fbf1bc3")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("bb2b778e-94f4-44de-947e-45c4bad2cc72")
+    @objid ("38c8f482-09c1-4cd3-b563-eab86b742f49")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -164,8 +163,9 @@ public class DataMeasurement extends Measurement {
      * Set the value of the 'data' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("a44c3b79-eed5-495d-8294-59f4c3eae440")
+    @objid ("f449966b-9fdf-4b70-b97f-3cbc78c51bdd")
     public void setData(final Data obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -189,8 +189,9 @@ public class DataMeasurement extends Measurement {
      * Set the value of the 'dataInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d57528b4-4eed-448c-8f20-c7e410b8d3c6")
+    @objid ("96122aed-8c93-430a-afcf-e8c035f3a349")
     public void setDataInstance(final DataInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -210,23 +211,23 @@ public class DataMeasurement extends Measurement {
         }
     }
 
-    @objid ("9f4da235-07aa-4553-84f8-94264d3484c1")
+    @objid ("053290a1-6bed-4b6b-ab99-184b4cbf5d0a")
     protected DataMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("87143fca-4f6e-494f-b6a8-3dd519ed1fa8")
     public static final class MdaTypes {
-        @objid ("03bdc206-f149-4edf-9551-a54534ec03aa")
+        @objid ("04cf1d7d-4245-4d2a-84bb-f175f62a28d4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5bd615a7-93a5-4bd2-b016-f35f92ac4661")
+        @objid ("298f83c0-08ab-4ce3-b910-3830ec6b5fa7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("acd2513f-6d96-4141-af11-14410961a22d")
+        @objid ("5ea26b93-a263-4e45-a8da-575bbaddff8b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3e5d9219-4d24-4e48-9eb4-cd26f37a4bfb")
+        @objid ("1b7a5529-d0d0-4d4e-8ecb-fc231afb81d8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fe1fd247-1047-4137-8ff6-90ed2e79ac91");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -234,11 +235,11 @@ public class DataMeasurement extends Measurement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

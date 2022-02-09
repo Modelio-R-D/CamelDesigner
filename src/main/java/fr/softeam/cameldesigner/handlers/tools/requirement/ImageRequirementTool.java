@@ -8,20 +8,20 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 
-@objid ("8b3ff840-5ea7-4a20-b72a-62b2da8608c8")
-public class CreateHorizontalScaleRequirementTool extends DefaultBoxTool {
-    @objid ("c0f0debf-c5d2-4c26-87c1-312ea7eede69")
+@objid ("597a821b-64c4-4e64-b98b-e7e3c35cba0f")
+public class ImageRequirementTool extends DefaultBoxTool {
+    @objid ("19fd7d8a-5fce-4531-a60b-f0d19bd2e407")
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    @objid ("ede9f8ad-781b-4c82-93f5-72da55e77c20")
+    @objid ("a6ddcce9-e144-4b6b-80ec-0a909dc38a0b")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
-        // TODO implement the CreateHorizontalScaleRequirementTool handler. 
-        MessageDialog.openInformation(Display.getDefault().getActiveShell(), "CreateHorizontalScaleRequirementTool", "Tool not implemented!");
+        // TODO implement the CreateImageRequirementTool handler. 
+        MessageDialog.openInformation(Display.getDefault().getActiveShell(), "CreateImageRequirementTool", "Tool not implemented!");
     }
 
 }

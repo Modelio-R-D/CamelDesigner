@@ -1,4 +1,4 @@
-package fr.softeam.cameldesigner.handlers.tools.metadata;
+package fr.softeam.cameldesigner.handlers.tools.requirement;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -8,19 +8,20 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 
-@objid ("b2e14c3c-7f3c-4a5a-8b34-c8c8ec608160")
-public class MMSConcept extends DefaultBoxTool {
-    @objid ("dfa1d0f1-b271-4014-969c-4e0ece5c0fd1")
+@objid ("8b3ff840-5ea7-4a20-b72a-62b2da8608c8")
+public class HorizontalScaleRequirementTool extends DefaultBoxTool {
+    @objid ("c0f0debf-c5d2-4c26-87c1-312ea7eede69")
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
+        // TODO Auto-generated method stub
         return false;
     }
 
-    @objid ("f5dd22a8-401f-4a1d-9ca8-881b62e1e531")
+    @objid ("ede9f8ad-781b-4c82-93f5-72da55e77c20")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
-        // TODO implement the MMSConcept handler.
-        MessageDialog.openInformation(Display.getDefault().getActiveShell(), "MMSConcept", "Tool not implemented!");
+        // TODO implement the CreateHorizontalScaleRequirementTool handler. 
+        MessageDialog.openInformation(Display.getDefault().getActiveShell(), "CreateHorizontalScaleRequirementTool", "Tool not implemented!");
     }
 
 }

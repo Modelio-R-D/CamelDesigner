@@ -14,13 +14,13 @@ public class ServiceLevelObjective extends DefaultBoxTool {
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @objid ("1c5d14ec-f1e8-40a8-9fc7-9452324190bd")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
-        // TODO implement the ServiceLevelObjective handler. 
+        // TODO implement the ServiceLevelObjective handler.
         MessageDialog.openInformation(Display.getDefault().getActiveShell(), "ServiceLevelObjective", "Tool not implemented!");
     }
 

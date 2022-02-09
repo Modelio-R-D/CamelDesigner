@@ -3,7 +3,7 @@ package fr.softeam.cameldesigner.elementmodel.walker.camelwalker;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.reverse.AbstractReverseProcess;
-import fr.softeam.cameldesigner.elementmodel.walker.IWalker;
+import fr.softeam.cameldesigner.exchange.walker.IWalker;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("2274e6f8-6e5e-423e-abae-f8597e8b3f73")

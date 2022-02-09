@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port;
 
@@ -13,6 +13,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -34,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c7cd871c-65fe-47ef-94b0-65618ab304b4")
 public class HostingPortInstance extends FeaturePort {
-    @objid ("9b168cc2-bd60-4759-b8ac-b174a2971343")
+    @objid ("03ad0a32-abcb-46df-9358-ef7653f7eaff")
     public static final String STEREOTYPE_NAME = "HostingPortInstance";
 
     /**
@@ -45,7 +46,7 @@ public class HostingPortInstance extends FeaturePort {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0e6f3619-ada3-47d6-a139-000ac62b196f")
+    @objid ("8dae9754-e642-4106-92b9-d7c842bc7b08")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HostingPortInstance.STEREOTYPE_NAME));
     }
@@ -55,7 +56,7 @@ public class HostingPortInstance extends FeaturePort {
      * 
      * @return a {@link HostingPortInstance} proxy on the created {@link Port}.
      */
-    @objid ("b5b32379-2c06-43bf-8021-98bffb671b87")
+    @objid ("620b9146-58a1-475c-96eb-c366eb58eb57")
     public static HostingPortInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HostingPortInstance.STEREOTYPE_NAME);
@@ -63,36 +64,34 @@ public class HostingPortInstance extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link HostingPortInstance} proxy from a {@link Port} stereotyped << HostingPortInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingPortInstance} proxy from a {@link Port} stereotyped << HostingPortInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Port
      * @return a {@link HostingPortInstance} proxy or <i>null</i>.
      */
-    @objid ("183484dc-4b51-49c2-a7ee-d83eaef45b74")
+    @objid ("e57c9dc6-15ae-46a0-a701-89c02603f9ca")
     public static HostingPortInstance instantiate(final Port obj) {
         return HostingPortInstance.canInstantiate(obj) ? new HostingPortInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link HostingPortInstance} proxy from a {@link Port} stereotyped << HostingPortInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingPortInstance} proxy from a {@link Port} stereotyped << HostingPortInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Port}
      * @return a {@link HostingPortInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6fb2af84-9917-4dc6-b2d1-aa9adb0fcf2c")
+    @objid ("e895274c-5419-40c0-80a9-9d45b667326d")
     public static HostingPortInstance safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (HostingPortInstance.canInstantiate(obj))
-            return new HostingPortInstance(obj);
+        	return new HostingPortInstance(obj);
         else
-            throw new IllegalArgumentException("HostingPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("HostingPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("21834833-ce6d-4779-b9bd-09c83e22fb2d")
+    @objid ("908158e4-e94c-43df-8dd3-62d19f295a0d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,39 +108,60 @@ public class HostingPortInstance extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}.
-     * 
+     * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("133f6ea7-09aa-488e-bde1-48b207dfe57b")
+    @objid ("e6c77aaa-83cb-428c-b0e3-1e9c9b591bbc")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
     }
 
-    @objid ("a7ad22c0-64ff-4858-a701-8a6ee9cb1e98")
+    /**
+     * Get the value to the 'type' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("7e2d5e36-0964-4c39-b7ea-96e3e8747cfb")
+    public HostingPort getType() {
+        return (HostingPort)CamelDesignerProxyFactory.instantiate(((Port) this.elt).getRepresentedFeature(), HostingPort.STEREOTYPE_NAME);
+    }
+
+    @objid ("9040eb98-18f3-4294-bfae-3489733a82ec")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("0b6980da-cb56-4a49-ac02-1d14ff63f4d6")
+    /**
+     * Set the value of the 'type' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("705493fc-bb4c-4d01-82e0-d4886b862974")
+    public void setType(final HostingPort obj) {
+        ((Port) this.elt).setRepresentedFeature((obj != null) ? obj.getElement() : null);
+    }
+
+    @objid ("1e7ca250-4474-4a3b-b259-d299895aa3db")
     protected HostingPortInstance(final Port elt) {
         super(elt);
     }
 
     @objid ("ed3d08ae-14c6-4868-b319-18cc92db0872")
     public static final class MdaTypes {
-        @objid ("f4ed0e2e-0687-4917-a7c3-8af1f6a62508")
+        @objid ("bf98b9ea-5fcd-4cbd-9256-94bba1547cdb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e7087a06-3c7b-4bc8-a585-261cb2f7fc9e")
+        @objid ("86aa605e-a5e4-4781-88e6-6a607c7b25f1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("746a3a3f-09d3-4c5c-b0cf-f03783fa4137")
+        @objid ("fd7faf5e-bb95-4731-ab38-3cb70d418e9f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("906c4886-011e-4bf5-bc6e-cea3d9d1afb6")
+        @objid ("0adeb02a-1e16-42ff-bdba-29d2f7eae2a8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b2bcf5bc-48d4-42cc-bc87-0ca2f2ca2812");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -149,11 +169,11 @@ public class HostingPortInstance extends FeaturePort {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

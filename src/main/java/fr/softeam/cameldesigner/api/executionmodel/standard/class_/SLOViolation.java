@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -12,6 +12,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.executionmodel.standard.class_.Measurement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -34,10 +35,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("229f0919-35a3-4332-a078-24ebef396ceb")
 public class SLOViolation extends Cause {
-    @objid ("7be0cd5f-05ba-4df2-81de-5f249ddf4b36")
+    @objid ("b3923b35-3855-4296-8f52-fee4d8c95233")
     public static final String STEREOTYPE_NAME = "SLOViolation";
 
-    @objid ("94a8bc84-0d4e-4ac4-b8ad-97eea84338c6")
+    @objid ("cd228c53-d7a3-4437-bbd0-226e196af566")
     public static final String ASSESSMENTTIME_TAGTYPE = "assessmentTime";
 
     /**
@@ -48,7 +49,7 @@ public class SLOViolation extends Cause {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("dbb6e042-8d70-4ef2-88d4-c19ddc99b79d")
+    @objid ("55f91578-26cb-4ac7-98db-6722005bf2a6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SLOViolation.STEREOTYPE_NAME));
     }
@@ -58,7 +59,7 @@ public class SLOViolation extends Cause {
      * 
      * @return a {@link SLOViolation} proxy on the created {@link Class}.
      */
-    @objid ("37a5cad7-3a74-4888-b5aa-ca621397ee04")
+    @objid ("eee1061f-ae82-4770-b6b1-c548070ee40b")
     public static SLOViolation create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SLOViolation.STEREOTYPE_NAME);
@@ -66,36 +67,34 @@ public class SLOViolation extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link SLOViolation} proxy or <i>null</i>.
      */
-    @objid ("ec9a97fe-eebc-43eb-871c-edb94780dbdd")
+    @objid ("ace4bc52-f7b0-4f31-96c8-9670b8d5735f")
     public static SLOViolation instantiate(final Class obj) {
         return SLOViolation.canInstantiate(obj) ? new SLOViolation(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link SLOViolation} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b2f64f6e-ed9f-4d2c-bee5-6fba81870194")
+    @objid ("f362021d-ee4f-4f47-96e2-b75db18ecca2")
     public static SLOViolation safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SLOViolation.canInstantiate(obj))
-            return new SLOViolation(obj);
+        	return new SLOViolation(obj);
         else
-            throw new IllegalArgumentException("SLOViolation: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SLOViolation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("141ca1e8-2d08-41a1-8a74-906a0dd74470")
+    @objid ("84ad836b-0cce-40bf-bbd9-429c3506fe15")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -116,17 +115,16 @@ public class SLOViolation extends Cause {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("43455476-76be-46d0-9efe-a67eff11e64e")
+    @objid ("b80821b5-ee9a-4881-9e85-4842cc0d3cee")
     public String getAssessmentTime() {
         return this.elt.getTagValue(SLOViolation.MdaTypes.ASSESSMENTTIME_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("b4de7bb5-ddfe-4614-a2ba-bfde28ea5354")
+    @objid ("9f4931c2-d4cb-4273-86ba-57deaad4d26b")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -136,8 +134,9 @@ public class SLOViolation extends Cause {
      * Get the value of the 'measurement' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("a9c490de-3f45-49b6-8e6f-888c44c37267")
+    @objid ("b1eedf14-eb00-4f71-9240-ace8c08a466b")
     public Measurement getMeasurement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SLOViolation.MdaTypes.MDAASSOCDEP)
@@ -153,8 +152,9 @@ public class SLOViolation extends Cause {
      * Get the value of the 'slo' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("20586ceb-bba5-4cf5-afb6-c18f209b5c49")
+    @objid ("99fa33f2-903a-48da-bfbd-637ebc8682ee")
     public ServiceLevelObjective getSlo() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SLOViolation.MdaTypes.MDAASSOCDEP)
@@ -166,7 +166,7 @@ public class SLOViolation extends Cause {
         return null;
     }
 
-    @objid ("9b387498-f806-45e7-b577-396e599621ea")
+    @objid ("c806775c-fe5b-4286-9a0a-461ab42899fd")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -177,7 +177,7 @@ public class SLOViolation extends Cause {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4135f3ad-bf56-4c62-8f92-013827ce7cdc")
+    @objid ("472fdb25-1129-4af0-b1d8-ab2dcba784b8")
     public void setAssessmentTime(final String value) {
         this.elt.putTagValue(SLOViolation.MdaTypes.ASSESSMENTTIME_TAGTYPE_ELT, value);
     }
@@ -186,8 +186,9 @@ public class SLOViolation extends Cause {
      * Set the value of the 'measurement' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("64c8d582-0c0f-4728-861d-bef1ec19c779")
+    @objid ("c46f9ef8-1d33-4040-b93e-31fc98ca883b")
     public void setMeasurement(final Measurement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -211,8 +212,9 @@ public class SLOViolation extends Cause {
      * Set the value of the 'slo' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("6a94efe2-1b41-41c9-b95c-47f0fc373093")
+    @objid ("3c59aa33-d80f-48e1-bc52-a5b88873b588")
     public void setSlo(final ServiceLevelObjective obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -232,26 +234,26 @@ public class SLOViolation extends Cause {
         }
     }
 
-    @objid ("32991cdd-7ef3-45ef-b6ac-3e12720a3e62")
+    @objid ("84b30beb-6849-48b2-ba7e-e31e43a42ec4")
     protected SLOViolation(final Class elt) {
         super(elt);
     }
 
     @objid ("d2af686a-83ed-4904-8eb0-ef64e85d5728")
     public static final class MdaTypes {
-        @objid ("786ca22a-bca8-4360-8f89-3ad41e427786")
+        @objid ("7ccc56d8-f259-41eb-9f76-6df39b53c991")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("817976ea-fac5-4961-8d52-956293b12291")
+        @objid ("e8942b12-e39c-473c-8387-8bd203690a96")
         public static TagType ASSESSMENTTIME_TAGTYPE_ELT;
 
-        @objid ("aba0dcdf-739a-450f-8000-6e92c104e8a3")
+        @objid ("2663cace-2af2-4904-a4c9-14105a1d098d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6cf8971c-73ed-4d96-8cdc-4bb0e114624f")
+        @objid ("77019e36-3bba-418e-88ef-d56906b5c4ff")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("179cb19a-fde9-4670-8f0a-710e664e1cdc")
+        @objid ("079a0e2e-3506-498a-8793-bb681522c19d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fe591c4e-317f-4202-9f7a-43dff0e6d7fe");
             ASSESSMENTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "fc352744-f101-466f-a61c-0b32b9269a34");
@@ -260,11 +262,11 @@ public class SLOViolation extends Cause {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.namespace;
 
@@ -35,8 +35,21 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("061096ce-1ee0-43f7-8df5-38b8fc736e2f")
 public abstract class Action extends Feature {
-    @objid ("1ac0e6ad-1023-4275-986f-c3f32ffa43b3")
+    @objid ("4f5ac6a6-3d0b-402a-ab3f-659ef42c8264")
     public static final String STEREOTYPE_NAME = "Action";
+
+    /**
+     * Tells whether a {@link Action proxy} can be instantiated from a {@link MObject} checking it is a {@link NameSpace} stereotyped << Action >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("e670d000-5189-4c16-a4eb-bcccd42a086e")
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof NameSpace) && ((NameSpace) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Action.STEREOTYPE_NAME));
+    }
 
     @objid ("281e8cdb-d8df-49d5-bd5b-7a8ece840271")
     public static Action safeInstantiate(NameSpace obj) {
@@ -46,7 +59,7 @@ public abstract class Action extends Feature {
             throw new IllegalArgumentException("Action: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8df895fd-56d2-40a2-9553-691547d4870f")
+    @objid ("fa537f86-f58d-40c3-b2e3-366e3b1edf0c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -63,39 +76,38 @@ public abstract class Action extends Feature {
     }
 
     /**
-     * Get the underlying {@link NameSpace}.
-     * 
+     * Get the underlying {@link NameSpace}. 
      * @return the NameSpace represented by this proxy, never null.
      */
-    @objid ("d87291a4-60a7-4ccd-a170-db3e9c32e91d")
+    @objid ("5ba1c38e-6b49-426d-a2c9-ce9cb7bb550a")
     @Override
     public NameSpace getElement() {
         return (NameSpace)super.getElement();
     }
 
-    @objid ("1c273cac-ca9e-4fbc-8781-8dde841b179e")
+    @objid ("ce147cd8-1fa9-480a-85b1-682140a6add6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("fffff4d0-3136-4fb0-9015-b1ab34c48c43")
+    @objid ("c43f1953-0c1d-4b6e-995f-c6e5ea43cf9b")
     protected Action(final NameSpace elt) {
         super(elt);
     }
 
     @objid ("c5dc4266-14c2-4368-9374-34e0d3602383")
     public static final class MdaTypes {
-        @objid ("516f79fd-3d55-4fbd-ac1f-0e5db9564533")
+        @objid ("5c41bd80-2b9e-4a90-a92c-992e1557b306")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d14a4e13-dbc1-4850-b80b-1f8b7f904d42")
+        @objid ("bfe913fe-a27b-4f83-bc26-54e5d6f98a9f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("97c7946f-f0c0-4c92-b0c6-42ce61125b6c")
+        @objid ("477178f8-8e27-44c9-a6cf-c803913dbcfd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("507a5a93-08c4-495b-ac37-c66db348714a")
+        @objid ("63536a05-2930-40e4-a696-0e0ea52e9414")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -103,11 +115,11 @@ public abstract class Action extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

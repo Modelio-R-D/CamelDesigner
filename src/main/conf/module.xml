@@ -2,54 +2,11 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-<<<<<<< HEAD
         <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-=======
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
         <PathEntry path="lib/inject-3.0.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
@@ -156,6 +113,14 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="Feature_DataType" metaclass="Standard.DataType" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_DataType.label" uid="eaf56346-fbac-4409-ad4f-4e1a6c4183d1" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Feature_Enumeration" metaclass="Standard.Enumeration" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Enumeration.label" uid="56eb7780-c162-400f-8e4b-0a5178cef153" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
             <Stereotype name="Feature_Instance" metaclass="Standard.Instance" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Instance.label" uid="df209aca-1325-4c99-b383-ca2650224ff6" is-abstract="false">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
@@ -181,14 +146,6 @@
                 <Image path="res/icon/gui/CoreModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="SubModel" metaclass="Standard.Package" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.SubModel.label" uid="577c153e-42b8-4f36-9686-1a6109ffdc16" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Feature_Enumeration" metaclass="Standard.Enumeration" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_Enumeration.label" uid="56eb7780-c162-400f-8e4b-0a5178cef153" is-abstract="true">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="Feature_DataType" metaclass="Standard.DataType" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Feature_DataType.label" uid="eaf56346-fbac-4409-ad4f-4e1a6c4183d1" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -222,11 +179,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-<<<<<<< HEAD
             <Stereotype name="DeploymentTypeModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentTypeModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
-=======
-            <Stereotype name="DeploymentModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
                 <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
                 <Image path="res/icon/gui/DeploymentTypeModelDiagram_48.png"/>
             </Stereotype>
@@ -349,6 +302,10 @@
                 <Icon path="res/icon/gui/DataInstanceEmpty_24.png"/>
                 <Image path="res/icon/gui/DataInstanceEmpty_48.png"/>
             </Stereotype>
+            <Stereotype name="DataInstance_BindableInstance" metaclass="Standard.BindableInstance" owner-stereotype="mref#'' {fd50c81e-cd4d-4ae8-8e12-a2818c71f1de} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataInstance_BindableInstance.label" uid="ca031a70-7376-4397-ae2a-7ff762e285e1" is-abstract="false">
+                <Icon path="res/icon/gui/DataInstanceEmpty_24.png"/>
+                <Image path="res/icon/gui/DataInstanceEmpty_48.png"/>
+            </Stereotype>
         </Profile>
         <Profile uid="2b2a35bd-7537-4b54-a7b2-52e5c856e855" id="DeploymentInstanceModel">
             <Stereotype name="CommunicationInstance" metaclass="Standard.Connector" owner-stereotype="mref#'' {b055b982-4854-4f90-adad-1833553f489e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CommunicationInstance.label" uid="479fff80-8075-4f90-b7f8-e148699ee433" is-abstract="false">
@@ -448,7 +405,7 @@
                 <Icon path="res/icon/gui/Container_24.png"/>
                 <Image path="res/icon/gui/Container_48.png"/>
             </Stereotype>
-            <Stereotype name="DeploymentModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.DeploymentModel.label" uid="7d620068-3fc6-4fec-8829-0444c0c3186f" is-abstract="false">
+            <Stereotype name="DeploymentModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.DeploymentModel.label" uid="7d620068-3fc6-4fec-8829-0444c0c3186f" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -1329,15 +1286,15 @@
             </Command>
             <Command id="Deployment_Model" label="%command.Deployment_Model.label" tooltip="%command.Deployment_Model.tooltip" image="res/icon/gui/DeploymentTypeModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentModelCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentTypeModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
             <Command id="Deployment_Model_diagram" label="%command.Deployment_Model_diagram.label" tooltip="%command.Deployment_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="CamelDesigner#DeploymentModelDiagram"/>
+                    <HParameter name="name" value="Deployment Type Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
@@ -2124,7 +2081,7 @@
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#OptimisationRequirement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Optimisation Requirement"/>
+                    <HParameter name="name" value="OptimisationRequirement"/>
                 </Handler>
             </Tool>
             <Tool id="Organisation" label="%tool.Organisation.label" tooltip="%tool.Organisation.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
@@ -2205,7 +2162,7 @@
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ProviderRequirement"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Provider Requirement"/>
+                    <HParameter name="name" value="ProviderRequirement"/>
                 </Handler>
             </Tool>
             <Tool id="Range" label="%tool.Range.label" tooltip="%tool.Range.tooltip" image="res/icon/gui/typeModelEmpty_24.png">
@@ -2272,7 +2229,7 @@
                     <HParameter name="name" value="Requirement Model"/>
                 </Handler>
             </Tool>
-            <Tool id="Resource_Requirement" label="%tool.Resource_Requirement.label" tooltip="%tool.Resource_Requirement.tooltip" image="res/icon/gui/resourceRequirement_24.png">
+            <Tool id="ResourceRequirement" label="%tool.ResourceRequirement.label" tooltip="%tool.ResourceRequirement.tooltip" image="res/icon/gui/resourceRequirement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#RequirementModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ResourceRequirement"/>
@@ -2384,14 +2341,6 @@
                     <HParameter name="name" value="Security Requirement"/>
                 </Handler>
             </Tool>
-            <Tool id="Security_SLO" label="%tool.Security_SLO.label" tooltip="%tool.Security_SLO.tooltip" image="res/icon/gui/SecuritySLO_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#SecuritySLO"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Security SLO"/>
-                </Handler>
-            </Tool>
             <Tool id="Sensor" label="%tool.Sensor.label" tooltip="%tool.Sensor.tooltip" image="res/icon/gui/Sensor_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#MetricTypeModel"/>
                 <Handler class="Box">
@@ -2410,18 +2359,18 @@
             </Tool>
             <Tool id="ServiceLevelObjective" label="%tool.ServiceLevelObjective.label" tooltip="%tool.ServiceLevelObjective.tooltip" image="res/icon/gui/sloRequirement_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#RequirementModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.requirement.ServiceLevelObjective">
+                <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ServiceLevelObjective"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="ServiceLevelObjective"/>
                 </Handler>
             </Tool>
-            <Tool id="Service_Level_Objective" label="%tool.Service_Level_Objective.label" tooltip="%tool.Service_Level_Objective.tooltip" image="res/icon/gui/requirementModelEmpty_24.png">
+            <Tool id="SecuritySLO" label="%tool.SecuritySLO.label" tooltip="%tool.SecuritySLO.tooltip" image="res/icon/gui/SecuritySLO_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#ServiceLevelObjective"/>
+                    <HParameter name="stereotype" value="CamelDesigner#SecuritySLO"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Service Level Objective"/>
+                    <HParameter name="name" value="SecuritySLO"/>
                 </Handler>
             </Tool>
             <Tool id="Single_Event" label="%tool.Single_Event.label" tooltip="%tool.Single_Event.tooltip" image="res/icon/gui/SingleEvent_24.png">
@@ -2633,7 +2582,7 @@
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentModelDiagram">
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentTypeModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Software_Component" group="%group.Deployment_Type.label"/>
                     <ToolRef refid="RequirementSet" group="%group.Deployment_Type.label"/>
@@ -2662,17 +2611,13 @@
                     <ToolRef refid="Deployment_Instance_Model" group="%group.Deployment_Instance.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
-<<<<<<< HEAD
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
-=======
-                    <HParameter name="stereotype" value="CamelDesigner#DeploymentModelDiagram"/>
->>>>>>> e429ba8cf675faca5e300c08c52247687d794213
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#RequirementModelDiagram">
                 <Palette keepBasePalette="false">
-                    <ToolRef refid="Resource_Requirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="ResourceRequirement" group="%group.Requirement.label"/>
                     <ToolRef refid="HorizontalScaleRequirement" group="%group.Requirement.label"/>
                     <ToolRef refid="ImageRequirement" group="%group.Requirement.label"/>
                     <ToolRef refid="ServiceLevelObjective" group="%group.Requirement.label"/>
@@ -2681,7 +2626,6 @@
                     <ToolRef refid="ProviderRequirement" group="%group.Requirement.label"/>
                     <ToolRef refid="LocationRequirement" group="%group.Requirement.label"/>
                     <ToolRef refid="PaaS_Requirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="Service_Level_Objective" group="%group.Requirement.label"/>
                     <ToolRef refid="Verticale_Scale_Requirement" group="%group.Requirement.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
@@ -2734,7 +2678,6 @@
                     <ToolRef refid="DataMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="HistoryInfo" group="%group.Execution.label"/>
                     <ToolRef refid="HistoryRecord" group="%group.Execution.label"/>
-                    <ToolRef refid="Measurement" group="%group.Execution.label"/>
                     <ToolRef refid="PaasMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="RuleTrigger" group="%group.Execution.label"/>
                     <ToolRef refid="SLOViolation" group="%group.Execution.label"/>
@@ -2859,7 +2802,6 @@
                 <Palette keepBasePalette="false">
                     <ToolRef refid="ScalabilityModel" group="%group.Scalability.label"/>
                     <ToolRef refid="Scalability_Rule" group="%group.Scalability.label"/>
-                    <ToolRef refid="Scaling_Action" group="%group.Scalability.label"/>
                     <ToolRef refid="Single_Event" group="%group.Scalability.label"/>
                     <ToolRef refid="Timer" group="%group.Scalability.label"/>
                     <ToolRef refid="Unary_Event_Pattern" group="%group.Scalability.label"/>
@@ -2931,7 +2873,6 @@
             </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#UnitModelDiagram">
                 <Palette keepBasePalette="false">
-                    <ToolRef refid="Unit" group="%group.Unit.label"/>
                     <ToolRef refid="Unit_Dimension" group="%group.Unit.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>

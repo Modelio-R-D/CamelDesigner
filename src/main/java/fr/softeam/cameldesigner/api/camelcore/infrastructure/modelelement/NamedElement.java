@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -12,18 +12,17 @@ import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -31,8 +30,11 @@ import org.modelio.metamodel.uml.infrastructure.Note;
 import org.modelio.metamodel.uml.infrastructure.NoteType;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link ModelElement} with << NamedElement >> stereotype.
@@ -41,8 +43,21 @@ import org.modelio.metamodel.uml.statik.Package;
  */
 @objid ("f252b432-5dfa-429d-a585-2ea4461bf1ad")
 public abstract class NamedElement extends CamelElement {
-    @objid ("d1ba2503-8184-445d-920b-0ac737506104")
+    @objid ("b7d5fa38-8338-462c-8514-fed22bc91862")
     public static final String STEREOTYPE_NAME = "NamedElement";
+
+    /**
+     * Tells whether a {@link NamedElement proxy} can be instantiated from a {@link MObject} checking it is a {@link ModelElement} stereotyped << NamedElement >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("3aeafeee-bb28-49a6-99d4-deac27b53fad")
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, NamedElement.STEREOTYPE_NAME));
+    }
 
     @objid ("0442d0cb-8661-4972-be77-04af55b310bd")
     public static NamedElement instantiate(final ModelElement obj) {
@@ -55,7 +70,23 @@ public abstract class NamedElement extends CamelElement {
                                 ValueType.canInstantiate(obj) ? ValueType.instantiate((DataType)obj) : null;
     }
 
-    @objid ("75dbd481-e110-4c67-bd00-171b6c0b08b9")
+    /**
+     * Add a value to the 'annotations' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("8132070e-a49d-451e-99c6-b41ede6256ef")
+    public void addAnnotations(final MmsObject obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
+            d.setName("annotations");
+            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
+        }
+    }
+
+    @objid ("782a9d1c-b861-49f3-96a7-deaf8042c227")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,66 +103,64 @@ public abstract class NamedElement extends CamelElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
+     * Get the values of the 'annotations' role.<p>
+     * Role description:
+     * null
      * 
+     */
+    @objid ("10371aa9-b4b2-4903-baaf-f57b97e086a6")
+    public List<MmsObject> getAnnotations() {
+        List<MmsObject> results = new ArrayList<>();
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+          if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP)
+              && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), "annotations")
+              && MmsObject.canInstantiate(d.getDependsOn()))
+                results.add((MmsObject)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), MmsObject.MdaTypes.STEREOTYPE_ELT.getName()));
+        }
+        return Collections.unmodifiableList(results);
+    }
+
+    /**
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("82bbaeda-46b4-40a0-968c-aa3926d5f459")
+    @objid ("23e59f44-4f80-458e-a5b5-fa346a60b310")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("f7b1bb4f-d1ff-4cc8-9888-e1376291cfdf")
+    @objid ("53ac3341-40d6-4cb0-927a-bfbf92d446c6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
     /**
-     * Add a value to the 'annotations' role.<p>
+     * Remove a value from the 'annotations' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("12205ea5-2855-4122-96ae-48effc5fd76f")
-    public void addAnnotations(final MmsObject obj) {
+    @objid ("1b12c5ab-a70e-40e7-8bee-96c90c9be130")
+    public boolean removeAnnotations(final MmsObject obj) {
         if (obj != null) {
-            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), NamedElement.MdaTypes.MDAASSOCDEP);
-            d.setName("annotations");
-            d.putTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE, "annotations");
+          for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
+            if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+              if (Objects.equals(d.getDependsOn(), obj.getElement())) {
+                d.delete();
+                return true;
+              }
+          }
         }
+        return false;
     }
 
-    /**
-     * Get the values of the 'annotations' role.<p>
-     * Role description:
-     * null
-     */
-    @objid ("292f27c9-6361-4f56-8975-304b63081276")
-    public List<MmsObject> getAnnotations() {
-        List<MmsObject> results = new ArrayList<>();
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-            if ((d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP)
-                    && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), "annotations")
-                    && d.getDependsOn().isStereotyped(MmsObject.MdaTypes.STEREOTYPE_ELT))) {
-        
-                ModelElement mObj = d.getDependsOn();
-                if (MmsConceptInstance.canInstantiate(mObj))
-                    results.add((MmsConceptInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsConceptInstance.STEREOTYPE_NAME));
-        
-                if (MmsConcept.canInstantiate(mObj))
-                    results.add((MmsConcept)CamelDesignerProxyFactory.instantiate(mObj, MmsConcept.STEREOTYPE_NAME));
-        
-                if (MmsProperty.canInstantiate(mObj))
-                    results.add((MmsProperty)CamelDesignerProxyFactory.instantiate(mObj, MmsProperty.STEREOTYPE_NAME));
-        
-                if (MmsPropertyInstance.canInstantiate(mObj))
-                    results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
-        
-            }
-        }
-        return Collections.unmodifiableList(results);
+    @objid ("2ea30db8-9ee9-4817-8cb5-84ded6ad9cfb")
+    public String getDescription() {
+        IModelingSession modelingSession = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+        NoteType type = modelingSession.getMetamodelExtensions().getNoteType("description", "ModelerModule", this.elt.getMClass());
+        return this.elt.getNoteContent(type);
     }
 
     @objid ("fb596180-74b4-42d9-8e57-0a0be73daa8f")
@@ -139,44 +168,9 @@ public abstract class NamedElement extends CamelElement {
         return this.elt.getName();
     }
 
-    /**
-     * Remove a value from the 'annotations' role.<p>
-     * Role description:
-     * null
-     */
-    @objid ("4009961b-6702-40c0-941e-56e36f356607")
-    public boolean removeAnnotations(final MmsObject obj) {
-        if (obj != null) {
-            for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-                if (d.isStereotyped(NamedElement.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(NamedElement.MdaTypes.MDAASSOCDEP_ROLE), ""))
-                    if (Objects.equals(d.getDependsOn(), obj.getElement())) {
-                        d.delete();
-                        return true;
-                    }
-            }
-        }
-        return false;
-    }
-
     @objid ("6b020e98-e815-4690-96a5-9d274fadd578")
     public void setDefaultName(String name) {
         CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().getDefaultNameService().setDefaultName(this.elt, name);
-    }
-
-    @objid ("d4ecddc3-f8d0-4470-8d5d-75d4cd314a33")
-    public void setName(String name) {
-        this.elt.setName(name);
-    }
-
-    @objid ("c0061f4d-c0d9-4cd1-9ff4-5d8f99893515")
-    protected NamedElement(final ModelElement elt) {
-        super(elt);
-    }
-
-    @objid ("e4cf1239-9588-402a-af81-a78563e98124")
-    @Override
-    public List<CamelElement> getChilds() {
-        return super.getChilds();
     }
 
     @objid ("946ad3ad-fe1c-4a6c-b334-8ee84f108a01")
@@ -191,24 +185,28 @@ public abstract class NamedElement extends CamelElement {
         }
     }
 
-    @objid ("537a5766-13fd-48a8-98c1-0c395e999698")
-    public String getDescription() {
-        NoteType type = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getMetamodelExtensions().getNoteType("description", "ModelerModule", this.elt.getMClass());
-        return this.elt.getNoteContent(type);
+    @objid ("d4ecddc3-f8d0-4470-8d5d-75d4cd314a33")
+    public void setName(String name) {
+        this.elt.setName(name);
+    }
+
+    @objid ("61f168d2-f222-4058-af7c-2f3ce2b06283")
+    protected NamedElement(final ModelElement elt) {
+        super(elt);
     }
 
     @objid ("cb71b83e-c94e-44b8-b058-a4c207482cb0")
     public static final class MdaTypes {
-        @objid ("7f05437e-19dc-461b-bf7b-38f6ce8bba71")
+        @objid ("69e7e511-ee9d-43dd-b697-658572b0b1d4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ed209b36-081e-48af-853f-93660ec32598")
+        @objid ("d52f747a-e9bd-4cec-8761-b49fc564e660")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f6e38bd4-741e-4487-a76b-b86fb3ce59e6")
+        @objid ("7ce68998-5e9b-4c6b-9ee4-cb8d04a4b8c6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("46d22a90-9516-4a88-b032-5e66c54bc5a5")
+        @objid ("8ac558ea-7c0e-409c-8c5f-2f7e6e605598")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "f81fdaa1-17e1-49a4-bf1f-60c18563c100");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -216,11 +214,11 @@ public abstract class NamedElement extends CamelElement {
         }
 
 
-static {
-            if(CamelDesignerModule.getInstance() != null) {
-                init(CamelDesignerModule.getInstance().getModuleContext());
-            }
-        }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

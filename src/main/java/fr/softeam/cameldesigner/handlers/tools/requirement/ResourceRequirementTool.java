@@ -9,7 +9,7 @@ import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 
 @objid ("a5d43dcf-2849-446c-b522-1fbd710cb6c7")
-public class CreateResourceRequirementTool extends DefaultBoxTool {
+public class ResourceRequirementTool extends DefaultBoxTool {
     @objid ("b37286bb-8840-4815-a3c8-bcd4fc910cdb")
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {

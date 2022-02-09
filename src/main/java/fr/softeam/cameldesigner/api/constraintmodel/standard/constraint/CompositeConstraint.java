@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -33,14 +33,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("bf982af0-30cc-42f7-934c-17e02bb00b58")
 public abstract class CompositeConstraint extends CamelConstraint {
-    @objid ("c9b1aeec-ce4f-4db7-b3a7-d9f3f31b160a")
+    @objid ("d0e4c639-a9c0-4f30-bfa2-9b4fc58b358f")
     public static final String STEREOTYPE_NAME = "CompositeConstraint";
 
-    @objid ("542513cd-e7a8-4d5b-b0d5-782f4e30fdee")
+    /**
+     * Tells whether a {@link CompositeConstraint proxy} can be instantiated from a {@link MObject} checking it is a {@link Constraint} stereotyped << CompositeConstraint >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("57a7a135-90dd-40b2-b85f-c8cc0dbedc11")
     public static boolean canInstantiate(final MObject elt) {
-        return ((elt instanceof Constraint) && (
-                (IfThenConstraint.canInstantiate(elt))
-                || (LogicalConstraint.canInstantiate(elt))));
+        return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeConstraint.STEREOTYPE_NAME));
     }
 
     @objid ("0c7f50b9-cec7-42d1-8479-a33d22ab05e8")
@@ -49,7 +55,7 @@ public abstract class CompositeConstraint extends CamelConstraint {
             LogicalConstraint.canInstantiate(obj) ? LogicalConstraint.instantiate(obj) : null;
     }
 
-    @objid ("79224c27-0323-457c-ace6-49c738648e85")
+    @objid ("095b3f65-6422-4f19-a92a-aef1f5bf5f01")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -66,39 +72,38 @@ public abstract class CompositeConstraint extends CamelConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}.
-     * 
+     * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("7e7c2538-35b0-45a9-9f51-fb97f0981692")
+    @objid ("aa5e6e25-74c7-467f-b0e1-b0ff7eb982de")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("f67fedea-6e63-4a98-ba44-e59126fd1212")
+    @objid ("546e4b9d-8c4c-4d8e-b924-10a6336cce6a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("99296f23-5d52-4872-8611-843e54e7bb9b")
+    @objid ("1bc736ba-a4b9-4256-96d2-e87d39953a71")
     protected CompositeConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("16d6b202-8190-4fdc-ad51-7afb89d0af01")
     public static final class MdaTypes {
-        @objid ("1e36b863-b610-445f-8c5e-0ac579755891")
+        @objid ("e51424e4-c505-45e5-aaba-d056c0256c6e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("682bb25c-0e31-4489-a306-faa65f4e004e")
+        @objid ("212caa8a-b440-4016-a7b5-af124f126f9b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f462cb49-318b-4840-b5d3-f7419a692c9e")
+        @objid ("2e6db103-101b-40d0-9d19-7abb594a9007")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d37ff9b9-b950-43e7-9a2d-d8c00b627c6c")
+        @objid ("9aa48b77-5826-4d59-acd9-703a48d36fba")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "95f69da8-e7d7-494b-90a7-db1618fa56fc");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -106,11 +111,11 @@ public abstract class CompositeConstraint extends CamelConstraint {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

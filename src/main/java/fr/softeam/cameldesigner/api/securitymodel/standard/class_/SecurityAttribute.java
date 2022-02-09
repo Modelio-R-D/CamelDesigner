@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -13,6 +13,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
+import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -34,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("dcfdf889-b55e-406d-8583-1ecbb8c17322")
 public class SecurityAttribute extends QualityAttribute {
-    @objid ("2dc66200-cc6c-413f-ba7c-723e19aa98a6")
+    @objid ("dc7dd173-297b-4a69-be02-b42c6d910b6d")
     public static final String STEREOTYPE_NAME = "SecurityAttribute";
 
     /**
@@ -45,7 +46,7 @@ public class SecurityAttribute extends QualityAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("db3c6af3-e234-4826-a60a-08750cc55241")
+    @objid ("01ee9a3b-451a-4bb6-8370-5c8c516d2549")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityAttribute.STEREOTYPE_NAME));
     }
@@ -55,7 +56,7 @@ public class SecurityAttribute extends QualityAttribute {
      * 
      * @return a {@link SecurityAttribute} proxy on the created {@link Class}.
      */
-    @objid ("9eb70f6b-969e-41f7-80cd-34b0bd938fcb")
+    @objid ("6a5bd92f-b2d3-441d-a2aa-38ea5a9fb645")
     public static SecurityAttribute create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityAttribute.STEREOTYPE_NAME);
@@ -63,36 +64,34 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link SecurityAttribute} proxy or <i>null</i>.
      */
-    @objid ("9a87fd4d-d7d8-4210-beef-65da12c624ed")
+    @objid ("9d486eac-4a6b-44ac-9321-fa7bb1e46b02")
     public static SecurityAttribute instantiate(final Class obj) {
         return SecurityAttribute.canInstantiate(obj) ? new SecurityAttribute(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityAttribute} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("924a562f-eb92-469f-80d0-b17667427fc7")
+    @objid ("1942ce27-87d3-427e-b16f-49a1b43935d2")
     public static SecurityAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityAttribute.canInstantiate(obj))
-            return new SecurityAttribute(obj);
+        	return new SecurityAttribute(obj);
         else
-            throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bda34051-26fc-45d4-b62b-9007963da417")
+    @objid ("af03fe56-6be3-4fc5-ba78-b53f0999a857")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,8 +111,9 @@ public class SecurityAttribute extends QualityAttribute {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("87a0206b-d382-4153-925f-118bf41e4d01")
+    @objid ("5f3aaef6-2df9-49a3-b425-75f1abf8bdfa")
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SecurityAttribute.MdaTypes.MDAASSOCDEP)
@@ -126,17 +126,16 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("2c2c3221-e24f-415e-9e96-df289ee69bca")
+    @objid ("45a1587b-567c-4691-aec8-97f2563fdb2b")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("ad31264f-5ea7-4933-9270-c1c416689764")
+    @objid ("9fcdcc92-d482-4ca5-9869-815927e92ae4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -146,8 +145,9 @@ public class SecurityAttribute extends QualityAttribute {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("f171fc1b-8918-40f4-af4a-9f973401a796")
+    @objid ("94f1ad5c-f649-4fae-8013-e1c5cf58518f")
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -167,23 +167,23 @@ public class SecurityAttribute extends QualityAttribute {
         }
     }
 
-    @objid ("5da43a92-b929-4dc6-b89c-92f26e9b1e27")
+    @objid ("97125f33-4b81-4513-813f-0c489b68d674")
     protected SecurityAttribute(final Class elt) {
         super(elt);
     }
 
     @objid ("6ae49d7c-2a2e-413e-af68-3326e7b2351a")
     public static final class MdaTypes {
-        @objid ("0109d285-a784-4023-bd3f-6b8d7010d169")
+        @objid ("6b444f41-b13d-4141-9c19-1aeec0f6240f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eb0c4fd4-ab45-43f2-8e76-715f5237f5d7")
+        @objid ("f9bfdde8-e6a8-42da-a086-0872ba7e72ac")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("57798003-23a2-4b12-8605-1ebe8aae997c")
+        @objid ("ec43e8b3-4217-4eee-b768-556ccc0abae6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5a14325c-f345-41ca-af23-a5dff112a27c")
+        @objid ("756cd1ea-bf68-449c-8057-9fea2067ea0b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "59943cbd-62e2-4183-8973-e15130bcb7d3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -191,11 +191,11 @@ public class SecurityAttribute extends QualityAttribute {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

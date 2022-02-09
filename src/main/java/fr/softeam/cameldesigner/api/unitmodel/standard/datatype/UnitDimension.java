@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1707f141-4e9c-4725-b618-05f025f22d01")
 public class UnitDimension extends FeatureDataType {
-    @objid ("b343a584-f891-4127-a33b-3a888ce2a0f3")
+    @objid ("ed93b41d-0ec8-4797-a79c-fbfb23e4d48e")
     public static final String STEREOTYPE_NAME = "UnitDimension";
 
     /**
@@ -47,7 +47,7 @@ public class UnitDimension extends FeatureDataType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("11dd65ac-f70b-4645-bc8a-f6cfa1dc92ef")
+    @objid ("d1ca9c07-1a50-4866-807a-81280058bda3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UnitDimension.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class UnitDimension extends FeatureDataType {
      * 
      * @return a {@link UnitDimension} proxy on the created {@link DataType}.
      */
-    @objid ("84905ac9-a286-4b21-9858-54b06ddfb5f9")
+    @objid ("a83f5ada-1189-4cc3-9e52-1e21a4bf919a")
     public static UnitDimension create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, UnitDimension.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a DataType
      * @return a {@link UnitDimension} proxy or <i>null</i>.
      */
-    @objid ("009dcfd3-2ff1-4a3f-9970-316bdb71cea5")
+    @objid ("ad1c05a6-10ff-42ca-a95d-83f6596fe404")
     public static UnitDimension instantiate(final DataType obj) {
         return UnitDimension.canInstantiate(obj) ? new UnitDimension(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link DataType}
      * @return a {@link UnitDimension} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2898ff8c-3763-4856-b7c7-a86cca131470")
+    @objid ("c31ad642-86f5-4eab-a2d3-f402c1b34c42")
     public static UnitDimension safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (UnitDimension.canInstantiate(obj))
-            return new UnitDimension(obj);
+        	return new UnitDimension(obj);
         else
-            throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("51e6f51b-e9b1-4ba4-8d59-e35b60622a87")
+    @objid ("65a82f88-d187-4310-95ea-854fbee00fc2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +109,16 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}.
-     * 
+     * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("c2750b2f-fc31-4b23-90f0-78799d915416")
+    @objid ("a28bbd7c-2dfe-4359-a692-f92648a7fcf4")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("e0a1d91c-4bc0-441b-ba18-2c4539759200")
+    @objid ("a967bd76-f392-4fc2-83c4-6de50bb6a421")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -134,23 +131,23 @@ public class UnitDimension extends FeatureDataType {
         return result;
     }
 
-    @objid ("5a6e0bb8-1019-4767-b22b-cdb82601000e")
+    @objid ("b6a23dc2-215c-4ed8-b82e-48b571ff636b")
     protected UnitDimension(final DataType elt) {
         super(elt);
     }
 
     @objid ("75da9eb1-b40f-49c3-9600-695ba46ea42f")
     public static final class MdaTypes {
-        @objid ("44680424-8916-4d3c-857d-4ce6c0b4c2ff")
+        @objid ("98dad18a-0a6f-4624-9ed3-4e63e343601f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("716ecf3a-4937-4d11-9fd1-3d884e7e4ff5")
+        @objid ("746ef51a-100d-4f5b-84de-89ea6657cbf7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("00736b9a-f6df-45bd-a6b4-e229ec45a044")
+        @objid ("01b3bd8b-2e8b-4773-b64f-8d44e1b50e12")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5709a864-465e-4acb-ab92-a2a974a75ce0")
+        @objid ("24956445-61eb-4707-b712-396822211ffa")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ce437f2d-07f2-4127-9702-da4eb627b157");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +155,11 @@ public class UnitDimension extends FeatureDataType {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

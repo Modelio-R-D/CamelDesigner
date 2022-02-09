@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -35,25 +35,25 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("03b02447-2b3a-4311-86ad-5b5ef5314b71")
 public class CloudCredentials extends Credentials {
-    @objid ("0fd98c20-195a-43cc-876d-8d2bdf86e0db")
+    @objid ("257ddef6-344e-4c8d-ac04-e178b7b0a9e2")
     public static final String STEREOTYPE_NAME = "CloudCredentials";
 
-    @objid ("57a806da-c079-486a-92d7-5f6f58a16c72")
+    @objid ("3ef00a11-c3fd-4a3a-9929-da3a07257def")
     public static final String CLOUDPROVIDERNAME_TAGTYPE = "cloudProviderName";
 
-    @objid ("7cf24c2d-c5c5-4ab0-892a-9deed06fdf56")
+    @objid ("3792eaf0-46c2-4067-9722-28225eca1db8")
     public static final String PASSWORD_TAGTYPE = "password";
 
-    @objid ("9b58ff10-cec0-48da-8439-2f133b7b4f5e")
+    @objid ("819ce078-d8fb-496f-a1d9-59951e7b6af3")
     public static final String PRIVATESSHKEY_TAGTYPE = "privateSSHKey";
 
-    @objid ("79432d77-6b3a-4739-bdab-a7ef1bef16c9")
+    @objid ("83a482eb-ef64-4093-bc44-7a10a9b731ed")
     public static final String PUBLICSSHKEY_TAGTYPE = "publicSSHKey";
 
-    @objid ("b29c87d1-8333-4233-878d-9bad885beb3c")
+    @objid ("364dde65-6343-4593-9967-c4d74f433713")
     public static final String SECURITYGROUP_TAGTYPE = "securityGroup";
 
-    @objid ("59b6c822-ade7-49ab-b61b-475349d71df3")
+    @objid ("cf9b882f-df64-4a99-83f8-8e3e19888a42")
     public static final String USERNAME_TAGTYPE = "username";
 
     /**
@@ -64,7 +64,7 @@ public class CloudCredentials extends Credentials {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c816f9c6-49da-493d-8b45-1cb1f8744977")
+    @objid ("a21bd378-b6a6-42d2-ba27-df10dee4025d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CloudCredentials.STEREOTYPE_NAME));
     }
@@ -74,7 +74,7 @@ public class CloudCredentials extends Credentials {
      * 
      * @return a {@link CloudCredentials} proxy on the created {@link Class}.
      */
-    @objid ("a6b8b8c9-dc54-4fce-b12e-dcde859b51bd")
+    @objid ("d6c20958-25b3-4359-8b44-9023968111cf")
     public static CloudCredentials create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CloudCredentials.STEREOTYPE_NAME);
@@ -82,36 +82,34 @@ public class CloudCredentials extends Credentials {
     }
 
     /**
-     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link CloudCredentials} proxy or <i>null</i>.
      */
-    @objid ("56151ca3-c5a2-431f-b69c-a6574c9131db")
+    @objid ("3e63389d-4e0b-4e3d-87c8-8313ec732129")
     public static CloudCredentials instantiate(final Class obj) {
         return CloudCredentials.canInstantiate(obj) ? new CloudCredentials(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link CloudCredentials} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("84062046-bff8-4177-804d-e711dc92bb14")
+    @objid ("73dd09db-1817-4762-965a-36b2d8bafc6a")
     public static CloudCredentials safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudCredentials.canInstantiate(obj))
-            return new CloudCredentials(obj);
+        	return new CloudCredentials(obj);
         else
-            throw new IllegalArgumentException("CloudCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CloudCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("776b8fac-7263-41d8-b726-5c8d52a2bde6")
+    @objid ("ea03ccca-124f-475b-8075-ba90a69d602d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,17 +130,16 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a125a8ad-25ff-4bb0-ad4e-dd8f6b71a557")
+    @objid ("4f1608e2-c8d3-4b3e-b4bc-c94dfea9e633")
     public String getCloudProviderName() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.CLOUDPROVIDERNAME_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e7b75ccf-7abd-4300-9e27-5699c7f34935")
+    @objid ("f71218a8-e00f-44ab-b7b8-2a29dbb5108f")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -153,7 +150,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f7add74-e9ea-4a34-82d5-99c4cba61e89")
+    @objid ("909302cb-47d1-4b5d-bc87-c450b4fc21a1")
     public String getPassword() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.PASSWORD_TAGTYPE_ELT);
     }
@@ -163,7 +160,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d614ef70-9fe1-463d-93b4-f355641ada29")
+    @objid ("c2965f93-6019-4348-8180-46b9d21399d3")
     public String getPrivateSSHKey() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.PRIVATESSHKEY_TAGTYPE_ELT);
     }
@@ -173,7 +170,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1d65ab02-59a1-4849-8aac-6ab2a9cc4c98")
+    @objid ("983d38fb-5923-4a54-9589-9b30eaf65c14")
     public String getPublicSSHKey() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.PUBLICSSHKEY_TAGTYPE_ELT);
     }
@@ -183,7 +180,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f1381b0-bbe8-4fb4-9854-5ff673b613b7")
+    @objid ("2888a3ee-7108-4608-b2c8-42c4b5392a88")
     public String getSecurityGroup() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.SECURITYGROUP_TAGTYPE_ELT);
     }
@@ -193,12 +190,12 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("06d376d0-5084-4ed4-a601-768845a0fbfb")
+    @objid ("70961f85-cffd-4326-9bf6-c26d24e07fe7")
     public String getUsername() {
         return this.elt.getTagValue(CloudCredentials.MdaTypes.USERNAME_TAGTYPE_ELT);
     }
 
-    @objid ("074f58ba-8faa-4cc9-9f4c-724e785f5cfc")
+    @objid ("73bef430-6204-468e-96a8-162cb34458fe")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -209,7 +206,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8668df95-b1ee-46a2-a96a-a71fff162d99")
+    @objid ("ba46acc4-ee4a-4962-a6d1-d9169f5609f8")
     public void setCloudProviderName(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.CLOUDPROVIDERNAME_TAGTYPE_ELT, value);
     }
@@ -219,7 +216,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("58713d6c-097b-4ce6-a1cb-93fe31275a3a")
+    @objid ("c0bd69f3-064d-47e9-b806-2bb152ae7be3")
     public void setPassword(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.PASSWORD_TAGTYPE_ELT, value);
     }
@@ -229,7 +226,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5322929f-6eb9-4632-8802-6b1ac23c2481")
+    @objid ("f4257c97-7b9e-4bc3-af93-6de3fe1f966a")
     public void setPrivateSSHKey(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.PRIVATESSHKEY_TAGTYPE_ELT, value);
     }
@@ -239,7 +236,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("491a3a16-9b91-489d-a1fb-18daf907c45c")
+    @objid ("83fa462c-bbea-4bb5-88c0-0597a7683b04")
     public void setPublicSSHKey(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.PUBLICSSHKEY_TAGTYPE_ELT, value);
     }
@@ -249,7 +246,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("651efbb2-e570-4fbf-bd59-8b6548b9d508")
+    @objid ("e258c895-0c49-4083-a2a9-d6f2ce0d02e9")
     public void setSecurityGroup(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.SECURITYGROUP_TAGTYPE_ELT, value);
     }
@@ -259,7 +256,7 @@ public class CloudCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0ef31c01-a8f7-497c-b6d3-35a0c4b2ca35")
+    @objid ("d3ba74bb-cedd-4e8f-97a8-51c647d6fd1f")
     public void setUsername(final String value) {
         this.elt.putTagValue(CloudCredentials.MdaTypes.USERNAME_TAGTYPE_ELT, value);
     }
@@ -271,41 +268,41 @@ public class CloudCredentials extends Credentials {
         return result;
     }
 
-    @objid ("4b67bb9e-6542-4d61-816f-207da1a70015")
+    @objid ("a6828457-3cc9-4ae5-af91-f1cc6b8dedc3")
     protected CloudCredentials(final Class elt) {
         super(elt);
     }
 
     @objid ("55def40b-2092-43e4-b2aa-463a47edd76b")
     public static final class MdaTypes {
-        @objid ("6b53bf92-d41a-4512-8279-794b951222e4")
+        @objid ("0b2f6f27-788f-4dd0-ab5c-e47d5a1c06ce")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7236ee0e-33a4-43b4-912a-3fdbd4bf6329")
+        @objid ("9542ce52-9b38-40e0-93d4-f9b2f3893d64")
         public static TagType CLOUDPROVIDERNAME_TAGTYPE_ELT;
 
-        @objid ("143bafa5-16d1-461b-800c-fcf25c58d2b6")
+        @objid ("40c8d7b7-11d7-44bd-b1b5-bff132c779ab")
         public static TagType SECURITYGROUP_TAGTYPE_ELT;
 
-        @objid ("8d76455e-85fa-4212-a55e-25661dbd86ca")
+        @objid ("949e7c3f-98a4-4696-a6fb-0b9a4a081f4c")
         public static TagType PUBLICSSHKEY_TAGTYPE_ELT;
 
-        @objid ("0e82800f-5bc4-43d4-ad1f-c0a7c7b0064e")
+        @objid ("fef8ac4c-4669-429e-a998-ac152e5352f5")
         public static TagType PRIVATESSHKEY_TAGTYPE_ELT;
 
-        @objid ("6699c2bf-d348-40d3-9928-70a0943285e8")
+        @objid ("cb4521ae-cb34-4d7c-9b4b-035b40b31cd0")
         public static TagType USERNAME_TAGTYPE_ELT;
 
-        @objid ("f5fb7594-3758-4688-8d27-b939f51260c5")
+        @objid ("fe935970-9f20-4aea-9527-6f93a1e28d6f")
         public static TagType PASSWORD_TAGTYPE_ELT;
 
-        @objid ("44528194-ace9-48c5-9425-bc95aac8c5fc")
+        @objid ("8453ce74-e70b-40b1-92c3-5e18c046bcf0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8c8e0923-4578-48a7-a345-d184ac24a331")
+        @objid ("7f3dc908-e345-429e-b4c4-83f30c313bac")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d68005f9-defc-4e04-b89a-9d523f48741c")
+        @objid ("1c6dd88e-3eac-4fb1-b486-1a8c4ccec44e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1ac06bbb-e680-411d-9dd2-26838d4ec854");
             CLOUDPROVIDERNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d30c4942-657d-4e40-b794-bcad379adfe3");
@@ -319,11 +316,11 @@ public class CloudCredentials extends Credentials {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

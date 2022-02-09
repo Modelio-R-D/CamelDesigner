@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -35,19 +35,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8bc634f0-656d-49d2-ba18-28050cd2f9dd")
 public class Window extends FeatureClass {
-    @objid ("fcb5f47f-b24c-4923-9890-f90d74d40366")
+    @objid ("b2fa99e5-b8b0-4797-aa74-e2473bd3cecb")
     public static final String STEREOTYPE_NAME = "Window";
 
-    @objid ("7c44f692-433e-4859-800f-bdb75189ddb8")
+    @objid ("8c3349c1-bcf5-4baf-a62b-e3c17d80d030")
     public static final String MEASUREMENTSIZE_TAGTYPE = "measurementSize";
 
-    @objid ("133a9ac1-7d52-4b6f-9b4c-949e1130b93f")
+    @objid ("def87e53-9c5d-46a8-95ea-064a9cdcc4a7")
     public static final String SIZETYPE_TAGTYPE = "sizeType";
 
-    @objid ("d6ba6458-207b-4e1b-a3c5-1c92607631fd")
+    @objid ("91430426-871d-48c0-abb2-60eaac1bb7b5")
     public static final String TIMESIZE_TAGTYPE = "timeSize";
 
-    @objid ("f1b8539a-5751-448e-af08-dfc649e1cc67")
+    @objid ("2800e1c3-061a-4aed-b2c0-2f233df0b55e")
     public static final String WINDOWTYPE_TAGTYPE = "windowType";
 
     /**
@@ -58,7 +58,7 @@ public class Window extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3aa10ed2-88f0-47cf-b0d2-8eaedcd73e34")
+    @objid ("f3ceb32c-4ed2-4bda-a57d-507bc37dd807")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Window.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class Window extends FeatureClass {
      * 
      * @return a {@link Window} proxy on the created {@link Class}.
      */
-    @objid ("089ddb38-5386-48f0-8075-6d8c59523f5d")
+    @objid ("c8134848-967e-4679-8b86-eb44910ff4f8")
     public static Window create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Window.STEREOTYPE_NAME);
@@ -76,36 +76,34 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link Window} proxy or <i>null</i>.
      */
-    @objid ("2f4de8b0-e55a-4d90-bcfc-5be1e06043aa")
+    @objid ("7b2b0701-a95e-45fc-a7df-00a674715a5e")
     public static Window instantiate(final Class obj) {
         return Window.canInstantiate(obj) ? new Window(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link Window} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("73ad82ce-5a82-42dc-a756-4318219fbf3e")
+    @objid ("2e091577-7150-4b30-bbc8-efaad7c1e8a2")
     public static Window safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Window.canInstantiate(obj))
-            return new Window(obj);
+        	return new Window(obj);
         else
-            throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("824ebaed-1ab6-4267-bd81-dfa3da20f5c9")
+    @objid ("2706c666-ea1d-41a4-b143-180d2281687d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -122,11 +120,10 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("20188999-5719-445b-866b-fabb62aa228c")
+    @objid ("f34492ff-e2a2-4d9b-b578-b15d8946a8c7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -137,7 +134,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("01862bf1-1652-477a-8398-489989d2c698")
+    @objid ("701a84a6-9849-4915-a7fb-7c731fad157f")
     public String getMeasurementSize() {
         return this.elt.getTagValue(Window.MdaTypes.MEASUREMENTSIZE_TAGTYPE_ELT);
     }
@@ -147,7 +144,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fe641ac6-6026-41c0-b21b-462ffa145229")
+    @objid ("18273cf0-9c44-4215-a218-71bff21a64ed")
     public String getSizeType() {
         return this.elt.getTagValue(Window.MdaTypes.SIZETYPE_TAGTYPE_ELT);
     }
@@ -157,7 +154,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("54e493ca-a658-4ce3-bc8c-35ae0c1986aa")
+    @objid ("1752662e-135b-45e0-97b7-b16e605bc9f3")
     public String getTimeSize() {
         return this.elt.getTagValue(Window.MdaTypes.TIMESIZE_TAGTYPE_ELT);
     }
@@ -166,8 +163,9 @@ public class Window extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("2dda57bc-cdf0-4527-9f1c-d7e4457132e8")
+    @objid ("82ce6866-a09f-48fb-817d-6378282433f1")
     public Unit getTimeUnit() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Window.MdaTypes.MDAASSOCDEP)
@@ -184,12 +182,12 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7e577d4d-70c7-469c-ad0d-47a6833e3392")
+    @objid ("8d8d79c0-6170-4db4-98a7-a054f3907845")
     public String getWindowType() {
         return this.elt.getTagValue(Window.MdaTypes.WINDOWTYPE_TAGTYPE_ELT);
     }
 
-    @objid ("2ffb2b52-e5b0-49dd-b308-9ead776c803f")
+    @objid ("ef61c5af-5d1c-4856-9f4c-8fcc9cc1b532")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -200,7 +198,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6b79a0bd-b937-42fa-8071-bd4f5a43951a")
+    @objid ("b29ffa97-a636-4e26-808b-9858e3877a49")
     public void setMeasurementSize(final String value) {
         this.elt.putTagValue(Window.MdaTypes.MEASUREMENTSIZE_TAGTYPE_ELT, value);
     }
@@ -210,7 +208,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ec107d99-b02c-4d22-a46e-fb0c637f7572")
+    @objid ("5e52363a-bf17-4e9c-a1ef-25a5a7a982d0")
     public void setSizeType(final String value) {
         this.elt.putTagValue(Window.MdaTypes.SIZETYPE_TAGTYPE_ELT, value);
     }
@@ -220,7 +218,7 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1c43aa86-43b0-4135-b1e5-517c26cf1951")
+    @objid ("93acc879-1b3b-4785-acb2-0dff1d065b03")
     public void setTimeSize(final String value) {
         this.elt.putTagValue(Window.MdaTypes.TIMESIZE_TAGTYPE_ELT, value);
     }
@@ -229,8 +227,9 @@ public class Window extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("c23ff67b-2bc6-4806-8d41-a062ba22e235")
+    @objid ("c0288506-ceb4-4acd-acd2-97ac4b6013b1")
     public void setTimeUnit(final Unit obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -255,40 +254,40 @@ public class Window extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e944a73b-80e7-49af-a83f-7f0fae4f9020")
+    @objid ("fa907694-c909-4911-88f4-13aa72d23fad")
     public void setWindowType(final String value) {
         this.elt.putTagValue(Window.MdaTypes.WINDOWTYPE_TAGTYPE_ELT, value);
     }
 
-    @objid ("e828adb9-2db9-4c38-a32f-b4babb3e3194")
+    @objid ("0a86221a-c30a-4d8f-b20a-253e3b65e028")
     protected Window(final Class elt) {
         super(elt);
     }
 
     @objid ("0f238069-a54e-4f1f-ae34-e69145b5ddda")
     public static final class MdaTypes {
-        @objid ("293cb5d1-4de4-48ec-a1ac-8f398e7e8c0e")
+        @objid ("cbdffb86-4199-4b85-a538-7538da31f94b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3c0c4217-5365-4f8d-9030-b8c5d0960b2f")
+        @objid ("ebf4c5a9-dc5d-437c-8042-205f273a15bc")
         public static TagType WINDOWTYPE_TAGTYPE_ELT;
 
-        @objid ("04a9c77d-77f7-4cc8-8722-8fbe9012d21e")
+        @objid ("3a6d2a73-5908-40f8-a33e-664fb7026e52")
         public static TagType SIZETYPE_TAGTYPE_ELT;
 
-        @objid ("0595c4ff-f5b6-4e0f-b032-369a6933e6d1")
+        @objid ("8b9d4074-9259-4833-b1d2-4da4a4d079d6")
         public static TagType MEASUREMENTSIZE_TAGTYPE_ELT;
 
-        @objid ("93177571-659a-4a35-ae5f-bbfbec988e82")
+        @objid ("c793fafa-d182-42fd-92ad-aba0512513b5")
         public static TagType TIMESIZE_TAGTYPE_ELT;
 
-        @objid ("3feb7752-75d5-4fbe-9b68-ae28cc59a72f")
+        @objid ("3b05feea-34ef-4cd8-b9a2-3c3f07987b15")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("128e24ae-80e9-481a-a413-eda5101f77ad")
+        @objid ("1ab483b5-7f2b-4906-8967-4d423ee9cfd0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7f1d074b-4f92-40fc-b7b7-3c79088f55d1")
+        @objid ("0ea5180b-4921-4cad-834c-a7592be3dd16")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "33bb8dc7-688c-4f64-97da-a3fcddbddc20");
             WINDOWTYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "cd7ae4c0-9f79-4384-b562-1bfdfa78754a");
@@ -300,11 +299,11 @@ public class Window extends FeatureClass {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

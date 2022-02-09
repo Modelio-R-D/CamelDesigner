@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.exchange.exporter.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.conversion.process.generate.AbstractGenerateProcess;
+import fr.softeam.cameldesigner.exchange.exporter.GenerateProcess;
 import fr.softeam.cameldesigner.exchange.exporter.IExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -12,7 +12,7 @@ public abstract class CamelElementExporter<T extends CamelElement> implements IE
     protected T _element;
 
     @objid ("3e53984a-4201-46ca-b1c6-385730174762")
-    protected AbstractGenerateProcess<CamelElement,CDOObject> _process;
+    protected GenerateProcess _process;
 
     @objid ("f287a4d9-300f-4b2a-9842-c3588cb762c6")
     public CamelElementExporter(T elt) {
@@ -20,7 +20,7 @@ public abstract class CamelElementExporter<T extends CamelElement> implements IE
     }
 
     @objid ("10543201-48dd-45ab-a3f2-a80115ca16bb")
-    public void setProcess(AbstractGenerateProcess<CamelElement,CDOObject> process) {
+    public void setProcess(GenerateProcess process) {
         this._process = process;
     }
 

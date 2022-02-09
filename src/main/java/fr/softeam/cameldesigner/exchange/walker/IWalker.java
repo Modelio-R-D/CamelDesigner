@@ -1,4 +1,4 @@
-package fr.softeam.cameldesigner.elementmodel.walker;
+package fr.softeam.cameldesigner.exchange.walker;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 

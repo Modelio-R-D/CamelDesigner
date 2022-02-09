@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -15,6 +15,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -36,16 +37,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c4125da8-2af3-4f99-b5b9-17fc903ad9ce")
 public class Permission extends FeatureClass {
-    @objid ("a3541270-db1e-464f-a205-64828058e753")
+    @objid ("64a93e7d-5eb5-46d0-a3e8-ea4a64372e29")
     public static final String STEREOTYPE_NAME = "Permission";
 
-    @objid ("062a879f-3367-4161-a4b3-4cf9971c5c04")
+    @objid ("69e5ca84-50a0-433a-9f62-d45506923f3a")
     public static final String ACTION_TAGTYPE = "action";
 
-    @objid ("cf852c8b-5446-4340-ae10-4ea3ba4540cc")
+    @objid ("1b5d3557-4075-4f8e-815f-6c94b2e45462")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("e9bb2819-0643-44fa-ad7a-d9c8bf4146ec")
+    @objid ("8943ca9e-c5fe-4572-b91a-f7f13ba7c36d")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
     /**
@@ -56,7 +57,7 @@ public class Permission extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("bb00563a-72f4-464d-9245-47ba1b6bd1d5")
+    @objid ("acae1bc2-dfcf-46eb-9abe-7b2befe63585")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Permission.STEREOTYPE_NAME));
     }
@@ -66,7 +67,7 @@ public class Permission extends FeatureClass {
      * 
      * @return a {@link Permission} proxy on the created {@link Class}.
      */
-    @objid ("3005f69e-38e2-4932-96ab-36d8c6d18a91")
+    @objid ("b9760b40-0109-4297-a99e-57f16d04db28")
     public static Permission create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Permission.STEREOTYPE_NAME);
@@ -74,36 +75,34 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link Permission} proxy or <i>null</i>.
      */
-    @objid ("f6307306-a037-4b04-8cca-8125c4a4f35d")
+    @objid ("3c3b9d0b-b210-4c21-9104-0ee081cd1519")
     public static Permission instantiate(final Class obj) {
         return Permission.canInstantiate(obj) ? new Permission(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link Permission} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("eb1ccdf2-a941-4944-a69e-f77ce0a928fb")
+    @objid ("472c9e96-3d7b-47cc-a373-338529a5ec1c")
     public static Permission safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Permission.canInstantiate(obj))
-            return new Permission(obj);
+        	return new Permission(obj);
         else
-            throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("24ba6385-75ed-4a4e-9d39-2ee6a4397316")
+    @objid ("5f097818-fa1b-46f7-bb0f-7a961cbdbb4a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -124,17 +123,16 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("91df09b1-bec4-4e70-8a0c-6d6332ddec00")
+    @objid ("7cd56297-2133-4002-a74d-83b809c4f06d")
     public String getAction() {
         return this.elt.getTagValue(Permission.MdaTypes.ACTION_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("1cd60291-1f85-4e16-b6b9-38c18fa9ea25")
+    @objid ("a3dfbb24-756b-46f4-8fa4-d157c8daa484")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -145,9 +143,27 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ecb382bc-e532-4bb9-a164-22a2ef2e75fe")
+    @objid ("90c100f6-5650-4a7c-bbda-5320ab3cff21")
     public String getEndTime() {
         return this.elt.getTagValue(Permission.MdaTypes.ENDTIME_TAGTYPE_ELT);
+    }
+
+    /**
+     * Get the value of the 'resourceFilter' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("ba2a16c8-429f-430f-b9c2-3fcc1ea08718")
+    public ResourceFilter getResourceFilter() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(Permission.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(Permission.MdaTypes.MDAASSOCDEP_ROLE), "resourceFilter")
+                  && ResourceFilter.canInstantiate(d.getDependsOn())) {
+                     return (ResourceFilter)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ResourceFilter.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
     }
 
     /**
@@ -155,12 +171,12 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0d6c74f7-7bda-4d64-8012-f70716e6dcce")
+    @objid ("609d9ae4-1ca5-468b-b473-5c40194b1486")
     public String getStartTime() {
         return this.elt.getTagValue(Permission.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
 
-    @objid ("f45c932d-437f-408f-a45e-10ca40887173")
+    @objid ("68f54b39-6132-46e7-88b1-56eb848fa6ab")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -171,7 +187,7 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d164acff-c0e5-45e8-8501-edcb688e2a9e")
+    @objid ("d75972ff-00ab-42b1-b7e0-0b376d86d749")
     public void setAction(final String value) {
         this.elt.putTagValue(Permission.MdaTypes.ACTION_TAGTYPE_ELT, value);
     }
@@ -181,9 +197,35 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b1e15ec9-7fbb-49c5-b63c-b64189ea9a9f")
+    @objid ("aaf21701-a162-4565-8811-15881dd56a12")
     public void setEndTime(final String value) {
         this.elt.putTagValue(Permission.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
+    }
+
+    /**
+     * Set the value of the 'resourceFilter' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("3513e50a-9de6-47a3-8983-38b0c544ad7a")
+    public void setResourceFilter(final ResourceFilter obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(Permission.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Permission.MdaTypes.MDAASSOCDEP_ROLE), "resourceFilter")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), Permission.MdaTypes.MDAASSOCDEP);
+              dep.setName("resourceFilter");      dep.putTagValue(Permission.MdaTypes.MDAASSOCDEP_ROLE, "resourceFilter");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
     }
 
     /**
@@ -191,7 +233,7 @@ public class Permission extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("812f721a-0f89-422f-8441-635a399eecf1")
+    @objid ("bcaa333a-5588-4765-9343-f848a01c0b3b")
     public void setStartTime(final String value) {
         this.elt.putTagValue(Permission.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -203,32 +245,32 @@ public class Permission extends FeatureClass {
         return result;
     }
 
-    @objid ("e1b95abf-42e1-46c2-bd4c-f8b31b3c3a0c")
+    @objid ("b71c81a5-6c28-47e9-b779-a4326d08c690")
     protected Permission(final Class elt) {
         super(elt);
     }
 
     @objid ("fd62df34-464e-4836-920b-01cca4e1811a")
     public static final class MdaTypes {
-        @objid ("050c1d8b-41c7-4384-a58c-849e250b6b8a")
+        @objid ("d231b61f-6b6b-4f58-84ac-ccde5051656f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5a4b6e5b-0a6a-46ce-933c-5b9bcab999f0")
+        @objid ("df57334f-f9c4-4f97-9599-74a1f5e4fccc")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("aa65ab67-c1f8-43b4-b547-dcdf0e354aea")
+        @objid ("cefc620a-26fa-43f3-901b-18b8ece6edcc")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("8b95da1d-8971-4bad-b383-bec67816f4c5")
+        @objid ("3dee9db3-4415-48f6-8ae7-7b59def3e437")
         public static TagType ACTION_TAGTYPE_ELT;
 
-        @objid ("072467d2-f7a4-4cb7-9514-c11d3e2275b8")
+        @objid ("564d594a-b6a0-4b96-827f-8a6fbfd3b795")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f125dd37-1a13-49fe-b1bb-935875f9cd97")
+        @objid ("130948ff-b7b1-486c-88f5-ac1f9003fb11")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1ad0a5fc-145d-427c-b5e5-1a8073b65810")
+        @objid ("60dd9a0d-dc51-417d-82bb-202f3cce13fc")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6ae08256-a803-41d5-b777-25c632563818");
             STARTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1cd5d4cb-89a8-4de9-bb2b-b8c6c32eb886");
@@ -239,11 +281,11 @@ public class Permission extends FeatureClass {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

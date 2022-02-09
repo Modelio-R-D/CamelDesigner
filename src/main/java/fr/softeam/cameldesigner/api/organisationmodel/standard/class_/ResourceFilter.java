@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -34,13 +34,26 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("53eb9b5e-52a6-497a-9bde-4d9f38ed6449")
 public abstract class ResourceFilter extends FeatureClass {
-    @objid ("7205c094-389b-4512-9c9a-fd732837f416")
+    @objid ("d31c56f9-23f9-4601-96d2-e5971db907e6")
     public static final String STEREOTYPE_NAME = "ResourceFilter";
 
-    @objid ("1f07f368-7906-4404-82ac-bbbd88ecfda8")
+    @objid ("9c07fc9b-004a-459f-81c4-ec6269648e11")
     public static final String RESOURCEPATTERN_TAGTYPE = "resourcePattern";
 
-    @objid ("cef896a6-2b07-4d65-878b-6d9e12b511e6")
+    /**
+     * Tells whether a {@link ResourceFilter proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << ResourceFilter >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("a7ca92a7-1287-4e20-86ae-246c45176260")
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ResourceFilter.STEREOTYPE_NAME));
+    }
+
+    @objid ("996bca12-afab-40c7-97ce-28c3c377a4a4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -57,11 +70,10 @@ public abstract class ResourceFilter extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("8456602d-8957-4a01-a1e0-15f685718f80")
+    @objid ("7c50e6a5-f6fc-4f48-8d42-e925f0654240")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -72,12 +84,12 @@ public abstract class ResourceFilter extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("33dca941-2d4c-46cb-a92d-ba28b2b1c7d5")
+    @objid ("dc47b766-8078-4424-a42f-fbae0d158a26")
     public String getResourcePattern() {
         return this.elt.getTagValue(ResourceFilter.MdaTypes.RESOURCEPATTERN_TAGTYPE_ELT);
     }
 
-    @objid ("abfe72c6-baad-4d7a-90b2-7d66695f032d")
+    @objid ("b74d69f7-8db0-40f9-b5fd-bbb061486312")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -88,31 +100,31 @@ public abstract class ResourceFilter extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7a700a3f-9a95-477e-8371-c2ab10c8b31f")
+    @objid ("1d8c3c79-0de6-4817-bb33-ca16a10a869f")
     public void setResourcePattern(final String value) {
         this.elt.putTagValue(ResourceFilter.MdaTypes.RESOURCEPATTERN_TAGTYPE_ELT, value);
     }
 
-    @objid ("6bafa6d2-3fdb-4cd1-bd6a-4ded8fe1c80b")
+    @objid ("10091dcc-786b-4c91-be18-6405825203a6")
     protected ResourceFilter(final Class elt) {
         super(elt);
     }
 
     @objid ("bd4f750f-80f9-4a53-854a-cfc985bd16a5")
     public static final class MdaTypes {
-        @objid ("ef37bb8f-1287-4786-9b66-b9e597cd61f3")
+        @objid ("5ffea74f-a6ad-47f8-95b1-2501e82bda90")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dd558577-07dd-4043-8059-2de2dce688a5")
+        @objid ("e3eb8c2d-6702-4d78-a970-5e355e1c909f")
         public static TagType RESOURCEPATTERN_TAGTYPE_ELT;
 
-        @objid ("8fc0cee4-8290-4e6b-b873-42edca19ca20")
+        @objid ("8bb02325-3145-4000-b520-7427a07d164f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f2620fc4-3a59-4196-8d92-bdabb8b11a81")
+        @objid ("36aa0cc7-528e-4e32-890e-22bba98d2c2c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c8359e62-8ba7-4cd0-8507-3d9bf3fc6e4a")
+        @objid ("86568892-228b-4eb4-9608-fafe36d5b944")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ce775666-60ae-48ab-94dd-b9a12b9edf2f");
             RESOURCEPATTERN_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "4a71ce8e-6fc5-476d-8f32-ccf11be3149c");
@@ -121,11 +133,11 @@ public abstract class ResourceFilter extends FeatureClass {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

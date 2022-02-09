@@ -1,14 +1,17 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataModel;
@@ -24,10 +27,18 @@ import fr.softeam.cameldesigner.api.securitymodel.standard.package_.SecurityMode
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Package} with << SubModel >> stereotype.
@@ -36,8 +47,21 @@ import org.modelio.metamodel.uml.statik.Package;
  */
 @objid ("f07e87ba-586c-403f-a02b-a1871d8d3882")
 public abstract class SubModel extends NamedElement {
-    @objid ("23fed3d1-d864-4b58-aef7-e1b281725369")
+    @objid ("bf8f8e4d-5937-443b-ad6c-d50af2a67a82")
     public static final String STEREOTYPE_NAME = "SubModel";
+
+    /**
+     * Tells whether a {@link SubModel proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << SubModel >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("a0078169-f9ee-4804-89be-9f407ca7dc46")
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SubModel.STEREOTYPE_NAME));
+    }
 
     @objid ("cfdee8da-a663-4858-b16b-b3b70f078449")
     public static SubModel instantiate(final Package obj) {
@@ -56,7 +80,7 @@ public abstract class SubModel extends NamedElement {
                                                         UnitModel.canInstantiate(obj) ? UnitModel.instantiate(obj) : null;
     }
 
-    @objid ("ed1a1e8d-a8bd-41bf-b9b9-acde478ec5ef")
+    @objid ("5ea44bfb-121c-4fb9-8a87-f5bee6bcbc34")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -73,45 +97,38 @@ public abstract class SubModel extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("5bf90ecc-54e4-495c-8392-fef92c286a6a")
+    @objid ("15ea5155-c1dd-4353-90d8-073f76b35d86")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("ed9da2bb-f94d-4e0f-8eae-c1eb699698e4")
+    @objid ("760e9693-8be7-4919-b4f6-ccd8b98cab57")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("23166fee-ed14-4d10-affd-6b32ea51304a")
+    @objid ("7681fd69-b883-42dd-bb01-0d1ad807f8ec")
     protected SubModel(final Package elt) {
         super(elt);
     }
 
-    @objid ("b4228aaa-4892-4e9d-a3d6-8bcebd43b6ea")
-    @Override
-    public List<CamelElement> getChilds() {
-        return super.getChilds();
-    }
-
     @objid ("272d938f-b497-426d-a404-96b884126080")
     public static final class MdaTypes {
-        @objid ("e7620485-8170-4477-8dd8-58c51826ab46")
+        @objid ("b5459ee6-67dd-48b9-94bf-8e2a54ee7bee")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3678787c-5eae-46c6-9947-44ee68ca64ee")
+        @objid ("b4443973-5f62-4b99-946f-1df11d7827eb")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("af17ce48-430d-4551-bfb2-ec135f5b00b2")
+        @objid ("38f9ed6a-05df-4b54-bac0-25cfa4c27f36")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("08e322af-21ca-43ac-bca2-9876deba1b66")
+        @objid ("d6388565-1ea1-4810-92c3-8ea913f928cf")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "577c153e-42b8-4f36-9686-1a6109ffdc16");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -119,11 +136,11 @@ public abstract class SubModel extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.namespace;
 
@@ -13,6 +13,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.namespace.Action;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -34,10 +35,23 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8486585a-5685-4f6e-9bb4-9334f5924b9f")
 public abstract class ScalingAction extends Action {
-    @objid ("0f973c84-392f-4a3f-92b7-01ed6a3123ad")
+    @objid ("2d6ffa40-727e-41b8-900d-bea17cbf48ec")
     public static final String STEREOTYPE_NAME = "ScalingAction";
 
-    @objid ("eab493f8-e19a-4339-a843-b053db17d138")
+    /**
+     * Tells whether a {@link ScalingAction proxy} can be instantiated from a {@link MObject} checking it is a {@link NameSpace} stereotyped << ScalingAction >>.
+     * <p>
+     * The method returns <code>false</code> if the instantiation cannot be carried out.
+     * 
+     * @param elt a model object
+     * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
+     */
+    @objid ("6de80551-9a6c-4887-b7e0-a9dbfc32a31d")
+    public static boolean canInstantiate(final MObject elt) {
+        return ((elt instanceof NameSpace) && ((NameSpace) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScalingAction.STEREOTYPE_NAME));
+    }
+
+    @objid ("b8768747-4fe3-4006-b29e-92f902c55c42")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -54,39 +68,82 @@ public abstract class ScalingAction extends Action {
     }
 
     /**
-     * Get the underlying {@link NameSpace}.
-     * 
+     * Get the underlying {@link NameSpace}. 
      * @return the NameSpace represented by this proxy, never null.
      */
-    @objid ("6005318f-69b9-41f0-8bbe-bc0e394ce8e3")
+    @objid ("c7f27985-1d95-4b23-ae9e-b239b5cdaaef")
     @Override
     public NameSpace getElement() {
         return (NameSpace)super.getElement();
     }
 
-    @objid ("132609a0-da28-4d55-bb0d-e4db593c0233")
+    /**
+     * Get the value of the 'softwareComponent' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("33853408-e9e4-4caa-b862-d8a26e8f199e")
+    public SoftwareComponent getSoftwareComponent() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(ScalingAction.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(ScalingAction.MdaTypes.MDAASSOCDEP_ROLE), "softwareComponent")
+                  && SoftwareComponent.canInstantiate(d.getDependsOn())) {
+                     return (SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    @objid ("9124457f-cc9f-4610-a204-b9a0bc40710c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("1ffdf3c8-2db2-4737-9994-4fb5fc450838")
+    /**
+     * Set the value of the 'softwareComponent' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("35275c7c-3db8-453c-883b-f4f6665c3415")
+    public void setSoftwareComponent(final SoftwareComponent obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(ScalingAction.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(ScalingAction.MdaTypes.MDAASSOCDEP_ROLE), "softwareComponent")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), ScalingAction.MdaTypes.MDAASSOCDEP);
+              dep.setName("softwareComponent");      dep.putTagValue(ScalingAction.MdaTypes.MDAASSOCDEP_ROLE, "softwareComponent");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    @objid ("7c2f7406-29dd-4dff-8c41-988baa4cd19a")
     protected ScalingAction(final NameSpace elt) {
         super(elt);
     }
 
     @objid ("8b410711-e57b-4938-903b-9dc7cc45b117")
     public static final class MdaTypes {
-        @objid ("f1ff7a1f-d83b-43e5-927d-e11a8c78215c")
+        @objid ("ba4763be-f913-431c-aec3-4d60476bc0cc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("58a142da-c971-4727-914e-ec54e5bf98b3")
+        @objid ("7ebb4317-6966-4f23-aa56-124d2c205593")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("806bb224-4a27-4e30-9dc4-a7c05b43d5c4")
+        @objid ("a5e67d8e-94c4-4ae7-9788-0319f1cfb93a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6320741d-12a0-4854-8f81-2b40e2a09077")
+        @objid ("e3a3fbff-615c-444a-8561-08a4117e16cb")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "25bf81ac-b13e-4716-b766-42a9b7e05150");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -94,11 +151,11 @@ public abstract class ScalingAction extends Action {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

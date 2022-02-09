@@ -17,9 +17,6 @@ public class CamelDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
     @objid ("ee869965-baf4-4957-adf5-1a5c2f6929e7")
     private String _ramcVersion = "1.0.05";
 
-    @objid ("dd829225-9666-4c55-9ce4-17e0076c948f")
-    private CamelModelChangeHandler modelChangeHandler = null;
-
     @objid ("63790a1c-b35d-417f-ad95-81bb7d121069")
     public CamelDesignerLifeCycleHandler(final CamelDesignerModule module) {
         super(module);
@@ -72,7 +69,7 @@ public class CamelDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
         final IModelComponentService modelComponentService = CamelDesignerModule.getInstance().getModuleContext().getModelioServices().getModelComponentService();
         for (IModelComponentDescriptor mc : modelComponentService.getModelComponents()) {
             if (mc.getName().equals("MetaDataSchema")) {
-                if (new Version(mc.getVersion()).isOlderThan(new Version(_ramcVersion))) {
+                if (new Version(mc.getVersion()).isOlderThan(new Version(this._ramcVersion))) {
                     modelComponentService.deployModelComponent(new File(mdaplugsPath.resolve("res" + File.separator + "ramc" + File.separator + "MetaDataSchema.ramc").toString()), new NullProgressMonitor());
                 } else {
                     // Ramc already deployed...

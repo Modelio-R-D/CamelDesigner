@@ -6,9 +6,8 @@ import camel.core.CamelModel;
 import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.conversion.process.generate.GenerateProcess;
-import fr.softeam.cameldesigner.elementmodel.walker.IWalker;
-import fr.softeam.cameldesigner.elementmodel.walker.umlwalker.UmlWalker;
+import fr.softeam.cameldesigner.exchange.walker.IWalker;
+import fr.softeam.cameldesigner.exchange.walker.umlwalker.UmlWalker;
 
 @objid ("4b0018c9-1638-4a99-9f0a-549c5fd6d7f1")
 public abstract class AbstractExporterService {

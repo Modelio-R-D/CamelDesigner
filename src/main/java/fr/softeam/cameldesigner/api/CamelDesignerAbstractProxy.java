@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.class_.CompositeConstraint;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.class_.UnaryConstraint;
+import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CompositeConstraint;
+import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.UnaryConstraint;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
@@ -235,7 +235,6 @@ public class CamelDesignerAbstractProxy {
 
     @objid ("2290f4c4-182d-4cec-8dea-d2a9ef885a55")
     public static List<ModelElement> getConstraints() {
-        // TODO Auto-generated method stub
         List<ModelElement> result = new ArrayList<>();
         
         //UnaryConstraint

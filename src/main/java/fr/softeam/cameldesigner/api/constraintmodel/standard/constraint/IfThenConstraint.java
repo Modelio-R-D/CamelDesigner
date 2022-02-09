@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -14,6 +14,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -35,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("66fa54e1-453d-44ab-9ee6-b00c38c52da5")
 public class IfThenConstraint extends CompositeConstraint {
-    @objid ("06e638fa-0426-41db-80e2-2ce6b6fc9ddc")
+    @objid ("87dfc63c-7841-4e08-bac9-546a421600ad")
     public static final String STEREOTYPE_NAME = "IfThenConstraint";
 
     /**
@@ -46,7 +47,7 @@ public class IfThenConstraint extends CompositeConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d0fbd9cb-9bf5-49e1-90f2-ebbcc79739ca")
+    @objid ("a19f060f-5006-422b-820a-1704f36254a0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, IfThenConstraint.STEREOTYPE_NAME));
     }
@@ -56,7 +57,7 @@ public class IfThenConstraint extends CompositeConstraint {
      * 
      * @return a {@link IfThenConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("f95fb437-29ac-48ce-8681-4da3c89adbc0")
+    @objid ("fb81f058-5fad-456e-8c5e-874b9e02363d")
     public static IfThenConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, IfThenConstraint.STEREOTYPE_NAME);
@@ -64,36 +65,34 @@ public class IfThenConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Constraint
      * @return a {@link IfThenConstraint} proxy or <i>null</i>.
      */
-    @objid ("8bada028-117e-4553-8a9c-51bcfaf67e81")
+    @objid ("9a29fb8b-9956-4b1b-a361-d340f3de10cd")
     public static IfThenConstraint instantiate(final Constraint obj) {
         return IfThenConstraint.canInstantiate(obj) ? new IfThenConstraint(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Constraint}
      * @return a {@link IfThenConstraint} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("05cd9077-6a92-4b78-bdbb-08b184f771b7")
+    @objid ("32450b8b-7b1d-4b56-a2e0-a99f6ca23670")
     public static IfThenConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (IfThenConstraint.canInstantiate(obj))
-            return new IfThenConstraint(obj);
+        	return new IfThenConstraint(obj);
         else
-            throw new IllegalArgumentException("IfThenConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("IfThenConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("16775e6a-5490-40fe-825e-28d4c0a20148")
+    @objid ("8a09093c-8a0a-40fe-8b77-b7cff7a86eee")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,11 +109,10 @@ public class IfThenConstraint extends CompositeConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}.
-     * 
+     * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("15d61ef5-b7d6-42c1-8cad-ed4d679e4706")
+    @objid ("7ee284ef-e90f-4b82-a3b0-1a3c6fd5e99b")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -124,8 +122,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'else' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e8501229-1421-4b69-9195-990f3ba5d9a9")
+    @objid ("abdfc80a-b555-49b1-bed2-17d56d8a8ef8")
     public CamelConstraint getElse() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(IfThenConstraint.MdaTypes.MDAASSOCDEP)
@@ -141,8 +140,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'if' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("bac2bc96-4a45-42e1-9b9b-25e9024d4e9c")
+    @objid ("63bc2f51-378a-4a4c-bc46-2242e716f00c")
     public CamelConstraint getIf() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(IfThenConstraint.MdaTypes.MDAASSOCDEP)
@@ -158,8 +158,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'then' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("180f2833-f59a-4711-8c30-6b5da84365e7")
+    @objid ("aad689f7-1a69-4f1c-a8b5-87c559e0192a")
     public CamelConstraint getThen() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(IfThenConstraint.MdaTypes.MDAASSOCDEP)
@@ -171,7 +172,7 @@ public class IfThenConstraint extends CompositeConstraint {
         return null;
     }
 
-    @objid ("e10695c1-b6c9-4b67-9aa3-8609d964272b")
+    @objid ("0b22e753-262b-4851-b99d-5b9dad3b121a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -181,8 +182,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'else' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("2fdfe216-0189-49db-a705-63a52fee56de")
+    @objid ("f8267563-80d3-4f4e-930f-4ba60a823f74")
     public void setElse(final CamelConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -206,8 +208,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'if' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("75d085b2-9c40-4bd2-b75c-4001c0008462")
+    @objid ("fd69239b-6def-4fa1-a398-04fc978c6d8f")
     public void setIf(final CamelConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -231,8 +234,9 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'then' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("86d74db7-7490-446b-9b03-d566880a5501")
+    @objid ("bff8948d-78a0-48e9-8f6a-f308b580574b")
     public void setThen(final CamelConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -259,23 +263,23 @@ public class IfThenConstraint extends CompositeConstraint {
         return result;
     }
 
-    @objid ("d52039d8-c828-41d4-bdea-bce966b3ddd7")
+    @objid ("73273636-3826-4e26-80e3-f1ce86b271f8")
     protected IfThenConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("dbfb4897-53bf-4e5b-8030-02583cd948cf")
     public static final class MdaTypes {
-        @objid ("b865260e-3709-4810-9348-83cbeb5c2296")
+        @objid ("beb9f833-8331-4689-89c4-de5eeb986b6a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d3170002-5d8c-4e9e-bb59-19d9ffa682a1")
+        @objid ("2eca29f5-abc5-4981-a121-a4910272bfd1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("12622ca4-2dc3-405f-88bc-bd52c1335fe4")
+        @objid ("29e244a1-c94d-4ac8-bde7-0c954ce856d8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("291d1a1c-bbb4-4b12-9dc5-86aa07f8bc1b")
+        @objid ("4ba4661e-57a4-4805-8c44-2da39928a8af")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "da516708-1c56-443a-addc-f474b2e61c28");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -283,11 +287,11 @@ public class IfThenConstraint extends CompositeConstraint {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

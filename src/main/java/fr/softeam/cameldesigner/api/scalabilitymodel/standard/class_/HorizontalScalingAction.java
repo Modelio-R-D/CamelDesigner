@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("9043ebaf-e900-49af-8abc-87dbea13b475")
 public class HorizontalScalingAction extends ScalingAction {
-    @objid ("ffaf9913-d14a-49fa-b953-fe0ccde9ea7e")
+    @objid ("e4116cb4-d5dc-410f-a425-cd7e86964546")
     public static final String STEREOTYPE_NAME = "HorizontalScalingAction";
 
-    @objid ("6a6eb9e2-abaf-436f-8953-1b46240dff65")
+    @objid ("2a9617c9-53fc-4ae6-bb79-1f429ae0168b")
     public static final String COUNT_TAGTYPE = "count";
 
     /**
@@ -50,7 +50,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("36118b0d-4513-48e5-9601-926ab7c0af93")
+    @objid ("f8a86c58-0d5b-4c05-95c4-77452e03e222")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScalingAction.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * 
      * @return a {@link HorizontalScalingAction} proxy on the created {@link Class}.
      */
-    @objid ("5739c751-6d31-4788-8424-e231e0f47eeb")
+    @objid ("8d607605-6da7-4b4a-94a9-4cabdd4dee7a")
     public static HorizontalScalingAction create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScalingAction.STEREOTYPE_NAME);
@@ -68,36 +68,34 @@ public class HorizontalScalingAction extends ScalingAction {
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScalingAction} proxy from a {@link Class} stereotyped << HorizontalScalingAction >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HorizontalScalingAction} proxy from a {@link Class} stereotyped << HorizontalScalingAction >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link HorizontalScalingAction} proxy or <i>null</i>.
      */
-    @objid ("89525750-6c3c-451e-a412-6c80830fd0b3")
+    @objid ("ac2be0ee-37cd-4fc9-9822-900202219c55")
     public static HorizontalScalingAction instantiate(final Class obj) {
         return HorizontalScalingAction.canInstantiate(obj) ? new HorizontalScalingAction(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScalingAction} proxy from a {@link Class} stereotyped << HorizontalScalingAction >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HorizontalScalingAction} proxy from a {@link Class} stereotyped << HorizontalScalingAction >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link HorizontalScalingAction} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5c58452d-2d33-46f9-9477-ba0d1f75150b")
+    @objid ("0e635e0b-0407-414e-bc03-a05b2ed3a613")
     public static HorizontalScalingAction safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HorizontalScalingAction.canInstantiate(obj))
-            return new HorizontalScalingAction(obj);
+        	return new HorizontalScalingAction(obj);
         else
-            throw new IllegalArgumentException("HorizontalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("HorizontalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("280e9814-48fe-4094-9ba4-24108a9c990a")
+    @objid ("8317de96-2501-490d-a088-122e3b070d5e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,23 +116,22 @@ public class HorizontalScalingAction extends ScalingAction {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2416323b-5177-4817-9abd-65118ad74828")
+    @objid ("2006a80f-ad48-4455-8dcc-2ee2a19de7f9")
     public String getCount() {
         return this.elt.getTagValue(HorizontalScalingAction.MdaTypes.COUNT_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("9c38d798-2369-4989-a8fd-6b786d15badc")
+    @objid ("f8dbb58e-e033-4107-8e71-779239cd2abd")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("1e16f41b-c270-4d5a-b6e9-a1b3b94b08eb")
+    @objid ("7a7fd213-3a46-48de-bf36-14ac73505f83")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -145,7 +142,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b3d0bb59-fc2e-4c62-bfe0-73d9c303bce7")
+    @objid ("aa8f2a59-1f83-4f3f-b030-05332f9b198f")
     public void setCount(final String value) {
         this.elt.putTagValue(HorizontalScalingAction.MdaTypes.COUNT_TAGTYPE_ELT, value);
     }
@@ -157,26 +154,26 @@ public class HorizontalScalingAction extends ScalingAction {
         return result;
     }
 
-    @objid ("07de21be-fd11-4a5d-b44b-89c571aaf910")
+    @objid ("09876bbb-09aa-4ce9-bdc0-78725318567b")
     protected HorizontalScalingAction(final Class elt) {
         super(elt);
     }
 
     @objid ("903e4b65-68e5-46fa-8af6-f2905c82423f")
     public static final class MdaTypes {
-        @objid ("b50721f6-8088-4a2b-8cd8-e82a4c588618")
+        @objid ("4d280d91-d03a-4258-9a6c-a356177846f2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("53573195-f8e5-4e74-8ed0-2f30a04f8856")
+        @objid ("9ddd12b4-d6b2-4bbe-a742-8277421fc6d7")
         public static TagType COUNT_TAGTYPE_ELT;
 
-        @objid ("5755ff4f-16b7-4fcb-97a1-7b49c7785cd0")
+        @objid ("2f1de5d1-2400-40d3-a3d4-19fee8a5140f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e99f3c24-369f-4770-80de-6bc36beff830")
+        @objid ("efd252c6-fe3d-4cd2-b266-465f2793de7c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e338671d-12d0-4bb4-b643-08e4953379f2")
+        @objid ("d5bec71f-194e-4a6e-b5e6-35e4ff4f2329")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "99008d6c-2622-4467-8283-6059df42c240");
             COUNT_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d52b6541-1841-4607-96a8-591ad329e65f");
@@ -185,11 +182,11 @@ public class HorizontalScalingAction extends ScalingAction {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

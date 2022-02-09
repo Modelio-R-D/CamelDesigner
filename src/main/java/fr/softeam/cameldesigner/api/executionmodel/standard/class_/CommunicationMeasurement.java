@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 11/24/21 6:53 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("edb868dc-4070-4b7f-8e36-da2647d6198a")
 public class CommunicationMeasurement extends Measurement {
-    @objid ("54b09b3c-8093-4472-a04c-462617a9b04d")
+    @objid ("0081c62f-fbb9-43f9-8643-f21e04fd80c6")
     public static final String STEREOTYPE_NAME = "CommunicationMeasurement";
 
     /**
@@ -46,7 +46,7 @@ public class CommunicationMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("69be5fb7-9229-4813-8b32-925cf705fbd5")
+    @objid ("d97802f2-13ca-4240-acc8-be81e4413c8e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationMeasurement.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class CommunicationMeasurement extends Measurement {
      * 
      * @return a {@link CommunicationMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("5e581efd-890a-4ed9-8254-b9fb9b5ce6f7")
+    @objid ("86a54b53-6950-44b3-bbba-e23f2e335836")
     public static CommunicationMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationMeasurement.STEREOTYPE_NAME);
@@ -64,36 +64,34 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link CommunicationMeasurement} proxy or <i>null</i>.
      */
-    @objid ("f716e480-0740-4dc4-8ac2-0cdbce6004b7")
+    @objid ("f50445b6-e78b-4c4b-a2d3-5d3217bb2216")
     public static CommunicationMeasurement instantiate(final Class obj) {
         return CommunicationMeasurement.canInstantiate(obj) ? new CommunicationMeasurement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link CommunicationMeasurement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("28937aa2-a20a-4dde-816b-96634430cc45")
+    @objid ("884c367e-3b94-420f-b162-a8bda57a586a")
     public static CommunicationMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CommunicationMeasurement.canInstantiate(obj))
-            return new CommunicationMeasurement(obj);
+        	return new CommunicationMeasurement(obj);
         else
-            throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b1c8b2bc-7164-400b-8b27-4677cfa6cd94")
+    @objid ("2b250bf9-563b-4957-825c-acf409f30464")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,11 +108,10 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("ebdca3e0-7b26-412d-89fa-0346d5f3db1c")
+    @objid ("b79fdc8d-b1fb-43c9-b2fd-f0e7870bd4d5")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -124,8 +121,9 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVM' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("3223de67-d6d6-4286-bf5d-0078fac261fa")
+    @objid ("1f0f397b-ff8e-489a-8663-dcaa41d7b24e")
     public VM getSourceVM() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -141,8 +139,9 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("cddb24b4-2a49-417b-b400-fd4eb3c591f4")
+    @objid ("f71d43db-ef46-4ffa-83f2-07f979591eeb")
     public VMInstance getSourceVMInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -158,8 +157,9 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVM' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("a66ed21b-2453-492e-88f8-6bf91992b9bc")
+    @objid ("0c92ca4b-3c81-4200-8112-b22968dc6dc3")
     public VM getTargetVM() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -175,8 +175,9 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("afcfb170-7931-4836-bd0a-51c92ede34c2")
+    @objid ("16cc7cad-938c-490c-9cda-3f6bb19a0d64")
     public VMInstance getTargetVMInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -188,7 +189,7 @@ public class CommunicationMeasurement extends Measurement {
         return null;
     }
 
-    @objid ("8e9ee91c-1fad-4d0a-9d56-7d62aed4543c")
+    @objid ("b543f971-63fc-4634-8760-480fc6939f3e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -198,8 +199,9 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVM' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d0e29d47-3d09-43b1-af8f-1021834a9aa2")
+    @objid ("82d3ad89-bd51-4ec2-b2f3-2580ac885e6c")
     public void setSourceVM(final VM obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -223,8 +225,9 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("6126b618-ecb7-4615-9152-125d3930e3fc")
+    @objid ("8076b2cf-c870-4ec3-822b-f8fba0874ede")
     public void setSourceVMInstance(final VMInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -248,8 +251,9 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVM' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("b9ca256d-9852-43c9-96d0-f52d38214632")
+    @objid ("e88ce98b-df2d-4380-b35b-f5f83a17dd0c")
     public void setTargetVM(final VM obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -273,8 +277,9 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("60bbd0af-8608-4c02-b6f9-352edc387a2f")
+    @objid ("159c04bd-7306-4ceb-8f0a-2a28a45090be")
     public void setTargetVMInstance(final VMInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -294,23 +299,23 @@ public class CommunicationMeasurement extends Measurement {
         }
     }
 
-    @objid ("b5a313d5-d423-432a-a012-b48c5a544705")
+    @objid ("de459374-5855-44bd-a1ee-8b36484e1e6e")
     protected CommunicationMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("2bc724e6-be76-4f04-8dd1-ded2cd7a4cf6")
     public static final class MdaTypes {
-        @objid ("ac983e3d-2b7e-48e1-8386-adf82fc279dd")
+        @objid ("fe0a6347-25f5-4099-af23-7be49dc152f5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("aa6285f8-db57-4798-81c1-79afc9f4c8a7")
+        @objid ("90debc1f-fd99-45e9-8628-4a4a62922859")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("02d1b447-7b7c-4bb1-a56b-6eb69c85d9e1")
+        @objid ("232512f2-7000-4172-a86d-f64ad465f28f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("962abb1d-557d-47c2-bcb2-59f40df57ee6")
+        @objid ("916cbdea-7b98-49b7-9961-8c2c81cd2716")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "438c005e-3455-4a76-ba8b-3791473a3e5a");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -318,11 +323,11 @@ public class CommunicationMeasurement extends Measurement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

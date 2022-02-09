@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.05
+ * Module: CamelDesigner v1.0.06
 
- * This file was generated on 12/8/21 5:48 PM by Modelio Studio.
+ * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.automatic.standard.classdiagram;
 
@@ -39,7 +39,7 @@ public class DeploymentInstanceDiagram {
     /**
      * The underlying {@link ClassDiagram} represented by this proxy, never null.
      */
-    @objid ("50f9022c-19b3-48f8-9d4d-5c26e3e085d9")
+    @objid ("4366cf94-9a5a-4cd9-aa3f-9aa01bf7f5e4")
     protected final ClassDiagram elt;
 
     /**
@@ -68,9 +68,10 @@ public class DeploymentInstanceDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentInstanceDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentInstanceDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentInstanceDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentInstanceDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link DeploymentInstanceDiagram} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class DeploymentInstanceDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentInstanceDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentInstanceDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentInstanceDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentInstanceDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link DeploymentInstanceDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("26852922-6fec-4f2a-9e2f-3ef112bc6df6")
     public static DeploymentInstanceDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (DeploymentInstanceDiagram.canInstantiate(obj))
-        	return new DeploymentInstanceDiagram(obj);
+            return new DeploymentInstanceDiagram(obj);
         else
-        	throw new IllegalArgumentException("DeploymentInstanceDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DeploymentInstanceDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("3f550cc6-1021-4461-a937-6110c7d442ad")
@@ -112,7 +114,8 @@ public class DeploymentInstanceDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
     @objid ("5658c846-0a4e-4495-9545-b0b0d8434fae")
@@ -150,11 +153,11 @@ public class DeploymentInstanceDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }
