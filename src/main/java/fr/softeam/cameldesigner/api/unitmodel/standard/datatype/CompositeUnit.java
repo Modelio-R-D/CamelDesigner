@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -68,9 +67,10 @@ public class CompositeUnit extends DimensionedUnit {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeUnit} proxy from a {@link DataType} stereotyped << CompositeUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeUnit} proxy from a {@link DataType} stereotyped << CompositeUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link CompositeUnit} proxy or <i>null</i>.
      */
@@ -80,26 +80,26 @@ public class CompositeUnit extends DimensionedUnit {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeUnit} proxy from a {@link DataType} stereotyped << CompositeUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeUnit} proxy from a {@link DataType} stereotyped << CompositeUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link CompositeUnit} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3818a0d3-8c31-4738-809f-b0cbf78035e4")
     public static CompositeUnit safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (CompositeUnit.canInstantiate(obj))
-        	return new CompositeUnit(obj);
+            return new CompositeUnit(obj);
         else
-        	throw new IllegalArgumentException("CompositeUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'componentsUnits' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("023fc57b-5ab8-424a-a8e3-84874e18dc0a")
     public void addComponentsUnits(final Unit obj) {
@@ -131,7 +131,6 @@ public class CompositeUnit extends DimensionedUnit {
      * Get the values of the 'componentsUnits' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("92fff638-a1ab-4429-bd04-052f63872370")
     public List<Unit> getComponentsUnits() {
@@ -146,7 +145,8 @@ public class CompositeUnit extends DimensionedUnit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("4c7a274a-d396-43c3-9f50-ea3e4d158166")
@@ -175,7 +175,6 @@ public class CompositeUnit extends DimensionedUnit {
      * Remove a value from the 'componentsUnits' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("67084364-a6ce-4f90-98ab-146a5d6fe8f0")
     public boolean removeComponentsUnits(final Unit obj) {
@@ -201,16 +200,17 @@ public class CompositeUnit extends DimensionedUnit {
         this.elt.putTagValue(CompositeUnit.MdaTypes.FORMULA_TAGTYPE_ELT, value);
     }
 
-    @objid ("f41e3c1f-d66c-4217-a5ae-6ad67bfe4d61")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("be7ef7a0-1b49-42f1-b2fd-399ae251a90e")
     protected CompositeUnit(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("76adb45a-b78f-4f0d-ac89-d402c9a0416d")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("fb4ae2ef-3762-478f-83ef-6a6c6af48a4e")
@@ -236,11 +236,11 @@ public class CompositeUnit extends DimensionedUnit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

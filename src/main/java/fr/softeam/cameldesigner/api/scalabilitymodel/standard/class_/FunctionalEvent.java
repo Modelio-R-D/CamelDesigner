@@ -66,9 +66,10 @@ public class FunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEvent} proxy from a {@link Class} stereotyped << FunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEvent} proxy from a {@link Class} stereotyped << FunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link FunctionalEvent} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class FunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEvent} proxy from a {@link Class} stereotyped << FunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEvent} proxy from a {@link Class} stereotyped << FunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link FunctionalEvent} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a571faf2-d37b-4084-a8e9-a407648e9546")
     public static FunctionalEvent safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (FunctionalEvent.canInstantiate(obj))
-        	return new FunctionalEvent(obj);
+            return new FunctionalEvent(obj);
         else
-        	throw new IllegalArgumentException("FunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f97dc51d-9c07-4edb-9310-29052d58a748")
@@ -113,7 +115,6 @@ public class FunctionalEvent extends SingleEvent {
      * Get the value of the 'component' role.<p>
      * Role description:
      * <Enter note text here>
-     * 
      */
     @objid ("b36e7109-85dc-4855-9550-cfc86a8a5e1e")
     public CamelComponent getComponent() {
@@ -128,7 +129,8 @@ public class FunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("6beaca73-5afd-4790-8361-5c734ad1ac3b")
@@ -141,7 +143,6 @@ public class FunctionalEvent extends SingleEvent {
      * Get the value of the 'functionalType' role.<p>
      * Role description:
      * <Enter note text here>
-     * 
      */
     @objid ("f7343ba3-db0b-4e2a-97df-b803c7e03931")
     public CamelAttribute getFunctionalType() {
@@ -165,7 +166,6 @@ public class FunctionalEvent extends SingleEvent {
      * Set the value of the 'component' role.<p>
      * Role description:
      * <Enter note text here>
-     * 
      */
     @objid ("c19c46ed-1dda-4d7f-846e-bf0723521c35")
     public void setComponent(final CamelComponent obj) {
@@ -191,7 +191,6 @@ public class FunctionalEvent extends SingleEvent {
      * Set the value of the 'functionalType' role.<p>
      * Role description:
      * <Enter note text here>
-     * 
      */
     @objid ("f8d5d193-952d-471a-b009-a23e8c1ae869")
     public void setFunctionalType(final CamelAttribute obj) {
@@ -213,16 +212,17 @@ public class FunctionalEvent extends SingleEvent {
         }
     }
 
-    @objid ("ed6779a4-e956-4dde-8001-3321bd1f3cf3")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("01142ba4-2f7e-4ef5-866a-2ea57a701100")
     protected FunctionalEvent(final Class elt) {
         super(elt);
+    }
+
+    @objid ("3e848fb0-f7db-47f2-bbc2-e9fca64e6a2f")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("1a266afd-186e-43cc-a4d6-d8eda707e81a")
@@ -244,11 +244,11 @@ public class FunctionalEvent extends SingleEvent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

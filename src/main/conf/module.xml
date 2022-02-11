@@ -2,16 +2,6 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
@@ -172,17 +162,17 @@
                 <Icon path="res/icon/gui/LogicalConstraint_24.png"/>
                 <Image path="res/icon/gui/constraintModelDiagram_48.png"/>
             </Stereotype>
-            <Stereotype name="DataInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataInstanceModelDiagram.label" uid="827bb28e-042f-4c25-a5bb-cca9234a5c6b" is-abstract="false">
+            <Stereotype name="DataInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataInstanceModelDiagram.label" uid="8ab145ba-4bc6-410d-be7a-b17e36147115" is-abstract="false">
                 <Icon path="res/icon/gui/dataInstanceModelDiagram_24.png"/>
-                <Image path="res/icon/gui/dataInstanceModelDiagram_48.png"/>
+                <Image path=""/>
             </Stereotype>
             <Stereotype name="DataModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DataModelDiagram.label" uid="fc779080-0243-43b7-a1e1-9ddf71de93d7" is-abstract="false">
                 <Icon path="res/icon/gui/dataModelDiagram_24.png"/>
                 <Image path="res/icon/gui/dataModelDiagram_48.png"/>
             </Stereotype>
-            <Stereotype name="DeploymentInstanceModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentInstanceModelDiagram.label" uid="a10a5950-4d32-42b8-8ee7-f596192afb1d" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="DeploymentInstanceModelDiagram" metaclass="Infrastructure.AbstractDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentInstanceModelDiagram.label" uid="b5ff2f96-fb60-424e-ae18-02b24209d1af" is-abstract="false">
+                <Icon path="res/icon/gui/DeploymentInstanceModelDiagram_24.png"/>
+                <Image path="res/icon/gui/DeploymentInstanceModelDiagram_48.png"/>
             </Stereotype>
             <Stereotype name="DeploymentTypeModelDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="mref#'' {c147d6d3-8bd0-4b94-a9d6-164a947fa0b4} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DeploymentTypeModelDiagram.label" uid="b78ff0fe-e31c-4034-ba6a-7a3d0626819e" is-abstract="false">
                 <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
@@ -1249,16 +1239,6 @@
                 </TagTypes>
             </Stereotype>
         </Profile>
-        <Profile uid="399cff28-d0bd-43fe-8ac6-eb3d62a4cf57" id="Automatic">
-            <Stereotype name="DataInstanceDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.DataInstanceDiagram.label" uid="8ab145ba-4bc6-410d-be7a-b17e36147115" is-abstract="false">
-                <Icon path="res/icon/gui/DataInstanceEmpty_24.png"/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="DeploymentInstanceDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.DeploymentInstanceDiagram.label" uid="b5ff2f96-fb60-424e-ae18-02b24209d1af" is-abstract="false">
-                <Icon path="res/icon/gui/DeploymentTypeModelDiagram_24.png"/>
-                <Image path=""/>
-            </Stereotype>
-        </Profile>
     </Profiles>
     <Gui>
         <Commands>
@@ -1268,7 +1248,7 @@
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
-            <Command id="Camel_Model_Diagram" label="%command.Camel_Model_Diagram.label" tooltip="%command.Camel_Model_Diagram.tooltip" image="res/icon/gui/CamelModelDiagram_24.png" modify-model="false">
+            <Command id="Camel_Model_diagram" label="%command.Camel_Model_diagram.label" tooltip="%command.Camel_Model_diagram.tooltip" image="res/icon/gui/CamelModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateCamelModelDiagram">
                     <HParameter name="stereotype" value="CamelDesigner#CamelModelDiagram"/>
@@ -1276,29 +1256,61 @@
                     <HParameter name="name" value="Camel model diagram"/>
                 </Handler>
             </Command>
-            <Command id="DataModel" label="%command.DataModel.label" tooltip="%command.DataModel.tooltip" image="res/icon/gui/dataModel_24.png" modify-model="true">
+            <Command id="Data_Model" label="%command.Data_Model.label" tooltip="%command.Data_Model.tooltip" image="res/icon/gui/dataModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDataModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDataModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Data_Model_Diagram" label="%command.Data_Model_Diagram.label" tooltip="%command.Data_Model_Diagram.tooltip" image="res/icon/gui/dataModelDiagram_24.png" modify-model="false">
+            <Command id="Data_Instance_diagram" label="%command.Data_Instance_diagram.label" tooltip="%command.Data_Instance_diagram.tooltip" image="res/icon/gui/dataInstanceModelDiagram_48.ICON.png" modify-model="false">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DataInstanceModel"/>
+                <Handler class="DiagramCreate">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#DataInstanceModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
+                </Handler>
+            </Command>
+            <Command id="Data_Instance_Model" label="%command.Data_Instance_Model.label" tooltip="%command.Data_Instance_Model.tooltip" image="res/icon/gui/DataInstanceModel_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDataInstanceModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Data_Type_Model_diagram" label="%command.Data_Type_Model_diagram.label" tooltip="%command.Data_Type_Model_diagram.tooltip" image="res/icon/gui/dataModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DataTypeModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Data Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DataModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
-            <Command id="Deployment_Model" label="%command.Deployment_Model.label" tooltip="%command.Deployment_Model.tooltip" image="res/icon/gui/DeploymentTypeModel_24.png" modify-model="true">
+            <Command id="Deployment_Instance_diagram" label="%command.Deployment_Instance_diagram.label" tooltip="%command.Deployment_Instance_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="false">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentInstanceModel"/>
+                <Handler class="DiagramCreate">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceModelDiagram"/>
+                    <HParameter name="metaclass" value="Infrastructure.AbstractDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
+                </Handler>
+            </Command>
+            <Command id="Deployment_Instance_Model" label="%command.Deployment_Instance_Model.label" tooltip="%command.Deployment_Instance_Model.tooltip" image="res/icon/gui/DeploymentInstanceModel_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentInstanceModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Deployment_Type_Model" label="%command.Deployment_Type_Model.label" tooltip="%command.Deployment_Type_Model.tooltip" image="res/icon/gui/DeploymentTypeModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentTypeModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
-            <Command id="Deployment_Model_diagram" label="%command.Deployment_Model_diagram.label" tooltip="%command.Deployment_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="false">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentModel"/>
+            <Command id="Deployment_Type_Model_diagram" label="%command.Deployment_Type_Model_diagram.label" tooltip="%command.Deployment_Type_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="false">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Deployment Type Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1306,12 +1318,14 @@
             </Command>
             <Command id="Execution_Model" label="%command.Execution_Model.label" tooltip="%command.Execution_Model.tooltip" image="res/icon/gui/executionModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateExecutionModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateExecutionModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Execution_Model_Diagram" label="%command.Execution_Model_Diagram.label" tooltip="%command.Execution_Model_Diagram.tooltip" image="res/icon/gui/executionModelDiagram_24.png" modify-model="false">
+            <Command id="Execution_Model_diagram" label="%command.Execution_Model_diagram.label" tooltip="%command.Execution_Model_diagram.tooltip" image="res/icon/gui/executionModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Execution Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="name" value="Execution Model Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#ExecutionModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1320,24 +1334,22 @@
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/exportCamel_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.ExportModelCommand">
-                    <HParameter name="name" value=""/>
-                </Handler>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.ExportModelCommand"/>
             </Command>
             <Command id="Import" label="%command.Import.label" tooltip="%command.Import.tooltip" image="res/icon/gui/importCamel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype=""/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.ImportModelCommand">
-                    <HParameter name="name" value=""/>
-                </Handler>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.ImportModelCommand"/>
             </Command>
             <Command id="Location_Model" label="%command.Location_Model.label" tooltip="%command.Location_Model.tooltip" image="res/icon/gui/locationModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateLocationModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateLocationModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Location_Model_Diagram" label="%command.Location_Model_Diagram.label" tooltip="%command.Location_Model_Diagram.tooltip" image="res/icon/gui/locationModelDiagram_24.png" modify-model="false">
+            <Command id="Location_Model_diagram" label="%command.Location_Model_diagram.label" tooltip="%command.Location_Model_diagram.tooltip" image="res/icon/gui/locationModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#LocationModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Location Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#LocationModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1345,12 +1357,14 @@
             </Command>
             <Command id="Metadata_Model" label="%command.Metadata_Model.label" tooltip="%command.Metadata_Model.tooltip" image="res/icon/gui/metadataModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateMetadataModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateMetadataModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Metadata_Model_Diagram" label="%command.Metadata_Model_Diagram.label" tooltip="%command.Metadata_Model_Diagram.tooltip" image="res/icon/gui/metadataModelDiagram_24.png" modify-model="false">
+            <Command id="Metadata_Model_diagram" label="%command.Metadata_Model_diagram.label" tooltip="%command.Metadata_Model_diagram.tooltip" image="res/icon/gui/metadataModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#MetaDataModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Metadata Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#MetadataModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1358,12 +1372,14 @@
             </Command>
             <Command id="Metric_Model" label="%command.Metric_Model.label" tooltip="%command.Metric_Model.tooltip" image="res/icon/gui/metricModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateMetricModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateMetricModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Metric_Model_Diagram" label="%command.Metric_Model_Diagram.label" tooltip="%command.Metric_Model_Diagram.tooltip" image="res/icon/gui/metricModelDiagram_48.ICON.png" modify-model="false">
+            <Command id="Metric_Model_diagram" label="%command.Metric_Model_diagram.label" tooltip="%command.Metric_Model_diagram.tooltip" image="res/icon/gui/metricModelDiagram_48.ICON.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#MetricTypeModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Metric Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#MetricModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1371,12 +1387,14 @@
             </Command>
             <Command id="Organisation_Model" label="%command.Organisation_Model.label" tooltip="%command.Organisation_Model.tooltip" image="res/icon/gui/organisationModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateOrganisationModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateOrganisationModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Organisation_Model_Diagram" label="%command.Organisation_Model_Diagram.label" tooltip="%command.Organisation_Model_Diagram.tooltip" image="res/icon/gui/organisationModelDiagram_24.png" modify-model="false">
+            <Command id="Organisation_Model_diagram" label="%command.Organisation_Model_diagram.label" tooltip="%command.Organisation_Model_diagram.tooltip" image="res/icon/gui/organisationModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Organisation Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#OrganisationModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1384,12 +1402,14 @@
             </Command>
             <Command id="Requirement_Model" label="%command.Requirement_Model.label" tooltip="%command.Requirement_Model.tooltip" image="res/icon/gui/requirementModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateRequirementModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateRequirementModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Requirement_Model_Diagram" label="%command.Requirement_Model_Diagram.label" tooltip="%command.Requirement_Model_Diagram.tooltip" image="res/icon/gui/requirementModelDiagram_48.ICON.png" modify-model="false">
+            <Command id="Requirement_Model_diagram" label="%command.Requirement_Model_diagram.label" tooltip="%command.Requirement_Model_diagram.tooltip" image="res/icon/gui/requirementModelDiagram_48.ICON.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#RequirementModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Requirement Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#RequirementModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
@@ -1397,83 +1417,61 @@
             </Command>
             <Command id="Scalability_Model" label="%command.Scalability_Model.label" tooltip="%command.Scalability_Model.tooltip" image="res/icon/gui/scalabilityModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateScalabilityModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateScalabilityModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Scalability_Model_Diagram" label="%command.Scalability_Model_Diagram.label" tooltip="%command.Scalability_Model_Diagram.tooltip" image="res/icon/gui/scalabilityModelDiagram_24.png" modify-model="false">
+            <Command id="Scalability_Model_diagram" label="%command.Scalability_Model_diagram.label" tooltip="%command.Scalability_Model_diagram.tooltip" image="res/icon/gui/scalabilityModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Scalability Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#ScalabilityModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
-            <Command id="SecurityModel" label="%command.SecurityModel.label" tooltip="%command.SecurityModel.tooltip" image="res/icon/gui/securityModel_24.png" modify-model="true">
+            <Command id="Security_Model" label="%command.Security_Model.label" tooltip="%command.Security_Model.tooltip" image="res/icon/gui/securityModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateSecurityModelCommand"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateSecurityModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Security_Model_Diagram" label="%command.Security_Model_Diagram.label" tooltip="%command.Security_Model_Diagram.tooltip" image="res/icon/gui/securityModelDiagram_24.png" modify-model="false">
+            <Command id="Security_Model_diagram" label="%command.Security_Model_diagram.label" tooltip="%command.Security_Model_diagram.tooltip" image="res/icon/gui/securityModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Security Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#SecurityModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
-            <Command id="TypeModel" label="%command.TypeModel.label" tooltip="%command.TypeModel.tooltip" image="res/icon/gui/typeModel_24.png" modify-model="true">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#TypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateTypeModelCommand"/>
+            <Command id="Type_Model" label="%command.Type_Model.label" tooltip="%command.Type_Model.tooltip" image="res/icon/gui/typeModel_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateTypeModelCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
             </Command>
-            <Command id="Type_Model_Diagram" label="%command.Type_Model_Diagram.label" tooltip="%command.Type_Model_Diagram.tooltip" image="res/icon/gui/typeModelDiagram_24.png" modify-model="false">
+            <Command id="Type_Model_diagram" label="%command.Type_Model_diagram.label" tooltip="%command.Type_Model_diagram.tooltip" image="res/icon/gui/typeModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#TypeModel"/>
                 <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Type Model Diagram"/>
+                    <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#TypeModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
-            <Command id="UnitModel" label="%command.UnitModel.label" tooltip="%command.UnitModel.tooltip" image="res/icon/gui/unitModel_24.png" modify-model="true">
+            <Command id="Unit_Model" label="%command.Unit_Model.label" tooltip="%command.Unit_Model.tooltip" image="res/icon/gui/unitModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateUnitModelCommand"/>
-            </Command>
-            <Command id="Unit_Model_Diagram" label="%command.Unit_Model_Diagram.label" tooltip="%command.Unit_Model_Diagram.tooltip" image="res/icon/gui/unitModelDiagram_24.png" modify-model="false">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
-                <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Unit Model Diagram"/>
-                    <HParameter name="stereotype" value="CamelDesigner#UnitModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                    <HParameter name="style" value="CamelStyle"/>
-                </Handler>
-            </Command>
-            <Command id="Deployment_Instance_Model" label="%command.Deployment_Instance_Model.label" tooltip="%command.Deployment_Instance_Model.tooltip" image="res/icon/gui/DeploymentInstanceEmpty_24.png" modify-model="true">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentInstanceModelCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateUnitModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
-            <Command id="Deployment_Instance_Diagram" label="%command.Deployment_Instance_Diagram.label" tooltip="%command.Deployment_Instance_Diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="false">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentInstanceModel"/>
+            <Command id="Unit_Model_diagram" label="%command.Unit_Model_diagram.label" tooltip="%command.Unit_Model_diagram.tooltip" image="res/icon/gui/unitModelDiagram_24.png" modify-model="false">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
                 <Handler class="DiagramCreate">
                     <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceDiagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#UnitModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                    <HParameter name="style" value="CamelStyle"/>
-                </Handler>
-            </Command>
-            <Command id="Data_Instance_Model" label="%command.Data_Instance_Model.label" tooltip="%command.Data_Instance_Model.tooltip" image="res/icon/gui/DataInstanceEmpty_24.png" modify-model="true">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDataInstanceModelCommand">
-                    <HParameter name="name" value="Diagram"/>
-                </Handler>
-            </Command>
-            <Command id="Data_Instance_Diagram" label="%command.Data_Instance_Diagram.label" tooltip="%command.Data_Instance_Diagram.tooltip" image="res/icon/gui/dataInstanceModelDiagram_48.ICON.png" modify-model="false">
-                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DataInstanceModel"/>
-                <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="CamelDesigner#DataInstanceDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
@@ -1898,7 +1896,7 @@
             </Tool>
             <Tool id="LocationModel" label="%tool.LocationModel.label" tooltip="%tool.LocationModel.tooltip" image="res/icon/gui/locationModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateLocationModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateLocationModel">
                     <HParameter name="stereotype" value="CamelDesigner#LocationModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="LocationModel"/>
@@ -1979,7 +1977,7 @@
             </Tool>
             <Tool id="MetricInstanceModel" label="%tool.MetricInstanceModel.label" tooltip="%tool.MetricInstanceModel.tooltip" image="res/icon/gui/MetricInstanceModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateMetricInstanceModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateMetricInstanceModel">
                     <HParameter name="stereotype" value="CamelDesigner#MetricInstanceModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="MetricInstanceModel"/>
@@ -2099,7 +2097,7 @@
             </Tool>
             <Tool id="OrganisationModel" label="%tool.OrganisationModel.label" tooltip="%tool.OrganisationModel.tooltip" image="res/icon/gui/organisationModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateOrganisationModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateOrganisationModel">
                     <HParameter name="stereotype" value="CamelDesigner#OrganisationModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="OrganisationModel"/>
@@ -2260,7 +2258,7 @@
             </Tool>
             <Tool id="ScalabilityModel" label="%tool.ScalabilityModel.label" tooltip="%tool.ScalabilityModel.tooltip" image="res/icon/gui/scalabilityModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateScalabilityModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateScalabilityModel">
                     <HParameter name="stereotype" value="CamelDesigner#ScalabilityModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="ScalabilityModel"/>
@@ -2300,7 +2298,7 @@
             </Tool>
             <Tool id="SecurityModel" label="%tool.SecurityModel.label" tooltip="%tool.SecurityModel.tooltip" image="res/icon/gui/securityModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateSecurityModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateSecurityModel">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="SecurityModel"/>
@@ -2420,7 +2418,7 @@
             </Tool>
             <Tool id="TypeModel" label="%tool.TypeModel.label" tooltip="%tool.TypeModel.tooltip" image="res/icon/gui/typeModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateTypeModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateTypeModel">
                     <HParameter name="stereotype" value="CamelDesigner#TypeModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="Type Model"/>
@@ -2444,7 +2442,7 @@
             </Tool>
             <Tool id="UnitModel" label="%tool.UnitModel.label" tooltip="%tool.UnitModel.tooltip" image="res/icon/gui/unitModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateUnitModelTool">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateUnitModel">
                     <HParameter name="stereotype" value="CamelDesigner#UnitModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="Unit Model"/>
@@ -2522,23 +2520,26 @@
             </Tool>
         </Tools>
         <ContextualMenu>
-            <CommandRef refid="Camel_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Data_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Execution_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Location_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Metadata_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Metric_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Organisation_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Requirement_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Scalability_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Security_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Unit_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Deployment_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Type_Model_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Data_Instance_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="Deployment_Instance_Diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
-            <CommandRef refid="DataModel" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="Deployment_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Camel_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Data_Type_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Execution_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Location_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Metadata_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Metric_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Organisation_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Requirement_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Scalability_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Security_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Unit_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Deployment_Type_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Type_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Data_Instance_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Deployment_Instance_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
+            <CommandRef refid="Camel_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Data_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Data_Instance_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Deployment_Instance_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Deployment_Type_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Execution_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Location_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Metadata_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
@@ -2546,12 +2547,9 @@
             <CommandRef refid="Organisation_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Requirement_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Scalability_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="SecurityModel" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="TypeModel" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="UnitModel" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="Camel_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="Data_Instance_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
-            <CommandRef refid="Deployment_Instance_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Security_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Type_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
+            <CommandRef refid="Unit_Model" group="%group.Create_element.label" group-image="res/icon/gui/CamelModel_24.png"/>
             <CommandRef refid="Export" group="" group-image=""/>
             <CommandRef refid="Import" group="" group-image=""/>
         </ContextualMenu>
@@ -2584,6 +2582,82 @@
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="CamelDesigner#CamelModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#CamelViewPoint">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="Feature" group="%group.Common.label"/>
+                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#CamelViewPoint"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ConstraintModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="ConstraintModel" group="%group.Constraint.label"/>
+                    <ToolRef refid="Metric_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="Attribute_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="IfThen_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="Metric_Variable_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="Logical_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="Unary_Constraint" group="%group.Constraint.label"/>
+                    <ToolRef refid="CREATE_EXTERNDOCUMENT" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_TRACEABILITY" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="PropertyDependency" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#ConstraintModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DataInstanceModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="DataInstance" group="%group.Data_Instance.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#DataInstanceModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DataModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="Data" group="%group.Data.label"/>
+                    <ToolRef refid="Data_Source" group="%group.Data.label"/>
+                    <ToolRef refid="Feature" group="%group.Common.label"/>
+                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#DataModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Infrastructure.AbstractDiagram" stereotype="CamelDesigner#DeploymentInstanceModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="Deployment_Instance_Model" group="%group.Deployment_Instance.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
@@ -2620,29 +2694,70 @@
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#RequirementModelDiagram">
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ExecutionModelDiagram">
                 <Palette keepBasePalette="false">
-                    <ToolRef refid="ResourceRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="HorizontalScaleRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="ImageRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="ServiceLevelObjective" group="%group.Requirement.label"/>
-                    <ToolRef refid="OptimisationRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="OSRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="ProviderRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="LocationRequirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="PaaS_Requirement" group="%group.Requirement.label"/>
-                    <ToolRef refid="Verticale_Scale_Requirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="Action_Instance" group="%group.Execution.label"/>
+                    <ToolRef refid="ApplicationMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="Cause" group="%group.Execution.label"/>
+                    <ToolRef refid="CommunicationMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="ContainerMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="DataMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="HistoryInfo" group="%group.Execution.label"/>
+                    <ToolRef refid="HistoryRecord" group="%group.Execution.label"/>
+                    <ToolRef refid="PaasMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="RuleTrigger" group="%group.Execution.label"/>
+                    <ToolRef refid="SLOViolation" group="%group.Execution.label"/>
+                    <ToolRef refid="SoftwareComponentMeasurement" group="%group.Execution.label"/>
+                    <ToolRef refid="VMMeasurement" group="%group.Execution.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
                     <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#ExecutionModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#LocationModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="Cloud_Location" group="%group.Location.label"/>
+                    <ToolRef refid="Geographical_Region" group="%group.Location.label"/>
+                    <ToolRef refid="Feature" group="%group.Common.label"/>
+                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#LocationModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#MetadataModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="MMSConcept" group="%group.MetaData.label"/>
+                    <ToolRef refid="MMSConceptInstance" group="%group.MetaData.label"/>
+                    <ToolRef refid="MMSProperty" group="%group.MetaData.label"/>
+                    <ToolRef refid="MMS_Property_Instance" group="%group.MetaData.label"/>
+                    <ToolRef refid="Feature" group="%group.Common.label"/>
+                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
                     <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
                     <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
                     <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#RequirementModelDiagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#MetadataModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
@@ -2673,115 +2788,6 @@
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ExecutionModelDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="Action_Instance" group="%group.Execution.label"/>
-                    <ToolRef refid="ApplicationMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="Cause" group="%group.Execution.label"/>
-                    <ToolRef refid="CommunicationMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="ContainerMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="DataMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="HistoryInfo" group="%group.Execution.label"/>
-                    <ToolRef refid="HistoryRecord" group="%group.Execution.label"/>
-                    <ToolRef refid="PaasMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="RuleTrigger" group="%group.Execution.label"/>
-                    <ToolRef refid="SLOViolation" group="%group.Execution.label"/>
-                    <ToolRef refid="SoftwareComponentMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="VMMeasurement" group="%group.Execution.label"/>
-                    <ToolRef refid="Feature" group="%group.Common.label"/>
-                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#ExecutionModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DataModelDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="Data" group="%group.Data.label"/>
-                    <ToolRef refid="Data_Source" group="%group.Data.label"/>
-                    <ToolRef refid="Feature" group="%group.Common.label"/>
-                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#DataModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#LocationModelDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="Cloud_Location" group="%group.Location.label"/>
-                    <ToolRef refid="Geographical_Region" group="%group.Location.label"/>
-                    <ToolRef refid="Feature" group="%group.Common.label"/>
-                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#LocationModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#ConstraintModelDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="ConstraintModel" group="%group.Constraint.label"/>
-                    <ToolRef refid="Metric_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="Attribute_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="IfThen_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="Metric_Variable_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="Logical_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="Unary_Constraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="CREATE_EXTERNDOCUMENT" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_TRACEABILITY" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="PropertyDependency" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#ConstraintModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#MetadataModelDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="MMSConcept" group="%group.MetaData.label"/>
-                    <ToolRef refid="MMSConceptInstance" group="%group.MetaData.label"/>
-                    <ToolRef refid="MMSProperty" group="%group.MetaData.label"/>
-                    <ToolRef refid="MMS_Property_Instance" group="%group.MetaData.label"/>
-                    <ToolRef refid="Feature" group="%group.Common.label"/>
-                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#MetadataModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#OrganisationModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Cloud_Credentials" group="%group.Organisation.label"/>
@@ -2800,6 +2806,32 @@
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="CamelDesigner#OrganisationModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#RequirementModelDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="ResourceRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="HorizontalScaleRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="ImageRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="ServiceLevelObjective" group="%group.Requirement.label"/>
+                    <ToolRef refid="OptimisationRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="OSRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="ProviderRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="LocationRequirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="PaaS_Requirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="Verticale_Scale_Requirement" group="%group.Requirement.label"/>
+                    <ToolRef refid="Feature" group="%group.Common.label"/>
+                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
+                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="CamelDesigner#RequirementModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>
@@ -2890,40 +2922,6 @@
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="CamelDesigner#UnitModelDiagram"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#CamelViewPoint">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="Feature" group="%group.Common.label"/>
-                    <ToolRef refid="Attribute_Attribute" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_RELATED_DIAGRAM_LINK" group="%group.Common.label"/>
-                    <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
-                    <ToolRef refid="CREATE_DRAWING_TEXT" group="%group.Free_Drawing.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#CamelViewPoint"/>
-                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="CamelDesigner#DataInstanceDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="DataInstance" group="%group.Data_Instance.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#DataInstanceDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#DeploymentInstanceDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef refid="Deployment_Instance_Model" group="%group.Deployment_Instance.label"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                 </Handler>
             </DiagramType>

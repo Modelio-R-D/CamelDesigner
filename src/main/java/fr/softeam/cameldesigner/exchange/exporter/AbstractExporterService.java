@@ -8,6 +8,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.walker.IWalker;
 import fr.softeam.cameldesigner.exchange.walker.umlwalker.UmlWalker;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 @objid ("4b0018c9-1638-4a99-9f0a-549c5fd6d7f1")
 public abstract class AbstractExporterService {
@@ -33,9 +34,12 @@ public abstract class AbstractExporterService {
         genMap.put(camelUMLModel, camelModel);
         
         GenerateProcess generateProcess = new GenerateProcess(null);
-        
-        IWalker<CamelElement> umlWalker = new UmlWalker(generateProcess);
-        umlWalker.walk(camelUMLModel);
+        try {
+            IWalker<CamelElement> umlWalker = new UmlWalker(generateProcess);
+            umlWalker.walk(camelUMLModel);
+        }catch(Exception e) {
+            CamelDesignerModule.logService.error(e);
+        }
         
         this.exportCamel(camelModel, filePath);
     }

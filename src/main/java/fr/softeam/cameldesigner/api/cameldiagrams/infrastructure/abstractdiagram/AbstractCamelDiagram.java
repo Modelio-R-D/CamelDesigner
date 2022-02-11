@@ -67,7 +67,8 @@ public abstract class AbstractCamelDiagram extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link AbstractDiagram}. 
+     * Get the underlying {@link AbstractDiagram}.
+     * 
      * @return the AbstractDiagram represented by this proxy, never null.
      */
     @objid ("bcabdc42-7f1a-424d-aca1-cd0c18396338")
@@ -106,11 +107,11 @@ public abstract class AbstractCamelDiagram extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

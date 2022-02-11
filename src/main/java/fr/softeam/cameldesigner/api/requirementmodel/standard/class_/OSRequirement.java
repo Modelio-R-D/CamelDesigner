@@ -71,9 +71,10 @@ public class OSRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link OSRequirement} proxy or <i>null</i>.
      */
@@ -83,19 +84,20 @@ public class OSRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link OSRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("2aa3e108-0b6c-44a5-b0ba-681078ec8ee3")
     public static OSRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (OSRequirement.canInstantiate(obj))
-        	return new OSRequirement(obj);
+            return new OSRequirement(obj);
         else
-        	throw new IllegalArgumentException("OSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("OSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("a381d42d-2afb-4585-8e43-e65123e33fe4")
@@ -115,7 +117,8 @@ public class OSRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("028124a8-9f4f-43e0-91ca-45287deb60de")
@@ -170,16 +173,17 @@ public class OSRequirement extends HardRequirement {
         this.elt.putTagValue(OSRequirement.MdaTypes.OS_TAGTYPE_ELT, value);
     }
 
-    @objid ("2e193bb6-46b9-4f94-abf1-ffe1d509fd94")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("5c89c3f2-c07b-42c8-b72f-84ad18fa871a")
     protected OSRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("3a4f1c36-3966-4a33-8e99-e3d9d6d97222")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("77ca2415-0693-4930-9e87-96b53b1278f7")
@@ -209,11 +213,11 @@ public class OSRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

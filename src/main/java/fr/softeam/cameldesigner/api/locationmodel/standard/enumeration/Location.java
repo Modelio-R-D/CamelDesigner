@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.enumeration.FeatureEnumeration;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -108,7 +110,8 @@ public abstract class Location extends FeatureEnumeration {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("c7d452b4-8dca-420f-abaa-25a8a7c46a63")
@@ -148,6 +151,14 @@ public abstract class Location extends FeatureEnumeration {
         super(elt);
     }
 
+    @objid ("2f685fd0-8f92-4030-b219-78d528bf236a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("a0bb5fe1-09b7-41e5-9811-6126f9ea7b6e")
     public static final class MdaTypes {
         @objid ("73f7104e-2cef-4a03-82d6-e0f2d69a8d7d")
@@ -171,11 +182,11 @@ public abstract class Location extends FeatureEnumeration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

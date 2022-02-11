@@ -69,9 +69,10 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SoftwareComponentResourceFilter} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SoftwareComponentResourceFilter} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("dc4d1a0c-7d2c-4a38-a51c-7f5660e0421c")
     public static SoftwareComponentResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentResourceFilter.canInstantiate(obj))
-        	return new SoftwareComponentResourceFilter(obj);
+            return new SoftwareComponentResourceFilter(obj);
         else
-        	throw new IllegalArgumentException("SoftwareComponentResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SoftwareComponentResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8682635f-4c95-482c-8c93-e96c556f372e")
     public void addSoftwareComponents(final SoftwareComponent obj) {
@@ -132,7 +133,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Get the value of the 'application' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ca24d8fa-6e03-4019-b742-a3b09a288e41")
     public CamelModel getApplication() {
@@ -147,7 +147,8 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("35637951-f31a-46c0-a4f6-1d94e06dff89")
@@ -170,7 +171,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0b3e386b-6b99-4340-902f-ef67662e83b5")
     public List<SoftwareComponent> getSoftwareComponents() {
@@ -194,7 +194,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f7d51e27-4679-43fe-8e30-a1b10eba0cc6")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
@@ -214,7 +213,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Set the value of the 'application' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("efabe4c1-adbe-454f-9bdf-4ff338b4b040")
     public void setApplication(final CamelModel obj) {
@@ -246,16 +244,17 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         this.elt.putTagValue(SoftwareComponentResourceFilter.MdaTypes.EVERYCOMPONENT_TAGTYPE_ELT, value);
     }
 
-    @objid ("bee53257-a79d-45c4-9114-3ccb09912e4c")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("0c56e759-9d3e-4ba2-8593-9b2267e9dc19")
     protected SoftwareComponentResourceFilter(final Class elt) {
         super(elt);
+    }
+
+    @objid ("8c004877-96e9-479c-889b-9eb7a9e610c0")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("9797b51a-6b94-4caf-a495-9d34ae7b4370")
@@ -281,11 +280,11 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

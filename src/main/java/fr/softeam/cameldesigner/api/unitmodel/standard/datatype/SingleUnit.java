@@ -64,9 +64,10 @@ public class SingleUnit extends DimensionedUnit {
     }
 
     /**
-     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link SingleUnit} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class SingleUnit extends DimensionedUnit {
     }
 
     /**
-     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link SingleUnit} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("f2bb114f-a309-4f80-b4cd-1db7f30ea194")
     public static SingleUnit safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (SingleUnit.canInstantiate(obj))
-        	return new SingleUnit(obj);
+            return new SingleUnit(obj);
         else
-        	throw new IllegalArgumentException("SingleUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SingleUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("301510da-ef7c-49b3-a175-a951b10c1abc")
@@ -108,7 +110,8 @@ public class SingleUnit extends DimensionedUnit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("ce1bb878-4a9e-4856-b701-0295c1125d21")
@@ -123,16 +126,17 @@ public class SingleUnit extends DimensionedUnit {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("84174dc7-f456-4885-8b0f-3972a2ef27cc")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("d5a00f5e-bc89-476b-9e07-970ff4b2c1ff")
     protected SingleUnit(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("d4eddff9-2c8e-44f5-a3b8-4b8052eb067a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("41eab5b5-d30f-43d2-9da2-943d64381732")
@@ -154,11 +158,11 @@ public class SingleUnit extends DimensionedUnit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

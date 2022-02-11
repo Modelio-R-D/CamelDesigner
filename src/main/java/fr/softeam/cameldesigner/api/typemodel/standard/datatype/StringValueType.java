@@ -64,9 +64,10 @@ public class StringValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link StringValueType} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class StringValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link StringValueType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("12bbc5f2-2244-4cad-b195-7430947ac2b4")
     public static StringValueType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (StringValueType.canInstantiate(obj))
-        	return new StringValueType(obj);
+            return new StringValueType(obj);
         else
-        	throw new IllegalArgumentException("StringValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("StringValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("84343542-8a12-47b7-89bf-ba1dc3540d4a")
@@ -108,7 +110,8 @@ public class StringValueType extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("a18dba06-bd78-4fdc-8ecb-81029703494f")
@@ -123,16 +126,17 @@ public class StringValueType extends ValueType {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("2e656b90-19ba-49e8-b178-d2d9f25c55bd")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("b4140cdf-223b-4f2c-86c6-6a265a747c2c")
     protected StringValueType(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("417f82d6-6bb2-4286-b0d2-8b32d70fe465")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("a89d3bdc-f18a-481f-8114-f08ae25840a6")
@@ -154,11 +158,11 @@ public class StringValueType extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

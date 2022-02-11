@@ -68,9 +68,10 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityDomain} proxy or <i>null</i>.
      */
@@ -80,26 +81,26 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityDomain} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c51a6cbe-ba2a-412d-91e1-763e5a88a98f")
     public static SecurityDomain safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityDomain.canInstantiate(obj))
-        	return new SecurityDomain(obj);
+            return new SecurityDomain(obj);
         else
-        	throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8a8746ec-c65c-4a45-92e3-72e9ceb32069")
     public void addSubDomains(final SecurityDomain obj) {
@@ -128,7 +129,8 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("eb7ce8fe-3c15-46cd-85a9-0727346e3c07")
@@ -151,7 +153,6 @@ public class SecurityDomain extends FeatureClass {
      * Get the values of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9426e301-3a56-4fb8-ada3-6e9b8616fc88")
     public List<SecurityDomain> getSubDomains() {
@@ -176,7 +177,6 @@ public class SecurityDomain extends FeatureClass {
      * Remove a value from 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e2a64504-7a45-4dcb-a093-733d88beeb6f")
     public boolean removeSubDomains(final SecurityDomain obj) {
@@ -202,16 +202,17 @@ public class SecurityDomain extends FeatureClass {
         this.elt.putTagValue(SecurityDomain.MdaTypes.ID_TAGTYPE_ELT, value);
     }
 
-    @objid ("5dfba7a9-7df9-420a-afdd-7753abc53e94")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("6ab54920-e0bb-4c42-b7ad-64c4cfaecc9c")
     protected SecurityDomain(final Class elt) {
         super(elt);
+    }
+
+    @objid ("c60de530-1a48-4c8d-ab79-a6d2f082e0b0")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("7f4f621d-eb07-4bdf-a3ff-518d7382ce87")
@@ -237,11 +238,11 @@ public class SecurityDomain extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

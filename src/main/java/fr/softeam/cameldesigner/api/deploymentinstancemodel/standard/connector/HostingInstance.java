@@ -65,9 +65,10 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link HostingInstance} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link HostingInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ff324187-3523-4582-b191-99370629fcec")
     public static HostingInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (HostingInstance.canInstantiate(obj))
-        	return new HostingInstance(obj);
+            return new HostingInstance(obj);
         else
-        	throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d46eaf4c-e271-4157-b4d0-27f17af045b5")
@@ -109,7 +111,8 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("3717135b-319d-48af-a06a-02ba87fd8440")
@@ -122,7 +125,6 @@ public class HostingInstance extends ComponentRelationInstance {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9bf299fa-e60c-4180-926d-21a4922c7ed5")
     public Hosting getType() {
@@ -146,7 +148,6 @@ public class HostingInstance extends ComponentRelationInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("33e76bab-1bf8-46ff-bebd-0fca64ae8609")
     public void setType(final Hosting obj) {
@@ -168,16 +169,17 @@ public class HostingInstance extends ComponentRelationInstance {
         }
     }
 
-    @objid ("f66f2b3a-0fbf-49c3-bf9a-86d7996f2c0e")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("521eed0e-ad12-40f9-b00e-d7cbdc9b74d2")
     protected HostingInstance(final Connector elt) {
         super(elt);
+    }
+
+    @objid ("4bc643a9-88a3-40e9-9640-c8b5c44e90fb")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("0a6f0d2c-ffcc-47ac-a073-417c46822aff")
@@ -199,11 +201,11 @@ public class HostingInstance extends ComponentRelationInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

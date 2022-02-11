@@ -66,9 +66,10 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link TypeModel} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link TypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("4efacdf6-e33b-49c0-8cb2-6111a8fa8f7d")
     public static TypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TypeModel.canInstantiate(obj))
-        	return new TypeModel(obj);
+            return new TypeModel(obj);
         else
-        	throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2b1a1f63-2a02-4ad4-af6a-6c677f6382f0")
@@ -113,7 +115,6 @@ public class TypeModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("39f42456-5ad6-4d26-aa88-2bb1b5df5ef7")
     public CamelModel getCamelModel() {
@@ -121,7 +122,8 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("6044ee78-492f-4cc0-a14c-8face37cd71f")
@@ -140,23 +142,23 @@ public class TypeModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cfcf780c-822d-47ea-9ba0-bc7773620b99")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("bf2169aa-10bb-4457-b41c-c41703a46f1c")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("8fc15f6e-03cb-4046-b65a-4a9637478752")
     protected TypeModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("f69957a7-1bd7-48a4-b896-482a148275ca")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("96a7120e-6c34-4aa2-95d8-e1eaa1ca16de")
@@ -178,11 +180,11 @@ public class TypeModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -68,9 +68,10 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link NonFunctionalEvent} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link NonFunctionalEvent} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1fbb7a1a-2c13-43ce-8fd1-afc6de7cc354")
     public static NonFunctionalEvent safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (NonFunctionalEvent.canInstantiate(obj))
-        	return new NonFunctionalEvent(obj);
+            return new NonFunctionalEvent(obj);
         else
-        	throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("888c30d3-1443-43cd-802e-865724e7128f")
@@ -112,7 +114,8 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f4063cb4-46cf-4611-a3ea-fae520be752d")
@@ -135,7 +138,6 @@ public class NonFunctionalEvent extends SingleEvent {
      * Get the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("900b3b26-aeea-4e4d-a142-3f92ee66e654")
     public MetricConstraint getMetricConstraint() {
@@ -169,7 +171,6 @@ public class NonFunctionalEvent extends SingleEvent {
      * Set the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e733abdf-b53c-4984-b836-c064b1232381")
     public void setMetricConstraint(final MetricConstraint obj) {
@@ -191,16 +192,17 @@ public class NonFunctionalEvent extends SingleEvent {
         }
     }
 
-    @objid ("4dd73406-7c79-476a-8147-3d6818ebab2c")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("55b145f0-904e-4260-bf0b-c612decfff19")
     protected NonFunctionalEvent(final Class elt) {
         super(elt);
+    }
+
+    @objid ("ccf11b3a-c3d1-4fbc-9a06-fa865f4f4851")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("49bec042-33dd-4ad1-9b09-4dcfbe3512b3")
@@ -226,11 +228,11 @@ public class NonFunctionalEvent extends SingleEvent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

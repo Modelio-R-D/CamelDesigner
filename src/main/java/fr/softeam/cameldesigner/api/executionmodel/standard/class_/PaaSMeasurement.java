@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.PaaSInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -64,9 +66,10 @@ public class PaaSMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link PaaSMeasurement} proxy or <i>null</i>.
      */
@@ -76,19 +79,20 @@ public class PaaSMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link PaaSMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ce50ed4b-2a7d-4240-a242-6a9e1b960b2f")
     public static PaaSMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PaaSMeasurement.canInstantiate(obj))
-        	return new PaaSMeasurement(obj);
+            return new PaaSMeasurement(obj);
         else
-        	throw new IllegalArgumentException("PaaSMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaSMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e10ed9a5-a99d-451c-85e4-11faeda2c002")
@@ -108,7 +112,8 @@ public class PaaSMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("736dcc91-a2e1-4f51-abf1-2dc7f24bf64a")
@@ -121,7 +126,6 @@ public class PaaSMeasurement extends Measurement {
      * Get the value of the 'paaS' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("26525dd1-9606-4faa-9a86-ec3e61c1450f")
     public PaaS getPaaS() {
@@ -139,7 +143,6 @@ public class PaaSMeasurement extends Measurement {
      * Get the value of the 'paaSInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bb024192-20de-49d0-8f7f-ae5431e53f1f")
     public PaaSInstance getPaaSInstance() {
@@ -163,7 +166,6 @@ public class PaaSMeasurement extends Measurement {
      * Set the value of the 'paaS' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06a510ad-5fb0-4881-b46e-9ba4f5b06a5c")
     public void setPaaS(final PaaS obj) {
@@ -189,7 +191,6 @@ public class PaaSMeasurement extends Measurement {
      * Set the value of the 'paaSInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("34cd4712-deae-4db7-bd40-42612ca1c697")
     public void setPaaSInstance(final PaaSInstance obj) {
@@ -216,6 +217,14 @@ public class PaaSMeasurement extends Measurement {
         super(elt);
     }
 
+    @objid ("38a81a63-360f-4995-9ca5-d2d9c8c121b5")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("2d45a35d-f931-4999-aeb9-e4d0259e5f71")
     public static final class MdaTypes {
         @objid ("737342ad-dab7-4d71-9e1e-0ba09b2ce6f2")
@@ -235,11 +244,11 @@ public class PaaSMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

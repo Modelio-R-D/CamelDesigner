@@ -10,6 +10,7 @@ public class DataInstanceModelDiagramPropertyPage<T extends DataInstanceModelDia
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
+     * *
      * @param MObject : the selected element
      * 
      * @param row : the row of the changed property

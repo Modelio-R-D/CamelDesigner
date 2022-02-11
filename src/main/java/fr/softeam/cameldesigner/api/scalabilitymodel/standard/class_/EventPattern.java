@@ -8,11 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Timer;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -67,7 +68,8 @@ public abstract class EventPattern extends Event {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("856c6eed-f46b-4142-9182-6a6c5131a743")
@@ -80,7 +82,6 @@ public abstract class EventPattern extends Event {
      * Get the value of the 'timer' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("006e88a2-70d0-4ceb-87a7-b988f48e5a45")
     public Timer getTimer() {
@@ -104,7 +105,6 @@ public abstract class EventPattern extends Event {
      * Set the value of the 'timer' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7afb5153-02a4-4ba3-b40f-d91209b7e40d")
     public void setTimer(final Timer obj) {
@@ -131,6 +131,14 @@ public abstract class EventPattern extends Event {
         super(elt);
     }
 
+    @objid ("725068a1-ca4a-4cf3-b47b-bfecd407905a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("dd1011e3-255f-4c6a-a51e-162a33438d4c")
     public static final class MdaTypes {
         @objid ("a42f9a91-f5c2-4049-b8db-7198d4efb2e6")
@@ -150,11 +158,11 @@ public abstract class EventPattern extends Event {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

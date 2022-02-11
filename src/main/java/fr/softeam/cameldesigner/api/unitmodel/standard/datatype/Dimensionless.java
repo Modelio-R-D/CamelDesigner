@@ -64,9 +64,10 @@ public class Dimensionless extends Unit {
     }
 
     /**
-     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link Dimensionless} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class Dimensionless extends Unit {
     }
 
     /**
-     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link Dimensionless} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("eb1a5494-1fc7-4a65-ae7e-292647688caf")
     public static Dimensionless safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (Dimensionless.canInstantiate(obj))
-        	return new Dimensionless(obj);
+            return new Dimensionless(obj);
         else
-        	throw new IllegalArgumentException("Dimensionless: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Dimensionless: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("0f8eab5e-f0fe-43dd-bd47-1635fb3a88a7")
@@ -108,7 +110,8 @@ public class Dimensionless extends Unit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("3edee12f-cc6f-4b8e-8761-41bbb2fd438c")
@@ -123,16 +126,17 @@ public class Dimensionless extends Unit {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("b76d68f8-1081-4a96-b66d-a50d0e1fa00d")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("46556c66-b1c4-4c09-8128-534a3e718961")
     protected Dimensionless(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("6672b81b-cfe8-4e1b-9360-dffd714df46a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("1d70db3f-3af3-451e-8f06-2dfdde561927")
@@ -154,11 +158,11 @@ public class Dimensionless extends Unit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

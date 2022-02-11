@@ -85,7 +85,8 @@ public abstract class UnaryConstraint extends CamelConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("962c0483-a17e-4c54-a77d-07fa439d1793")
@@ -186,11 +187,11 @@ public abstract class UnaryConstraint extends CamelConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

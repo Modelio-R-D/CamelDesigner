@@ -13,11 +13,10 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
-import fr.softeam.cameldesigner.api.executionmodel.standard.class_.Cause;
-import fr.softeam.cameldesigner.api.executionmodel.standard.class_.HistoryInfo;
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -75,9 +74,10 @@ public class HistoryRecord extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryRecord} proxy from a {@link Class} stereotyped << HistoryRecord >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryRecord} proxy from a {@link Class} stereotyped << HistoryRecord >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link HistoryRecord} proxy or <i>null</i>.
      */
@@ -87,26 +87,26 @@ public class HistoryRecord extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryRecord} proxy from a {@link Class} stereotyped << HistoryRecord >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryRecord} proxy from a {@link Class} stereotyped << HistoryRecord >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link HistoryRecord} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("4ab3c85b-b702-4bae-9711-ea4506384ee8")
     public static HistoryRecord safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HistoryRecord.canInstantiate(obj))
-        	return new HistoryRecord(obj);
+            return new HistoryRecord(obj);
         else
-        	throw new IllegalArgumentException("HistoryRecord: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HistoryRecord: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'infos' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("eb1ea3e7-ed03-4f65-ad5f-c50fbfd8a023")
     public void addInfos(final HistoryInfo obj) {
@@ -138,7 +138,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'cause' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4466e3ac-ee2b-4e02-8854-f8dc2e658c2f")
     public Cause getCause() {
@@ -153,7 +152,8 @@ public class HistoryRecord extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("fcada2a5-ac0d-4350-9c9b-324816a1e3b5")
@@ -176,7 +176,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'fromDataInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1e5bfc10-1f35-4892-8978-1823c62c4ef2")
     public DataInstanceModel getFromDataInstanceModel() {
@@ -194,7 +193,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'fromDeploymentInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7cd25698-756b-49fc-ada9-5462dc1e42c5")
     public DeploymentInstanceModel getFromDeploymentInstanceModel() {
@@ -212,7 +210,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the values of the 'infos' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("760f7d1d-7602-4c76-a15e-677bb5572a4d")
     public List<HistoryInfo> getInfos() {
@@ -240,7 +237,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'toDataInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f63d7c75-9830-4db4-84ba-c18cd3e65a51")
     public DataInstanceModel getToDataInstanceModel() {
@@ -258,7 +254,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'toDeploymentInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7eac4fcd-481b-415f-9e0f-e5931410ef85")
     public DeploymentInstanceModel getToDeploymentInstanceModel() {
@@ -276,7 +271,6 @@ public class HistoryRecord extends FeatureClass {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06cfc1e6-d76e-4216-8fa3-87f7528a27dd")
     public MmsObject getType() {
@@ -300,7 +294,6 @@ public class HistoryRecord extends FeatureClass {
      * Remove a value from the 'infos' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("eba82042-bbe9-42e6-8b6d-1b6d9b44afa9")
     public boolean removeInfos(final HistoryInfo obj) {
@@ -320,7 +313,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'cause' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8661de82-3528-418f-8ccc-9965d7fe90ea")
     public void setCause(final Cause obj) {
@@ -356,7 +348,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'fromDataInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06eddd50-0ee3-4047-8010-d8deb9fe180e")
     public void setFromDataInstanceModel(final DataInstanceModel obj) {
@@ -382,7 +373,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'fromDeploymentInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e37fcab7-73aa-4614-a5ca-fd77c4e3a6b7")
     public void setFromDeploymentInstanceModel(final DeploymentInstanceModel obj) {
@@ -418,7 +408,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'toDataInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6f538a5b-e315-4ee5-a283-8cbae07914ca")
     public void setToDataInstanceModel(final DataInstanceModel obj) {
@@ -444,7 +433,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'toDeploymentInstanceModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2a404624-fa90-4c32-a537-52917fa41654")
     public void setToDeploymentInstanceModel(final DeploymentInstanceModel obj) {
@@ -470,7 +458,6 @@ public class HistoryRecord extends FeatureClass {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f5628079-f917-4e23-8d12-1fc0c379b043")
     public void setType(final MmsObject obj) {
@@ -495,6 +482,14 @@ public class HistoryRecord extends FeatureClass {
     @objid ("6da2a491-10d1-48f2-9669-9a06142e85a0")
     protected HistoryRecord(final Class elt) {
         super(elt);
+    }
+
+    @objid ("e24b3488-ded8-4979-93ff-a32b3197e75e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("462585e9-30df-4f59-b5c8-ec375790a32b")
@@ -524,11 +519,11 @@ public class HistoryRecord extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

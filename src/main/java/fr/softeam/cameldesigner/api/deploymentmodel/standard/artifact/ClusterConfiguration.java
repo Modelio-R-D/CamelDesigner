@@ -69,9 +69,10 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ClusterConfiguration} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ClusterConfiguration} proxy from a {@link Artifact} stereotyped << ClusterConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ClusterConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a0ba38ee-7085-46f8-b538-fed2bff94550")
     public static ClusterConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ClusterConfiguration.canInstantiate(obj))
-        	return new ClusterConfiguration(obj);
+            return new ClusterConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ClusterConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e661d1ae-81af-405e-8a4b-450a6b437874")
     public void addConfigParameters(final AttributeAttribute obj) {
@@ -128,14 +129,13 @@ public class ClusterConfiguration extends Configuration {
      * Get the values of the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ab01ad8a-f7f3-4d9e-950f-86014a51a233")
     public List<AttributeAttribute> getConfigParameters() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Artifact) this.elt).getOwnedAttribute())
-        	if (AttributeAttribute.canInstantiate(mObj))
-        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+            if (AttributeAttribute.canInstantiate(mObj))
+                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -150,7 +150,8 @@ public class ClusterConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("50268003-c700-4e52-9405-488ae3486ad6")
@@ -169,7 +170,6 @@ public class ClusterConfiguration extends Configuration {
      * Remove a value from the 'configParameters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("25b077c4-0e97-4ff4-9c0c-6f8298d3424e")
     public boolean removeConfigParameters(final AttributeAttribute obj) {
@@ -186,16 +186,17 @@ public class ClusterConfiguration extends Configuration {
         this.elt.putTagValue(ClusterConfiguration.MdaTypes.DOWNLOADURL_TAGTYPE_ELT, value);
     }
 
-    @objid ("155a3d35-1151-4855-8c12-62b19ad92953")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("523f7df8-7e89-4563-8267-cd7b94c0eae6")
     protected ClusterConfiguration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("b232fc30-14c3-4c7c-b17e-9d7e4173b7b4")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("6a9ae6c0-8629-45e2-ab3b-cb4a2ca54edb")
@@ -221,11 +222,11 @@ public class ClusterConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

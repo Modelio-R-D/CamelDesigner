@@ -70,9 +70,10 @@ public class DataResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link DataResourceFilter} proxy from a {@link Class} stereotyped << DataResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataResourceFilter} proxy from a {@link Class} stereotyped << DataResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link DataResourceFilter} proxy or <i>null</i>.
      */
@@ -82,26 +83,26 @@ public class DataResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link DataResourceFilter} proxy from a {@link Class} stereotyped << DataResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataResourceFilter} proxy from a {@link Class} stereotyped << DataResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link DataResourceFilter} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1e3b2365-a12a-4288-a030-5ca15c63ade0")
     public static DataResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataResourceFilter.canInstantiate(obj))
-        	return new DataResourceFilter(obj);
+            return new DataResourceFilter(obj);
         else
-        	throw new IllegalArgumentException("DataResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("50e676e7-eec3-4732-89f1-483d543d798f")
     public void addData(final Data obj) {
@@ -117,7 +118,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Add a value to the 'dataInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ac86b5ae-9d2a-4688-9894-c75192f96878")
     public void addDataInstances(final DataInstance obj) {
@@ -133,7 +133,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Add a value to the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("333906c2-e254-4b11-9644-0091b6bc0134")
     public void addLocations(final Location obj) {
@@ -165,7 +164,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Get the values of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a1b71b0e-daa5-4249-946a-465e9f9dd5ac")
     public List<Data> getData() {
@@ -183,7 +181,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Get the values of the 'dataInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("da0dfa8e-17f2-4eb5-9b70-68e9b86f2bc2")
     public List<DataInstance> getDataInstances() {
@@ -198,7 +195,8 @@ public class DataResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f3fbd02b-43ea-4e74-96f5-46964e20b0a9")
@@ -221,7 +219,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Get the values of the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("decbd4ff-a160-4ff9-a96e-596e6f6ea167")
     public List<Location> getLocations() {
@@ -245,7 +242,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Remove a value from the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7c92b10f-9a1e-4896-89fc-380bb9f468cf")
     public boolean removeData(final Data obj) {
@@ -265,7 +261,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Remove a value from the 'dataInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a528a7d0-a488-4f9e-b6b8-0b6890c38d70")
     public boolean removeDataInstances(final DataInstance obj) {
@@ -285,7 +280,6 @@ public class DataResourceFilter extends ResourceFilter {
      * Remove a value from the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1ff506c0-64c7-4aa8-bca5-720f144164a2")
     public boolean removeLocations(final Location obj) {
@@ -311,16 +305,17 @@ public class DataResourceFilter extends ResourceFilter {
         this.elt.putTagValue(DataResourceFilter.MdaTypes.EVERYDATA_TAGTYPE_ELT, value);
     }
 
-    @objid ("d4cf318b-54ab-4cc7-95e2-f0190d1340ca")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("3dbe67ca-e905-44ae-bde8-2d43a719dc30")
     protected DataResourceFilter(final Class elt) {
         super(elt);
+    }
+
+    @objid ("16858fa2-9c7a-4d14-bce1-5ad19622f1ee")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("a60319da-e29b-4af0-b3aa-4b4d80f83f8b")
@@ -346,11 +341,11 @@ public class DataResourceFilter extends ResourceFilter {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

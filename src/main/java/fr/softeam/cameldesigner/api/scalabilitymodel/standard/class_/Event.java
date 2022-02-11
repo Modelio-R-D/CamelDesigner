@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class Event extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("2711d9bd-127e-4bdd-a40a-e896193d5d46")
@@ -85,6 +88,14 @@ public abstract class Event extends FeatureClass {
     @objid ("c323e389-e1e4-4f76-b6b9-19d37ce4c307")
     protected Event(final Class elt) {
         super(elt);
+    }
+
+    @objid ("fc896c4f-ef98-4a86-ad3a-071af8beac46")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("ddf59bec-eaaf-437c-b222-29836ad692ea")
@@ -106,11 +117,11 @@ public abstract class Event extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -82,9 +82,10 @@ public class CloudCredentials extends Credentials {
     }
 
     /**
-     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CloudCredentials} proxy or <i>null</i>.
      */
@@ -94,19 +95,20 @@ public class CloudCredentials extends Credentials {
     }
 
     /**
-     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudCredentials} proxy from a {@link Class} stereotyped << CloudCredentials >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CloudCredentials} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("73dd09db-1817-4762-965a-36b2d8bafc6a")
     public static CloudCredentials safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudCredentials.canInstantiate(obj))
-        	return new CloudCredentials(obj);
+            return new CloudCredentials(obj);
         else
-        	throw new IllegalArgumentException("CloudCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("ea03ccca-124f-475b-8075-ba90a69d602d")
@@ -136,7 +138,8 @@ public class CloudCredentials extends Credentials {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f71218a8-e00f-44ab-b7b8-2a29dbb5108f")
@@ -261,16 +264,17 @@ public class CloudCredentials extends Credentials {
         this.elt.putTagValue(CloudCredentials.MdaTypes.USERNAME_TAGTYPE_ELT, value);
     }
 
-    @objid ("dcbf412f-a49b-4acb-bf69-722ae2ced5f8")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("a6828457-3cc9-4ae5-af91-f1cc6b8dedc3")
     protected CloudCredentials(final Class elt) {
         super(elt);
+    }
+
+    @objid ("15377870-620c-49b8-aeae-9685cfd6152a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("55def40b-2092-43e4-b2aa-463a47edd76b")
@@ -316,11 +320,11 @@ public class CloudCredentials extends Credentials {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

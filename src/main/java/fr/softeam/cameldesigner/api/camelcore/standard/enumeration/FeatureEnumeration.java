@@ -67,7 +67,8 @@ public abstract class FeatureEnumeration extends Feature {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("20752a55-5d5d-451c-9443-442d009cb257")
@@ -106,11 +107,11 @@ public abstract class FeatureEnumeration extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

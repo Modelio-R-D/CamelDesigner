@@ -13,6 +13,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.datatype.FeatureDataType;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -60,7 +61,6 @@ public abstract class Unit extends FeatureDataType {
      * Add a value of the 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dc0c3fe0-3d5c-4c26-9e86-7a4749b9778c")
     public void addMultipleOf(final Unit obj) {
@@ -89,7 +89,8 @@ public abstract class Unit extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("b09cfee4-e1c4-411f-9e92-471251c88ae9")
@@ -102,7 +103,6 @@ public abstract class Unit extends FeatureDataType {
      * Get the values of the 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("377aacd5-653b-4ac0-9cec-054ff67d1478")
     public List<Unit> getMultipleOf() {
@@ -127,7 +127,6 @@ public abstract class Unit extends FeatureDataType {
      * Remove a value from 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b8d73f9a-db8c-45f7-82b6-8e6cd8f9f1a4")
     public boolean removeMultipleOf(final Unit obj) {
@@ -146,6 +145,14 @@ public abstract class Unit extends FeatureDataType {
     @objid ("f179f486-47c9-43e8-8b2c-b9c82b27c659")
     protected Unit(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("acb2e845-73b3-40db-9281-6b0c618e3a8c")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("6a12e779-f186-4ba1-ab98-47ecdcdb6ad2")
@@ -167,11 +174,11 @@ public abstract class Unit extends FeatureDataType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

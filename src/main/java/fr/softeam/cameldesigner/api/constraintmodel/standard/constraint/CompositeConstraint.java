@@ -72,7 +72,8 @@ public abstract class CompositeConstraint extends CamelConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("aa5e6e25-74c7-467f-b0e1-b0ff7eb982de")
@@ -111,11 +112,11 @@ public abstract class CompositeConstraint extends CamelConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

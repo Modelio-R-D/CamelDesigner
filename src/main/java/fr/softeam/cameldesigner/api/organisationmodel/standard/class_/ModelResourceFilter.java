@@ -70,9 +70,10 @@ public class ModelResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link ModelResourceFilter} proxy from a {@link Class} stereotyped << ModelResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ModelResourceFilter} proxy from a {@link Class} stereotyped << ModelResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ModelResourceFilter} proxy or <i>null</i>.
      */
@@ -82,19 +83,20 @@ public class ModelResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link ModelResourceFilter} proxy from a {@link Class} stereotyped << ModelResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ModelResourceFilter} proxy from a {@link Class} stereotyped << ModelResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ModelResourceFilter} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("13494486-4e30-46bf-9821-e8f19957d9ab")
     public static ModelResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ModelResourceFilter.canInstantiate(obj))
-        	return new ModelResourceFilter(obj);
+            return new ModelResourceFilter(obj);
         else
-        	throw new IllegalArgumentException("ModelResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ModelResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("5db05b21-e4f9-4004-9213-e43d2409ee55")
@@ -114,7 +116,8 @@ public class ModelResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("d28e7ce9-b935-435c-b713-5b17183558a5")
@@ -169,16 +172,17 @@ public class ModelResourceFilter extends ResourceFilter {
         this.elt.putTagValue(ModelResourceFilter.MdaTypes.INFORMATIONRESOURCEPATH_TAGTYPE_ELT, value);
     }
 
-    @objid ("934e222f-35b4-40ed-bcb5-f2dc16dd6c4a")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("711a3b27-9686-4e01-b311-3aa1f11e3c95")
     protected ModelResourceFilter(final Class elt) {
         super(elt);
+    }
+
+    @objid ("45f9d500-e3a4-4b22-ac9d-76b69f8e7132")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("bdba83c4-ef71-4797-8568-cbac9a6170f8")
@@ -208,11 +212,11 @@ public class ModelResourceFilter extends ResourceFilter {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

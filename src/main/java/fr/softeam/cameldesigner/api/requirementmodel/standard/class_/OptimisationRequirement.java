@@ -70,9 +70,10 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link OptimisationRequirement} proxy or <i>null</i>.
      */
@@ -82,19 +83,20 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link OptimisationRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ecfa9c2a-199b-44ce-bf08-211656ca1263")
     public static OptimisationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (OptimisationRequirement.canInstantiate(obj))
-        	return new OptimisationRequirement(obj);
+            return new OptimisationRequirement(obj);
         else
-        	throw new IllegalArgumentException("OptimisationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("OptimisationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d3566850-b7d4-4d8b-817e-c0a75c061175")
@@ -114,7 +116,8 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7af13a88-e436-4780-a4f7-58bb02c7bdc3")
@@ -127,7 +130,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Get the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b970e21d-6cd8-4db9-a892-eb549a52200f")
     public MetricContext getMetricContext() {
@@ -145,7 +147,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Get the value of the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("67b707d2-e3a4-4fc4-977f-0155ae6b0d74")
     public MetricVariable getMetricVariable() {
@@ -179,7 +180,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("59614c87-5f27-4ce1-a711-93b665b26c4d")
     public void setMetricContext(final MetricContext obj) {
@@ -205,7 +205,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Set the value of the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ca09911d-f434-4992-b0ea-5c483b4f9250")
     public void setMetricVariable(final MetricVariable obj) {
@@ -240,16 +239,17 @@ public class OptimisationRequirement extends SoftRequirement {
           this.elt.removeTags(OptimisationRequirement.MdaTypes.MINIMISE_TAGTYPE_ELT);
     }
 
-    @objid ("3886270c-0a55-42a6-971c-3edeee860ae7")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("267d2615-9cf4-4a87-b859-71aeb8e802b9")
     protected OptimisationRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("f870ad2b-87df-476f-a629-bb2d84173db6")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("1977922d-e804-46aa-9701-85d9dc5c7714")
@@ -275,11 +275,11 @@ public class OptimisationRequirement extends SoftRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.instance.MetricInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.EventInstance;
@@ -75,7 +77,8 @@ public abstract class Measurement extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("57d7f9dc-1c57-4466-ba86-adb954979e55")
@@ -88,7 +91,6 @@ public abstract class Measurement extends FeatureClass {
      * Get the value of the 'eventInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("809f53d9-984d-4349-8b54-0ab9959cab62")
     public EventInstance getEventInstance() {
@@ -116,7 +118,6 @@ public abstract class Measurement extends FeatureClass {
      * Get the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a3d8836c-e92c-4633-aab8-01008afb6a41")
     public MetricInstance getMetricInstance() {
@@ -150,7 +151,6 @@ public abstract class Measurement extends FeatureClass {
      * Set the value of the 'eventInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1e7a51a1-7311-42dc-9f0b-1ff0f5b80969")
     public void setEventInstance(final EventInstance obj) {
@@ -186,7 +186,6 @@ public abstract class Measurement extends FeatureClass {
      * Set the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0c74850f-d6e5-4647-807a-e454df7d9c18")
     public void setMetricInstance(final MetricInstance obj) {
@@ -223,6 +222,14 @@ public abstract class Measurement extends FeatureClass {
         super(elt);
     }
 
+    @objid ("02510881-80fc-40cc-928e-76857fcf5dbd")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("c5c12d99-af0a-463a-876e-c2847d9efbb0")
     public static final class MdaTypes {
         @objid ("997a7ba2-0f7b-4ae1-a877-449cc0d8d90a")
@@ -250,11 +257,11 @@ public abstract class Measurement extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

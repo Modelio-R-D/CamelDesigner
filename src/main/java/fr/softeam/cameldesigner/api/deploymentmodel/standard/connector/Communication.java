@@ -65,9 +65,10 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link Communication} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link Communication} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("8854d4c2-8c06-4668-94a2-a0521ff57a93")
     public static Communication safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Communication.canInstantiate(obj))
-        	return new Communication(obj);
+            return new Communication(obj);
         else
-        	throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d206fead-d1c8-4e90-9840-cb115f911145")
@@ -109,7 +111,8 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("a311cfd0-649a-4e63-9b2f-406e39820a1e")
@@ -122,7 +125,6 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("69d31552-1dd8-4e3f-8c7f-6526e993aab8")
     public Configuration getProvidedPortConfiguration() {
@@ -140,7 +142,6 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4bc4252d-8f0f-4968-94f6-8e385dc8d50e")
     public Configuration getRequiredPortConfiguration() {
@@ -164,7 +165,6 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4740ba9c-5abc-4b59-ba5e-51072c175307")
     public void setProvidedPortConfiguration(final Configuration obj) {
@@ -190,7 +190,6 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d76d1be0-4ade-4d1d-bec7-0f3b16b1af20")
     public void setRequiredPortConfiguration(final Configuration obj) {
@@ -212,16 +211,17 @@ public class Communication extends ComponentRelation {
         }
     }
 
-    @objid ("b1027746-ffa4-4f56-b841-2d8c99627cf0")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("4e2b9d70-de94-4b40-ba99-ae2767be9c03")
     protected Communication(final Connector elt) {
         super(elt);
+    }
+
+    @objid ("852ff246-9250-4bd5-8d5f-3fdcfaa4c53e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("32a673a4-c270-4514-b3a4-c875b717ae42")
@@ -243,11 +243,11 @@ public class Communication extends ComponentRelation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

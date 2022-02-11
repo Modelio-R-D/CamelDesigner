@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -69,9 +71,10 @@ public class Function extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Function} proxy from a {@link Class} stereotyped << Function >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Function} proxy from a {@link Class} stereotyped << Function >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Function} proxy or <i>null</i>.
      */
@@ -81,19 +84,20 @@ public class Function extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Function} proxy from a {@link Class} stereotyped << Function >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Function} proxy from a {@link Class} stereotyped << Function >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Function} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("cd3fa8c6-8bea-45e5-ab05-5ad87068b389")
     public static Function safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Function.canInstantiate(obj))
-        	return new Function(obj);
+            return new Function(obj);
         else
-        	throw new IllegalArgumentException("Function: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Function: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f42b2967-352f-446c-8baa-895b6c1c87d7")
@@ -123,7 +127,8 @@ public class Function extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b224d325-24d5-441b-b71c-79d664bff816")
@@ -173,6 +178,14 @@ public class Function extends FeatureClass {
         super(elt);
     }
 
+    @objid ("137cfcd0-1699-4c27-a07b-d46257f5245a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("9eab8954-1b48-4a6e-93ae-bfc5ed9fb0dc")
     public static final class MdaTypes {
         @objid ("d8b7354c-8530-46d2-9638-14fcc8df0856")
@@ -200,11 +213,11 @@ public class Function extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

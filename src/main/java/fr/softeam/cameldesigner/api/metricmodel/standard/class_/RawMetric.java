@@ -64,9 +64,10 @@ public class RawMetric extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RawMetric} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class RawMetric extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RawMetric} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ee76d216-73d0-49fd-af98-d188be1e4475")
     public static RawMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RawMetric.canInstantiate(obj))
-        	return new RawMetric(obj);
+            return new RawMetric(obj);
         else
-        	throw new IllegalArgumentException("RawMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RawMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f9ae80c0-220e-45a2-8959-eadc3e9f7ab3")
@@ -108,7 +110,8 @@ public class RawMetric extends Metric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("42bd66cd-e784-43c2-8ff3-1e3edba7d178")
@@ -123,16 +126,17 @@ public class RawMetric extends Metric {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("1e257471-7a98-4885-b2f6-ca271b1fa3b8")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("1d2f0357-6956-4fd5-a140-3ce80db48c81")
     protected RawMetric(final Class elt) {
         super(elt);
+    }
+
+    @objid ("81809744-3f9a-44d9-8ed2-eb7b1d5a6939")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("9403e058-8f41-410e-a153-e595cb37e02b")
@@ -154,11 +158,11 @@ public class RawMetric extends Metric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

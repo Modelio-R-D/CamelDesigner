@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.namespace;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.namespace.Action;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -68,7 +70,8 @@ public abstract class ScalingAction extends Action {
     }
 
     /**
-     * Get the underlying {@link NameSpace}. 
+     * Get the underlying {@link NameSpace}.
+     * 
      * @return the NameSpace represented by this proxy, never null.
      */
     @objid ("c7f27985-1d95-4b23-ae9e-b239b5cdaaef")
@@ -81,7 +84,6 @@ public abstract class ScalingAction extends Action {
      * Get the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("33853408-e9e4-4caa-b862-d8a26e8f199e")
     public SoftwareComponent getSoftwareComponent() {
@@ -105,7 +107,6 @@ public abstract class ScalingAction extends Action {
      * Set the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("35275c7c-3db8-453c-883b-f4f6665c3415")
     public void setSoftwareComponent(final SoftwareComponent obj) {
@@ -132,6 +133,14 @@ public abstract class ScalingAction extends Action {
         super(elt);
     }
 
+    @objid ("cf1092c4-a2c8-4d82-a990-b3942d77e186")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("8b410711-e57b-4938-903b-9dc7cc45b117")
     public static final class MdaTypes {
         @objid ("ba4763be-f913-431c-aec3-4d60476bc0cc")
@@ -151,11 +160,11 @@ public abstract class ScalingAction extends Action {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

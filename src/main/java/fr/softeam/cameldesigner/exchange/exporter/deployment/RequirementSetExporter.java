@@ -28,7 +28,11 @@ public class RequirementSetExporter<T extends RequirementSet> extends FeatureCla
     @objid ("3d212279-37a3-42d0-9baf-85430e6ab94b")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.RequirementSet)) {
+            ((camel.deployment.DeploymentTypeModel) context).getRequirementSets().add((camel.deployment.RequirementSet) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

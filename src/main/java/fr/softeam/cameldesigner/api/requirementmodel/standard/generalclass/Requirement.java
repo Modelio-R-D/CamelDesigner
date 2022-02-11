@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class Requirement extends Feature {
     }
 
     /**
-     * Get the underlying {@link GeneralClass}. 
+     * Get the underlying {@link GeneralClass}.
+     * 
      * @return the GeneralClass represented by this proxy, never null.
      */
     @objid ("aacda9df-708d-411e-b1e1-2d18181e64f8")
@@ -85,6 +88,14 @@ public abstract class Requirement extends Feature {
     @objid ("da8fd1a0-c3e5-4c79-910c-374579a02a16")
     protected Requirement(final GeneralClass elt) {
         super(elt);
+    }
+
+    @objid ("64b5d0d5-2198-4b77-947e-424962858e5a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("d168a813-2ca0-4031-921a-6b0cec2ba4ee")
@@ -106,11 +117,11 @@ public abstract class Requirement extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

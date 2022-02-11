@@ -68,9 +68,10 @@ public class CamelViewPoint {
     }
 
     /**
-     * Tries to instantiate a {@link CamelViewPoint} proxy from a {@link ClassDiagram} stereotyped << CamelViewPoint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CamelViewPoint} proxy from a {@link ClassDiagram} stereotyped << CamelViewPoint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link CamelViewPoint} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class CamelViewPoint {
     }
 
     /**
-     * Tries to instantiate a {@link CamelViewPoint} proxy from a {@link ClassDiagram} stereotyped << CamelViewPoint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CamelViewPoint} proxy from a {@link ClassDiagram} stereotyped << CamelViewPoint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link CamelViewPoint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d18a8a2c-4f3e-4a4f-9981-a6d860a5114c")
     public static CamelViewPoint safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (CamelViewPoint.canInstantiate(obj))
-        	return new CamelViewPoint(obj);
+            return new CamelViewPoint(obj);
         else
-        	throw new IllegalArgumentException("CamelViewPoint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CamelViewPoint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("73a9c4c1-fbc3-4d95-89b4-124bf699773a")
@@ -112,7 +114,8 @@ public class CamelViewPoint {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
     @objid ("7f38929e-a539-4845-8e38-84ec2f6d0693")
@@ -150,11 +153,11 @@ public class CamelViewPoint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

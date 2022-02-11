@@ -67,9 +67,10 @@ public class DataTypeModel extends DataModel {
     }
 
     /**
-     * Tries to instantiate a {@link DataTypeModel} proxy from a {@link Package} stereotyped << DataTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataTypeModel} proxy from a {@link Package} stereotyped << DataTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link DataTypeModel} proxy or <i>null</i>.
      */
@@ -79,26 +80,26 @@ public class DataTypeModel extends DataModel {
     }
 
     /**
-     * Tries to instantiate a {@link DataTypeModel} proxy from a {@link Package} stereotyped << DataTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataTypeModel} proxy from a {@link Package} stereotyped << DataTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link DataTypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("639c6405-f207-47c5-b60e-88bbf364eba8")
     public static DataTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DataTypeModel.canInstantiate(obj))
-        	return new DataTypeModel(obj);
+            return new DataTypeModel(obj);
         else
-        	throw new IllegalArgumentException("DataTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0a5d0700-899c-4488-bf7d-096b386f5a5f")
     public void addData(final Data obj) {
@@ -110,7 +111,6 @@ public class DataTypeModel extends DataModel {
      * Add a value to the 'dataSources' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2a86300f-97f9-4a86-ab1e-c603380ec565")
     public void addDataSources(final DataSource obj) {
@@ -138,14 +138,13 @@ public class DataTypeModel extends DataModel {
      * Get the values of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("edf1025f-711a-4460-a324-9c454a84766b")
     public List<Data> getData() {
         List<Data> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Data.canInstantiate(mObj))
-        			results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
+            if (Data.canInstantiate(mObj))
+                    results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -153,19 +152,19 @@ public class DataTypeModel extends DataModel {
      * Get the values of the 'dataSources' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4221cca5-82d5-4c4d-8425-97af46e69edc")
     public List<DataSource> getDataSources() {
         List<DataSource> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (DataSource.canInstantiate(mObj))
-        			results.add((DataSource)CamelDesignerProxyFactory.instantiate(mObj, DataSource.STEREOTYPE_NAME));
+            if (DataSource.canInstantiate(mObj))
+                    results.add((DataSource)CamelDesignerProxyFactory.instantiate(mObj, DataSource.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("f646b798-7a09-45a1-a1f7-3ff2c542db98")
@@ -184,7 +183,6 @@ public class DataTypeModel extends DataModel {
      * Remove a value from the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("453c2730-a84f-43a3-9c27-a496d67a30a5")
     public boolean removeData(final Data obj) {
@@ -195,7 +193,6 @@ public class DataTypeModel extends DataModel {
      * Remove a value from the 'dataSources' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b3501a2c-2506-4132-8499-78160d7bacd1")
     public boolean removeDataSources(final DataSource obj) {
@@ -233,11 +230,11 @@ public class DataTypeModel extends DataModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -76,9 +78,10 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Schedule} proxy or <i>null</i>.
      */
@@ -88,19 +91,20 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Schedule} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b714743b-6586-41d5-b112-02c32e815ab7")
     public static Schedule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Schedule.canInstantiate(obj))
-        	return new Schedule(obj);
+            return new Schedule(obj);
         else
-        	throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e8054a79-dd9d-48df-812d-0d66d9ea6271")
@@ -120,7 +124,8 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("c1fd5a36-fd80-4f09-b35d-4fda6c401432")
@@ -173,7 +178,6 @@ public class Schedule extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6f377e76-f92e-47c1-87df-9c011c79828e")
     public Unit getTimeUnit() {
@@ -237,7 +241,6 @@ public class Schedule extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b6bb8306-ae00-4499-a135-24303540b0a9")
     public void setTimeUnit(final Unit obj) {
@@ -262,6 +265,14 @@ public class Schedule extends FeatureClass {
     @objid ("7484e2c9-cd85-44a4-ad89-cf1e5c62c9cb")
     protected Schedule(final Class elt) {
         super(elt);
+    }
+
+    @objid ("80ba0e9e-d2d3-4b58-9ead-c69e89ed0042")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("0e156ba5-618a-44cd-8a09-9cb3cbf093ee")
@@ -299,11 +310,11 @@ public class Schedule extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

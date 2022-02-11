@@ -71,9 +71,10 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link HorizontalScaleRequirement} proxy or <i>null</i>.
      */
@@ -83,19 +84,20 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link HorizontalScaleRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("4b3c221d-5d57-48ed-8770-12373fd1e821")
     public static HorizontalScaleRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HorizontalScaleRequirement.canInstantiate(obj))
-        	return new HorizontalScaleRequirement(obj);
+            return new HorizontalScaleRequirement(obj);
         else
-        	throw new IllegalArgumentException("HorizontalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HorizontalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("05553770-6cea-4dda-89ba-b4fc32abbf64")
@@ -115,7 +117,8 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("d8af56c8-43ff-48e5-a921-123e7d931b14")
@@ -170,16 +173,17 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
         this.elt.putTagValue(HorizontalScaleRequirement.MdaTypes.MININSTANCES_TAGTYPE_ELT, value);
     }
 
-    @objid ("de6611c4-7248-40e0-ad3b-98eb36c56401")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("d2690a7b-9bde-4d05-a4ce-ed639098d508")
     protected HorizontalScaleRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("4b18ffee-0b98-4076-9e91-68b60870cbfd")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("d63fbe87-50ec-448d-8e36-aae6e8f56a3f")
@@ -209,11 +213,11 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

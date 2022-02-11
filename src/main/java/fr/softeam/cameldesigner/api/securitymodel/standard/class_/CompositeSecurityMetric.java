@@ -8,12 +8,13 @@ package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetric;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -64,9 +65,10 @@ public class CompositeSecurityMetric extends CompositeMetric {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CompositeSecurityMetric} proxy or <i>null</i>.
      */
@@ -76,19 +78,20 @@ public class CompositeSecurityMetric extends CompositeMetric {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeSecurityMetric} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("739a046a-e9de-4846-9a89-4db170aee2ae")
     public static CompositeSecurityMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeSecurityMetric.canInstantiate(obj))
-        	return new CompositeSecurityMetric(obj);
+            return new CompositeSecurityMetric(obj);
         else
-        	throw new IllegalArgumentException("CompositeSecurityMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeSecurityMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("aad8baab-be16-489d-9445-7ac83d169a6d")
@@ -111,7 +114,6 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c110f6dd-52a8-429b-88aa-7b4301bb96af")
     public SecurityDomain getDomain() {
@@ -126,7 +128,8 @@ public class CompositeSecurityMetric extends CompositeMetric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("8161a3bf-dbbc-42d2-8b42-d1910887bbb7")
@@ -145,7 +148,6 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("389dfa9c-09b1-4caa-9490-8c78ab44f067")
     public void setDomain(final SecurityDomain obj) {
@@ -172,6 +174,14 @@ public class CompositeSecurityMetric extends CompositeMetric {
         super(elt);
     }
 
+    @objid ("28a4a4be-416e-4e9e-bf1b-fe85bbdf6b0d")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("fe4cd5da-e95c-488c-a4aa-bd4e00428eda")
     public static final class MdaTypes {
         @objid ("ae7d818e-c65f-41b8-95dc-631b89ae283d")
@@ -191,11 +201,11 @@ public class CompositeSecurityMetric extends CompositeMetric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

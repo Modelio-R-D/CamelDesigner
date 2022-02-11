@@ -95,9 +95,10 @@ public class ScriptConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ScriptConfiguration} proxy or <i>null</i>.
      */
@@ -107,19 +108,20 @@ public class ScriptConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ScriptConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("f473d377-4500-4363-b1ce-ada6b14e4113")
     public static ScriptConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ScriptConfiguration.canInstantiate(obj))
-        	return new ScriptConfiguration(obj);
+            return new ScriptConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ScriptConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ScriptConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("66a26b83-b5a1-4dc2-8525-a1c75e28cdc4")
@@ -169,7 +171,8 @@ public class ScriptConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("33cd1a3e-ef8f-4142-bbe2-de0e8399d4de")
@@ -354,16 +357,17 @@ public class ScriptConfiguration extends Configuration {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.UPLOADCOMMAND_NOTETYPE_ELT, value);
     }
 
-    @objid ("8c39507c-fd47-4f02-a5b9-05313811e55e")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("10ca7bb9-d314-4f92-9d0c-6f6687e4e461")
     protected ScriptConfiguration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("6ac477ca-5246-4191-ac72-4c2befbb4a98")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("00dd1668-d91f-4281-aae3-7ec4cef1c015")
@@ -425,11 +429,11 @@ public class ScriptConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

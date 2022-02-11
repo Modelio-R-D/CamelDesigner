@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RawMetricContext} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RawMetricContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5edc2835-ae44-4df8-a6dd-5a3f3eb88e62")
     public static RawMetricContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RawMetricContext.canInstantiate(obj))
-        	return new RawMetricContext(obj);
+            return new RawMetricContext(obj);
         else
-        	throw new IllegalArgumentException("RawMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RawMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("7ef1daf8-9117-4101-a4fb-6ef8b4e68c7b")
@@ -107,7 +111,8 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("d9337bbe-6d0c-4795-af52-489c88dafe29")
@@ -120,7 +125,6 @@ public class RawMetricContext extends MetricContext {
      * Get the value of the 'sensor' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("75406a4c-bafd-4b53-9397-6c3b167bf609")
     public Sensor getSensor() {
@@ -144,7 +148,6 @@ public class RawMetricContext extends MetricContext {
      * Set the value of the 'sensor' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("80a96267-0f27-4b5d-8381-71ee0b3ce640")
     public void setSensor(final Sensor obj) {
@@ -171,6 +174,14 @@ public class RawMetricContext extends MetricContext {
         super(elt);
     }
 
+    @objid ("3dec74dd-de4a-464d-bbfc-be1393ae227f")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("38465a8d-1a40-453e-9f7e-e6b706813cd4")
     public static final class MdaTypes {
         @objid ("27e4b7fa-a6de-4824-bc26-0c955dbe61b4")
@@ -190,11 +201,11 @@ public class RawMetricContext extends MetricContext {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

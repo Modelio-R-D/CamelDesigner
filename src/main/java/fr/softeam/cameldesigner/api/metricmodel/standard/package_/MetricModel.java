@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.package_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class MetricModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("a18f7686-6c59-4132-9084-9e5315298333")
@@ -85,6 +88,14 @@ public abstract class MetricModel extends SubModel {
     @objid ("b0fcbf4a-5ad8-48f8-a786-5ad9511d6874")
     protected MetricModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("fb2e1e36-0961-44ef-9111-df5f02d3922a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("e2df5621-cc23-4f96-99f5-e13e4b7f8425")
@@ -106,11 +117,11 @@ public abstract class MetricModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

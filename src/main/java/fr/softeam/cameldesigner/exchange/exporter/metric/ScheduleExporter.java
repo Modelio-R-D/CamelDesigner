@@ -28,7 +28,11 @@ public class ScheduleExporter<T extends Schedule> extends FeatureExporter<T> {
     @objid ("adb17020-3729-49cd-94a2-3d40ec2aaa72")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.Schedule)) {
+            ((camel.metric.MetricTypeModel) context).getSchedules().add((camel.metric.Schedule) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

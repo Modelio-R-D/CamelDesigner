@@ -75,9 +75,10 @@ public class Timer extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Timer} proxy or <i>null</i>.
      */
@@ -87,19 +88,20 @@ public class Timer extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Timer} proxy from a {@link Class} stereotyped << Timer >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Timer} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5f839b77-4310-417d-9020-a102a1d1ee87")
     public static Timer safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Timer.canInstantiate(obj))
-        	return new Timer(obj);
+            return new Timer(obj);
         else
-        	throw new IllegalArgumentException("Timer: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Timer: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d6a7deb9-6c1c-466b-bc80-c5125164efda")
@@ -122,7 +124,6 @@ public class Timer extends FeatureClass {
      * Get the value of the '' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fdb45b53-8e91-4ea7-97f5-1facb696716b")
     public Unit get() {
@@ -137,7 +138,8 @@ public class Timer extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("351fb004-21a4-49f9-9f0f-287fca97b878")
@@ -186,7 +188,6 @@ public class Timer extends FeatureClass {
      * Set the value of the '' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2bbc0c38-7c27-4a38-a165-b5e89707de38")
     public void set(final Unit obj) {
@@ -238,16 +239,17 @@ public class Timer extends FeatureClass {
         this.elt.putTagValue(Timer.MdaTypes.TYPE_TAGTYPE_ELT, value);
     }
 
-    @objid ("280fd187-9190-4da7-a0c3-23ea527a08e0")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("5ceb5691-ee01-4f6f-b72f-8bbb34b2dd38")
     protected Timer(final Class elt) {
         super(elt);
+    }
+
+    @objid ("15f73c69-1e3a-4b5a-b451-c937c69e6578")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("93fa2506-690b-41f3-a6df-8e0ad6afab5e")
@@ -281,11 +283,11 @@ public class Timer extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

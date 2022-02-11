@@ -13,12 +13,9 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -61,7 +58,6 @@ public abstract class MetricContext extends FeatureClass {
      * Add a value to the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3e8b531b-b444-43ad-a0b0-e8edb99ffc92")
     public void addMetricConstraint(final MetricConstraint obj) {
@@ -86,7 +82,8 @@ public abstract class MetricContext extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7a8f0bf2-eda7-452f-92ed-07d45eac4f16")
@@ -99,7 +96,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'metric' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a166b021-b95a-4e01-80dc-86417c107d10")
     public Metric getMetric() {
@@ -117,14 +113,13 @@ public abstract class MetricContext extends FeatureClass {
      * Get the values of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("344b514b-d244-49e6-ae48-d12f985c2769")
     public List<MetricConstraint> getMetricConstraint() {
         List<MetricConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Class) this.elt).getConstraintDefinition())
-        	if (MetricConstraint.canInstantiate(mObj))
-        			results.add((MetricConstraint)CamelDesignerProxyFactory.instantiate(mObj, MetricConstraint.STEREOTYPE_NAME));
+            if (MetricConstraint.canInstantiate(mObj))
+                    results.add((MetricConstraint)CamelDesignerProxyFactory.instantiate(mObj, MetricConstraint.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -132,7 +127,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07755534-c1e3-4825-a2ee-9eb875b0686b")
     public ObjectContext getObjectContext() {
@@ -150,7 +144,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'schedule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9dda55b5-fa4e-4e3d-a740-c037d1509e43")
     public Schedule getSchedule() {
@@ -168,7 +161,6 @@ public abstract class MetricContext extends FeatureClass {
      * Get the value of the 'window' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("196ddd30-8004-4a52-9f23-ee724b6bfc86")
     public Window getWindow() {
@@ -192,7 +184,6 @@ public abstract class MetricContext extends FeatureClass {
      * Remove a value from the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("38222b5e-79cb-4161-b49e-415dedee2da2")
     public boolean removeMetricConstraint(final MetricConstraint obj) {
@@ -203,7 +194,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'metric' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a033450f-ffbd-4381-9567-bbaa14a9fd92")
     public void setMetric(final Metric obj) {
@@ -229,7 +219,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("02abee21-9eda-41b4-b8ed-d5da1f50935c")
     public void setObjectContext(final ObjectContext obj) {
@@ -255,7 +244,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'schedule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1f60b86c-5ab1-432b-9a82-11ac240725f8")
     public void setSchedule(final Schedule obj) {
@@ -281,7 +269,6 @@ public abstract class MetricContext extends FeatureClass {
      * Set the value of the 'window' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8b502c64-0d77-483c-a625-25a2c1e43eee")
     public void setWindow(final Window obj) {
@@ -308,6 +295,14 @@ public abstract class MetricContext extends FeatureClass {
         super(elt);
     }
 
+    @objid ("fa7be652-01af-4e2d-bb14-73bd2ba71759")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("3357aabf-9da8-4702-9625-397f3c7ea782")
     public static final class MdaTypes {
         @objid ("696acbe0-d95a-4b47-8c2f-85b9d8f92049")
@@ -327,11 +322,11 @@ public abstract class MetricContext extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.datamodel.standard.package_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class DataModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("3323bd5b-e768-49e3-8cb1-0a2091c88f28")
@@ -85,6 +88,14 @@ public abstract class DataModel extends SubModel {
     @objid ("5a921068-f17a-4395-833e-f7d7ba0693a4")
     protected DataModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("cabb5eea-777f-40f0-9d23-842c2faa7725")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("be9685ad-a9b6-4bba-8516-6e7e03cecdde")
@@ -106,11 +117,11 @@ public abstract class DataModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

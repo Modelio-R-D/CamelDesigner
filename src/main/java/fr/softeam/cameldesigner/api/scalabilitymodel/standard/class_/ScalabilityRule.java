@@ -16,7 +16,6 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.namespace.Action;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -67,9 +66,10 @@ public class ScalabilityRule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ScalabilityRule} proxy from a {@link Class} stereotyped << ScalabilityRule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScalabilityRule} proxy from a {@link Class} stereotyped << ScalabilityRule >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ScalabilityRule} proxy or <i>null</i>.
      */
@@ -79,26 +79,26 @@ public class ScalabilityRule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ScalabilityRule} proxy from a {@link Class} stereotyped << ScalabilityRule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScalabilityRule} proxy from a {@link Class} stereotyped << ScalabilityRule >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ScalabilityRule} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("0fdb1417-3954-4766-af02-63752edc688f")
     public static ScalabilityRule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ScalabilityRule.canInstantiate(obj))
-        	return new ScalabilityRule(obj);
+            return new ScalabilityRule(obj);
         else
-        	throw new IllegalArgumentException("ScalabilityRule: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ScalabilityRule: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'actions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("993f2c95-a3bf-461e-bea4-0cbb6a68cbdc")
     public void addActions(final Action obj) {
@@ -130,7 +130,6 @@ public class ScalabilityRule extends FeatureClass {
      * Get the values of the 'actions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1d7a3cd1-4daf-48d5-8017-eaed2c846afe")
     public List<Action> getActions() {
@@ -145,7 +144,8 @@ public class ScalabilityRule extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("cb719a9a-3d7b-4466-9ed5-416a980226a7")
@@ -158,7 +158,6 @@ public class ScalabilityRule extends FeatureClass {
      * Get the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4f46ba81-822a-456f-9b2b-d87319b3879a")
     public Event getEvent() {
@@ -182,7 +181,6 @@ public class ScalabilityRule extends FeatureClass {
      * Remove a value from the 'actions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("89a41126-403f-40a3-8426-6d7ef8ed004c")
     public boolean removeActions(final Action obj) {
@@ -202,7 +200,6 @@ public class ScalabilityRule extends FeatureClass {
      * Set the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e3b7af45-308a-4b6e-b5ae-e65d7526cb40")
     public void setEvent(final Event obj) {
@@ -224,16 +221,17 @@ public class ScalabilityRule extends FeatureClass {
         }
     }
 
-    @objid ("bef32a32-4b6a-4410-beec-1e916025fe6a")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("368d110a-31af-480e-b1d4-578d794c4bf1")
     protected ScalabilityRule(final Class elt) {
         super(elt);
+    }
+
+    @objid ("12e633b8-7a18-4164-9660-129b01908ce2")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("d6312fb9-a345-484c-b4fc-57f81b6fe120")
@@ -255,11 +253,11 @@ public class ScalabilityRule extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

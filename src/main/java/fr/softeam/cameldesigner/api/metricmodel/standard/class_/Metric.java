@@ -8,12 +8,13 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -75,7 +76,8 @@ public abstract class Metric extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7b8e2bee-1a63-4198-b897-de9640ac5e51")
@@ -88,7 +90,6 @@ public abstract class Metric extends FeatureClass {
      * Get the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a53bd19a-30f5-4f1b-8eae-2cd91649fd14")
     public MetricTemplate getMetricTemplate() {
@@ -112,7 +113,6 @@ public abstract class Metric extends FeatureClass {
      * Set the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b94fb2d7-be03-4163-bf6d-cfd1d5fe389f")
     public void setMetricTemplate(final MetricTemplate obj) {
@@ -139,6 +139,14 @@ public abstract class Metric extends FeatureClass {
         super(elt);
     }
 
+    @objid ("65b7b6c9-5383-4b1f-ba59-053dd76cfb95")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("7453f2c0-0edc-453a-bbfc-bbc62bf7a06d")
     public static final class MdaTypes {
         @objid ("5ffef185-1e58-444a-b423-71c5f17de7aa")
@@ -158,11 +166,11 @@ public abstract class Metric extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

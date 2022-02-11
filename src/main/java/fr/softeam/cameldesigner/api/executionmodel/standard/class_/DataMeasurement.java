@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -64,9 +66,10 @@ public class DataMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link DataMeasurement} proxy or <i>null</i>.
      */
@@ -76,19 +79,20 @@ public class DataMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataMeasurement} proxy from a {@link Class} stereotyped << DataMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link DataMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("06a0c88e-2cb2-48db-a7d6-9994276a765c")
     public static DataMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataMeasurement.canInstantiate(obj))
-        	return new DataMeasurement(obj);
+            return new DataMeasurement(obj);
         else
-        	throw new IllegalArgumentException("DataMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e88c914a-e21f-43ad-a952-87828aead63f")
@@ -111,7 +115,6 @@ public class DataMeasurement extends Measurement {
      * Get the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3549a243-ef0c-45ac-b515-bb3bab5f7331")
     public Data getData() {
@@ -129,7 +132,6 @@ public class DataMeasurement extends Measurement {
      * Get the value of the 'dataInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2eca9f5d-62c5-438b-84f9-49370eeb2b32")
     public DataInstance getDataInstance() {
@@ -144,7 +146,8 @@ public class DataMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b7a7adf6-526a-4768-85d1-d00f8fbf1bc3")
@@ -163,7 +166,6 @@ public class DataMeasurement extends Measurement {
      * Set the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f449966b-9fdf-4b70-b97f-3cbc78c51bdd")
     public void setData(final Data obj) {
@@ -189,7 +191,6 @@ public class DataMeasurement extends Measurement {
      * Set the value of the 'dataInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("96122aed-8c93-430a-afcf-e8c035f3a349")
     public void setDataInstance(final DataInstance obj) {
@@ -216,6 +217,14 @@ public class DataMeasurement extends Measurement {
         super(elt);
     }
 
+    @objid ("b002f5a2-538b-4f97-8b5b-267bd55f6154")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("87143fca-4f6e-494f-b6a8-3dd519ed1fa8")
     public static final class MdaTypes {
         @objid ("04cf1d7d-4245-4d2a-84bb-f175f62a28d4")
@@ -235,11 +244,11 @@ public class DataMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

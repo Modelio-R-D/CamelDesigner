@@ -9,14 +9,14 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
  */
 @objid ("0e664ca3-18f2-4c00-b92f-3db0ab4c5c04")
 public class CamelDslManager {
-    @objid ("28bc2ae4-662c-4051-a5e4-bdf8017ed35b")
-    private CamelDslStandaloneSetup camelDslStandaloneSetup;
-
     @objid ("4b3de950-e3b1-471f-97c5-1cbaa0443fee")
     private Injector injector;
 
     @objid ("c61792a2-ba4e-4df6-9c2d-7c4533c04449")
     private static final CamelDslManager instance = new CamelDslManager();
+
+    @objid ("c513819f-e27f-49a9-b0bc-54385c335947")
+    private CamelDslStandaloneSetup camelDslStandaloneSetup;
 
     @objid ("54017f4c-4137-451f-9824-a53348d0a53c")
     private CamelDslManager() {

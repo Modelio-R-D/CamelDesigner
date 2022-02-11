@@ -28,7 +28,11 @@ public class MetricTemplateExporter<T extends MetricTemplate> extends FeatureExp
     @objid ("24386cca-7605-47d7-be3a-1ba5c96d1fed")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.MetricTemplate)) {
+            ((camel.metric.MetricTypeModel) context).getTemplates().add((camel.metric.MetricTemplate) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

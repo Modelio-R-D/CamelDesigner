@@ -65,9 +65,10 @@ public class VerticalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link VerticalScaleRequirement} proxy from a {@link Class} stereotyped << VerticalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VerticalScaleRequirement} proxy from a {@link Class} stereotyped << VerticalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link VerticalScaleRequirement} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class VerticalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link VerticalScaleRequirement} proxy from a {@link Class} stereotyped << VerticalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VerticalScaleRequirement} proxy from a {@link Class} stereotyped << VerticalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link VerticalScaleRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a25f70a5-8815-4719-9c34-d9ccbe08cb3b")
     public static VerticalScaleRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (VerticalScaleRequirement.canInstantiate(obj))
-        	return new VerticalScaleRequirement(obj);
+            return new VerticalScaleRequirement(obj);
         else
-        	throw new IllegalArgumentException("VerticalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("VerticalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("bf4a5411-ab22-430b-badc-824afd690128")
@@ -109,7 +111,8 @@ public class VerticalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("048f00f4-67d2-441c-8020-cc170f33fcf5")
@@ -124,16 +127,17 @@ public class VerticalScaleRequirement extends ScaleRequirement {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("1b2367c2-45eb-41f3-a723-a876da658935")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("e4f5a1a0-18e5-4395-b3e4-55e9620dc895")
     protected VerticalScaleRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("dd9eacf5-4749-4841-b5f5-96cb0b941062")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("b9142a65-96fb-46c9-ae04-0835babb830d")
@@ -155,11 +159,11 @@ public class VerticalScaleRequirement extends ScaleRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

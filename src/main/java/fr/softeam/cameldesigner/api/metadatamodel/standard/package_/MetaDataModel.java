@@ -67,9 +67,10 @@ public class MetaDataModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetaDataModel} proxy from a {@link Package} stereotyped << MetaDataModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetaDataModel} proxy from a {@link Package} stereotyped << MetaDataModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link MetaDataModel} proxy or <i>null</i>.
      */
@@ -79,26 +80,26 @@ public class MetaDataModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetaDataModel} proxy from a {@link Package} stereotyped << MetaDataModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetaDataModel} proxy from a {@link Package} stereotyped << MetaDataModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link MetaDataModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3de15d79-16cb-42b7-825f-4400e59dfc1b")
     public static MetaDataModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (MetaDataModel.canInstantiate(obj))
-        	return new MetaDataModel(obj);
+            return new MetaDataModel(obj);
         else
-        	throw new IllegalArgumentException("MetaDataModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetaDataModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'metadataElements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c96ab3d4-a1bb-4452-a4ba-d0944ea26a7e")
     public void addMetadataElements(final MmsObject obj) {
@@ -130,7 +131,6 @@ public class MetaDataModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("99327980-0fc0-49ce-833d-cffd2568b661")
     public CamelModel getCamelModel() {
@@ -138,7 +138,8 @@ public class MetaDataModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("905bca47-df74-45b1-862c-99a7b01563ce")
@@ -151,7 +152,6 @@ public class MetaDataModel extends SubModel {
      * Get the values of the 'metadataElements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8cf87ba1-eab2-476b-989e-8d4f98094b96")
     public List<MmsObject> getMetadataElements() {
@@ -175,7 +175,6 @@ public class MetaDataModel extends SubModel {
      * Remove a value from the 'metadataElements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("eeedbdba-a497-4bd1-b9db-1e6e23c0f17a")
     public boolean removeMetadataElements(final MmsObject obj) {
@@ -195,7 +194,6 @@ public class MetaDataModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3c85defa-4019-4a04-9a72-5681fae1e368")
     public void setCamelModel(final CamelModel obj) {
@@ -233,11 +231,11 @@ public class MetaDataModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

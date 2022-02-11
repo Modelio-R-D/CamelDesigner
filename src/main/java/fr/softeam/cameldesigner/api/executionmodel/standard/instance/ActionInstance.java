@@ -75,9 +75,10 @@ public class ActionInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Instance} stereotyped << ActionInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Instance} stereotyped << ActionInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link ActionInstance} proxy or <i>null</i>.
      */
@@ -87,19 +88,20 @@ public class ActionInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Instance} stereotyped << ActionInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ActionInstance} proxy from a {@link Instance} stereotyped << ActionInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link ActionInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("58b8621f-d50f-4cc8-8625-685e14ad8df9")
     public static ActionInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (ActionInstance.canInstantiate(obj))
-        	return new ActionInstance(obj);
+            return new ActionInstance(obj);
         else
-        	throw new IllegalArgumentException("ActionInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ActionInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("5fdc7cf3-b646-4b0f-b6ed-fa134af80cf9")
@@ -119,7 +121,8 @@ public class ActionInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("922bc139-abab-4a5a-af39-f84fd8d70383")
@@ -199,13 +202,6 @@ public class ActionInstance extends FeatureInstance {
         return Action.safeInstantiate(getElement().getBase());
     }
 
-    @objid ("962e40b9-4a8c-4a85-9df3-765b8a3c2fec")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("fa97ebdb-f847-44a8-abff-d35d48ba630c")
     public void setAction(final Action value) {
         getElement().setBase(value.getElement());
@@ -214,6 +210,14 @@ public class ActionInstance extends FeatureInstance {
     @objid ("d6d23af7-da37-4675-ad4e-bbe271dd05eb")
     protected ActionInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("e2d7b9ff-c84b-41d8-8a5c-75d2a01e74b4")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("e6124144-40b2-4d8e-9200-f628fda5f4f2")
@@ -247,11 +251,11 @@ public class ActionInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

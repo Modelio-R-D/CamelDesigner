@@ -13,10 +13,9 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentModel;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricModel;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ExternalIdentifier;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.PlatformCredentials;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_.ScalabilityModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -88,9 +87,10 @@ public class User extends Entity {
     }
 
     /**
-     * Tries to instantiate a {@link User} proxy from a {@link Class} stereotyped << User >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link User} proxy from a {@link Class} stereotyped << User >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link User} proxy or <i>null</i>.
      */
@@ -100,26 +100,26 @@ public class User extends Entity {
     }
 
     /**
-     * Tries to instantiate a {@link User} proxy from a {@link Class} stereotyped << User >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link User} proxy from a {@link Class} stereotyped << User >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link User} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("0e35e0db-9689-49ed-b145-33de780af115")
     public static User safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (User.canInstantiate(obj))
-        	return new User(obj);
+            return new User(obj);
         else
-        	throw new IllegalArgumentException("User: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("User: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'deploymentModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a98b05e0-6768-4b2b-8bf9-d6e1fbd7c4eb")
     public void addDeploymentModels(final DeploymentModel obj) {
@@ -135,7 +135,6 @@ public class User extends Entity {
      * Add a value to the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("920a2828-0ab7-4266-9ad6-a47f9b3b8c4b")
     public void addExternalIdentifiers(final ExternalIdentifier obj) {
@@ -147,7 +146,6 @@ public class User extends Entity {
      * Add a value to the 'metricModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e134b319-f84e-43d8-bdaa-deb7774aaeae")
     public void addMetricModels(final MetricModel obj) {
@@ -163,7 +161,6 @@ public class User extends Entity {
      * Add a value to the 'requirementModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("797129bc-a9ae-40fc-b5c2-0b83aa8af64d")
     public void addRequirementModels(final RequirementModel obj) {
@@ -179,7 +176,6 @@ public class User extends Entity {
      * Add a value to the 'scalabilityModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9a865abf-7460-4e2c-b5d9-dcc6a6c1e164")
     public void addScalabilityModels(final ScalabilityModel obj) {
@@ -211,7 +207,6 @@ public class User extends Entity {
      * Get the values of the 'deploymentModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1dfe9df8-3253-4013-896e-26f5631506bf")
     public List<DeploymentModel> getDeploymentModels() {
@@ -226,7 +221,8 @@ public class User extends Entity {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("60cb95f6-72bd-44fc-bc0e-5b716c18093a")
@@ -249,14 +245,13 @@ public class User extends Entity {
      * Get the values of the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ffdbd68d-e052-4048-9fac-f21cb4bd93d5")
     public List<ExternalIdentifier> getExternalIdentifiers() {
         List<ExternalIdentifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement())
-        	if (ExternalIdentifier.canInstantiate(mObj))
-        			results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
+            if (ExternalIdentifier.canInstantiate(mObj))
+                    results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -284,7 +279,6 @@ public class User extends Entity {
      * Get the values of the 'metricModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d5946eb2-fb25-49b6-990b-81b6bdb84243")
     public List<MetricModel> getMetricModels() {
@@ -322,22 +316,20 @@ public class User extends Entity {
      * Get the value to the 'platformCredentials' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e787e680-ab9a-400c-9bd1-c1af889228a2")
     public PlatformCredentials getPlatformCredentials() {
-          for (Class obj : ((Class) this.elt).getOwnedElement(Class.class)) {
-           if (PlatformCredentials.canInstantiate(obj))
-             return (PlatformCredentials)CamelDesignerProxyFactory.instantiate(obj, PlatformCredentials.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Class obj : ((Class) this.elt).getOwnedElement(Class.class)) {
+         if (PlatformCredentials.canInstantiate(obj))
+           return (PlatformCredentials)CamelDesignerProxyFactory.instantiate(obj, PlatformCredentials.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
      * Get the values of the 'requirementModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e3ab5fad-ab55-44c3-b963-3a09efe4a576")
     public List<RequirementModel> getRequirementModels() {
@@ -355,7 +347,6 @@ public class User extends Entity {
      * Get the values of the 'scalabilityModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4715bccb-4ec0-414d-a988-fbd45033eab0")
     public List<ScalabilityModel> getScalabilityModels() {
@@ -389,7 +380,6 @@ public class User extends Entity {
      * Remove a value from the 'deploymentModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8d02ea04-3826-407c-9c82-1488161bef1e")
     public boolean removeDeploymentModels(final DeploymentModel obj) {
@@ -409,7 +399,6 @@ public class User extends Entity {
      * Remove a value from the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7046eb6f-470b-483f-a173-1d6fa717f7cb")
     public boolean removeExternalIdentifiers(final ExternalIdentifier obj) {
@@ -420,7 +409,6 @@ public class User extends Entity {
      * Remove a value from the 'metricModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5055c08d-017f-41f9-b0d7-f3410449ec8e")
     public boolean removeMetricModels(final MetricModel obj) {
@@ -440,7 +428,6 @@ public class User extends Entity {
      * Remove a value from the 'requirementModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2a15d4db-8ed2-4484-b930-bd87016b1ad4")
     public boolean removeRequirementModels(final RequirementModel obj) {
@@ -460,7 +447,6 @@ public class User extends Entity {
      * Remove a value from the 'scalabilityModels' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9cbf033e-1144-4d28-9084-53f9888000b5")
     public boolean removeScalabilityModels(final ScalabilityModel obj) {
@@ -530,7 +516,6 @@ public class User extends Entity {
      * Set the value of the 'platformCredentials' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8ef7819e-62b2-4c99-a8dc-537c647a4a0b")
     public void setPlatformCredentials(final PlatformCredentials obj) {
@@ -559,6 +544,14 @@ public class User extends Entity {
     @objid ("379afc82-c0ee-4131-b7a1-7f3e38d1d574")
     protected User(final Class elt) {
         super(elt);
+    }
+
+    @objid ("f32e0630-82d6-4891-b495-1bf67285fa4b")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("e7a907de-dc21-4d17-9104-6dae192d680b")
@@ -604,11 +597,11 @@ public class User extends Entity {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

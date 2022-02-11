@@ -67,9 +67,10 @@ public class PlatformCredentials extends Credentials {
     }
 
     /**
-     * Tries to instantiate a {@link PlatformCredentials} proxy from a {@link Class} stereotyped << PlatformCredentials >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PlatformCredentials} proxy from a {@link Class} stereotyped << PlatformCredentials >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link PlatformCredentials} proxy or <i>null</i>.
      */
@@ -79,19 +80,20 @@ public class PlatformCredentials extends Credentials {
     }
 
     /**
-     * Tries to instantiate a {@link PlatformCredentials} proxy from a {@link Class} stereotyped << PlatformCredentials >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PlatformCredentials} proxy from a {@link Class} stereotyped << PlatformCredentials >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link PlatformCredentials} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6240bf7e-e9b9-484a-83af-cab00702cc24")
     public static PlatformCredentials safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PlatformCredentials.canInstantiate(obj))
-        	return new PlatformCredentials(obj);
+            return new PlatformCredentials(obj);
         else
-        	throw new IllegalArgumentException("PlatformCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PlatformCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e9d9489b-81e7-48c8-855b-f9d58326811d")
@@ -111,7 +113,8 @@ public class PlatformCredentials extends Credentials {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7231804d-18af-400f-855a-b2909da0dc17")
@@ -146,16 +149,17 @@ public class PlatformCredentials extends Credentials {
         this.elt.putTagValue(PlatformCredentials.MdaTypes.PASSWORD_TAGTYPE_ELT, value);
     }
 
-    @objid ("c07dbcf0-aeff-4530-9ea1-7af22a5a327f")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("16d49d3c-5a77-4cbc-b8d0-e02635c4bca9")
     protected PlatformCredentials(final Class elt) {
         super(elt);
+    }
+
+    @objid ("21e68a0d-4120-4982-8d10-e16982a3d89f")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("92fe8b7b-826a-496c-8b51-48154e382f82")
@@ -181,11 +185,11 @@ public class PlatformCredentials extends Credentials {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

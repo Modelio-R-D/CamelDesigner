@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link FunctionalEventInstance} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link FunctionalEventInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3eedf7aa-0ccd-4691-b00f-ccb5857f10d0")
     public static FunctionalEventInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (FunctionalEventInstance.canInstantiate(obj))
-        	return new FunctionalEventInstance(obj);
+            return new FunctionalEventInstance(obj);
         else
-        	throw new IllegalArgumentException("FunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("55e54516-fbd6-4348-a634-05607dc842d1")
@@ -110,7 +114,6 @@ public class FunctionalEventInstance extends EventInstance {
      * Get the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a14d8c02-a57d-4216-a2c7-19a9f9868b04")
     public ComponentInstance getComponentInstance() {
@@ -125,7 +128,8 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("d0bad18b-8bff-4431-b31c-a0d83b2fa11c")
@@ -144,7 +148,6 @@ public class FunctionalEventInstance extends EventInstance {
      * Set the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cdd2e9f9-d9a8-4c70-9345-5b297a839725")
     public void setComponentInstance(final ComponentInstance obj) {
@@ -171,6 +174,14 @@ public class FunctionalEventInstance extends EventInstance {
         super(elt);
     }
 
+    @objid ("d51dfa01-12f7-455e-969b-cedc7840d0cb")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("ed13a09f-140c-4c2f-ac85-a6622bc8ebf8")
     public static final class MdaTypes {
         @objid ("76753bab-23a9-4dc2-bd7e-5a4d047f50be")
@@ -190,11 +201,11 @@ public class FunctionalEventInstance extends EventInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

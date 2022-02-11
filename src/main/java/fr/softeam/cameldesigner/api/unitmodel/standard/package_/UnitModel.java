@@ -69,9 +69,10 @@ public class UnitModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link UnitModel} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class UnitModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link UnitModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3ae54934-1699-4701-812a-33b25490ea8f")
     public static UnitModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (UnitModel.canInstantiate(obj))
-        	return new UnitModel(obj);
+            return new UnitModel(obj);
         else
-        	throw new IllegalArgumentException("UnitModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UnitModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'dimensions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("705b4474-4671-4b34-be7f-c07308f45c9e")
     public void addDimensions(final UnitDimension obj) {
@@ -112,7 +113,6 @@ public class UnitModel extends SubModel {
      * Add a value to the 'units' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("012546ad-5908-4c11-a0de-4547cd531fb4")
     public void addUnits(final Unit obj) {
@@ -140,7 +140,6 @@ public class UnitModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ef9304de-1fe8-43f5-b566-c6ca92f2686f")
     public CamelModel getCamelModel() {
@@ -151,19 +150,19 @@ public class UnitModel extends SubModel {
      * Get the values of the 'dimensions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d5b791cf-892d-47e5-be7b-7d6908727cbe")
     public List<UnitDimension> getDimensions() {
         List<UnitDimension> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (UnitDimension.canInstantiate(mObj))
-        			results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
+            if (UnitDimension.canInstantiate(mObj))
+                    results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("b228c321-3049-40f6-a377-bed1c62d63ed")
@@ -176,14 +175,13 @@ public class UnitModel extends SubModel {
      * Get the values of the 'units' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f90af799-80a3-401f-a678-7f3ad883d375")
     public List<Unit> getUnits() {
         List<Unit> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Unit.canInstantiate(mObj))
-        			results.add((Unit)CamelDesignerProxyFactory.instantiate(mObj, Unit.STEREOTYPE_NAME));
+            if (Unit.canInstantiate(mObj))
+                    results.add((Unit)CamelDesignerProxyFactory.instantiate(mObj, Unit.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -197,7 +195,6 @@ public class UnitModel extends SubModel {
      * Remove a value from the 'dimensions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("314d80d9-5a76-4ff7-b9d5-4ac0d1442735")
     public boolean removeDimensions(final UnitDimension obj) {
@@ -208,7 +205,6 @@ public class UnitModel extends SubModel {
      * Remove a value from the 'units' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1b37db89-ae17-4b89-bf95-77c792b1f94d")
     public boolean removeUnits(final Unit obj) {
@@ -219,23 +215,23 @@ public class UnitModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e876d6f4-8c5d-4975-9857-cff29c793f63")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("f10b702b-e94b-4231-8d08-6a09d8865bbc")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("f994a979-44f4-40b5-93bb-09f455d3d771")
     protected UnitModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("b7eeb165-293c-4ae9-adcf-85294df004a4")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("fbd51035-faf8-4064-a217-af4ea824c639")
@@ -257,11 +253,11 @@ public class UnitModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

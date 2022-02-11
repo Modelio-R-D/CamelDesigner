@@ -28,7 +28,11 @@ public class SensorExporter<T extends Sensor> extends SoftwareComponentExporter<
     @objid ("559125d2-cb81-4b31-a967-a94d6f1c9808")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.Sensor)) {
+            ((camel.metric.MetricTypeModel) context).getSensors().add((camel.metric.Sensor) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

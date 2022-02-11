@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -65,9 +64,10 @@ public class IfThenConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link IfThenConstraint} proxy or <i>null</i>.
      */
@@ -77,19 +77,20 @@ public class IfThenConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link IfThenConstraint} proxy from a {@link Constraint} stereotyped << IfThenConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link IfThenConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("32450b8b-7b1d-4b56-a2e0-a99f6ca23670")
     public static IfThenConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (IfThenConstraint.canInstantiate(obj))
-        	return new IfThenConstraint(obj);
+            return new IfThenConstraint(obj);
         else
-        	throw new IllegalArgumentException("IfThenConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("IfThenConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("8a09093c-8a0a-40fe-8b77-b7cff7a86eee")
@@ -109,7 +110,8 @@ public class IfThenConstraint extends CompositeConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("7ee284ef-e90f-4b82-a3b0-1a3c6fd5e99b")
@@ -122,7 +124,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'else' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("abdfc80a-b555-49b1-bed2-17d56d8a8ef8")
     public CamelConstraint getElse() {
@@ -140,7 +141,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'if' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("63bc2f51-378a-4a4c-bc46-2242e716f00c")
     public CamelConstraint getIf() {
@@ -158,7 +158,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Get the value of the 'then' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("aad689f7-1a69-4f1c-a8b5-87c559e0192a")
     public CamelConstraint getThen() {
@@ -182,7 +181,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'else' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f8267563-80d3-4f4e-930f-4ba60a823f74")
     public void setElse(final CamelConstraint obj) {
@@ -208,7 +206,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'if' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fd69239b-6def-4fa1-a398-04fc978c6d8f")
     public void setIf(final CamelConstraint obj) {
@@ -234,7 +231,6 @@ public class IfThenConstraint extends CompositeConstraint {
      * Set the value of the 'then' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bff8948d-78a0-48e9-8f6a-f308b580574b")
     public void setThen(final CamelConstraint obj) {
@@ -287,11 +283,11 @@ public class IfThenConstraint extends CompositeConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

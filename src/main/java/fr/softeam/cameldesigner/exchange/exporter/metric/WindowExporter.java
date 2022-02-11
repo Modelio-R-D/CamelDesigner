@@ -28,7 +28,11 @@ public class WindowExporter<T extends Window> extends FeatureExporter<T> {
     @objid ("a2d09feb-f998-4808-96c9-ebe3a0a6c951")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.Window)) {
+            ((camel.metric.MetricTypeModel) context).getWindows().add((camel.metric.Window) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

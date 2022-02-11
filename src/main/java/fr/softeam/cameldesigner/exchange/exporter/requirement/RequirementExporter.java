@@ -27,7 +27,11 @@ public abstract class RequirementExporter<T extends Requirement> extends Feature
     @objid ("01f72a30-3f3e-46f9-9312-0754ed47501f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.requirement.RequirementModel) && (elt instanceof camel.requirement.Requirement)) {
+            ((camel.requirement.RequirementModel) context).getRequirements().add((camel.requirement.Requirement) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

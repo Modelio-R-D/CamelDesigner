@@ -80,9 +80,10 @@ public class BuildConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link BuildConfiguration} proxy or <i>null</i>.
      */
@@ -92,19 +93,20 @@ public class BuildConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BuildConfiguration} proxy from a {@link Artifact} stereotyped << BuildConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link BuildConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3bbbd669-f3b5-40ed-91bb-9f53f7aeec04")
     public static BuildConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (BuildConfiguration.canInstantiate(obj))
-        	return new BuildConfiguration(obj);
+            return new BuildConfiguration(obj);
         else
-        	throw new IllegalArgumentException("BuildConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("BuildConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("cb223ed4-282f-40b0-b424-75f4c563af57")
@@ -144,7 +146,8 @@ public class BuildConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("e94d9188-cf05-47cb-a1c2-2bd44951c9ab")
@@ -239,16 +242,17 @@ public class BuildConfiguration extends FeatureArtifact {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.SOURCECODEURL_TAGTYPE_ELT, value);
     }
 
-    @objid ("8dc906c2-6927-4de4-8335-236b1ba17aba")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("7fa9dd19-d40c-4916-88d5-9fcf997aefca")
     protected BuildConfiguration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("b672896b-3227-4356-9987-a4da9e0a7dde")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("5c80b392-068d-47de-a15f-f92421a05377")
@@ -290,11 +294,11 @@ public class BuildConfiguration extends FeatureArtifact {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

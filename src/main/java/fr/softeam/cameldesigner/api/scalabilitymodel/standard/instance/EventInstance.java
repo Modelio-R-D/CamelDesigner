@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -74,7 +76,8 @@ public abstract class EventInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("59df9c38-3c20-47b1-9b2a-260f59806f2f")
@@ -107,7 +110,6 @@ public abstract class EventInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("078dc325-593b-449f-9f34-372a2d699f3a")
     public Event getType() {
@@ -144,7 +146,6 @@ public abstract class EventInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("db55465e-2743-4678-99df-9eec79b22e95")
     public void setType(final Event obj) {
@@ -154,6 +155,14 @@ public abstract class EventInstance extends FeatureInstance {
     @objid ("7ed83062-1eb1-4cf6-bdb2-88b9df2e0250")
     protected EventInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("866e61d4-468c-4a22-9aa6-a61c360dd6f5")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("98e63d06-3db8-4a94-99e6-5c82f0f8ac06")
@@ -183,11 +192,11 @@ public abstract class EventInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

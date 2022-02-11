@@ -73,7 +73,6 @@ public abstract class DeploymentModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("30418747-1fe9-49de-ad10-b9d84ae0e463")
     public CamelModel getCamelModel() {
@@ -81,7 +80,8 @@ public abstract class DeploymentModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("e684bb26-c65d-4b44-baf3-22dfa2a2a091")
@@ -100,22 +100,23 @@ public abstract class DeploymentModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7987f079-3390-401f-b70f-6d605c63551d")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("08c52df8-dbb1-4743-8e10-cee09f72507e")
-    @Override
-    public List<CamelElement> getChilds() {
-        return super.getChilds();
-    }
-
     @objid ("2e823b5a-4161-4df3-8f69-b557e6d3f9fd")
     protected DeploymentModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("7824ca58-b756-4b62-98fc-fc9838496def")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("bcfd6f5c-46e7-47aa-9a4b-79a22339b9f4")
@@ -137,11 +138,11 @@ public abstract class DeploymentModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

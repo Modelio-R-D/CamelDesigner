@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -68,9 +67,10 @@ public class CompositeMetric extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetric} proxy from a {@link Class} stereotyped << CompositeMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetric} proxy from a {@link Class} stereotyped << CompositeMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CompositeMetric} proxy or <i>null</i>.
      */
@@ -80,26 +80,26 @@ public class CompositeMetric extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetric} proxy from a {@link Class} stereotyped << CompositeMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetric} proxy from a {@link Class} stereotyped << CompositeMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeMetric} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d009f364-4d27-486f-904b-2f32f2c6a314")
     public static CompositeMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeMetric.canInstantiate(obj))
-        	return new CompositeMetric(obj);
+            return new CompositeMetric(obj);
         else
-        	throw new IllegalArgumentException("CompositeMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("028e19c8-c6a0-4bc3-bce0-697c08f05871")
     public void addComponentMetrics(final Metric obj) {
@@ -131,7 +131,6 @@ public class CompositeMetric extends Metric {
      * Get the values of the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4c4e4471-9653-4362-8cfa-4831954ac597")
     public List<Metric> getComponentMetrics() {
@@ -146,7 +145,8 @@ public class CompositeMetric extends Metric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("5a08b07f-8ee5-4f6e-8fce-178731b13274")
@@ -175,7 +175,6 @@ public class CompositeMetric extends Metric {
      * Remove a value from the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("37b4c820-75a7-474e-9bb0-b17dc05a9308")
     public boolean removeComponentMetrics(final Metric obj) {
@@ -201,16 +200,17 @@ public class CompositeMetric extends Metric {
         this.elt.putTagValue(CompositeMetric.MdaTypes.FORMULA_TAGTYPE_ELT, value);
     }
 
-    @objid ("5c16ce58-1fb0-4aa3-8eda-ce454ca9159b")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("f37d95c9-f61e-4642-90ab-c577f55bbd8e")
     protected CompositeMetric(final Class elt) {
         super(elt);
+    }
+
+    @objid ("e8f98591-b838-4488-8fe0-6f1ebd8abf79")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("b52a26f6-5581-4431-a657-8c340315e64d")
@@ -236,11 +236,11 @@ public class CompositeMetric extends Metric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

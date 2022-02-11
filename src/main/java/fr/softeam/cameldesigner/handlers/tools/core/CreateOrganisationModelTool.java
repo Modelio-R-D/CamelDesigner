@@ -13,9 +13,10 @@ import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 
-@objid ("ba54f307-5564-4d48-b411-d7936e4f9c1a")
+@objid ("08e09554-a781-4464-9118-7ff3efc538fe")
 public class CreateOrganisationModelTool extends CreateSubModelTool {
-    @objid ("77d78ebd-a732-458b-8f18-ca00547ab7f7")
+    @objid ("d46dea1f-1754-493d-8dbc-dbf874b53617")
+    @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
         ClassDiagram diag = (ClassDiagram) parent.getElement();
         org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) diag.getOrigin();
@@ -33,14 +34,14 @@ public class CreateOrganisationModelTool extends CreateSubModelTool {
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName("Organisation Model");
             diagram.setDefaultName("Organisation Diagram");
-            
+        
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();
             }
     }
 
-    @objid ("18bddd92-d3c5-45fd-894f-fbe4d7d85350")
+    @objid ("c008c1fd-00d3-4687-8cb6-109fbc0e1621")
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         return super.acceptElement(arg1);

@@ -76,7 +76,8 @@ public abstract class Action extends Feature {
     }
 
     /**
-     * Get the underlying {@link NameSpace}. 
+     * Get the underlying {@link NameSpace}.
+     * 
      * @return the NameSpace represented by this proxy, never null.
      */
     @objid ("5ba1c38e-6b49-426d-a2c9-ce9cb7bb550a")
@@ -115,11 +116,11 @@ public abstract class Action extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

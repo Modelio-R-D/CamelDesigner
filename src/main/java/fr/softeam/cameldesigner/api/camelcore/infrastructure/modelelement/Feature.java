@@ -108,7 +108,8 @@ public abstract class Feature extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
     @objid ("fbc0aa4d-8174-49a7-b67a-9a29dc7d7ed2")
@@ -147,11 +148,11 @@ public abstract class Feature extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

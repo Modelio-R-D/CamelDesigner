@@ -64,9 +64,10 @@ public class BooleanValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link BooleanValueType} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class BooleanValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link BooleanValueType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5cf375ac-2e5f-4f07-842d-3adbf5dfec94")
     public static BooleanValueType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (BooleanValueType.canInstantiate(obj))
-        	return new BooleanValueType(obj);
+            return new BooleanValueType(obj);
         else
-        	throw new IllegalArgumentException("BooleanValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("BooleanValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f6e04489-31e6-4168-bb12-1a8256d404f3")
@@ -108,7 +110,8 @@ public class BooleanValueType extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("86a81946-9cec-4804-b167-2b0600be31f7")
@@ -123,16 +126,17 @@ public class BooleanValueType extends ValueType {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("60383f42-91b4-4a5d-a265-3c71ef7b56cf")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("14f46240-f8d1-4619-b119-9579f00839b0")
     protected BooleanValueType(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("53a5e15e-b9c3-4095-9110-b259351cdea6")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("df669cbd-dad5-4a9c-8f92-4f6b6714af23")
@@ -154,11 +158,11 @@ public class BooleanValueType extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

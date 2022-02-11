@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentmodel.standard.port;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -72,9 +74,10 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Port
      * @return a {@link CommunicationPort} proxy or <i>null</i>.
      */
@@ -84,19 +87,20 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Port}
      * @return a {@link CommunicationPort} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a8291b84-a575-42f8-8564-3af25fa832ac")
     public static CommunicationPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPort.canInstantiate(obj))
-        	return new CommunicationPort(obj);
+            return new CommunicationPort(obj);
         else
-        	throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f06e8729-8178-4f8e-b0bc-601a10460151")
@@ -116,7 +120,8 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}. 
+     * Get the underlying {@link Port}.
+     * 
      * @return the Port represented by this proxy, never null.
      */
     @objid ("45cc0fa1-e718-40f9-b3e0-0f895caef313")
@@ -199,6 +204,14 @@ public class CommunicationPort extends FeaturePort {
         super(elt);
     }
 
+    @objid ("b7468ea3-d802-4a84-8e99-a44e50d9fe37")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("4372cf5a-f8d4-4bb8-ad18-085c5dd70583")
     public static final class MdaTypes {
         @objid ("f79d5351-3053-41e4-a2a8-cd9e29ada812")
@@ -230,11 +243,11 @@ public class CommunicationPort extends FeaturePort {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

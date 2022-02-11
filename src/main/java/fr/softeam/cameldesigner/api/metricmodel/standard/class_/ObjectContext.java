@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
@@ -66,9 +68,10 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ObjectContext} proxy or <i>null</i>.
      */
@@ -78,19 +81,20 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ObjectContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d544c5dc-110a-4b42-890b-4fdc6d32b5f7")
     public static ObjectContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ObjectContext.canInstantiate(obj))
-        	return new ObjectContext(obj);
+            return new ObjectContext(obj);
         else
-        	throw new IllegalArgumentException("ObjectContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ObjectContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b28449cd-de1e-4fb2-8525-f95759992746")
@@ -113,7 +117,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'communication' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b722a7fc-40f7-46fb-b221-601984d23cd5")
     public Communication getCommunication() {
@@ -131,7 +134,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("27bbd251-6597-4897-9a83-1f0ebdc738e2")
     public CamelComponent getComponent() {
@@ -149,7 +151,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f5915d5b-8ea9-4201-ac6a-c57148f6c8d2")
     public Data getData() {
@@ -164,7 +165,8 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9316f85b-392c-45e9-9d13-afa9312402a4")
@@ -183,7 +185,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'communication' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("369fe3d8-b9ad-400c-b8af-8025cce7469f")
     public void setCommunication(final Communication obj) {
@@ -209,7 +210,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1749dbc2-ddeb-4801-a84a-baf18c091d40")
     public void setComponent(final CamelComponent obj) {
@@ -235,7 +235,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("54b4843b-febe-4ee6-986c-c3e9390e9c1c")
     public void setData(final Data obj) {
@@ -262,6 +261,14 @@ public class ObjectContext extends FeatureClass {
         super(elt);
     }
 
+    @objid ("f6484111-a4a6-4d62-af98-21cb4ae4f1e1")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("5fffe97f-3562-4512-9295-ad884699b40d")
     public static final class MdaTypes {
         @objid ("8794a0e3-0b6a-4836-9b3c-9768ec06d595")
@@ -281,11 +288,11 @@ public class ObjectContext extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

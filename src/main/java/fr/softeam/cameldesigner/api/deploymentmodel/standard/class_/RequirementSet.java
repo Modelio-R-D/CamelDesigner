@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
@@ -72,9 +74,10 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RequirementSet} proxy or <i>null</i>.
      */
@@ -84,19 +87,20 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RequirementSet} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("8b2243bd-9a58-4481-bdcd-2e2b14d5d301")
     public static RequirementSet safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RequirementSet.canInstantiate(obj))
-        	return new RequirementSet(obj);
+            return new RequirementSet(obj);
         else
-        	throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("dfe5d4b3-8553-4fec-b561-7148eea7336b")
@@ -116,7 +120,8 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("6f5e4a5f-ce3a-40ca-bdf7-0f9eb4ad2dd6")
@@ -129,7 +134,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8559184c-d7d6-46c7-935f-e1247ad684f5")
     public HorizontalScaleRequirement getHorizontalScaleRequirement() {
@@ -147,7 +151,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2c65085b-a45c-4389-8d6d-bb0630f64b1f")
     public ImageRequirement getImageRequirement() {
@@ -165,7 +168,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1a11f985-1db7-4c69-beff-58e1720841f1")
     public LocationRequirement getLocationRequirement() {
@@ -183,7 +185,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'osRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d1135561-555c-4021-837c-dc58eee07f1a")
     public OSRequirement getOsRequirement() {
@@ -201,7 +202,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("db4a9a19-6ba1-48fd-af6a-99973ac08e91")
     public PaaSRequirement getPaasRequirement() {
@@ -219,7 +219,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("be702e1c-9ed8-4bc2-88f2-a322d309f9e5")
     public ProviderRequirement getProviderRequirement() {
@@ -237,7 +236,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3f85a114-d1b8-4638-a405-727feb03f37b")
     public ResourceRequirement getResourceRequirement() {
@@ -255,7 +253,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0ce74e07-d2f9-4a78-b34b-396449d59905")
     public SecurityRequirement getSecurityRequirement() {
@@ -273,7 +270,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bd0d2e92-71a0-4731-a014-bf09e66c496c")
     public VerticalScaleRequirement getVerticalScaleRequirement() {
@@ -297,7 +293,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("42bfba76-a36e-4f83-b0c2-368ce4ffa711")
     public void setHorizontalScaleRequirement(final HorizontalScaleRequirement obj) {
@@ -323,7 +318,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2b4aeff9-c87c-4068-939d-3ca3a0e47467")
     public void setImageRequirement(final ImageRequirement obj) {
@@ -349,7 +343,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("20c4b6c4-a594-44df-907d-5db80efc79db")
     public void setLocationRequirement(final LocationRequirement obj) {
@@ -375,7 +368,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'osRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dec1662d-0c54-4414-a3b9-1c6ecd539726")
     public void setOsRequirement(final OSRequirement obj) {
@@ -401,7 +393,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8a6968c1-aedd-4b81-973d-9d491a85ee1e")
     public void setPaasRequirement(final PaaSRequirement obj) {
@@ -427,7 +418,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ab8fd048-7ecb-4b02-84e5-e644517cb4bd")
     public void setProviderRequirement(final ProviderRequirement obj) {
@@ -453,7 +443,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("761c79a8-6d08-4376-8926-86cd0de72061")
     public void setResourceRequirement(final ResourceRequirement obj) {
@@ -479,7 +468,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cd2a7304-dfa2-4ce0-9f47-2416f75a4eb8")
     public void setSecurityRequirement(final SecurityRequirement obj) {
@@ -505,7 +493,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("28c37fd2-232e-4f98-8afc-9846e021cc56")
     public void setVerticalScaleRequirement(final VerticalScaleRequirement obj) {
@@ -532,6 +519,14 @@ public class RequirementSet extends FeatureClass {
         super(elt);
     }
 
+    @objid ("c471cd42-bd78-445f-af2c-eec88afdb9bd")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("56f9723e-57a0-4b68-946b-a3f85b1617ce")
     public static final class MdaTypes {
         @objid ("201f8c5c-0c32-4895-a497-da298f5d683c")
@@ -551,11 +546,11 @@ public class RequirementSet extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

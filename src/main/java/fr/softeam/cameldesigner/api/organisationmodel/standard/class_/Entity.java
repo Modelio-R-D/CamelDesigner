@@ -65,9 +65,10 @@ public class Entity extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Entity} proxy from a {@link Class} stereotyped << Entity >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Entity} proxy from a {@link Class} stereotyped << Entity >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Entity} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class Entity extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Entity} proxy from a {@link Class} stereotyped << Entity >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Entity} proxy from a {@link Class} stereotyped << Entity >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Entity} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("901a488d-1e2f-4210-a0cf-6ec6b9c08fef")
     public static Entity safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Entity.canInstantiate(obj))
-        	return new Entity(obj);
+            return new Entity(obj);
         else
-        	throw new IllegalArgumentException("Entity: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Entity: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("afc1a1f9-ac8c-479a-b36c-6e3f88bb977f")
@@ -109,7 +111,8 @@ public class Entity extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("eb0b072e-0943-441b-849a-dfeec7e61497")
@@ -124,16 +127,17 @@ public class Entity extends FeatureClass {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("96a25793-50ad-4a06-b91a-9f0495149be2")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("a9eeb943-2535-4638-9b5b-d2b97a9ab6ff")
     protected Entity(final Class elt) {
         super(elt);
+    }
+
+    @objid ("02694d86-eab7-45ba-bb2f-c62fb0827c88")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("261036c6-676a-487a-934e-2dea0ceb0b28")
@@ -155,11 +159,11 @@ public class Entity extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

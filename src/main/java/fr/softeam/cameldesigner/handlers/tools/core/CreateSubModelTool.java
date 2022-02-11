@@ -1,8 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.cameldiagrams.infrastructure.abstractdiagram.AbstractCamelDiagram;
 import org.modelio.api.modelio.IModelioServices;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
@@ -12,8 +10,6 @@ import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Package;
 
 /**
  * @author kchaabouni
@@ -22,17 +18,6 @@ import org.modelio.metamodel.uml.statik.Package;
 public abstract class CreateSubModelTool extends DefaultBoxTool {
     @objid ("af2b339a-4f9c-4d67-b8f7-5ca301eb6362")
     public boolean acceptElement(final IDiagramGraphic targetNode) {
-        //        ModelElement graphicOwner = (ModelElement)targetNode.getElement();
-        //        ModelElement owner =  null;
-        //        if(graphicOwner instanceof AbstractDiagram) {
-        //            owner = ((AbstractDiagram)graphicOwner).getOrigin();
-        //        }else {
-        //            owner = graphicOwner;
-        //        }
-        //        
-        //        return owner instanceof Package
-        //                && ((org.modelio.metamodel.uml.statik.Package) owner)
-        //                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME);
         return true;
     }
 

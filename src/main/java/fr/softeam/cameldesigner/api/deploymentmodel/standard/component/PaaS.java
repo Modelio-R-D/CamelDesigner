@@ -64,9 +64,10 @@ public class PaaS extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link PaaS} proxy from a {@link Component} stereotyped << PaaS >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaS} proxy from a {@link Component} stereotyped << PaaS >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Component
      * @return a {@link PaaS} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class PaaS extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link PaaS} proxy from a {@link Component} stereotyped << PaaS >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaS} proxy from a {@link Component} stereotyped << PaaS >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Component}
      * @return a {@link PaaS} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("8ead558a-0dd7-4361-a502-18aed76c48f6")
     public static PaaS safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (PaaS.canInstantiate(obj))
-        	return new PaaS(obj);
+            return new PaaS(obj);
         else
-        	throw new IllegalArgumentException("PaaS: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaS: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("dcb4f24c-085b-48c3-99e7-255c83b284a7")
@@ -108,7 +110,8 @@ public class PaaS extends CamelComponent {
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("3acf5a5b-f600-4974-b4af-e40d1de624a3")
@@ -123,16 +126,17 @@ public class PaaS extends CamelComponent {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("e3288273-4061-47f2-92d9-1c7c0a6bf163")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("250294a5-fc40-4a1b-92c0-1ed9da475fd7")
     protected PaaS(final Component elt) {
         super(elt);
+    }
+
+    @objid ("03d17871-a8e1-4349-b0c5-dc57ec7631d3")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("ebb4dcf9-28ac-415f-b6ab-19e64a2fd1da")
@@ -154,11 +158,11 @@ public class PaaS extends CamelComponent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

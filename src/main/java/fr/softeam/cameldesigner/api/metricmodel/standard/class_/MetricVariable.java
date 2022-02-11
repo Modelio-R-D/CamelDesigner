@@ -16,19 +16,14 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -77,9 +72,10 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricVariable} proxy or <i>null</i>.
      */
@@ -89,26 +85,26 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariable} proxy from a {@link Class} stereotyped << MetricVariable >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricVariable} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("db3d0870-7122-407d-8501-cc824bb6637a")
     public static MetricVariable safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricVariable.canInstantiate(obj))
-        	return new MetricVariable(obj);
+            return new MetricVariable(obj);
         else
-        	throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricVariable: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5afb2aac-af8d-4475-9aa6-7e7872eab214")
     public void addComponentMetrics(final Metric obj) {
@@ -124,7 +120,6 @@ public class MetricVariable extends Metric {
      * Add a value to the 'metricVariableConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6e9ee1f6-4708-433e-be4d-74291f711d0d")
     public void addMetricVariableConstraint(final MetricVariableConstraint obj) {
@@ -152,7 +147,6 @@ public class MetricVariable extends Metric {
      * Get the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07a94283-6995-4755-8070-8f8679124fb2")
     public CamelComponent getComponent() {
@@ -170,7 +164,6 @@ public class MetricVariable extends Metric {
      * Get the values of the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3f8e7e86-0ce9-4ccc-aea3-a8f7e93a519d")
     public List<Metric> getComponentMetrics() {
@@ -185,7 +178,8 @@ public class MetricVariable extends Metric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b095838c-9234-4b74-9b34-bd0796d13007")
@@ -208,14 +202,13 @@ public class MetricVariable extends Metric {
      * Get the values of the 'metricVariableConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2245b28c-96f0-4c2c-9fd7-1bec765fc603")
     public List<MetricVariableConstraint> getMetricVariableConstraint() {
         List<MetricVariableConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Class) this.elt).getConstraintDefinition())
-        	if (MetricVariableConstraint.canInstantiate(mObj))
-        			results.add((MetricVariableConstraint)CamelDesignerProxyFactory.instantiate(mObj, MetricVariableConstraint.STEREOTYPE_NAME));
+            if (MetricVariableConstraint.canInstantiate(mObj))
+                    results.add((MetricVariableConstraint)CamelDesignerProxyFactory.instantiate(mObj, MetricVariableConstraint.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -249,13 +242,12 @@ public class MetricVariable extends Metric {
      * Remove a value from the 'componentMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2c8aa32e-4be4-4dfd-a487-3726362fb577")
     public boolean removeComponentMetrics(final Metric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricVariable.MdaTypes.MDAASSOCDEP_ROLE), ""))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -269,7 +261,6 @@ public class MetricVariable extends Metric {
      * Remove a value from the 'metricVariableConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6f8c28ee-3d08-4baa-8e8e-d3caced9b993")
     public boolean removeMetricVariableConstraint(final MetricVariableConstraint obj) {
@@ -280,7 +271,6 @@ public class MetricVariable extends Metric {
      * Set the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("20fd0a40-4d37-4793-9069-c78916185c55")
     public void setComponent(final CamelComponent obj) {
@@ -338,16 +328,17 @@ public class MetricVariable extends Metric {
           this.elt.removeTags(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT);
     }
 
-    @objid ("902073ed-dc07-4f33-8621-7d881ae69635")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("2a2db337-9540-495a-9cbd-81b5e2cb07c9")
     protected MetricVariable(final Class elt) {
         super(elt);
+    }
+
+    @objid ("8a53e1e2-c685-4c02-8162-f4cf8784caa0")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("81037834-9acd-42d9-b1a5-2bc14d8ad956")
@@ -381,11 +372,11 @@ public class MetricVariable extends Metric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

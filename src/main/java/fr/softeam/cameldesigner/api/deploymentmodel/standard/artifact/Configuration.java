@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.artifact.FeatureArtifact;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class Configuration extends FeatureArtifact {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("9938a287-8871-4b22-9ea9-0eaade59f172")
@@ -85,6 +88,14 @@ public abstract class Configuration extends FeatureArtifact {
     @objid ("79533146-93c5-4547-a663-e4768e1cc15c")
     protected Configuration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("c1aff3ed-63aa-43bd-935d-6abf1015ba26")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("58dae9c3-74db-4b4e-9dad-cd23280e68db")
@@ -106,11 +117,11 @@ public abstract class Configuration extends FeatureArtifact {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

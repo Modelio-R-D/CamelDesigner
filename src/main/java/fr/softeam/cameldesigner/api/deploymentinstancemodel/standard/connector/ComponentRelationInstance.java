@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.connector.FeatureConnector;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -67,7 +69,8 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("83985a32-a6f5-4d35-a106-e63331d852f2")
@@ -85,6 +88,14 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
     @objid ("bb5b7ac7-a3f9-4845-9cc4-8a4ac134c8d4")
     protected ComponentRelationInstance(final Connector elt) {
         super(elt);
+    }
+
+    @objid ("3393835c-4642-4be2-8530-80f3e7c7a222")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("d927b287-6b8d-4d81-8f18-9bc21a636dd4")
@@ -106,11 +117,11 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

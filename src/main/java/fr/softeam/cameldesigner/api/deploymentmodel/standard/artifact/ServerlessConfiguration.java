@@ -15,8 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -74,9 +72,10 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ServerlessConfiguration} proxy or <i>null</i>.
      */
@@ -86,26 +85,26 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ServerlessConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("595f06a5-b1ba-4ca1-933e-445590feeef8")
     public static ServerlessConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ServerlessConfiguration.canInstantiate(obj))
-        	return new ServerlessConfiguration(obj);
+            return new ServerlessConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f16978ff-13f9-4a2d-b14f-2c9741336594")
     public void addEnvironmentConfigParams(final AttributeAttribute obj) {
@@ -143,15 +142,14 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value to the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("26ec6319-907a-4a8c-9118-99848f456542")
     public BuildConfiguration getBuildConfiguration() {
-          for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
-           if (BuildConfiguration.canInstantiate(obj))
-             return (BuildConfiguration)CamelDesignerProxyFactory.instantiate(obj, BuildConfiguration.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
+         if (BuildConfiguration.canInstantiate(obj))
+           return (BuildConfiguration)CamelDesignerProxyFactory.instantiate(obj, BuildConfiguration.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
@@ -165,7 +163,8 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("4683bb09-54e6-45cd-bc43-12ad4177e544")
@@ -178,14 +177,13 @@ public class ServerlessConfiguration extends Configuration {
      * Get the values of the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("79f164be-cfc3-45ee-8399-66200e6e310b")
     public List<AttributeAttribute> getEnvironmentConfigParams() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Artifact) this.elt).getOwnedAttribute())
-        	if (AttributeAttribute.canInstantiate(mObj))
-        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+            if (AttributeAttribute.canInstantiate(mObj))
+                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -193,15 +191,14 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value to the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fd6cf06e-8141-4e5b-b491-96df7d841876")
     public EventConfiguration getEventConfiguration() {
-          for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
-           if (EventConfiguration.canInstantiate(obj))
-             return (EventConfiguration)CamelDesignerProxyFactory.instantiate(obj, EventConfiguration.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
+         if (EventConfiguration.canInstantiate(obj))
+           return (EventConfiguration)CamelDesignerProxyFactory.instantiate(obj, EventConfiguration.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     @objid ("930aecd3-e7be-464c-8084-191ee0978c04")
@@ -214,7 +211,6 @@ public class ServerlessConfiguration extends Configuration {
      * Remove a value from the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2b597c0b-129c-4d70-8f34-f245043a1a3d")
     public boolean removeEnvironmentConfigParams(final AttributeAttribute obj) {
@@ -235,7 +231,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("84bd2c6e-b441-47de-8fad-946b094ec899")
     public void setBuildConfiguration(final BuildConfiguration obj) {
@@ -265,7 +260,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("28363e1b-6e49-43f2-b14b-76d8c16cb13a")
     public void setEventConfiguration(final EventConfiguration obj) {
@@ -281,16 +275,17 @@ public class ServerlessConfiguration extends Configuration {
         }
     }
 
-    @objid ("0018eae5-3fc9-4612-a475-2cd23bf2bd6f")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("a14bdde4-6b46-4d56-90ed-e5b91b229195")
     protected ServerlessConfiguration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("f25fc44b-526b-4b7e-ae9d-625552e64c4d")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("96beea79-8c81-4296-8902-a428d2abe0d8")
@@ -320,11 +315,11 @@ public class ServerlessConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

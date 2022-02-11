@@ -66,9 +66,10 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link CommunicationInstance} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link CommunicationInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("357165b8-1d09-45d8-bc80-939981809a52")
     public static CommunicationInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (CommunicationInstance.canInstantiate(obj))
-        	return new CommunicationInstance(obj);
+            return new CommunicationInstance(obj);
         else
-        	throw new IllegalArgumentException("CommunicationInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("634597c8-6940-4eb3-a37b-3ce216c61573")
@@ -110,7 +112,8 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("f6f57852-d317-4ea3-b8e0-70030c55fcac")
@@ -123,7 +126,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Get the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6cc8b113-5c3a-4ae9-b7fc-0c5a15dc329b")
     public DeploymentInstanceModel getParent() {
@@ -141,7 +143,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8c6285bf-bc54-4936-9faa-ffbd73c7d48f")
     public Communication getType() {
@@ -165,7 +166,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7dc2d178-21ce-4edd-b2de-8c2aa06001ce")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -191,7 +191,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("80fbec3d-dc4f-43b2-b508-9aa7c66d9eee")
     public void setType(final Communication obj) {
@@ -213,16 +212,17 @@ public class CommunicationInstance extends ComponentRelationInstance {
         }
     }
 
-    @objid ("b9c9cb4f-b422-43fd-881c-1f91c0fd4c53")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("a888d2bc-6aa8-4b5b-95e6-d9340991f54f")
     protected CommunicationInstance(final Connector elt) {
         super(elt);
+    }
+
+    @objid ("a4d7cd20-9db0-420f-a3ff-34af08fba01b")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("cf21fdd9-ead8-4cfe-914e-4a923f9c983f")
@@ -244,11 +244,11 @@ public class CommunicationInstance extends ComponentRelationInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

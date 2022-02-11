@@ -65,9 +65,10 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Enumeration
      * @return a {@link GeographicalRegion} proxy or <i>null</i>.
      */
@@ -77,26 +78,26 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Enumeration}
      * @return a {@link GeographicalRegion} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("61d06980-706d-45a6-875f-65b1fefc6965")
     public static GeographicalRegion safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (GeographicalRegion.canInstantiate(obj))
-        	return new GeographicalRegion(obj);
+            return new GeographicalRegion(obj);
         else
-        	throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("26e0acc2-0358-4d96-8b45-99a489dcc3d3")
     public void addParentRegions(final GeographicalRegion obj) {
@@ -125,7 +126,8 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("d42ae37e-a4c7-4dd8-91cd-7a4d94b54eb7")
@@ -138,7 +140,6 @@ public class GeographicalRegion extends Location {
      * Get the values of the 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7f77ef25-a147-4784-9b62-cb8ff2155aa3")
     public List<GeographicalRegion> getParentRegions() {
@@ -163,7 +164,6 @@ public class GeographicalRegion extends Location {
      * Remove a value from 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4051150d-314c-48dd-a7f6-575646d6a2b5")
     public boolean removeParentRegions(final GeographicalRegion obj) {
@@ -199,13 +199,6 @@ public class GeographicalRegion extends Location {
         return names;
     }
 
-    @objid ("779c6a42-15d0-478c-a7a0-0cb7147df81c")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("06fb37c4-dc44-43b8-a231-0119d1882fab")
     public boolean removeAlternativeName(String name) {
         for (EnumerationLiteral literal : this.getElement().getValue()) {
@@ -220,6 +213,14 @@ public class GeographicalRegion extends Location {
     @objid ("5b01b1de-010b-4234-883c-aad1a80c3365")
     protected GeographicalRegion(final Enumeration elt) {
         super(elt);
+    }
+
+    @objid ("624d0857-99f9-429b-98e2-565a6e6bf25e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("99a544e5-32ff-4e49-b598-8e15beae3213")
@@ -241,11 +242,11 @@ public class GeographicalRegion extends Location {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

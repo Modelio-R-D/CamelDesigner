@@ -65,9 +65,10 @@ public class VerticalScalingAction extends ScalingAction {
     }
 
     /**
-     * Tries to instantiate a {@link VerticalScalingAction} proxy from a {@link Class} stereotyped << VerticalScalingAction >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VerticalScalingAction} proxy from a {@link Class} stereotyped << VerticalScalingAction >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link VerticalScalingAction} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class VerticalScalingAction extends ScalingAction {
     }
 
     /**
-     * Tries to instantiate a {@link VerticalScalingAction} proxy from a {@link Class} stereotyped << VerticalScalingAction >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VerticalScalingAction} proxy from a {@link Class} stereotyped << VerticalScalingAction >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link VerticalScalingAction} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b79df0ff-e48f-411f-9253-cd78e05b3b88")
     public static VerticalScalingAction safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (VerticalScalingAction.canInstantiate(obj))
-        	return new VerticalScalingAction(obj);
+            return new VerticalScalingAction(obj);
         else
-        	throw new IllegalArgumentException("VerticalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("VerticalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("165c49a6-321f-453d-a5c4-f06ec8267891")
@@ -109,7 +111,8 @@ public class VerticalScalingAction extends ScalingAction {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("037481c9-7fe1-43c0-9333-cc8735551612")
@@ -124,16 +127,17 @@ public class VerticalScalingAction extends ScalingAction {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("cad8e3e8-34fb-4f99-aaaf-24b8b525db58")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("dc938943-17a4-4d67-b9bb-4f0f68526d23")
     protected VerticalScalingAction(final Class elt) {
         super(elt);
+    }
+
+    @objid ("89dffc50-1039-4dc5-8120-2e2b3678034d")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("9d977d3c-b012-4964-81d8-a352196858d6")
@@ -155,11 +159,11 @@ public class VerticalScalingAction extends ScalingAction {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

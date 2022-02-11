@@ -65,9 +65,10 @@ public class Role extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Role} proxy from a {@link Class} stereotyped << Role >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Role} proxy from a {@link Class} stereotyped << Role >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Role} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class Role extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Role} proxy from a {@link Class} stereotyped << Role >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Role} proxy from a {@link Class} stereotyped << Role >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Role} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d00202de-ce5f-4fd4-ab09-5b98d9c15931")
     public static Role safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Role.canInstantiate(obj))
-        	return new Role(obj);
+            return new Role(obj);
         else
-        	throw new IllegalArgumentException("Role: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Role: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("52eae190-54a1-4b42-bd59-82bbd796a961")
@@ -109,7 +111,8 @@ public class Role extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7167b7f5-1919-4bea-9cdc-003757773d15")
@@ -124,16 +127,17 @@ public class Role extends FeatureClass {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("b1f00cb6-cf98-4531-9d28-f7b5f4097116")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("13323322-81e4-430d-a346-2bd1bf56fcab")
     protected Role(final Class elt) {
         super(elt);
+    }
+
+    @objid ("3657ba2e-5382-4327-b5bc-5bfe2bd87073")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("6984b739-246a-4151-a962-ff6ba842fc69")
@@ -155,11 +159,11 @@ public class Role extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

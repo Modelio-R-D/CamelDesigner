@@ -8,12 +8,13 @@ package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -64,9 +65,10 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityAttribute} proxy or <i>null</i>.
      */
@@ -76,19 +78,20 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityAttribute} proxy from a {@link Class} stereotyped << SecurityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1942ce27-87d3-427e-b16f-49a1b43935d2")
     public static SecurityAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityAttribute.canInstantiate(obj))
-        	return new SecurityAttribute(obj);
+            return new SecurityAttribute(obj);
         else
-        	throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("af03fe56-6be3-4fc5-ba78-b53f0999a857")
@@ -111,7 +114,6 @@ public class SecurityAttribute extends QualityAttribute {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5f3aaef6-2df9-49a3-b425-75f1abf8bdfa")
     public SecurityDomain getDomain() {
@@ -126,7 +128,8 @@ public class SecurityAttribute extends QualityAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("45a1587b-567c-4691-aec8-97f2563fdb2b")
@@ -145,7 +148,6 @@ public class SecurityAttribute extends QualityAttribute {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("94f1ad5c-f649-4fae-8013-e1c5cf58518f")
     public void setDomain(final SecurityDomain obj) {
@@ -172,6 +174,14 @@ public class SecurityAttribute extends QualityAttribute {
         super(elt);
     }
 
+    @objid ("21dfbb37-3912-41b1-8316-33fa0faa4960")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("6ae49d7c-2a2e-413e-af68-3326e7b2351a")
     public static final class MdaTypes {
         @objid ("6b444f41-b13d-4141-9c19-1aeec0f6240f")
@@ -191,11 +201,11 @@ public class SecurityAttribute extends QualityAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

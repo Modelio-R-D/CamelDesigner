@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -66,7 +68,8 @@ public abstract class SingleEvent extends Event {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e6b74641-37bd-4bc5-b747-cbb4ac9bcb61")
@@ -84,6 +87,14 @@ public abstract class SingleEvent extends Event {
     @objid ("029e454e-4496-486a-9931-c6d5b8605825")
     protected SingleEvent(final Class elt) {
         super(elt);
+    }
+
+    @objid ("3d554f2b-0199-4de0-8fad-bb0325273c1f")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("4e5c23d4-7cb6-45fd-804e-c2745676a29b")
@@ -105,11 +116,11 @@ public abstract class SingleEvent extends Event {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

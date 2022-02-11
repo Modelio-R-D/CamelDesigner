@@ -13,7 +13,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -67,9 +67,10 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CompositeMetricContext} proxy or <i>null</i>.
      */
@@ -79,26 +80,26 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeMetricContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("94465a34-c972-4519-9e90-63f4dbd0709c")
     public static CompositeMetricContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeMetricContext.canInstantiate(obj))
-        	return new CompositeMetricContext(obj);
+            return new CompositeMetricContext(obj);
         else
-        	throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("79c56937-5987-429e-a169-c2491b54c051")
     public void addComposingMetricContexts(final MetricContext obj) {
@@ -130,7 +131,6 @@ public class CompositeMetricContext extends MetricContext {
      * Get the values of the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("362409a2-5850-40b1-b8ed-6ba825668db9")
     public List<MetricContext> getComposingMetricContexts() {
@@ -145,7 +145,8 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("7d0f5c1a-bcc7-4c55-aaa9-bf0aaddc4045")
@@ -174,7 +175,6 @@ public class CompositeMetricContext extends MetricContext {
      * Remove a value from the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dfe4fd0e-1c93-42c4-91ff-ddfbd97195d3")
     public boolean removeComposingMetricContexts(final MetricContext obj) {
@@ -205,6 +205,14 @@ public class CompositeMetricContext extends MetricContext {
         super(elt);
     }
 
+    @objid ("311edf36-a15a-4c1e-a078-f8c175f81cbb")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("9ffb0326-f714-4556-995b-da9eb6055bfe")
     public static final class MdaTypes {
         @objid ("0a737946-dc6d-4633-94d0-5efa0146fdf8")
@@ -228,11 +236,11 @@ public class CompositeMetricContext extends MetricContext {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

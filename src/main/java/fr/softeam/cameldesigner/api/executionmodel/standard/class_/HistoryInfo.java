@@ -8,6 +8,7 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
@@ -74,9 +75,10 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link HistoryInfo} proxy or <i>null</i>.
      */
@@ -86,19 +88,20 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link HistoryInfo} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5ecc6c88-91ec-4fee-8869-6bc414ca3948")
     public static HistoryInfo safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HistoryInfo.canInstantiate(obj))
-        	return new HistoryInfo(obj);
+            return new HistoryInfo(obj);
         else
-        	throw new IllegalArgumentException("HistoryInfo: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HistoryInfo: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b4db3b34-d96b-44fe-aad3-09d2af199268")
@@ -121,7 +124,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'action' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b6634b77-ef9b-41ea-bc6b-6d5a0071596a")
     public MmsObject getAction() {
@@ -136,7 +138,8 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e1bbfd2f-917e-46d0-a9fd-1ebdebdd4784")
@@ -169,7 +172,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'objectRef' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f7a39439-bcc0-4256-a733-c88de4e39293")
     public CamelElement getObjectRef() {
@@ -197,7 +199,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'subject' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1316f954-4b0e-49a6-858a-7c1be60f9086")
     public MmsObject getSubject() {
@@ -221,7 +222,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'action' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ea8e5c65-14f7-4ad6-8814-f15c712a5a66")
     public void setAction(final MmsObject obj) {
@@ -267,7 +267,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'objectRef' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ea16fe70-e600-4a9f-89ee-180d1aaf3022")
     public void setObjectRef(final CamelElement obj) {
@@ -303,7 +302,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'subject' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("154b6759-3fe3-4f3d-8cd6-576a9504c33e")
     public void setSubject(final MmsObject obj) {
@@ -328,6 +326,14 @@ public class HistoryInfo extends FeatureClass {
     @objid ("e5e4c44d-e4e5-4785-866c-ef4fb12c8e6e")
     protected HistoryInfo(final Class elt) {
         super(elt);
+    }
+
+    @objid ("195d9a69-6f24-486d-a407-0bb1d1c2ec27")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("3e1aab74-be0c-48b2-b316-e35870217b33")
@@ -361,11 +367,11 @@ public class HistoryInfo extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -13,6 +13,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
@@ -65,7 +66,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Add a value to the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d8b534c0-7acf-418a-aa6b-fb98989204af")
     public void addProvidedCommunicationInstances(final CommunicationPort obj) {
@@ -77,7 +77,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Add a value to the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3e1da886-baca-4ce8-acb5-4e725ac7e546")
     public void addProvidedHostInstances(final HostingPort obj) {
@@ -112,7 +111,8 @@ public abstract class ComponentInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("1fafd9b7-fabd-42a7-86d9-1a6959d6f88e")
@@ -135,14 +135,13 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Get the values of the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3875ab1b-9738-45d6-a2fb-4f66b91e9d53")
     public List<CommunicationPort> getProvidedCommunicationInstances() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart())
-        	if (CommunicationPort.canInstantiate(mObj))
-        			results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
+            if (CommunicationPort.canInstantiate(mObj))
+                    results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -150,14 +149,13 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Get the values of the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7838a838-fc14-44e1-b1d4-e9e3d6b14bfc")
     public List<HostingPort> getProvidedHostInstances() {
         List<HostingPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart())
-        	if (HostingPort.canInstantiate(mObj))
-        			results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
+            if (HostingPort.canInstantiate(mObj))
+                    results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -165,7 +163,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3c62403d-2a6e-4380-96a0-ab2eb436901b")
     public CamelComponent getType() {
@@ -182,7 +179,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Remove a value from the 'providedCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b8f064d3-0abc-4ac1-8561-8befffa4e4f2")
     public boolean removeProvidedCommunicationInstances(final CommunicationPort obj) {
@@ -193,7 +189,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Remove a value from the 'providedHostInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2ad6d041-f96b-4d13-b51a-7d0ae45cbbb8")
     public boolean removeProvidedHostInstances(final HostingPort obj) {
@@ -224,7 +219,6 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fa643f92-2c7b-43bb-921a-52a083509547")
     public void setType(final CamelComponent obj) {
@@ -234,6 +228,14 @@ public abstract class ComponentInstance extends FeatureInstance {
     @objid ("a149fde5-38e4-4cd2-a0ae-fd5c6da01379")
     protected ComponentInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("4ae0f2fc-72eb-49d0-8352-501e9a554c43")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("410e6123-df3d-46bd-81d2-a929ad0d6a01")
@@ -263,11 +265,11 @@ public abstract class ComponentInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

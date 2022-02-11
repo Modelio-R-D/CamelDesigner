@@ -7,23 +7,15 @@
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -59,7 +51,7 @@ public abstract class ValueType extends NamedElement {
             BooleanValueType.canInstantiate(obj) ? new BooleanValueType(obj) :
                 Range.canInstantiate(obj) ? new Range(obj) :
                     StringValueType.canInstantiate(obj) ? new StringValueType(obj) :
-                        List.canInstantiate(obj) ? new List(obj) :
+                        fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.canInstantiate(obj) ? new fr.softeam.cameldesigner.api.typemodel.standard.datatype.List(obj) :
                             RangeUnion.canInstantiate(obj) ? new RangeUnion(obj) : null;
     }
 
@@ -80,7 +72,8 @@ public abstract class ValueType extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("e2224fcb-4ccd-4212-93ab-c1f184a7f6e7")
@@ -120,6 +113,14 @@ public abstract class ValueType extends NamedElement {
         super(elt);
     }
 
+    @objid ("e034a09e-b677-4dd4-a626-a58ef6f05c4e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("efcfe0b2-71a4-471e-afbf-52a17a61448e")
     public static final class MdaTypes {
         @objid ("b89e92ae-808e-4f80-b142-4435bf052aa1")
@@ -143,11 +144,11 @@ public abstract class ValueType extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

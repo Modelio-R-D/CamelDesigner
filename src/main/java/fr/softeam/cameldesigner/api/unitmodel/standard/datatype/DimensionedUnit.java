@@ -8,11 +8,12 @@ package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -75,7 +76,6 @@ public abstract class DimensionedUnit extends Unit {
      * Get the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b4add8aa-0043-4935-b556-8e00f0381f8f")
     public UnitDimension getDimension() {
@@ -90,7 +90,8 @@ public abstract class DimensionedUnit extends Unit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("b15916f2-3b9e-4489-bf71-bd8eaa1b610b")
@@ -109,7 +110,6 @@ public abstract class DimensionedUnit extends Unit {
      * Set the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0b2fd3a8-46ff-4e6f-bbef-3872fbe7ca6c")
     public void setDimension(final UnitDimension obj) {
@@ -136,6 +136,14 @@ public abstract class DimensionedUnit extends Unit {
         super(elt);
     }
 
+    @objid ("8c46a634-4dbe-4247-89da-4418405e9c48")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("7020bdc9-61ca-45e7-b8b0-e04dd997a97d")
     public static final class MdaTypes {
         @objid ("c4a29dea-3d7b-4e5a-8c63-b5152a09b7ba")
@@ -155,11 +163,11 @@ public abstract class DimensionedUnit extends Unit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

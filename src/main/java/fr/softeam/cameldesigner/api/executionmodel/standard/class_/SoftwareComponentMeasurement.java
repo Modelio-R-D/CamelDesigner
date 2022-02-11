@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -64,9 +66,10 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SoftwareComponentMeasurement} proxy or <i>null</i>.
      */
@@ -76,19 +79,20 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SoftwareComponentMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("590efb0c-89d7-4c09-9521-a7f27d021b84")
     public static SoftwareComponentMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentMeasurement.canInstantiate(obj))
-        	return new SoftwareComponentMeasurement(obj);
+            return new SoftwareComponentMeasurement(obj);
         else
-        	throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("1011dbd2-7f08-4df2-94c2-c200bf246834")
@@ -108,7 +112,8 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("bca1c4c8-2da0-4b15-a231-1b0121b0303b")
@@ -121,7 +126,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("899badc0-97bc-4eff-a728-a34ddbd6a0de")
     public SoftwareComponent getSoftwareComponent() {
@@ -139,7 +143,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a9bd5bbf-8da2-4e39-8fad-e8ee7849014c")
     public SoftwareComponentInstance getSoftwareComponentInstance() {
@@ -163,7 +166,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e05bc64-848b-45e5-85f8-0d40371af65a")
     public void setSoftwareComponent(final SoftwareComponent obj) {
@@ -189,7 +191,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b63abc99-3010-4cd2-bcf4-a6a9a90ccd5f")
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
@@ -216,6 +217,14 @@ public class SoftwareComponentMeasurement extends Measurement {
         super(elt);
     }
 
+    @objid ("05ddebc9-9af3-4863-80d6-352f2556deb8")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("6678fa3a-6261-42c4-945e-36481919263d")
     public static final class MdaTypes {
         @objid ("6991a40a-11cf-46a9-91d7-8242a01041d2")
@@ -235,11 +244,11 @@ public class SoftwareComponentMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

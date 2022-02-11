@@ -66,9 +66,10 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityRequirement} proxy or <i>null</i>.
      */
@@ -78,26 +79,26 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1c92c51a-6abc-40a5-80aa-59c9773f30a7")
     public static SecurityRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityRequirement.canInstantiate(obj))
-        	return new SecurityRequirement(obj);
+            return new SecurityRequirement(obj);
         else
-        	throw new IllegalArgumentException("SecurityRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ff1fd484-a38b-4191-b533-3ca1c5d0b309")
     public void addSecurityControls(final SecurityControl obj) {
@@ -126,7 +127,8 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("6e5b3fd4-79e6-430f-8189-48852e516832")
@@ -139,7 +141,6 @@ public class SecurityRequirement extends HardRequirement {
      * Get the values of the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8259be9c-934c-4bd0-8585-87ab76ec3cb4")
     public List<SecurityControl> getSecurityControls() {
@@ -163,7 +164,6 @@ public class SecurityRequirement extends HardRequirement {
      * Remove a value from the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b3142306-4f5e-40d2-b00b-290cc838696f")
     public boolean removeSecurityControls(final SecurityControl obj) {
@@ -179,16 +179,17 @@ public class SecurityRequirement extends HardRequirement {
         return false;
     }
 
-    @objid ("5a01c461-0606-42df-8e09-44bce4cc0c4a")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("7094a425-f03e-4739-9af7-f8483cb844d4")
     protected SecurityRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("4ca21618-7ad1-41ce-9498-1c88666706cc")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("9b57abca-226e-4023-b549-3dc9186ae82b")
@@ -210,11 +211,11 @@ public class SecurityRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

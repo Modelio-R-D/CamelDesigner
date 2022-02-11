@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
@@ -88,7 +90,8 @@ public abstract class MmsObject extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
     @objid ("7788b8ae-8a62-49e3-8bbb-81514e3c9230")
@@ -148,6 +151,14 @@ public abstract class MmsObject extends NamedElement {
         super(elt);
     }
 
+    @objid ("eba83ee7-f370-4b14-8163-eb080b29b872")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("2f90ab01-c906-4902-9288-e931e22fb14d")
     public static final class MdaTypes {
         @objid ("1bee7085-a113-4ad5-a9f9-36c1f48b4543")
@@ -175,11 +186,11 @@ public abstract class MmsObject extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

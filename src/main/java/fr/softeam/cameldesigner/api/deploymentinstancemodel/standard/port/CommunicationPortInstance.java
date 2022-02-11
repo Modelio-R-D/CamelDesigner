@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -64,9 +66,10 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Port
      * @return a {@link CommunicationPortInstance} proxy or <i>null</i>.
      */
@@ -76,19 +79,20 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Port}
      * @return a {@link CommunicationPortInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("dc3b8b4f-cad9-442a-8bb6-16d54c202c51")
     public static CommunicationPortInstance safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPortInstance.canInstantiate(obj))
-        	return new CommunicationPortInstance(obj);
+            return new CommunicationPortInstance(obj);
         else
-        	throw new IllegalArgumentException("CommunicationPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("08f7612e-7b4a-4848-8277-741c980451d8")
@@ -108,7 +112,8 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}. 
+     * Get the underlying {@link Port}.
+     * 
      * @return the Port represented by this proxy, never null.
      */
     @objid ("5a4453eb-1751-4fef-965f-a2583a7021c6")
@@ -121,7 +126,6 @@ public class CommunicationPortInstance extends FeaturePort {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("346bce74-71cf-40bb-ba1d-64bcd8b86065")
     public CommunicationPort getType() {
@@ -138,7 +142,6 @@ public class CommunicationPortInstance extends FeaturePort {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("68f0c1ff-2189-46bc-8108-5c1794706983")
     public void setType(final CommunicationPort obj) {
@@ -148,6 +151,14 @@ public class CommunicationPortInstance extends FeaturePort {
     @objid ("c62171bf-d58e-4ce4-b401-25e73a06ce5d")
     protected CommunicationPortInstance(final Port elt) {
         super(elt);
+    }
+
+    @objid ("fae49f17-ca3e-4730-afce-666dd768f513")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("504cf2f2-0359-4c14-b98c-237508d0590f")
@@ -169,11 +180,11 @@ public class CommunicationPortInstance extends FeaturePort {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

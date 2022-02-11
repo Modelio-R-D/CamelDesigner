@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecuritySLO} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecuritySLO} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("93edded8-27eb-45ca-9ba9-609bd9f37bfc")
     public static SecuritySLO safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecuritySLO.canInstantiate(obj))
-        	return new SecuritySLO(obj);
+            return new SecuritySLO(obj);
         else
-        	throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f2ae210c-36e9-44ac-bde0-b540d9090202")
@@ -107,7 +111,8 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("05d79799-63d7-4cac-9c5c-b7aeb3091870")
@@ -125,6 +130,14 @@ public class SecuritySLO extends ServiceLevelObjective {
     @objid ("bb28b294-5f0c-4afc-a42d-334cfa497b25")
     protected SecuritySLO(final Class elt) {
         super(elt);
+    }
+
+    @objid ("0884089d-11ac-40cf-865e-45d813d66936")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("617e4bcc-2615-4bc6-b9f6-51075bd242b2")
@@ -146,11 +159,11 @@ public class SecuritySLO extends ServiceLevelObjective {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

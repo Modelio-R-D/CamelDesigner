@@ -64,9 +64,10 @@ public class VM extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link VM} proxy from a {@link Component} stereotyped << VM >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VM} proxy from a {@link Component} stereotyped << VM >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Component
      * @return a {@link VM} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class VM extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link VM} proxy from a {@link Component} stereotyped << VM >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VM} proxy from a {@link Component} stereotyped << VM >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Component}
      * @return a {@link VM} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a36ae1c9-9fa0-425a-8bec-272faac690e7")
     public static VM safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (VM.canInstantiate(obj))
-        	return new VM(obj);
+            return new VM(obj);
         else
-        	throw new IllegalArgumentException("VM: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("VM: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("0b4d3bc9-9225-481c-acf3-2167d0cf906b")
@@ -108,7 +110,8 @@ public class VM extends CamelComponent {
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("09bd8fee-d7a2-4fb5-8ec5-faf44f2d65f6")
@@ -123,16 +126,17 @@ public class VM extends CamelComponent {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("157df50c-8c2a-4d3c-b649-29ba31ab55e3")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("55e2b52e-4eb9-46bf-932f-c82a576e1d07")
     protected VM(final Component elt) {
         super(elt);
+    }
+
+    @objid ("ea65bd8d-d54f-4550-94b4-a0c91a2ea081")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("b498c9c3-0245-4fb1-97a6-fbac3113e3fd")
@@ -154,11 +158,11 @@ public class VM extends CamelComponent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

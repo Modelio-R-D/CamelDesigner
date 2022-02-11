@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.datamodel.standard.bindableinstance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a BindableInstance
      * @return a {@link DataInstanceBindableInstance} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link BindableInstance}
      * @return a {@link DataInstanceBindableInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5620890d-2d9a-4b89-ba54-d27f99172508")
     public static DataInstanceBindableInstance safeInstantiate(final BindableInstance obj) throws IllegalArgumentException {
         if (DataInstanceBindableInstance.canInstantiate(obj))
-        	return new DataInstanceBindableInstance(obj);
+            return new DataInstanceBindableInstance(obj);
         else
-        	throw new IllegalArgumentException("DataInstanceBindableInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataInstanceBindableInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("5b37fd6e-22f3-4f6a-b235-0f61e3fb608d")
@@ -107,7 +111,8 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Get the underlying {@link BindableInstance}. 
+     * Get the underlying {@link BindableInstance}.
+     * 
      * @return the BindableInstance represented by this proxy, never null.
      */
     @objid ("7af2beef-0e89-4327-987c-16d2076c7bab")
@@ -120,7 +125,6 @@ public class DataInstanceBindableInstance extends DataInstance {
      * Get the value to the 'owner' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("57b4cdd1-e2b8-4598-82b9-57e8accec01e")
     public DataInstance getOwner() {
@@ -137,7 +141,6 @@ public class DataInstanceBindableInstance extends DataInstance {
      * Set the value of the 'owner' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("29f6bcda-c63d-4f9f-8c6b-db83e8a2022e")
     public void setOwner(final DataInstance obj) {
@@ -147,6 +150,14 @@ public class DataInstanceBindableInstance extends DataInstance {
     @objid ("01b58ce7-1522-4f10-a643-824198ace2c6")
     protected DataInstanceBindableInstance(final BindableInstance elt) {
         super(elt);
+    }
+
+    @objid ("261564c5-66d9-4bdb-85b2-7e8f0e8d5081")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("a85bfe4a-348a-47dc-afe9-847afd7550b8")
@@ -168,11 +179,11 @@ public class DataInstanceBindableInstance extends DataInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

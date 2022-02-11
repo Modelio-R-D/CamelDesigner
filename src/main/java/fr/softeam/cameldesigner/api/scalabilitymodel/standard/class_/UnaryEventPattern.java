@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -71,9 +70,10 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link UnaryEventPattern} proxy or <i>null</i>.
      */
@@ -83,19 +83,20 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link UnaryEventPattern} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("cdb71298-651a-42d6-b830-bec319e0305e")
     public static UnaryEventPattern safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UnaryEventPattern.canInstantiate(obj))
-        	return new UnaryEventPattern(obj);
+            return new UnaryEventPattern(obj);
         else
-        	throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("70e3097f-88b9-4af1-8eb0-98286b28f4ed")
@@ -115,7 +116,8 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("92aa55e3-a137-43d5-b492-5f4568fe62f0")
@@ -128,7 +130,6 @@ public class UnaryEventPattern extends EventPattern {
      * Get the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f5a7d537-25de-46c7-9f94-15e1bfedfeb6")
     public Event getEvent() {
@@ -172,7 +173,6 @@ public class UnaryEventPattern extends EventPattern {
      * Set the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c408fb73-ff8f-499a-a1ed-ec9062183977")
     public void setEvent(final Event obj) {
@@ -214,16 +214,17 @@ public class UnaryEventPattern extends EventPattern {
         this.elt.putTagValue(UnaryEventPattern.MdaTypes.OPERATOR_TAGTYPE_ELT, value);
     }
 
-    @objid ("d3217425-5f29-457a-bd5e-bc483ea23bda")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("e7935392-dc33-4ad2-ba93-16dff0da113d")
     protected UnaryEventPattern(final Class elt) {
         super(elt);
+    }
+
+    @objid ("2bc543a1-7337-4e8f-b910-0e41bb0498e3")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("a301d6fd-1e9f-4328-a7ee-80b97952f165")
@@ -253,11 +254,11 @@ public class UnaryEventPattern extends EventPattern {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

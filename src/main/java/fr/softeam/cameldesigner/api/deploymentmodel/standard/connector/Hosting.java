@@ -65,9 +65,10 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link Hosting} proxy or <i>null</i>.
      */
@@ -77,26 +78,26 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link Hosting} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("786e56cb-5f91-4a87-bd0b-3df04c5ad444")
     public static Hosting safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Hosting.canInstantiate(obj))
-        	return new Hosting(obj);
+            return new Hosting(obj);
         else
-        	throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("76c521c9-3752-407d-9883-4097f3e0fa84")
     public void addRequiredHostsConfiguration(final Configuration obj) {
@@ -125,7 +126,8 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("aa39b04a-05f3-4ef9-9c1c-8df70d8ee911")
@@ -138,7 +140,6 @@ public class Hosting extends ComponentRelation {
      * Get the value of the 'providedHostConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9b406674-5903-49d4-8800-102b589f75b1")
     public Configuration getProvidedHostConfiguration() {
@@ -156,7 +157,6 @@ public class Hosting extends ComponentRelation {
      * Get the values of the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("76a3cfde-fb7d-41bd-bda0-104860bdd4e9")
     public List<Configuration> getRequiredHostsConfiguration() {
@@ -180,7 +180,6 @@ public class Hosting extends ComponentRelation {
      * Remove a value from the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("75830245-12d1-4dfc-842d-9f987745c765")
     public boolean removeRequiredHostsConfiguration(final Configuration obj) {
@@ -200,7 +199,6 @@ public class Hosting extends ComponentRelation {
      * Set the value of the 'providedHostConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a6c9a2a6-5609-4c8d-a12c-80e088c1d513")
     public void setProvidedHostConfiguration(final Configuration obj) {
@@ -222,16 +220,17 @@ public class Hosting extends ComponentRelation {
         }
     }
 
-    @objid ("6361b63d-8d49-4ea7-af46-b2510c4b57da")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("91304661-8b76-4edf-8b88-95b0ae56aea4")
     protected Hosting(final Connector elt) {
         super(elt);
+    }
+
+    @objid ("fbdcd9f9-3090-49bf-8eaa-c6093e196a95")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("71058a75-05c8-4604-b534-ff2d31f52287")
@@ -253,11 +252,11 @@ public class Hosting extends ComponentRelation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

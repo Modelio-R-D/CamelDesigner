@@ -28,7 +28,11 @@ public class FunctionExporter<T extends Function> extends FeatureExporter<T> {
     @objid ("bd966468-f336-44da-88a4-78b5e0a52240")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.Function)) {
+            ((camel.metric.MetricTypeModel) context).getFunctions().add((camel.metric.Function) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

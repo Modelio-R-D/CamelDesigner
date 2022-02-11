@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -64,9 +66,10 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CommunicationMeasurement} proxy or <i>null</i>.
      */
@@ -76,19 +79,20 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CommunicationMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("884c367e-3b94-420f-b162-a8bda57a586a")
     public static CommunicationMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CommunicationMeasurement.canInstantiate(obj))
-        	return new CommunicationMeasurement(obj);
+            return new CommunicationMeasurement(obj);
         else
-        	throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2b250bf9-563b-4957-825c-acf409f30464")
@@ -108,7 +112,8 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b79fdc8d-b1fb-43c9-b2fd-f0e7870bd4d5")
@@ -121,7 +126,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1f0f397b-ff8e-489a-8663-dcaa41d7b24e")
     public VM getSourceVM() {
@@ -139,7 +143,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f71d43db-ef46-4ffa-83f2-07f979591eeb")
     public VMInstance getSourceVMInstance() {
@@ -157,7 +160,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0c92ca4b-3c81-4200-8112-b22968dc6dc3")
     public VM getTargetVM() {
@@ -175,7 +177,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("16cc7cad-938c-490c-9cda-3f6bb19a0d64")
     public VMInstance getTargetVMInstance() {
@@ -199,7 +200,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("82d3ad89-bd51-4ec2-b2f3-2580ac885e6c")
     public void setSourceVM(final VM obj) {
@@ -225,7 +225,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8076b2cf-c870-4ec3-822b-f8fba0874ede")
     public void setSourceVMInstance(final VMInstance obj) {
@@ -251,7 +250,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e88ce98b-df2d-4380-b35b-f5f83a17dd0c")
     public void setTargetVM(final VM obj) {
@@ -277,7 +275,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("159c04bd-7306-4ceb-8f0a-2a28a45090be")
     public void setTargetVMInstance(final VMInstance obj) {
@@ -304,6 +301,14 @@ public class CommunicationMeasurement extends Measurement {
         super(elt);
     }
 
+    @objid ("84965b36-7dc3-40c5-8d11-8ed512a12af8")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("2bc724e6-be76-4f04-8dd1-ded2cd7a4cf6")
     public static final class MdaTypes {
         @objid ("fe0a6347-25f5-4099-af23-7be49dc152f5")
@@ -323,11 +328,11 @@ public class CommunicationMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

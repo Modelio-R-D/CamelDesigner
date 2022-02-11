@@ -66,9 +66,10 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link AttributeAttribute} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link AttributeAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ef33571b-edb0-42b1-8847-49d742d389d6")
     public static AttributeAttribute safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (AttributeAttribute.canInstantiate(obj))
-        	return new AttributeAttribute(obj);
+            return new AttributeAttribute(obj);
         else
-        	throw new IllegalArgumentException("AttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("AttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e6ba123a-f621-47b8-8ca6-eca14334229e")
@@ -110,7 +112,8 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Get the underlying {@link Attribute}. 
+     * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @objid ("33daa2ee-1835-41ca-b25b-675959564701")
@@ -123,7 +126,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("27aaaf04-5960-4807-97ac-2b6e42f958fc")
     public FeatureClass getParent() {
@@ -140,7 +142,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("605550ed-8a49-46f2-846d-74943f6a929a")
     public void setParent(final FeatureClass obj) {
@@ -190,11 +191,11 @@ public class AttributeAttribute extends CamelAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

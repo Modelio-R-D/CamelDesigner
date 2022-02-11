@@ -15,7 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -75,9 +74,10 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Permission} proxy or <i>null</i>.
      */
@@ -87,19 +87,20 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Permission} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("472c9e96-3d7b-47cc-a373-338529a5ec1c")
     public static Permission safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Permission.canInstantiate(obj))
-        	return new Permission(obj);
+            return new Permission(obj);
         else
-        	throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("5f097818-fa1b-46f7-bb0f-7a961cbdbb4a")
@@ -129,7 +130,8 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("a3dfbb24-756b-46f4-8fa4-d157c8daa484")
@@ -152,7 +154,6 @@ public class Permission extends FeatureClass {
      * Get the value of the 'resourceFilter' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ba2a16c8-429f-430f-b9c2-3fcc1ea08718")
     public ResourceFilter getResourceFilter() {
@@ -206,7 +207,6 @@ public class Permission extends FeatureClass {
      * Set the value of the 'resourceFilter' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3513e50a-9de6-47a3-8983-38b0c544ad7a")
     public void setResourceFilter(final ResourceFilter obj) {
@@ -238,16 +238,17 @@ public class Permission extends FeatureClass {
         this.elt.putTagValue(Permission.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
 
-    @objid ("24c333e0-3947-4e80-a340-9d37dc04de03")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("b71c81a5-6c28-47e9-b779-a4326d08c690")
     protected Permission(final Class elt) {
         super(elt);
+    }
+
+    @objid ("c0377be3-07de-4343-a86d-2e3bdf615a6e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("fd62df34-464e-4836-920b-01cca4e1811a")
@@ -281,11 +282,11 @@ public class Permission extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -13,8 +13,8 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.User;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -65,9 +65,10 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link UserGroup} proxy or <i>null</i>.
      */
@@ -77,26 +78,26 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link UserGroup} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("e6059a3f-6b65-4e8e-a386-6545a83b2d4f")
     public static UserGroup safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UserGroup.canInstantiate(obj))
-        	return new UserGroup(obj);
+            return new UserGroup(obj);
         else
-        	throw new IllegalArgumentException("UserGroup: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UserGroup: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("923a8cf5-1984-4cda-8589-73c5c87ee914")
     public void addUsers(final User obj) {
@@ -125,7 +126,8 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9c057e48-71b5-4c9c-8e20-b9bf08aa8dd3")
@@ -138,7 +140,6 @@ public class UserGroup extends FeatureClass {
      * Get the values of the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d54ce753-8dc3-48e4-b92b-9e1e8d21722a")
     public List<User> getUsers() {
@@ -162,7 +163,6 @@ public class UserGroup extends FeatureClass {
      * Remove a value from the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5f02da13-badf-45ca-aeab-ac44473aac4c")
     public boolean removeUsers(final User obj) {
@@ -181,6 +181,14 @@ public class UserGroup extends FeatureClass {
     @objid ("ad931e72-2c95-4400-b12a-b953ebfeae0d")
     protected UserGroup(final Class elt) {
         super(elt);
+    }
+
+    @objid ("0a1f1650-ac33-41fa-91ae-c49542250bfc")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("5c98c8d7-7e42-4650-94dd-2d4f9879ae9d")
@@ -202,11 +210,11 @@ public class UserGroup extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

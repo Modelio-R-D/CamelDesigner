@@ -13,9 +13,9 @@ import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 
-@objid ("aa36bedd-de25-43c3-bd20-f3fca0d80292")
+@objid ("0021601a-476c-402b-bab1-f21bde124aac")
 public class CreateTypeModelTool extends CreateSubModelTool {
-    @objid ("2ecb6fb6-59b7-4587-8632-39198718897b")
+    @objid ("1a4189d8-2cb8-4ce3-9dde-d97ed93e7cb7")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
         ClassDiagram diag = (ClassDiagram) parent.getElement();
@@ -41,7 +41,7 @@ public class CreateTypeModelTool extends CreateSubModelTool {
         }
     }
 
-    @objid ("60916b7d-39cf-42f9-b952-0080ec8d1c7f")
+    @objid ("81d20201-2e5f-42fa-9d83-f0607fcc348f")
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         return super.acceptElement(arg1);

@@ -65,9 +65,10 @@ public class MetricModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link MetricModelDiagram} proxy from a {@link ClassDiagram} stereotyped << MetricModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricModelDiagram} proxy from a {@link ClassDiagram} stereotyped << MetricModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link MetricModelDiagram} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class MetricModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link MetricModelDiagram} proxy from a {@link ClassDiagram} stereotyped << MetricModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricModelDiagram} proxy from a {@link ClassDiagram} stereotyped << MetricModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link MetricModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c7eae212-3144-4a69-ae58-cdaa6aaad816")
     public static MetricModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (MetricModelDiagram.canInstantiate(obj))
-        	return new MetricModelDiagram(obj);
+            return new MetricModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("MetricModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e85ed149-562b-464b-b80b-572dc64ac289")
@@ -109,7 +111,8 @@ public class MetricModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
     @objid ("1cbe652c-6c09-46cf-aa8d-467c397c5e59")
@@ -155,11 +158,11 @@ public class MetricModelDiagram extends AbstractCamelDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

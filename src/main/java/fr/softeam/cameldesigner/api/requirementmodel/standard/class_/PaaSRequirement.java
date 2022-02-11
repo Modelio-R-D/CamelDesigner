@@ -65,9 +65,10 @@ public class PaaSRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSRequirement} proxy from a {@link Class} stereotyped << PaaSRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSRequirement} proxy from a {@link Class} stereotyped << PaaSRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link PaaSRequirement} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class PaaSRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSRequirement} proxy from a {@link Class} stereotyped << PaaSRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSRequirement} proxy from a {@link Class} stereotyped << PaaSRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link PaaSRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3fa09aa3-1fcc-40de-a740-b1909db85a5f")
     public static PaaSRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PaaSRequirement.canInstantiate(obj))
-        	return new PaaSRequirement(obj);
+            return new PaaSRequirement(obj);
         else
-        	throw new IllegalArgumentException("PaaSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("8d54dd26-706b-43ba-bdfa-452f31c3c3cb")
@@ -109,7 +111,8 @@ public class PaaSRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("a9eb9950-42ef-465f-a439-019464098ff5")
@@ -124,16 +127,17 @@ public class PaaSRequirement extends HardRequirement {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("7a123197-464a-41eb-9bfd-aef81500fd1c")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("b9ca17e3-5e80-4405-a6f3-575953a7de13")
     protected PaaSRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("030e0731-9e44-4472-baad-c615462b1d25")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("f1ab105f-3a9a-4d24-8c32-5dd406174ad0")
@@ -155,11 +159,11 @@ public class PaaSRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

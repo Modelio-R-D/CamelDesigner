@@ -3,9 +3,7 @@ package fr.softeam.cameldesigner.handlers.tools.core;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
-import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
@@ -40,11 +38,11 @@ public class CreateDataTypeModelTool extends CreateSubModelTool {
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();
-            
-           
-            
-            
-            
+        
+        
+        
+        
+        
         }
     }
 

@@ -82,9 +82,10 @@ public class MetricTypeModel extends MetricModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link MetricTypeModel} proxy or <i>null</i>.
      */
@@ -94,26 +95,26 @@ public class MetricTypeModel extends MetricModel {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTypeModel} proxy from a {@link Package} stereotyped << MetricTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link MetricTypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("f5d96777-9248-4a7d-9e31-f447e80fafb5")
     public static MetricTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (MetricTypeModel.canInstantiate(obj))
-        	return new MetricTypeModel(obj);
+            return new MetricTypeModel(obj);
         else
-        	throw new IllegalArgumentException("MetricTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6dd4d545-4b55-4e0d-a9a5-66d184ca6fef")
     public void addAttributContexts(final AttributeContext obj) {
@@ -125,7 +126,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("32880b57-aac2-4697-8ca1-6602320fbf2f")
     public void addFunctions(final Function obj) {
@@ -137,7 +137,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b9786810-17d2-4c26-872a-2a53a789e705")
     public void addMetricContexts(final MetricContext obj) {
@@ -149,7 +148,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0cb8cf88-4e75-4dc3-affd-9b7973e24857")
     public void addMetrics(final Metric obj) {
@@ -161,7 +159,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("456a5b03-ae1a-43c6-9677-d1685a8941bf")
     public void addObjectContexts(final ObjectContext obj) {
@@ -173,7 +170,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("11b27279-e234-452a-a988-dbab14ce42ee")
     public void addSchedules(final Schedule obj) {
@@ -185,7 +181,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c0e1ecf6-52fb-4a75-a603-29e5ad81ae0e")
     public void addSensors(final Sensor obj) {
@@ -197,7 +192,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a219cd6d-66c5-47b8-b981-b7dc2252ede3")
     public void addTemplates(final MetricTemplate obj) {
@@ -209,7 +203,6 @@ public class MetricTypeModel extends MetricModel {
      * Add a value to the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5156c627-1b9c-4ee7-be6f-5c5ecbf51363")
     public void addWindows(final Window obj) {
@@ -237,19 +230,19 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0124a11b-d422-4ac8-b37e-da24c10c93e4")
     public List<AttributeContext> getAttributContexts() {
         List<AttributeContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (AttributeContext.canInstantiate(mObj))
-        			results.add((AttributeContext)CamelDesignerProxyFactory.instantiate(mObj, AttributeContext.STEREOTYPE_NAME));
+            if (AttributeContext.canInstantiate(mObj))
+                    results.add((AttributeContext)CamelDesignerProxyFactory.instantiate(mObj, AttributeContext.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("39cfc314-4516-4c60-91ba-85f9b968a193")
@@ -262,14 +255,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0c23f524-2d98-4082-9b88-b9e331386a94")
     public List<Function> getFunctions() {
         List<Function> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Function.canInstantiate(mObj))
-        			results.add((Function)CamelDesignerProxyFactory.instantiate(mObj, Function.STEREOTYPE_NAME));
+            if (Function.canInstantiate(mObj))
+                    results.add((Function)CamelDesignerProxyFactory.instantiate(mObj, Function.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -277,14 +269,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e5cf7a5-a01a-4044-87da-4ddb195ee947")
     public List<MetricContext> getMetricContexts() {
         List<MetricContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (MetricContext.canInstantiate(mObj))
-        			results.add((MetricContext)CamelDesignerProxyFactory.instantiate(mObj, MetricContext.STEREOTYPE_NAME));
+            if (MetricContext.canInstantiate(mObj))
+                    results.add((MetricContext)CamelDesignerProxyFactory.instantiate(mObj, MetricContext.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -292,14 +283,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b73bdc3c-5016-49ae-b970-de8ec5df5369")
     public List<Metric> getMetrics() {
         List<Metric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Metric.canInstantiate(mObj))
-        			results.add((Metric)CamelDesignerProxyFactory.instantiate(mObj, Metric.STEREOTYPE_NAME));
+            if (Metric.canInstantiate(mObj))
+                    results.add((Metric)CamelDesignerProxyFactory.instantiate(mObj, Metric.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -307,14 +297,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("eabd96cf-096d-4c61-8599-d48e840068c7")
     public List<ObjectContext> getObjectContexts() {
         List<ObjectContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (ObjectContext.canInstantiate(mObj))
-        			results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(mObj, ObjectContext.STEREOTYPE_NAME));
+            if (ObjectContext.canInstantiate(mObj))
+                    results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(mObj, ObjectContext.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -322,14 +311,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9e1dc8e6-c501-4b85-a74d-fe3d42faab85")
     public List<Schedule> getSchedules() {
         List<Schedule> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Schedule.canInstantiate(mObj))
-        			results.add((Schedule)CamelDesignerProxyFactory.instantiate(mObj, Schedule.STEREOTYPE_NAME));
+            if (Schedule.canInstantiate(mObj))
+                    results.add((Schedule)CamelDesignerProxyFactory.instantiate(mObj, Schedule.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -337,14 +325,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("03341827-7df0-44bf-9689-6f66f4a8ef5b")
     public List<Sensor> getSensors() {
         List<Sensor> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Sensor.canInstantiate(mObj))
-        			results.add((Sensor)CamelDesignerProxyFactory.instantiate(mObj, Sensor.STEREOTYPE_NAME));
+            if (Sensor.canInstantiate(mObj))
+                    results.add((Sensor)CamelDesignerProxyFactory.instantiate(mObj, Sensor.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -352,14 +339,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("096de451-263b-4a51-b850-4bd7d4ac180c")
     public List<MetricTemplate> getTemplates() {
         List<MetricTemplate> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (MetricTemplate.canInstantiate(mObj))
-        			results.add((MetricTemplate)CamelDesignerProxyFactory.instantiate(mObj, MetricTemplate.STEREOTYPE_NAME));
+            if (MetricTemplate.canInstantiate(mObj))
+                    results.add((MetricTemplate)CamelDesignerProxyFactory.instantiate(mObj, MetricTemplate.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -367,14 +353,13 @@ public class MetricTypeModel extends MetricModel {
      * Get the values of the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0569f450-dd55-4982-9923-8acf1665412d")
     public List<Window> getWindows() {
         List<Window> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Window.canInstantiate(mObj))
-        			results.add((Window)CamelDesignerProxyFactory.instantiate(mObj, Window.STEREOTYPE_NAME));
+            if (Window.canInstantiate(mObj))
+                    results.add((Window)CamelDesignerProxyFactory.instantiate(mObj, Window.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -388,7 +373,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'attributContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dddf049f-4909-417b-8683-764a7175607f")
     public boolean removeAttributContexts(final AttributeContext obj) {
@@ -399,7 +383,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'functions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e64baff0-f779-4c35-9c22-de60b5557686")
     public boolean removeFunctions(final Function obj) {
@@ -410,7 +393,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'metricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2c76be8f-cb8d-4f2d-b8bc-69f5cc816a25")
     public boolean removeMetricContexts(final MetricContext obj) {
@@ -421,7 +403,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'metrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a74e254a-daf8-415c-91ad-4e98bab88d26")
     public boolean removeMetrics(final Metric obj) {
@@ -432,7 +413,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'objectContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3669dc06-1064-4e84-8deb-4c73a9dc22cf")
     public boolean removeObjectContexts(final ObjectContext obj) {
@@ -443,7 +423,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'schedules' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("70834f20-05dc-426b-8c37-f64578564b06")
     public boolean removeSchedules(final Schedule obj) {
@@ -454,7 +433,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("337f7a97-812b-46bb-a61e-117901166e4b")
     public boolean removeSensors(final Sensor obj) {
@@ -465,7 +443,6 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'templates' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("780a44b4-c5f3-495f-b7d8-f414f49026d0")
     public boolean removeTemplates(final MetricTemplate obj) {
@@ -476,29 +453,10 @@ public class MetricTypeModel extends MetricModel {
      * Remove a value from the 'windows' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c498ccb1-1d7a-43e3-9eaa-3cd314faec3b")
     public boolean removeWindows(final Window obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
-    }
-
-    @objid ("58af0a33-fac1-4888-ad82-73c94e9e9109")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(getMeasurableAttributes());
-        result.addAll(getSensors());
-        result.addAll(getRawMetrics());
-        result.addAll(getMetricTemplates());
-        result.addAll(getObjectContexts());
-        result.addAll(getSchedules());
-        result.addAll(getRawMetricContexts());
-        result.addAll(getWindows());
-        result.addAll(getCompositeMetrics());
-        result.addAll(getCompositeMetricContexts());
-        result.addAll(getMetricVariables());
-        return result;
     }
 
     @objid ("45bbb405-5706-406d-a644-c02739b067ed")
@@ -569,6 +527,14 @@ public class MetricTypeModel extends MetricModel {
         super(elt);
     }
 
+    @objid ("ac03bb45-c699-4036-860b-01f5b89ff54a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("b2e0d996-4162-4a1b-ad97-a59aa22661b6")
     public static final class MdaTypes {
         @objid ("2aec03ab-ef71-4b5e-afe8-d76065b337da")
@@ -588,11 +554,11 @@ public class MetricTypeModel extends MetricModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

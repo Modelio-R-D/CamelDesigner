@@ -88,9 +88,10 @@ public class OrganisationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link OrganisationModel} proxy from a {@link Package} stereotyped << OrganisationModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OrganisationModel} proxy from a {@link Package} stereotyped << OrganisationModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link OrganisationModel} proxy or <i>null</i>.
      */
@@ -100,26 +101,26 @@ public class OrganisationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link OrganisationModel} proxy from a {@link Package} stereotyped << OrganisationModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OrganisationModel} proxy from a {@link Package} stereotyped << OrganisationModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link OrganisationModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("995aa6cf-5b6e-4f6e-9bb5-b3b6446ba4fd")
     public static OrganisationModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (OrganisationModel.canInstantiate(obj))
-        	return new OrganisationModel(obj);
+            return new OrganisationModel(obj);
         else
-        	throw new IllegalArgumentException("OrganisationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("OrganisationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f12f22a6-132a-4f6f-8291-bc5d97eb7e6b")
     public void addExternalIdentifiers(final ExternalIdentifier obj) {
@@ -131,7 +132,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'permissions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("68ee96dc-8e5c-44c6-a00a-383dec2a0ca4")
     public void addPermissions(final Permission obj) {
@@ -143,7 +143,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'resourceFilters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f71e96fd-8624-4a5c-91e5-7f3ef8b6fa17")
     public void addResourceFilters(final ResourceFilter obj) {
@@ -155,7 +154,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'roles' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b003eead-66fa-4f2a-8405-ead23186c8ea")
     public void addRoles(final Role obj) {
@@ -167,7 +165,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'rolesAssignements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("78dcccc6-54d4-44df-afb3-a866fb91e85c")
     public void addRolesAssignements(final RoleAssignment obj) {
@@ -179,7 +176,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'userGroups' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3a00fcc0-1dd9-4e05-ba95-0bdfba751b60")
     public void addUserGroups(final UserGroup obj) {
@@ -191,7 +187,6 @@ public class OrganisationModel extends SubModel {
      * Add a value to the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("09473a9f-e2b2-44bd-9fe3-656d0670db1b")
     public void addUsers(final User obj) {
@@ -219,7 +214,6 @@ public class OrganisationModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4c27e80a-3672-4ed8-8bbf-a4ce52284e8b")
     public CamelModel getCamelModel() {
@@ -227,7 +221,8 @@ public class OrganisationModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("1123ff2a-7fd9-4c51-b4ce-01c71c4a4ec2")
@@ -240,14 +235,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("76a28fda-0525-479a-b214-5562bc95c1df")
     public List<ExternalIdentifier> getExternalIdentifiers() {
         List<ExternalIdentifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (ExternalIdentifier.canInstantiate(mObj))
-        			results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
+            if (ExternalIdentifier.canInstantiate(mObj))
+                    results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -255,15 +249,14 @@ public class OrganisationModel extends SubModel {
      * Get the value to the 'organisation' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d25ccfa9-0db4-4bfa-a166-36619ab55674")
     public Organisation getOrganisation() {
-          for (Class obj : ((Package) this.elt).getOwnedElement(Class.class)) {
-           if (Organisation.canInstantiate(obj))
-             return (Organisation)CamelDesignerProxyFactory.instantiate(obj, Organisation.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Class obj : ((Package) this.elt).getOwnedElement(Class.class)) {
+         if (Organisation.canInstantiate(obj))
+           return (Organisation)CamelDesignerProxyFactory.instantiate(obj, Organisation.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
@@ -300,14 +293,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'permissions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e2e7675b-998c-44e5-b37e-76e3d18e155f")
     public List<Permission> getPermissions() {
         List<Permission> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Permission.canInstantiate(mObj))
-        			results.add((Permission)CamelDesignerProxyFactory.instantiate(mObj, Permission.STEREOTYPE_NAME));
+            if (Permission.canInstantiate(mObj))
+                    results.add((Permission)CamelDesignerProxyFactory.instantiate(mObj, Permission.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -315,14 +307,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'resourceFilters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4b7c091f-51b0-4c3c-9904-6d72e070b2e5")
     public List<ResourceFilter> getResourceFilters() {
         List<ResourceFilter> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (ResourceFilter.canInstantiate(mObj))
-        			results.add((ResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ResourceFilter.STEREOTYPE_NAME));
+            if (ResourceFilter.canInstantiate(mObj))
+                    results.add((ResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ResourceFilter.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -330,14 +321,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'roles' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("918b137f-7595-4740-a7cd-5a5f8bdbb072")
     public List<Role> getRoles() {
         List<Role> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Role.canInstantiate(mObj))
-        			results.add((Role)CamelDesignerProxyFactory.instantiate(mObj, Role.STEREOTYPE_NAME));
+            if (Role.canInstantiate(mObj))
+                    results.add((Role)CamelDesignerProxyFactory.instantiate(mObj, Role.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -345,14 +335,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'rolesAssignements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bcf508fa-b261-468c-945a-49dd69eeeefe")
     public List<RoleAssignment> getRolesAssignements() {
         List<RoleAssignment> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (RoleAssignment.canInstantiate(mObj))
-        			results.add((RoleAssignment)CamelDesignerProxyFactory.instantiate(mObj, RoleAssignment.STEREOTYPE_NAME));
+            if (RoleAssignment.canInstantiate(mObj))
+                    results.add((RoleAssignment)CamelDesignerProxyFactory.instantiate(mObj, RoleAssignment.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -370,14 +359,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'userGroups' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("59e1d6e4-26ab-42cf-a0a6-ca858f85cd83")
     public List<UserGroup> getUserGroups() {
         List<UserGroup> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (UserGroup.canInstantiate(mObj))
-        			results.add((UserGroup)CamelDesignerProxyFactory.instantiate(mObj, UserGroup.STEREOTYPE_NAME));
+            if (UserGroup.canInstantiate(mObj))
+                    results.add((UserGroup)CamelDesignerProxyFactory.instantiate(mObj, UserGroup.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -385,14 +373,13 @@ public class OrganisationModel extends SubModel {
      * Get the values of the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4a9dcd6b-aa54-40eb-8a5d-04b98d85fac0")
     public List<User> getUsers() {
         List<User> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (User.canInstantiate(mObj))
-        			results.add((User)CamelDesignerProxyFactory.instantiate(mObj, User.STEREOTYPE_NAME));
+            if (User.canInstantiate(mObj))
+                    results.add((User)CamelDesignerProxyFactory.instantiate(mObj, User.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -406,7 +393,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'externalIdentifiers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("de6b7030-bf42-437f-9066-bd9191e9999a")
     public boolean removeExternalIdentifiers(final ExternalIdentifier obj) {
@@ -417,7 +403,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'permissions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b5b6abcf-bec1-495a-b24c-0bb9e3160b85")
     public boolean removePermissions(final Permission obj) {
@@ -428,7 +413,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'resourceFilters' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07867ef6-bb1c-4232-b146-b7fc9acffdff")
     public boolean removeResourceFilters(final ResourceFilter obj) {
@@ -439,7 +423,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'roles' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("743e262a-6daa-4714-8fae-2bc00f65ec50")
     public boolean removeRoles(final Role obj) {
@@ -450,7 +433,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'rolesAssignements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e4932f0-91ae-4254-a975-d18b482fc13b")
     public boolean removeRolesAssignements(final RoleAssignment obj) {
@@ -461,7 +443,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'userGroups' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6c2c6b75-ac30-4739-a694-03adf63f9ace")
     public boolean removeUserGroups(final UserGroup obj) {
@@ -472,7 +453,6 @@ public class OrganisationModel extends SubModel {
      * Remove a value from the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1882bfd7-9ce9-4a44-b77e-556dd3331551")
     public boolean removeUsers(final User obj) {
@@ -483,7 +463,6 @@ public class OrganisationModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("598db2e4-3af5-4be3-8634-400227707ec1")
     public void setCamelModel(final CamelModel obj) {
@@ -494,7 +473,6 @@ public class OrganisationModel extends SubModel {
      * Set the value of the 'organisation' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("76af56be-1c15-458d-8c79-11c0756809a2")
     public void setOrganisation(final Organisation obj) {
@@ -550,16 +528,17 @@ public class OrganisationModel extends SubModel {
         this.elt.putTagValue(OrganisationModel.MdaTypes.SECURITYLEVEL_TAGTYPE_ELT, value);
     }
 
-    @objid ("3ca63a5c-c2e4-47c0-9250-43c9da2f4e15")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("b2688c24-4eac-4a81-a6cc-9ed8ba245923")
     protected OrganisationModel(final Package elt) {
         super(elt);
+    }
+
+    @objid ("5f68645e-5030-43c1-bc3d-dac2435489b6")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("eb1c285b-2873-4f8e-af1e-f7afc841bfe9")
@@ -597,11 +576,11 @@ public class OrganisationModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

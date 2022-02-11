@@ -19,7 +19,6 @@ import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttrib
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.AttributeConstraint;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -71,9 +70,10 @@ public class AttributeContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeContext} proxy from a {@link Class} stereotyped << AttributeContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeContext} proxy from a {@link Class} stereotyped << AttributeContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link AttributeContext} proxy or <i>null</i>.
      */
@@ -83,26 +83,26 @@ public class AttributeContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeContext} proxy from a {@link Class} stereotyped << AttributeContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeContext} proxy from a {@link Class} stereotyped << AttributeContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link AttributeContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ee42981d-cb7f-4ed6-a50e-ba468e31f79c")
     public static AttributeContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (AttributeContext.canInstantiate(obj))
-        	return new AttributeContext(obj);
+            return new AttributeContext(obj);
         else
-        	throw new IllegalArgumentException("AttributeContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("AttributeContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'attributeConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("03ff5bf8-1f79-4f72-b892-856baa083288")
     public void addAttributeConstraint(final AttributeConstraint obj) {
@@ -130,7 +130,6 @@ public class AttributeContext extends FeatureClass {
      * Get the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e3fa8982-a1e1-46ca-a08d-22a350f45d78")
     public CamelAttribute getAttribute() {
@@ -148,19 +147,19 @@ public class AttributeContext extends FeatureClass {
      * Get the values of the 'attributeConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("665883cc-2800-4a4c-a9c8-1fde748ccad5")
     public List<AttributeConstraint> getAttributeConstraint() {
         List<AttributeConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Class) this.elt).getConstraintDefinition())
-        	if (AttributeConstraint.canInstantiate(mObj))
-        			results.add((AttributeConstraint)CamelDesignerProxyFactory.instantiate(mObj, AttributeConstraint.STEREOTYPE_NAME));
+            if (AttributeConstraint.canInstantiate(mObj))
+                    results.add((AttributeConstraint)CamelDesignerProxyFactory.instantiate(mObj, AttributeConstraint.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("0ab7bcae-9208-44bb-a857-eca9b74fc0a6")
@@ -173,7 +172,6 @@ public class AttributeContext extends FeatureClass {
      * Get the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0280c91d-5c26-4ecf-80e8-1eda6a8d90d9")
     public ObjectContext getObjectContext() {
@@ -197,7 +195,6 @@ public class AttributeContext extends FeatureClass {
      * Remove a value from the 'attributeConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("093c51db-f5e3-45dd-aea9-f6b37dd47700")
     public boolean removeAttributeConstraint(final AttributeConstraint obj) {
@@ -208,7 +205,6 @@ public class AttributeContext extends FeatureClass {
      * Set the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("605ddf05-91bc-4a08-b994-a7d8401a7d2a")
     public void setAttribute(final CamelAttribute obj) {
@@ -234,7 +230,6 @@ public class AttributeContext extends FeatureClass {
      * Set the value of the 'objectContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("005e62e2-04dd-4d63-aafe-3818b19221ae")
     public void setObjectContext(final ObjectContext obj) {
@@ -281,16 +276,17 @@ public class AttributeContext extends FeatureClass {
         return null;
     }
 
-    @objid ("4c07e136-c6f8-4ffc-bbed-fba31295c42a")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("46896d85-8429-4ad6-b2b6-30c1923bfb52")
     protected AttributeContext(final Class elt) {
         super(elt);
+    }
+
+    @objid ("e2e06800-488f-4a71-be13-8a2df5c70770")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("898481e6-a467-4f70-8be0-666ac6fd56ed")
@@ -312,11 +308,11 @@ public class AttributeContext extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

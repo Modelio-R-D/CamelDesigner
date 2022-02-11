@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -74,9 +76,10 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CloudProvider} proxy or <i>null</i>.
      */
@@ -86,19 +89,20 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CloudProvider} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("049b5294-2349-4f7f-a4cb-3e1f1747b83e")
     public static CloudProvider safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudProvider.canInstantiate(obj))
-        	return new CloudProvider(obj);
+            return new CloudProvider(obj);
         else
-        	throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("11ec4189-9aa4-4383-92d4-ffcba3cfc146")
@@ -118,7 +122,8 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b3e8e716-f8f9-424a-87b4-407b2ba50e36")
@@ -218,6 +223,14 @@ public class CloudProvider extends Organisation {
         super(elt);
     }
 
+    @objid ("88addc4b-73d6-4a23-8191-8ea1c4a030ce")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("3a9e1b7d-4edb-4361-aa5d-657d494731fb")
     public static final class MdaTypes {
         @objid ("44c0d0d8-ddc6-4337-9fa6-5d16e439fbd7")
@@ -253,11 +266,11 @@ public class CloudProvider extends Organisation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

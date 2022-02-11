@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.ScalabilityRule;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -66,9 +68,10 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RuleTrigger} proxy or <i>null</i>.
      */
@@ -78,19 +81,20 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RuleTrigger} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("e7abf4f2-3b60-4fc1-969f-0135a28cbe12")
     public static RuleTrigger safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RuleTrigger.canInstantiate(obj))
-        	return new RuleTrigger(obj);
+            return new RuleTrigger(obj);
         else
-        	throw new IllegalArgumentException("RuleTrigger: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RuleTrigger: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("13e864dc-f570-4a44-8ce5-b6ad838c8f5c")
@@ -110,7 +114,8 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e36b1376-491d-46c2-893d-7db8011750d0")
@@ -123,7 +128,6 @@ public class RuleTrigger extends Cause {
      * Get the value of the 'scalabilityRule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4a3b1ec3-e2de-403e-a329-5d53435b5797")
     public ScalabilityRule getScalabilityRule() {
@@ -157,7 +161,6 @@ public class RuleTrigger extends Cause {
      * Set the value of the 'scalabilityRule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ecf757ee-4742-48b2-8bb5-b32f94c41886")
     public void setScalabilityRule(final ScalabilityRule obj) {
@@ -194,6 +197,14 @@ public class RuleTrigger extends Cause {
         super(elt);
     }
 
+    @objid ("bd7c1ceb-a432-4318-ba7a-1c9431a56acc")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("4d25ae3c-a321-44a2-bbb9-74f641ada07d")
     public static final class MdaTypes {
         @objid ("eb2a703a-a2c4-471d-9af4-4ab9c0c7c315")
@@ -217,11 +228,11 @@ public class RuleTrigger extends Cause {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

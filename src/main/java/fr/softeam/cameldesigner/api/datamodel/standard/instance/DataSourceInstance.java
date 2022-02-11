@@ -68,9 +68,10 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link DataSourceInstance} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link DataSourceInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("bc236cf3-a3d8-4cae-b9e5-339145457186")
     public static DataSourceInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (DataSourceInstance.canInstantiate(obj))
-        	return new DataSourceInstance(obj);
+            return new DataSourceInstance(obj);
         else
-        	throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("09ea4edd-ab28-414c-997c-18a977472bdf")
@@ -112,7 +114,8 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("d654dca3-4910-4c07-96cf-f11a7d147292")
@@ -125,7 +128,6 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("87821878-c63a-47ac-b05a-1a3d3bbd2675")
     public DataInstanceModel getParent() {
@@ -136,7 +138,6 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4d0fefa6-dfa4-4f37-9356-8046886d698e")
     public SoftwareComponentInstance getSoftwareComponentInstance() {
@@ -154,7 +155,6 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ee86046e-d6da-4dbf-b254-85904d26e82f")
     public DataSource getType() {
@@ -171,7 +171,6 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f5cf1155-599f-4c98-8340-fc490c52af8c")
     public void setParent(final DataInstanceModel obj) {
@@ -182,7 +181,6 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d29210a8-5dbc-4ce4-b018-d503c028cc90")
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
@@ -208,23 +206,23 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cc4ef2b4-22e0-4f89-b7c5-bb216feff3d4")
     public void setType(final DataSource obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("08a0c213-7450-4614-be6e-888941ecb5d2")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("010ff413-0e81-4098-834a-e13ea5572c32")
     protected DataSourceInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("bb97ce67-1add-4095-86f2-6ed1c2d1641b")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("f274074b-7683-49b4-b45f-098faac6eaa7")
@@ -246,11 +244,11 @@ public class DataSourceInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

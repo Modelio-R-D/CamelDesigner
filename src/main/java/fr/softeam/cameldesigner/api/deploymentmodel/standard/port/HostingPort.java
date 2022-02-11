@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentmodel.standard.port;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class HostingPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Port
      * @return a {@link HostingPort} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class HostingPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Port}
      * @return a {@link HostingPort} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ff8087a6-d529-4599-8fea-1e775d04fc6c")
     public static HostingPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (HostingPort.canInstantiate(obj))
-        	return new HostingPort(obj);
+            return new HostingPort(obj);
         else
-        	throw new IllegalArgumentException("HostingPort: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HostingPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("c0f16611-522a-4c71-8bd9-fad23bf45116")
@@ -107,7 +111,8 @@ public class HostingPort extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}. 
+     * Get the underlying {@link Port}.
+     * 
      * @return the Port represented by this proxy, never null.
      */
     @objid ("0b2560ef-38c5-4727-b41b-de9617d00439")
@@ -125,6 +130,14 @@ public class HostingPort extends FeaturePort {
     @objid ("440afe8c-8815-48ac-a89b-014500d7691c")
     protected HostingPort(final Port elt) {
         super(elt);
+    }
+
+    @objid ("fc47b2fa-358f-4eae-98fa-43a615e781d3")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("98fe20f6-f33e-4b62-b8ea-1f4b27c8cf6e")
@@ -146,11 +159,11 @@ public class HostingPort extends FeaturePort {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -65,9 +65,10 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link UnitDimension} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link UnitDimension} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c31ad642-86f5-4eab-a2d3-f402c1b34c42")
     public static UnitDimension safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (UnitDimension.canInstantiate(obj))
-        	return new UnitDimension(obj);
+            return new UnitDimension(obj);
         else
-        	throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("65a82f88-d187-4310-95ea-854fbee00fc2")
@@ -109,7 +111,8 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("a28bbd7c-2dfe-4359-a692-f92648a7fcf4")
@@ -124,16 +127,17 @@ public class UnitDimension extends FeatureDataType {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("df37716d-dc6e-4b34-86db-627c76c6e4fb")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("b6a23dc2-215c-4ed8-b82e-48b571ff636b")
     protected UnitDimension(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("404a3d74-e6ec-4fb4-b209-6e8bc5e16ad1")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("75da9eb1-b40f-49c3-9600-695ba46ea42f")
@@ -155,11 +159,11 @@ public class UnitDimension extends FeatureDataType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

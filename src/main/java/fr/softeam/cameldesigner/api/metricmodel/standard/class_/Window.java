@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -76,9 +78,10 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Window} proxy or <i>null</i>.
      */
@@ -88,19 +91,20 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Window} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("2e091577-7150-4b30-bbc8-efaad7c1e8a2")
     public static Window safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Window.canInstantiate(obj))
-        	return new Window(obj);
+            return new Window(obj);
         else
-        	throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2706c666-ea1d-41a4-b143-180d2281687d")
@@ -120,7 +124,8 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f34492ff-e2a2-4d9b-b578-b15d8946a8c7")
@@ -163,7 +168,6 @@ public class Window extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("82ce6866-a09f-48fb-817d-6378282433f1")
     public Unit getTimeUnit() {
@@ -227,7 +231,6 @@ public class Window extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c0288506-ceb4-4acd-acd2-97ac4b6013b1")
     public void setTimeUnit(final Unit obj) {
@@ -262,6 +265,14 @@ public class Window extends FeatureClass {
     @objid ("0a86221a-c30a-4d8f-b20a-253e3b65e028")
     protected Window(final Class elt) {
         super(elt);
+    }
+
+    @objid ("d4bc8486-c158-4e8b-a04b-b96dfbfa2206")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("0f238069-a54e-4f1f-ae34-e69145b5ddda")
@@ -299,11 +310,11 @@ public class Window extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

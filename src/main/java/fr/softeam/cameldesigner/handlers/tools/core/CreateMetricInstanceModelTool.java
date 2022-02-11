@@ -13,9 +13,9 @@ import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 
-@objid ("c26dbd40-8b61-4983-a5ba-0c4c27b2184e")
+@objid ("93563227-fc74-43e6-9c33-fd8de23ea2cb")
 public class CreateMetricInstanceModelTool extends CreateSubModelTool {
-    @objid ("655efb50-4999-4ed9-a2fb-d6e6dfffde22")
+    @objid ("897f5178-088d-4fb4-94f2-75cec4f33541")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
         ClassDiagram diag = (ClassDiagram) parent.getElement();
@@ -40,7 +40,7 @@ public class CreateMetricInstanceModelTool extends CreateSubModelTool {
         }
     }
 
-    @objid ("29429903-b118-4a18-b3ab-488278e4ddd5")
+    @objid ("76e56ff5-d2da-4561-ae02-a2f7dde7cbb4")
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         return super.acceptElement(arg1);

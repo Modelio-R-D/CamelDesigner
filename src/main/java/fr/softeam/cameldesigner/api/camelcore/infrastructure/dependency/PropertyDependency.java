@@ -63,9 +63,10 @@ public class PropertyDependency extends CamelElement {
     }
 
     /**
-     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Dependency
      * @return a {@link PropertyDependency} proxy or <i>null</i>.
      */
@@ -75,19 +76,20 @@ public class PropertyDependency extends CamelElement {
     }
 
     /**
-     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Dependency}
      * @return a {@link PropertyDependency} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("8be583ea-e076-4f6a-9f99-a7d4f172980f")
     public static PropertyDependency safeInstantiate(final Dependency obj) throws IllegalArgumentException {
         if (PropertyDependency.canInstantiate(obj))
-        	return new PropertyDependency(obj);
+            return new PropertyDependency(obj);
         else
-        	throw new IllegalArgumentException("PropertyDependency: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PropertyDependency: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("4930e265-e148-4535-8ac8-696567ada906")
@@ -107,7 +109,8 @@ public class PropertyDependency extends CamelElement {
     }
 
     /**
-     * Get the underlying {@link Dependency}. 
+     * Get the underlying {@link Dependency}.
+     * 
      * @return the Dependency represented by this proxy, never null.
      */
     @objid ("0f06b440-5521-48fa-86bf-2c469e643431")
@@ -153,11 +156,11 @@ public class PropertyDependency extends CamelElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

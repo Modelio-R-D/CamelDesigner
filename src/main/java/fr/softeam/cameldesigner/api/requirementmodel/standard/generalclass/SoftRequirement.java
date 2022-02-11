@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -69,7 +71,8 @@ public abstract class SoftRequirement extends Requirement {
     }
 
     /**
-     * Get the underlying {@link GeneralClass}. 
+     * Get the underlying {@link GeneralClass}.
+     * 
      * @return the GeneralClass represented by this proxy, never null.
      */
     @objid ("52e218f1-d37a-4acd-bdde-2e1c96527d61")
@@ -109,6 +112,14 @@ public abstract class SoftRequirement extends Requirement {
         super(elt);
     }
 
+    @objid ("4e195c55-e872-4135-ba88-5cfc0cf2db22")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("e11f1b31-a2cb-4b0a-a55c-c134d2473491")
     public static final class MdaTypes {
         @objid ("cf9371a9-bbd5-488b-a6f0-49b3c20217ef")
@@ -132,11 +143,11 @@ public abstract class SoftRequirement extends Requirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

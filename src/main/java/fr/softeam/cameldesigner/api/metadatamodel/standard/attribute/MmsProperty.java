@@ -73,9 +73,10 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link MmsProperty} proxy or <i>null</i>.
      */
@@ -85,19 +86,20 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link MmsProperty} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("06d76603-9065-4ce8-8e4c-12af6dce6c2e")
     public static MmsProperty safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (MmsProperty.canInstantiate(obj))
-        	return new MmsProperty(obj);
+            return new MmsProperty(obj);
         else
-        	throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("6499b3e4-8c3e-4ef9-a594-08943ca46bc9")
@@ -120,7 +122,6 @@ public class MmsProperty extends MmsObject {
      * Get the value to the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bbe4913c-5d34-4cc8-a193-1bab6d31b27e")
     public MmsConcept getDomain() {
@@ -128,7 +129,8 @@ public class MmsProperty extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Attribute}. 
+     * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @objid ("d26adb5b-aa69-4d87-be5c-8b6bcd692556")
@@ -151,7 +153,6 @@ public class MmsProperty extends MmsObject {
      * Get the value of the 'range' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d6c4845f-bcf3-4382-94dc-6bdbec97bc1f")
     public MmsConcept getRange() {
@@ -185,7 +186,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8c29533a-b993-4099-a0a4-3b0fb900d2c2")
     public void setDomain(final MmsConcept obj) {
@@ -206,7 +206,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'range' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("580ba08d-da06-4f79-a4fa-d58d70122247")
     public void setRange(final MmsConcept obj) {
@@ -238,13 +237,6 @@ public class MmsProperty extends MmsObject {
         this.elt.putTagValue(MmsProperty.MdaTypes.RANGEURI_TAGTYPE_ELT, value);
     }
 
-    @objid ("804fdef0-70e2-4245-a9a4-a6d0a861ad89")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("54558d8a-f801-42e8-81a2-8532afe2bd0b")
     public MmsPropertyType getMmsPropertyType() {
         return MmsPropertyType.valueOf(this.elt.getTagValue(MmsProperty.MdaTypes.PROPERTYTYPE_TAGTYPE_ELT));
@@ -258,6 +250,14 @@ public class MmsProperty extends MmsObject {
     @objid ("639a77d0-fc28-4983-918c-a29cd8c7acfb")
     protected MmsProperty(final Attribute elt) {
         super(elt);
+    }
+
+    @objid ("fdb4c029-8359-4a6e-9bba-64967cc7977a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("37803f35-5e0b-4470-b34c-8406e4c82277")
@@ -287,11 +287,11 @@ public class MmsProperty extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

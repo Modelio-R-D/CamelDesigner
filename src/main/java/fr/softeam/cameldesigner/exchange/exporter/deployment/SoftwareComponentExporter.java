@@ -23,4 +23,14 @@ public class SoftwareComponentExporter<T extends SoftwareComponent> extends Came
         super.setProperties(elt);
     }
 
+    @objid ("ea2bf4f9-365b-4400-8325-c37cca864b01")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.SoftwareComponent)) {
+            ((camel.deployment.DeploymentTypeModel) context).getSoftwareComponents().add((camel.deployment.SoftwareComponent) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
 }

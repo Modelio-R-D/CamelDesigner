@@ -70,9 +70,10 @@ public class Range extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link Range} proxy from a {@link DataType} stereotyped << Range >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Range} proxy from a {@link DataType} stereotyped << Range >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link Range} proxy or <i>null</i>.
      */
@@ -82,19 +83,20 @@ public class Range extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link Range} proxy from a {@link DataType} stereotyped << Range >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Range} proxy from a {@link DataType} stereotyped << Range >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link Range} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c60c4a66-1583-4c02-8bf5-e0b447834aed")
     public static Range safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (Range.canInstantiate(obj))
-        	return new Range(obj);
+            return new Range(obj);
         else
-        	throw new IllegalArgumentException("Range: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Range: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2196218a-ce24-4583-a3c3-a7fb499b0540")
@@ -114,7 +116,8 @@ public class Range extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("275c0098-786a-4388-b54c-0daf309750f5")
@@ -169,16 +172,17 @@ public class Range extends ValueType {
         this.elt.putTagValue(Range.MdaTypes.UPPERLIMIT_TAGTYPE_ELT, value);
     }
 
-    @objid ("9d9d6c58-385a-4ba5-8e1d-68015c88adf5")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("4dca9c57-ecc2-4030-9c68-e8a199119301")
     protected Range(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("61ff41d5-4aa8-49d0-bfe9-9825bf06ec39")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("f119cedf-8e67-4a07-b5a8-ffaf11158aa4")
@@ -208,11 +212,11 @@ public class Range extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

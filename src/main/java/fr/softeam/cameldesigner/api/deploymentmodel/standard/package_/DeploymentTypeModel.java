@@ -73,9 +73,10 @@ public class DeploymentTypeModel extends DeploymentModel {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link DeploymentTypeModel} proxy or <i>null</i>.
      */
@@ -85,26 +86,26 @@ public class DeploymentTypeModel extends DeploymentModel {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModel} proxy from a {@link Package} stereotyped << DeploymentTypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link DeploymentTypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6f1d7c47-057a-4d75-a377-ee9a86bb9c04")
     public static DeploymentTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DeploymentTypeModel.canInstantiate(obj))
-        	return new DeploymentTypeModel(obj);
+            return new DeploymentTypeModel(obj);
         else
-        	throw new IllegalArgumentException("DeploymentTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DeploymentTypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9a38c7cd-6c7a-4976-a304-03a8115ed656")
     public void addCommunications(final Communication obj) {
@@ -120,7 +121,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9a7eb33f-d8e9-4bba-afaf-835ce8d47762")
     public void addContainers(final Container obj) {
@@ -132,7 +132,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("72a55fe8-4b3d-4d14-b3dc-08ca19d0afbb")
     public void addHostings(final Hosting obj) {
@@ -148,7 +147,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0c5e64d8-8a23-42e9-8694-4e9b3c3528c9")
     public void addLocationCouplings(final LocationCoupling obj) {
@@ -164,7 +162,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8acc857a-4ea6-4af4-8418-5bdc75b5601d")
     public void addPaases(final PaaS obj) {
@@ -176,7 +173,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("86187de5-4832-4224-96a7-db799ff8e5e5")
     public void addRequirementSets(final RequirementSet obj) {
@@ -188,7 +184,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("99b7fe30-e0d6-44a1-aebb-aa5c54bd4d4f")
     public void addSoftwareComponents(final SoftwareComponent obj) {
@@ -200,7 +195,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Add a value to the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("46f37198-e24d-4470-a30b-916e495d7d23")
     public void addVms(final VM obj) {
@@ -228,7 +222,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6681f8be-8fd2-48f3-8fe4-1b4b6b26a9e0")
     public List<Communication> getCommunications() {
@@ -246,19 +239,19 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("318ba931-7474-4310-8f84-4b5549418e26")
     public List<Container> getContainers() {
         List<Container> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (Container.canInstantiate(mObj))
-        			results.add((Container)CamelDesignerProxyFactory.instantiate(mObj, Container.STEREOTYPE_NAME));
+            if (Container.canInstantiate(mObj))
+                    results.add((Container)CamelDesignerProxyFactory.instantiate(mObj, Container.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("8e25339f-c51f-4e12-ba2e-b0f81c2d7263")
@@ -271,7 +264,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the value of the 'globalRequirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1d90acb7-0e3d-4e63-97fc-ffee45504709")
     public RequirementSet getGlobalRequirementSet() {
@@ -289,7 +281,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("964aa3eb-253f-4a5f-9003-0f1257ee67c4")
     public List<Hosting> getHostings() {
@@ -307,7 +298,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6fa730fa-5f43-405a-a39f-ab6c9530beca")
     public List<LocationCoupling> getLocationCouplings() {
@@ -325,14 +315,13 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6ded3ee8-2b8d-4569-b613-7c01fd084759")
     public List<PaaS> getPaases() {
         List<PaaS> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (PaaS.canInstantiate(mObj))
-        			results.add((PaaS)CamelDesignerProxyFactory.instantiate(mObj, PaaS.STEREOTYPE_NAME));
+            if (PaaS.canInstantiate(mObj))
+                    results.add((PaaS)CamelDesignerProxyFactory.instantiate(mObj, PaaS.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -340,14 +329,13 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("78bfe9ca-a82d-4364-bffa-f234d23c9322")
     public List<RequirementSet> getRequirementSets() {
         List<RequirementSet> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (RequirementSet.canInstantiate(mObj))
-        			results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(mObj, RequirementSet.STEREOTYPE_NAME));
+            if (RequirementSet.canInstantiate(mObj))
+                    results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(mObj, RequirementSet.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -355,14 +343,13 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("97409c6f-8e69-4e8f-9e45-f7ece64c19c3")
     public List<SoftwareComponent> getSoftwareComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (SoftwareComponent.canInstantiate(mObj))
-        			results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponent.STEREOTYPE_NAME));
+            if (SoftwareComponent.canInstantiate(mObj))
+                    results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponent.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -370,14 +357,13 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Get the values of the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1c2b2e4e-daa9-42c0-ac5a-7db6497581ca")
     public List<VM> getVms() {
         List<VM> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-        	if (VM.canInstantiate(mObj))
-        			results.add((VM)CamelDesignerProxyFactory.instantiate(mObj, VM.STEREOTYPE_NAME));
+            if (VM.canInstantiate(mObj))
+                    results.add((VM)CamelDesignerProxyFactory.instantiate(mObj, VM.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -391,7 +377,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'communications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d72e98d0-27f2-42e7-86c0-16d90baa6f06")
     public boolean removeCommunications(final Communication obj) {
@@ -411,7 +396,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'containers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9ce530d4-4aa0-46cd-89f0-20abb227df22")
     public boolean removeContainers(final Container obj) {
@@ -422,7 +406,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'hostings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("90cf4bc4-22ab-4748-8364-9b897df645fe")
     public boolean removeHostings(final Hosting obj) {
@@ -442,7 +425,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'locationCouplings' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("21ba1b04-35c8-4c16-8175-08b4bde272ee")
     public boolean removeLocationCouplings(final LocationCoupling obj) {
@@ -462,7 +444,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'paases' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("55346649-987e-486e-b1ca-f040661d617a")
     public boolean removePaases(final PaaS obj) {
@@ -473,7 +454,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'requirementSets' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3088cca8-cc4a-4494-a8c6-1ee94e0e4314")
     public boolean removeRequirementSets(final RequirementSet obj) {
@@ -484,7 +464,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3f7cdeb9-282e-4a32-9c1c-c224baca1ed7")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
@@ -495,7 +474,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Remove a value from the 'vms' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6d8fb8ff-37e0-4534-a835-7cdd050eca4b")
     public boolean removeVms(final VM obj) {
@@ -506,7 +484,6 @@ public class DeploymentTypeModel extends DeploymentModel {
      * Set the value of the 'globalRequirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5652f34b-116f-43ed-aaa1-222b9570645a")
     public void setGlobalRequirementSet(final RequirementSet obj) {
@@ -528,22 +505,17 @@ public class DeploymentTypeModel extends DeploymentModel {
         }
     }
 
-    @objid ("2b046734-8a8a-4888-912d-ebd6a778865e")
+    @objid ("2c4bddf1-042c-4269-a34c-7a8fe92536e9")
+    protected DeploymentTypeModel(final Package elt) {
+        super(elt);
+    }
+
+    @objid ("da1e954d-f283-414d-84ae-cade57602252")
     @Override
     public List<CamelElement> getChilds() {
         List<CamelElement> result = new ArrayList<>();
         result.addAll(super.getChilds());
-        result.addAll(getSoftwareComponents());
-        result.addAll(getVms());
-        result.addAll(getPaases());
-        result.addAll(getContainers());
-        result.addAll(getRequirementSets());
         return result;
-    }
-
-    @objid ("2c4bddf1-042c-4269-a34c-7a8fe92536e9")
-    protected DeploymentTypeModel(final Package elt) {
-        super(elt);
     }
 
     @objid ("aa0491e2-0f18-46c3-ba92-4686c725d9fa")
@@ -565,11 +537,11 @@ public class DeploymentTypeModel extends DeploymentModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

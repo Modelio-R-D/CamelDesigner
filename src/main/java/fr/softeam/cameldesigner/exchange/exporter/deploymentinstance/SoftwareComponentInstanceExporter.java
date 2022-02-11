@@ -27,7 +27,11 @@ public class SoftwareComponentInstanceExporter<T extends SoftwareComponentInstan
     @objid ("5360edbd-3b2b-4f82-b37c-a79ba2fc359f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentInstanceModel) && (elt instanceof camel.deployment.SoftwareComponentInstance)) {
+            ((camel.deployment.DeploymentInstanceModel) context).getSoftwareComponentInstances().add((camel.deployment.SoftwareComponentInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

@@ -13,6 +13,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
@@ -68,9 +69,10 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link ContainerInstance} proxy or <i>null</i>.
      */
@@ -80,26 +82,26 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerInstance} proxy from a {@link Instance} stereotyped << ContainerInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link ContainerInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("fe987b96-eaa0-4ace-a6c2-b6b703eb9002")
     public static ContainerInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (ContainerInstance.canInstantiate(obj))
-        	return new ContainerInstance(obj);
+            return new ContainerInstance(obj);
         else
-        	throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ContainerInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fc9a02d1-e1e6-4082-be1f-c5fce8b62a01")
     public void addRequiredCommunicationInstances(final CommunicationPort obj) {
@@ -124,7 +126,8 @@ public class ContainerInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("10e45e3c-5d39-4eb1-9572-e7d0c12bc803")
@@ -137,7 +140,6 @@ public class ContainerInstance extends ComponentInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a315295f-4bd1-46a2-bf92-efab82fdc73c")
     public DeploymentInstanceModel getParent() {
@@ -148,14 +150,13 @@ public class ContainerInstance extends ComponentInstance {
      * Get the values of the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("20e124b1-7b5c-4b2a-b6f0-dcaa52b90cb1")
     public List<CommunicationPort> getRequiredCommunicationInstances() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart())
-        	if (CommunicationPort.canInstantiate(mObj))
-        			results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
+            if (CommunicationPort.canInstantiate(mObj))
+                    results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -163,15 +164,14 @@ public class ContainerInstance extends ComponentInstance {
      * Get the value to the 'requiredHostInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9bba451c-1eb0-4e2f-9e8c-ad3263839020")
     public HostingPort getRequiredHostInstance() {
-          for (Port obj : ((Instance) this.elt).getPart(Port.class)) {
-           if (HostingPort.canInstantiate(obj))
-             return (HostingPort)CamelDesignerProxyFactory.instantiate(obj, HostingPort.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Port obj : ((Instance) this.elt).getPart(Port.class)) {
+         if (HostingPort.canInstantiate(obj))
+           return (HostingPort)CamelDesignerProxyFactory.instantiate(obj, HostingPort.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     @objid ("5f33e045-53e5-40f9-a1ce-797575febbd8")
@@ -184,7 +184,6 @@ public class ContainerInstance extends ComponentInstance {
      * Remove a value from the 'requiredCommunicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a7e59461-a68a-4a46-b104-d2c2018812e5")
     public boolean removeRequiredCommunicationInstances(final CommunicationPort obj) {
@@ -195,7 +194,6 @@ public class ContainerInstance extends ComponentInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3116dd2d-832b-4027-ac78-e7ed12cad1ac")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -206,7 +204,6 @@ public class ContainerInstance extends ComponentInstance {
      * Set the value of the 'requiredHostInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7fef32a4-6742-4945-9155-634b52b1afc7")
     public void setRequiredHostInstance(final HostingPort obj) {
@@ -225,6 +222,14 @@ public class ContainerInstance extends ComponentInstance {
     @objid ("0dc6d9ac-0f0e-48e6-9edd-8d77c3cd1c46")
     protected ContainerInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("e5f2e238-cdcb-4d8c-8c0d-601a341f05e4")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("1af32021-9f2d-4f19-946c-1fd148e9a0bc")
@@ -246,11 +251,11 @@ public class ContainerInstance extends ComponentInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

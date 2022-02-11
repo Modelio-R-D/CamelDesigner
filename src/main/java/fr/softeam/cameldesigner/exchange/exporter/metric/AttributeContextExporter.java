@@ -28,7 +28,11 @@ public class AttributeContextExporter<T extends AttributeContext> extends Featur
     @objid ("822adfe7-5ba2-44bc-a38c-09225deac7b0")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.AttributeContext)) {
+            ((camel.metric.MetricTypeModel) context).getAttributeContexts().add((camel.metric.AttributeContext) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

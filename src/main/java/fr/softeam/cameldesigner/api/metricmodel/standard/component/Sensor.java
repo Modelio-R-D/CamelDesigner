@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.metricmodel.standard.component;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -69,9 +71,10 @@ public class Sensor extends SoftwareComponent {
     }
 
     /**
-     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Component
      * @return a {@link Sensor} proxy or <i>null</i>.
      */
@@ -81,19 +84,20 @@ public class Sensor extends SoftwareComponent {
     }
 
     /**
-     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Component}
      * @return a {@link Sensor} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("90d2eb90-4daf-4e9c-bd60-ba0859b6cab4")
     public static Sensor safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (Sensor.canInstantiate(obj))
-        	return new Sensor(obj);
+            return new Sensor(obj);
         else
-        	throw new IllegalArgumentException("Sensor: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Sensor: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("51043799-3723-42fa-ac95-de866c612faa")
@@ -123,7 +127,8 @@ public class Sensor extends SoftwareComponent {
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("7cad5067-20ae-4c12-b82d-5ee562584812")
@@ -176,6 +181,14 @@ public class Sensor extends SoftwareComponent {
         super(elt);
     }
 
+    @objid ("f0aab173-a14e-48a0-9e86-d7347e9dc9bb")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("ab2c122d-31c1-421d-919a-92957fbd08bd")
     public static final class MdaTypes {
         @objid ("3fd5f570-6555-4515-8d84-aba0557cc90a")
@@ -203,11 +216,11 @@ public class Sensor extends SoftwareComponent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

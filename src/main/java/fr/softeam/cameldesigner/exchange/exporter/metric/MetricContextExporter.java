@@ -27,7 +27,11 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
     @objid ("66d769fb-3f0d-4fc1-b8e5-63ce4d7918bf")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.MetricContext)) {
+            ((camel.metric.MetricTypeModel) context).getMetricContexts().add((camel.metric.MetricContext) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metricmodel.standard.instance.MetricInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Instance} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Instance} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link NonFunctionalEventInstance} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Instance} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEventInstance} proxy from a {@link Instance} stereotyped << NonFunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link NonFunctionalEventInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b56c65d4-e000-4a00-ae00-5ef3db83351c")
     public static NonFunctionalEventInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (NonFunctionalEventInstance.canInstantiate(obj))
-        	return new NonFunctionalEventInstance(obj);
+            return new NonFunctionalEventInstance(obj);
         else
-        	throw new IllegalArgumentException("NonFunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("NonFunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f48f4a2d-a50b-4b2b-bd5e-9c83b6e43b5a")
@@ -107,7 +111,8 @@ public class NonFunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("06fc2b9f-e4d9-4d1d-bbb6-8724be218a8a")
@@ -120,7 +125,6 @@ public class NonFunctionalEventInstance extends EventInstance {
      * Get the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f1c49c54-b579-40f2-8fe7-3f4924bb3b07")
     public MetricInstance getMetricInstance() {
@@ -144,7 +148,6 @@ public class NonFunctionalEventInstance extends EventInstance {
      * Set the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0a795683-5ba4-412d-8ce6-ccb810044d7f")
     public void setMetricInstance(final MetricInstance obj) {
@@ -171,6 +174,14 @@ public class NonFunctionalEventInstance extends EventInstance {
         super(elt);
     }
 
+    @objid ("c87f9400-f405-40fb-ac91-09198235a143")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("115de52d-fac8-49f5-8245-053320b852b9")
     public static final class MdaTypes {
         @objid ("3da1c25f-f116-4a90-8adb-ac32abe43f31")
@@ -190,11 +201,11 @@ public class NonFunctionalEventInstance extends EventInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

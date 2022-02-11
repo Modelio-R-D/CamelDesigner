@@ -62,9 +62,10 @@ public class QualityAttribute extends AttributeClass {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttribute} proxy from a {@link Class} stereotyped << QualityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttribute} proxy from a {@link Class} stereotyped << QualityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link QualityAttribute} proxy or <i>null</i>.
      */
@@ -74,19 +75,20 @@ public class QualityAttribute extends AttributeClass {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttribute} proxy from a {@link Class} stereotyped << QualityAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttribute} proxy from a {@link Class} stereotyped << QualityAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link QualityAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5eeee2a2-f48c-4f3a-a723-73e0c4eb86d4")
     public static QualityAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (QualityAttribute.canInstantiate(obj))
-        	return new QualityAttribute(obj);
+            return new QualityAttribute(obj);
         else
-        	throw new IllegalArgumentException("QualityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("QualityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("768812fb-130c-4bc9-aadd-df0215926462")
@@ -106,7 +108,8 @@ public class QualityAttribute extends AttributeClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("2d3df8ab-41d0-4781-8ecb-7ba48ff99d05")
@@ -145,11 +148,11 @@ public class QualityAttribute extends AttributeClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -9,27 +9,23 @@ package fr.softeam.cameldesigner.api.deploymentmodel.standard.component;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ClusterConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.BindableInstance;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.vcore.smkernel.mapi.MObject;
@@ -66,7 +62,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6f5449a3-1a12-4a77-9dcf-1c26114ba7f9")
     public void addConfigurations(final Configuration obj) {
@@ -78,7 +73,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("822ada46-4bad-4adc-b752-68239927e842")
     public void addProvidedCommunications(final CommunicationPort obj) {
@@ -90,7 +84,6 @@ public abstract class CamelComponent extends Feature {
      * Add a value to the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("069e3dea-5e8e-4b39-b501-286e603831b9")
     public void addProvidedHosts(final HostingPort obj) {
@@ -118,19 +111,26 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("78e8d58f-2eac-45dd-a52f-97bdc3ff9f7d")
     public List<Configuration> getConfigurations() {
         List<Configuration> results = new ArrayList<>();
-        for (ModelTree mObj : ((Component) this.elt).getOwnedElement())
-        	if (Configuration.canInstantiate(mObj))
-        			results.add((Configuration)CamelDesignerProxyFactory.instantiate(mObj, Configuration.STEREOTYPE_NAME));
+        for (ModelTree mObj : ((Component) this.elt).getOwnedElement()) {
+            if (ClusterConfiguration.canInstantiate(mObj))
+                results.add((ClusterConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ClusterConfiguration.STEREOTYPE_NAME));
+            else if (PaaSConfiguration.canInstantiate(mObj))
+                results.add((PaaSConfiguration)CamelDesignerProxyFactory.instantiate(mObj, PaaSConfiguration.STEREOTYPE_NAME));
+            else if (ScriptConfiguration.canInstantiate(mObj))
+                results.add((ScriptConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ScriptConfiguration.STEREOTYPE_NAME));
+            else if (ServerlessConfiguration.canInstantiate(mObj))
+                results.add((ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ServerlessConfiguration.STEREOTYPE_NAME));
+        }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("5cbce701-2f60-45b2-9c67-e23d2dba76b4")
@@ -143,14 +143,13 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e3e0290-cb53-4ba3-98a9-d263672cf82b")
     public List<CommunicationPort> getProvidedCommunications() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Component) this.elt).getInternalStructure())
-        	if (CommunicationPort.canInstantiate(mObj))
-        			results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
+            if (CommunicationPort.canInstantiate(mObj))
+                    results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -158,14 +157,13 @@ public abstract class CamelComponent extends Feature {
      * Get the values of the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d3071e55-3175-41c1-b909-b77d50eebd11")
     public List<HostingPort> getProvidedHosts() {
         List<HostingPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Component) this.elt).getInternalStructure())
-        	if (HostingPort.canInstantiate(mObj))
-        			results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
+            if (HostingPort.canInstantiate(mObj))
+                    results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -179,7 +177,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("379b7169-4bb2-4483-8f82-56e1b5b6c548")
     public boolean removeConfigurations(final Configuration obj) {
@@ -190,7 +187,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e1788110-17c2-40e4-b32c-9166c17540fc")
     public boolean removeProvidedCommunications(final CommunicationPort obj) {
@@ -201,7 +197,6 @@ public abstract class CamelComponent extends Feature {
      * Remove a value from the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9990257c-9f9e-449c-9c25-d78d02e0df48")
     public boolean removeProvidedHosts(final HostingPort obj) {
@@ -212,6 +207,7 @@ public abstract class CamelComponent extends Feature {
     @Override
     public List<CamelElement> getChilds() {
         List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
         result.addAll(getConfigurations());
         return result;
     }
@@ -240,11 +236,11 @@ public abstract class CamelComponent extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

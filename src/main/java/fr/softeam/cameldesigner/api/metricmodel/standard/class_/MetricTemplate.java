@@ -7,7 +7,7 @@
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
@@ -16,7 +16,6 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
-import fr.softeam.cameldesigner.api.typemodel.standard.datatype.List;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;
@@ -24,15 +23,11 @@ import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -75,9 +70,10 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricTemplate} proxy or <i>null</i>.
      */
@@ -87,19 +83,20 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricTemplate} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("66edc2e4-3c93-49bf-ad5c-a41dddd6ab2c")
     public static MetricTemplate safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricTemplate.canInstantiate(obj))
-        	return new MetricTemplate(obj);
+            return new MetricTemplate(obj);
         else
-        	throw new IllegalArgumentException("MetricTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("143b1c49-205d-4176-9d19-8219a6b89041")
@@ -122,7 +119,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bbbadaf1-eb88-4761-91c3-91433c7decfe")
     public MeasurableAttribute getAttribute() {
@@ -137,7 +133,8 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("2bbbddd3-21ba-4e5a-b105-eb4c88eaabcc")
@@ -150,7 +147,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("552d3d8a-e013-4d6a-9a3e-799452175c95")
     public Unit getUnit() {
@@ -178,7 +174,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("43cb3e8f-047f-43ed-a092-a953037ae9d2")
     public ValueType getValueType() {
@@ -202,7 +197,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ddbff4e5-43f7-4664-94cd-20c41e1ed7b1")
     public void setAttribute(final MeasurableAttribute obj) {
@@ -228,7 +222,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f8fda775-07bd-4242-b468-1ca15e6d32bd")
     public void setUnit(final Unit obj) {
@@ -264,7 +257,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("63915ea9-840d-41bb-acc2-da22bee53e82")
     public void setValueType(final ValueType obj) {
@@ -303,13 +295,6 @@ public class MetricTemplate extends FeatureClass {
         return null;
     }
 
-    @objid ("0af4b526-fff0-44f8-a4a9-b0037e56275c")
-    @Override
-    public java.util.List<CamelElement> getChilds() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
     /**
      * Get the value of the 'valueType' role.<p>
      * Role description:
@@ -328,8 +313,8 @@ public class MetricTemplate extends FeatureClass {
                     return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, BooleanValueType.MdaTypes.STEREOTYPE_ELT.getName());
         
                 //List
-                if (List.canInstantiate(attribut))
-                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, List.MdaTypes.STEREOTYPE_ELT.getName());
+                if (fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.canInstantiate(attribut))
+                    return (ValueType)CamelDesignerProxyFactory.instantiate(attribut, fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.MdaTypes.STEREOTYPE_ELT.getName());
         
                 //Range
                 if (Range.canInstantiate(attribut))
@@ -402,6 +387,14 @@ public class MetricTemplate extends FeatureClass {
         super(elt);
     }
 
+    @objid ("58e9c5eb-3561-4205-9936-61b5e2a6ceed")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("167b1a3c-171c-4d03-b995-511599eb3e3e")
     public static final class MdaTypes {
         @objid ("30af8a5c-d1b7-4ee7-9b73-6b52adbc0a43")
@@ -425,11 +418,11 @@ public class MetricTemplate extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

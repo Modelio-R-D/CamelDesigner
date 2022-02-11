@@ -64,9 +64,10 @@ public class MeasurableAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link MeasurableAttribute} proxy from a {@link Class} stereotyped << MeasurableAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MeasurableAttribute} proxy from a {@link Class} stereotyped << MeasurableAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MeasurableAttribute} proxy or <i>null</i>.
      */
@@ -76,26 +77,26 @@ public class MeasurableAttribute extends QualityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link MeasurableAttribute} proxy from a {@link Class} stereotyped << MeasurableAttribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MeasurableAttribute} proxy from a {@link Class} stereotyped << MeasurableAttribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MeasurableAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("56f16a16-3a7c-4c72-9530-830d7960b589")
     public static MeasurableAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MeasurableAttribute.canInstantiate(obj))
-        	return new MeasurableAttribute(obj);
+            return new MeasurableAttribute(obj);
         else
-        	throw new IllegalArgumentException("MeasurableAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MeasurableAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("45d0e3bc-d5f7-42e6-996f-67f1420f001c")
     public void addSensors(final Sensor obj) {
@@ -124,7 +125,8 @@ public class MeasurableAttribute extends QualityAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b4bb5612-e2b1-492c-b59d-413cb6f7b270")
@@ -137,7 +139,6 @@ public class MeasurableAttribute extends QualityAttribute {
      * Get the values of the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3f0612a6-7218-44c6-930b-edfa8fc0ce07")
     public List<Sensor> getSensors() {
@@ -161,7 +162,6 @@ public class MeasurableAttribute extends QualityAttribute {
      * Remove a value from the 'sensors' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("afea7a09-a317-449b-843e-f60fab394e2e")
     public boolean removeSensors(final Sensor obj) {
@@ -201,11 +201,11 @@ public class MeasurableAttribute extends QualityAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

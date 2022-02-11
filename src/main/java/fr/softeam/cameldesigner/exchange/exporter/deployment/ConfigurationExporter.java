@@ -27,7 +27,11 @@ public abstract class ConfigurationExporter<T extends Configuration> extends Fea
     @objid ("1637e301-a68d-4987-a5e6-e3c47ffaea35")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.Component) && (elt instanceof camel.deployment.Configuration)) {
+            ((camel.deployment.Component) context).getConfigurations().add((camel.deployment.Configuration) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

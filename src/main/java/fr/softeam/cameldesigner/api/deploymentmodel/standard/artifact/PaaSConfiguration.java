@@ -76,9 +76,10 @@ public class PaaSConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link PaaSConfiguration} proxy or <i>null</i>.
      */
@@ -88,19 +89,20 @@ public class PaaSConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link PaaSConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("79935cd1-dfce-4009-aa1d-74fae393a847")
     public static PaaSConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (PaaSConfiguration.canInstantiate(obj))
-        	return new PaaSConfiguration(obj);
+            return new PaaSConfiguration(obj);
         else
-        	throw new IllegalArgumentException("PaaSConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaSConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("0acf0ee2-9f39-43c2-a561-e9c3ecde2311")
@@ -140,7 +142,8 @@ public class PaaSConfiguration extends Configuration {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("0bbc1a7f-e4c1-4b8f-ba88-d87f55a26e08")
@@ -215,16 +218,17 @@ public class PaaSConfiguration extends Configuration {
         this.elt.putTagValue(PaaSConfiguration.MdaTypes.VERSION_TAGTYPE_ELT, value);
     }
 
-    @objid ("c296cbc3-41b5-427b-9419-bf37c6bd25e3")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("fc978b91-f314-4d4d-89e6-7c9e78ed51b8")
     protected PaaSConfiguration(final Artifact elt) {
         super(elt);
+    }
+
+    @objid ("e3e45324-6072-4b94-9fdd-b96b6b6c22ab")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("7782d259-fea0-4b7d-98db-5a791c033e34")
@@ -262,11 +266,11 @@ public class PaaSConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

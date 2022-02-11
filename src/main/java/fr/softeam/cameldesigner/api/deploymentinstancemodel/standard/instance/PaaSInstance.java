@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -63,9 +65,10 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link PaaSInstance} proxy or <i>null</i>.
      */
@@ -75,19 +78,20 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link PaaSInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("fe663d19-42e4-4b21-8bee-65d664e5b875")
     public static PaaSInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (PaaSInstance.canInstantiate(obj))
-        	return new PaaSInstance(obj);
+            return new PaaSInstance(obj);
         else
-        	throw new IllegalArgumentException("PaaSInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaSInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("6d96324b-5bbe-4131-bf36-0510de1db4d0")
@@ -107,7 +111,8 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("3cc32a4a-1b17-4ab1-8041-fa1078e186aa")
@@ -120,7 +125,6 @@ public class PaaSInstance extends ComponentInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7b9ab629-a505-419a-85a6-6805c5f050f1")
     public DeploymentInstanceModel getParent() {
@@ -137,7 +141,6 @@ public class PaaSInstance extends ComponentInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c32d8c9a-ad61-42fd-9d5c-b0c958ad7f4f")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -147,6 +150,14 @@ public class PaaSInstance extends ComponentInstance {
     @objid ("c08cba77-c24e-49b8-a6d0-8ae39f7378e5")
     protected PaaSInstance(final Instance elt) {
         super(elt);
+    }
+
+    @objid ("b44b2ff3-dbf9-4fe7-bedc-edc6a30b4555")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("387fa399-3754-4069-9e53-4383d23163dc")
@@ -168,11 +179,11 @@ public class PaaSInstance extends ComponentInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

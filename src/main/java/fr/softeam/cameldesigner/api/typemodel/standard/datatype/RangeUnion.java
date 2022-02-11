@@ -64,9 +64,10 @@ public class RangeUnion extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link RangeUnion} proxy or <i>null</i>.
      */
@@ -76,19 +77,20 @@ public class RangeUnion extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link RangeUnion} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5a448f7c-42b2-41ee-af19-b276733ac12d")
     public static RangeUnion safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (RangeUnion.canInstantiate(obj))
-        	return new RangeUnion(obj);
+            return new RangeUnion(obj);
         else
-        	throw new IllegalArgumentException("RangeUnion: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RangeUnion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("233613cc-3e07-43c3-9ca7-c4cb02365e5f")
@@ -108,7 +110,8 @@ public class RangeUnion extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("f482f2f9-afc3-4e6f-b5c1-cc198232df09")
@@ -123,16 +126,17 @@ public class RangeUnion extends ValueType {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("760840e9-8537-42e9-9339-b1a605c1dc65")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("48f4f9a8-053b-4718-bd47-9718c62a3f21")
     protected RangeUnion(final DataType elt) {
         super(elt);
+    }
+
+    @objid ("80de2d45-3301-44b5-b4f9-7c71a9204e8a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("a86c3c8e-3fec-4d3f-8ea5-0137b2bd07d5")
@@ -154,11 +158,11 @@ public class RangeUnion extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

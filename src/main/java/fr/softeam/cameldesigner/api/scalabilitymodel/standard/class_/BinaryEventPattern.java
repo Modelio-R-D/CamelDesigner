@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -74,9 +73,10 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link BinaryEventPattern} proxy or <i>null</i>.
      */
@@ -86,19 +86,20 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link BinaryEventPattern} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6caeada5-9b8e-4f24-bae1-0b67a24027a7")
     public static BinaryEventPattern safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (BinaryEventPattern.canInstantiate(obj))
-        	return new BinaryEventPattern(obj);
+            return new BinaryEventPattern(obj);
         else
-        	throw new IllegalArgumentException("BinaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("BinaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("a4cd4303-a0c8-4841-9d59-9d5bf36fdfff")
@@ -118,7 +119,8 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("3c6ee938-97c3-4160-9782-85dfdf88d668")
@@ -131,7 +133,6 @@ public class BinaryEventPattern extends EventPattern {
      * Get the value of the 'leftEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7658d230-41f6-446e-9f35-2601be6ff058")
     public Event getLeftEvent() {
@@ -169,7 +170,6 @@ public class BinaryEventPattern extends EventPattern {
      * Get the value of the 'rightEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b9ea4d14-2ec8-49ba-bde6-2bf4c94e2ecf")
     public Event getRightEvent() {
@@ -203,7 +203,6 @@ public class BinaryEventPattern extends EventPattern {
      * Set the value of the 'leftEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8cfa709b-707b-4191-a0ab-8c4008db357f")
     public void setLeftEvent(final Event obj) {
@@ -249,7 +248,6 @@ public class BinaryEventPattern extends EventPattern {
      * Set the value of the 'rightEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fca230a7-76d4-4038-b63b-87c82f5c835f")
     public void setRightEvent(final Event obj) {
@@ -281,16 +279,17 @@ public class BinaryEventPattern extends EventPattern {
         this.elt.putTagValue(BinaryEventPattern.MdaTypes.UPPEROCCURRENCEBOUND_TAGTYPE_ELT, value);
     }
 
-    @objid ("3c86e0c2-0f5c-483b-89ba-f43017a77e97")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("1f18e280-f446-4650-8cbc-d042741311ad")
     protected BinaryEventPattern(final Class elt) {
         super(elt);
+    }
+
+    @objid ("b89b2e4a-00ef-4a1d-9d68-780b4fd0255e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("557dc2d3-3a32-40be-a1c9-31aad96680de")
@@ -324,11 +323,11 @@ public class BinaryEventPattern extends EventPattern {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

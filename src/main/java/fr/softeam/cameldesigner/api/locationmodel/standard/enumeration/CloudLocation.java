@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -69,9 +68,10 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Enumeration
      * @return a {@link CloudLocation} proxy or <i>null</i>.
      */
@@ -81,26 +81,26 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudLocation} proxy from a {@link Enumeration} stereotyped << CloudLocation >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Enumeration}
      * @return a {@link CloudLocation} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6590f974-8f2d-43f4-8620-b60d380db5d8")
     public static CloudLocation safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (CloudLocation.canInstantiate(obj))
-        	return new CloudLocation(obj);
+            return new CloudLocation(obj);
         else
-        	throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudLocation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a364243b-7037-48f1-9e31-191025179339")
     public void addSubLocations(final CloudLocation obj) {
@@ -125,7 +125,8 @@ public class CloudLocation extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("de769175-751f-4f1f-96a6-a4de81198e09")
@@ -138,7 +139,6 @@ public class CloudLocation extends Location {
      * Get the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8ebe5a03-9cea-458d-820d-c75e8cb43510")
     public GeographicalRegion getGeographicalRegion() {
@@ -156,7 +156,6 @@ public class CloudLocation extends Location {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("657df6bf-b036-4bd3-9310-5792c37b0240")
     public CloudLocation getParent() {
@@ -167,14 +166,13 @@ public class CloudLocation extends Location {
      * Get the values of the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("54e5205f-bad8-415a-98e1-d2fa76dc16d1")
     public List<CloudLocation> getSubLocations() {
         List<CloudLocation> results = new ArrayList<>();
         for (ModelTree mObj : ((Enumeration) this.elt).getOwnedElement())
-        	if (CloudLocation.canInstantiate(mObj))
-        			results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
+            if (CloudLocation.canInstantiate(mObj))
+                    results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -198,7 +196,6 @@ public class CloudLocation extends Location {
      * Remove a value from the 'subLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06d3943c-b62c-411a-a89b-9b4426375f43")
     public boolean removeSubLocations(final CloudLocation obj) {
@@ -209,7 +206,6 @@ public class CloudLocation extends Location {
      * Set the value of the 'geographicalRegion' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("77bd6370-f61e-488b-98ab-9b8ab56c348d")
     public void setGeographicalRegion(final GeographicalRegion obj) {
@@ -248,23 +244,23 @@ public class CloudLocation extends Location {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dbba4a36-9ddc-4091-845e-ce9773ad51e2")
     public void setParent(final CloudLocation obj) {
         ((Enumeration) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("ec9686f5-d887-458d-8ea1-e918b75dfbcc")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("ef6e8ba0-836f-4604-97bd-cd9dfc0b0b23")
     protected CloudLocation(final Enumeration elt) {
         super(elt);
+    }
+
+    @objid ("45b6e359-3de0-4fd6-b652-5a0740bc791d")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("2601abe9-713a-4dc1-b7a9-b34987ddef2b")
@@ -290,11 +286,11 @@ public class CloudLocation extends Location {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

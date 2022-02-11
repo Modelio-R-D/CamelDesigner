@@ -74,7 +74,6 @@ public abstract class NamedElement extends CamelElement {
      * Add a value to the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8132070e-a49d-451e-99c6-b41ede6256ef")
     public void addAnnotations(final MmsObject obj) {
@@ -106,7 +105,6 @@ public abstract class NamedElement extends CamelElement {
      * Get the values of the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("10371aa9-b4b2-4903-baaf-f57b97e086a6")
     public List<MmsObject> getAnnotations() {
@@ -121,7 +119,8 @@ public abstract class NamedElement extends CamelElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
     @objid ("23e59f44-4f80-458e-a5b5-fa346a60b310")
@@ -140,7 +139,6 @@ public abstract class NamedElement extends CamelElement {
      * Remove a value from the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1b12c5ab-a70e-40e7-8bee-96c90c9be130")
     public boolean removeAnnotations(final MmsObject obj) {
@@ -214,11 +212,11 @@ public abstract class NamedElement extends CamelElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

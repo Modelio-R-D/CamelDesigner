@@ -67,9 +67,10 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Cause} proxy or <i>null</i>.
      */
@@ -79,26 +80,26 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Cause} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3d240f92-20d5-4901-9f5e-03c1f1f8bf7d")
     public static Cause safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Cause.canInstantiate(obj))
-        	return new Cause(obj);
+            return new Cause(obj);
         else
-        	throw new IllegalArgumentException("Cause: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Cause: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1603f439-4c10-4fd7-92c8-2b08bcd5c55f")
     public void addEventInstances(final EventInstance obj) {
@@ -123,7 +124,8 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("d88392b9-3e62-4f07-8040-b07aed8af9ba")
@@ -136,14 +138,13 @@ public class Cause extends FeatureClass {
      * Get the values of the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("63b937ff-4498-4664-b855-a51ee043356f")
     public List<EventInstance> getEventInstances() {
         List<EventInstance> results = new ArrayList<>();
         for (Instance mObj : ((Class) this.elt).getDeclared())
-        	if (EventInstance.canInstantiate(mObj))
-        			results.add((EventInstance)CamelDesignerProxyFactory.instantiate(mObj, EventInstance.STEREOTYPE_NAME));
+            if (EventInstance.canInstantiate(mObj))
+                    results.add((EventInstance)CamelDesignerProxyFactory.instantiate(mObj, EventInstance.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -157,23 +158,23 @@ public class Cause extends FeatureClass {
      * Remove a value from the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("170378bf-fe33-4b43-a3a8-09c5938769af")
     public boolean removeEventInstances(final EventInstance obj) {
         return (obj!=null)? ((Class) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
 
-    @objid ("78d732a5-578d-4a24-928d-9af6d04b1d4a")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("094868e6-4019-44bb-a62f-639dcf0631bc")
     protected Cause(final Class elt) {
         super(elt);
+    }
+
+    @objid ("77e66320-04fc-43a7-bde1-ab08319b2626")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("4715c654-3715-48a5-94ee-f2e266c99336")
@@ -195,11 +196,11 @@ public class Cause extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

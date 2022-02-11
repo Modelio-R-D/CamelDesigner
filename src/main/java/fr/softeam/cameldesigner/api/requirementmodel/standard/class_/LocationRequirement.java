@@ -69,9 +69,10 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link LocationRequirement} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationRequirement} proxy from a {@link Class} stereotyped << LocationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link LocationRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("525a23f8-b9f2-4e61-b211-3738750c4cd8")
     public static LocationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (LocationRequirement.canInstantiate(obj))
-        	return new LocationRequirement(obj);
+            return new LocationRequirement(obj);
         else
-        	throw new IllegalArgumentException("LocationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LocationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1801c569-ab37-4abf-b8e1-1144c97fecf4")
     public void addLocations(final Location obj) {
@@ -129,7 +130,8 @@ public class LocationRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("602bb2b5-5773-4c95-bf91-ad5d2bbf9b10")
@@ -142,7 +144,6 @@ public class LocationRequirement extends HardRequirement {
      * Get the values of the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a707bbb5-3660-4352-88a0-341ae3855b54")
     public List<Location> getLocations() {
@@ -176,7 +177,6 @@ public class LocationRequirement extends HardRequirement {
      * Remove a value from the 'locations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5946c057-a723-43a6-9bc6-7b171033b3af")
     public boolean removeLocations(final Location obj) {
@@ -205,16 +205,17 @@ public class LocationRequirement extends HardRequirement {
           this.elt.removeTags(LocationRequirement.MdaTypes.ALLREQUIRED_TAGTYPE_ELT);
     }
 
-    @objid ("101c65a6-bfcf-40d2-b9b1-1f3b02b30374")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("9499cabc-8a74-43cd-bdda-d790b625c0f5")
     protected LocationRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("d2ba389f-3214-47da-ba0a-9dfed12a11ad")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("6baddae1-dc4f-440f-a708-5529c6ec0aa5")
@@ -240,11 +241,11 @@ public class LocationRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

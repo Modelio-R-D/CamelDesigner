@@ -27,7 +27,11 @@ public abstract class MetricExporter<T extends Metric> extends FeatureExporter<T
     @objid ("d8cb3b4c-17d2-41c6-9bfd-303700c2ef6f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricTypeModel) && (elt instanceof camel.metric.Metric)) {
+            ((camel.metric.MetricTypeModel) context).getMetrics().add((camel.metric.Metric) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

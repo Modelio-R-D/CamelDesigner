@@ -8,10 +8,12 @@ package fr.softeam.cameldesigner.api.datamodel.standard.class_;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -67,9 +69,10 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link DataSource} proxy or <i>null</i>.
      */
@@ -79,19 +82,20 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataSource} proxy from a {@link Class} stereotyped << DataSource >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link DataSource} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ecf3f55b-28fa-4be7-9b48-93743732a034")
     public static DataSource safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataSource.canInstantiate(obj))
-        	return new DataSource(obj);
+            return new DataSource(obj);
         else
-        	throw new IllegalArgumentException("DataSource: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataSource: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("05255955-ecbe-4e45-8baa-0c71e3601ebb")
@@ -111,7 +115,8 @@ public class DataSource extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("3a3b067d-44ca-4e79-af70-cf81a4be8b2c")
@@ -134,7 +139,6 @@ public class DataSource extends FeatureClass {
      * Get the value of the 'SoftwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("05a6cc5b-9684-4a58-8e8e-d0eb2a17f8c5")
     public SoftwareComponent getSoftwareComponent() {
@@ -168,7 +172,6 @@ public class DataSource extends FeatureClass {
      * Set the value of the 'SoftwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3a0e463e-bb51-434d-b5ce-e12e61337821")
     public void setSoftwareComponent(final SoftwareComponent obj) {
@@ -195,6 +198,14 @@ public class DataSource extends FeatureClass {
         super(elt);
     }
 
+    @objid ("55fd66d7-eecf-4c3c-a327-20878ccbdcf8")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("a70d5efb-a707-47d2-9505-b57f05717b88")
     public static final class MdaTypes {
         @objid ("bf935159-11a9-4873-b52e-439f54f3ea77")
@@ -218,11 +229,11 @@ public class DataSource extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

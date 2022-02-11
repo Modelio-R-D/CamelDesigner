@@ -71,9 +71,10 @@ public class ProviderRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ProviderRequirement} proxy or <i>null</i>.
      */
@@ -83,19 +84,20 @@ public class ProviderRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ProviderRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("42611448-92e2-4a9e-acd5-e99d9a9c98dd")
     public static ProviderRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ProviderRequirement.canInstantiate(obj))
-        	return new ProviderRequirement(obj);
+            return new ProviderRequirement(obj);
         else
-        	throw new IllegalArgumentException("ProviderRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ProviderRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("89068397-57cc-4792-a696-05d9168beec2")
@@ -125,7 +127,8 @@ public class ProviderRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b36b5820-bcce-42eb-9636-ff72990029a7")
@@ -170,16 +173,17 @@ public class ProviderRequirement extends HardRequirement {
         this.elt.putTagValues(ProviderRequirement.MdaTypes.PROVIDERNAMES_TAGTYPE_ELT, values);
     }
 
-    @objid ("f28f08ba-a525-4fe0-923d-15546c3bb162")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        return result;
-    }
-
     @objid ("82136e3c-bf94-4fb6-8bcb-8c533dc11ef2")
     protected ProviderRequirement(final Class elt) {
         super(elt);
+    }
+
+    @objid ("0b36709e-372e-403e-a829-3592c465122a")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("562f3532-fd37-4432-a9ac-219453fb6332")
@@ -209,11 +213,11 @@ public class ProviderRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

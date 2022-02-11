@@ -13,6 +13,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricObjectBinding;
@@ -66,9 +67,10 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MetricInstance} proxy or <i>null</i>.
      */
@@ -78,26 +80,26 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MetricInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("e6710fb9-7637-48c5-97cd-57aed91c0414")
     public static MetricInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MetricInstance.canInstantiate(obj))
-        	return new MetricInstance(obj);
+            return new MetricInstance(obj);
         else
-        	throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b07f171f-f9a1-40b3-9558-4957b19ea0a8")
     public void addCompositngMetricInstances(final MetricInstance obj) {
@@ -129,7 +131,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the values of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a7eee09b-b642-4c47-9a78-42e66fdca60d")
     public List<MetricInstance> getCompositngMetricInstances() {
@@ -145,7 +146,8 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("8a0b660f-883b-4555-98fb-906e41c617e7")
@@ -158,7 +160,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1e6afb41-c054-411c-b050-20d79e1ba8e0")
     public MetricContext getMetricContext() {
@@ -176,7 +177,6 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("535d83ec-1f8c-477c-b0d1-b3b319d9d7ab")
     public MetricObjectBinding getObjectBinding() {
@@ -200,7 +200,6 @@ public class MetricInstance extends FeatureInstance {
      * Remove a value from 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f964423b-9acb-4025-b9f1-3fa838a5d379")
     public boolean removeCompositngMetricInstances(final MetricInstance obj) {
@@ -220,7 +219,6 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("427e10af-4de9-4e59-8c08-d673b438034b")
     public void setMetricContext(final MetricContext obj) {
@@ -246,7 +244,6 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("63b8fbe6-ad12-4cda-b7f4-3c7e54e64e69")
     public void setObjectBinding(final MetricObjectBinding obj) {
@@ -273,6 +270,14 @@ public class MetricInstance extends FeatureInstance {
         super(elt);
     }
 
+    @objid ("f9933d62-5596-46a0-b5cc-4d94e55a5d7f")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("45ad6582-8f92-4a4c-8f72-6829ca4fe86b")
     public static final class MdaTypes {
         @objid ("6fb82c74-50b8-4a6c-beba-5e98a5cd1f5b")
@@ -292,11 +297,11 @@ public class MetricInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

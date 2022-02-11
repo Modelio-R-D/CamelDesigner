@@ -68,9 +68,10 @@ public class FeatureClass extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link FeatureClass} proxy or <i>null</i>.
      */
@@ -80,26 +81,26 @@ public class FeatureClass extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link FeatureClass} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("0dbde7ae-ba0c-40e7-a1ee-1eabf453d373")
     public static FeatureClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (FeatureClass.canInstantiate(obj))
-        	return new FeatureClass(obj);
+            return new FeatureClass(obj);
         else
-        	throw new IllegalArgumentException("FeatureClass: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FeatureClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("80036064-eedc-4fec-bd1e-4d32788f388f")
     public void addAttributes(final AttributeAttribute obj) {
@@ -111,7 +112,6 @@ public class FeatureClass extends Feature {
      * Add a value to the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d83d0705-8388-42e2-8514-0d27f9884c63")
     public void addSubFeatures(final FeatureClass obj) {
@@ -139,19 +139,19 @@ public class FeatureClass extends Feature {
      * Get the values of the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9b57ec8e-8001-4ab3-a026-f17e333cccdc")
     public List<AttributeAttribute> getAttributes() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Class) this.elt).getOwnedAttribute())
-        	if (AttributeAttribute.canInstantiate(mObj))
-        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+            if (AttributeAttribute.canInstantiate(mObj))
+                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9f72f18a-06b4-44d4-9901-03a395cdf0ea")
@@ -164,7 +164,6 @@ public class FeatureClass extends Feature {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("914bcd24-5f38-49c6-8478-886f3124f91f")
     public FeatureClass getParent() {
@@ -175,14 +174,13 @@ public class FeatureClass extends Feature {
      * Get the values of the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ca02e591-8c4c-4bc8-9410-d4ab3ff0c99e")
     public List<FeatureClass> getSubFeatures() {
         List<FeatureClass> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement())
-        	if (FeatureClass.canInstantiate(mObj))
-        			results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
+            if (FeatureClass.canInstantiate(mObj))
+                    results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
@@ -196,7 +194,6 @@ public class FeatureClass extends Feature {
      * Remove a value from the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d3ff792f-a44d-4944-9f72-c41082fe25ec")
     public boolean removeAttributes(final AttributeAttribute obj) {
@@ -207,7 +204,6 @@ public class FeatureClass extends Feature {
      * Remove a value from the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1adea5cc-80ee-4b6d-90e3-3bef9c476399")
     public boolean removeSubFeatures(final FeatureClass obj) {
@@ -218,7 +214,6 @@ public class FeatureClass extends Feature {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("66751c30-5b64-45df-971a-f5d08fa01e4e")
     public void setParent(final FeatureClass obj) {
@@ -256,11 +251,11 @@ public class FeatureClass extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }
