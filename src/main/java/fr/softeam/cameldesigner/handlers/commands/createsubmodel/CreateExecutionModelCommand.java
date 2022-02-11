@@ -30,7 +30,7 @@ public class CreateExecutionModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Execution Model");
-            diagram.setDefaultName("Execution Diagram");
+            diagram.setDefaultName("Execution diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -27,7 +27,7 @@ public class CreateDataTypeModelTool extends CreateSubModelTool {
         try( ITransaction transaction = session.createTransaction("Create Data Type Model")){
         
             DataTypeModel subModel = DataTypeModel.create();
-            DataModelDiagram diagram = DataModelDiagram.create();
+            DataTypeModelDiagram diagram = DataTypeModelDiagram.create();
         
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());

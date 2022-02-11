@@ -7,26 +7,17 @@
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.cameldiagrams.infrastructure.abstractdiagram.AbstractCamelDiagram;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -35,12 +26,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <br/><i>null</i></p>
  */
 @objid ("05f54bfd-dbfd-4864-835a-f9d72e6569b8")
-public class DataModelDiagram extends AbstractCamelDiagram {
+public class DataTypeModelDiagram extends AbstractCamelDiagram {
     @objid ("72750bce-2865-4724-b0f7-c89ed6bc0059")
-    public static final String STEREOTYPE_NAME = "DataModelDiagram";
+    public static final String STEREOTYPE_NAME = "DataTypeModelDiagram";
 
     /**
-     * Tells whether a {@link DataModelDiagram proxy} can be instantiated from a {@link MObject} checking it is a {@link ClassDiagram} stereotyped << DataModelDiagram >>.
+     * Tells whether a {@link DataTypeModelDiagram proxy} can be instantiated from a {@link MObject} checking it is a {@link ClassDiagram} stereotyped << DataModelDiagram >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
      * 
@@ -49,47 +40,47 @@ public class DataModelDiagram extends AbstractCamelDiagram {
      */
     @objid ("38489676-9fee-4613-985d-9f5ef4e39bdf")
     public static boolean canInstantiate(final MObject elt) {
-        return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataModelDiagram.STEREOTYPE_NAME));
+        return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataTypeModelDiagram.STEREOTYPE_NAME));
     }
 
     /**
-     * Create a new {@link ClassDiagram} stereotyped << DataModelDiagram >> then instantiate a {@link DataModelDiagram} proxy.
+     * Create a new {@link ClassDiagram} stereotyped << DataModelDiagram >> then instantiate a {@link DataTypeModelDiagram} proxy.
      * 
-     * @return a {@link DataModelDiagram} proxy on the created {@link ClassDiagram}.
+     * @return a {@link DataTypeModelDiagram} proxy on the created {@link ClassDiagram}.
      */
     @objid ("f280c9e0-0706-4bee-a267-8767232b1ff1")
-    public static DataModelDiagram create() {
+    public static DataTypeModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
-        e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataModelDiagram.STEREOTYPE_NAME);
-        return DataModelDiagram.instantiate((ClassDiagram)e);
+        e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataTypeModelDiagram.STEREOTYPE_NAME);
+        return DataTypeModelDiagram.instantiate((ClassDiagram)e);
     }
 
     /**
-     * Tries to instantiate a {@link DataModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataModelDiagram >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
      * 
      * @param obj a ClassDiagram
-     * @return a {@link DataModelDiagram} proxy or <i>null</i>.
+     * @return a {@link DataTypeModelDiagram} proxy or <i>null</i>.
      */
     @objid ("000c5c99-030b-407a-8e9e-305a48796f8b")
-    public static DataModelDiagram instantiate(final ClassDiagram obj) {
-        return DataModelDiagram.canInstantiate(obj) ? new DataModelDiagram(obj) : null;
+    public static DataTypeModelDiagram instantiate(final ClassDiagram obj) {
+        return DataTypeModelDiagram.canInstantiate(obj) ? new DataTypeModelDiagram(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DataModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataModelDiagram >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
      * 
      * @param obj a {@link ClassDiagram}
-     * @return a {@link DataModelDiagram} proxy.
+     * @return a {@link DataTypeModelDiagram} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("bca7e860-948c-49a8-b9c3-64abc40360ba")
-    public static DataModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
-        if (DataModelDiagram.canInstantiate(obj))
-            return new DataModelDiagram(obj);
+    public static DataTypeModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
+        if (DataTypeModelDiagram.canInstantiate(obj))
+            return new DataTypeModelDiagram(obj);
         else
             throw new IllegalArgumentException("DataModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
@@ -106,7 +97,7 @@ public class DataModelDiagram extends AbstractCamelDiagram {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        DataModelDiagram other = (DataModelDiagram) obj;
+        DataTypeModelDiagram other = (DataTypeModelDiagram) obj;
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
@@ -135,7 +126,7 @@ public class DataModelDiagram extends AbstractCamelDiagram {
     }
 
     @objid ("37c5a8e6-5ed9-4490-a94b-43eb15ed88d7")
-    protected DataModelDiagram(final ClassDiagram elt) {
+    protected DataTypeModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 

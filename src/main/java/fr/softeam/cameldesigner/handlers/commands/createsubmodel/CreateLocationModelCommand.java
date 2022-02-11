@@ -30,7 +30,7 @@ public class CreateLocationModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Location Model");
-            diagram.setDefaultName("Location Diagram");
+            diagram.setDefaultName("Location diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

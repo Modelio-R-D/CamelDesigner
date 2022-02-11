@@ -2,11 +2,10 @@ package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
-import fr.softeam.cameldesigner.handlers.propertypages.core.SubModelPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("0b20bcdf-858a-4eab-abc0-ff9c39b25dfd")
-public class MetricTypeModelPropertyPage<T extends MetricTypeModel> extends SubModelPropertyPage<T> {
+public class MetricTypeModelPropertyPage<T extends MetricTypeModel> extends MetricModelPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

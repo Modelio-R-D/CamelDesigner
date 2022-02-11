@@ -30,7 +30,7 @@ public class CreateDataInstanceModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Data Instance Model");
-            diagram.setDefaultName("Data Instance Diagram");
+            diagram.setDefaultName("Data Instance diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

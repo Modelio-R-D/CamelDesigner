@@ -1,12 +1,12 @@
 package fr.softeam.cameldesigner.handlers.propertypages.diagram;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricTypeModelDiagram;
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("d10087a5-8a11-47bb-b10c-0481f8393dd6")
-public class DeploymentModelDiagramPropertyPage<T extends DeploymentModelDiagram> extends NamedElementPropertyPage<T> {
+@objid ("12784c8a-bc28-4000-92df-b041d351fd5c")
+public class MetricTypeModelDiagramPropertyPage<T extends MetricTypeModelDiagram> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -15,7 +15,7 @@ public class DeploymentModelDiagramPropertyPage<T extends DeploymentModelDiagram
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("8e839866-1de9-4782-b985-3f98907244b1")
+    @objid ("368c2321-db9e-42b3-9e45-c2967e5afc56")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
@@ -27,14 +27,14 @@ public class DeploymentModelDiagramPropertyPage<T extends DeploymentModelDiagram
      * 
      * @param table : the property table to fulfill
      */
-    @objid ("f3449f98-078b-496b-bd49-942818e0571a")
+    @objid ("e97a46d3-41e6-4794-bef1-34f2b13615c7")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
     }
 
-    @objid ("f27da898-2aa3-4c91-a1d4-ba2ff3c88c1e")
-    public DeploymentModelDiagramPropertyPage(T elt) {
+    @objid ("37cd1930-514d-4915-8d2e-f59962562806")
+    public MetricTypeModelDiagramPropertyPage(T elt) {
         super(elt);
     }
 

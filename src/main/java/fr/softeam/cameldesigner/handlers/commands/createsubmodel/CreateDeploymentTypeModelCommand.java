@@ -30,7 +30,7 @@ public class CreateDeploymentTypeModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Deployment Type Model");
-            diagram.setDefaultName("Deployment Type Diagram");
+            diagram.setDefaultName("Deployment Type diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

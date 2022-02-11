@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -27,7 +27,7 @@ public class CreateMetricInstanceModelTool extends CreateSubModelTool {
         try( ITransaction transaction = session.createTransaction("Create Metric Instance Model")){
         
             MetricInstanceModel subModel = MetricInstanceModel.create();
-            MetricModelDiagram diagram = MetricModelDiagram.create();
+            MetricInstanceModelDiagram diagram = MetricInstanceModelDiagram.create();
         
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());

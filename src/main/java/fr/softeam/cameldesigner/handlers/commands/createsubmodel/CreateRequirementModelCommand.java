@@ -33,7 +33,7 @@ public class CreateRequirementModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Requirement Type Model");
-            diagram.setDefaultName("Requirement Type Diagram");
+            diagram.setDefaultName("Requirement Type diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

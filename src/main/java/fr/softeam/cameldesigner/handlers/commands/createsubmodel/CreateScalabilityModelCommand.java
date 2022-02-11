@@ -33,7 +33,7 @@ public class CreateScalabilityModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Scalability Model");
-            diagram.setDefaultName("Scalability Diagram");
+            diagram.setDefaultName("Scalability diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

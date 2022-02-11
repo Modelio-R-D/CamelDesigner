@@ -30,7 +30,7 @@ public class CreateSecurityModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Security Model");
-            diagram.setDefaultName("Security Diagram");
+            diagram.setDefaultName("Security diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

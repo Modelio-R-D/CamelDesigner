@@ -22,12 +22,12 @@ import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ConstraintModelDiagram;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataInstanceModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetadataModelDiagram;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.OrganisationModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.RequirementModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ScalabilityModelDiagram;
@@ -210,13 +210,14 @@ import fr.softeam.cameldesigner.handlers.propertypages.deploymentinstance.Softwa
 import fr.softeam.cameldesigner.handlers.propertypages.deploymentinstance.VMInstancePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.CamelModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.DataInstanceModelDiagramPropertyPage;
-import fr.softeam.cameldesigner.handlers.propertypages.diagram.DataModelDiagramPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.diagram.DataTypeModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.DeploymentInstanceModelDiagramPropertyPage;
-import fr.softeam.cameldesigner.handlers.propertypages.diagram.DeploymentModelDiagramPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.diagram.DeploymentTypeModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.ExecutionModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.LocationModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.MetadataModelDiagramPropertyPage;
-import fr.softeam.cameldesigner.handlers.propertypages.diagram.MetricModelDiagramPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.diagram.MetricInstanceModelDiagramPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.diagram.MetricTypeModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.OrganisationModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.RequirementModelDiagramPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.diagram.ScalabilityModelDiagramPropertyPage;
@@ -351,7 +352,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  * <li><< CamelViewPoint >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link CamelViewPoint}
  * <li><< ExecutionModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link ExecutionModelDiagram}
  * <li><< MetricModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link MetricModelDiagram}
- * <li><< DataModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link DataModelDiagram}
+ * <li><< DataModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link DataTypeModelDiagram}
  * <li><< LocationModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link LocationModelDiagram}
  * <li><< RequirementModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link RequirementModelDiagram}
  * <li><< ConstraintModelDiagram >> on a {@link org.modelio.metamodel.diagrams.ClassDiagram}: instantiates a {@link ConstraintModelDiagram}
@@ -752,16 +753,16 @@ public class CamelDesignerPropertyPageFactory {
         @Override
         public final Object visitClassDiagram(ClassDiagram obj) {
             switch (this.stName) {
-            //                case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint.STEREOTYPE_NAME: return new CamelViewPointPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint.instantiate(obj));
+            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricInstanceModelDiagram.STEREOTYPE_NAME: return new MetricInstanceModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricInstanceModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram.STEREOTYPE_NAME: return new ExecutionModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram.instantiate(obj));
-            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram.STEREOTYPE_NAME: return new MetricModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram.instantiate(obj));
-            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram.STEREOTYPE_NAME: return new DataModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataModelDiagram.instantiate(obj));
+            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricTypeModelDiagram.STEREOTYPE_NAME: return new MetricTypeModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricTypeModelDiagram.instantiate(obj));
+            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram.STEREOTYPE_NAME: return new DataTypeModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram.STEREOTYPE_NAME: return new LocationModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.RequirementModelDiagram.STEREOTYPE_NAME: return new RequirementModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.RequirementModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetadataModelDiagram.STEREOTYPE_NAME: return new MetadataModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetadataModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.OrganisationModelDiagram.STEREOTYPE_NAME: return new OrganisationModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.OrganisationModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ScalabilityModelDiagram.STEREOTYPE_NAME: return new ScalabilityModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ScalabilityModelDiagram.instantiate(obj));
-            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentModelDiagram.STEREOTYPE_NAME: return new DeploymentModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentModelDiagram.instantiate(obj));
+            case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentTypeModelDiagram.STEREOTYPE_NAME: return new DeploymentTypeModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentTypeModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.SecurityModelDiagram.STEREOTYPE_NAME: return new SecurityModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.SecurityModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.TypeModelDiagram.STEREOTYPE_NAME: return new TypeModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.TypeModelDiagram.instantiate(obj));
             case fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.UnitModelDiagram.STEREOTYPE_NAME: return new UnitModelDiagramPropertyPage<>(fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.UnitModelDiagram.instantiate(obj));

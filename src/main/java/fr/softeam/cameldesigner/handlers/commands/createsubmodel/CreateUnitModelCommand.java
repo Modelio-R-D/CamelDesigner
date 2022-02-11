@@ -30,7 +30,7 @@ public class CreateUnitModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Unit Model");
-            diagram.setDefaultName("Unit Model Diagram");
+            diagram.setDefaultName("Unit Model diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

@@ -30,7 +30,7 @@ public class CreateDeploymentInstanceModelCommand extends CreateSubModelCommand 
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Deployment Instance Model");
-            diagram.setDefaultName("Deployment Instance Diagram");
+            diagram.setDefaultName("Deployment Instance diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

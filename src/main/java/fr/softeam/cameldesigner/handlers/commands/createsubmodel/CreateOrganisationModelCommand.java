@@ -33,7 +33,7 @@ public class CreateOrganisationModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Organisation Type Model");
-            diagram.setDefaultName("Organisation Type Diagram");
+            diagram.setDefaultName("Organisation Type diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

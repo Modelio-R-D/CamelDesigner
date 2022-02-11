@@ -33,7 +33,7 @@ public class CreateMetadataModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Metadata Model");
-            diagram.setDefaultName("Metadata Diagram");
+            diagram.setDefaultName("Metadata diagram");
             this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
         
             transaction.commit();

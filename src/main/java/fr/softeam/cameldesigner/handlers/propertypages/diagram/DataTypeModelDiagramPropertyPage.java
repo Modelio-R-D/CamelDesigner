@@ -1,11 +1,12 @@
-package fr.softeam.cameldesigner.handlers.propertypages.metric;
+package fr.softeam.cameldesigner.handlers.propertypages.diagram;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
+import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("6d55ece7-b9c8-47ab-9f9b-c767bc8cc891")
-public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> extends MetricModelPropertyPage<T> {
+@objid ("4795c7cb-eab2-481f-a530-424aed355c84")
+public class DataTypeModelDiagramPropertyPage<T extends DataTypeModelDiagram> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -14,7 +15,7 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("c808eff3-94b1-4b26-87a7-07404c0b8ca4")
+    @objid ("71534023-ba4e-4d65-8dcc-8be4545bbc7b")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
@@ -26,14 +27,14 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
      * 
      * @param table : the property table to fulfill
      */
-    @objid ("c8b7ddb2-aeb6-4a67-b516-6a28f3401f0d")
+    @objid ("86849e81-200e-45f1-9067-6710ee04d047")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
     }
 
-    @objid ("90c1bbf6-9deb-4fb5-b0dd-cdc695ca3068")
-    public MetricInstanceModelPropertyPage(T elt) {
+    @objid ("07d73350-b562-4c1e-8f96-ad92b2011789")
+    public DataTypeModelDiagramPropertyPage(T elt) {
         super(elt);
     }
 

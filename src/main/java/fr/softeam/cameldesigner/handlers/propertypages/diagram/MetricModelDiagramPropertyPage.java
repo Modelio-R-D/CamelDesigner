@@ -1,12 +1,12 @@
 package fr.softeam.cameldesigner.handlers.propertypages.diagram;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricTypeModelDiagram;
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("75cbcb89-e859-4905-8b84-26e716e2ba32")
-public class MetricModelDiagramPropertyPage<T extends MetricModelDiagram> extends NamedElementPropertyPage<T> {
+public class MetricModelDiagramPropertyPage<T extends MetricTypeModelDiagram> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

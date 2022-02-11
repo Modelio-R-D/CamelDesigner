@@ -1,11 +1,12 @@
-package fr.softeam.cameldesigner.handlers.propertypages.metric;
+package fr.softeam.cameldesigner.handlers.propertypages.diagram;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentTypeModelDiagram;
+import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("6d55ece7-b9c8-47ab-9f9b-c767bc8cc891")
-public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> extends MetricModelPropertyPage<T> {
+@objid ("d10087a5-8a11-47bb-b10c-0481f8393dd6")
+public class DeploymentTypeModelDiagramPropertyPage<T extends DeploymentTypeModelDiagram> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -14,7 +15,7 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("c808eff3-94b1-4b26-87a7-07404c0b8ca4")
+    @objid ("8e839866-1de9-4782-b985-3f98907244b1")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
@@ -26,14 +27,14 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
      * 
      * @param table : the property table to fulfill
      */
-    @objid ("c8b7ddb2-aeb6-4a67-b516-6a28f3401f0d")
+    @objid ("f3449f98-078b-496b-bd49-942818e0571a")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
     }
 
-    @objid ("90c1bbf6-9deb-4fb5-b0dd-cdc695ca3068")
-    public MetricInstanceModelPropertyPage(T elt) {
+    @objid ("f27da898-2aa3-4c91-a1d4-ba2ff3c88c1e")
+    public DeploymentTypeModelDiagramPropertyPage(T elt) {
         super(elt);
     }
 
