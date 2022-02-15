@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.requirement;
 
-import camel.requirement.RequirementFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.requirement.RequirementFactory;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
 import fr.softeam.cameldesigner.exchange.exporter.core.SubModelExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8ac5b9ff-e7b4-4179-8918-cad2c82958c5")
 public class RequirementModelExporter<T extends RequirementModel> extends SubModelExporter<T> {
@@ -28,7 +28,11 @@ public class RequirementModelExporter<T extends RequirementModel> extends SubMod
     @objid ("f7428997-5c75-4a91-bb9d-2e6716c639f5")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.requirement.RequirementModel)) {
+            ((camel.core.CamelModel) context).getRequirementModels().add((camel.requirement.RequirementModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

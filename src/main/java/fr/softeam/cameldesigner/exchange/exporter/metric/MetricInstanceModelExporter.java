@@ -1,13 +1,12 @@
 package fr.softeam.cameldesigner.exchange.exporter.metric;
 
-import camel.metric.MetricFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
-import fr.softeam.cameldesigner.exchange.exporter.core.SubModelExporter;
 import org.eclipse.emf.cdo.CDOObject;
+import camel.metric.MetricFactory;
+import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
 
 @objid ("af89367e-2792-4043-b7e3-8f0c2ac99589")
-public class MetricInstanceModelExporter<T extends MetricInstanceModel> extends SubModelExporter<T> {
+public class MetricInstanceModelExporter<T extends MetricInstanceModel> extends MetricModelExporter<T> {
     @objid ("92bc1484-7bd6-4f99-a7e3-6e595918cde2")
     public MetricInstanceModelExporter(T elt) {
         super(elt);
