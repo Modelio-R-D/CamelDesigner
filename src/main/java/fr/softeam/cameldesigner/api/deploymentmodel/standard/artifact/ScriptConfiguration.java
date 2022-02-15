@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -36,37 +36,37 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e807108a-a1a4-47d3-95f5-bf80391e7656")
 public class ScriptConfiguration extends Configuration {
-    @objid ("a2e77a74-3994-4179-84ba-7b035c83cdb4")
+    @objid ("4655e235-1459-42ca-9566-f2488368a84a")
     public static final String STEREOTYPE_NAME = "ScriptConfiguration";
 
-    @objid ("3298aa8d-ab29-4443-bbf6-b7c7766ecfe5")
+    @objid ("71d3f3fe-9a00-4d98-aa52-ee481bf3a052")
     public static final String DEVOPSTOOL_TAGTYPE = "devopsTool";
 
-    @objid ("e1de686a-928b-46e0-91b3-4257c109b9ac")
+    @objid ("0e3178b2-614e-490d-8795-ae6df1716585")
     public static final String IMAGEID_TAGTYPE = "imageId";
 
-    @objid ("befcb314-9e94-4313-b513-e468399cc081")
+    @objid ("e5a92d7a-871f-4767-b723-ca26d4c3138d")
     public static final String OS_TAGTYPE = "os";
 
-    @objid ("0be6e242-b238-4e7b-8551-64e01c3a3876")
+    @objid ("ba3f192b-8647-4ecc-ad91-aa03af6c1e3a")
     public static final String CONFIGURECOMMAND_NOTETYPE = "configureCommand";
 
-    @objid ("0f679484-cf31-452c-bf70-ed40134e6ffa")
+    @objid ("500f4678-96e1-460f-aa20-f147df225854")
     public static final String DOWNLOADCOMMAND_NOTETYPE = "downloadCommand";
 
-    @objid ("49c425a8-2881-4c51-8813-5e278dd17c6c")
+    @objid ("740a77da-572f-4733-99d9-e60f7c810984")
     public static final String INSTALLCOMMAND_NOTETYPE = "installCommand";
 
-    @objid ("6a4ed63b-f591-473c-827b-eaa5b0f31963")
+    @objid ("32d417fc-7c4f-4d63-8ccb-e8dede255ff1")
     public static final String STARTCOMMAND_NOTETYPE = "startCommand";
 
-    @objid ("566ee7cd-864f-4b8d-84fa-fd524e4276ee")
+    @objid ("4f5341f0-6f3c-408a-a994-d7ab6bee361f")
     public static final String STOPCOMMAND_NOTETYPE = "stopCommand";
 
-    @objid ("f6c28cac-8374-4ff7-a69c-36641749b256")
+    @objid ("377a60aa-36ae-4bc3-8042-78861fd730a6")
     public static final String UPDATECOMMAND_NOTETYPE = "updateCommand";
 
-    @objid ("a949efd5-2671-4d45-9223-68eb062c7fb7")
+    @objid ("add95ff1-34d0-4b33-a0ad-b629ccfcd549")
     public static final String UPLOADCOMMAND_NOTETYPE = "uploadCommand";
 
     /**
@@ -77,7 +77,7 @@ public class ScriptConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f1af1520-4a30-4c76-88af-a8dfdcab926f")
+    @objid ("23ba7576-20ec-453a-bd21-3f63a6d4090f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScriptConfiguration.STEREOTYPE_NAME));
     }
@@ -87,7 +87,7 @@ public class ScriptConfiguration extends Configuration {
      * 
      * @return a {@link ScriptConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("7480d440-eb14-4911-a226-cc9ce356d7b9")
+    @objid ("f635cc50-00f0-4142-8582-d86d745518e7")
     public static ScriptConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ScriptConfiguration.STEREOTYPE_NAME);
@@ -95,36 +95,34 @@ public class ScriptConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Artifact
      * @return a {@link ScriptConfiguration} proxy or <i>null</i>.
      */
-    @objid ("43673635-077c-48ff-a242-93c8513fb016")
+    @objid ("ef2c534a-4e8e-47a5-ad48-30107750529e")
     public static ScriptConfiguration instantiate(final Artifact obj) {
         return ScriptConfiguration.canInstantiate(obj) ? new ScriptConfiguration(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ScriptConfiguration} proxy from a {@link Artifact} stereotyped << ScriptConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Artifact}
      * @return a {@link ScriptConfiguration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f473d377-4500-4363-b1ce-ada6b14e4113")
+    @objid ("a31186e8-ed44-4d61-9d00-402e67a8efc3")
     public static ScriptConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ScriptConfiguration.canInstantiate(obj))
-            return new ScriptConfiguration(obj);
+        	return new ScriptConfiguration(obj);
         else
-            throw new IllegalArgumentException("ScriptConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ScriptConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("66a26b83-b5a1-4dc2-8525-a1c75e28cdc4")
+    @objid ("279ba89a-e80b-4659-afa7-46098ae7f364")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -145,7 +143,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("f9257205-6def-4201-9ae5-403da37fc9c6")
+    @objid ("19b32cbe-ebe4-439b-8ec5-7c07e1561744")
     public String getConfigureCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.CONFIGURECOMMAND_NOTETYPE_ELT);
     }
@@ -155,7 +153,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("aa8a25b8-3f57-477c-bd07-f54b68212f87")
+    @objid ("ac9655fa-6e23-4133-ba53-3ab195de8614")
     public String getDevopsTool() {
         return this.elt.getTagValue(ScriptConfiguration.MdaTypes.DEVOPSTOOL_TAGTYPE_ELT);
     }
@@ -165,17 +163,16 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("3ee81a02-813c-48ec-99f1-035f4de29351")
+    @objid ("5da0578b-4fa1-4f31-aad3-749c27aeb5b3")
     public String getDownloadCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.DOWNLOADCOMMAND_NOTETYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Artifact}.
-     * 
+     * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("33cd1a3e-ef8f-4142-bbe2-de0e8399d4de")
+    @objid ("ff902606-f19c-4d41-a72b-8d49c89802c5")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -186,7 +183,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("167823e3-d8bc-4b25-8afa-b3e648d44b51")
+    @objid ("6f989acd-4fcb-42f7-8b14-26089dcee13b")
     public String getImageId() {
         return this.elt.getTagValue(ScriptConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT);
     }
@@ -196,7 +193,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("fd91fb22-ff26-4b2a-8bd4-8b1fe364e64d")
+    @objid ("0b90dd28-b381-425b-b4c5-f2c2cc6aeb4c")
     public String getInstallCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.INSTALLCOMMAND_NOTETYPE_ELT);
     }
@@ -206,7 +203,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a8c7654b-bbba-4e4f-9991-53fc372b1116")
+    @objid ("6e000a7e-52d0-46d7-bb6e-24a756457e3b")
     public String getOs() {
         return this.elt.getTagValue(ScriptConfiguration.MdaTypes.OS_TAGTYPE_ELT);
     }
@@ -216,7 +213,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("1d8c6a6c-d3eb-4bc8-8be0-eea32b013b51")
+    @objid ("bb637dad-41fb-4cec-83ed-087d05056fea")
     public String getStartCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.STARTCOMMAND_NOTETYPE_ELT);
     }
@@ -226,7 +223,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("377853fe-e513-4ac2-8a96-fd297f5a3023")
+    @objid ("69affd5c-8e2a-4fc2-82d5-1670e569aa46")
     public String getStopCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.STOPCOMMAND_NOTETYPE_ELT);
     }
@@ -236,7 +233,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("59bca648-b301-4bc9-8432-3595b115a10e")
+    @objid ("6fb1c3d9-dc4a-495f-8431-f6c8f5479d61")
     public String getUpdateCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.UPDATECOMMAND_NOTETYPE_ELT);
     }
@@ -246,12 +243,12 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("e46a288a-ae13-451a-bf1d-11fda3d86e92")
+    @objid ("457ebd7b-d4ce-4a6e-86a0-7d07ab3a7409")
     public String getUploadCommandNote() {
         return this.elt.getNoteContent(ScriptConfiguration.MdaTypes.UPLOADCOMMAND_NOTETYPE_ELT);
     }
 
-    @objid ("7b9e9082-47fd-449a-8a53-cb577453dbf0")
+    @objid ("1539345d-96dd-4b74-9ca3-68b21949937c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -262,7 +259,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("6ca8c4ee-a721-4dce-b774-884ec246d899")
+    @objid ("d647189e-0307-46f7-ae30-60f689377780")
     public void setConfigureCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.CONFIGURECOMMAND_NOTETYPE_ELT, value);
     }
@@ -272,7 +269,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("52752abe-08e6-4bf0-a34b-c376ee0d37c1")
+    @objid ("7d7efaa5-ab8c-4db3-9ab1-622a0d6017cb")
     public void setDevopsTool(final String value) {
         this.elt.putTagValue(ScriptConfiguration.MdaTypes.DEVOPSTOOL_TAGTYPE_ELT, value);
     }
@@ -282,7 +279,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("40c37d60-8186-4a8c-a715-89ac20061d61")
+    @objid ("e9947c6e-1a65-44b3-b281-b4ab85adeff5")
     public void setDownloadCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.DOWNLOADCOMMAND_NOTETYPE_ELT, value);
     }
@@ -292,7 +289,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fcbbdd0e-369d-47f9-bddc-ae8b78f37187")
+    @objid ("a2175996-6863-4a99-9dad-a0109277c9db")
     public void setImageId(final String value) {
         this.elt.putTagValue(ScriptConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT, value);
     }
@@ -302,7 +299,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("17ec4447-63da-4692-8bdf-06ca1b2c8daf")
+    @objid ("5c524b01-ed0e-4312-8661-b551da587960")
     public void setInstallCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.INSTALLCOMMAND_NOTETYPE_ELT, value);
     }
@@ -312,7 +309,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8302b845-54b7-499c-af60-cb6883fac164")
+    @objid ("3917b07c-536a-480a-a612-435e5ebd58ad")
     public void setOs(final String value) {
         this.elt.putTagValue(ScriptConfiguration.MdaTypes.OS_TAGTYPE_ELT, value);
     }
@@ -322,7 +319,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("9c5f6383-6804-44e0-8374-fe63c03106e3")
+    @objid ("bc4a7c73-0cee-4f23-a321-86978c8997b3")
     public void setStartCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.STARTCOMMAND_NOTETYPE_ELT, value);
     }
@@ -332,7 +329,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("715b2fe4-0d0b-4696-9597-be120b60f9fa")
+    @objid ("95c25352-ff88-45a9-ba05-bda966eda5ba")
     public void setStopCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.STOPCOMMAND_NOTETYPE_ELT, value);
     }
@@ -342,7 +339,7 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("5c07b91e-c8ee-421f-a0af-b2497079d752")
+    @objid ("2f85236e-e888-4d90-a087-47975a2a8df7")
     public void setUpdateCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.UPDATECOMMAND_NOTETYPE_ELT, value);
     }
@@ -352,14 +349,9 @@ public class ScriptConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("95306f47-a3aa-4b0e-9c97-af730861760e")
+    @objid ("b7e291e7-bdd1-4477-bd0f-bc42179c68c2")
     public void setUploadCommandNote(final String value) {
         this.elt.putNoteContent(ScriptConfiguration.MdaTypes.UPLOADCOMMAND_NOTETYPE_ELT, value);
-    }
-
-    @objid ("10ca7bb9-d314-4f92-9d0c-6f6687e4e461")
-    protected ScriptConfiguration(final Artifact elt) {
-        super(elt);
     }
 
     @objid ("6ac477ca-5246-4191-ac72-4c2befbb4a98")
@@ -370,48 +362,53 @@ public class ScriptConfiguration extends Configuration {
         return result;
     }
 
+    @objid ("50857d4b-0c9f-4c88-8a19-8b61772aa42e")
+    protected ScriptConfiguration(final Artifact elt) {
+        super(elt);
+    }
+
     @objid ("00dd1668-d91f-4281-aae3-7ec4cef1c015")
     public static final class MdaTypes {
-        @objid ("15e9ed42-4d11-4c27-bd1d-50eb59b5b068")
+        @objid ("4562ec34-f399-491c-b53e-027a60797c96")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("fcb5ef80-c72f-48c6-9539-d356e6748c0e")
+        @objid ("b1964b95-9095-4abf-96fb-6f465ed99552")
         public static TagType DEVOPSTOOL_TAGTYPE_ELT;
 
-        @objid ("80ae7554-869c-4a3d-b2e3-6b45f08fde8d")
+        @objid ("0a46f366-0349-4bbe-a939-28c376838624")
         public static TagType OS_TAGTYPE_ELT;
 
-        @objid ("7b4b0ed1-f460-44fa-b7ff-a9ffd6cbbf6c")
+        @objid ("78ee0be1-be6b-4b38-a85d-6d664b80443c")
         public static TagType IMAGEID_TAGTYPE_ELT;
 
-        @objid ("1b420b95-a913-4f9a-94f0-0c93976d9e92")
+        @objid ("318e618b-e028-4baf-81a4-88389e04b16d")
         public static NoteType UPLOADCOMMAND_NOTETYPE_ELT;
 
-        @objid ("c3e60bce-1cf4-49c6-8a59-08884114ffed")
+        @objid ("64050704-1bf9-4ed4-90f8-4925602b2764")
         public static NoteType INSTALLCOMMAND_NOTETYPE_ELT;
 
-        @objid ("22faacb2-9571-4ce4-a572-ac5afa4824f9")
+        @objid ("f531b2f4-dbb1-47c3-8066-492160ef09f6")
         public static NoteType STARTCOMMAND_NOTETYPE_ELT;
 
-        @objid ("e826390e-2e23-48b9-8147-4697f4b47159")
+        @objid ("6540c322-20d1-4372-a6cb-2eaed1cd9960")
         public static NoteType STOPCOMMAND_NOTETYPE_ELT;
 
-        @objid ("d324bc93-e2c8-450c-8524-359ccf60a30b")
+        @objid ("e3dcd0d1-48da-4925-abf0-1e366f5c62af")
         public static NoteType DOWNLOADCOMMAND_NOTETYPE_ELT;
 
-        @objid ("a1663886-2d13-4311-b2cc-4ef2cc48bf86")
+        @objid ("f37bba49-42f3-4db8-8c2c-70e191e26061")
         public static NoteType CONFIGURECOMMAND_NOTETYPE_ELT;
 
-        @objid ("7f21212b-ab1d-45eb-9832-46e0ed96a64b")
+        @objid ("ded37ec8-1ec4-4905-83e1-c89fed0a06f6")
         public static NoteType UPDATECOMMAND_NOTETYPE_ELT;
 
-        @objid ("e0faf701-f957-427d-bf1d-ad83195f3f4b")
+        @objid ("6886c7a4-804d-43f6-9d8b-795aa0539199")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6261d0c7-d3a3-4ece-beb5-d8ca8ac44ff8")
+        @objid ("64bbe3a4-06d8-49cf-b465-b5868e8f3bfd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3d427891-37f3-4cd9-8354-f2672803edfe")
+        @objid ("c18bd070-ea81-4175-8cd8-c25297cdb9e1")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "451f4ee3-f056-4311-b405-23e7eae6d020");
             DEVOPSTOOL_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a60944a6-52f0-4a9f-9a40-7d31930f312b");
@@ -429,11 +426,11 @@ public class ScriptConfiguration extends Configuration {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

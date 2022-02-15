@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("95142f12-2b2c-454b-909a-53110f0aaecc")
 public abstract class CamelAttribute extends NamedElement {
-    @objid ("a20e430e-099b-47f4-b2da-5d178b751717")
+    @objid ("3220a1dd-3cab-4b45-8dda-a5e8ea08e0f4")
     public static final String STEREOTYPE_NAME = "CamelAttribute";
 
     /**
@@ -45,7 +45,7 @@ public abstract class CamelAttribute extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c0c54ba3-285e-403a-a77c-fa3084b6c783")
+    @objid ("9a6fd718-a471-4a1b-92ca-60b143a6b89f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelAttribute.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public abstract class CamelAttribute extends NamedElement {
             AttributeClass.canInstantiate(obj) ? AttributeClass.instantiate(obj) : null;
     }
 
-    @objid ("9bc184cd-764c-4b1f-9e26-23e899fe7ca3")
+    @objid ("17d4cd0b-e8d8-46f7-8ca6-ca8029ef230b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -73,17 +73,16 @@ public abstract class CamelAttribute extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
-     * 
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("dc5ef03b-7dd1-40d1-ac2a-e449095f58d5")
+    @objid ("6107e538-b4fe-4289-9d44-6587c2d0a2fa")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("584ad1a1-1e71-4f28-a689-f13fb505b732")
+    @objid ("a9ddb46b-278e-46cb-b524-1f32f0c481d9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -95,23 +94,23 @@ public abstract class CamelAttribute extends NamedElement {
     @objid ("87ad5a8c-d7ef-4404-8a08-b2e760da4e61")
     public abstract void setValue(String value);
 
-    @objid ("61d07aca-c0b3-493b-9344-d870e0caf411")
+    @objid ("6ee31c45-5a6d-4b0d-910a-409613c52836")
     protected CamelAttribute(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("b2b5f006-86dd-4eba-8d2f-bb3d0fc4f4f7")
     public static final class MdaTypes {
-        @objid ("59de7965-0f56-4b97-a7f8-5613aae4346a")
+        @objid ("6de51d39-dcbf-4e1c-a840-c90b626ad903")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("528b204f-a75f-431c-9d5f-8d7375898ea5")
+        @objid ("2be340d5-f4fa-4813-b8df-fe71c327cf84")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e3a83902-32bd-405a-adec-015668f759ab")
+        @objid ("b8028155-133a-4f8f-b3b1-cf01fd72307c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("be4197a8-e7b0-4ea3-aef5-b0000d968d6e")
+        @objid ("f0d51f45-ebb3-4933-9dd6-3938a42536d9")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "342512a5-ad9b-48b8-a454-5fd44237b8f2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -119,11 +118,11 @@ public abstract class CamelAttribute extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

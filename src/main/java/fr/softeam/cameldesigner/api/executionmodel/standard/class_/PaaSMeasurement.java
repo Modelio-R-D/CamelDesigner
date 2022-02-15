@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("05eacc67-2cab-4ffa-8176-cecce0a96a57")
 public class PaaSMeasurement extends Measurement {
-    @objid ("8a470509-c57d-4657-9e4b-520b6ddd4540")
+    @objid ("98f87113-6828-4051-b6ec-81dbcb75f807")
     public static final String STEREOTYPE_NAME = "PaaSMeasurement";
 
     /**
@@ -48,7 +48,7 @@ public class PaaSMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("09c0d52a-f607-4625-8527-3a449f84f8b3")
+    @objid ("7642b22d-a4aa-43fa-b353-9a740b1c64c7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaSMeasurement.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class PaaSMeasurement extends Measurement {
      * 
      * @return a {@link PaaSMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("d95811ad-a366-4729-9137-670e0006d0d5")
+    @objid ("0d0fa69b-dde8-4cf5-afb8-87958f21cc37")
     public static PaaSMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PaaSMeasurement.STEREOTYPE_NAME);
@@ -66,36 +66,34 @@ public class PaaSMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link PaaSMeasurement} proxy or <i>null</i>.
      */
-    @objid ("77ee8a7c-8491-4d17-99a4-0e760fd0c85d")
+    @objid ("672dae50-6755-4645-b097-acef88031c57")
     public static PaaSMeasurement instantiate(final Class obj) {
         return PaaSMeasurement.canInstantiate(obj) ? new PaaSMeasurement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link PaaSMeasurement} proxy from a {@link Class} stereotyped << PaaSMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link PaaSMeasurement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ce50ed4b-2a7d-4240-a242-6a9e1b960b2f")
+    @objid ("b63fc4c9-953c-4a09-a92c-501a34134393")
     public static PaaSMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PaaSMeasurement.canInstantiate(obj))
-            return new PaaSMeasurement(obj);
+        	return new PaaSMeasurement(obj);
         else
-            throw new IllegalArgumentException("PaaSMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("PaaSMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e10ed9a5-a99d-451c-85e4-11faeda2c002")
+    @objid ("7489ac8f-95f4-44ff-b7ef-aa3f533cc91d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,11 +110,10 @@ public class PaaSMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("736dcc91-a2e1-4f51-abf1-2dc7f24bf64a")
+    @objid ("376c42a0-4ded-4027-81a7-7ed67296d1b7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -126,13 +123,14 @@ public class PaaSMeasurement extends Measurement {
      * Get the value of the 'paaS' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("26525dd1-9606-4faa-9a86-ec3e61c1450f")
+    @objid ("1cee6348-94b3-4304-9fed-e8e2882d03bd")
     public PaaS getPaaS() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(PaaSMeasurement.MdaTypes.MDAASSOCDEP)
-                  && Objects.equals(d.getTagValue(PaaSMeasurement.MdaTypes.MDAASSOCDEP_ROLE), "paaS")
-                  && PaaS.canInstantiate(d.getDependsOn())) {
+                  && Objects.equals(d.getTagValue(PaaSMeasurement.MdaTypes.MDAASSOCDEP_ROLE), "paaS")){
+                  if (PaaS.canInstantiate(d.getDependsOn()))
                      return (PaaS)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaS.MdaTypes.STEREOTYPE_ELT.getName());
               }
         }
@@ -143,20 +141,21 @@ public class PaaSMeasurement extends Measurement {
      * Get the value of the 'paaSInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("bb024192-20de-49d0-8f7f-ae5431e53f1f")
+    @objid ("350b223f-4c7a-406f-9293-5af603287079")
     public PaaSInstance getPaaSInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(PaaSMeasurement.MdaTypes.MDAASSOCDEP)
-                  && Objects.equals(d.getTagValue(PaaSMeasurement.MdaTypes.MDAASSOCDEP_ROLE), "paaSInstance")
-                  && PaaSInstance.canInstantiate(d.getDependsOn())) {
+                  && Objects.equals(d.getTagValue(PaaSMeasurement.MdaTypes.MDAASSOCDEP_ROLE), "paaSInstance")){
+                  if (PaaSInstance.canInstantiate(d.getDependsOn()))
                      return (PaaSInstance)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaSInstance.MdaTypes.STEREOTYPE_ELT.getName());
               }
         }
         return null;
     }
 
-    @objid ("def64589-1a8d-49e4-a0bb-fda04fc0e63d")
+    @objid ("90363008-769d-4cbc-aef8-0ea698aaffe6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -166,8 +165,9 @@ public class PaaSMeasurement extends Measurement {
      * Set the value of the 'paaS' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("06a510ad-5fb0-4881-b46e-9ba4f5b06a5c")
+    @objid ("99321bec-7905-4aa8-aed0-5adc4e14fe67")
     public void setPaaS(final PaaS obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -191,8 +191,9 @@ public class PaaSMeasurement extends Measurement {
      * Set the value of the 'paaSInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("34cd4712-deae-4db7-bd40-42612ca1c697")
+    @objid ("432c008e-cf63-4b9f-94ea-2ff2477ae2ca")
     public void setPaaSInstance(final PaaSInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -212,11 +213,6 @@ public class PaaSMeasurement extends Measurement {
         }
     }
 
-    @objid ("2c76cd57-d219-4226-bd59-66dd9ff70e9a")
-    protected PaaSMeasurement(final Class elt) {
-        super(elt);
-    }
-
     @objid ("38a81a63-360f-4995-9ca5-d2d9c8c121b5")
     @Override
     public List<CamelElement> getChilds() {
@@ -225,18 +221,23 @@ public class PaaSMeasurement extends Measurement {
         return result;
     }
 
+    @objid ("76db9f4a-1fe6-4e24-a495-58d6d5fc8989")
+    protected PaaSMeasurement(final Class elt) {
+        super(elt);
+    }
+
     @objid ("2d45a35d-f931-4999-aeb9-e4d0259e5f71")
     public static final class MdaTypes {
-        @objid ("737342ad-dab7-4d71-9e1e-0ba09b2ce6f2")
+        @objid ("8cb8ec0b-03fd-44af-9b1a-4096d4680479")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0a5048c4-8f4e-4b7a-a8cd-c9ff01510fc5")
+        @objid ("e172c83d-581e-4738-802d-414fc89134f3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1d3c043a-24bb-4467-83bf-7c4d16ad9caf")
+        @objid ("890f8f1c-6d31-42c5-b63d-34516da521b6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8d4fdfa7-ed9c-438f-a7d1-8e3b1ca581f7")
+        @objid ("da8092e6-b4a0-48b9-bc05-6d1f96462df4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "726f03cf-0c34-448c-a300-42d54277a37d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -244,11 +245,11 @@ public class PaaSMeasurement extends Measurement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

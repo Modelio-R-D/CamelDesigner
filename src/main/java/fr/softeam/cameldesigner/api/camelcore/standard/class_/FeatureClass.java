@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.class_;
 
@@ -39,7 +39,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6a4c36bc-3125-4731-8439-e795625943d2")
 public class FeatureClass extends Feature {
-    @objid ("f8a79feb-ba36-4a04-a234-fd60a45050ce")
+    @objid ("2c35b9e3-d403-4f83-bf70-87224ea1bae3")
     public static final String STEREOTYPE_NAME = "Feature_Class";
 
     /**
@@ -50,7 +50,7 @@ public class FeatureClass extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("55493079-b527-4232-bb10-b4bec99df86f")
+    @objid ("11130980-cf28-4c17-bf03-0de1b6195264")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureClass.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class FeatureClass extends Feature {
      * 
      * @return a {@link FeatureClass} proxy on the created {@link Class}.
      */
-    @objid ("1292567a-b39b-422c-acd3-13e04610e4f8")
+    @objid ("191e1f1e-a131-496d-b4cb-7fbecea75ea5")
     public static FeatureClass create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeatureClass.STEREOTYPE_NAME);
@@ -68,41 +68,40 @@ public class FeatureClass extends Feature {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link FeatureClass} proxy or <i>null</i>.
      */
-    @objid ("924fe8d0-75bd-43c8-929a-c22d35f734ee")
+    @objid ("d6b06562-220f-4858-b910-73e1d57be487")
     public static FeatureClass instantiate(final Class obj) {
         return FeatureClass.canInstantiate(obj) ? new FeatureClass(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeatureClass} proxy from a {@link Class} stereotyped << Feature_Class >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link FeatureClass} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0dbde7ae-ba0c-40e7-a1ee-1eabf453d373")
+    @objid ("0ab3010e-4374-428d-b0df-f24a35049fc3")
     public static FeatureClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (FeatureClass.canInstantiate(obj))
-            return new FeatureClass(obj);
+        	return new FeatureClass(obj);
         else
-            throw new IllegalArgumentException("FeatureClass: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("FeatureClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'attributes' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("80036064-eedc-4fec-bd1e-4d32788f388f")
+    @objid ("c14faace-f13d-4fbe-a8d3-c3347ca17b8a")
     public void addAttributes(final AttributeAttribute obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedAttribute().add(obj.getElement());
@@ -112,14 +111,15 @@ public class FeatureClass extends Feature {
      * Add a value to the 'subFeatures' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d83d0705-8388-42e2-8514-0d27f9884c63")
+    @objid ("04f131f8-5bd1-4bb4-a6cd-7bd6515e4204")
     public void addSubFeatures(final FeatureClass obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("eb45caa6-d4f1-400e-93da-d7971d26bfd2")
+    @objid ("944d0810-045e-4061-b83c-b31af400c447")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -139,22 +139,22 @@ public class FeatureClass extends Feature {
      * Get the values of the 'attributes' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("9b57ec8e-8001-4ab3-a026-f17e333cccdc")
+    @objid ("0a32fbfc-db75-4154-a85e-06f9aefcd2e0")
     public List<AttributeAttribute> getAttributes() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Class) this.elt).getOwnedAttribute())
-            if (AttributeAttribute.canInstantiate(mObj))
-                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+        	if (AttributeAttribute.canInstantiate(mObj))
+        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("9f72f18a-06b4-44d4-9901-03a395cdf0ea")
+    @objid ("b1159316-d8fd-4b68-bd83-9d6289d9384f")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -164,8 +164,9 @@ public class FeatureClass extends Feature {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("914bcd24-5f38-49c6-8478-886f3124f91f")
+    @objid ("da4b9d82-67d7-471f-b977-35d2694cd4e2")
     public FeatureClass getParent() {
         return (FeatureClass)CamelDesignerProxyFactory.instantiate(((Class) this.elt).getOwner(), FeatureClass.STEREOTYPE_NAME);
     }
@@ -174,17 +175,18 @@ public class FeatureClass extends Feature {
      * Get the values of the 'subFeatures' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ca02e591-8c4c-4bc8-9410-d4ab3ff0c99e")
+    @objid ("e4a140f3-741d-4cc7-bfc2-2dc8fc5559ab")
     public List<FeatureClass> getSubFeatures() {
         List<FeatureClass> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement())
-            if (FeatureClass.canInstantiate(mObj))
-                    results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
+        	if (FeatureClass.canInstantiate(mObj))
+        			results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("1b1cfb22-e1ce-4153-8f16-f398bef7f4bc")
+    @objid ("030a11c5-614b-4055-aebe-66f7117fa109")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -194,8 +196,9 @@ public class FeatureClass extends Feature {
      * Remove a value from the 'attributes' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d3ff792f-a44d-4944-9f72-c41082fe25ec")
+    @objid ("91ac4434-6453-4e72-9506-034bfedd1791")
     public boolean removeAttributes(final AttributeAttribute obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -204,8 +207,9 @@ public class FeatureClass extends Feature {
      * Remove a value from the 'subFeatures' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1adea5cc-80ee-4b6d-90e3-3bef9c476399")
+    @objid ("623cc51e-2646-47af-8127-2f13d40f443d")
     public boolean removeSubFeatures(final FeatureClass obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -214,8 +218,9 @@ public class FeatureClass extends Feature {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("66751c30-5b64-45df-971a-f5d08fa01e4e")
+    @objid ("54358bfe-aa8b-42a6-aff6-2013b9653ba2")
     public void setParent(final FeatureClass obj) {
         ((Class) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -227,23 +232,23 @@ public class FeatureClass extends Feature {
         return result;
     }
 
-    @objid ("deb91a4b-a820-4023-99bf-01143601b974")
+    @objid ("ee5dbeab-d13b-42ca-a62f-cdb2f6d1cb73")
     protected FeatureClass(final Class elt) {
         super(elt);
     }
 
     @objid ("266313b7-34b2-4846-a164-b64005a3816f")
     public static final class MdaTypes {
-        @objid ("02313b66-d324-44b7-b529-78af08fe82af")
+        @objid ("f35be946-7ded-4cae-94b5-8ed3e0fe8dea")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("19a687ce-5036-45ad-88ef-051fa2e5cfb4")
+        @objid ("f8386b3a-1871-4cea-8cb3-ea90289ce30a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("640e3d87-d633-4c5e-af70-a20d19926678")
+        @objid ("8e8354d6-e33b-4875-8cee-352e74863bed")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3c81d6a6-4c79-4f83-b873-0bb5f1795a88")
+        @objid ("cb8dce09-0492-4cde-9d04-5009fdae98b1")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "babf8276-c4d4-4d86-b02b-d20c6636d937");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -251,11 +256,11 @@ public class FeatureClass extends Feature {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

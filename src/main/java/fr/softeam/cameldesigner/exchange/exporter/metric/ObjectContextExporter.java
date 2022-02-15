@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.metric;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.metric.MetricFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("2c326d08-0764-4f77-a4e1-29a0b12640c1")
 public class ObjectContextExporter<T extends ObjectContext> extends FeatureExporter<T> {
@@ -30,18 +30,6 @@ public class ObjectContextExporter<T extends ObjectContext> extends FeatureExpor
         }
     }
 
-    private void setData(camel.metric.ObjectContext oc) {
-        // TODO Auto-generated method stub
-
-    }
-
-    private void setComponent(camel.metric.ObjectContext oc) {
-        CDOObject comp = this._process.getElement(this._element.getComponent());
-        if (comp instanceof camel.deployment.Component)
-            oc.setComponent((camel.deployment.Component) comp);
-
-    }
-
     @objid ("19a6e2d9-57d9-4ae2-9118-ab822d3c732e")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
@@ -50,6 +38,18 @@ public class ObjectContextExporter<T extends ObjectContext> extends FeatureExpor
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("9be9d282-d8ae-469a-826a-4a34c399d146")
+    private void setData(camel.metric.ObjectContext oc) {
+        // TODO Auto-generated method stub
+    }
+
+    @objid ("d3409c38-4e99-44cd-92f6-aeccc229650b")
+    private void setComponent(camel.metric.ObjectContext oc) {
+        CDOObject comp = this._process.getElement(this._element.getComponent());
+        if (comp instanceof camel.deployment.Component)
+            oc.setComponent((camel.deployment.Component) comp);
     }
 
 }

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.package_;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7988540c-148d-49c6-853a-5b32ce9e826d")
 public class UnitModel extends SubModel {
-    @objid ("7699a4ec-d208-45ea-9f22-43c8343c876e")
+    @objid ("bcc7069b-7f62-43b4-973c-c11afe03897f")
     public static final String STEREOTYPE_NAME = "UnitModel";
 
     /**
@@ -51,7 +51,7 @@ public class UnitModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ad9a3672-5b64-4db2-b71f-bb91ea467ab9")
+    @objid ("b55d903e-e0b9-4941-846e-c674555ca48c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UnitModel.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class UnitModel extends SubModel {
      * 
      * @return a {@link UnitModel} proxy on the created {@link Package}.
      */
-    @objid ("7b07795b-b759-4f7a-8f1c-9d5246874464")
+    @objid ("9a2f5133-9714-4a26-9de7-f69d463c69b5")
     public static UnitModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, UnitModel.STEREOTYPE_NAME);
@@ -69,41 +69,40 @@ public class UnitModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Package
      * @return a {@link UnitModel} proxy or <i>null</i>.
      */
-    @objid ("fb6072de-8743-4ca7-8b48-e1f1a970a193")
+    @objid ("4a54cb4c-9d36-4a21-b398-e1ab85c39b1a")
     public static UnitModel instantiate(final Package obj) {
         return UnitModel.canInstantiate(obj) ? new UnitModel(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitModel} proxy from a {@link Package} stereotyped << UnitModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Package}
      * @return a {@link UnitModel} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3ae54934-1699-4701-812a-33b25490ea8f")
+    @objid ("c228171b-092e-4d02-9a04-d6fe18da952d")
     public static UnitModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (UnitModel.canInstantiate(obj))
-            return new UnitModel(obj);
+        	return new UnitModel(obj);
         else
-            throw new IllegalArgumentException("UnitModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("UnitModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'dimensions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("705b4474-4671-4b34-be7f-c07308f45c9e")
+    @objid ("e3a5ac14-aaab-43bb-b8ee-04c916eea717")
     public void addDimensions(final UnitDimension obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -113,14 +112,15 @@ public class UnitModel extends SubModel {
      * Add a value to the 'units' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("012546ad-5908-4c11-a0de-4547cd531fb4")
+    @objid ("ccd580de-e5e9-4c40-befe-05aca934cea7")
     public void addUnits(final Unit obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("b72f9ca6-e2a8-4f0d-8cd2-dc3e512a37c5")
+    @objid ("2d6704f4-9d3e-4ea6-88be-d0b869df80ed")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -140,8 +140,9 @@ public class UnitModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ef9304de-1fe8-43f5-b566-c6ca92f2686f")
+    @objid ("0580a288-472c-4137-8059-78c1fa8973bb")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -150,22 +151,22 @@ public class UnitModel extends SubModel {
      * Get the values of the 'dimensions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d5b791cf-892d-47e5-be7b-7d6908727cbe")
+    @objid ("86bf9c49-9aa0-4570-abae-7cac6d962d24")
     public List<UnitDimension> getDimensions() {
         List<UnitDimension> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-            if (UnitDimension.canInstantiate(mObj))
-                    results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
+        	if (UnitDimension.canInstantiate(mObj))
+        			results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("b228c321-3049-40f6-a377-bed1c62d63ed")
+    @objid ("5921fa21-47d3-4aee-b8c2-d2fe14bbeabe")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -175,17 +176,18 @@ public class UnitModel extends SubModel {
      * Get the values of the 'units' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("f90af799-80a3-401f-a678-7f3ad883d375")
+    @objid ("71f97e71-14c3-40e8-8098-258a077bfebb")
     public List<Unit> getUnits() {
         List<Unit> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement())
-            if (Unit.canInstantiate(mObj))
-                    results.add((Unit)CamelDesignerProxyFactory.instantiate(mObj, Unit.STEREOTYPE_NAME));
+        	if (Unit.canInstantiate(mObj))
+        			results.add((Unit)CamelDesignerProxyFactory.instantiate(mObj, Unit.STEREOTYPE_NAME));
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("263a63ff-c14c-4f8c-b08f-65bb8d8327d4")
+    @objid ("214f8704-abac-4636-b9b7-77b69373081f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -195,8 +197,9 @@ public class UnitModel extends SubModel {
      * Remove a value from the 'dimensions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("314d80d9-5a76-4ff7-b9d5-4ac0d1442735")
+    @objid ("f9717aed-c844-4ad0-bb7b-485d948861c2")
     public boolean removeDimensions(final UnitDimension obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -205,8 +208,9 @@ public class UnitModel extends SubModel {
      * Remove a value from the 'units' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1b37db89-ae17-4b89-bf95-77c792b1f94d")
+    @objid ("f69de6ac-406d-4593-b73d-fe30e8ddbab2")
     public boolean removeUnits(final Unit obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -215,15 +219,11 @@ public class UnitModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e876d6f4-8c5d-4975-9857-cff29c793f63")
+    @objid ("fa86324c-9ec1-4195-995c-6e60bbaaf611")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
-    }
-
-    @objid ("f994a979-44f4-40b5-93bb-09f455d3d771")
-    protected UnitModel(final Package elt) {
-        super(elt);
     }
 
     @objid ("b7eeb165-293c-4ae9-adcf-85294df004a4")
@@ -234,18 +234,23 @@ public class UnitModel extends SubModel {
         return result;
     }
 
+    @objid ("99418487-208e-4ff1-962c-50efaf2ad146")
+    protected UnitModel(final Package elt) {
+        super(elt);
+    }
+
     @objid ("fbd51035-faf8-4064-a217-af4ea824c639")
     public static final class MdaTypes {
-        @objid ("57049852-4608-4195-b36e-dd1e9e3b72e6")
+        @objid ("4e33511a-3c70-42b4-884a-ed535e4199c6")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("04cfe56b-106b-4a4d-8983-65f50117e5b4")
+        @objid ("0181f3b0-ad0a-4443-a81c-b9cd0a036265")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("129bc867-6996-4c80-ac68-c471f1b75626")
+        @objid ("79cffe48-234d-4758-8454-69bbeaf214f7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("69147942-5271-4ae5-bac6-ff161cfd4b3a")
+        @objid ("b7e95ba2-82b8-44da-b031-6a60ac678d03")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "59acf7f4-2a84-41d4-8fcb-ec300340062c");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -253,11 +258,11 @@ public class UnitModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

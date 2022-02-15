@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -15,6 +15,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -36,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("b0754957-bc68-473c-a808-aac4f2fd0421")
 public abstract class Metric extends FeatureClass {
-    @objid ("7f26a871-e798-45ec-ac39-83a96f684717")
+    @objid ("62d4104d-1dc0-4914-be4f-96b3807f864f")
     public static final String STEREOTYPE_NAME = "Metric";
 
     /**
@@ -47,7 +48,7 @@ public abstract class Metric extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("55542e42-e90f-4ea2-827f-ad169b598700")
+    @objid ("e65e9c4a-514d-422b-8580-bcb63cd205e2")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Metric.STEREOTYPE_NAME));
     }
@@ -59,7 +60,7 @@ public abstract class Metric extends FeatureClass {
                 RawMetric.canInstantiate(obj) ?  RawMetric.instantiate(obj) : null;
     }
 
-    @objid ("1344e6c0-3f5f-4e3a-a735-47dcc05347ed")
+    @objid ("104c8a05-8421-4324-b882-29f67186d0d8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -76,11 +77,10 @@ public abstract class Metric extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("7b8e2bee-1a63-4198-b897-de9640ac5e51")
+    @objid ("bd9a5d59-4bd1-4ae2-8b5c-8f5d422515d9")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -90,20 +90,21 @@ public abstract class Metric extends FeatureClass {
      * Get the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("a53bd19a-30f5-4f1b-8eae-2cd91649fd14")
+    @objid ("16ce1610-6483-4fdb-9f0c-9f2e29cf6f42")
     public MetricTemplate getMetricTemplate() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Metric.MdaTypes.MDAASSOCDEP)
-                  && Objects.equals(d.getTagValue(Metric.MdaTypes.MDAASSOCDEP_ROLE), "metricTemplate")
-                  && MetricTemplate.canInstantiate(d.getDependsOn())) {
+                  && Objects.equals(d.getTagValue(Metric.MdaTypes.MDAASSOCDEP_ROLE), "metricTemplate")){
+                  if (MetricTemplate.canInstantiate(d.getDependsOn()))
                      return (MetricTemplate)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), MetricTemplate.MdaTypes.STEREOTYPE_ELT.getName());
               }
         }
         return null;
     }
 
-    @objid ("4efc7802-4de9-4548-8305-8205bf4aec1a")
+    @objid ("4d91259a-e81d-4563-821b-67e2ac4fa3a3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -113,8 +114,9 @@ public abstract class Metric extends FeatureClass {
      * Set the value of the 'metricTemplate' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("b94fb2d7-be03-4163-bf6d-cfd1d5fe389f")
+    @objid ("0b17615b-9cc0-4556-b0db-49cffcc8008a")
     public void setMetricTemplate(final MetricTemplate obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -134,11 +136,6 @@ public abstract class Metric extends FeatureClass {
         }
     }
 
-    @objid ("77f1d989-2f50-47f5-9124-24e61501e686")
-    protected Metric(final Class elt) {
-        super(elt);
-    }
-
     @objid ("65b7b6c9-5383-4b1f-ba59-053dd76cfb95")
     @Override
     public List<CamelElement> getChilds() {
@@ -147,18 +144,23 @@ public abstract class Metric extends FeatureClass {
         return result;
     }
 
+    @objid ("f05629ce-f046-4770-bd43-1f4518fa4231")
+    protected Metric(final Class elt) {
+        super(elt);
+    }
+
     @objid ("7453f2c0-0edc-453a-bbfc-bbc62bf7a06d")
     public static final class MdaTypes {
-        @objid ("5ffef185-1e58-444a-b423-71c5f17de7aa")
+        @objid ("a6b4ef23-7bcc-4352-adc7-517884d36af7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b02f23fd-eee4-4835-a231-f98b53c2f528")
+        @objid ("95c6adf1-29c9-4ea4-89d7-1ff617890710")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("35079c7b-a91c-40b9-a290-abeb77306407")
+        @objid ("2bc5c5c6-898a-4eb3-8cfe-0f58d49d161a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("459f6d85-ad20-483e-b31b-5d1e190e5709")
+        @objid ("5cbe3aad-c9b7-434e-962d-9c869c1b1c02")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1603af9c-7b21-4da2-96b7-6607aa8066cc");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -166,11 +168,11 @@ public abstract class Metric extends FeatureClass {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

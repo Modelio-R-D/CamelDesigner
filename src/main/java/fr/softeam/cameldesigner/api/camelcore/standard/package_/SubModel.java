@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
@@ -12,7 +12,6 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataModel;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentModel;
@@ -46,8 +45,8 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <br/><i>null</i></p>
  */
 @objid ("f07e87ba-586c-403f-a02b-a1871d8d3882")
-public abstract class SubModel extends NamedElement {
-    @objid ("bf8f8e4d-5937-443b-ad6c-d50af2a67a82")
+public abstract class SubModel extends FeaturePackage {
+    @objid ("2ec9122a-212d-419b-9121-92bcca8b7fce")
     public static final String STEREOTYPE_NAME = "SubModel";
 
     /**
@@ -58,7 +57,7 @@ public abstract class SubModel extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a0078169-f9ee-4804-89be-9f407ca7dc46")
+    @objid ("2496d5bf-c1dd-4869-80d4-f9c61c697eba")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SubModel.STEREOTYPE_NAME));
     }
@@ -80,7 +79,7 @@ public abstract class SubModel extends NamedElement {
                                                         UnitModel.canInstantiate(obj) ? UnitModel.instantiate(obj) : null;
     }
 
-    @objid ("5ea44bfb-121c-4fb9-8a87-f5bee6bcbc34")
+    @objid ("f5bee4a6-d3f9-489f-a04d-0ea264f52067")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -97,39 +96,38 @@ public abstract class SubModel extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("15ea5155-c1dd-4353-90d8-073f76b35d86")
+    @objid ("f8dea37a-2a6d-4061-a414-209f3f6411cc")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("760e9693-8be7-4919-b4f6-ccd8b98cab57")
+    @objid ("6f541e20-e1a8-42aa-bd20-7c2198f527ae")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("7681fd69-b883-42dd-bb01-0d1ad807f8ec")
+    @objid ("ee1278e0-b71d-468e-98ae-ed9ee11a4dee")
     protected SubModel(final Package elt) {
         super(elt);
     }
 
     @objid ("272d938f-b497-426d-a404-96b884126080")
     public static final class MdaTypes {
-        @objid ("b5459ee6-67dd-48b9-94bf-8e2a54ee7bee")
+        @objid ("5b4b639a-58e3-4c3b-8e8b-1badd31e6923")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b4443973-5f62-4b99-946f-1df11d7827eb")
+        @objid ("a98245db-a8f8-4f2e-9588-82c7eb615ef0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("38f9ed6a-05df-4b54-bac0-25cfa4c27f36")
+        @objid ("d8a2d945-283f-41b3-a378-718c50920553")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d6388565-1ea1-4810-92c3-8ea913f928cf")
+        @objid ("b9ad91f2-22c9-425d-9644-97bb05f9c07a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "577c153e-42b8-4f36-9686-1a6109ffdc16");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -137,11 +135,11 @@ public abstract class SubModel extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.metric;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.metric.MetricFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("af89367e-2792-4043-b7e3-8f0c2ac99589")
 public class MetricInstanceModelExporter<T extends MetricInstanceModel> extends MetricModelExporter<T> {

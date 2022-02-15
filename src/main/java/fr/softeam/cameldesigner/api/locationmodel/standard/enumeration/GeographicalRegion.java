@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("840d6f54-3cb7-4c64-bc4c-8a2ef6fc0cd4")
 public class GeographicalRegion extends Location {
-    @objid ("99f2d688-98dd-470d-bc2f-ed4f8df8289b")
+    @objid ("b8c2ec7a-72ee-4a3b-b6c8-d7320762aee8")
     public static final String STEREOTYPE_NAME = "GeographicalRegion";
 
     /**
@@ -47,7 +47,7 @@ public class GeographicalRegion extends Location {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("653b1571-35f6-41f8-93ca-8b8364d39116")
+    @objid ("a742a661-55df-4103-854f-fdf58138692e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Enumeration) && ((Enumeration) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, GeographicalRegion.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class GeographicalRegion extends Location {
      * 
      * @return a {@link GeographicalRegion} proxy on the created {@link Enumeration}.
      */
-    @objid ("ecffc271-2db2-4675-ae22-d87b8713ded9")
+    @objid ("21e77df2-7b14-4bd7-8c23-f2233b662fc3")
     public static GeographicalRegion create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Enumeration");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, GeographicalRegion.STEREOTYPE_NAME);
@@ -65,41 +65,40 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Enumeration
      * @return a {@link GeographicalRegion} proxy or <i>null</i>.
      */
-    @objid ("e03ac486-c00a-4821-b833-3e0ae574e0c9")
+    @objid ("3316f08f-5f7d-4a69-a748-2990e7fa2a46")
     public static GeographicalRegion instantiate(final Enumeration obj) {
         return GeographicalRegion.canInstantiate(obj) ? new GeographicalRegion(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Enumeration}
      * @return a {@link GeographicalRegion} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("61d06980-706d-45a6-875f-65b1fefc6965")
+    @objid ("b0f13354-8d0d-49d3-9244-70554bb9ce01")
     public static GeographicalRegion safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (GeographicalRegion.canInstantiate(obj))
-            return new GeographicalRegion(obj);
+        	return new GeographicalRegion(obj);
         else
-            throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'parentRegions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("26e0acc2-0358-4d96-8b45-99a489dcc3d3")
+    @objid ("81a73f4a-7d81-462f-a4b6-050299c8544f")
     public void addParentRegions(final GeographicalRegion obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -109,7 +108,7 @@ public class GeographicalRegion extends Location {
         }
     }
 
-    @objid ("c7efc9af-5552-42c7-8237-a68e27b1ee56")
+    @objid ("694aa504-f833-4b51-8b07-1839790e85cf")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,11 +125,10 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}.
-     * 
+     * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
-    @objid ("d42ae37e-a4c7-4dd8-91cd-7a4d94b54eb7")
+    @objid ("c410fa38-1b52-4e9d-ac24-ae1b200e75b4")
     @Override
     public Enumeration getElement() {
         return (Enumeration)super.getElement();
@@ -140,8 +138,9 @@ public class GeographicalRegion extends Location {
      * Get the values of the 'parentRegions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("7f77ef25-a147-4784-9b62-cb8ff2155aa3")
+    @objid ("deb5e1ec-e18e-4983-ab5a-a38c5cad4b5f")
     public List<GeographicalRegion> getParentRegions() {
         List<GeographicalRegion> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -154,7 +153,7 @@ public class GeographicalRegion extends Location {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("7de414f8-ddec-4f0c-bc14-011cdc6de4a1")
+    @objid ("62bf853c-24ba-4737-8928-0785ebcdfa09")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -164,8 +163,9 @@ public class GeographicalRegion extends Location {
      * Remove a value from 'parentRegions' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("4051150d-314c-48dd-a7f6-575646d6a2b5")
+    @objid ("9147bb76-4373-4a22-9f70-1124f52588a4")
     public boolean removeParentRegions(final GeographicalRegion obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -199,6 +199,14 @@ public class GeographicalRegion extends Location {
         return names;
     }
 
+    @objid ("624d0857-99f9-429b-98e2-565a6e6bf25e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     @objid ("06fb37c4-dc44-43b8-a231-0119d1882fab")
     public boolean removeAlternativeName(String name) {
         for (EnumerationLiteral literal : this.getElement().getValue()) {
@@ -210,31 +218,23 @@ public class GeographicalRegion extends Location {
         return false;
     }
 
-    @objid ("5b01b1de-010b-4234-883c-aad1a80c3365")
+    @objid ("dac671a1-04c7-4cff-82fe-0b9ecf70de44")
     protected GeographicalRegion(final Enumeration elt) {
         super(elt);
     }
 
-    @objid ("624d0857-99f9-429b-98e2-565a6e6bf25e")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(super.getChilds());
-        return result;
-    }
-
     @objid ("99a544e5-32ff-4e49-b598-8e15beae3213")
     public static final class MdaTypes {
-        @objid ("f54bc6eb-7336-4319-91d4-ce6a7bd51b12")
+        @objid ("b0546cd7-25be-4231-a729-8cb45fb2fd64")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("31c9f472-830b-4976-9f22-93da482e7a5d")
+        @objid ("da69c7db-c280-44aa-bb28-cd2f48ff1cec")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e533bfca-d3cc-439a-b462-03e51c73b371")
+        @objid ("c0e68ff8-4bb4-4197-8a9b-8ce781781ce9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("46b69361-ef0a-4a2f-8dc9-8667bebe9fea")
+        @objid ("9542e289-5731-4b4d-a943-12ae9fa890f5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b9be9f56-5f88-4cfb-8745-3fe2ceda1c86");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -242,11 +242,11 @@ public class GeographicalRegion extends Location {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

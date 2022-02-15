@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink;
 
@@ -39,10 +39,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("09e9e24f-9c1d-4cfb-b3bb-bf35bf56c7f5")
 public class MmsPropertyInstance extends MmsObject {
-    @objid ("3186c379-aa1d-4bbf-a059-7eb32cdd11c9")
+    @objid ("b11df873-85aa-41aa-8b2c-be5a160da0c7")
     public static final String STEREOTYPE_NAME = "MmsPropertyInstance";
 
-    @objid ("6b753e0e-e7ee-42d4-91ac-e150e1478820")
+    @objid ("4f893ebb-a580-4125-b7ac-5ef6d341ff1d")
     public static final String PROPERTYVALUE_TAGTYPE = "propertyValue";
 
     /**
@@ -53,7 +53,7 @@ public class MmsPropertyInstance extends MmsObject {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1233c995-9989-4198-b199-1a4f13d0a394")
+    @objid ("3588e278-0040-4ecb-8230-1511021a2c1a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof AttributeLink) && ((AttributeLink) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsPropertyInstance.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class MmsPropertyInstance extends MmsObject {
      * 
      * @return a {@link MmsPropertyInstance} proxy on the created {@link AttributeLink}.
      */
-    @objid ("402f9348-3408-4caf-81a2-0c70597cf3cf")
+    @objid ("ab531941-d8e9-4d68-8827-87cd75362480")
     public static MmsPropertyInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.AttributeLink");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MmsPropertyInstance.STEREOTYPE_NAME);
@@ -71,36 +71,34 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a AttributeLink
      * @return a {@link MmsPropertyInstance} proxy or <i>null</i>.
      */
-    @objid ("873a02b2-0eee-4669-9d25-b7a934704732")
+    @objid ("5bf5f00c-4060-41b0-86cb-41976f729288")
     public static MmsPropertyInstance instantiate(final AttributeLink obj) {
         return MmsPropertyInstance.canInstantiate(obj) ? new MmsPropertyInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link AttributeLink}
      * @return a {@link MmsPropertyInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("383f162e-4bbb-4863-b444-2ec503739955")
+    @objid ("816215a3-8b82-4bba-ba02-86375c95601c")
     public static MmsPropertyInstance safeInstantiate(final AttributeLink obj) throws IllegalArgumentException {
         if (MmsPropertyInstance.canInstantiate(obj))
-            return new MmsPropertyInstance(obj);
+        	return new MmsPropertyInstance(obj);
         else
-            throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a14ff12c-3e18-4446-8606-c49afcfc260b")
+    @objid ("bbd4b327-e309-4d86-b681-ef6150a9e5eb")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,18 +118,18 @@ public class MmsPropertyInstance extends MmsObject {
      * Get the value to the 'conceptInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("51ca3943-fcac-483d-a67f-e752c353c0f4")
+    @objid ("59890384-b262-4c84-9e7e-210223357b30")
     public MmsConceptInstance getConceptInstance() {
         return (MmsConceptInstance)CamelDesignerProxyFactory.instantiate(((AttributeLink) this.elt).getAttributed(), MmsConceptInstance.STEREOTYPE_NAME);
     }
 
     /**
-     * Get the underlying {@link AttributeLink}.
-     * 
+     * Get the underlying {@link AttributeLink}. 
      * @return the AttributeLink represented by this proxy, never null.
      */
-    @objid ("e2c23d70-62cd-4b51-8609-1e3c1318d312")
+    @objid ("740ad719-9dda-4f4a-85a8-1dfab0e44226")
     @Override
     public AttributeLink getElement() {
         return (AttributeLink)super.getElement();
@@ -142,12 +140,12 @@ public class MmsPropertyInstance extends MmsObject {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c22e7f7a-561b-4ff3-a662-3de22702f77e")
+    @objid ("9af3976e-20f0-4459-b711-ec8377b97ea7")
     public String getPropertyValue() {
         return this.elt.getTagValue(MmsPropertyInstance.MdaTypes.PROPERTYVALUE_TAGTYPE_ELT);
     }
 
-    @objid ("50c72c39-b572-4659-8d7a-f694948a4495")
+    @objid ("bc44f26a-337e-4ec6-a87f-5771d28ebb1d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -157,8 +155,9 @@ public class MmsPropertyInstance extends MmsObject {
      * Set the value of the 'conceptInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("9ce3366d-ef1f-406c-8b72-9f3c34868f85")
+    @objid ("a835cb3c-ad80-4f0a-944b-7993548ef8f2")
     public void setConceptInstance(final MmsConceptInstance obj) {
         ((AttributeLink) this.elt).setAttributed((obj != null) ? obj.getElement() : null);
     }
@@ -168,9 +167,17 @@ public class MmsPropertyInstance extends MmsObject {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1897930a-5c98-456d-b326-733693b1a008")
+    @objid ("898a903c-fa35-424c-8698-998c5cd4a6d6")
     public void setPropertyValue(final String value) {
         this.elt.putTagValue(MmsPropertyInstance.MdaTypes.PROPERTYVALUE_TAGTYPE_ELT, value);
+    }
+
+    @objid ("cbd490b8-d3ef-4f08-b4d2-3424ae20fe80")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
     }
 
     @objid ("e3b3f838-091c-413f-8992-3c0bdd6de976")
@@ -187,34 +194,26 @@ public class MmsPropertyInstance extends MmsObject {
         this.getElement().setBase(mmsProperty.getElement());
     }
 
-    @objid ("afe1e8da-56d5-42aa-b7fa-ed1bd510b69f")
+    @objid ("426dfe09-8cca-48f5-9cb5-f7e44e12cf98")
     protected MmsPropertyInstance(final AttributeLink elt) {
         super(elt);
     }
 
-    @objid ("cbd490b8-d3ef-4f08-b4d2-3424ae20fe80")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(super.getChilds());
-        return result;
-    }
-
     @objid ("3974f7b7-9317-4102-aa68-17990b0b6b2f")
     public static final class MdaTypes {
-        @objid ("c8f6e994-c8ec-499b-bf1c-6a630db6b52a")
+        @objid ("36bd9c47-9088-4838-b953-47b94d75911c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1a6b72af-a918-4194-817a-bedae501baa8")
+        @objid ("57a774ca-04a3-4732-80b8-65e0c06c815d")
         public static TagType PROPERTYVALUE_TAGTYPE_ELT;
 
-        @objid ("12ccfea1-ddcb-4825-b84b-477444fbd5e3")
+        @objid ("3d8277f3-e0fa-4ef3-9c5a-858b85fcb41d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6c6e7a93-4b2f-44a6-a33c-2b2277f63adf")
+        @objid ("ef31727c-42ef-465d-920a-4a115cb16e8e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e40a498c-9eed-4df0-957b-1d78a78c71e0")
+        @objid ("3aeb3bb4-bb99-42f0-9d1a-323c02118f59")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "f4953787-31fa-4eed-88df-83d5ad51d82e");
             PROPERTYVALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1df65abe-3c98-4cde-9656-91b11230e762");
@@ -223,11 +222,11 @@ public class MmsPropertyInstance extends MmsObject {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

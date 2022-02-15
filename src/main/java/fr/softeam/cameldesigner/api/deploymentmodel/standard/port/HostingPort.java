@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/8/22 11:47 AM by Modelio Studio.
+ * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.port;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("bf141fb2-a5e7-4adf-9870-921e4a516048")
 public class HostingPort extends FeaturePort {
-    @objid ("03b6e6b0-3fac-4f65-bec6-69dff2994304")
+    @objid ("8217bdfa-a02b-4d1a-be9a-48de03225ba8")
     public static final String STEREOTYPE_NAME = "HostingPort";
 
     /**
@@ -47,7 +47,7 @@ public class HostingPort extends FeaturePort {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e691f9ab-7c51-4065-9377-aa39051d8948")
+    @objid ("b6c314f9-3544-44ba-b2d1-36cb16c11ef2")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HostingPort.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class HostingPort extends FeaturePort {
      * 
      * @return a {@link HostingPort} proxy on the created {@link Port}.
      */
-    @objid ("b6633af7-df9a-465f-ba66-1510d2995c41")
+    @objid ("28747dab-a6c1-409b-b6de-c4c2ba1186a6")
     public static HostingPort create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HostingPort.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class HostingPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Port
      * @return a {@link HostingPort} proxy or <i>null</i>.
      */
-    @objid ("5ddacba9-4fa8-4592-a10c-a03fbe99c4e0")
+    @objid ("26dcbc78-d801-4af7-a5b7-9cd5fb04e3e7")
     public static HostingPort instantiate(final Port obj) {
         return HostingPort.canInstantiate(obj) ? new HostingPort(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingPort} proxy from a {@link Port} stereotyped << HostingPort >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Port}
      * @return a {@link HostingPort} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ff8087a6-d529-4599-8fea-1e775d04fc6c")
+    @objid ("9260b3c7-73ae-431c-a6ab-abe594452ad4")
     public static HostingPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (HostingPort.canInstantiate(obj))
-            return new HostingPort(obj);
+        	return new HostingPort(obj);
         else
-            throw new IllegalArgumentException("HostingPort: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("HostingPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c0f16611-522a-4c71-8bd9-fad23bf45116")
+    @objid ("84e0e2e7-c25d-4561-b2db-4badbde6e107")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,25 +109,19 @@ public class HostingPort extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}.
-     * 
+     * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("0b2560ef-38c5-4727-b41b-de9617d00439")
+    @objid ("1a1909be-62e7-4135-84ac-d52b61b4df45")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
     }
 
-    @objid ("f02bf563-5a63-471b-960c-634ebd1a6172")
+    @objid ("b0f15d3c-92ca-48d5-a58f-efec29e87eea")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-    }
-
-    @objid ("440afe8c-8815-48ac-a89b-014500d7691c")
-    protected HostingPort(final Port elt) {
-        super(elt);
     }
 
     @objid ("fc47b2fa-358f-4eae-98fa-43a615e781d3")
@@ -140,18 +132,23 @@ public class HostingPort extends FeaturePort {
         return result;
     }
 
+    @objid ("4263a0a8-3731-4c8b-a879-d7c68c435b04")
+    protected HostingPort(final Port elt) {
+        super(elt);
+    }
+
     @objid ("98fe20f6-f33e-4b62-b8ea-1f4b27c8cf6e")
     public static final class MdaTypes {
-        @objid ("8f3336b5-5b0d-4732-8482-c162eda3e524")
+        @objid ("855af9a3-6da8-45e8-ad11-74044d5c8f57")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2561f4a1-a721-4cbf-89f4-60ab201cedbd")
+        @objid ("650269d6-a582-4a27-a96a-20588422581a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("dd3ef71b-5b9c-4109-b5ea-bf9cb4e40d23")
+        @objid ("1fc53a44-1fbc-41e9-adfe-06fbbf0ba805")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ed528f8a-fdfa-4e03-9dff-8854ce54ecb2")
+        @objid ("5f03230b-d5f6-467a-9542-51d2d9bc7840")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0672a25d-20e7-4566-b187-f3f3572d73c3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -159,11 +156,11 @@ public class HostingPort extends FeaturePort {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
