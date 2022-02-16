@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -48,16 +48,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7f8056db-66ca-4270-b581-2dad325c84aa")
 public class MetricVariable extends Metric {
-    @objid ("2edf9fc8-6b94-4128-abd0-687bfad65efc")
+    @objid ("bdf99633-f3cf-404d-b73e-e1c50b2b5deb")
     public static final String STEREOTYPE_NAME = "MetricVariable";
 
-    @objid ("0f84464f-15d8-4488-aa64-35070c03939f")
+    @objid ("2ca65f70-623d-461c-b197-a69b6e845eae")
     public static final String CURRENTCONFIGURATION_TAGTYPE = "currentConfiguration";
 
-    @objid ("59c037c1-40b5-4884-9ec8-90cfb7da1260")
+    @objid ("2b83a4a8-7f4e-430d-8b7a-ed80f3577d1b")
     public static final String FORMULA_TAGTYPE = "formula";
 
-    @objid ("fd2e9c30-a3f2-4e50-8fcc-94e450c0a3b7")
+    @objid ("d3deb1b8-b0b1-4824-b0f6-531e82ec97ae")
     public static final String ONNODECANDIDATES_TAGTYPE = "onNodeCandidates";
 
     /**
@@ -68,7 +68,7 @@ public class MetricVariable extends Metric {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4804d107-49e3-4945-a3b3-ea49d67e5479")
+    @objid ("6f941cac-79f2-48de-af48-83f75cc869b9")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricVariable.STEREOTYPE_NAME));
     }
@@ -78,7 +78,7 @@ public class MetricVariable extends Metric {
      * 
      * @return a {@link MetricVariable} proxy on the created {@link Class}.
      */
-    @objid ("2f30a111-636c-4fd8-8f68-c9c671c6b9e6")
+    @objid ("a9d4a0f0-8328-4cb7-b3bc-8a7cf99143b4")
     public static MetricVariable create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricVariable.STEREOTYPE_NAME);
@@ -92,7 +92,7 @@ public class MetricVariable extends Metric {
      * @param obj a Class
      * @return a {@link MetricVariable} proxy or <i>null</i>.
      */
-    @objid ("d40cf5f1-4678-4a05-a60e-e6a825fefe56")
+    @objid ("01a7494b-bce4-4f09-80c6-7207ca0ac7e7")
     public static MetricVariable instantiate(final Class obj) {
         return MetricVariable.canInstantiate(obj) ? new MetricVariable(obj) : null;
     }
@@ -105,7 +105,7 @@ public class MetricVariable extends Metric {
      * @return a {@link MetricVariable} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("69f80a1f-7bd1-419c-9c63-16d2335a2b06")
+    @objid ("e6219957-f052-4159-b676-11aa3ef4ff6d")
     public static MetricVariable safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricVariable.canInstantiate(obj))
         	return new MetricVariable(obj);
@@ -119,7 +119,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("8cf1f1e5-fd20-4168-910e-f41806cca6fd")
+    @objid ("7909842c-9df9-4071-81ea-a798b2e2575a")
     public void addComponentMetrics(final Metric obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -135,13 +135,13 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("09b89c4e-9a1e-4205-ab30-0ff28bb790a6")
+    @objid ("5dc8a681-cb68-486b-8548-03a0d09c3915")
     public void addMetricVariableConstraint(final MetricVariableConstraint obj) {
         if (obj!=null)
           ((Class) this.elt).getConstraintDefinition().add(obj.getElement());
     }
 
-    @objid ("1f888f06-00f0-4328-9848-5bfbf253e85d")
+    @objid ("ed39b2c8-432d-42cb-a7b0-0456f11f7db3")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -163,7 +163,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("5609ebfa-c558-4f11-b695-d2297f5e168e")
+    @objid ("c148351d-e55a-4cc4-9647-401aef0379ef")
     public CamelComponent getComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricVariable.MdaTypes.MDAASSOCDEP)
@@ -189,7 +189,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("a89ddda2-9b23-4088-90b6-b5f58e7dc88e")
+    @objid ("66d58193-2790-4517-bcf1-9b535c2cc6a8")
     public List<Metric> getComponentMetrics() {
         List<Metric> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -214,7 +214,7 @@ public class MetricVariable extends Metric {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("1bc56df4-95cb-4db4-b514-dbd2d481c2e8")
+    @objid ("f7bdc9c5-612c-412c-a953-53d3d5e72f18")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -225,7 +225,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2c3c5469-6c77-4153-8692-c37851fbfcd0")
+    @objid ("267b945a-8ff7-40e8-bf62-fadc500cce32")
     public String getFormula() {
         return this.elt.getTagValue(MetricVariable.MdaTypes.FORMULA_TAGTYPE_ELT);
     }
@@ -236,16 +236,17 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("a2f74cdb-433c-4eeb-b5cb-d3da68604917")
+    @objid ("c1411780-f0ef-48ce-838a-32874befa9b1")
     public List<MetricVariableConstraint> getMetricVariableConstraint() {
         List<MetricVariableConstraint> results = new ArrayList<>();
-        for (Constraint mObj : ((Class) this.elt).getConstraintDefinition())
+        for (Constraint mObj : ((Class) this.elt).getConstraintDefinition()){
         	if (MetricVariableConstraint.canInstantiate(mObj))
         			results.add((MetricVariableConstraint)CamelDesignerProxyFactory.instantiate(mObj, MetricVariableConstraint.STEREOTYPE_NAME));
+        	}
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("f158b3e5-d58b-4dfb-94c6-f1b7fb6bc63e")
+    @objid ("414f6851-1c77-4c7d-8f7e-9c17eae549af")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -256,7 +257,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2b1fd6a7-2308-4774-9507-70017002df71")
+    @objid ("50d75d8c-8525-45b2-8fe7-3eeac6285b27")
     public boolean isCurrentConfiguration() {
         return this.elt.isTagged(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT);
     }
@@ -266,7 +267,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7e7e5acb-db67-4f01-b2f3-80f0ba749516")
+    @objid ("3d67ffe2-260d-495b-8469-bde222272cf4")
     public boolean isOnNodeCandidates() {
         return this.elt.isTagged(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT);
     }
@@ -277,7 +278,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("11d28745-4216-4fa2-92dd-cefda6b29e4c")
+    @objid ("a740540b-105f-44c6-9770-d3776882d3fb")
     public boolean removeComponentMetrics(final Metric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -297,7 +298,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("214433c6-cb31-490f-8580-591887248f22")
+    @objid ("e96e3b72-2c88-48fd-ac72-eff5612eacb6")
     public boolean removeMetricVariableConstraint(final MetricVariableConstraint obj) {
         return (obj!=null)? ((Class) this.elt).getConstraintDefinition().remove(obj.getElement()) : false;
     }
@@ -308,7 +309,7 @@ public class MetricVariable extends Metric {
      * null
      * 
      */
-    @objid ("1d6b29ec-6936-4da0-99dd-ada77289361c")
+    @objid ("66e30bac-65ad-4c34-8697-4d3917f9bfca")
     public void setComponent(final CamelComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -333,7 +334,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a284754a-3cd9-4ef3-8822-9dab655948d0")
+    @objid ("36893942-3f5f-4277-a757-b2337c710fbb")
     public void setCurrentConfiguration(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(MetricVariable.MdaTypes.CURRENTCONFIGURATION_TAGTYPE_ELT, this.elt);
@@ -346,7 +347,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8454131e-3811-4f24-9e69-7bd025aedff1")
+    @objid ("cc6afe00-4827-407c-a4be-d80ddffeccd7")
     public void setFormula(final String value) {
         this.elt.putTagValue(MetricVariable.MdaTypes.FORMULA_TAGTYPE_ELT, value);
     }
@@ -356,7 +357,7 @@ public class MetricVariable extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("99d05f98-29e4-4eac-b258-b2c5ddc6a8d1")
+    @objid ("8a1c65fc-42b7-48c7-a5c0-ac6154605494")
     public void setOnNodeCandidates(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(MetricVariable.MdaTypes.ONNODECANDIDATES_TAGTYPE_ELT, this.elt);
@@ -372,32 +373,32 @@ public class MetricVariable extends Metric {
         return result;
     }
 
-    @objid ("bcad6fae-9e48-4d87-b5c3-6a51599f6eee")
+    @objid ("053b6050-6884-437d-b51f-377e08ced4eb")
     protected MetricVariable(final Class elt) {
         super(elt);
     }
 
     @objid ("81037834-9acd-42d9-b1a5-2bc14d8ad956")
     public static final class MdaTypes {
-        @objid ("3b314904-d04d-49d9-a17d-293c5c310f95")
+        @objid ("47c3159f-f8d2-483a-a374-5a471cb2130a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c2efd68d-b8d1-4e05-a063-2b28c3ddf33d")
+        @objid ("9fc67b49-1bc0-44d7-8811-71729c19f4f4")
         public static TagType CURRENTCONFIGURATION_TAGTYPE_ELT;
 
-        @objid ("578bb00d-1901-46bb-8fb9-54ea2dcf9ab8")
+        @objid ("5ff36922-e878-4537-94fe-9af0a5aeacce")
         public static TagType ONNODECANDIDATES_TAGTYPE_ELT;
 
-        @objid ("7678ac58-0549-45fe-9f90-b9588ebdd35b")
+        @objid ("37a54390-8fb2-4f1c-b639-db25b7c2f495")
         public static TagType FORMULA_TAGTYPE_ELT;
 
-        @objid ("7861ded6-d36a-4ec1-8922-8d97756faec6")
+        @objid ("b6c4da90-9849-4809-85eb-3b6dd8b0b93c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("401bc61a-520a-4fec-aee1-973da0bfdd59")
+        @objid ("0e9cdcec-bc16-4e3e-a64e-dd9c37af628a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e71bac8e-07ef-4798-a7ce-d3b4f37c57c3")
+        @objid ("87f17d27-6979-4e6f-af9e-5e48a86899ee")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "74fbbe90-c06f-4bc3-81a7-d13724b575a8");
             CURRENTCONFIGURATION_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "c0614ae1-0ba0-4112-bdfd-d97d8b6faafa");

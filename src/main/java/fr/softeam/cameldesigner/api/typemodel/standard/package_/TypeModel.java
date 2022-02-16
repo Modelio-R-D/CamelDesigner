@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.package_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("68c913aa-accf-4c20-a47c-7141fc4f3f7b")
 public class TypeModel extends SubModel {
-    @objid ("a298bf37-70cc-4a78-9419-dea7e968db87")
+    @objid ("cdffeddc-cc93-4228-99e5-8d25704af83b")
     public static final String STEREOTYPE_NAME = "TypeModel";
 
     /**
@@ -48,7 +48,7 @@ public class TypeModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("15d77795-2d73-48dd-ade8-d56b0663de80")
+    @objid ("b8ac8039-a6a3-4a0f-9817-8da052ed65fa")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, TypeModel.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class TypeModel extends SubModel {
      * 
      * @return a {@link TypeModel} proxy on the created {@link Package}.
      */
-    @objid ("4ed5e34d-038a-4750-ac5c-60ca0b11cd26")
+    @objid ("b6e9adb7-d341-4d26-925e-7841e663e7d7")
     public static TypeModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, TypeModel.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class TypeModel extends SubModel {
      * @param obj a Package
      * @return a {@link TypeModel} proxy or <i>null</i>.
      */
-    @objid ("6a0b726d-2d4a-446a-87e5-428b940484f9")
+    @objid ("253729bf-3497-4899-82de-0f7a7538b67b")
     public static TypeModel instantiate(final Package obj) {
         return TypeModel.canInstantiate(obj) ? new TypeModel(obj) : null;
     }
@@ -85,7 +85,7 @@ public class TypeModel extends SubModel {
      * @return a {@link TypeModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("d2383a29-9bd7-454e-b5a3-c0ae1f530cd2")
+    @objid ("b069844a-c837-4ce5-be91-fa3ce6138f42")
     public static TypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TypeModel.canInstantiate(obj))
         	return new TypeModel(obj);
@@ -93,7 +93,7 @@ public class TypeModel extends SubModel {
         	throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("af2f7c79-eb41-44b6-aab7-22da6e5f6f71")
+    @objid ("411295f4-abc7-4381-b84e-55533886cdc4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class TypeModel extends SubModel {
      * null
      * 
      */
-    @objid ("3db74a95-749d-4339-bd00-4a03c3a85375")
+    @objid ("c42406e4-fa2f-4e27-8d6b-433014c2c96e")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -124,13 +124,13 @@ public class TypeModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("9f5aafae-4c66-491e-a3b4-ea6823e887df")
+    @objid ("491a9c5a-6278-47ce-81bb-f161bd768f64")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("2db02e1c-4e49-40cd-b0bc-d04d4b8e7b26")
+    @objid ("4f6c885a-2df1-4cf4-ae4f-44fb0f45f90a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,7 +142,7 @@ public class TypeModel extends SubModel {
      * null
      * 
      */
-    @objid ("f81c1f2d-223b-4e48-8f77-41ad2aa7532f")
+    @objid ("09108673-70ee-4acb-a7e0-5b65fca609fe")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -155,23 +155,23 @@ public class TypeModel extends SubModel {
         return result;
     }
 
-    @objid ("b0caba21-6d18-4e18-84a3-90227e7f1445")
+    @objid ("61e38e41-ef18-4577-8fda-a5745ef467a0")
     protected TypeModel(final Package elt) {
         super(elt);
     }
 
     @objid ("96a7120e-6c34-4aa2-95d8-e1eaa1ca16de")
     public static final class MdaTypes {
-        @objid ("5ebd0233-7090-4024-83e6-bd3e4f324eb4")
+        @objid ("4f6412e6-92c8-4f73-95a7-e3c40a89623b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("cddfd001-b50b-4246-b6f6-db80cf5a2ee7")
+        @objid ("20b85963-5489-4f5c-94f8-5aa96c7f519c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("17251909-6d46-4b42-bb8a-64a4818c2fc2")
+        @objid ("7b484f14-7718-4ca9-971b-89d2d5f637b9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e0940ff2-0611-4519-9999-be6e7e5b3636")
+        @objid ("d69fde49-d460-41ac-bf91-20c1acd91a6b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "429103ee-a14c-4a9a-b791-6d9441fe5cf6");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

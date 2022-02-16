@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a6a4b7ae-60d0-494b-a18d-6990283999a7")
 public abstract class Location extends FeatureEnumeration {
-    @objid ("0d0bb4c5-f8b5-40a0-bb87-41cce09ee3e9")
+    @objid ("fa73d06f-3cff-4cdc-ba3d-43b6e719e4fc")
     public static final String STEREOTYPE_NAME = "Location";
 
-    @objid ("06f231e0-feb0-4ca5-980c-cad0225e0623")
+    @objid ("e701678a-c710-4ad7-afe8-3dd02a545607")
     public static final String ID_TAGTYPE = "id";
 
     /**
@@ -50,7 +50,7 @@ public abstract class Location extends FeatureEnumeration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6d8ecf58-ef7e-4c92-a10b-f552f1852ecc")
+    @objid ("60d4f797-5926-4908-a31b-4eff1c1d9fa1")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Enumeration) && ((Enumeration) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Location.STEREOTYPE_NAME));
     }
@@ -93,7 +93,7 @@ public abstract class Location extends FeatureEnumeration {
         throw new IllegalArgumentException("Location: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fdc25565-882d-4524-9026-47d32141d2e9")
+    @objid ("b7dbd436-f41c-4dee-83ce-34f1aa3a427f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public abstract class Location extends FeatureEnumeration {
      * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
-    @objid ("bb7952ea-106b-45c9-b471-1d40ee2fe938")
+    @objid ("c51e4748-c57e-40ba-8186-b43ede93b9c0")
     @Override
     public Enumeration getElement() {
         return (Enumeration)super.getElement();
@@ -124,12 +124,12 @@ public abstract class Location extends FeatureEnumeration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ecba5445-ef76-452d-a083-2e18582fda89")
+    @objid ("e073df24-fe17-48aa-92bc-3e981d19803c")
     public String getId() {
         return this.elt.getTagValue(Location.MdaTypes.ID_TAGTYPE_ELT);
     }
 
-    @objid ("6345ffa7-c384-4f8f-b44b-ac16b29a220e")
+    @objid ("407d05ec-615a-4533-a224-5b5d92a29de7")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -140,7 +140,7 @@ public abstract class Location extends FeatureEnumeration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3267407a-4aaa-4dde-9942-4a2e5ad48f0c")
+    @objid ("d1934ba4-438b-4780-967d-100232f5b03c")
     public void setId(final String value) {
         this.elt.putTagValue(Location.MdaTypes.ID_TAGTYPE_ELT, value);
     }
@@ -153,26 +153,26 @@ public abstract class Location extends FeatureEnumeration {
         return result;
     }
 
-    @objid ("382dd38e-f6ea-4cc9-b010-f4e448e164bc")
+    @objid ("f9e0358d-7585-4f0d-88f2-57263650e1c1")
     protected Location(final Enumeration elt) {
         super(elt);
     }
 
     @objid ("a0bb5fe1-09b7-41e5-9811-6126f9ea7b6e")
     public static final class MdaTypes {
-        @objid ("5aa8e715-0ce2-40c9-b429-5448d1fc43a5")
+        @objid ("8e679250-ad4e-42c7-b657-2da40983f53c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b347532d-97e5-4ffb-b7ec-4b4ebcdd01db")
+        @objid ("05de7399-b137-4ce4-94f9-362f044d0a1b")
         public static TagType ID_TAGTYPE_ELT;
 
-        @objid ("cbd209ed-7eb1-4de4-97a4-7f5a4b0f6883")
+        @objid ("bad3d245-1eeb-4338-b833-ffa5033ed663")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("24e146dd-f85c-4ad3-9fc3-0479f893ab07")
+        @objid ("d1344873-bc1d-40fb-a643-5826f98b9174")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9d2fb89b-ea26-4231-ad29-43c276d72b5f")
+        @objid ("9dc77a22-66a8-4f95-a336-d23ecb6418a4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "451ac0cf-b5d0-488a-8f05-43139794aa83");
             ID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "4726ff4f-02ae-437f-aebc-16cda8f5d0df");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.instance;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("db549854-9aae-4283-9b11-2038f1326191")
 public class SecurityMetricInstance extends MetricInstance {
-    @objid ("48540709-1340-4a4b-9800-7833b6b5a44b")
+    @objid ("caaccd9b-7386-4631-b761-4a90f6b3c080")
     public static final String STEREOTYPE_NAME = "SecurityMetricInstance";
 
     /**
@@ -47,7 +47,7 @@ public class SecurityMetricInstance extends MetricInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ad8cd640-63c0-4ba2-8f2c-d2a790dafba4")
+    @objid ("d073d4e5-67fc-4ba6-bc8f-73b9ed946b1e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityMetricInstance.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class SecurityMetricInstance extends MetricInstance {
      * 
      * @return a {@link SecurityMetricInstance} proxy on the created {@link Instance}.
      */
-    @objid ("b019dd08-2f66-47e4-ae89-f7660b9d2c2b")
+    @objid ("79e50eae-16ee-4633-9e73-e13d568f983b")
     public static SecurityMetricInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityMetricInstance.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class SecurityMetricInstance extends MetricInstance {
      * @param obj a Instance
      * @return a {@link SecurityMetricInstance} proxy or <i>null</i>.
      */
-    @objid ("0eb38a40-6dfc-46fa-bf90-d610b2196142")
+    @objid ("de0fbb3f-95be-487e-a34a-811550239666")
     public static SecurityMetricInstance instantiate(final Instance obj) {
         return SecurityMetricInstance.canInstantiate(obj) ? new SecurityMetricInstance(obj) : null;
     }
@@ -84,7 +84,7 @@ public class SecurityMetricInstance extends MetricInstance {
      * @return a {@link SecurityMetricInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2682de6a-7377-4e93-bff4-f00677fea54d")
+    @objid ("a82cc9f0-2750-4697-a1f6-d1a48e54329c")
     public static SecurityMetricInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (SecurityMetricInstance.canInstantiate(obj))
         	return new SecurityMetricInstance(obj);
@@ -92,7 +92,7 @@ public class SecurityMetricInstance extends MetricInstance {
         	throw new IllegalArgumentException("SecurityMetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a4c85388-6678-48ee-a664-c2963e6745b4")
+    @objid ("a0d74439-03ef-496d-b45d-e9ef44216f51")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class SecurityMetricInstance extends MetricInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("a503d435-9f32-47eb-a39c-6fb2dcfcfaa8")
+    @objid ("16aea0e5-5cd5-47d8-a321-04c69eca5234")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
     }
 
-    @objid ("35722779-2f06-48a2-8a12-216ccfef9ffb")
+    @objid ("a66c64aa-70bd-4ddc-afa8-1f3e87b6a841")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class SecurityMetricInstance extends MetricInstance {
         return result;
     }
 
-    @objid ("44769e7a-b430-46cd-b0f2-e8b9b259617c")
+    @objid ("67fc0147-00ac-4e39-80fd-341fe97733c7")
     protected SecurityMetricInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("91cf5d57-7dbc-49f4-b2a7-30e61c6807c9")
     public static final class MdaTypes {
-        @objid ("d26b2d7a-8087-463a-9b24-332539a9b661")
+        @objid ("2fb8a6ff-a833-4cf5-9466-cac33488df42")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d4815f54-7006-4b48-8f50-8db5a7134cb3")
+        @objid ("6f8ae40a-3b3d-4c4b-b2b0-fd6e08262d80")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("68f5106b-80af-4286-8516-4a5216308afd")
+        @objid ("4b979767-7c09-4eb1-8262-131b50c613e1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4ea7b288-1661-4439-98da-19346230c9c1")
+        @objid ("57dc121d-fdb3-4320-aff5-182b2adca828")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4cb7cfa4-64dc-42a4-9178-af3560cfcf40");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

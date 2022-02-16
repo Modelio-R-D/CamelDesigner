@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -38,10 +38,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("729d862a-a2e3-4f6e-ae37-85020c924c77")
 public class SoftwareComponentResourceFilter extends ResourceFilter {
-    @objid ("99c2b82b-4e93-4f65-88ce-2fd55f0ca8ae")
+    @objid ("e97b4349-cca7-481f-8b24-8342728c9879")
     public static final String STEREOTYPE_NAME = "SoftwareComponentResourceFilter";
 
-    @objid ("e272e0b6-3497-4b4a-bb9e-0ed7d1497fbb")
+    @objid ("14d61137-a536-404a-9893-3b5b7c5a137b")
     public static final String EVERYCOMPONENT_TAGTYPE = "everyComponent";
 
     /**
@@ -52,7 +52,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b085874a-39d6-40cc-aeea-dbbfc2753ef4")
+    @objid ("9fe513ae-851a-4c7b-b691-4ddc86799a2b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentResourceFilter.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * 
      * @return a {@link SoftwareComponentResourceFilter} proxy on the created {@link Class}.
      */
-    @objid ("63aaf206-96f8-4ec1-bec1-88929c028893")
+    @objid ("13067bff-e940-481f-83b2-c2973002ad8f")
     public static SoftwareComponentResourceFilter create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentResourceFilter.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * @param obj a Class
      * @return a {@link SoftwareComponentResourceFilter} proxy or <i>null</i>.
      */
-    @objid ("9d9494eb-df9b-482d-842a-bb8645a7561e")
+    @objid ("5c0e8b4a-2cc7-42ab-b2dc-743f80a89869")
     public static SoftwareComponentResourceFilter instantiate(final Class obj) {
         return SoftwareComponentResourceFilter.canInstantiate(obj) ? new SoftwareComponentResourceFilter(obj) : null;
     }
@@ -89,7 +89,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * @return a {@link SoftwareComponentResourceFilter} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6f3594a4-8330-4eba-a27f-a0586b9f6279")
+    @objid ("006ad1e5-b430-46c4-819b-00561d2376e7")
     public static SoftwareComponentResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentResourceFilter.canInstantiate(obj))
         	return new SoftwareComponentResourceFilter(obj);
@@ -103,7 +103,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("1fcee178-cf89-4a6d-9126-a1fa6280b260")
+    @objid ("485b166e-ac68-4b73-9991-0d895edba4b3")
     public void addSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -113,7 +113,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         }
     }
 
-    @objid ("4d95c4ca-4eee-4882-ad49-25eca348a8b1")
+    @objid ("529b6b54-9893-4d13-be79-da8727d3b669")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -135,7 +135,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("b212fd39-0bb2-499f-a11d-b5d777f1ff19")
+    @objid ("370c9fe9-8e38-4868-a5a0-597dad1959b0")
     public CamelModel getApplication() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SoftwareComponentResourceFilter.MdaTypes.MDAASSOCDEP)
@@ -151,7 +151,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e46cf384-2287-4174-8de6-1a7e7497b727")
+    @objid ("2f6084dc-a81e-4b77-8d0a-d9d9379a29c7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -162,7 +162,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ff34976a-7fc3-4a24-b6d1-18528a008412")
+    @objid ("01a7cd59-58e8-4d4f-b633-c015d3c511da")
     public String getEveryComponent() {
         return this.elt.getTagValue(SoftwareComponentResourceFilter.MdaTypes.EVERYCOMPONENT_TAGTYPE_ELT);
     }
@@ -173,7 +173,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("e1d92303-78e8-429e-955c-ad48b4f19fdc")
+    @objid ("e5f37f82-b746-4098-bc1e-9449e6e4e080")
     public List<SoftwareComponent> getSoftwareComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -188,7 +188,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("8ed18646-c907-461b-85cd-0cc0529d6478")
+    @objid ("97074312-4f30-4952-9834-a6a2810a4ccb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -200,7 +200,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("44a9560e-235b-4102-a974-e12555ec4dd2")
+    @objid ("7e8ea08d-3e1b-4c53-9529-a609e2d98b25")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -220,7 +220,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("de3f4744-c373-4795-9c93-2b20b9227ec5")
+    @objid ("bc011562-66f2-412d-a2b9-a3f6d63b2179")
     public void setApplication(final CamelModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -245,7 +245,7 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("be20fc4b-9a23-4074-a8fd-0f4cf05633b4")
+    @objid ("79200da7-bb3f-4d22-91d7-47e8f75b3195")
     public void setEveryComponent(final String value) {
         this.elt.putTagValue(SoftwareComponentResourceFilter.MdaTypes.EVERYCOMPONENT_TAGTYPE_ELT, value);
     }
@@ -258,26 +258,26 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         return result;
     }
 
-    @objid ("3bc1ab53-3a76-46d9-8582-b4bdd2611d97")
+    @objid ("8ddb7edd-2fe8-4ee5-a6c9-080616e5e82a")
     protected SoftwareComponentResourceFilter(final Class elt) {
         super(elt);
     }
 
     @objid ("9797b51a-6b94-4caf-a495-9d34ae7b4370")
     public static final class MdaTypes {
-        @objid ("13b3e304-8adb-4af8-a335-a9cb4568cf2f")
+        @objid ("64f5bd55-5edf-4520-8e89-e1344d7e3de3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bf75fb2f-71f9-4f0e-a92b-6c6c6048cb75")
+        @objid ("c13bf7a3-0b24-4791-a197-329e7ef9f500")
         public static TagType EVERYCOMPONENT_TAGTYPE_ELT;
 
-        @objid ("2f808b81-56f6-40e1-8c37-8fc54e60847a")
+        @objid ("280bfa64-06cc-4891-a468-b792aa9aa58c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("86202f66-4c5d-4855-a283-3f1fa81726d6")
+        @objid ("37125e42-8b89-4632-84cf-a3a64cbadf38")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f1b55692-f74a-4451-aae2-400f7bdad4c9")
+        @objid ("1777d64c-7cec-4376-8b93-b0f498db17a8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d2a3f527-691b-4b04-a5c2-63f39b55c173");
             EVERYCOMPONENT_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "726ba30c-05cc-4f4b-b31a-4c9238661a62");

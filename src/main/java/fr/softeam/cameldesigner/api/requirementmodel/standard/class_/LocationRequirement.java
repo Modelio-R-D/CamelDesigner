@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -39,10 +39,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("74a3ed13-52f1-4d74-b05d-c1717fddaad8")
 public class LocationRequirement extends HardRequirement {
-    @objid ("163c57e2-ede2-4b2a-8f32-171f92d11c64")
+    @objid ("7c29ef10-09db-4c0c-9df1-277b88b10a8e")
     public static final String STEREOTYPE_NAME = "LocationRequirement";
 
-    @objid ("721e9c16-1d98-42c5-a872-7c02d92ab574")
+    @objid ("f1ed27cb-bd25-443e-98ed-93f4d7f0398f")
     public static final String ALLREQUIRED_TAGTYPE = "allRequired";
 
     /**
@@ -53,7 +53,7 @@ public class LocationRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c1370965-4fd8-422f-8171-1dd669cea2bf")
+    @objid ("fa4c272e-4da0-4def-8944-ed4f584fc8ef")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LocationRequirement.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class LocationRequirement extends HardRequirement {
      * 
      * @return a {@link LocationRequirement} proxy on the created {@link Class}.
      */
-    @objid ("76241135-9103-492a-a62e-354c8d065e66")
+    @objid ("335355b6-bee7-4d69-ad94-432eeb60198f")
     public static LocationRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, LocationRequirement.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class LocationRequirement extends HardRequirement {
      * @param obj a Class
      * @return a {@link LocationRequirement} proxy or <i>null</i>.
      */
-    @objid ("c5d56304-a1a1-4a75-980b-1b0aa21a12ab")
+    @objid ("2bb4dcc9-cf67-45d6-bf69-94f2f647fd69")
     public static LocationRequirement instantiate(final Class obj) {
         return LocationRequirement.canInstantiate(obj) ? new LocationRequirement(obj) : null;
     }
@@ -90,7 +90,7 @@ public class LocationRequirement extends HardRequirement {
      * @return a {@link LocationRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("20061fdb-2980-46a4-99fa-3c2801dbfe07")
+    @objid ("7e347071-6c5c-4aab-8aaf-80fe2f277e1d")
     public static LocationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (LocationRequirement.canInstantiate(obj))
         	return new LocationRequirement(obj);
@@ -104,7 +104,7 @@ public class LocationRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("92061dfd-a3ac-4ccf-9366-9e2f7749c7be")
+    @objid ("3fe05b0e-232e-4185-a5ba-0018224a5f7e")
     public void addLocations(final Location obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -114,7 +114,7 @@ public class LocationRequirement extends HardRequirement {
         }
     }
 
-    @objid ("1d360ac7-141b-487d-8222-11430cbfb373")
+    @objid ("189521b4-6560-4abd-997f-5c1c63d3cfbd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -134,7 +134,7 @@ public class LocationRequirement extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("7ea3e968-6b3b-44e0-90a9-a72df8f9d1bc")
+    @objid ("572fc165-782d-42f3-b8ac-46eab002744d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -146,7 +146,7 @@ public class LocationRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("c022769e-a9f3-4417-a3f3-ec5fa0354c69")
+    @objid ("17380dc6-06d2-439d-941b-3708019356aa")
     public List<Location> getLocations() {
         List<Location> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -161,7 +161,7 @@ public class LocationRequirement extends HardRequirement {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("3b7340ea-6afe-4c15-80f1-1ded1eba76cc")
+    @objid ("549b25ac-534e-4c04-b2af-3da9fbaf8554")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class LocationRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5c304754-e1ed-42f8-9dbb-125dcf6ae820")
+    @objid ("eda63085-04a7-4b05-abfe-bdaca66a8442")
     public boolean isAllRequired() {
         return this.elt.isTagged(LocationRequirement.MdaTypes.ALLREQUIRED_TAGTYPE_ELT);
     }
@@ -183,7 +183,7 @@ public class LocationRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("d1cbc521-3343-4767-b7a1-b6983bbcfa56")
+    @objid ("8eb2a1bf-9f82-45b2-8c7a-add2f45e9986")
     public boolean removeLocations(final Location obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -202,7 +202,7 @@ public class LocationRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e1ced7ff-1c63-4383-8a36-d2449738c216")
+    @objid ("16696465-80cf-4ad0-a2ff-c09730a76e0d")
     public void setAllRequired(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(LocationRequirement.MdaTypes.ALLREQUIRED_TAGTYPE_ELT, this.elt);
@@ -218,26 +218,26 @@ public class LocationRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("bb7f27d2-c147-4c54-8024-8991ada7c76d")
+    @objid ("2a97dd16-4140-49b3-b44b-d77d39be0043")
     protected LocationRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("6baddae1-dc4f-440f-a708-5529c6ec0aa5")
     public static final class MdaTypes {
-        @objid ("e787f599-3ca2-4770-908d-992ac8544a03")
+        @objid ("b95ebed2-4b48-4ddc-9412-6899ad2a9edd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("09b04bcb-4079-4a7c-bca8-b7e3535340af")
+        @objid ("8d393893-f366-493f-a391-65894037a22d")
         public static TagType ALLREQUIRED_TAGTYPE_ELT;
 
-        @objid ("5a74786b-8ad0-46cb-bfb3-0bcaecfc8783")
+        @objid ("f23c3a10-60bb-4e18-8a5a-faab68926aee")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("859f07ef-b327-42dc-a5c9-9bc6330d3623")
+        @objid ("e4160a28-28b1-4979-b4d3-23ae1af0c48a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("daa3490a-0ed8-476c-8de3-dc5fc142050d")
+        @objid ("2a4702da-71c7-4c1c-9e84-a7a2beb1cea8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "72da0f17-5434-4558-b50f-7be0430c3f2b");
             ALLREQUIRED_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "3af4908e-00c9-4466-8e0c-d74baa35afe1");

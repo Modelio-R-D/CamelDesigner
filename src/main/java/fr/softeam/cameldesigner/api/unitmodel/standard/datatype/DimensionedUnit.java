@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2e234a26-ab74-44b2-9156-be36441cff03")
 public abstract class DimensionedUnit extends Unit {
-    @objid ("030cf309-299a-4623-ab73-bad3e6fdc837")
+    @objid ("ea3dc452-3d85-45fb-b043-6865e2a428d1")
     public static final String STEREOTYPE_NAME = "DimensionedUnit";
 
     /**
@@ -47,7 +47,7 @@ public abstract class DimensionedUnit extends Unit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("618f6473-3c49-4f54-a718-23a756178a66")
+    @objid ("0e7f9492-3a06-4731-8f32-0167cb4293fc")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DimensionedUnit.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public abstract class DimensionedUnit extends Unit {
         return SingleUnit.canInstantiate(obj) ?  new SingleUnit(obj) : CompositeUnit.canInstantiate(obj) ? new CompositeUnit(obj) : null;
     }
 
-    @objid ("12b6ba0d-bc2c-423e-90ab-dcc12778eb4f")
+    @objid ("a2f532a2-fb33-4872-9657-cf0d25645690")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -79,7 +79,7 @@ public abstract class DimensionedUnit extends Unit {
      * null
      * 
      */
-    @objid ("d7e2fa34-71be-4d02-82dc-55dc87327d8d")
+    @objid ("1bd0611d-748e-4f41-abcc-973f53aefde8")
     public UnitDimension getDimension() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DimensionedUnit.MdaTypes.MDAASSOCDEP)
@@ -95,13 +95,13 @@ public abstract class DimensionedUnit extends Unit {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("2aa5176d-304e-443e-b29b-7da10a325d4e")
+    @objid ("bbdec9da-dfeb-40a7-acca-6ed8bf84e3d4")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("c80b2ab2-0d44-4a92-b0cd-277ee0c5961f")
+    @objid ("9f2f3497-8553-4f0e-909e-c8250f8a1731")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -113,7 +113,7 @@ public abstract class DimensionedUnit extends Unit {
      * null
      * 
      */
-    @objid ("80f047d7-7aa4-4845-8a6b-24a3c41e8d43")
+    @objid ("e2eab532-be73-4ab7-b5b6-b4038809d5ed")
     public void setDimension(final UnitDimension obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -141,23 +141,23 @@ public abstract class DimensionedUnit extends Unit {
         return result;
     }
 
-    @objid ("ba412b6a-cd82-4202-a7aa-1f6843622534")
+    @objid ("568b4b29-b1fc-4d0c-970f-c6fe61cf8770")
     protected DimensionedUnit(final DataType elt) {
         super(elt);
     }
 
     @objid ("7020bdc9-61ca-45e7-b8b0-e04dd997a97d")
     public static final class MdaTypes {
-        @objid ("2b3730c4-9f29-421b-99d3-a1d0cd343c8e")
+        @objid ("2ad4046e-7895-4ddd-98dd-39e3357e4ef3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("22f9db5f-71df-4bbe-b070-2f28e541f64f")
+        @objid ("2605f296-e0d0-45c4-979a-afd265ac6f91")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("546b6e7a-b06b-4720-9d5e-55376200dd8a")
+        @objid ("dbfd0422-84a7-45e3-8a6e-b24e358fbe63")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("2d7d89c4-2740-4b16-aa8d-eb0de89a9b11")
+        @objid ("2a625a7d-923a-43c2-bd9e-a61275e9660e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7e307b11-f18c-4c69-8c76-7b57b8d1bb8e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

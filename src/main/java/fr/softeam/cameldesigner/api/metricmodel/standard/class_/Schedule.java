@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -40,19 +40,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("98c5a57b-bbdd-4a3e-ab7c-6767c10ff2bd")
 public class Schedule extends FeatureClass {
-    @objid ("b635d255-8525-4373-9e08-581d1d539c92")
+    @objid ("67b862a6-3baa-402d-9246-2022b9794aaa")
     public static final String STEREOTYPE_NAME = "Schedule";
 
-    @objid ("86a148c0-0551-4dd8-8269-ac8d00fbe84e")
+    @objid ("f721f10b-bba0-4185-a6e6-5aae485374c5")
     public static final String END_TAGTYPE = "end";
 
-    @objid ("1aac8d1a-c400-4ebe-a647-5509ad8fafe4")
+    @objid ("93ccf25c-0522-4ee2-b97c-149cf767c66b")
     public static final String INTERVAL_TAGTYPE = "interval";
 
-    @objid ("06ca1447-35ba-47ec-b878-cdf7ea2dbc62")
+    @objid ("01fc13ce-1548-460c-8301-98ad58251b5c")
     public static final String REPETITIONS_TAGTYPE = "repetitions";
 
-    @objid ("a2daaf51-a0e9-4b5f-bbc9-aed26d117fb1")
+    @objid ("96ee89de-d7a9-4405-94ed-2a47c2482866")
     public static final String START_TAGTYPE = "start";
 
     /**
@@ -63,7 +63,7 @@ public class Schedule extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1183ba1d-10a9-4602-b27f-2d7c4fa53f25")
+    @objid ("c8436100-d021-4baa-b934-b6e7d8be5bd7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Schedule.STEREOTYPE_NAME));
     }
@@ -73,7 +73,7 @@ public class Schedule extends FeatureClass {
      * 
      * @return a {@link Schedule} proxy on the created {@link Class}.
      */
-    @objid ("3cf728a7-fcc1-487f-9f60-5d19225a2bc9")
+    @objid ("b39f622d-2d9c-4ce4-b8fe-2bc0b9c9d9b8")
     public static Schedule create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Schedule.STEREOTYPE_NAME);
@@ -87,7 +87,7 @@ public class Schedule extends FeatureClass {
      * @param obj a Class
      * @return a {@link Schedule} proxy or <i>null</i>.
      */
-    @objid ("feab9f38-4a21-446b-b4ed-a33c2a2544b3")
+    @objid ("9e1e094e-67fe-4888-9103-973749bfe9fb")
     public static Schedule instantiate(final Class obj) {
         return Schedule.canInstantiate(obj) ? new Schedule(obj) : null;
     }
@@ -100,7 +100,7 @@ public class Schedule extends FeatureClass {
      * @return a {@link Schedule} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("d131645a-4795-4e0a-81fe-71b509f88ca0")
+    @objid ("a8311b9c-dc4b-4870-a88d-02b891a6216a")
     public static Schedule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Schedule.canInstantiate(obj))
         	return new Schedule(obj);
@@ -108,7 +108,7 @@ public class Schedule extends FeatureClass {
         	throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bf4d350b-ac7b-4f86-9291-df65a0a05336")
+    @objid ("55c231a4-4f20-4f7c-9665-aa6dc9c4107f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,7 +128,7 @@ public class Schedule extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("badfb125-687e-4f1a-8a1c-2cd6f01eadac")
+    @objid ("1bf2a814-6aa3-4d26-85da-aa341be23c8e")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -139,7 +139,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("de756c90-a680-4d3b-abed-7088d3a6bbdb")
+    @objid ("a1c25319-55bb-4b67-ac62-cbf4f1d620e3")
     public String getEnd() {
         return this.elt.getTagValue(Schedule.MdaTypes.END_TAGTYPE_ELT);
     }
@@ -149,7 +149,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b669b5b8-fd17-4324-9a40-a5f52b44d4f0")
+    @objid ("8a2bf227-9f2b-4089-9cb9-2cc84abaa122")
     public String getInterval() {
         return this.elt.getTagValue(Schedule.MdaTypes.INTERVAL_TAGTYPE_ELT);
     }
@@ -159,7 +159,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ab4c580a-6b08-4381-95e1-69ce0e9491a7")
+    @objid ("4a50ab99-c32f-4c1e-b23f-163f776dc948")
     public String getRepetitions() {
         return this.elt.getTagValue(Schedule.MdaTypes.REPETITIONS_TAGTYPE_ELT);
     }
@@ -169,7 +169,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ce13c0c6-e199-4ddc-ae79-099a29430f3a")
+    @objid ("12182acc-f4b5-47ad-ba2e-0cfb75fcffa6")
     public String getStart() {
         return this.elt.getTagValue(Schedule.MdaTypes.START_TAGTYPE_ELT);
     }
@@ -180,7 +180,7 @@ public class Schedule extends FeatureClass {
      * null
      * 
      */
-    @objid ("f4252d10-5964-4676-b656-951ebe1a92de")
+    @objid ("dd820c4f-cbd0-4c83-9cde-f9d6023f40d9")
     public Unit getTimeUnit() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Schedule.MdaTypes.MDAASSOCDEP)
@@ -196,7 +196,7 @@ public class Schedule extends FeatureClass {
         return null;
     }
 
-    @objid ("3f73029a-fbfb-483c-bd99-2a60457044e8")
+    @objid ("b634b2df-6f77-4605-8acf-94375eb265ba")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -207,7 +207,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ce100135-f01b-4f5c-909c-ca650482aef6")
+    @objid ("6e21ab51-c31a-41a4-920a-3e74b2a89fe4")
     public void setEnd(final String value) {
         this.elt.putTagValue(Schedule.MdaTypes.END_TAGTYPE_ELT, value);
     }
@@ -217,7 +217,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6cb96b11-6145-4292-a7e4-5da79a7a7f5b")
+    @objid ("3455f4a6-876a-4d64-bc13-602749bea1fe")
     public void setInterval(final String value) {
         this.elt.putTagValue(Schedule.MdaTypes.INTERVAL_TAGTYPE_ELT, value);
     }
@@ -227,7 +227,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4dcf31db-f94b-4203-963b-b03c5143a821")
+    @objid ("7296b19e-3568-49fa-a34e-1e23d03bcbda")
     public void setRepetitions(final String value) {
         this.elt.putTagValue(Schedule.MdaTypes.REPETITIONS_TAGTYPE_ELT, value);
     }
@@ -237,7 +237,7 @@ public class Schedule extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0136c613-37bd-4f52-b58b-be1d76ee7f89")
+    @objid ("026530d9-77c6-4db3-a8c6-4aa895af5901")
     public void setStart(final String value) {
         this.elt.putTagValue(Schedule.MdaTypes.START_TAGTYPE_ELT, value);
     }
@@ -248,7 +248,7 @@ public class Schedule extends FeatureClass {
      * null
      * 
      */
-    @objid ("be4c0a52-9835-48f3-92d3-1a272e8d6716")
+    @objid ("c6ab3659-e1ce-4fcc-9fd7-0f6ce9af57a2")
     public void setTimeUnit(final Unit obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -276,35 +276,35 @@ public class Schedule extends FeatureClass {
         return result;
     }
 
-    @objid ("7a4ccfbd-413c-41c4-a2b2-bd7347320605")
+    @objid ("c99654e1-7829-4c6a-8ae1-2b8709165892")
     protected Schedule(final Class elt) {
         super(elt);
     }
 
     @objid ("0e156ba5-618a-44cd-8a09-9cb3cbf093ee")
     public static final class MdaTypes {
-        @objid ("75499643-840d-4683-8208-99981c5fc4ba")
+        @objid ("aab91d8a-f42a-4659-8a8a-d5e071d09c56")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6cafd420-7fbf-4d0c-99ce-a72bc5610333")
+        @objid ("44d6929c-28c7-4c23-9994-6de8f2db69e1")
         public static TagType START_TAGTYPE_ELT;
 
-        @objid ("a1353d83-6b90-47b3-aa3d-5ae92a7d5dad")
+        @objid ("d72ea107-1585-42bf-ac58-684429fa625a")
         public static TagType END_TAGTYPE_ELT;
 
-        @objid ("5269a424-6856-4d99-b40c-cb5969254522")
+        @objid ("b65b63ca-37ea-407e-bb5f-b8766627302f")
         public static TagType REPETITIONS_TAGTYPE_ELT;
 
-        @objid ("c70d461d-44a7-4e94-9efd-d078f3a65988")
+        @objid ("cf8c893b-8c47-43af-aa94-d20a0109438a")
         public static TagType INTERVAL_TAGTYPE_ELT;
 
-        @objid ("3eaea2bd-7a54-4edf-a825-d17a161683b8")
+        @objid ("f964f765-c190-4348-b913-4d415d2f7681")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("be2b63bb-a99f-4005-9d80-a4a197afe8d5")
+        @objid ("519395ad-fccc-4f6b-bc96-673e37639d39")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e52eb580-d929-4fb1-9984-c34305819642")
+        @objid ("76e06196-47ec-4411-8f2c-e33496274ab0")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "cad43b0e-412b-4e89-9a37-e7e1cda6ca29");
             START_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "798817d7-1858-433c-924c-d2de04defbb5");

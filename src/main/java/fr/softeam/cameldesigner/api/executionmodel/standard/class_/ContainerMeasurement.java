@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c4401553-3d0b-4901-8ab2-21261d105e3c")
 public class ContainerMeasurement extends Measurement {
-    @objid ("c267444f-35c4-462b-9405-5e961b72eb9f")
+    @objid ("9a574cc8-52f4-4e2c-8a28-3dc54d918044")
     public static final String STEREOTYPE_NAME = "ContainerMeasurement";
 
     /**
@@ -48,7 +48,7 @@ public class ContainerMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("963ed76e-da48-434d-9e6e-b5886fbcb2bc")
+    @objid ("ac2973da-205b-4dbe-ae5d-4ac41ea8bdea")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ContainerMeasurement.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class ContainerMeasurement extends Measurement {
      * 
      * @return a {@link ContainerMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("e3091337-8a0a-48c0-8e63-8265580f0b14")
+    @objid ("ea75795a-cde0-4814-9510-1bd2caccbecc")
     public static ContainerMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ContainerMeasurement.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class ContainerMeasurement extends Measurement {
      * @param obj a Class
      * @return a {@link ContainerMeasurement} proxy or <i>null</i>.
      */
-    @objid ("19d14403-4013-4d78-818a-11a0667b628d")
+    @objid ("24669713-0ae9-41a6-97c6-2d1a2e5e8c85")
     public static ContainerMeasurement instantiate(final Class obj) {
         return ContainerMeasurement.canInstantiate(obj) ? new ContainerMeasurement(obj) : null;
     }
@@ -85,7 +85,7 @@ public class ContainerMeasurement extends Measurement {
      * @return a {@link ContainerMeasurement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0d09f28e-ff0f-4469-a475-1096f3ce7c96")
+    @objid ("b87f8b96-30e6-4255-8e49-4a43cb445dbd")
     public static ContainerMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ContainerMeasurement.canInstantiate(obj))
         	return new ContainerMeasurement(obj);
@@ -93,7 +93,7 @@ public class ContainerMeasurement extends Measurement {
         	throw new IllegalArgumentException("ContainerMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("922617e0-fdba-4886-b64d-303edfad2806")
+    @objid ("034019d1-b79d-4337-bc0c-75c8b5380e2d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class ContainerMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("2da4ecbe-70e0-47f2-89e2-3f70cd7059a5")
+    @objid ("2dc7e1de-15fc-437c-af80-a6733ddf6f7e")
     public Container getContainer() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ContainerMeasurement.MdaTypes.MDAASSOCDEP)
@@ -133,7 +133,7 @@ public class ContainerMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("470ac8c7-b0dc-49ef-9469-c39e233e7c97")
+    @objid ("c80991df-2f97-4333-95ae-eb65ef3957b3")
     public ContainerInstance getContainerInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ContainerMeasurement.MdaTypes.MDAASSOCDEP)
@@ -149,13 +149,13 @@ public class ContainerMeasurement extends Measurement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("8f0639d8-20c1-47b1-888a-ab61a3614519")
+    @objid ("941731bc-afbc-4c8b-8433-715b8efa7601")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("ced99a6c-77b7-4c3e-a099-cd647174bc05")
+    @objid ("bdb48bd6-d9aa-4528-930f-e109fc0fab6f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -167,7 +167,7 @@ public class ContainerMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("6b3f1063-ce34-4c08-9a5b-4d7655f59beb")
+    @objid ("8547914a-e67a-4cfa-9dd0-71468b33732f")
     public void setContainer(final Container obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -193,7 +193,7 @@ public class ContainerMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("cb5292eb-f9c5-4aef-a5a0-747ef675f59f")
+    @objid ("0e373cc9-83a8-4336-839e-e910b197dedd")
     public void setContainerInstance(final ContainerInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -221,23 +221,23 @@ public class ContainerMeasurement extends Measurement {
         return result;
     }
 
-    @objid ("73795e83-90a8-49e7-8390-90b8210f72c7")
+    @objid ("d1134af5-541e-4048-978f-f96d59c7721a")
     protected ContainerMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("0bc17bd6-139f-4ffe-97d9-fd0db467095f")
     public static final class MdaTypes {
-        @objid ("abf521db-449a-4d88-9d2b-d30b0d336aeb")
+        @objid ("761b1b15-4d51-4a0f-9527-63a54aae8588")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("52a1f9af-b2be-4a84-9d46-5522a148f32c")
+        @objid ("8c214b69-e206-4e5c-8a53-9d743934ce01")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a039f8fc-c7e6-453f-a092-b09821c6a424")
+        @objid ("8159c35d-a92c-4948-af31-ae4e467073fb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9abcd7f4-9b85-453d-9978-edb162a533ea")
+        @objid ("fa924e48-491d-4506-b480-10c60fec22e9")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "85629f9a-c7b9-455f-a948-e90a070e6b60");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

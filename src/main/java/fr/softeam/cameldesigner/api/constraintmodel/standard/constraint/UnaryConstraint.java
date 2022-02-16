@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -33,16 +33,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("3892b894-18cc-4724-ac74-318af5127843")
 public abstract class UnaryConstraint extends CamelConstraint {
-    @objid ("94d7baff-d28a-4901-a1fd-711276fa5637")
+    @objid ("6ff0f827-3bbd-4902-bee1-0f82f230f315")
     public static final String STEREOTYPE_NAME = "UnaryConstraint";
 
-    @objid ("5ddc6012-bbc1-4de1-9db3-30a62ae37d52")
+    @objid ("24cce4b2-23d2-41fe-af01-dcad987c90a4")
     public static final String COMPARISONOPERATOR_TAGTYPE = "comparisonOperator";
 
-    @objid ("f640fe9b-c6c8-4ea5-91a2-3bbe6e578c3d")
+    @objid ("b951b64f-a063-4926-a619-48da01e02ebd")
     public static final String THRESHOLD_TAGTYPE = "threshold";
 
-    @objid ("70c6ef48-1d1e-4bb4-b282-979da3e0e19e")
+    @objid ("18298b86-1109-48c1-8c12-e89e04d33012")
     public static final String VALIDITY_TAGTYPE = "validity";
 
     /**
@@ -53,12 +53,12 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4af9cd32-7af3-4958-bba4-4825a2f82cc4")
+    @objid ("00cdc81b-c585-42eb-b6d8-dc323887f4b6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UnaryConstraint.STEREOTYPE_NAME));
     }
 
-    @objid ("9d000e9c-a480-414a-8ce2-4e7d6a9dd225")
+    @objid ("96626527-ee8c-4165-9f7e-9888d4245289")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -79,7 +79,7 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2935cb53-c4f3-41fe-91a3-c2734ae82104")
+    @objid ("2b31712a-e573-406c-b579-73e0c852a4f7")
     public String getComparisonOperator() {
         return this.elt.getTagValue(UnaryConstraint.MdaTypes.COMPARISONOPERATOR_TAGTYPE_ELT);
     }
@@ -88,7 +88,7 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("96d4a934-3495-461c-9653-e31eb5a5968a")
+    @objid ("98d60dae-3150-4c28-8504-55ead8cc2372")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -99,7 +99,7 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("399ec19a-b9da-45cc-9967-66b77218b493")
+    @objid ("cf997045-fa67-4cde-9855-7cf654bbb048")
     public String getThreshold() {
         return this.elt.getTagValue(UnaryConstraint.MdaTypes.THRESHOLD_TAGTYPE_ELT);
     }
@@ -109,12 +109,12 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("542fb64d-746d-4441-8e06-13518e7f1c83")
+    @objid ("44648c77-60e0-4c8e-ad4f-a6225a92b559")
     public String getValidity() {
         return this.elt.getTagValue(UnaryConstraint.MdaTypes.VALIDITY_TAGTYPE_ELT);
     }
 
-    @objid ("321ecc56-3bb2-4ba2-aa35-57fab021ae79")
+    @objid ("ed07f5cc-3e49-444c-a205-246b05e583ca")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -125,7 +125,7 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1fb8b29f-1437-4e95-89f1-faafaac146e8")
+    @objid ("4fc8b8d4-7b79-447e-b35a-caffe0a9e5b1")
     public void setComparisonOperator(final String value) {
         this.elt.putTagValue(UnaryConstraint.MdaTypes.COMPARISONOPERATOR_TAGTYPE_ELT, value);
     }
@@ -135,7 +135,7 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("92874abb-8c94-4edb-8964-c333b952a12f")
+    @objid ("ca7a11f3-a44b-4174-88d9-daab34b230be")
     public void setThreshold(final String value) {
         this.elt.putTagValue(UnaryConstraint.MdaTypes.THRESHOLD_TAGTYPE_ELT, value);
     }
@@ -145,37 +145,37 @@ public abstract class UnaryConstraint extends CamelConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f4d051d8-1b53-4776-b615-e8b3ad2540c7")
+    @objid ("8ee1fdff-7f89-42a3-afb0-af8f581aad39")
     public void setValidity(final String value) {
         this.elt.putTagValue(UnaryConstraint.MdaTypes.VALIDITY_TAGTYPE_ELT, value);
     }
 
-    @objid ("15c33f3b-1227-435f-b7b4-83212276728a")
+    @objid ("387c1929-5016-443e-9ce0-9332eda19529")
     protected UnaryConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("2712bfc7-aedc-48b5-9543-3300cf21a241")
     public static final class MdaTypes {
-        @objid ("cfaefb3a-c472-430f-8978-67481d96706e")
+        @objid ("f36271cc-d238-4570-bc73-e218367aefad")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6b44a876-f583-46fb-85d3-c946b24fdf3d")
+        @objid ("3d76353d-a578-4852-bf99-cfc4fdcd667b")
         public static TagType VALIDITY_TAGTYPE_ELT;
 
-        @objid ("645b95b6-97aa-442b-ab06-5b3324e9dfeb")
+        @objid ("f66ea46c-ba9c-4d76-8e85-2bd120b23b8d")
         public static TagType COMPARISONOPERATOR_TAGTYPE_ELT;
 
-        @objid ("bcf6d81b-33b2-4a2b-be27-f5edf30427d4")
+        @objid ("bfcae193-3fc0-427e-8d8f-d3cd126ff274")
         public static TagType THRESHOLD_TAGTYPE_ELT;
 
-        @objid ("a28e6554-1dbb-4a85-bbf3-05f4136be5a8")
+        @objid ("17668e6a-84a4-4a7a-b67b-da66a6c3e871")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("09524829-4b7a-4b90-92fe-add9f20e5622")
+        @objid ("afcbe95b-1739-48ca-9830-908e5802febd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("27c03d63-0e53-4794-9794-65c2f73c2d7d")
+        @objid ("2b52304f-c7d0-4ccf-ad8d-348d47ed0a48")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e8928d56-f64c-4a1f-90b0-929dc78cd231");
             VALIDITY_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "ce4ae655-ac63-4f75-acac-fc8ab479de0f");

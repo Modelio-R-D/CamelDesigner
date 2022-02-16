@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("39dc4a56-9d42-4441-8973-22fc28c57bb9")
 public class MetricConstraint extends UnaryConstraint {
-    @objid ("0216ec62-c367-4985-a3be-0420f36b3590")
+    @objid ("47ea1d33-c081-43d4-88bd-a229bb194879")
     public static final String STEREOTYPE_NAME = "MetricConstraint";
 
     /**
@@ -48,7 +48,7 @@ public class MetricConstraint extends UnaryConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("db1ff9cf-16d5-4cdc-8c9e-eba6b5364128")
+    @objid ("1c8ebf3c-d3d9-4e80-91cb-254003c05cc8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricConstraint.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class MetricConstraint extends UnaryConstraint {
      * 
      * @return a {@link MetricConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("5353ab5c-a312-4491-8726-4ab7e057c484")
+    @objid ("2892f0df-15f0-4937-9a27-a133f611de39")
     public static MetricConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricConstraint.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class MetricConstraint extends UnaryConstraint {
      * @param obj a Constraint
      * @return a {@link MetricConstraint} proxy or <i>null</i>.
      */
-    @objid ("ae9ac236-f36e-4739-8a9d-7df1f7cea67c")
+    @objid ("cefb9f53-0694-41b2-9d26-e371913905f9")
     public static MetricConstraint instantiate(final Constraint obj) {
         return MetricConstraint.canInstantiate(obj) ? new MetricConstraint(obj) : null;
     }
@@ -85,7 +85,7 @@ public class MetricConstraint extends UnaryConstraint {
      * @return a {@link MetricConstraint} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("df4336ca-2769-44aa-b80c-524da1ec916e")
+    @objid ("35afcd2a-8db0-4886-a5ac-4fe559e39e29")
     public static MetricConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (MetricConstraint.canInstantiate(obj))
         	return new MetricConstraint(obj);
@@ -93,7 +93,7 @@ public class MetricConstraint extends UnaryConstraint {
         	throw new IllegalArgumentException("MetricConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ed114410-264c-454b-a0ec-4aa80b148e1c")
+    @objid ("d124249e-228f-43b0-a456-effd177ccd54")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class MetricConstraint extends UnaryConstraint {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("6d8311c8-3edd-4e6d-985b-17707da364e4")
+    @objid ("e2e4e5f3-ca9f-41d5-978c-8f584ed703c1")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -125,7 +125,7 @@ public class MetricConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("7fa803ae-ae36-4ed9-a8c6-1696997da958")
+    @objid ("c4ab27b1-0fb9-44c6-ba24-8f83593ed12f")
     public MetricContext getMetricContext() {
           for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
            if (MetricContext.canInstantiate(obj))
@@ -134,7 +134,7 @@ public class MetricConstraint extends UnaryConstraint {
           return null;
     }
 
-    @objid ("23045026-da83-42d3-8863-f160993c950e")
+    @objid ("f877ab22-5c1e-4dc1-9c3f-cbd19be6adf3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -146,7 +146,7 @@ public class MetricConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("a7e7c975-8a53-4f31-a66e-5b9e2870309d")
+    @objid ("59d09871-363b-472b-bf8c-f9ddafa54783")
     public void setMetricContext(final MetricContext obj) {
         // Remove existing MetricContexts
         for (Class e : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
@@ -167,23 +167,23 @@ public class MetricConstraint extends UnaryConstraint {
         return result;
     }
 
-    @objid ("0b9d70fe-1899-4042-b68c-86a1509e7115")
+    @objid ("bd08f000-c806-4470-b3bd-ed7ac4776454")
     protected MetricConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("e24cb852-9e38-49f6-aca0-f44360d81f1b")
     public static final class MdaTypes {
-        @objid ("ae2e8959-0eff-40bd-9a72-72855aab810b")
+        @objid ("7ddb93d0-f726-4ce8-b16f-13bac6bfb07a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9ce906a2-43f5-436a-8f31-6eb09981b394")
+        @objid ("f45259ed-e5b7-4f4b-ba01-d6e752fbb9a9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1848f670-f67a-4e33-8951-c880c573a7b1")
+        @objid ("4fbcf01f-2e9c-4d02-a6a0-fbe3d5db9168")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d0f225ad-3d52-4cca-aa4e-2b1962a2474d")
+        @objid ("e6e9e40a-ec02-4c34-a6b2-7c905d8f8451")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "713a32d2-c7ee-4caa-9f5d-94fcb7820b94");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

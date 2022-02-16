@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/15/22 11:06 PM by Modelio Studio.
+ * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1376376d-c30d-492b-b270-8ae507dd5d21")
 public abstract class EventPattern extends Event {
-    @objid ("03b01479-7bab-476e-a0f4-f3c40bb432a7")
+    @objid ("f22f46ff-b2a5-45ec-b151-2f699e5a14bd")
     public static final String STEREOTYPE_NAME = "EventPattern";
 
     /**
@@ -47,12 +47,12 @@ public abstract class EventPattern extends Event {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e7e7da14-c5d0-406a-a3e8-5dca49f8b16c")
+    @objid ("df3af5dc-0e20-48bb-8b04-6f2d9153c4ef")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventPattern.STEREOTYPE_NAME));
     }
 
-    @objid ("ff34ce41-0695-4299-9e8f-3e6ab4264d6b")
+    @objid ("8e55d306-7992-4ab3-b567-6c9a3d79ca0a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,7 +72,7 @@ public abstract class EventPattern extends Event {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("51236066-f4bb-4001-8a96-57cf7f3289ed")
+    @objid ("182e3046-9cac-4af3-bbc5-4ce4bce1f183")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -84,7 +84,7 @@ public abstract class EventPattern extends Event {
      * null
      * 
      */
-    @objid ("69cdb010-6b41-4e2b-b118-76517a578df7")
+    @objid ("758e8fce-7f9a-41e7-bd82-133982a137c4")
     public Timer getTimer() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(EventPattern.MdaTypes.MDAASSOCDEP)
@@ -96,7 +96,7 @@ public abstract class EventPattern extends Event {
         return null;
     }
 
-    @objid ("21ab560c-9aab-4651-a84f-56b9a6ee4498")
+    @objid ("4e8705f6-725a-4e8f-9298-43faf082c514")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -108,7 +108,7 @@ public abstract class EventPattern extends Event {
      * null
      * 
      */
-    @objid ("86f7bebe-2c8d-4c07-927c-7a829641d12a")
+    @objid ("6eea3ea3-9d61-4450-b131-f7acf64c54bd")
     public void setTimer(final Timer obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -136,23 +136,23 @@ public abstract class EventPattern extends Event {
         return result;
     }
 
-    @objid ("facfdefe-6d30-4475-8bfc-267215675420")
+    @objid ("3f0c831e-044c-4975-81cd-a27dfa8fdf37")
     protected EventPattern(final Class elt) {
         super(elt);
     }
 
     @objid ("dd1011e3-255f-4c6a-a51e-162a33438d4c")
     public static final class MdaTypes {
-        @objid ("83cf2986-2c26-48cd-b4ed-e6d398177a02")
+        @objid ("855e967f-ee5d-4012-b851-bff2736e81fc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("342924c2-c474-4b5b-b321-95f7c0dd0dfa")
+        @objid ("39a038f3-e1e0-4f6a-9f86-dd6801af3889")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2871d273-97cc-4f40-aebd-9d63ae7e8b80")
+        @objid ("e349c45f-46a8-462f-ab1a-9e17516131f6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("aef686d5-8629-4429-a6cb-f64d74353a30")
+        @objid ("abe0086f-2ed4-4cb5-b308-5179ba16f7b7")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "46e221ca-8a8f-458b-8018-009a273cc009");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
