@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f7162d5d-ed91-4ada-8780-ceae18efea97")
 public class EventConfiguration extends FeatureArtifact {
-    @objid ("46eb320b-d619-4239-b907-c7ef02ef5709")
+    @objid ("8a6bed31-2249-4055-84ff-354f202e937e")
     public static final String STEREOTYPE_NAME = "EventConfiguration";
 
-    @objid ("865921d0-3137-4bdc-a808-6851f4018443")
+    @objid ("32cf92ec-f202-43f5-96c3-9e1a6f714aac")
     public static final String HTTPMETHODNAME_TAGTYPE = "httpMethodName";
 
-    @objid ("a6e7478f-72a3-41dc-a712-d1da4f84b18b")
+    @objid ("6d98b183-7e4b-4d51-8fac-64323cb74624")
     public static final String HTTPMETHODTYPE_TAGTYPE = "httpMethodType";
 
     /**
@@ -53,7 +53,7 @@ public class EventConfiguration extends FeatureArtifact {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("dfb919f4-bd10-41a3-85ca-9546af1e10f5")
+    @objid ("83643ba4-34c6-4415-8656-7fe36e0c81ad")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventConfiguration.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class EventConfiguration extends FeatureArtifact {
      * 
      * @return a {@link EventConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("913138a0-234c-4862-891d-aee71e0aeafb")
+    @objid ("e766ab42-bf80-431f-8e17-560e510e368d")
     public static EventConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, EventConfiguration.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class EventConfiguration extends FeatureArtifact {
      * @param obj a Artifact
      * @return a {@link EventConfiguration} proxy or <i>null</i>.
      */
-    @objid ("8c1f2ddb-53ee-464a-81c8-493e4ac16309")
+    @objid ("4ef945a8-a6cc-400e-b0f9-90875533ea9a")
     public static EventConfiguration instantiate(final Artifact obj) {
         return EventConfiguration.canInstantiate(obj) ? new EventConfiguration(obj) : null;
     }
@@ -90,7 +90,7 @@ public class EventConfiguration extends FeatureArtifact {
      * @return a {@link EventConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5f6eab4c-a14a-41de-b49e-c2ad2daf697a")
+    @objid ("3042645f-83d7-4eaf-a4f3-5dd2b28322ec")
     public static EventConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (EventConfiguration.canInstantiate(obj))
         	return new EventConfiguration(obj);
@@ -98,7 +98,7 @@ public class EventConfiguration extends FeatureArtifact {
         	throw new IllegalArgumentException("EventConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("470cfab4-b4bb-4f9e-9e8e-7f54c0979850")
+    @objid ("ef577b41-5361-469e-b814-c67d9d5fe3e5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,7 +118,7 @@ public class EventConfiguration extends FeatureArtifact {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("0401da2d-02b2-419c-bda2-b7adc6c89177")
+    @objid ("bb861982-68fa-4dd1-91aa-e5fc78086b69")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -129,7 +129,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5a00b073-e4ac-458f-a422-74907d75a47b")
+    @objid ("19598670-9f5b-45d4-8f52-293c398b6891")
     public String getHttpMethodName() {
         return this.elt.getTagValue(EventConfiguration.MdaTypes.HTTPMETHODNAME_TAGTYPE_ELT);
     }
@@ -139,12 +139,12 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("00356405-d705-4af7-962b-6f816384f93b")
+    @objid ("8dfb6179-9d49-4698-8316-da2ee3f4185b")
     public String getHttpMethodType() {
         return this.elt.getTagValue(EventConfiguration.MdaTypes.HTTPMETHODTYPE_TAGTYPE_ELT);
     }
 
-    @objid ("ad887a87-682f-4f2a-8329-0a64a786b543")
+    @objid ("f9826f79-68ca-4819-973c-4ac967f8de93")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -155,7 +155,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1a35401c-a4ec-4514-afba-2c5f33b5fa42")
+    @objid ("c6ac24a7-fc94-404a-9a97-2f9c0ef593dd")
     public void setHttpMethodName(final String value) {
         this.elt.putTagValue(EventConfiguration.MdaTypes.HTTPMETHODNAME_TAGTYPE_ELT, value);
     }
@@ -165,7 +165,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("85747029-b2d8-45b1-b651-fe8e80d60cbf")
+    @objid ("a2a453ba-79ad-4de9-bec3-128aa279309b")
     public void setHttpMethodType(final String value) {
         this.elt.putTagValue(EventConfiguration.MdaTypes.HTTPMETHODTYPE_TAGTYPE_ELT, value);
     }
@@ -178,29 +178,29 @@ public class EventConfiguration extends FeatureArtifact {
         return result;
     }
 
-    @objid ("94853140-8b08-43c2-ba1e-c2455de6c7ac")
+    @objid ("f7dd4e38-3e86-4d1a-a52f-586afe6262c0")
     protected EventConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("daa7f0bf-b9d3-467f-a096-f7cf1f5b5ad2")
     public static final class MdaTypes {
-        @objid ("54671d70-b50f-4929-ac87-faf8523716e3")
+        @objid ("8b3f6d61-c221-4138-9d62-4d4350e61cf8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9e6c886e-f1b5-43ba-b1d1-8b08ce9dec88")
+        @objid ("b7ae06cd-897f-4928-a455-540fda485eca")
         public static TagType HTTPMETHODNAME_TAGTYPE_ELT;
 
-        @objid ("8a95d840-b982-4809-8b8b-cc575dac7623")
+        @objid ("3e19888c-657f-4414-9958-d7845b17be23")
         public static TagType HTTPMETHODTYPE_TAGTYPE_ELT;
 
-        @objid ("0c35fda9-9b8b-4ff0-bd88-ff9f782573db")
+        @objid ("1a3b8573-eaaf-4a3b-9b4f-2e7927c55d6b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("feda3c59-4191-4f84-9d1f-5d73b39cfd4c")
+        @objid ("0d44e781-25d0-4522-a1b2-f50e8c997bcd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("fb717fc4-ea78-4af3-b99b-dc2aec334730")
+        @objid ("a7cc2470-bd21-4c74-b2bb-90e91982bbff")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5138fe5c-0bae-4c49-9442-c6ac48dd09d8");
             HTTPMETHODNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "06feb07e-1378-4f53-8ae2-7ba21ca97283");

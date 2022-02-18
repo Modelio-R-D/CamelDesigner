@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -38,10 +38,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f5225f72-6f20-48b4-a955-1025a1e63d7c")
 public class CompositeUnit extends DimensionedUnit {
-    @objid ("3efead7a-7a4e-4fc1-a4a0-e6be53da54d5")
+    @objid ("21f38e74-55a9-4129-9177-8320388fbb06")
     public static final String STEREOTYPE_NAME = "CompositeUnit";
 
-    @objid ("77cedc5b-56de-425a-9ca6-a0f66592898a")
+    @objid ("8a0949ec-a4e4-4911-8121-4b5a11e5f24d")
     public static final String FORMULA_TAGTYPE = "formula";
 
     /**
@@ -52,7 +52,7 @@ public class CompositeUnit extends DimensionedUnit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("38efa47e-c3f5-49ad-be69-f2bb7071f566")
+    @objid ("afc2e7b3-c8e4-4d2b-a5db-b460a8cdd644")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeUnit.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class CompositeUnit extends DimensionedUnit {
      * 
      * @return a {@link CompositeUnit} proxy on the created {@link DataType}.
      */
-    @objid ("21098701-4837-410b-9c21-9ae6116332ba")
+    @objid ("f69bc156-abf1-480c-b42e-bd9b64726543")
     public static CompositeUnit create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CompositeUnit.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class CompositeUnit extends DimensionedUnit {
      * @param obj a DataType
      * @return a {@link CompositeUnit} proxy or <i>null</i>.
      */
-    @objid ("785b2e32-4422-412e-ae79-9dbf7bee631f")
+    @objid ("7baa267c-be01-4ad6-bc1a-a8c5af91357c")
     public static CompositeUnit instantiate(final DataType obj) {
         return CompositeUnit.canInstantiate(obj) ? new CompositeUnit(obj) : null;
     }
@@ -89,7 +89,7 @@ public class CompositeUnit extends DimensionedUnit {
      * @return a {@link CompositeUnit} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b8b1901c-db45-4d67-8db3-4a08cbb0c568")
+    @objid ("7c97b978-44a1-440d-9e0c-ef0832fb1352")
     public static CompositeUnit safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (CompositeUnit.canInstantiate(obj))
         	return new CompositeUnit(obj);
@@ -103,7 +103,7 @@ public class CompositeUnit extends DimensionedUnit {
      * null
      * 
      */
-    @objid ("b3764c2c-2e59-4538-9872-45f522616047")
+    @objid ("d72d1866-1560-4e93-9576-0533caaed545")
     public void addComponentsUnits(final Unit obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -113,7 +113,7 @@ public class CompositeUnit extends DimensionedUnit {
         }
     }
 
-    @objid ("0f6e3d7c-0450-4e2d-ba66-b961f0909510")
+    @objid ("62a1a5b2-9bf1-4af7-a3dc-325278daf083")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -135,7 +135,7 @@ public class CompositeUnit extends DimensionedUnit {
      * null
      * 
      */
-    @objid ("620a84ad-958e-41e6-8e88-2f45e69194f0")
+    @objid ("df9ceb11-1f5f-47cb-b257-02cc7a7194a2")
     public List<Unit> getComponentsUnits() {
         List<Unit> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -156,7 +156,7 @@ public class CompositeUnit extends DimensionedUnit {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("d9148531-9c17-43a8-9412-d9cb8af2b5ca")
+    @objid ("43693f03-13fc-4534-8d32-15cacd55b2d5")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
@@ -167,12 +167,12 @@ public class CompositeUnit extends DimensionedUnit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f742b8d8-acec-43f8-9fa1-434ee233a4fa")
+    @objid ("819f1a6f-7618-432a-87bc-76f573e498dd")
     public String getFormula() {
         return this.elt.getTagValue(CompositeUnit.MdaTypes.FORMULA_TAGTYPE_ELT);
     }
 
-    @objid ("2b69721e-927c-4518-b451-fb14df9d4afe")
+    @objid ("fa13c91c-45b3-4a69-a521-f7cbbbe04836")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -184,7 +184,7 @@ public class CompositeUnit extends DimensionedUnit {
      * null
      * 
      */
-    @objid ("c1ed71f1-29e3-4c29-a6e4-76ec6f419ac7")
+    @objid ("2acde05f-cdf8-467c-949f-6802e3d4cddf")
     public boolean removeComponentsUnits(final Unit obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -203,7 +203,7 @@ public class CompositeUnit extends DimensionedUnit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("723b089c-2ade-4b39-b15c-3b4673cc626a")
+    @objid ("34cb7550-f547-4e2c-8892-6a79147cdd5c")
     public void setFormula(final String value) {
         this.elt.putTagValue(CompositeUnit.MdaTypes.FORMULA_TAGTYPE_ELT, value);
     }
@@ -216,26 +216,26 @@ public class CompositeUnit extends DimensionedUnit {
         return result;
     }
 
-    @objid ("ff851363-0a78-4598-a6fa-e994a1cca8c7")
+    @objid ("1804af85-b297-475f-846b-4133a77c27e7")
     protected CompositeUnit(final DataType elt) {
         super(elt);
     }
 
     @objid ("fb4ae2ef-3762-478f-83ef-6a6c6af48a4e")
     public static final class MdaTypes {
-        @objid ("73336727-47c2-45c6-8819-5cdee377a6df")
+        @objid ("ebccf0b2-e4a5-4bf7-ba60-30b3deff8891")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("04b7328a-66d2-43e6-99f3-36ef899d132f")
+        @objid ("0a9c015c-9ae1-4c18-b514-635c3c4d3373")
         public static TagType FORMULA_TAGTYPE_ELT;
 
-        @objid ("bce82479-552a-40b3-b4b6-fdc1a25eac9a")
+        @objid ("3ac90725-e54d-4f34-8dbc-913f256f78f8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b708e216-387f-4f13-80bb-ad4956d9c7a4")
+        @objid ("617ae8c6-c46d-41f4-90d2-d845a8ffed0f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("76c23350-7f89-487e-a7a9-507b6adef495")
+        @objid ("c8d06997-4a31-4c9f-87fd-3847a2d363a3")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "54731af6-c46a-4304-996c-2e03b9035567");
             FORMULA_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a2bb36cd-c4c0-4f75-b9ed-ec821fa8774e");

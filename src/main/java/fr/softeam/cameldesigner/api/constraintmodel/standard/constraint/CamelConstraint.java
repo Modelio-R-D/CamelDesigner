@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -12,7 +12,7 @@ import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.ExpendableElement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -33,8 +33,8 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <br/><i>null</i></p>
  */
 @objid ("fee51019-906e-4485-9a50-f01a00d74979")
-public abstract class CamelConstraint extends NamedElement {
-    @objid ("5ff8ae55-50d8-43d7-ba8a-6d801ae07ebd")
+public abstract class CamelConstraint extends ExpendableElement {
+    @objid ("fc4e92f8-9ad1-4bd9-85fd-c76e8109d1cc")
     public static final String STEREOTYPE_NAME = "CamelConstraint";
 
     /**
@@ -45,7 +45,7 @@ public abstract class CamelConstraint extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b78272f8-d2cc-49cb-b436-6951fef18516")
+    @objid ("edb2e68f-4dd3-4ba8-8f09-cf5593fbfb6c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelConstraint.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public abstract class CamelConstraint extends NamedElement {
             CompositeConstraint.canInstantiate(obj) ? CompositeConstraint.instantiate(obj) : null;
     }
 
-    @objid ("844fd6b4-79b4-489e-acf4-1ffdda785643")
+    @objid ("b2d060e6-42e0-437f-8c99-d29224c4269a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -76,35 +76,35 @@ public abstract class CamelConstraint extends NamedElement {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("5b9f7509-2d67-4cab-a7c0-1d48bd980624")
+    @objid ("a7814655-2a29-45d5-ac13-d84cffaf16aa")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("2d1f7a9f-ce49-4cbb-b0be-f94b08f48c2f")
+    @objid ("1eb5c3b5-4edc-46bb-8c0e-72d9df1134f6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("28a9c9ca-c9ae-470b-91b8-593eb4d8749d")
+    @objid ("41c54efb-a828-44a5-a091-aae5d0447ba0")
     protected CamelConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("c2b5b585-3d59-484d-8c6a-ed96326a9e5e")
     public static final class MdaTypes {
-        @objid ("acf69cbd-b2ea-427b-bbfc-b049ee2b748d")
+        @objid ("2df8b5ab-85c2-456a-bb63-9e52f81663a3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f78a9135-d8dd-4624-a8d1-ab6dba641834")
+        @objid ("36b905a0-8cbb-4ed5-a125-d3113c38a02e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("66ae29f5-40ba-49c0-8654-1980c0a4765f")
+        @objid ("af54b7e2-d9f7-4a82-a256-a4d63ab843d4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("114587da-ab71-4541-8093-665a392e03c6")
+        @objid ("03a58b82-0e36-450d-860b-c41eac1e398c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4afa0df7-c748-4db8-b9a7-a082a8419c00");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

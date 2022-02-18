@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.package_;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2bb251af-61c2-4baa-b91a-9e56692a7104")
 public class DataInstanceModel extends DataModel {
-    @objid ("2d87d23a-210c-448e-ad7e-841fb472e66d")
+    @objid ("9e91bd9e-4269-40dc-95f7-49bb2d4b8123")
     public static final String STEREOTYPE_NAME = "DataInstanceModel";
 
     /**
@@ -51,7 +51,7 @@ public class DataInstanceModel extends DataModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0d75e33a-ae34-48f3-8ac9-cb5ca96c9a77")
+    @objid ("db4ef0bb-f32d-4660-82c1-179b33727322")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataInstanceModel.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class DataInstanceModel extends DataModel {
      * 
      * @return a {@link DataInstanceModel} proxy on the created {@link Package}.
      */
-    @objid ("55209965-aa23-4dbe-bfe7-4bf4eabea4f6")
+    @objid ("f6d73647-b2ad-4993-ac73-fc1c13dcd7f4")
     public static DataInstanceModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataInstanceModel.STEREOTYPE_NAME);
@@ -75,7 +75,7 @@ public class DataInstanceModel extends DataModel {
      * @param obj a Package
      * @return a {@link DataInstanceModel} proxy or <i>null</i>.
      */
-    @objid ("e2d774cb-3f01-4390-8aa4-a00ddd398707")
+    @objid ("f112f91f-eaf9-4893-ae31-a4d07c7ffefa")
     public static DataInstanceModel instantiate(final Package obj) {
         return DataInstanceModel.canInstantiate(obj) ? new DataInstanceModel(obj) : null;
     }
@@ -88,7 +88,7 @@ public class DataInstanceModel extends DataModel {
      * @return a {@link DataInstanceModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0eb1c42d-7aeb-4344-b63c-db407c12dfdc")
+    @objid ("ab35eef1-d1a5-409e-a0ad-265b27c5cd40")
     public static DataInstanceModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DataInstanceModel.canInstantiate(obj))
         	return new DataInstanceModel(obj);
@@ -102,7 +102,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("0dbf2c91-1e4a-4360-93f4-b6b3f035c7cd")
+    @objid ("69f141ca-50b3-49fa-80f2-fce1b87559d8")
     public void addDataInstances(final DataInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -114,13 +114,13 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("26b1d5c1-9480-49fd-87de-436f430476fb")
+    @objid ("eaad7f3f-ec5c-4eda-a9b6-fe353a32ca6b")
     public void addDataSourcesInstances(final DataSourceInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
     }
 
-    @objid ("ce075947-a1fb-417d-8b4e-5af1b7223a4d")
+    @objid ("d3e8b58f-1e8b-4c8c-abc5-cc81acb0b0d9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -142,7 +142,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("377a0528-53b0-4d4a-afa0-684ab3ffd9cb")
+    @objid ("38137b2b-8d2e-4943-8529-ab7c8338a227")
     public List<DataInstance> getDataInstances() {
         List<DataInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -160,7 +160,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("804b77ef-9ef3-45ac-8175-41d673024be8")
+    @objid ("8a742a50-6947-4b84-83e8-b64eb9a644f1")
     public List<DataSourceInstance> getDataSourcesInstances() {
         List<DataSourceInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -174,7 +174,7 @@ public class DataInstanceModel extends DataModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("b22f0a7f-6c03-49f1-a867-720294b5c0da")
+    @objid ("c8fd2cb1-533f-4518-9f84-151b4b363cc7")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -186,7 +186,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("acb1cdf4-49a8-423a-8f66-0a97fc52372d")
+    @objid ("0c6b872f-8e42-4566-a390-d6a0ea503f8d")
     public DataTypeModel getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataInstanceModel.MdaTypes.MDAASSOCDEP)
@@ -198,7 +198,7 @@ public class DataInstanceModel extends DataModel {
         return null;
     }
 
-    @objid ("515cefed-dbbc-469f-957e-a2c16bad801e")
+    @objid ("e721bf99-568a-4b20-b773-88c91f93b620")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -210,7 +210,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("d88c04db-dac2-4239-8a90-9bf1d3888c3e")
+    @objid ("be28802a-9773-47da-beb8-1c99e4fb568a")
     public boolean removeDataInstances(final DataInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -221,7 +221,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("6bbe2d86-75d2-472c-ae18-e8b8b43d110c")
+    @objid ("b5259454-5653-4365-ac46-5d9c4c8d9da3")
     public boolean removeDataSourcesInstances(final DataSourceInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -232,7 +232,7 @@ public class DataInstanceModel extends DataModel {
      * null
      * 
      */
-    @objid ("adbb20b4-5bd6-46fb-b6b6-b975c19514ae")
+    @objid ("145c3b57-5928-4768-8082-6263df6fb239")
     public void setType(final DataTypeModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -259,23 +259,23 @@ public class DataInstanceModel extends DataModel {
         return result;
     }
 
-    @objid ("98112722-40cb-4e7f-a445-23df99e1510c")
+    @objid ("6b951521-96db-4c92-9a4d-3ec375cf4969")
     protected DataInstanceModel(final Package elt) {
         super(elt);
     }
 
     @objid ("1b14823c-7143-4254-9af2-2c028081c38f")
     public static final class MdaTypes {
-        @objid ("14e35a62-6fb7-4cda-9da7-7915399dada6")
+        @objid ("191904db-9e51-44d7-8b22-a7f4e74d1166")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d232c66e-55aa-410b-b09b-ffabb8f63a5c")
+        @objid ("8c585ef2-cda5-4cb9-abd2-bc0090118fd9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a02d6b5b-1d66-4f92-90dc-a788bb3323ed")
+        @objid ("36beaaf4-c421-404c-ac74-a8df2846f4b7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("97772a10-5e7b-44f6-95ba-bfac06628d3a")
+        @objid ("80ac2769-13dd-451b-a43b-75e719d0d47c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5f0d05aa-3af3-4ce2-b44f-e7f797acc992");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

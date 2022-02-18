@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,7 +33,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("3ba92fa8-b783-47f9-9069-045fba14f562")
 public abstract class NumericValue extends Value {
-    @objid ("99b7f691-9341-4f74-9f30-25e3c3217f08")
+    @objid ("50dcd860-8fed-4c12-9e84-a10a80c10530")
     public static final String STEREOTYPE_NAME = "NumericValue";
 
     /**
@@ -44,12 +44,12 @@ public abstract class NumericValue extends Value {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6635bc67-35f3-4a36-82b6-16b971d487ff")
+    @objid ("cb2d4cff-da67-4aa4-b3e6-1ef20c969297")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, NumericValue.STEREOTYPE_NAME));
     }
 
-    @objid ("abc6c76e-a9a1-4215-9080-8f4fc66d6835")
+    @objid ("8ae51907-cef0-402c-b66a-90f19d9992d8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -69,35 +69,35 @@ public abstract class NumericValue extends Value {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d1197bdc-9096-45a4-8770-128818387293")
+    @objid ("12384ae4-299f-4807-9e37-1b7ebc156f57")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("d407a388-00d2-4d99-b8ec-333f03ebd5c1")
+    @objid ("4331aca5-abd8-4601-ab1b-08b4624b4465")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("af047676-ae52-4ea0-91e3-ee5a933d7bc7")
+    @objid ("7b7b42d7-2fe3-4555-b19e-81a5e4a56142")
     protected NumericValue(final Class elt) {
         super(elt);
     }
 
     @objid ("06397469-0f26-401c-adeb-30da7a165128")
     public static final class MdaTypes {
-        @objid ("f3993c6d-81c7-4e79-9b4f-7eff15cf7196")
+        @objid ("9804028f-7e0c-43c3-aaff-24694370139a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("daf1e708-0086-4f46-8930-0a0a864d2dc8")
+        @objid ("a15ff0c5-9e58-4345-a5d4-e912e19d291b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f2bbd759-3b77-4cf3-9578-9d874dbf1733")
+        @objid ("4423c349-ab0e-4e9e-aa4d-11d3052ce109")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("77b0e431-b2c4-46a5-bbe9-b29687ef66cf")
+        @objid ("6adf1167-9a95-443c-83ea-fa99344a778c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a8d40881-b0b9-4426-a68a-cba902a74a5e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

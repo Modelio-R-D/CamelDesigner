@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api;
 
@@ -216,7 +216,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  */
 @objid ("3cb54811-d4bb-4bff-8dcf-3e2758d67f4d")
 public class CamelDesignerProxyFactory {
-    @objid ("96e7ada2-fda7-4308-8b95-18722c2a29b0")
+    @objid ("53396926-296d-42d5-b00c-83406746ae99")
     private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
 
     /**
@@ -228,7 +228,7 @@ public class CamelDesignerProxyFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("ca76fbb7-118e-49d6-97a1-156c8c034c97")
+    @objid ("17328d05-6300-416f-a197-01f0134837d7")
     public static final Object instantiate(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
               ModuleComponent module = s.getModule();
@@ -249,23 +249,23 @@ public class CamelDesignerProxyFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("af876d5b-77ab-46d2-a399-0e0b39f361cd")
+    @objid ("10306f4d-3bd0-4737-9f47-37ec92b10f48")
     public static final Object instantiate(final Element e, final String stName) {
         instantiateVisitor.setStereotype(stName);
         return e.accept(instantiateVisitor);
     }
 
-    @objid ("e3d2676a-3915-4b6b-89e2-2dab6ea60a5b")
+    @objid ("69b1dc4b-1437-4027-9de6-b1c046444a75")
     private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("fb71a224-9710-4740-bf55-2a3af5acfc39")
+        @objid ("03da8d21-f109-4f90-945a-e0bea0a3d862")
         private String stName;
 
-        @objid ("1f03b740-df99-4041-8cda-fd1d80bec773")
+        @objid ("d6e4d34e-c6b4-4b0c-a10d-6e85bf0573d8")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }
 
-        @objid ("467aa666-170f-4302-9fa1-c52dd8783a0d")
+        @objid ("f31ebbc0-540d-4916-8e4a-a912e007c9d3")
         @Override
         public final Object visitGeneralClass(GeneralClass obj) {
             switch (this.stName) {
@@ -276,7 +276,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitGeneralClass(obj);
         }
 
-        @objid ("f7e7d210-2358-4ef6-a207-2551e7545fdd")
+        @objid ("53ed6154-de29-4378-9528-2f3e7dcb1f26")
         @Override
         public final Object visitAbstractDiagram(AbstractDiagram obj) {
             switch (this.stName) {
@@ -287,7 +287,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultInfrastructureVisitor.super.visitAbstractDiagram(obj);
         }
 
-        @objid ("eed3ce8a-2ec8-4584-9084-eb33d02a2fd7")
+        @objid ("efaa0c73-4147-4481-adce-802993513554")
         @Override
         public final Object visitDependency(Dependency obj) {
             switch (this.stName) {
@@ -300,7 +300,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultInfrastructureVisitor.super.visitDependency(obj);
         }
 
-        @objid ("eb245a3e-7403-425e-b6b6-027842d8e7cc")
+        @objid ("8f867128-d1e2-4bdf-a662-875e4f51e03b")
         @Override
         public final Object visitComponent(Component obj) {
             switch (this.stName) {
@@ -316,7 +316,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitComponent(obj);
         }
 
-        @objid ("0971a74a-fe8b-49a1-a2f1-2c3db6da0923")
+        @objid ("cea7840a-e81d-4a32-806a-dfe080ee95cb")
         @Override
         public final Object visitInstance(Instance obj) {
             switch (this.stName) {
@@ -340,7 +340,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitInstance(obj);
         }
 
-        @objid ("22903a92-4c36-4c92-b429-84561b873b1e")
+        @objid ("2b0398a4-2fd7-4b5a-b648-8103d556d2c7")
         @Override
         public final Object visitBindableInstance(BindableInstance obj) {
             switch (this.stName) {
@@ -352,7 +352,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitBindableInstance(obj);
         }
 
-        @objid ("d3890d69-71d9-45d6-a0ab-56f6c2f7a3f4")
+        @objid ("c4427df8-2895-47f5-acbe-801c5a361fc5")
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
@@ -442,7 +442,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitClass(obj);
         }
 
-        @objid ("30f00e2d-bfa0-4b76-b3fe-58171835d106")
+        @objid ("ed5072e6-18dc-41d9-8e2e-6361f023eaca")
         @Override
         public final Object visitEnumeration(Enumeration obj) {
             switch (this.stName) {
@@ -456,7 +456,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitEnumeration(obj);
         }
 
-        @objid ("d6d03065-e62e-4e17-9543-3937be2677f5")
+        @objid ("12c9584d-8f6e-4aed-8613-6e3091a59133")
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
@@ -467,7 +467,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultInfrastructureVisitor.super.visitModelElement(obj);
         }
 
-        @objid ("0f50d69e-ce63-4485-8dbe-c65fe8676ed0")
+        @objid ("3f8e6461-b935-455c-bb77-6fe647730283")
         @Override
         public final Object visitArtifact(Artifact obj) {
             switch (this.stName) {
@@ -485,7 +485,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitArtifact(obj);
         }
 
-        @objid ("db4ac61d-abfa-47d7-b94c-4c2a0b724194")
+        @objid ("2096d2aa-48e5-4110-adf3-e1d33f979c24")
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
@@ -498,7 +498,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitAttribute(obj);
         }
 
-        @objid ("15a37ddf-67d8-4b8c-9b29-1d0dccdce1b1")
+        @objid ("79693174-4b7a-4b4c-b49d-e4f0d7eb769f")
         @Override
         public final Object visitAttributeLink(AttributeLink obj) {
             switch (this.stName) {
@@ -510,7 +510,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitAttributeLink(obj);
         }
 
-        @objid ("a7e10678-e137-4382-a754-df47c069bab7")
+        @objid ("5059780a-d30b-41a8-8b05-17afa4f267b7")
         @Override
         public final Object visitClassDiagram(ClassDiagram obj) {
             switch (this.stName) {
@@ -539,7 +539,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitClassDiagram(obj);
         }
 
-        @objid ("c1b3d90b-4e39-414d-808c-9c587f5f14fd")
+        @objid ("c85534d0-ce2d-48b6-8f39-209ab9b206dc")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
@@ -567,7 +567,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitPackage(obj);
         }
 
-        @objid ("93031bd9-4d80-4d28-94ad-e766241468d4")
+        @objid ("9a117fda-fbaf-4bf0-a662-be13dfe3dd02")
         @Override
         public final Object visitConnector(Connector obj) {
             switch (this.stName) {
@@ -584,7 +584,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitConnector(obj);
         }
 
-        @objid ("57221c26-c874-40a0-ab91-d1c53adc8ac0")
+        @objid ("5e3317f2-27c6-4f90-8a40-fee1afb16782")
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
@@ -605,7 +605,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitDataType(obj);
         }
 
-        @objid ("ee059f12-8cb3-40a7-ad76-8894eebdb446")
+        @objid ("0a5e17e1-d855-4da5-9673-3d15be570129")
         @Override
         public final Object visitPort(Port obj) {
             switch (this.stName) {
@@ -621,7 +621,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitPort(obj);
         }
 
-        @objid ("0e77017b-d407-468b-a93c-452434812ab2")
+        @objid ("6a63ed5f-06f6-4184-8af6-062fc3e71a7c")
         @Override
         public final Object visitConstraint(Constraint obj) {
             switch (this.stName) {
@@ -637,7 +637,7 @@ public class CamelDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitConstraint(obj);
         }
 
-        @objid ("ae6c6eb0-414c-4bc1-a2e9-dca1d82c37ac")
+        @objid ("beff4f0c-c712-466b-9d7d-5a34b6cce9bd")
         @Override
         public final Object visitNameSpace(NameSpace obj) {
             switch (this.stName) {
@@ -653,7 +653,7 @@ public class CamelDesignerProxyFactory {
          * <p>If null is returned the caller will return null.
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("36e6473d-6744-4146-a76d-70bc2e513db2")
+        @objid ("d42b5441-39fc-49b5-a0ad-1d79eea7beb4")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;

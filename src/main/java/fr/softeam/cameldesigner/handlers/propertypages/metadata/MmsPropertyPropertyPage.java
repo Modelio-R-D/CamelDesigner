@@ -1,17 +1,16 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metadata;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
 
 @objid ("1ccba304-5c60-4898-b98a-19a8261c420f")
-public class MmsPropertyPropertyPage<T extends MmsProperty> extends NamedElementPropertyPage<T> {
+public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
      * @param MObject : the selected element
-     * 
+     *
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
@@ -24,7 +23,7 @@ public class MmsPropertyPropertyPage<T extends MmsProperty> extends NamedElement
     /**
      * This method handles the construction of the property table of a selected element
      * @param MObject : the selected element
-     * 
+     *
      * @param table : the property table to fulfill
      */
     @objid ("afb4dafb-f880-42bc-8a6c-622ffe93886f")

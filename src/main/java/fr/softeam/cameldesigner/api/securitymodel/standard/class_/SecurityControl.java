@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -41,13 +41,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("d61a388a-d45a-42f2-ba0d-ab77ccfcec55")
 public class SecurityControl extends FeatureClass {
-    @objid ("40ae3528-6c30-4302-b0d9-e8bfa29b01a1")
+    @objid ("5c095934-2911-4c81-ae53-250c2a5c4677")
     public static final String STEREOTYPE_NAME = "SecurityControl";
 
-    @objid ("afde12dc-1ff7-48af-bffa-0bb467fa1b75")
+    @objid ("af659d83-b0cd-4f3e-9648-0b0934f0099d")
     public static final String ID_TAGTYPE = "id";
 
-    @objid ("91f70c03-85bd-4ff0-87f6-a8e3c7c2878f")
+    @objid ("cc0f72a9-f02c-4f1d-8e57-bfc2defb3a7c")
     public static final String SPECIFICATION_TAGTYPE = "specification";
 
     /**
@@ -58,7 +58,7 @@ public class SecurityControl extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3622ec98-1b8b-4400-8ff5-9938040dca2f")
+    @objid ("6a64f1eb-20a6-43b1-88fb-817f6b7a91b4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityControl.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class SecurityControl extends FeatureClass {
      * 
      * @return a {@link SecurityControl} proxy on the created {@link Class}.
      */
-    @objid ("1b015338-1d76-4317-b309-d7c162e3340f")
+    @objid ("a8561f06-e56a-4bf3-af4a-f95624173720")
     public static SecurityControl create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityControl.STEREOTYPE_NAME);
@@ -82,7 +82,7 @@ public class SecurityControl extends FeatureClass {
      * @param obj a Class
      * @return a {@link SecurityControl} proxy or <i>null</i>.
      */
-    @objid ("38f776ee-bc3c-404f-83b3-8867e50910bd")
+    @objid ("e2a040b4-bf82-49a3-bec5-0661d76b8c28")
     public static SecurityControl instantiate(final Class obj) {
         return SecurityControl.canInstantiate(obj) ? new SecurityControl(obj) : null;
     }
@@ -95,7 +95,7 @@ public class SecurityControl extends FeatureClass {
      * @return a {@link SecurityControl} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("17d9428c-0d6a-4cd3-b8cb-be2132d0f2ed")
+    @objid ("7f435b44-79b2-4037-98a7-83aa461de611")
     public static SecurityControl safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityControl.canInstantiate(obj))
         	return new SecurityControl(obj);
@@ -109,7 +109,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("6d7db952-06c2-4d19-97ac-b0a101cb207e")
+    @objid ("ff9abdbb-a74b-4737-bc7a-e4771e001829")
     public void addCompositeSecurityMetrics(final CompositeSecurityMetric obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -125,7 +125,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("b553c840-ac80-47d6-a2d1-568de771ed4b")
+    @objid ("12bdd32f-d78a-4cdb-b7f9-3a7fd2733263")
     public void addRawSecurityMetrics(final RawSecurityMetric obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -141,7 +141,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("97e823bf-346e-40f3-a6e5-2093a1443d3f")
+    @objid ("fe47620f-b52e-42bf-99a0-9503f3a93466")
     public void addSecurityProperties(final SecurityAttribute obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -151,7 +151,7 @@ public class SecurityControl extends FeatureClass {
         }
     }
 
-    @objid ("bc4f8feb-fe2d-4065-88a4-0bc0638c86a3")
+    @objid ("b919cdda-7ca6-403b-aeef-0e21117709b0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -173,7 +173,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("035535ed-02ea-4a6b-aaba-b83ca05d656a")
+    @objid ("c934b25f-05b5-4acf-8aa8-e1bc7e2ce9e4")
     public List<CompositeSecurityMetric> getCompositeSecurityMetrics() {
         List<CompositeSecurityMetric> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -192,7 +192,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("5acae75a-67b3-4f25-9fe6-96d1157efbf1")
+    @objid ("aabfddd6-2075-4d12-bbe9-b6e16ae78e4d")
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SecurityControl.MdaTypes.MDAASSOCDEP)
@@ -208,7 +208,7 @@ public class SecurityControl extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("0b284cf2-40ed-4cb6-80ed-cab58d35c98b")
+    @objid ("533a77b7-16bd-4f53-90a8-85574ff42fba")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -219,7 +219,7 @@ public class SecurityControl extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("be15854c-5a21-4e7c-a39c-8a70b253cccf")
+    @objid ("b358fcc3-aed5-41cb-9af6-d91535da8015")
     public String getId() {
         return this.elt.getTagValue(SecurityControl.MdaTypes.ID_TAGTYPE_ELT);
     }
@@ -230,7 +230,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("049600f4-3179-4830-80e2-62a9643076ef")
+    @objid ("ac3d5aca-647e-4017-968c-e88a6f01ab20")
     public List<RawSecurityMetric> getRawSecurityMetrics() {
         List<RawSecurityMetric> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -249,7 +249,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("1213d000-c515-45c9-a5d9-90e3265c580a")
+    @objid ("2ff8b221-c0f1-4673-b446-7fc753fb858f")
     public List<SecurityAttribute> getSecurityProperties() {
         List<SecurityAttribute> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -269,7 +269,7 @@ public class SecurityControl extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3997805d-2fa9-4eff-81be-468b0062a208")
+    @objid ("c4748cf5-6cce-4d6a-810b-0be1be094399")
     public String getSpecification() {
         return this.elt.getTagValue(SecurityControl.MdaTypes.SPECIFICATION_TAGTYPE_ELT);
     }
@@ -280,7 +280,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("1efba2fb-5962-4275-b43c-4eb1ee9ba706")
+    @objid ("67699f42-9d51-470e-a0d9-f8227f122922")
     public SecurityDomain getSubDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SecurityControl.MdaTypes.MDAASSOCDEP)
@@ -292,7 +292,7 @@ public class SecurityControl extends FeatureClass {
         return null;
     }
 
-    @objid ("b1f966be-8de3-4896-8eed-489cbb2a68ec")
+    @objid ("d1836506-9687-4bdf-b9f1-d4bf572d7a8d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -304,7 +304,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("da615b94-3827-4511-9475-a633bd6d51fd")
+    @objid ("decf8824-86f5-46fc-909c-dc7762ae7c41")
     public boolean removeCompositeSecurityMetrics(final CompositeSecurityMetric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -324,7 +324,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("11940ecb-7287-4917-8db4-853d658f1cc9")
+    @objid ("9180f129-66bc-446b-b5c5-8cf1df17ef25")
     public boolean removeRawSecurityMetrics(final RawSecurityMetric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -344,7 +344,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("23953017-4551-4d6e-80ef-c31b8ce49482")
+    @objid ("4d89e05f-c1be-439c-9ab8-e9b1a3627fdd")
     public boolean removeSecurityProperties(final SecurityAttribute obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -364,7 +364,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("3d0ba151-cde0-40e2-a027-fe9cf3dd65d2")
+    @objid ("a0f3e606-d69c-4b33-a0c3-3928b0928e4c")
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -389,7 +389,7 @@ public class SecurityControl extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e04a8171-68c2-4b92-883d-766f61a8bc83")
+    @objid ("b468d4b2-93f2-42bc-97e9-517a375907f8")
     public void setId(final String value) {
         this.elt.putTagValue(SecurityControl.MdaTypes.ID_TAGTYPE_ELT, value);
     }
@@ -399,7 +399,7 @@ public class SecurityControl extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6fc3679c-103c-40f1-8e08-5d3f355eb773")
+    @objid ("f59b664e-538e-48b9-a1a6-43bb8432df06")
     public void setSpecification(final String value) {
         this.elt.putTagValue(SecurityControl.MdaTypes.SPECIFICATION_TAGTYPE_ELT, value);
     }
@@ -410,7 +410,7 @@ public class SecurityControl extends FeatureClass {
      * null
      * 
      */
-    @objid ("fd6fa811-8d25-44ed-88ea-97ea2e50481b")
+    @objid ("968a4382-30eb-4786-a5f7-7aec8acaadac")
     public void setSubDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -438,29 +438,29 @@ public class SecurityControl extends FeatureClass {
         return result;
     }
 
-    @objid ("d9f2c6b3-0a4d-40f9-952d-2fbfb3d1c48d")
+    @objid ("923127bd-f994-4fb4-8da9-b1a5c1b9481d")
     protected SecurityControl(final Class elt) {
         super(elt);
     }
 
     @objid ("38164d2f-917e-4f65-a67d-254038d33f9e")
     public static final class MdaTypes {
-        @objid ("ef30d01b-a28a-4469-b311-0af2e907432a")
+        @objid ("0e9d6470-8f7e-4ec3-92c3-144b58136360")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("47d92780-efc3-4bae-93ac-3ba1f93582b5")
+        @objid ("ca812ead-8e50-4614-88f8-e67942307ef0")
         public static TagType ID_TAGTYPE_ELT;
 
-        @objid ("c3243ce1-0598-4bf0-98b4-d90ed23a33bb")
+        @objid ("d98c49e0-d87d-47a5-9de9-d44330a8a5b0")
         public static TagType SPECIFICATION_TAGTYPE_ELT;
 
-        @objid ("60e595c9-39c2-48ce-b361-51915acfbfb7")
+        @objid ("bc049b42-8f31-4167-9086-dce25d28240d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c9b5fca0-d8ef-45c4-9331-5693abbc3658")
+        @objid ("9f1b6f39-0b16-498e-8bab-fb34de40b918")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("bbbda657-43e9-4db9-a732-1c7cdb208516")
+        @objid ("e74b7e81-776d-4efc-81fd-38120edbe83c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0cf7fb23-2fb5-4c33-8d52-c3db4e05bb34");
             ID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d0865d90-2ead-4a1b-825d-1611f8206fcb");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("0ddd50cd-81bd-4d73-85c7-ab182d264a9c")
 public class Entity extends FeatureClass {
-    @objid ("f6dc1a26-1e34-4c57-b11b-4e52283d187a")
+    @objid ("51ca447d-2bd9-4f5a-8e01-cf522af2cc4e")
     public static final String STEREOTYPE_NAME = "Entity";
 
     /**
@@ -47,7 +47,7 @@ public class Entity extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("437bc3ed-5d70-474f-b86f-bc7f0129fab4")
+    @objid ("61e98f18-8d82-452f-b329-f78bac8adbe1")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Entity.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class Entity extends FeatureClass {
      * 
      * @return a {@link Entity} proxy on the created {@link Class}.
      */
-    @objid ("6e528ffb-6f24-43b1-a38f-6ae1d936bcb0")
+    @objid ("85cfc864-647f-43ba-a8c3-4ac9f89d4593")
     public static Entity create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Entity.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class Entity extends FeatureClass {
      * @param obj a Class
      * @return a {@link Entity} proxy or <i>null</i>.
      */
-    @objid ("aef25cd2-0aa1-4a21-9a21-c5c629a654f7")
+    @objid ("7025eb63-64c4-45a4-989b-2236dfda98f9")
     public static Entity instantiate(final Class obj) {
         return Entity.canInstantiate(obj) ? new Entity(obj) : null;
     }
@@ -84,7 +84,7 @@ public class Entity extends FeatureClass {
      * @return a {@link Entity} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c3da89cc-7fbb-4f6d-ae13-e9048ecb614c")
+    @objid ("4d337c9a-7d87-4137-b61e-a84d52fd9aa8")
     public static Entity safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Entity.canInstantiate(obj))
         	return new Entity(obj);
@@ -92,7 +92,7 @@ public class Entity extends FeatureClass {
         	throw new IllegalArgumentException("Entity: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c96cc7fc-30eb-4ec5-b906-f259b70eb22a")
+    @objid ("d65a7f4c-0e80-471f-a9a1-801d99bfeb53")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class Entity extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("713aa62a-4be0-4882-a256-3f497c6631d1")
+    @objid ("984b17f2-5cdd-4831-b37e-630d77f9aabb")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("d5d48782-be17-448c-9f30-082f5403fadf")
+    @objid ("5a09986f-b468-42f2-95c9-3c066a9ef146")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class Entity extends FeatureClass {
         return result;
     }
 
-    @objid ("1c05673e-f942-467a-bbca-95a0e9cdae72")
+    @objid ("ac8b0c68-6cb3-4bad-b2ed-563a81af7dfc")
     protected Entity(final Class elt) {
         super(elt);
     }
 
     @objid ("261036c6-676a-487a-934e-2dea0ceb0b28")
     public static final class MdaTypes {
-        @objid ("8f8cd38d-42f1-4474-a43b-a1fe77234402")
+        @objid ("e63bd93f-a49e-4a4e-87b3-7ffba0ad3ead")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ec0cc3c5-0121-4e70-aa4f-72fbb5d6d80d")
+        @objid ("d1602661-2ef4-46d2-aacd-be4dd1820bef")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("504e45cb-2837-4569-908d-6cbc28629533")
+        @objid ("4b56a504-65f8-48d6-b551-b6850b461a7c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("bd253f26-2eff-484e-a176-6767a5eb49c5")
+        @objid ("9f4d4af3-2aa2-4821-a101-d668bfffc837")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8edda027-b2f3-43bb-b101-0058aaa1550f");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

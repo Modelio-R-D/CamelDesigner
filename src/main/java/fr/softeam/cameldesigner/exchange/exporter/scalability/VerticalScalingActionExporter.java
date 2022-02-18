@@ -1,13 +1,12 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
-import camel.scalability.ScalabilityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.VerticalScalingAction;
-import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
 import org.eclipse.emf.cdo.CDOObject;
+import camel.scalability.ScalabilityFactory;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.VerticalScalingAction;
 
 @objid ("520ee618-0962-4bd3-8c71-bf2f12418708")
-public class VerticalScalingActionExporter<T extends VerticalScalingAction> extends FeatureExporter<T> {
+public class VerticalScalingActionExporter<T extends VerticalScalingAction> extends ScalingActionExporter<T> {
     @objid ("ce00b897-1d2a-4f8b-844c-793a91fbc668")
     public VerticalScalingActionExporter(T elt) {
         super(elt);

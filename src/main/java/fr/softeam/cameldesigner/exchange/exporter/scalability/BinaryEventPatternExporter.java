@@ -1,13 +1,12 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
-import camel.scalability.ScalabilityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
-import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
 import org.eclipse.emf.cdo.CDOObject;
+import camel.scalability.ScalabilityFactory;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
 
 @objid ("16b2612a-8c49-4989-9ec6-1a9acdca1c29")
-public class BinaryEventPatternExporter<T extends BinaryEventPattern> extends FeatureExporter<T> {
+public class BinaryEventPatternExporter<T extends BinaryEventPattern> extends EventPatternExporter<T> {
     @objid ("4fc67aac-0377-4242-b0ec-51457cd81a22")
     public BinaryEventPatternExporter(T elt) {
         super(elt);

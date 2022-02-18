@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -41,10 +41,10 @@ import fr.softeam.cameldesigner.impl.CamelDesignerModule;
  */
 @objid ("9fda9bc1-f8e9-4e34-86e6-3b44d86b5703")
 public class MetricTemplate extends FeatureClass {
-    @objid ("f0243f69-b1a7-44d8-aa42-186e155fc384")
+    @objid ("0a160708-5c48-4231-b10f-3e13ed91da2f")
     public static final String STEREOTYPE_NAME = "MetricTemplate";
 
-    @objid ("556cbc0f-fc93-4f3a-a313-662557795c1e")
+    @objid ("34f2de16-cca1-4e2b-bbd0-58b78bc3ad99")
     public static final String VALUEDIRECTION_TAGTYPE = "valueDirection";
 
     /**
@@ -55,7 +55,7 @@ public class MetricTemplate extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6971d1ac-48bc-4151-92aa-85025d08dfa3")
+    @objid ("4ef2a25c-56ca-44f6-adc6-c5d86c18217b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricTemplate.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public class MetricTemplate extends FeatureClass {
      *
      * @return a {@link MetricTemplate} proxy on the created {@link Class}.
      */
-    @objid ("61a200b7-8b59-42ca-95e6-1e5cca61cf4f")
+    @objid ("e16f57ff-797f-497c-9432-995d3957e60e")
     public static MetricTemplate create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricTemplate.STEREOTYPE_NAME);
@@ -79,7 +79,7 @@ public class MetricTemplate extends FeatureClass {
      * @param obj a Class
      * @return a {@link MetricTemplate} proxy or <i>null</i>.
      */
-    @objid ("59a1b98d-6f8f-4901-832c-b6f9d1045829")
+    @objid ("95948f92-ed16-4cac-806f-c2e33f37085c")
     public static MetricTemplate instantiate(final Class obj) {
         return MetricTemplate.canInstantiate(obj) ? new MetricTemplate(obj) : null;
     }
@@ -92,7 +92,7 @@ public class MetricTemplate extends FeatureClass {
      * @return a {@link MetricTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4520d16e-fe6e-4095-a9cc-816ca3879019")
+    @objid ("be7f717b-401a-4ee2-b66c-56e675fc957c")
     public static MetricTemplate safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricTemplate.canInstantiate(obj))
         	return new MetricTemplate(obj);
@@ -100,7 +100,7 @@ public class MetricTemplate extends FeatureClass {
         	throw new IllegalArgumentException("MetricTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8d9b8796-9b17-4251-bd7a-693c6067a347")
+    @objid ("7c559a7b-8d43-4495-90d1-64af7caff03d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -122,7 +122,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("e382f80c-4f64-4010-ae56-df663725041d")
+    @objid ("4ff24dd5-091a-4d24-9681-ca4b710393ac")
     public MeasurableAttribute getAttribute() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
@@ -138,7 +138,7 @@ public class MetricTemplate extends FeatureClass {
      * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("3dec7c86-a2a6-4c74-bb55-5009c9c19da0")
+    @objid ("533a00a7-91c1-46d0-8f06-56594b5a8128")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -150,7 +150,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("f00ff744-e008-44a1-b5cd-a0b99e15dada")
+    @objid ("4ffb48e4-bce2-4b3a-9366-91e1a226ff9c")
     public Unit getUnit() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
@@ -171,7 +171,7 @@ public class MetricTemplate extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1d162aaf-2fbd-4974-b510-517bc3dad579")
+    @objid ("b6336231-4f81-4445-92c7-3eb184f9e3fe")
     public String getValueDirection() {
         return this.elt.getTagValue(MetricTemplate.MdaTypes.VALUEDIRECTION_TAGTYPE_ELT);
     }
@@ -182,7 +182,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("655312a6-4a4d-4ecd-a1de-a75d2fcd5118")
+    @objid ("4daefe3d-c743-45b9-8726-82815b892d13")
     public ValueType getValueType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricTemplate.MdaTypes.MDAASSOCDEP)
@@ -202,7 +202,7 @@ public class MetricTemplate extends FeatureClass {
         return null;
     }
 
-    @objid ("ff058579-ae57-4e8b-8432-3224572225be")
+    @objid ("7a154294-faa7-40b6-9146-4235823b5b50")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -214,7 +214,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("de336c08-e550-4563-821c-2d0efce6799d")
+    @objid ("40f4fecb-1e46-43a1-9cde-097b68a82838")
     public void setAttribute(final MeasurableAttribute obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -240,7 +240,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("d6f26fbd-2413-496f-bce9-e5a14cea579c")
+    @objid ("3f3c96fb-a060-4086-845b-c8e8a2ff35ce")
     public void setUnit(final Unit obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -265,7 +265,7 @@ public class MetricTemplate extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("82d33f32-078c-4059-8d26-50da4176f4f8")
+    @objid ("f4cc31cd-cc10-43a7-a108-b5009018fce4")
     public void setValueDirection(final String value) {
         this.elt.putTagValue(MetricTemplate.MdaTypes.VALUEDIRECTION_TAGTYPE_ELT, value);
     }
@@ -276,7 +276,7 @@ public class MetricTemplate extends FeatureClass {
      * null
      *
      */
-    @objid ("0d86f69e-1c33-4142-8cba-014011402798")
+    @objid ("6df0d842-aa0b-40fd-a320-77db0b83c44a")
     public void setValueType(final ValueType obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -408,26 +408,26 @@ public class MetricTemplate extends FeatureClass {
         }
     }
 
-    @objid ("b7ccaded-4887-4ce0-a352-b18f686c7c50")
+    @objid ("9465f276-b3d9-4a30-bc76-f2b0edbd334b")
     protected MetricTemplate(final Class elt) {
         super(elt);
     }
 
     @objid ("167b1a3c-171c-4d03-b995-511599eb3e3e")
     public static final class MdaTypes {
-        @objid ("d5d29aaf-fad5-4044-80bf-cb53bf951f3d")
+        @objid ("68032c40-0490-4002-8988-1deac895570b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("747da8ad-57be-436b-b7e6-f05a531398d5")
+        @objid ("45be709e-ab7d-4e0f-9d78-502f9d2c7a3f")
         public static TagType VALUEDIRECTION_TAGTYPE_ELT;
 
-        @objid ("83f707fd-0c5f-4cfa-916d-ca1fdef4df0e")
+        @objid ("308f76b8-3557-47de-a94f-567927c140c6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8259fe25-c8d2-452a-a4a8-e1853a6c8fe5")
+        @objid ("3e842e6c-d5f1-4c5a-a59e-5549021072f0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0d988b30-e076-418d-9b33-c0f4c54dfbb9")
+        @objid ("e344b11c-2390-47eb-8e8c-0587db460515")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9f394e40-1b72-4bd0-a2e6-b02a67cf87fd");
             VALUEDIRECTION_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "537c84fa-0460-4eae-bc55-104097f503c9");

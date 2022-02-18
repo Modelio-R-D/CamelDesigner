@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import org.eclipse.emf.cdo.CDOObject;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 
 @objid ("8fddd25c-079f-4b9f-8429-2fafd6f6b0f2")
-public class FeatureExporter<T extends Feature> extends NamedElementExporter<T> {
+public abstract class FeatureExporter<T extends Feature> extends NamedElementExporter<T> {
     @objid ("b28804ae-84ba-42dc-b94c-472c9a672f97")
     public FeatureExporter(T elt) {
         super(elt);

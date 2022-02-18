@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.connector;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("48ee1919-d6f2-4da9-bbe0-d4d5b45b6d43")
 public class Hosting extends ComponentRelation {
-    @objid ("c3f761e8-3ba2-408c-821b-683e463bacae")
+    @objid ("79083ee2-65ae-4401-b729-1e428b3aa97c")
     public static final String STEREOTYPE_NAME = "Hosting";
 
     /**
@@ -51,7 +51,7 @@ public class Hosting extends ComponentRelation {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4635d138-04de-4cce-80fd-81e72d8de8d4")
+    @objid ("71eee2a1-a0ea-4557-b724-d33a512a5551")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Hosting.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class Hosting extends ComponentRelation {
      * 
      * @return a {@link Hosting} proxy on the created {@link Connector}.
      */
-    @objid ("d74bb5e3-4190-4df6-83f8-d087d05412b6")
+    @objid ("e980a3aa-31c2-4876-b670-d87b341926c9")
     public static Hosting create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Hosting.STEREOTYPE_NAME);
@@ -75,7 +75,7 @@ public class Hosting extends ComponentRelation {
      * @param obj a Connector
      * @return a {@link Hosting} proxy or <i>null</i>.
      */
-    @objid ("dc08764d-25db-4db9-9d29-07f529dc37e7")
+    @objid ("91cedf9e-ae88-4422-a75c-6a78d7f3d6bf")
     public static Hosting instantiate(final Connector obj) {
         return Hosting.canInstantiate(obj) ? new Hosting(obj) : null;
     }
@@ -88,7 +88,7 @@ public class Hosting extends ComponentRelation {
      * @return a {@link Hosting} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5621e514-c4da-41df-af76-2a33ea9f898b")
+    @objid ("37551d49-75c3-4c98-99c7-4960dd162ebf")
     public static Hosting safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Hosting.canInstantiate(obj))
         	return new Hosting(obj);
@@ -102,7 +102,7 @@ public class Hosting extends ComponentRelation {
      * null
      * 
      */
-    @objid ("836915eb-7c3b-4838-b555-55a32196fab3")
+    @objid ("02273a13-e652-438d-9ef5-91ceb7cc3603")
     public void addRequiredHostsConfiguration(final Configuration obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -112,7 +112,7 @@ public class Hosting extends ComponentRelation {
         }
     }
 
-    @objid ("561fc4c9-95ab-4180-856b-0611760e5ce7")
+    @objid ("0a7e3042-a713-4f97-aecb-b56bf685042c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,7 +132,7 @@ public class Hosting extends ComponentRelation {
      * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("d3209227-1623-412e-86b4-90274869e8d4")
+    @objid ("fc6a3241-423f-4083-b3fc-b50cbf773c45")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
@@ -144,7 +144,7 @@ public class Hosting extends ComponentRelation {
      * null
      * 
      */
-    @objid ("5a16feaa-99f0-4308-a3fa-b85f85be6bf2")
+    @objid ("af26ef99-1e17-4a31-8837-1412392e750b")
     public Configuration getProvidedHostConfiguration() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Hosting.MdaTypes.MDAASSOCDEP)
@@ -168,7 +168,7 @@ public class Hosting extends ComponentRelation {
      * null
      * 
      */
-    @objid ("9c7c9062-eecb-44ac-a783-3cf208347b95")
+    @objid ("b8386086-b365-4909-86d3-8c20d956b53f")
     public List<Configuration> getRequiredHostsConfiguration() {
         List<Configuration> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -187,7 +187,7 @@ public class Hosting extends ComponentRelation {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("5b265896-8a39-4356-8fcc-15dd57c489e9")
+    @objid ("c6b7771c-a061-44d9-9cb7-9ff4748dbe9c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -199,7 +199,7 @@ public class Hosting extends ComponentRelation {
      * null
      * 
      */
-    @objid ("a9530236-42fb-4ce0-8f49-a85ad38746a8")
+    @objid ("206438d1-cfcf-4774-afef-d5d66920fe4a")
     public boolean removeRequiredHostsConfiguration(final Configuration obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -219,7 +219,7 @@ public class Hosting extends ComponentRelation {
      * null
      * 
      */
-    @objid ("c0d1dc2c-1a0f-49d5-9253-2442f475dab2")
+    @objid ("87a23278-86e2-4cdd-b472-2e6906f8f517")
     public void setProvidedHostConfiguration(final Configuration obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -247,23 +247,23 @@ public class Hosting extends ComponentRelation {
         return result;
     }
 
-    @objid ("5bdf1cb3-bba3-46d8-9a6f-73310d12f8c6")
+    @objid ("9f2be6b0-bc8d-4559-9594-0720072af8db")
     protected Hosting(final Connector elt) {
         super(elt);
     }
 
     @objid ("71058a75-05c8-4604-b534-ff2d31f52287")
     public static final class MdaTypes {
-        @objid ("9f4ad1c5-110d-4be5-9972-33c930850a95")
+        @objid ("8805b782-19bb-41fa-accb-3d71467a356f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e65dc8c4-e55c-4c9c-95cc-64cadd313120")
+        @objid ("de108672-4648-4d71-94cf-a2e0ef73832b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("bad05f44-7a8e-414f-a185-f4e41c7ad070")
+        @objid ("47bdd9ae-8419-4dce-babc-39be2ce21ac4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("932ae173-2e45-44ef-9c80-b49446c96754")
+        @objid ("4c8d5a2f-4371-4c0f-9020-a3d9fda7eeaa")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d727bc20-8640-446b-8252-f7e3783e8efe");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

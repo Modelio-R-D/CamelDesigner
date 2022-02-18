@@ -42,13 +42,15 @@ public class ObjectContextExporter<T extends ObjectContext> extends FeatureExpor
 
     @objid ("9be9d282-d8ae-469a-826a-4a34c399d146")
     private void setData(camel.metric.ObjectContext oc) {
-        // TODO Auto-generated method stub
+        CDOObject data = this._process.getElement(this._element.getData());
+        if ((data != null) && (data instanceof camel.data.Data))
+            oc.setData((camel.data.Data) data);
     }
 
     @objid ("d3409c38-4e99-44cd-92f6-aeccc229650b")
     private void setComponent(camel.metric.ObjectContext oc) {
         CDOObject comp = this._process.getElement(this._element.getComponent());
-        if (comp instanceof camel.deployment.Component)
+        if ((comp != null) &&  (comp instanceof camel.deployment.Component))
             oc.setComponent((camel.deployment.Component) comp);
     }
 

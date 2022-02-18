@@ -1,13 +1,13 @@
 package fr.softeam.cameldesigner.exchange.exporter.deploymentinstance;
 
-import camel.deployment.DeploymentFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.deployment.DeploymentFactory;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeaturePortExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("aa69172f-a913-48b5-87bb-b98c5c9b7deb")
-public abstract class CommunicationPortInstanceExporter<T extends CommunicationPortInstance> extends FeaturePortExporter<T> {
+public class CommunicationPortInstanceExporter<T extends CommunicationPortInstance> extends FeaturePortExporter<T> {
     @objid ("e8515e4a-27b6-4968-a0f2-a9e3e4ae7a7d")
     public CommunicationPortInstanceExporter(T elt) {
         super(elt);

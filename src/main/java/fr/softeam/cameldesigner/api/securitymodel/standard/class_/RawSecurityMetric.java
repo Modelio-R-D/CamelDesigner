@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("9c9c3717-d929-40e5-883e-acf25d0cc102")
 public class RawSecurityMetric extends RawMetric {
-    @objid ("2eeee984-5d9e-42cf-ae1a-e46eaf5059bb")
+    @objid ("ac3bf6e6-7f90-4c91-bf00-ce1aedd6fdb2")
     public static final String STEREOTYPE_NAME = "RawSecurityMetric";
 
     /**
@@ -48,7 +48,7 @@ public class RawSecurityMetric extends RawMetric {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a46f22c6-9c69-429f-b00b-f0b0a8c75873")
+    @objid ("5540adb6-bbfd-4dca-8759-5f9a7a2ec155")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RawSecurityMetric.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class RawSecurityMetric extends RawMetric {
      * 
      * @return a {@link RawSecurityMetric} proxy on the created {@link Class}.
      */
-    @objid ("5a1db9fb-4453-40f5-b28a-6a8ff977e1b6")
+    @objid ("c179d8ac-2ab8-492c-aafe-c688621ea774")
     public static RawSecurityMetric create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RawSecurityMetric.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class RawSecurityMetric extends RawMetric {
      * @param obj a Class
      * @return a {@link RawSecurityMetric} proxy or <i>null</i>.
      */
-    @objid ("dcb7c69d-2392-4747-939a-d60167be8627")
+    @objid ("ac4af99b-924c-45b9-82e2-bed9bfba8be5")
     public static RawSecurityMetric instantiate(final Class obj) {
         return RawSecurityMetric.canInstantiate(obj) ? new RawSecurityMetric(obj) : null;
     }
@@ -85,7 +85,7 @@ public class RawSecurityMetric extends RawMetric {
      * @return a {@link RawSecurityMetric} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9fbdd834-51e3-4d68-a55e-fd84d4bc0068")
+    @objid ("0dfb8f24-e2ba-45c5-83a1-065bc67a2cf9")
     public static RawSecurityMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RawSecurityMetric.canInstantiate(obj))
         	return new RawSecurityMetric(obj);
@@ -93,7 +93,7 @@ public class RawSecurityMetric extends RawMetric {
         	throw new IllegalArgumentException("RawSecurityMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b8514915-b59a-49b9-9d41-7ac54748c7cd")
+    @objid ("6a3b60cb-b4ac-45d3-a169-24e0b0cdc2e3")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class RawSecurityMetric extends RawMetric {
      * null
      * 
      */
-    @objid ("fda7a831-11f3-49d0-b7ab-f3e4e60c0bfa")
+    @objid ("20f8a6cd-a427-49da-977d-18cb42ee27f4")
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RawSecurityMetric.MdaTypes.MDAASSOCDEP)
@@ -131,13 +131,13 @@ public class RawSecurityMetric extends RawMetric {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("fa74f8b1-e12c-4248-8231-d93dbcf11087")
+    @objid ("393578ea-4ecd-4df3-8e66-c0e8b076d903")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("6fafa57c-1d2a-4a93-a731-0712f92d7e49")
+    @objid ("ca27a400-891e-4d64-b9b3-677cccb596a1")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -149,7 +149,7 @@ public class RawSecurityMetric extends RawMetric {
      * null
      * 
      */
-    @objid ("e4ed9cd0-5751-455d-9dad-5d60bb96535f")
+    @objid ("a563aa4a-1fcc-4fe2-a583-7b4b1ba640c4")
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -177,23 +177,23 @@ public class RawSecurityMetric extends RawMetric {
         return result;
     }
 
-    @objid ("7e3cc758-2b72-4529-99ee-7af0bc724143")
+    @objid ("4e215a0b-519c-4e89-b18a-3742082eabb8")
     protected RawSecurityMetric(final Class elt) {
         super(elt);
     }
 
     @objid ("e07ed229-3645-4f01-84db-5816474f36ad")
     public static final class MdaTypes {
-        @objid ("dde03162-d67d-4946-86a0-7f815c455d3e")
+        @objid ("200b0cd3-851d-4ff7-a069-6d71beb5547a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0688ef2c-8ebe-491d-a167-d6286613bc3c")
+        @objid ("a6bacc84-d9e7-4c37-b13d-5ad019866660")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5893f34b-0836-4a55-a1e9-738797c93da9")
+        @objid ("43db017b-feef-4cfe-b64a-27c78b236a5b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("85c724c5-c28a-4954-b4b9-6e73238e7103")
+        @objid ("ae7f19b5-2666-49ff-bceb-816b39a9ecb6")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "01bb4068-95c3-463c-bfc3-5e98fbd8bf98");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

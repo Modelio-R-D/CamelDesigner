@@ -28,7 +28,11 @@ public class MetaDataModelExporter<T extends MetaDataModel> extends SubModelExpo
     @objid ("2b4ef0c7-674d-4061-93d2-924624b6e032")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.mms.MetaDataModel)) {
+            ((camel.core.CamelModel) context).getMetadataModels().add((camel.mms.MetaDataModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -35,13 +35,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("b6624bb7-0982-4bff-af96-a190c5237803")
 public class Range extends ValueType {
-    @objid ("2bfce92d-079c-4e42-97ca-232dfa19f5de")
+    @objid ("36600e98-e60d-406e-9150-b0b43acb65af")
     public static final String STEREOTYPE_NAME = "Range";
 
-    @objid ("48176b87-5e59-4ee8-9473-bc6b3460445e")
+    @objid ("6b1f21e1-3803-447c-85af-86da750a094b")
     public static final String LOWERLIMIT_TAGTYPE = "lowerLimit";
 
-    @objid ("999112b0-a978-43ca-ae96-482f0a160450")
+    @objid ("c973df23-abca-4b09-8613-a5ed06a5b0a0")
     public static final String UPPERLIMIT_TAGTYPE = "upperLimit";
 
     /**
@@ -52,7 +52,7 @@ public class Range extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("41acd802-fa21-4936-b875-266eb0f7cd7d")
+    @objid ("f3c1ba21-270b-4b77-963a-d98014f1b773")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Range.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class Range extends ValueType {
      * 
      * @return a {@link Range} proxy on the created {@link DataType}.
      */
-    @objid ("0bdad1d8-233f-4a53-a44f-7ba8b7ebb359")
+    @objid ("16e9563c-25d9-48fb-a4af-dccf90e9a7eb")
     public static Range create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Range.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class Range extends ValueType {
      * @param obj a DataType
      * @return a {@link Range} proxy or <i>null</i>.
      */
-    @objid ("fbbf7de4-fe82-4c89-bf4e-ea37d2fb2d3e")
+    @objid ("34d29578-bd2d-43c7-9e7f-9edc9b26a738")
     public static Range instantiate(final DataType obj) {
         return Range.canInstantiate(obj) ? new Range(obj) : null;
     }
@@ -89,7 +89,7 @@ public class Range extends ValueType {
      * @return a {@link Range} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0fada54d-fe12-4ef0-954f-ed9166542b58")
+    @objid ("92d37cae-4d8b-4a61-bbcb-70e55740b010")
     public static Range safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (Range.canInstantiate(obj))
         	return new Range(obj);
@@ -97,7 +97,7 @@ public class Range extends ValueType {
         	throw new IllegalArgumentException("Range: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("cb7ad6b4-8a5b-41dc-bccc-803d8c0c2acf")
+    @objid ("3742c337-03b2-49ab-8724-91de23e1edbd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,7 +117,7 @@ public class Range extends ValueType {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("19bc76d1-7ba9-488f-822b-5b7e198e5d39")
+    @objid ("31e37418-45fc-4930-98d8-899e0ed6c0f1")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
@@ -128,7 +128,7 @@ public class Range extends ValueType {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("761f1752-8957-43bd-8f78-f476a816ba58")
+    @objid ("06ff2899-79f5-4d66-90b3-f9d00f46b3f0")
     public String getLowerLimit() {
         return this.elt.getTagValue(Range.MdaTypes.LOWERLIMIT_TAGTYPE_ELT);
     }
@@ -138,12 +138,12 @@ public class Range extends ValueType {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c3f8ca67-9a1a-4956-85f7-75e815ba7f63")
+    @objid ("888f24a6-9f66-4aaa-83be-d0c1c643abdf")
     public String getUpperLimit() {
         return this.elt.getTagValue(Range.MdaTypes.UPPERLIMIT_TAGTYPE_ELT);
     }
 
-    @objid ("a8ff2b40-d264-4df1-896f-b243840dd65c")
+    @objid ("50709b2e-5174-4b38-ba07-248da7b4fb13")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -154,7 +154,7 @@ public class Range extends ValueType {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5cdb2bd1-ddf1-4eba-9492-ea4d132282fe")
+    @objid ("7192407a-42c1-48df-b9ed-3668392e44fd")
     public void setLowerLimit(final String value) {
         this.elt.putTagValue(Range.MdaTypes.LOWERLIMIT_TAGTYPE_ELT, value);
     }
@@ -164,7 +164,7 @@ public class Range extends ValueType {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("444a8133-213b-44d8-b73e-136d3697a2cf")
+    @objid ("a9b3fa1e-6a8a-4c48-9fc7-378758df6edd")
     public void setUpperLimit(final String value) {
         this.elt.putTagValue(Range.MdaTypes.UPPERLIMIT_TAGTYPE_ELT, value);
     }
@@ -177,29 +177,29 @@ public class Range extends ValueType {
         return result;
     }
 
-    @objid ("b757fd7d-1be3-4f22-bd2c-745f1773c653")
+    @objid ("944a9bee-1dc2-427b-a47a-5f226c668197")
     protected Range(final DataType elt) {
         super(elt);
     }
 
     @objid ("f119cedf-8e67-4a07-b5a8-ffaf11158aa4")
     public static final class MdaTypes {
-        @objid ("0f96d868-9eb6-4584-ba8c-9e5e418a76d7")
+        @objid ("c95603ca-aaf9-4180-8cc7-1abf71a6c788")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("40d1ea46-c8c3-4299-8f7d-55c73253c047")
+        @objid ("db7b9fbd-d21c-4bbe-9384-40fb39bd77ce")
         public static TagType LOWERLIMIT_TAGTYPE_ELT;
 
-        @objid ("43561eaf-2ccb-4733-acc2-591ee50bde0b")
+        @objid ("bf9cd82f-a727-4689-bda3-781d3351fb8c")
         public static TagType UPPERLIMIT_TAGTYPE_ELT;
 
-        @objid ("26310758-bc5b-44e3-948a-96b7cd9d1ec2")
+        @objid ("1e625201-4015-42a3-82bf-1a4783b3d301")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a0dece37-c068-4500-8c4b-05768dca67c6")
+        @objid ("24ebd77a-a4d1-4ea4-b5f2-b18ea49338e6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a3ebf2b6-cb2b-49f7-b044-19c5710fc0f6")
+        @objid ("35be9a66-01e9-4cde-909e-177341729025")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ea69f465-8f51-41c3-9c81-cc30270ea9cb");
             LOWERLIMIT_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "f6f57467-6d1e-4bb7-9266-0e11d1e1c7dd");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.package_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("de455c3b-3874-4127-a7ee-cf93060c1056")
 public abstract class DataModel extends SubModel {
-    @objid ("1a326013-5d40-4c7e-b7f4-2f4dad51fa00")
+    @objid ("39ead38c-a060-49ca-9aa9-12cc1d4e14ea")
     public static final String STEREOTYPE_NAME = "DataModel";
 
     /**
@@ -47,12 +47,12 @@ public abstract class DataModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("51fbc127-7410-460b-98d7-6f53ee864ed4")
+    @objid ("cd9ec830-80e7-4f49-ba36-93172dcb2c13")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataModel.STEREOTYPE_NAME));
     }
 
-    @objid ("8c575459-d34d-4d83-92b9-f1e22acfb0d2")
+    @objid ("d331b1f2-f279-45f2-bb06-9becd044e180")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,13 +72,13 @@ public abstract class DataModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("887b515e-b8f4-44f1-9f0f-4f0a452c01b4")
+    @objid ("a6469452-94b7-41f1-bcc3-a271ff5155a1")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("bb474ae0-a4e4-4a15-8d10-80f6bbcbccc6")
+    @objid ("cf1507c6-0df4-4a59-9d4e-8efe6ec26626")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +92,23 @@ public abstract class DataModel extends SubModel {
         return result;
     }
 
-    @objid ("08368677-1ad1-4d06-abce-37547629b4a6")
+    @objid ("069d09d6-fd09-4ce8-841b-dcd13f0d943f")
     protected DataModel(final Package elt) {
         super(elt);
     }
 
     @objid ("be9685ad-a9b6-4bba-8516-6e7e03cecdde")
     public static final class MdaTypes {
-        @objid ("60a01fc6-cfbb-4cb1-b9de-92e00a290985")
+        @objid ("3074b42d-4b81-4bf7-9aae-2f51f0145452")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("cbe83119-6ee6-4007-be7a-1dad685eeb64")
+        @objid ("739ff21c-6caf-4327-9f10-00fff4a59e50")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5c669fb2-9d5e-42ae-814a-edfeaf520fc6")
+        @objid ("523db98b-6792-4d5e-bf71-b0a0def2fecf")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8a812261-8030-472d-9bce-d2841b5be1fc")
+        @objid ("54a4da26-5830-490f-b4b7-bad91191ba7c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "69b59850-29a3-4354-afc2-617679c2ef73");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("9ab01658-74ff-4529-a699-43a56ff85f89")
 public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
-    @objid ("ed085a72-8531-4af8-be15-694905a5d61f")
+    @objid ("5a4a5ae0-462a-4569-94d9-74d7f81b6335")
     public static final String STEREOTYPE_NAME = "MetricInstanceModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8b2eb246-0087-4d4d-8796-2c2ac7f27f58")
+    @objid ("3a1a8aa9-7f43-4ad4-ad8f-b00e20ef9b63")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricInstanceModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link MetricInstanceModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("eff0c4d0-1bd7-42fd-b1b3-550d50be1e4a")
+    @objid ("e7ca7182-9e20-4f48-ba0a-98010c6a2d96")
     public static MetricInstanceModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricInstanceModelDiagram.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
      * @param obj a ClassDiagram
      * @return a {@link MetricInstanceModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("6eb68495-ee64-4c15-b802-d0428454837d")
+    @objid ("3673fa40-5509-4416-a450-df559349ef82")
     public static MetricInstanceModelDiagram instantiate(final ClassDiagram obj) {
         return MetricInstanceModelDiagram.canInstantiate(obj) ? new MetricInstanceModelDiagram(obj) : null;
     }
@@ -84,7 +84,7 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
      * @return a {@link MetricInstanceModelDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("77908ff7-428d-4c7b-925a-dbc8e47d4b91")
+    @objid ("e945452d-1a0b-451c-8110-ab4569a249b0")
     public static MetricInstanceModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (MetricInstanceModelDiagram.canInstantiate(obj))
         	return new MetricInstanceModelDiagram(obj);
@@ -92,7 +92,7 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
         	throw new IllegalArgumentException("MetricInstanceModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("5d7d1008-1328-4d79-a531-d848782422ce")
+    @objid ("9fa2f026-f737-4e54-999e-b813a32f96b4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
      * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("748a82a2-b3a8-41ec-be90-75142b162d9a")
+    @objid ("695584df-b5c2-40c0-a30f-b30c27e825c8")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("a82df4c5-de04-44a1-a45f-fad62b7498f7")
+    @objid ("ac529c2c-03c9-490b-898b-683d53bcc47b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class MetricInstanceModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("b0df525d-83c2-4385-86d8-763815d462f3")
+    @objid ("0945b64e-8eda-4be9-8550-f6a15db7fa11")
     protected MetricInstanceModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("fc2c7267-7f74-46f7-b3bd-834db7b8d63d")
     public static final class MdaTypes {
-        @objid ("09b735e5-d34c-42f0-b238-f8ce90454151")
+        @objid ("4087c842-e02d-4e17-93eb-2d3fb65bad94")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f7d37524-cc89-4127-93f0-54a9f4bef135")
+        @objid ("2fc72068-47de-4422-b8d0-02a45d547961")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("552b4a1c-c534-4883-a426-972470e1f9ac")
+        @objid ("a6b45423-9f3f-4f1a-9ae3-5d80bb8d9994")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ef691324-2fe2-4a14-ac73-1673a4484ef3")
+        @objid ("0505d791-ed89-43c7-b094-1ebfacf6be31")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9acac5e4-9e57-4c77-9274-f1d0aa426dad");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

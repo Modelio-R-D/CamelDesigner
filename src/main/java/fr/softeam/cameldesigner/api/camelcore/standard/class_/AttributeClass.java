@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/16/22 10:46 AM by Modelio Studio.
+ * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6f9ce9fc-dd24-4913-b74c-5e47d6057bf1")
 public class AttributeClass extends CamelAttribute {
-    @objid ("e1250718-5d14-4bf7-a8eb-ad1aa875a7bb")
+    @objid ("01184652-4491-4e1b-bbe0-1ef9edeeadce")
     public static final String STEREOTYPE_NAME = "Attribute_Class";
 
     /**
@@ -48,7 +48,7 @@ public class AttributeClass extends CamelAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a1c94836-f330-4581-8b48-bcb2520fda28")
+    @objid ("fef8bcec-b514-4e95-a536-526fa2fe7ca0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, AttributeClass.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class AttributeClass extends CamelAttribute {
      * 
      * @return a {@link AttributeClass} proxy on the created {@link Class}.
      */
-    @objid ("9c3cd4d8-6c6e-4b99-8985-4d15e1e986c4")
+    @objid ("3aa19ff5-5c1c-4cc1-aeac-9ef9476782f6")
     public static AttributeClass create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, AttributeClass.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class AttributeClass extends CamelAttribute {
      * @param obj a Class
      * @return a {@link AttributeClass} proxy or <i>null</i>.
      */
-    @objid ("80447f83-3764-4b13-8265-f5cfa5dfbd81")
+    @objid ("50020a55-50b0-4d5b-a9e2-9fb304f1a9eb")
     public static AttributeClass instantiate(final Class obj) {
         return AttributeClass.canInstantiate(obj) ? new AttributeClass(obj) : null;
     }
@@ -85,7 +85,7 @@ public class AttributeClass extends CamelAttribute {
      * @return a {@link AttributeClass} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c6558db9-6a62-40b3-a31e-f44130afb80e")
+    @objid ("12c4f3b3-8e0c-4602-b7f0-da4cd99bbe64")
     public static AttributeClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (AttributeClass.canInstantiate(obj))
         	return new AttributeClass(obj);
@@ -93,7 +93,7 @@ public class AttributeClass extends CamelAttribute {
         	throw new IllegalArgumentException("AttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9c01ca5c-d048-4649-8fbd-be871d64619c")
+    @objid ("0ab76eb0-d287-4e61-b91b-de67a5e1ede8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class AttributeClass extends CamelAttribute {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("92ccc7ce-df6b-489c-a826-87fa9c9769ca")
+    @objid ("6731e704-48c2-4fe8-8ad9-58a94889bad0")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -125,12 +125,12 @@ public class AttributeClass extends CamelAttribute {
      * null
      * 
      */
-    @objid ("01fd95ea-d0fd-484c-9dbb-e1b71ff5de65")
+    @objid ("4a502045-3cd0-40ce-a422-525a4018c977")
     public FeaturePackage getParent() {
         return (FeaturePackage)CamelDesignerProxyFactory.instantiate(((Class) this.elt).getOwner(), FeaturePackage.STEREOTYPE_NAME);
     }
 
-    @objid ("89616c82-9155-4656-8669-3b3a6786c108")
+    @objid ("323164d2-c711-4702-b861-8117ca1e6d84")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,7 +142,7 @@ public class AttributeClass extends CamelAttribute {
      * null
      * 
      */
-    @objid ("1c22b681-a23d-4f41-a620-3a7e88a6a41b")
+    @objid ("80fa1c9c-660c-4f6b-bc44-69cbf4b8dde8")
     public void setParent(final FeaturePackage obj) {
         ((Class) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -167,23 +167,23 @@ public class AttributeClass extends CamelAttribute {
         // TODO Auto-generated method stub
     }
 
-    @objid ("7ea7e79b-1a98-4426-8775-bef5e7acc590")
+    @objid ("e43aa87a-be26-487a-8d4b-9f7164d0cd8d")
     protected AttributeClass(final Class elt) {
         super(elt);
     }
 
     @objid ("2e6d4ec3-39e4-419d-8e8c-ec5e59d6a3cb")
     public static final class MdaTypes {
-        @objid ("98484a50-2ca9-4141-9ebd-701822fb6e84")
+        @objid ("a1c74203-9acb-4cc4-a84b-ea754219de7c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a08398f4-534b-4cfe-9e52-ffb4ab8b819a")
+        @objid ("6ebc9161-ca28-41e3-92ec-423815871354")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4361ee1c-c6c8-4e84-b6ad-17d4ba04b18c")
+        @objid ("735aba8f-bf88-431a-8b64-bb8e6598b081")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7dc747ed-a960-4bd9-bcb5-dde1a8942af7")
+        @objid ("40fb5cad-9d49-4b8e-8a8c-c2d833924e74")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b062f4ef-e492-4b34-9caa-bdd63d717cb9");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

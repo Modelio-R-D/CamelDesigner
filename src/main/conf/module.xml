@@ -80,6 +80,14 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="true" is-hidden="true"
+                label="%stereotype.ExpendableElement.label"
+                metaclass="Infrastructure.ModelElement"
+                name="ExpendableElement"
+                owner-stereotype="mref#'' {0fcc7434-c82f-4c57-a814-8a9233fdc9b0} Infrastructure.Stereotype" uid="f81fdaa1-17e1-49a4-bf1f-60c18563c100">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="true" is-hidden="true"
                 label="%stereotype.Feature.label"
                 metaclass="Infrastructure.ModelElement" name="Feature"
                 owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" uid="1ff10997-aa56-4f9b-b413-f32fadcc29bb">
@@ -154,7 +162,7 @@
                 label="%stereotype.NamedElement.label"
                 metaclass="Infrastructure.ModelElement"
                 name="NamedElement"
-                owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" uid="f81fdaa1-17e1-49a4-bf1f-60c18563c100">
+                owner-stereotype="mref#'' {9aef4bd8-fa92-4231-9295-3eb5a619ceab} Infrastructure.Stereotype" uid="0fcc7434-c82f-4c57-a814-8a9233fdc9b0">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -1072,7 +1080,7 @@
             <Stereotype is-abstract="true" is-hidden="true"
                 label="%stereotype.MmsObject.label"
                 metaclass="Infrastructure.ModelElement" name="MmsObject"
-                owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" uid="907f72a5-eb52-4908-953e-7f9a66b9939d">
+                owner-stereotype="mref#'' {0fcc7434-c82f-4c57-a814-8a9233fdc9b0} Infrastructure.Stereotype" uid="907f72a5-eb52-4908-953e-7f9a66b9939d">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
