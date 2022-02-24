@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8fddd25c-079f-4b9f-8429-2fafd6f6b0f2")
-public abstract class FeatureExporter<T extends Feature> extends NamedElementExporter<T> {
+public abstract class FeatureExporter<T extends Feature> extends ExpendableElementExporter<T> {
     @objid ("b28804ae-84ba-42dc-b94c-472c9a672f97")
     public FeatureExporter(T elt) {
         super(elt);
@@ -26,7 +26,9 @@ public abstract class FeatureExporter<T extends Feature> extends NamedElementExp
     @objid ("af39f5ef-4706-4ade-a113-3d0d6706193e")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.Feature) && (elt instanceof camel.core.Feature)) {
+            ((camel.core.Feature) context).getSubFeatures().add((camel.core.Feature) elt);
+        }
     }
 
 }

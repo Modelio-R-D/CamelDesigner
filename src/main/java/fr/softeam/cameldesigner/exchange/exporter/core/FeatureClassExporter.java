@@ -5,7 +5,7 @@ import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("cd39153e-cbbf-49e5-8cf5-2e35c03881a5")
-public class FeatureClassExporter<T extends FeatureClass> extends FeatureExporter<T> {
+public class FeatureClassExporter<T extends FeatureClass> extends FeatureClassifierExporter<T> {
     @objid ("7459e2bb-e1cf-465a-9b4e-fcd27d66820a")
     public FeatureClassExporter(T elt) {
         super(elt);
@@ -21,6 +21,16 @@ public class FeatureClassExporter<T extends FeatureClass> extends FeatureExporte
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+    }
+
+    @objid ("8601d1ca-9a1e-4ad4-a8c4-c9278519459b")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.deployment.EventConfiguration) && (elt instanceof camel.core.Feature)) {
+            ((camel.deployment.EventConfiguration) context).setScheduledExecutionConfig((camel.core.Feature) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

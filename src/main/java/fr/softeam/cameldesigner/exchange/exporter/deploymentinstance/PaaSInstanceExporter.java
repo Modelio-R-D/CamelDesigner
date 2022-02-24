@@ -27,7 +27,11 @@ public class PaaSInstanceExporter<T extends PaaSInstance> extends ComponentInsta
     @objid ("d6bd6e45-dbc2-4c50-a867-428c0b49f03a")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentInstanceModel) && (elt instanceof camel.deployment.PaaSInstance)) {
+            ((camel.deployment.DeploymentInstanceModel) context).getPaasInstances().add((camel.deployment.PaaSInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

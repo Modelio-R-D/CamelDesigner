@@ -1,0 +1,242 @@
+camel model UnitTemplateCamelModel{
+	unit model UnitTemplateModel{
+		dimension Time{
+		}
+
+		dimension Storage{
+		}
+
+		dimension NetworkSpeed{
+		}
+
+		dimension DataSpeed{
+		}
+
+		dimension ComputationalSpeed{
+		}
+
+		dimension NumberOf{
+		}
+
+		dimension Monetary{
+		}
+
+		dimension Frequency{
+		}
+
+		single unit MilliSeconds{
+			dimension Time
+		}
+
+		single unit Seconds{
+			 dimension Time
+		}
+
+		single unit Minutes{
+			dimension Time
+		}
+
+		single unit Hours{
+			dimension Time
+		}
+
+		single unit Days{
+			dimension Time
+		}
+
+		single unit Weeks{
+			dimension Time
+		}
+
+		single unit Months{
+			dimension Time
+		}
+
+		single unit Years{
+			dimension Time
+		}
+
+		single unit Bits{
+			dimension Storage
+		}
+
+		single unit KiloBits{
+			dimension Storage
+		}
+
+		single unit MegaBits{
+			dimension Storage
+		}
+
+		single unit GigaBits{
+			dimension Storage
+		}
+
+		single unit Bytes{
+			dimension Storage
+		}
+
+		single unit KiloBytes{
+			dimension Storage
+		}
+
+		single unit MegaBytes{
+			dimension Storage
+		}
+
+		single unit GigaBytes{
+			dimension Storage
+		}
+
+		single unit TeraBytes{
+			dimension Storage
+		}
+
+		dimensionless Percentage{
+		}
+
+		dimensionless Ratio{
+		}
+
+		dimensionless utilityValue {
+		}
+
+		composite unit BytesPerSecond{
+			dimension NetworkSpeed
+			formula 'Bytes / Seconds'
+		}
+
+		composite unit MegaBytesPerSecond{
+			dimension NetworkSpeed
+			formula 'MegaBytes / Seconds'
+		}
+
+		composite unit KiloBytesPerSecond{
+			dimension NetworkSpeed
+			formula 'KiloBytes / Seconds'
+		}
+
+		composite unit GigaBytesPerSecond{
+			dimension NetworkSpeed
+			formula 'GigaBytes / Seconds'
+		}
+
+		composite unit GigaBytesPerDays{
+			dimension DataSpeed
+			formula 'GigaBytes / Days'
+		}
+
+		composite unit BitsPerSecond{
+			dimension NetworkSpeed
+			formula 'Bits / Seconds'
+		}
+
+		composite unit KiloBitsPerSecond{
+			dimension NetworkSpeed
+			formula 'KiloBits / Seconds'
+		}
+
+		composite unit MegaBitsPerSecond{
+			dimension NetworkSpeed
+			formula 'MegaBits / Seconds'
+		}
+
+		composite unit GigaBitsPerSecond{
+			dimension NetworkSpeed
+			formula 'GigaBits / Seconds'
+		}
+
+		single unit Transactions{
+			dimension NumberOf
+		}
+
+		single unit Requests{
+			dimension NumberOf
+		}
+
+		single unit Simulations{
+			dimension NumberOf
+		}
+
+		composite unit TransactionsPerSecond{
+			dimension ComputationalSpeed
+			formula 'Transactions / Seconds'
+		}
+
+		composite unit TransactionsPerMinute{
+			dimension ComputationalSpeed
+			formula 'Transactions / Minutes'
+		}
+
+		composite unit TransactionsPerHour{
+			dimension ComputationalSpeed
+			formula 'Transactions / Hours'
+		}
+
+		composite unit RequestsPerSecond{
+			dimension ComputationalSpeed
+			formula 'Requests / Seconds'
+		}
+
+		composite unit RequestsPerMinute{
+			dimension ComputationalSpeed
+			formula 'Requests / Minutes'
+		}
+
+		composite unit RequestsPerHour{
+			dimension ComputationalSpeed
+			formula 'Requests / Hours'
+		}
+
+		composite unit SimulationsPerSecond{
+			dimension ComputationalSpeed
+			formula 'Simulations / Seconds'
+		}
+
+		composite unit SimulationsPerMinute{
+			dimension ComputationalSpeed
+			formula 'Simulations / Minutes'
+		}
+
+		composite unit SimulationsPerHour{
+			dimension ComputationalSpeed
+			formula 'Simulations / Hours'
+		}
+
+		single unit Instances{
+			dimension NumberOf
+		}
+
+		single unit Cores{
+			dimension NumberOf
+		}
+
+		single unit Euros{
+			dimension Monetary
+		}
+
+		single unit Dollars{
+			dimension Monetary
+		}
+
+		single unit Pounds{
+			dimension Monetary
+		}
+
+		single unit Hertz{
+			dimension Frequency
+		}
+
+		single unit KiloHertz{
+			dimension Frequency
+		}
+
+		single unit MegaHertz{
+			dimension Frequency
+		}
+
+		single unit GigaHertz{
+			dimension Frequency
+		}
+	}
+}

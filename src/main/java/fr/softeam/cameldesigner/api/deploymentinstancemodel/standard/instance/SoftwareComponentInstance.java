@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
@@ -43,7 +43,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a0c4baed-2aff-4ee2-a7f5-c01274a910db")
 public class SoftwareComponentInstance extends ComponentInstance {
-    @objid ("0b4c8d00-e282-48c8-ab22-faa501c3d7d9")
+    @objid ("b554553c-3f4c-4e86-b6e5-bac8e917eb6c")
     public static final String STEREOTYPE_NAME = "SoftwareComponentInstance";
 
     /**
@@ -54,7 +54,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("40420188-1b6d-412b-b7c8-d320fd96684e")
+    @objid ("fd7a9520-e54c-4735-bb1b-d9e2e323ca9f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentInstance.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * 
      * @return a {@link SoftwareComponentInstance} proxy on the created {@link Instance}.
      */
-    @objid ("25751483-1445-44e5-9ec2-b9e39b3490d1")
+    @objid ("fdeeb416-45ee-425c-b1be-d61fa17ad403")
     public static SoftwareComponentInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentInstance.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * @param obj a Instance
      * @return a {@link SoftwareComponentInstance} proxy or <i>null</i>.
      */
-    @objid ("2da150c9-ba3f-48af-bb09-e7b22c6a9bd9")
+    @objid ("86b4fd42-f0bb-4736-bd9d-c136affa0581")
     public static SoftwareComponentInstance instantiate(final Instance obj) {
         return SoftwareComponentInstance.canInstantiate(obj) ? new SoftwareComponentInstance(obj) : null;
     }
@@ -91,7 +91,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * @return a {@link SoftwareComponentInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("66636a68-af05-486b-81dd-2b257f9f5a40")
+    @objid ("f74a46a1-50a3-46b6-8bad-33c2886fa9cc")
     public static SoftwareComponentInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (SoftwareComponentInstance.canInstantiate(obj))
         	return new SoftwareComponentInstance(obj);
@@ -105,7 +105,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("8c9eb80f-91f9-4ae5-905b-4c8ecbd3ae0c")
+    @objid ("a7d5931c-86b4-4a35-91cb-b73a31f4a3e2")
     public void addConsumesDataInstances(final DataInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -121,7 +121,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("b25252fe-25b2-437b-84fd-3cfa7d9a8ddd")
+    @objid ("e183190e-9a0b-43a7-9e26-dd02d4b6b0e7")
     public void addGeneratesDataInstance(final DataInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -137,7 +137,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("dac550fe-3209-4237-9d17-280ad37d21eb")
+    @objid ("294eb6eb-e8d4-4419-bb1e-e4c7af80c173")
     public void addManagesDataSourceInstance(final DataSourceInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -153,13 +153,13 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("f68d8479-c171-4816-b47d-817769d6cb7e")
+    @objid ("b4e8b5f3-8b2e-4bc3-a068-ad91e6ad23da")
     public void addRequiredCommunicationsInstances(final CommunicationPort obj) {
         if (obj!=null)
           ((Instance) this.elt).getPart().add(obj.getElement());
     }
 
-    @objid ("c49b2a3c-e445-41a9-848b-06940dd21400")
+    @objid ("379bc19b-1e59-47b5-b79b-c4c4615539de")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -181,7 +181,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("d1e0936e-ba5f-4f1c-bcbd-11071d892111")
+    @objid ("6bad40e0-8990-482f-b0a4-844b65338829")
     public List<DataInstance> getConsumesDataInstances() {
         List<DataInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -200,7 +200,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("89c475d3-601c-4d9c-b2e9-8fd077fc85d6")
+    @objid ("39a150ac-3c6f-47ec-b5b5-e0ad37fd8b39")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -212,7 +212,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("2b8c19a4-74fc-4116-887b-9785f7e472eb")
+    @objid ("58d79103-3611-4575-ad30-f1c21cad7142")
     public List<DataInstance> getGeneratesDataInstance() {
         List<DataInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -233,7 +233,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("6787dd2d-d9ed-45dd-a1af-10887be90415")
+    @objid ("0e7a0563-de41-4b49-8962-d6f6e3cf4686")
     public List<DataSourceInstance> getManagesDataSourceInstance() {
         List<DataSourceInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -252,7 +252,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("30c25aa5-77bd-4f80-92ab-b8023d11b455")
+    @objid ("bdddee5c-da32-4cc9-aa68-6a21ac73bf78")
     public DeploymentInstanceModel getParent() {
         return (DeploymentInstanceModel)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getOwner(), DeploymentInstanceModel.STEREOTYPE_NAME);
     }
@@ -263,7 +263,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("2b97a679-264b-49f8-96f2-dcac487b7222")
+    @objid ("c20f6917-e9ec-43f9-b05b-216202011cba")
     public List<CommunicationPort> getRequiredCommunicationsInstances() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart()){
@@ -279,7 +279,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("22117927-e958-49bf-9de7-7fbfecfe6268")
+    @objid ("5c4bda6f-5073-4381-81ca-ca17ba80a0be")
     public HostingPort getRequiredHostInstance() {
           for (Port obj : ((Instance) this.elt).getPart(Port.class)) {
            if (HostingPort.canInstantiate(obj))
@@ -288,7 +288,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
           return null;
     }
 
-    @objid ("62371351-e241-464f-8c57-f6f393bbd260")
+    @objid ("6b867b8e-3428-4753-ad05-d79dadae208f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -300,7 +300,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("8c01e299-1fdb-46b4-9363-bad78e86ba8d")
+    @objid ("380e6664-9616-4be9-a9f8-a416101e47fa")
     public boolean removeConsumesDataInstances(final DataInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -320,7 +320,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("fa20443a-e335-4aee-b6fa-56c278c532b6")
+    @objid ("9ea38737-4269-4ad3-99df-aae90f2f2cef")
     public boolean removeGeneratesDataInstance(final DataInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -340,7 +340,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("85089f3d-4de4-4ddf-b04e-a42f3b3c6fa5")
+    @objid ("dc160509-5967-4a42-97a9-e9aff68c6c87")
     public boolean removeManagesDataSourceInstance(final DataSourceInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -360,7 +360,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("3bd259ae-4e66-4b9a-9133-64d514cc6f98")
+    @objid ("b21b9240-9491-43c1-badf-847d259019f7")
     public boolean removeRequiredCommunicationsInstances(final CommunicationPort obj) {
         return (obj!=null)? ((Instance) this.elt).getPart().remove(obj.getElement()) : false;
     }
@@ -371,7 +371,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("2b9eb168-d7b6-4798-85eb-28a7b99fff2b")
+    @objid ("ed2136a5-c74e-486e-a179-3386e67257d1")
     public void setParent(final DeploymentInstanceModel obj) {
         ((Instance) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -382,7 +382,7 @@ public class SoftwareComponentInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("0d1d9884-5b24-4d2e-88bb-a50e5f598667")
+    @objid ("d5e6636a-af40-4127-b3e0-daf11a007573")
     public void setRequiredHostInstance(final HostingPort obj) {
         // Remove existing HostingPorts
         for (Port e : ((Instance) this.elt).getPart(Port.class)) {
@@ -404,23 +404,23 @@ public class SoftwareComponentInstance extends ComponentInstance {
         return result;
     }
 
-    @objid ("ad0dd7b5-af40-409b-9619-e28051b86bf6")
+    @objid ("218ad42e-5abd-4282-9726-a05e2bc9776d")
     protected SoftwareComponentInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("eb836565-9ba9-424d-96b5-05bec355c93e")
     public static final class MdaTypes {
-        @objid ("d9baf1aa-e36a-46b5-b1f8-261d70c94bc8")
+        @objid ("7033d97f-4de4-4931-9777-69f2d8bdbeba")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("97da44bd-51ff-4911-87f0-4591998eb43c")
+        @objid ("4ec99aea-ff43-4733-b77e-d1bbfd1f9bc8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ea4f7c05-0711-4fd1-a850-2da92db9e5c9")
+        @objid ("9d7c1b9c-a237-4b7b-9d93-52970ad0ed1f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("436ceaa9-9d76-4561-bbbe-08977b97fc2e")
+        @objid ("85abca8e-ef66-4213-90ed-d011e1bdac61")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "dfb1cf41-de3c-4af9-a3ff-66986b4f35fb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

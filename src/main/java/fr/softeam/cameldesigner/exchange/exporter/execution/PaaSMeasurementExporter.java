@@ -22,12 +22,31 @@ public class PaaSMeasurementExporter<T extends PaaSMeasurement> extends Measurem
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.PaaSMeasurement) {
+            camel.execution.PaaSMeasurement measurement = (camel.execution.PaaSMeasurement) elt;
+            setPaaSInstance(measurement);
+            setPaaS(measurement);
+        }
     }
 
     @objid ("8df438c5-cbe7-4ef6-804f-a1d6f7798737")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("dfd5dc80-f50c-40cd-82dd-8ffaf0794da3")
+    private void setPaaS(camel.execution.PaaSMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getPaaS());
+        if ((comp != null) &&  (comp instanceof camel.deployment.PaaS))
+            measurement.setPaas((camel.deployment.PaaS) comp);
+    }
+
+    @objid ("12e7e136-cbe2-4cf3-9def-4e7f1bb8440e")
+    private void setPaaSInstance(camel.execution.PaaSMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getPaaSInstance());
+        if ((comp != null) &&  (comp instanceof camel.deployment.PaaSInstance))
+            measurement.setPaasInstance((camel.deployment.PaaSInstance) comp);
     }
 
 }

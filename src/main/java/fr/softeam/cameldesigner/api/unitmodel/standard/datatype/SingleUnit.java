@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7dfc6119-7128-437f-995f-47f0c2960c89")
 public class SingleUnit extends DimensionedUnit {
-    @objid ("c6c1478b-5d06-48f4-b7b7-b1fa7c6ea4da")
+    @objid ("936e4845-8886-43be-803f-4548e72f764e")
     public static final String STEREOTYPE_NAME = "SingleUnit";
 
     /**
@@ -46,7 +46,7 @@ public class SingleUnit extends DimensionedUnit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("62746c50-efe8-4c33-b172-f065d629809e")
+    @objid ("8d1c060c-c25d-4f21-9cc8-9e789307cfc4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SingleUnit.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class SingleUnit extends DimensionedUnit {
      * 
      * @return a {@link SingleUnit} proxy on the created {@link DataType}.
      */
-    @objid ("9fba8cf4-c129-410c-a9f4-80d41a5ce47d")
+    @objid ("07f8a470-b706-4746-9905-3666eff4bf21")
     public static SingleUnit create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SingleUnit.STEREOTYPE_NAME);
@@ -70,7 +70,7 @@ public class SingleUnit extends DimensionedUnit {
      * @param obj a DataType
      * @return a {@link SingleUnit} proxy or <i>null</i>.
      */
-    @objid ("141e0577-9290-4c92-9488-6371c6c8e3b2")
+    @objid ("fcc2fe7c-32f5-4a3c-a879-b2d156334886")
     public static SingleUnit instantiate(final DataType obj) {
         return SingleUnit.canInstantiate(obj) ? new SingleUnit(obj) : null;
     }
@@ -83,7 +83,7 @@ public class SingleUnit extends DimensionedUnit {
      * @return a {@link SingleUnit} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f40f8693-86df-4e94-be92-2a09b02eb452")
+    @objid ("1862e556-6e5c-46a9-9cf0-b2d6dede7140")
     public static SingleUnit safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (SingleUnit.canInstantiate(obj))
         	return new SingleUnit(obj);
@@ -91,7 +91,7 @@ public class SingleUnit extends DimensionedUnit {
         	throw new IllegalArgumentException("SingleUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("351c4cda-87df-42a9-85b2-0c1fe8780bc1")
+    @objid ("4b1c963c-8fa8-45e2-9bb5-dcdb327bb3b6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,13 +111,13 @@ public class SingleUnit extends DimensionedUnit {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("9b156e0d-a770-4493-95a6-1e163f432b39")
+    @objid ("d7e9a67e-f054-43c6-954a-ed51407bfd4e")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("068e042d-8e27-4057-a6b5-425a6c153f6a")
+    @objid ("6ffd29f2-0507-4a90-b479-c5e868feaec5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class SingleUnit extends DimensionedUnit {
         return result;
     }
 
-    @objid ("489240c5-92e5-4391-9f04-0935a474d51e")
+    @objid ("492d5bb3-b4c5-405a-b1b2-d67973e3681c")
     protected SingleUnit(final DataType elt) {
         super(elt);
     }
 
     @objid ("41eab5b5-d30f-43d2-9da2-943d64381732")
     public static final class MdaTypes {
-        @objid ("ab26da3d-d8f3-493e-ac49-0cc3b423bcc4")
+        @objid ("ae79b196-dfbc-4883-b3c1-8b22f0677b9d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0690cad1-019d-4ba9-93a7-a43b95ad4422")
+        @objid ("2871ad1d-e9fb-486e-8233-6edd241ee68c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f9d38177-b1a4-4d54-b594-8ea15d818e01")
+        @objid ("6b621000-6de7-4c13-9653-4313fa0e470c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("12f2d71d-ed7d-43ab-bdff-da913052740a")
+        @objid ("f1ae4739-5872-460e-97da-851e28f748b4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5f6c0584-c6dd-44e5-a1ad-cd4785dccb03");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

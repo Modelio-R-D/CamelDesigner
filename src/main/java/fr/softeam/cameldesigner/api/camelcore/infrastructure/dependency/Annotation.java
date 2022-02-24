@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7031d203-af8d-4031-b372-b418d6e60fbd")
 public class Annotation extends CamelElement {
-    @objid ("9f1d7475-5dc9-44ef-ab20-29e42d434c28")
+    @objid ("5d50a83e-7945-4b96-a34a-3bb1567fa67c")
     public static final String STEREOTYPE_NAME = "Annotation";
 
     /**
@@ -45,7 +45,7 @@ public class Annotation extends CamelElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e22e6498-0004-489a-b266-7d7ffc3d6666")
+    @objid ("c0eb5ce7-9be9-49e1-8727-7aff2ccc77d7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Dependency) && ((Dependency) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Annotation.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class Annotation extends CamelElement {
      * 
      * @return a {@link Annotation} proxy on the created {@link Dependency}.
      */
-    @objid ("c4d365e8-092d-478a-85d6-b5c65e03a343")
+    @objid ("f98db010-00fa-4029-8b7e-760690f38fd4")
     public static Annotation create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Infrastructure.Dependency");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Annotation.STEREOTYPE_NAME);
@@ -69,7 +69,7 @@ public class Annotation extends CamelElement {
      * @param obj a Dependency
      * @return a {@link Annotation} proxy or <i>null</i>.
      */
-    @objid ("e2be91d5-2ab0-49d5-8d92-52a0b6960ea7")
+    @objid ("f11a1fd6-df07-4766-ac37-d399eec45fb9")
     public static Annotation instantiate(final Dependency obj) {
         return Annotation.canInstantiate(obj) ? new Annotation(obj) : null;
     }
@@ -82,7 +82,7 @@ public class Annotation extends CamelElement {
      * @return a {@link Annotation} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8464cfcd-6d0c-4e23-a5ab-785c123d4d65")
+    @objid ("a6671ac2-d1ca-424d-94da-4dfea842aa7e")
     public static Annotation safeInstantiate(final Dependency obj) throws IllegalArgumentException {
         if (Annotation.canInstantiate(obj))
         	return new Annotation(obj);
@@ -90,7 +90,7 @@ public class Annotation extends CamelElement {
         	throw new IllegalArgumentException("Annotation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("53f368d2-5eac-4f46-a626-93aba33b38d9")
+    @objid ("75c0ed3f-b58d-4fdd-9c6d-4aaeea3061bd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,13 +110,13 @@ public class Annotation extends CamelElement {
      * Get the underlying {@link Dependency}. 
      * @return the Dependency represented by this proxy, never null.
      */
-    @objid ("8ec98939-6cf5-436e-b9a1-507e18505ded")
+    @objid ("a12f8fb1-1570-4700-ac7e-697729ff9e32")
     @Override
     public Dependency getElement() {
         return (Dependency)super.getElement();
     }
 
-    @objid ("3118c89c-8f27-4f7a-a4e0-e6ee2fb8643f")
+    @objid ("362570ea-8f59-4a0e-b7a8-457fb8c998b0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -129,23 +129,23 @@ public class Annotation extends CamelElement {
         return result;
     }
 
-    @objid ("641b7daa-c676-461d-a58b-a4bff505c82c")
+    @objid ("fd67951e-1433-4cc5-92c5-989bfc3bc50a")
     protected Annotation(final Dependency elt) {
         super(elt);
     }
 
     @objid ("e1806156-f5a9-4d39-9bb7-739c08fa2b43")
     public static final class MdaTypes {
-        @objid ("5c3b28cd-1c37-4b29-b125-56e16db59ad0")
+        @objid ("5a33b1f2-3a94-4cdb-bef4-0d31fe41e679")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("06fb8a5a-be01-473a-9b12-f6ad891d9aa4")
+        @objid ("804ad9d2-9262-4c3b-9cbe-9fe44a8bb3e2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4044ea2d-3ba6-4280-9b2b-46592b15adfa")
+        @objid ("83e2d09e-f067-433d-8ad2-f709eab45ca8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f896000b-6de4-4445-aef4-8d15c5af2bfb")
+        @objid ("d6afe0fd-241b-4c78-95ab-a2558bdcbbe0")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6ac7f831-f2b4-447b-ba9e-e58f7834bcf7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

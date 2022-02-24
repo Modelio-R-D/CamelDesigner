@@ -23,12 +23,33 @@ public class CommunicationPortExporter<T extends CommunicationPort> extends Name
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.CommunicationPort) {
+            camel.deployment.CommunicationPort cp = (camel.deployment.CommunicationPort) elt;
+            setLowPortNumber(cp);
+            setHighPortNumber(cp);
+            setPortNumber(cp);
+        }
     }
 
     @objid ("c67a2da9-a3ed-443e-b6ce-18cb1f94aba7")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("4f9bc289-cad7-4832-af61-320473f00899")
+    private void setHighPortNumber(camel.deployment.CommunicationPort cp) {
+        cp.setHighPortNumber(Integer.valueOf(this._element.getHighPortNumber()));
+    }
+
+    @objid ("205ab60e-0fb8-4e26-b2c2-0315c9ad759a")
+    private void setLowPortNumber(camel.deployment.CommunicationPort cp) {
+        cp.setLowPortNumber(Integer.valueOf(this._element.getLowPortNumber()));
+    }
+
+    @objid ("50d71aed-41da-4516-82aa-9473e2399c94")
+    private void setPortNumber(camel.deployment.CommunicationPort cp) {
+        cp.setPortNumber(Integer.valueOf(this._element.getName()));
     }
 
 }

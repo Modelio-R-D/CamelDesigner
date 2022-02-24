@@ -1,7 +1,11 @@
 package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
+import java.util.ArrayList;
+import java.util.List;
 import camel.deployment.DeploymentFactory;
+import camel.deployment.LocationCouplingType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -22,12 +26,44 @@ public class LocationCouplingExporter<T extends LocationCoupling> extends Compon
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.LocationCoupling) {
+            camel.deployment.LocationCoupling lc = (camel.deployment.LocationCoupling) elt;
+            setSoftwareComponents(lc);
+            setCouplingType(lc);
+            setRelaxed(lc);
+        }
     }
 
     @objid ("c7d65b95-b61b-41a9-a9ce-cf325ad07e26")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.LocationCoupling)) {
+            ((camel.deployment.DeploymentTypeModel) context).getLocationCouplings().add((camel.deployment.LocationCoupling) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("93e730af-9cdb-447a-9689-255336a2c9ba")
+    private void setRelaxed(camel.deployment.LocationCoupling lc) {
+        lc.setRelaxed(this._element.isRelaxed());
+    }
+
+    @objid ("132071fb-fd52-4e4c-9df0-e676d9c51a31")
+    private void setCouplingType(camel.deployment.LocationCoupling lc) {
+        lc.setCouplingType(LocationCouplingType.valueOf(this._element.getCouplingType()));
+    }
+
+    @objid ("3b1a553f-d4e6-4555-8813-0f08f8191ee8")
+    private void setSoftwareComponents(camel.deployment.LocationCoupling lc) {
+        List<camel.deployment.SoftwareComponent> components = new ArrayList<>();
+        for (SoftwareComponent component : this._element.getSoftwareComponents()) {
+            CDOObject camelComponent = this._process.getElement(component);
+            if ((camelComponent != null) &&  (camelComponent instanceof camel.deployment.SoftwareComponent))
+                components.add((camel.deployment.SoftwareComponent) camelComponent);
+        }
+        
+        lc.getSoftwareComponents().addAll(components);
     }
 
 }

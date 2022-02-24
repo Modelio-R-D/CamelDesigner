@@ -24,4 +24,14 @@ public class PaaSExporter<T extends PaaS> extends CamelComponentExporter<T> {
         super.setProperties(elt);
     }
 
+    @objid ("c6e9229e-f909-488e-b8c4-ed9eba6b63bd")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.PaaS)) {
+            ((camel.deployment.DeploymentTypeModel) context).getPaases().add((camel.deployment.PaaS) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
 }

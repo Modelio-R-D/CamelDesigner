@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -35,13 +35,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e21f0be0-3d22-47e8-a054-ec23ac4f1d3f")
 public class ModelResourceFilter extends ResourceFilter {
-    @objid ("0a13f388-4e4d-4b3c-9e2c-ab08f0e292f2")
+    @objid ("49ccf283-ae2a-46fa-8037-49dd6d0bce61")
     public static final String STEREOTYPE_NAME = "ModelResourceFilter";
 
-    @objid ("27a31e48-ce42-40d6-9670-9574082238ee")
+    @objid ("ea57bc05-ae22-4a49-9c39-6aa9d6aae721")
     public static final String EVERYINFORMATIONRESOURCE_TAGTYPE = "everyInformationResource";
 
-    @objid ("3a841825-0cb3-4bf2-aebb-ec848341e282")
+    @objid ("37692983-838c-47f0-8b81-65ae65c0df59")
     public static final String INFORMATIONRESOURCEPATH_TAGTYPE = "informationResourcePath";
 
     /**
@@ -52,7 +52,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("90332653-b59f-4391-97e4-a89a331cc648")
+    @objid ("3f8322c7-36d6-44ee-b98a-0055839076b4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ModelResourceFilter.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * 
      * @return a {@link ModelResourceFilter} proxy on the created {@link Class}.
      */
-    @objid ("1b592720-8009-46f5-a470-a458461069bb")
+    @objid ("458e4a7c-3016-4791-b190-6ed1839c2dda")
     public static ModelResourceFilter create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ModelResourceFilter.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * @param obj a Class
      * @return a {@link ModelResourceFilter} proxy or <i>null</i>.
      */
-    @objid ("3493192d-56fe-4fad-b6e8-d5e9220eb7ea")
+    @objid ("d68b959e-3a38-4ec9-be35-bce92c5ac18c")
     public static ModelResourceFilter instantiate(final Class obj) {
         return ModelResourceFilter.canInstantiate(obj) ? new ModelResourceFilter(obj) : null;
     }
@@ -89,7 +89,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * @return a {@link ModelResourceFilter} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("de254884-3517-44e9-bf2e-4d1bb5f30ee1")
+    @objid ("d3240854-0721-4e3b-9be2-8f9d33f660e2")
     public static ModelResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ModelResourceFilter.canInstantiate(obj))
         	return new ModelResourceFilter(obj);
@@ -97,7 +97,7 @@ public class ModelResourceFilter extends ResourceFilter {
         	throw new IllegalArgumentException("ModelResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("30eb29e3-0c8b-443c-88c0-1eaa8a918beb")
+    @objid ("a833c060-ddf4-4b4d-8ce1-e0779f950396")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,7 +117,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("f9fe3476-a533-4a58-9743-b6b617a28f1e")
+    @objid ("fc84f7f7-a548-457b-8388-9c5dda3f39a6")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -128,7 +128,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1ef6d97e-a9d0-4f4c-9771-38c73b6fd366")
+    @objid ("3b0e83b6-481d-4682-b207-3d19744fa351")
     public String getEveryInformationResource() {
         return this.elt.getTagValue(ModelResourceFilter.MdaTypes.EVERYINFORMATIONRESOURCE_TAGTYPE_ELT);
     }
@@ -138,12 +138,12 @@ public class ModelResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b44c180d-eaf1-41be-9955-51f6dc34d005")
+    @objid ("7887d56b-f571-4762-8310-20ee441576f6")
     public String getInformationResourcePath() {
         return this.elt.getTagValue(ModelResourceFilter.MdaTypes.INFORMATIONRESOURCEPATH_TAGTYPE_ELT);
     }
 
-    @objid ("d6d7c739-1227-4a64-9f57-21dd081259e5")
+    @objid ("fa2f4ae0-243e-4f55-be04-fbd9408d3e3b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -154,7 +154,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("16ac5aca-35fb-46c9-8657-8def2bee346a")
+    @objid ("2f8c22f1-155e-422a-8258-f7ebbc24409a")
     public void setEveryInformationResource(final String value) {
         this.elt.putTagValue(ModelResourceFilter.MdaTypes.EVERYINFORMATIONRESOURCE_TAGTYPE_ELT, value);
     }
@@ -164,7 +164,7 @@ public class ModelResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("42e0f658-dc2f-430c-bd97-7cacf3aecaa1")
+    @objid ("720ec239-a19d-44d4-bedb-105017cefddf")
     public void setInformationResourcePath(final String value) {
         this.elt.putTagValue(ModelResourceFilter.MdaTypes.INFORMATIONRESOURCEPATH_TAGTYPE_ELT, value);
     }
@@ -177,29 +177,29 @@ public class ModelResourceFilter extends ResourceFilter {
         return result;
     }
 
-    @objid ("aff023f6-19fe-4b3a-bbf7-acafc1ac91ac")
+    @objid ("6f40a65f-50e3-4194-999d-b43784bdd3d3")
     protected ModelResourceFilter(final Class elt) {
         super(elt);
     }
 
     @objid ("bdba83c4-ef71-4797-8568-cbac9a6170f8")
     public static final class MdaTypes {
-        @objid ("b93672be-4546-4b96-a6f3-6da2300a4f5e")
+        @objid ("4d9e0dd7-8911-4c4b-8620-49261d20b67b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8e300126-db75-4fea-a82d-dee5b1b2ca44")
+        @objid ("e18685fe-ca93-4b72-af17-12437a92b3cf")
         public static TagType INFORMATIONRESOURCEPATH_TAGTYPE_ELT;
 
-        @objid ("feadcaa2-3758-4c10-b75c-d0f5decbc3bf")
+        @objid ("30b55563-1f30-4c09-9c9d-96f8762daf44")
         public static TagType EVERYINFORMATIONRESOURCE_TAGTYPE_ELT;
 
-        @objid ("44eaaa0b-764b-4ea7-a800-0bafff4eec70")
+        @objid ("01bc7fcc-a3fe-42eb-ac89-9e671a104e52")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e70c6c32-3d16-4a5d-a540-653bb9ef8f73")
+        @objid ("f2d60a56-0b9a-4244-bf97-34d0399cfd7c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c907943e-f908-4aa9-895f-8a715fd0b999")
+        @objid ("91a2bd4c-f839-45d8-bfa0-25a856242284")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b2deaba4-8571-4400-b47d-f0a5b91b3149");
             INFORMATIONRESOURCEPATH_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "cbea7d8d-42de-41a1-808c-4a3c6505d00f");

@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.execution;
 
+import java.sql.Date;
 import camel.execution.ExecutionFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.RuleTrigger;
@@ -22,12 +23,33 @@ public class RuleTriggerExporter<T extends RuleTrigger> extends CauseExporter<T>
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.RuleTrigger) {
+            camel.execution.RuleTrigger rule = (camel.execution.RuleTrigger) elt;
+            setScalabilityRule(rule);
+            setTrigerringTime(rule);
+        }
     }
 
     @objid ("72db50d4-6c3c-405f-a4e4-adea9947b3f1")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.execution.ExecutionModel) && (elt instanceof camel.execution.RuleTrigger)) {
+            ((camel.execution.ExecutionModel) context).getRuleTriggers().add((camel.execution.RuleTrigger) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("63f52aa7-44d0-436e-844d-ea34bb295527")
+    private void setTrigerringTime(camel.execution.RuleTrigger rule) {
+        rule.setTrigerringTime(Date.valueOf(this._element.getTriggeringTime()));
+    }
+
+    @objid ("6c120901-3a04-4323-98c1-90a8ab22467d")
+    private void setScalabilityRule(camel.execution.RuleTrigger rule) {
+        CDOObject  scaRule =  this._process.getElement(this._element.getScalabilityRule());
+        if ((scaRule != null) &&  (scaRule instanceof camel.scalability.ScalabilityRule))
+            rule.setScalabilityRule((camel.scalability.ScalabilityRule) scaRule);
     }
 
 }

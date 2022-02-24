@@ -5,7 +5,7 @@ import fr.softeam.cameldesigner.api.camelcore.standard.artifact.FeatureArtifact;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("ae8481a2-ae11-4428-a190-2e3d0116bd81")
-public class FeatureArtifactExporter<T extends FeatureArtifact> extends FeatureExporter<T> {
+public class FeatureArtifactExporter<T extends FeatureArtifact> extends FeatureClassifierExporter<T> {
     @objid ("ba0b505a-0577-414b-9391-a278797d04cc")
     public FeatureArtifactExporter(T elt) {
         super(elt);

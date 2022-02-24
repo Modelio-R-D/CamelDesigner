@@ -27,7 +27,11 @@ public class ContainerInstanceExporter<T extends ContainerInstance> extends Comp
     @objid ("bc901f58-d739-46ad-9d3d-1ed2213ca3ef")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentInstanceModel) && (elt instanceof camel.deployment.ContainerInstance)) {
+            ((camel.deployment.DeploymentInstanceModel) context).getContainerInstances().add((camel.deployment.ContainerInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

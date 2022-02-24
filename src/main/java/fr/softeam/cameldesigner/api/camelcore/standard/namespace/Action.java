@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.namespace;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("061096ce-1ee0-43f7-8df5-38b8fc736e2f")
 public abstract class Action extends Feature {
-    @objid ("acd7ccfe-8f83-4f51-b11f-e75514db5c3f")
+    @objid ("b47cb177-d666-46e4-8beb-904b267e6b5e")
     public static final String STEREOTYPE_NAME = "Action";
 
     /**
@@ -46,7 +46,7 @@ public abstract class Action extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c7cb0220-f86c-466d-8678-c0b19282c4b5")
+    @objid ("15f66dad-6fee-41d4-b863-435d56ad78c9")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof NameSpace) && ((NameSpace) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Action.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public abstract class Action extends Feature {
             throw new IllegalArgumentException("Action: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9458ea56-3f96-4f7a-9950-f4c64c235934")
+    @objid ("862e6475-d055-4c2c-802f-6d01c25b041c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -79,35 +79,35 @@ public abstract class Action extends Feature {
      * Get the underlying {@link NameSpace}. 
      * @return the NameSpace represented by this proxy, never null.
      */
-    @objid ("98d5b2fc-a988-470a-b8d6-a2b237e11368")
+    @objid ("e3f21626-dfa5-46b9-bb45-6ef7609e8156")
     @Override
     public NameSpace getElement() {
         return (NameSpace)super.getElement();
     }
 
-    @objid ("33f59e99-772f-47d0-b37b-7d74a3b460f5")
+    @objid ("dc7aa1e6-e2e7-49bc-80b8-f9fe70335d76")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("4e2ec0c6-b7b8-449e-85ab-5062e41889f6")
+    @objid ("a479a7b2-a866-4b14-8e2b-8497de9faecb")
     protected Action(final NameSpace elt) {
         super(elt);
     }
 
     @objid ("c5dc4266-14c2-4368-9374-34e0d3602383")
     public static final class MdaTypes {
-        @objid ("17872b57-0c91-4bd2-9281-7a72e3d67386")
+        @objid ("b24dba19-b27f-4147-85d4-b7f968fb8b46")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("cdbc2460-ef32-47f1-8adf-d063c6c2f70e")
+        @objid ("966488a3-f3cb-440f-a941-6e2967394c84")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a7eb7e9e-3b5c-4eff-bb6d-1ad3650b3e0e")
+        @objid ("58128975-6e2c-48bd-8f49-4444ede0da58")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f8475082-4875-4552-b9ae-8ea9538d0f66")
+        @objid ("56776e34-ea99-4d2d-bd0d-ec9bf8e8f0ca")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b23cd4a9-cc6d-43b4-b5fc-fbab5abf866b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:CamelModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.camel-dsl.org/camel/core" xmlns:unit="http://www.camel-dsl.org/camel/unit" name="UnitTemplateCamelModel">
+  <unitModels name="UnitTemplateModel">
+    <units xsi:type="unit:SingleUnit" name="MilliSeconds" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Seconds" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Minutes" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Hours" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Days" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Weeks" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Months" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Years" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Bits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="KiloBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="MegaBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="GigaBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="Bytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="KiloBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="MegaBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="GigaBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="TeraBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:Dimensionless" name="Percentage"/>
+    <units xsi:type="unit:Dimensionless" name="Ratio"/>
+    <units xsi:type="unit:Dimensionless" name="utilityValue"/>
+    <units xsi:type="unit:CompositeUnit" name="BytesPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.12 //@unitModels.0/@units.1" formula="Bytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="MegaBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.14 //@unitModels.0/@units.1" formula="MegaBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="KiloBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.13 //@unitModels.0/@units.1" formula="KiloBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.15 //@unitModels.0/@units.1" formula="GigaBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBytesPerDays" dimension="//@unitModels.0/@dimensions.3" componentUnits="//@unitModels.0/@units.15 //@unitModels.0/@units.4" formula="GigaBytes / Days"/>
+    <units xsi:type="unit:CompositeUnit" name="BitsPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.8 //@unitModels.0/@units.1" formula="Bits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="KiloBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.9 //@unitModels.0/@units.1" formula="KiloBits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="MegaBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.10 //@unitModels.0/@units.1" formula="MegaBits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" componentUnits="//@unitModels.0/@units.11 //@unitModels.0/@units.1" formula="GigaBits / Seconds"/>
+    <units xsi:type="unit:SingleUnit" name="Transactions" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Requests" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Simulations" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerSecond" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.29 //@unitModels.0/@units.1" formula="Transactions / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerMinute" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.29 //@unitModels.0/@units.2" formula="Transactions / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerHour" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.29 //@unitModels.0/@units.3" formula="Transactions / Hours"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerSecond" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.30 //@unitModels.0/@units.1" formula="Requests / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerMinute" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.30 //@unitModels.0/@units.2" formula="Requests / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerHour" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.30 //@unitModels.0/@units.3" formula="Requests / Hours"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerSecond" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.31 //@unitModels.0/@units.1" formula="Simulations / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerMinute" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.31 //@unitModels.0/@units.2" formula="Simulations / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerHour" dimension="//@unitModels.0/@dimensions.4" componentUnits="//@unitModels.0/@units.31 //@unitModels.0/@units.3" formula="Simulations / Hours"/>
+    <units xsi:type="unit:SingleUnit" name="Instances" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Cores" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Euros" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Dollars" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Pounds" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Hertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="KiloHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="MegaHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="GigaHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <dimensions name="Time"/>
+    <dimensions name="Storage"/>
+    <dimensions name="NetworkSpeed"/>
+    <dimensions name="DataSpeed"/>
+    <dimensions name="ComputationalSpeed"/>
+    <dimensions name="NumberOf"/>
+    <dimensions name="Monetary"/>
+    <dimensions name="Frequency"/>
+  </unitModels>
+</core:CamelModel>

@@ -22,12 +22,31 @@ public class ContainerMeasurementExporter<T extends ContainerMeasurement> extend
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.ContainerMeasurement) {
+            camel.execution.ContainerMeasurement measurement = (camel.execution.ContainerMeasurement) elt;
+            setContainersInstance(measurement);
+            setContainer(measurement);
+        }
     }
 
     @objid ("d0f925a6-caf7-400a-9727-ca7166fa8232")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("92ecd5e9-c85a-418b-949b-c80f4ca46172")
+    private void setContainer(camel.execution.ContainerMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getContainer());
+        if ((comp != null) &&  (comp instanceof camel.deployment.Container))
+            measurement.setContainer((camel.deployment.Container) comp);
+    }
+
+    @objid ("dfab1e3c-df27-4896-a90f-37cfe7fea283")
+    private void setContainersInstance(camel.execution.ContainerMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getContainerInstance());
+        if ((comp != null) &&  (comp instanceof camel.deployment.ContainerInstance))
+            measurement.setContainerInstance((camel.deployment.ContainerInstance) comp);
     }
 
 }

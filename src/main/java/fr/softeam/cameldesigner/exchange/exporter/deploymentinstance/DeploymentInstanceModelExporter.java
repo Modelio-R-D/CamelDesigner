@@ -23,12 +23,23 @@ public class DeploymentInstanceModelExporter<T extends DeploymentInstanceModel> 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.DeploymentInstanceModel) {
+            camel.deployment.DeploymentInstanceModel dim = (camel.deployment.DeploymentInstanceModel) elt;
+            setType(dim);
+        }
     }
 
     @objid ("9bac41ec-5ae2-49b2-8236-3b18daed9b86")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("47316418-a89a-4e64-a3e2-afe196586b28")
+    private void setType(camel.deployment.DeploymentInstanceModel dim) {
+        CDOObject di =  this._process.getElement(this._element.getType());
+        if ((di != null) &&  (di instanceof camel.deployment.DeploymentTypeModel))
+            dim.setType((camel.deployment.DeploymentTypeModel) di);
     }
 
 }

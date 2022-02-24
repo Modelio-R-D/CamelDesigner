@@ -27,7 +27,11 @@ public class HostingExporter<T extends Hosting> extends ComponentRelationExporte
     @objid ("69fd40fe-9d4c-4ab3-9464-1b9c88a94baf")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.Hosting)) {
+            ((camel.deployment.DeploymentTypeModel) context).getHostings().add((camel.deployment.Hosting) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

@@ -23,12 +23,31 @@ public class VMMeasurementExporter<T extends VMMeasurement> extends FeatureClass
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.VMMeasurement) {
+            camel.execution.VMMeasurement measurement = (camel.execution.VMMeasurement) elt;
+            setVMInstance(measurement);
+            setVM(measurement);
+        }
     }
 
     @objid ("98349203-5015-4af2-802a-d15bcec6f2c9")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("02842435-7ef4-40ff-9c36-384036601f26")
+    private void setVM(camel.execution.VMMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getVm());
+        if ((comp != null) &&  (comp instanceof camel.deployment.VM))
+            measurement.setVm((camel.deployment.VM) comp);
+    }
+
+    @objid ("eacc5f8c-fb82-49fb-b2b6-88460bbdd0f5")
+    private void setVMInstance(camel.execution.VMMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getVmInstance());
+        if ((comp != null) &&  (comp instanceof camel.deployment.VMInstance))
+            measurement.setVmInstance((camel.deployment.VMInstance) comp);
     }
 
 }

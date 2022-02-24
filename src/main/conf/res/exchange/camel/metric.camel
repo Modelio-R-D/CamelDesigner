@@ -1,0 +1,232 @@
+camel model MetricTemplateCamelModel{
+	metric type model MetricTemplateModel{
+		measurable attribute RAMUtilisation [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.RAMUtilisation]
+		measurable attribute CPUUtilisation [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.CPUUtilisation]
+		measurable attribute DiskUtilisation [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.DiskUtilisation]
+		measurable attribute GPUUtilisation [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.GPUUtilisation]
+		measurable attribute ResponseTime [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.ResponseTime]
+		measurable attribute ExecutionTime [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.ExecutionTime]
+		measurable attribute Availability [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Availability]
+		measurable attribute Reliability [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Reliability]
+		measurable attribute NetworkLatency [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.NetworkLatency]
+		measurable attribute Cost [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Cost]
+		measurable attribute Utility [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Utility]
+		measurable attribute AdapterUtility [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Utility.AdapterUtility]
+		measurable attribute DLMSUtility [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Utility.DLMSUtility]
+		measurable attribute ComponentInstances [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.Cardinality]
+		measurable attribute ComputationPower [MetaDataModel.MELODICMetadataSchema.UtilityNotions.UtilityRelatedProperties.ComputationPower]
+
+		template RAMUtilisationTemplate{
+			attribute RAMUtilisation
+			unit UnitTemplateCamelModel.UnitTemplateModel.Percentage
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToHundredDouble
+		}
+
+		template DiskUtilisationTemplate{
+			attribute DiskUtilisation
+			unit UnitTemplateCamelModel.UnitTemplateModel.Percentage
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToHundredDouble
+		}
+
+		template CPUUtilisationTemplate{
+			attribute CPUUtilisation
+			unit UnitTemplateCamelModel.UnitTemplateModel.Percentage
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToHundredDouble
+		}
+
+		template GPUUtilisationTemplate{
+			attribute GPUUtilisation
+			unit UnitTemplateCamelModel.UnitTemplateModel.Percentage
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToHundredDouble
+		}
+
+		template ResponseTimeTemplate{
+			attribute ResponseTime
+			unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+			direction 0
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template ExecutionTimeTemplate{
+			attribute ExecutionTime
+			unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+			direction 0
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template NetworkLatencyTemplate{
+			attribute NetworkLatency
+			unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+			direction 0
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template AvailabilityTemplate{
+			attribute Availability
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			direction 1
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToOneDouble
+		}
+
+		template MTBFTemplate{
+			attribute Reliability
+			unit UnitTemplateCamelModel.UnitTemplateModel.Seconds
+			direction 1
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template CostTemplateDollars{
+			attribute Cost
+			unit UnitTemplateCamelModel.UnitTemplateModel.Dollars
+			direction 0
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template CostTemplateEuros{
+			attribute Cost
+			unit UnitTemplateCamelModel.UnitTemplateModel.Euros
+			direction 0
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityDouble
+		}
+
+		template UtilityTemplate{
+			attribute Utility
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			direction 1
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToOneDouble
+		}
+
+		template AdapterUtilityTemplate{
+			attribute AdapterUtility
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			direction 1
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToOneDouble
+		}
+
+		template DLMSUtilityTemplate{
+			attribute DLMSUtility
+			unit UnitTemplateCamelModel.UnitTemplateModel.Ratio
+			direction 1
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToOneDouble
+		}
+
+		template ComponentInstanceTemplate{
+			attribute ComponentInstances
+			unit UnitTemplateCamelModel.UnitTemplateModel.Instances
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityInteger
+		}
+
+		template ComputationPowerTemplate{
+			attribute ComputationPower
+			unit UnitTemplateCamelModel.UnitTemplateModel.Cores
+			value type TypeTemplateCamelModel.TypeTemplateModel.ZeroToPositiveInfinityInteger
+		}
+
+		raw metric RawCPUUtilisation{
+			template CPUUtilisationTemplate
+		}
+
+		composite metric AverageCPUUtilisation{
+			template CPUUtilisationTemplate
+			formula: ('mean(RawCPUUtilisation)')
+		}
+
+		raw metric RawDiskUtilisation{
+			template DiskUtilisationTemplate
+		}
+
+		composite metric AverageDiskUtilisation{
+			template DiskUtilisationTemplate
+			formula: ('mean(RawDiskUtilisation)')
+		}
+
+		raw metric RawRAMUtilisation{
+			template RAMUtilisationTemplate
+		}
+
+		composite metric AverageRAMUtilisation{
+			template RAMUtilisationTemplate
+			formula: ('mean(RawRAMUtilisation)')
+		}
+
+		raw metric RawGPUUtilisation{
+			template GPUUtilisationTemplate
+		}
+
+		composite metric AverageGPUUtilisation{
+			template GPUUtilisationTemplate
+			formula: ('mean(RawGPUUtilisation)')
+		}
+
+		raw metric RawExecutionTime{
+			template ExecutionTimeTemplate
+		}
+
+		composite metric AverageExecutionTime{
+			template ExecutionTimeTemplate
+			formula: ('mean(RawExecutionTime)')
+		}
+
+		raw metric RawResponseTime{
+			template ResponseTimeTemplate
+		}
+
+		composite metric AverageResponseTime{
+			template ResponseTimeTemplate
+			formula: ('mean(RawResponseTime)')
+		}
+
+		raw metric RawNetworkLatency{
+			template NetworkLatencyTemplate
+		}
+
+		composite metric AverageNetworkLatency{
+			template NetworkLatencyTemplate
+			formula: ('mean(RawNetworkLatency)')
+		}
+
+		raw metric RawAvailability{
+			template AvailabilityTemplate
+		}
+
+		composite metric AverageAvailability{
+			template AvailabilityTemplate
+			formula: ('mean(RawAvailability)')
+		}
+
+		raw metric RawMTBF{
+			template MTBFTemplate
+		}
+
+		composite metric AverageMTBF{
+			template MTBFTemplate
+			formula: ('mean(RawMTBF)')
+		}
+
+		raw metric RawCostDollars{
+			template CostTemplateDollars
+		}
+
+		composite metric AverageCostDollars{
+			template CostTemplateDollars
+			formula: ('mean(RawCostDollars)')
+		}
+
+		raw metric RawCostEuros{
+			template CostTemplateEuros
+		}
+
+		composite metric AverageCostEuros{
+			template CostTemplateEuros
+			formula: ('mean(RawCostEuros)')
+		}
+
+		raw metric RawInstanceNumber{
+			template ComponentInstanceTemplate
+		}
+
+		raw metric RawCoreNumber{
+			template ComputationPowerTemplate
+		}
+	}
+}

@@ -22,12 +22,31 @@ public class SoftwareComponentMeasurementExporter<T extends SoftwareComponentMea
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.SoftwareComponentMeasurement) {
+            camel.execution.SoftwareComponentMeasurement measurement = (camel.execution.SoftwareComponentMeasurement) elt;
+            setSoftwareComponentInstance(measurement);
+            setSoftwareComponent(measurement);
+        }
     }
 
     @objid ("66a87eb7-8579-4a44-9b79-a039feb860cb")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("5bdc455b-b534-4227-8345-4e9cfec01bbb")
+    private void setSoftwareComponent(camel.execution.SoftwareComponentMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getSoftwareComponent());
+        if ((comp != null) &&  (comp instanceof camel.deployment.SoftwareComponent))
+            measurement.setSoftwareComponent((camel.deployment.SoftwareComponent) comp);
+    }
+
+    @objid ("20c32475-d62e-46f4-a9b7-419c8fc4e981")
+    private void setSoftwareComponentInstance(camel.execution.SoftwareComponentMeasurement measurement) {
+        CDOObject comp =  this._process.getElement(this._element.getSoftwareComponentInstance());
+        if ((comp != null) &&  (comp instanceof camel.deployment.SoftwareComponentInstance))
+            measurement.setSoftwareComponentInstance((camel.deployment.SoftwareComponentInstance) comp);
     }
 
 }

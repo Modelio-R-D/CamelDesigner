@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.deploymentinstance;
 
+import java.sql.Date;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureInstanceExporter;
@@ -22,12 +23,35 @@ public abstract class ComponentInstanceExporter<T extends ComponentInstance> ext
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.ComponentInstance) {
+            camel.deployment.ComponentInstance ci = (camel.deployment.ComponentInstance) elt;
+            setType(ci);
+            setInstantiatedOn(ci);
+            setDestroyedOn(ci);
+        }
     }
 
     @objid ("307996a4-4f61-415f-80e8-145000251274")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("1b5cbdc7-f367-4ce7-9e0f-c25f958da5d2")
+    private void setDestroyedOn(camel.deployment.ComponentInstance ci) {
+        ci.setDestroyedOn(Date.valueOf(this._element.getDestroyedOn()));
+    }
+
+    @objid ("5e17ad5b-b469-4c57-a710-90ac74fb3a6e")
+    private void setInstantiatedOn(camel.deployment.ComponentInstance ci) {
+        ci.setInstantiatedOn(Date.valueOf(this._element.getInstantiatedOn()));
+    }
+
+    @objid ("d86dbe53-307e-4f6b-bfb1-1a4d9b0a2507")
+    private void setType(camel.deployment.ComponentInstance ci) {
+        CDOObject type =  this._process.getElement(this._element.getType());
+        if ((type != null) &&  (type instanceof camel.deployment.Component))
+            ci.setType((camel.deployment.Component) type);
     }
 
 }

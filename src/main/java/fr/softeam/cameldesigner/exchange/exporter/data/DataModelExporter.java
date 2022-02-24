@@ -24,4 +24,14 @@ public abstract class DataModelExporter<T extends DataModel> extends SubModelExp
         super.setProperties(elt);
     }
 
+    @objid ("326bfd10-1089-4aa3-9fde-020ed89c93a5")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.data.DataModel)) {
+            ((camel.core.CamelModel) context).getDataModels().add((camel.data.DataModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
 }

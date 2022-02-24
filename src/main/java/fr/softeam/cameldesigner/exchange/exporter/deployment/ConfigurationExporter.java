@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
-import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import fr.softeam.cameldesigner.exchange.exporter.core.FeatureArtifactExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("5d24f16f-4ba4-443b-adf6-433e7f3de276")
-public abstract class ConfigurationExporter<T extends Configuration> extends FeatureExporter<T> {
+public abstract class ConfigurationExporter<T extends Configuration> extends FeatureArtifactExporter<T> {
     @objid ("20eaa1fa-d08d-4f42-ae32-677d0dc0bb6a")
     public ConfigurationExporter(T elt) {
         super(elt);

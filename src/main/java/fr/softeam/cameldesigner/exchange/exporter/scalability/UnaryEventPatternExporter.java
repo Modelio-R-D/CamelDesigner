@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.scalability.ScalabilityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.UnaryEventPattern;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("b0c14ebe-9fa6-4c7e-9311-b0489f6f69a1")
 public class UnaryEventPatternExporter<T extends UnaryEventPattern> extends EventPatternExporter<T> {

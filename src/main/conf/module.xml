@@ -97,15 +97,23 @@
             <Stereotype is-abstract="false" is-hidden="false"
                 label="%stereotype.Feature_Artifact.label"
                 metaclass="Standard.Artifact" name="Feature_Artifact"
-                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="4fc85f6a-6ece-4e79-b662-e20cb7f28cea">
+                owner-stereotype="mref#'' {7c5a3627-4282-427f-93a3-957cdca1adb7} Infrastructure.Stereotype" uid="4fc85f6a-6ece-4e79-b662-e20cb7f28cea">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
                 label="%stereotype.Feature_Class.label"
                 metaclass="Standard.Class" name="Feature_Class"
-                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="babf8276-c4d4-4d86-b02b-d20c6636d937">
+                owner-stereotype="mref#'' {7c5a3627-4282-427f-93a3-957cdca1adb7} Infrastructure.Stereotype" uid="babf8276-c4d4-4d86-b02b-d20c6636d937">
                 <Icon path="res/icon/gui/Feature_24.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="true" is-hidden="true"
+                label="%stereotype.Feature_Classifier.label"
+                metaclass="Standard.Classifier"
+                name="Feature_Classifier"
+                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="7c5a3627-4282-427f-93a3-957cdca1adb7">
+                <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
@@ -118,15 +126,15 @@
             <Stereotype is-abstract="false" is-hidden="false"
                 label="%stereotype.Feature_DataType.label"
                 metaclass="Standard.DataType" name="Feature_DataType"
-                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="eaf56346-fbac-4409-ad4f-4e1a6c4183d1">
+                owner-stereotype="mref#'' {7c5a3627-4282-427f-93a3-957cdca1adb7} Infrastructure.Stereotype" uid="eaf56346-fbac-4409-ad4f-4e1a6c4183d1">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="true" is-hidden="false"
+            <Stereotype is-abstract="false" is-hidden="false"
                 label="%stereotype.Feature_Enumeration.label"
                 metaclass="Standard.Enumeration"
                 name="Feature_Enumeration"
-                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="56eb7780-c162-400f-8e4b-0a5178cef153">
+                owner-stereotype="mref#'' {7c5a3627-4282-427f-93a3-957cdca1adb7} Infrastructure.Stereotype" uid="56eb7780-c162-400f-8e4b-0a5178cef153">
                 <Icon path="res/icon/gui/Feature_24.png"/>
                 <Image path=""/>
             </Stereotype>
@@ -726,9 +734,9 @@
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.couplingType.label"
                         name="couplingType" parameter-card="1" uid="e8ff5d38-9710-482d-84f1-69e389fdd673"/>
-                    <TagType is-hidden="false" is-signed="false"
+                    <TagType is-hidden="true" is-signed="false"
                         label="%tagtype.relaxed.label" name="relaxed"
-                        parameter-card="1" uid="c2d7df3f-0813-48ef-bbc6-545b50985067"/>
+                        parameter-card="0" uid="c2d7df3f-0813-48ef-bbc6-545b50985067"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
@@ -820,7 +828,7 @@
                         name="binaryCodeURL" parameter-card="1" uid="a9a8e449-cba1-4eb1-86c5-d6776d809a5f"/>
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.continuousDeployment.label"
-                        name="continuousDeployment" parameter-card="1" uid="b19002d3-1aa5-4739-b9db-e55a4a2126db"/>
+                        name="continuousDeployment" parameter-card="0" uid="b19002d3-1aa5-4739-b9db-e55a4a2126db"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
@@ -832,10 +840,10 @@
                 <TagTypes>
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.longLived.label"
-                        name="longLived" parameter-card="1" uid="dad4c8d0-a0a7-4cbd-86b5-f8f40b461f7e"/>
+                        name="longLived" parameter-card="0" uid="dad4c8d0-a0a7-4cbd-86b5-f8f40b461f7e"/>
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.coInstanceHosting.label"
-                        name="coInstanceHosting" parameter-card="1" uid="494a7252-cb31-4efb-ba4c-43fde6acbc7f"/>
+                        name="coInstanceHosting" parameter-card="0" uid="494a7252-cb31-4efb-ba4c-43fde6acbc7f"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
@@ -862,7 +870,7 @@
                         parameter-card="1" uid="b0d29654-1e13-4705-af26-e7bcf590850e"/>
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.successful.label"
-                        name="successful" parameter-card="1" uid="652d15c6-5261-493e-a968-b981d7bee54a"/>
+                        name="successful" parameter-card="0" uid="652d15c6-5261-493e-a968-b981d7bee54a"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
@@ -1701,7 +1709,7 @@
             <Stereotype is-abstract="true" is-hidden="true"
                 label="%stereotype.Requirement.label"
                 metaclass="Standard.GeneralClass" name="Requirement"
-                owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" uid="f14398cc-a1c7-4953-9874-f7819f1ec4f7">
+                owner-stereotype="mref#'' {7c5a3627-4282-427f-93a3-957cdca1adb7} Infrastructure.Stereotype" uid="f14398cc-a1c7-4953-9874-f7819f1ec4f7">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -2105,8 +2113,8 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="false" is-hidden="false"
-                label="%stereotype.List.label"
-                metaclass="Standard.DataType" name="List"
+                label="%stereotype.CamelList.label"
+                metaclass="Standard.DataType" name="CamelList"
                 owner-stereotype="mref#'' {4fa7ea19-f563-4658-8d2a-755724d85061} Infrastructure.Stereotype" uid="789c3b87-cb58-4659-a04c-7f948aae0e2e">
                 <Icon path="res/icon/gui/typeModelEmpty_24.png"/>
                 <Image path="res/icon/gui/typeModelEmpty_48.png"/>

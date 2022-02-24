@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_;
 
@@ -43,7 +43,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("32850d2a-548f-4680-aa57-5290cf509da5")
 public class DeploymentInstanceModel extends DeploymentModel {
-    @objid ("3653ce3d-3aa1-443d-af3d-6a467e91bf04")
+    @objid ("5cae30dd-505f-4fc1-a730-fb537f535be9")
     public static final String STEREOTYPE_NAME = "DeploymentInstanceModel";
 
     /**
@@ -54,7 +54,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8c8ff56e-be01-495b-ba5e-388a06b4b16b")
+    @objid ("56e1fb1a-db2a-40cd-bd55-077e04d7cfb4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentInstanceModel.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * 
      * @return a {@link DeploymentInstanceModel} proxy on the created {@link Package}.
      */
-    @objid ("c070ee6b-0496-49e7-9e0a-8ee78327cfe4")
+    @objid ("f21fbbfd-a8f3-4e55-ad45-0d6d96102315")
     public static DeploymentInstanceModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DeploymentInstanceModel.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * @param obj a Package
      * @return a {@link DeploymentInstanceModel} proxy or <i>null</i>.
      */
-    @objid ("b6b308f8-d60e-48cb-ae4c-87d1e04dae2c")
+    @objid ("1a183443-a7bb-40ae-9a62-cbac7549da6b")
     public static DeploymentInstanceModel instantiate(final Package obj) {
         return DeploymentInstanceModel.canInstantiate(obj) ? new DeploymentInstanceModel(obj) : null;
     }
@@ -91,7 +91,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * @return a {@link DeploymentInstanceModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ee2027c5-325d-4bfb-acef-0978c96d810a")
+    @objid ("a5bae9a3-c4a1-4f9f-9243-9117c4906b24")
     public static DeploymentInstanceModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DeploymentInstanceModel.canInstantiate(obj))
         	return new DeploymentInstanceModel(obj);
@@ -105,7 +105,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("a2a447fe-7deb-418a-9125-79dcfd985b94")
+    @objid ("d3fd3990-6af3-4963-be6c-3637963f3f68")
     public void addCommunicationInstances(final CommunicationInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -121,7 +121,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("6b091e2a-a66d-4bca-8f63-65709426dd6d")
+    @objid ("f5d48b29-7c59-4bdd-a79c-1cf3f08e78f9")
     public void addContainerInstances(final ContainerInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -133,7 +133,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("b82e5303-6300-4e60-ae0d-f928f70b8d83")
+    @objid ("c1a52e9d-52a0-4502-88bf-4d73f1255969")
     public void addPaasInstances(final PaaSInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -145,7 +145,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("37857d4e-487b-4491-bf6e-3d4bdf92393f")
+    @objid ("4350c5c1-40ad-40f4-9dde-297bf7839f96")
     public void addSoftwareComponentInstances(final SoftwareComponentInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -157,13 +157,13 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("89063b06-5107-4247-80f0-03e90463376d")
+    @objid ("38f18ef4-714a-4e9d-bbc6-b1bf9457430c")
     public void addVmInstances(final VMInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
     }
 
-    @objid ("cb0ed37f-0208-4246-bf6b-dc1566f0a659")
+    @objid ("081bc223-f54b-4ef4-8aa6-027b13868599")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -185,7 +185,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("07bc52db-f245-4969-8273-b55b84a4ded8")
+    @objid ("d948ff84-a94c-45e0-9133-4356f10051f4")
     public List<CommunicationInstance> getCommunicationInstances() {
         List<CommunicationInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -204,7 +204,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("67b3cd14-7511-480b-abb4-95afd6bb35c2")
+    @objid ("6ae54181-a6cd-4d47-8c2b-bc19312cffb0")
     public List<ContainerInstance> getContainerInstances() {
         List<ContainerInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -218,7 +218,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("5073ed71-247e-4226-9a78-5dc7f7d08de1")
+    @objid ("b8498c03-110b-463a-8b23-41d06493f849")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -230,7 +230,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("00e082fe-f9c9-4f79-af17-9fbc70b79019")
+    @objid ("83df343f-fa2f-42e2-9123-d4b4948e4377")
     public List<PaaSInstance> getPaasInstances() {
         List<PaaSInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -246,7 +246,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("f1b3fb28-64ec-4528-8db4-88bf2d6789c7")
+    @objid ("d2877e54-b280-4a05-ab6d-06e102e31b72")
     public List<SoftwareComponentInstance> getSoftwareComponentInstances() {
         List<SoftwareComponentInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -262,7 +262,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("8a97fe04-f6ea-40e9-8307-35fe12873e4d")
+    @objid ("649b096f-14ca-4789-a958-f6c268f70bf7")
     public DeploymentTypeModel getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DeploymentInstanceModel.MdaTypes.MDAASSOCDEP)
@@ -280,7 +280,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("a80abff9-33f3-48b0-b9da-b06b1ee89e20")
+    @objid ("5b8eb201-1eca-49ab-a237-0c157ba2d90a")
     public List<VMInstance> getVmInstances() {
         List<VMInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -290,7 +290,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("0c1eb28d-4954-41d6-8ec4-55ada3e37169")
+    @objid ("5320c598-3d93-4c16-a461-d3222a82864d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -302,7 +302,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("5e7c7c72-58e3-47bb-93b6-e2f11f10ea5a")
+    @objid ("12bd1691-6133-4cbd-906d-955997e76967")
     public boolean removeCommunicationInstances(final CommunicationInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -322,7 +322,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("2879b85d-62ee-4d3b-a862-79f32bf5936b")
+    @objid ("a6994cd5-0f39-4a8c-8e8b-91166a1444a9")
     public boolean removeContainerInstances(final ContainerInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -333,7 +333,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("9eecdf82-2aa8-4671-a2de-3ce1ba76f9e4")
+    @objid ("aa5dbf82-25a6-43d5-8434-9ea4c2e98a4f")
     public boolean removePaasInstances(final PaaSInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -344,7 +344,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("eb185991-175f-4c58-baf3-68aa8ca7bdf1")
+    @objid ("44d75c87-0989-4144-9779-0aab4fddf618")
     public boolean removeSoftwareComponentInstances(final SoftwareComponentInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -355,7 +355,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("cc090495-b2fb-4cb6-929e-b5f35c93a281")
+    @objid ("4d9f0ba2-ba51-438e-af83-8c18beebde65")
     public boolean removeVmInstances(final VMInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -366,7 +366,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * null
      * 
      */
-    @objid ("5d394af7-0cf3-4519-ac0c-356280841051")
+    @objid ("5489a59e-0314-4146-b002-d2d043487dcb")
     public void setType(final DeploymentTypeModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -394,23 +394,23 @@ public class DeploymentInstanceModel extends DeploymentModel {
         return result;
     }
 
-    @objid ("a26d323c-f474-4507-8542-3f6e8afd09ab")
+    @objid ("b2fcae3f-af2a-4478-974e-9cc4e744168f")
     protected DeploymentInstanceModel(final Package elt) {
         super(elt);
     }
 
     @objid ("3bc27954-cfa5-4cd5-95f8-63b26f92d695")
     public static final class MdaTypes {
-        @objid ("f1dfd993-2077-4fec-a196-60aa7b6ebfb2")
+        @objid ("181be285-dea3-4405-9d32-3515b1cdd778")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b29ff2d2-f477-439a-8eee-ba367124c72a")
+        @objid ("bca89140-af4d-4a32-8650-d75f50144e9a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c6275baa-f239-4ed4-9be3-5b2d3e2bb5b6")
+        @objid ("3bce86cc-390f-48d3-9547-f4d5eb91049f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6d5c7547-afb4-4866-9adc-7fb3a01bd8cd")
+        @objid ("d979c0eb-4bed-492b-a452-23c8b910e78c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b43cbec3-a3d4-4d2b-90c9-eb4a56ed3ca9");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

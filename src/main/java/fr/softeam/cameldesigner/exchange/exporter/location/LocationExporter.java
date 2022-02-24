@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter.location;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
-import fr.softeam.cameldesigner.exchange.exporter.core.NamedElementExporter;
+import fr.softeam.cameldesigner.exchange.exporter.core.FeatureEnumerationExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("e5e9de61-252f-4705-ab30-bcbac041abc5")
-public abstract class LocationExporter<T extends Location> extends NamedElementExporter<T> {
+public abstract class LocationExporter<T extends Location> extends FeatureEnumerationExporter<T> {
     @objid ("01dfb8e9-f318-4318-a6c1-af2db7099c25")
     public LocationExporter(T elt) {
         super(elt);

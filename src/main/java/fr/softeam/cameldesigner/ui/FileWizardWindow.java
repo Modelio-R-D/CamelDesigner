@@ -22,45 +22,45 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 /**
  * @author ebrosse
  */
-@objid ("77956138-29c0-4df4-8504-c345809b086b")
+@objid ("ee9d67e5-655c-4ed0-ad8c-d9e3a8732a57")
 public abstract class FileWizardWindow extends Dialog {
-    @objid ("3209cf4c-086d-41e9-b352-068eef6a5dcd")
+    @objid ("33c1da4d-d417-4808-abad-e6b059b2f360")
     private String title = "";
 
-    @objid ("90d05fb1-a412-4ed0-bc98-ea66b5346b8f")
+    @objid ("82dde058-af06-4292-bbab-d2669ee54619")
     private String description = "";
 
-    @objid ("33aa6000-6b8f-4882-a594-539dfdb3603d")
+    @objid ("75f7df35-d6cb-4644-bb81-8a87e84cae0c")
     private String frametitle = "";
 
-    @objid ("5286c1d3-b03d-4a3c-9cc0-aa46524fa238")
+    @objid ("18ab7fbf-389a-4f44-b6a8-f555dcc309e7")
     private String cancelButton = "";
 
-    @objid ("3fb2b540-de5e-4893-a0f2-5522188dab87")
+    @objid ("8713fbb8-fc1c-459e-9ce4-c1fed3e2e3f8")
     private String validateButton = "";
 
-    @objid ("6b0d3592-17f6-4cb7-948c-e06f1c0a585f")
+    @objid ("68ab61d5-429a-4f07-8663-981a92bd766b")
     private static boolean cancelation = false;
 
-    @objid ("6214b27e-c571-4e43-a72f-9128232bf2fe")
+    @objid ("c62daea6-2ff9-419c-90d8-4afcdc22b7c9")
     protected boolean error = false;
 
-    @objid ("141bb1f2-cee9-4618-afe5-363a73d3cb23")
+    @objid ("2d049287-73e6-48d3-b6ec-3dfaa152d24e")
     protected String path = "";
 
-    @objid ("929bf490-5701-4b7f-b1bf-b66ab6a64b9e")
+    @objid ("f6e61c9b-251c-4d12-ba10-8b5d514a1d5a")
     protected ModelElement selectedElt = null;
 
-    @objid ("e5265308-23fa-4c1e-9dbc-64deada8ea41")
+    @objid ("62260d4c-8f15-4433-8923-26ace593c41f")
     protected Shell shell = null;
 
-    @objid ("2a28755d-e901-454f-9d92-39f6a962d4dd")
+    @objid ("25fb404d-c7d3-4e77-8867-e01accbea399")
     protected NameComposite nameComposite = null;
 
-    @objid ("cff2ee2a-de23-4600-8c00-95f339d72359")
+    @objid ("799750ed-529c-4efd-810b-5a63ca556d65")
     private ValidationBoutonComposite validateComposite = null;
 
-    @objid ("a19e2c32-b4da-4704-80f6-d16b9927f754")
+    @objid ("7707c8da-18a8-4126-b967-09f5b394dff8")
     public Object open() {
         setCancellation(false);
         createContents();
@@ -76,7 +76,7 @@ public abstract class FileWizardWindow extends Dialog {
         return null;
     }
 
-    @objid ("9199105e-c792-4a66-a433-434f8f82c3fa")
+    @objid ("f86dbab8-2051-407f-9836-6e4bd5ee01b8")
     protected void createContents() {
         setLabels();
         
@@ -131,18 +131,18 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * set default configuration of the dialog box
      */
-    @objid ("1bb54c0c-aab7-4ee1-aa66-0eb9c66d96b0")
+    @objid ("831bc891-0566-463d-9a66-68e7a31c1d78")
     public abstract void setDefaultDialog();
 
     /**
      * @return the selected element i.e. Package or IModule
      */
-    @objid ("e25dc33b-b47f-49f1-b741-2d032538da2f")
+    @objid ("58a4195d-116f-4ef5-be85-ecde893cb851")
     public MObject getSelectedElt() {
         return this.selectedElt;
     }
 
-    @objid ("ac15ced0-075e-4480-b642-5727ecf51e8f")
+    @objid ("4114d0be-1c87-4dce-8b89-004474dceca0")
     void cancelAction() {
         if ((this.shell != null) && (!this.shell.isDisposed())){
             this.shell.dispose();
@@ -152,7 +152,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param cancelButton : the text of the cancel button
      */
-    @objid ("2e875aaf-0aa2-4423-877c-08eb26c91a7b")
+    @objid ("690ace17-645f-4668-97e7-0fefcd2bf304")
     public void setCancelButton(final String cancelButton) {
         this.cancelButton = cancelButton;
     }
@@ -160,7 +160,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param description : the description of the windows
      */
-    @objid ("8ae1618a-acbb-4877-8cc7-de6aebeb2e36")
+    @objid ("4caa832c-b3b7-49a5-90bf-4e4143638637")
     public void setDescription(final String description) {
         this.description = description;
     }
@@ -168,7 +168,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param frametitle : the title of the windows frame
      */
-    @objid ("4fc77530-396e-436f-9510-ee3acddfec1a")
+    @objid ("c936759a-fb2c-4997-8201-a8d268b626a8")
     public void setFrametitle(final String frametitle) {
         this.frametitle = frametitle;
     }
@@ -176,7 +176,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param title : the title of the windows
      */
-    @objid ("bf07f159-d802-41c8-9d86-6fec4f1c285c")
+    @objid ("8552147e-283c-44a7-93b7-bf00dc789b17")
     public void setTitle(final String title) {
         this.title = title;
     }
@@ -184,7 +184,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param validateButton : the button of validation
      */
-    @objid ("75c339ae-4c58-4135-985d-1769a8b1c83f")
+    @objid ("2fb9cc0a-eaca-47cf-b7c1-77989baaca5d")
     public void setValidateButton(final String validateButton) {
         this.validateButton = validateButton;
     }
@@ -192,7 +192,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * Warning user that he does not select a file
      */
-    @objid ("b2c5f57b-19d3-4238-9b6d-bee9963699a9")
+    @objid ("58a4b56c-7c59-40fe-a2a0-c1ccff32b5d0")
     public void selectAFile() {
         MessageBox messageBox = new MessageBox(this.shell, SWT.ICON_WARNING);
         messageBox.setMessage(this.description);
@@ -202,7 +202,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @return true if the process is cancelled by the user
      */
-    @objid ("2059e33e-f27b-4420-b9c2-0041bfef42c9")
+    @objid ("e750ae32-393c-424e-a160-d8d3cca08535")
     public static boolean isCancelation() {
         return FileWizardWindow.cancelation;
     }
@@ -210,7 +210,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param cancelation : set the cancellation of the process
      */
-    @objid ("fd7766dc-6031-4196-8bd6-fb93b39fad96")
+    @objid ("d963befc-e571-4425-889f-9c26f6fe4402")
     public static void setCancellation(final boolean cancelation) {
         FileWizardWindow.cancelation = cancelation;
     }
@@ -218,25 +218,25 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * the action i.e. import or export
      */
-    @objid ("b8196352-e6d0-4c01-a6a0-f9ba03c6c3a8")
+    @objid ("4f32d6d7-d4bd-4e65-afad-285bb6350110")
     public abstract void validationAction();
 
     /**
      * set button labels
      */
-    @objid ("df57e3d3-0af8-467e-a782-d262d4d9a042")
+    @objid ("b87799b0-37bb-4fc8-aa24-eaafa1a6faad")
     public abstract void setLabels();
 
     /**
      * initialize file path
      */
-    @objid ("09f7289d-fda9-42b7-9ac3-33b85844097d")
+    @objid ("c30eebad-6381-42d4-8fdb-beae39d8b431")
     public abstract void setPath();
 
     /**
      * launch a dialog box for wrong path
      */
-    @objid ("1bc0de99-78e5-47d9-a263-cab1ee52d9b5")
+    @objid ("3e76768d-64ff-4009-ad0f-24c6908daff0")
     public void fileDontExist() {
         MessageBox messageBox = new MessageBox(this.shell, SWT.ICON_WARNING);
         messageBox.setMessage("Specified File do not exist");
@@ -247,7 +247,7 @@ public abstract class FileWizardWindow extends Dialog {
      * @param parent : the shell parent
      * @param style : the swt style
      */
-    @objid ("99f0e439-87e0-44b6-9186-10327560d261")
+    @objid ("2eb908b7-ea67-4e19-98fe-d236c31e7db1")
     public FileWizardWindow(final Shell parent, final int style) {
         super(parent != null ? parent : new Shell(Display.getDefault()), style);
     }
@@ -255,7 +255,7 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param parent : the shell parent
      */
-    @objid ("3cef495f-4909-46c6-8589-c670b53d6be9")
+    @objid ("aff4d993-6656-481e-abef-95ce269fce3f")
     public FileWizardWindow(final Shell parent) {
         this(parent, SWT.NONE);
     }
@@ -263,12 +263,12 @@ public abstract class FileWizardWindow extends Dialog {
     /**
      * @param selectedElt : set the selected element
      */
-    @objid ("bdc80bf6-fb5f-44b2-b65a-83f88fce73ed")
+    @objid ("d8d31d22-9c9b-401f-9887-7b4a814bc8bf")
     public void setSelectedElt(final ModelElement selectedElt) {
         this.selectedElt = selectedElt;
     }
 
-    @objid ("0392cf45-36a5-4579-90ae-85b48372342a")
+    @objid ("fe4c7760-3146-4f0d-81b3-a7ffd467b088")
     private void centerOnPrimaryScreen(Display display) {
         Monitor primary = display.getPrimaryMonitor();
         Rectangle bounds = primary.getBounds();
@@ -283,7 +283,7 @@ public abstract class FileWizardWindow extends Dialog {
      * @param inpath : the initial path
      * @return the same path in a correct form
      */
-    @objid ("3f386ca0-1685-4fd1-832b-c02d4d12017f")
+    @objid ("a9cd0ee1-3d61-4c17-a2d5-c0cbaebe9449")
     public static String checkAndReplaceEndPath(final String inpath) {
         if (inpath.endsWith("\\")) {
             return inpath.substring(0, inpath.lastIndexOf("\\"));
@@ -293,7 +293,7 @@ public abstract class FileWizardWindow extends Dialog {
         return inpath;
     }
 
-    @objid ("008b7673-33ba-4226-881c-3d5ab5c9c0c7")
+    @objid ("6c4bf4b3-18ac-4d2c-8705-5aff41d7ff05")
     protected void completeBox() {
         this.title = "Complete";
         
@@ -309,7 +309,7 @@ public abstract class FileWizardWindow extends Dialog {
         });
     }
 
-    @objid ("59e841f2-0af8-46e2-b154-cef778e6d3fd")
+    @objid ("9b5dc36c-2bdf-4e82-a35f-ebf392706229")
     void customMessageBox(int icon) {
         MessageBox messageBox = new MessageBox(this.shell, icon);
         messageBox.setMessage(this.description);

@@ -1,0 +1,31 @@
+camel model TypeTemplateCamelModel{
+	type model TypeTemplateModel{
+		range ZeroToOneDouble{
+			primitive type double
+			lower limit incl. double 0.0
+			upper limit incl. double 1.0
+		}
+
+		range ZeroToHundredDouble{
+			primitive type double
+			lower limit incl. double 0.0
+			upper limit incl. double 100.0
+		}
+
+		range ZeroToHundredInteger{
+			primitive type int
+			lower limit incl. int 0
+			upper limit incl. int 100
+		}
+
+		range ZeroToPositiveInfinityInteger{
+			primitive type int
+			lower limit int 0
+		}
+
+		range ZeroToPositiveInfinityDouble{
+			primitive type double
+			lower limit double 0.0
+		}
+	}
+}

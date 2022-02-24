@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("dcfdf889-b55e-406d-8583-1ecbb8c17322")
 public class SecurityAttribute extends QualityAttribute {
-    @objid ("5bc991b1-6267-4996-b63d-237b822ad7f6")
+    @objid ("fcfbf0c4-f76f-425b-b556-36bac3ea8506")
     public static final String STEREOTYPE_NAME = "SecurityAttribute";
 
     /**
@@ -48,7 +48,7 @@ public class SecurityAttribute extends QualityAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c2ef1b1a-9893-4e7c-b77e-15c1f274009e")
+    @objid ("4269e685-080c-4609-b21e-8c5dde645e0b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityAttribute.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class SecurityAttribute extends QualityAttribute {
      * 
      * @return a {@link SecurityAttribute} proxy on the created {@link Class}.
      */
-    @objid ("74455111-322d-404b-aa60-09dead46e05a")
+    @objid ("f0db9b4b-ed94-4657-a05f-4c25a7beb17c")
     public static SecurityAttribute create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityAttribute.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class SecurityAttribute extends QualityAttribute {
      * @param obj a Class
      * @return a {@link SecurityAttribute} proxy or <i>null</i>.
      */
-    @objid ("f6297493-3a94-45cc-a8b9-cad85fc3d0cb")
+    @objid ("84a0c45c-56e6-4232-b9b8-4ad36ece7a45")
     public static SecurityAttribute instantiate(final Class obj) {
         return SecurityAttribute.canInstantiate(obj) ? new SecurityAttribute(obj) : null;
     }
@@ -85,7 +85,7 @@ public class SecurityAttribute extends QualityAttribute {
      * @return a {@link SecurityAttribute} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5be2f438-b8e2-4257-bb4c-f865e0e12a03")
+    @objid ("bd77d11d-46cd-4165-9566-43d3283fde58")
     public static SecurityAttribute safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityAttribute.canInstantiate(obj))
         	return new SecurityAttribute(obj);
@@ -93,7 +93,7 @@ public class SecurityAttribute extends QualityAttribute {
         	throw new IllegalArgumentException("SecurityAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9cc53979-21ca-40d5-a7cc-e8d67597aec6")
+    @objid ("dbcf3a1e-143b-4fb0-ba06-60b402226af0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class SecurityAttribute extends QualityAttribute {
      * null
      * 
      */
-    @objid ("1a02874e-fbea-4f98-9e01-41e1fefeaad7")
+    @objid ("b49f4a31-8e6e-49b9-a4d9-8f39ff9444d2")
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SecurityAttribute.MdaTypes.MDAASSOCDEP)
@@ -131,13 +131,13 @@ public class SecurityAttribute extends QualityAttribute {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d2ff8027-f7da-4103-9d8a-62e2db825845")
+    @objid ("fc600d42-a4cd-4a2e-a541-285a625e2680")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("58ae22a7-e6db-4511-87c1-be349babf88e")
+    @objid ("b45fd32c-34b4-4c31-bea9-e5c51b102bec")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -149,7 +149,7 @@ public class SecurityAttribute extends QualityAttribute {
      * null
      * 
      */
-    @objid ("9f698ca1-bfd2-45d0-956b-526262bf17a7")
+    @objid ("11aeec30-0a12-4dff-91af-37c42a8e77e7")
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -177,23 +177,23 @@ public class SecurityAttribute extends QualityAttribute {
         return result;
     }
 
-    @objid ("36f7e378-2363-4bef-ad07-17b7fef15595")
+    @objid ("21c073e3-23c3-4d89-9207-18f319a87926")
     protected SecurityAttribute(final Class elt) {
         super(elt);
     }
 
     @objid ("6ae49d7c-2a2e-413e-af68-3326e7b2351a")
     public static final class MdaTypes {
-        @objid ("eb953be0-1f8e-4168-9ada-0d975022b481")
+        @objid ("b51bf864-6201-440b-b511-7f9a9337517a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e87d33f6-9e5a-4215-bcc8-e08d3a2d6ef4")
+        @objid ("2dc7236f-f434-4f85-bc43-97e48ded50e0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("127fa2ff-d2e0-4ab9-b23d-840e652b9edb")
+        @objid ("efd27710-c9f0-4f52-832a-e2402cb07cd1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b9ffd463-2106-411d-b228-cda95ec6c479")
+        @objid ("b62b9c81-2c41-4e16-89bf-9d0e64c6304a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "59943cbd-62e2-4183-8973-e15130bcb7d3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

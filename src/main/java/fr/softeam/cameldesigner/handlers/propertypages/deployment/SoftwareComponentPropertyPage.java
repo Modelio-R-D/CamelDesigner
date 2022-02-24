@@ -26,9 +26,12 @@ public class SoftwareComponentPropertyPage<T extends SoftwareComponent> extends 
             if (RequirementSet.canInstantiate(elt)) {
                 this._element.setRequirementSet(RequirementSet.safeInstantiate(elt));
             }
+        }else if (this._currentRow == 2){
+            this._element.setLongLived(Boolean.valueOf(value));
+        }else if (this._currentRow == 3){
+            this._element.setCoInstanceHosting(Boolean.valueOf(value));
         }
-        
-        this._currentRow -= 1;
+        this._currentRow -= 3;
     }
 
     /**
@@ -44,6 +47,12 @@ public class SoftwareComponentPropertyPage<T extends SoftwareComponent> extends 
         
         //Requirement Set
         table.addProperty("Requirement", getCamelName(this._element.getRequirementSet()), getCamelNames(RequirementSet.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        
+        //isLongLived
+        table.addProperty("IsLongLived", this._element.isLongLived());
+        
+        //isCoInstanceHost
+        table.addProperty("isCoInstanceHost", this._element.isCoInstanceHosting());
     }
 
     @objid ("ca5dd00b-e4fd-4f63-a365-df9b13956c16")

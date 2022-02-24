@@ -23,12 +23,33 @@ public class MmsPropertyInstanceExporter<T extends MmsPropertyInstance> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.mms.MmsPropertyInstance) {
+            camel.mms.MmsPropertyInstance pi = (camel.mms.MmsPropertyInstance) elt;
+            setPropertyValue(pi);
+            setIsA(pi);
+        }
     }
 
     @objid ("ae2755ce-4c54-4b8e-b395-d0eb533cfce8")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.mms.MmsConceptInstance) && (elt instanceof camel.mms.MmsPropertyInstance)) {
+            ((camel.mms.MmsConceptInstance) context).getPropertyInstance().add((camel.mms.MmsPropertyInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("9a97044d-aa6a-4124-8fa2-fc28113c4c05")
+    private void setIsA(camel.mms.MmsPropertyInstance pi) {
+        CDOObject mp = this._process.getElement(this._element.getIsA());
+        if ((mp != null) &&  (mp instanceof camel.mms.MmsProperty))
+            pi.setIsA((camel.mms.MmsProperty) mp);
+    }
+
+    @objid ("9b1c1734-33b5-4ffd-a508-e20e20705870")
+    private void setPropertyValue(camel.mms.MmsPropertyInstance pi) {
+        pi.setPropertyValue(this._element.getPropertyValue());
     }
 
 }

@@ -22,12 +22,39 @@ public class PaaSConfigurationExporter<T extends PaaSConfiguration> extends Conf
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.PaaSConfiguration) {
+            camel.deployment.PaaSConfiguration pc = (camel.deployment.PaaSConfiguration) elt;
+            setAPI(pc);
+            setVersion(pc);
+            setEndPoint(pc);
+            setDownloadURL(pc);
+        }
     }
 
     @objid ("350bddfe-16b0-4d19-b986-0ccd4dd40f12")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("03576ab9-a115-4aa0-912a-a1e747c6cbad")
+    private void setDownloadURL(camel.deployment.PaaSConfiguration pc) {
+        pc.setDownloadURL(this._element.getDownloadURL());
+    }
+
+    @objid ("ab07611e-1953-4a77-b832-29e800fc8c41")
+    private void setEndPoint(camel.deployment.PaaSConfiguration pc) {
+        pc.setEndpoint(this._element.getEndpoint());
+    }
+
+    @objid ("34b0ef79-7267-4b33-8765-6ad5b880b224")
+    private void setVersion(camel.deployment.PaaSConfiguration pc) {
+        pc.setVersion(this._element.getVersion());
+    }
+
+    @objid ("b010c723-bd3c-4935-b781-5d4192f6cae3")
+    private void setAPI(camel.deployment.PaaSConfiguration pc) {
+        pc.setApi(this._element.getApi());
     }
 
 }

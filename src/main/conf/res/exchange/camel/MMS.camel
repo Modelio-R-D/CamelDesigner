@@ -1,0 +1,5198 @@
+camel model MMS {
+	metadata model MetaDataModel {
+		concept MELODICMetadataSchema {
+			name MELODICMetadataSchema 
+			uri "mms:MELODICMetadataSchema" 
+			description [ "The Melodic Metadata Schema that comprises the following model facets; Application Placement Model, Big Data Model, and Context Aware Security model." ] 
+			
+			concept History{
+				name "History"
+				uri "mms:History"
+				
+				concept StateTransition{
+					name "State Transition"
+					uri "mms:StateTransition"
+					
+					concept instance APPLICATION_DEPLOYMENT{
+						name "Application Deployment"
+						uri "mms:APPLICATION_DEPLOYMENT"
+					}
+					
+					concept instance APPLICATION_RECONFIGURATION{
+						name "Application Reconfiguration"
+						uri "mms:APPLICATION_RECONFIGURATION"
+					}
+					
+					concept instance DATA_UPDATE{
+						name "Data Update"
+						uri "mms:DATA_UPDATE"
+					}
+					
+					concept instance APPLICATION_DECOMMISSION{
+						name "Application Decommission"
+						uri "mms:APPLICATION_DECOMMISION"
+					}
+				}
+				
+				concept PlatformAction{
+					name "Platform Action"
+					uri "mms:PlatformAction"
+					
+					concept instance CP_MODEL_GENERATED{
+						name "CP Model Generated"
+						uri "mms:CP_MODEL_GENERATED"
+					}
+					
+					concept instance CP_GENERATION_FAILED{
+						name "CP Model Generation Failed"
+						uri "mms:CP_GENERATION_FAILED"
+					}
+					
+					concept instance CP_SOLUTION_PRODUCED{
+						name "CP Model Solution Produced"
+						uri "mms:CP_SOLUTION_PRODUCED"
+					}
+					
+					concept instance CP_SOLUTION_FAILED{
+						name "CP Model Solving Failed"
+						uri "mms:CP_SOLUTION_FAILED"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_PRODUCED{
+						name "Deployment Solution Produced"
+						uri "mms:DEPLOYMENT_SOLUTION_PRODUCED"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_FAILED{
+						name "Deployment Solution FAILED"
+						uri "mms:DEPLOYMENT_SOLUTION_FAILED"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_VERIFIED{
+						name "Deployment Solution Verified"
+						uri "mms:DEPLOYMENT_SOLUTION_VERIFIED"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_UNVERIFIED{
+						name "Deployment Solution Unverified"
+						uri "mms:DEPLOYMENT_SOLUTION_UNVERIFIED"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_TRIGGERED{
+						name "Deployment Solution Triggered"
+						uri "mms:DEPLOYMENT_SOLUTION_TRIGGERED"
+					}
+					
+					concept instance SOLUTION_TRIGGERING_FAILURE{
+						name "Deployment Solution Triggering Failed"
+						uri "mms:SOLUTION_TRIGGERING_FAILURE"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_SUCCESS{
+						name "Deployment Solution Successfully Deployed"
+						uri "mms:DEPLOYMENT_SOLUTION_SUCCESS"
+					}
+					
+					concept instance DEPLOYMENT_SOLUTION_FAILURE{
+						name "Deployment Solution Failure"
+						uri "mms:DEPLOYMENT_SOLUTION_FAILURE"
+					}
+					
+					concept instance NEW_DATASET{
+						name "New Dataset"
+						uri "mms:NEW_DATASET"
+					}
+					
+					concept instance DATASET_UPDATE{
+						name "Dataset Update"
+						uri "mms:DATASET_UPDATE"
+					}
+					
+					concept instance DATASET_DELETION{
+						name "Dataset Deletion"
+						uri "mms:DATASET_DELETION"
+					}
+					
+					concept instance DECOMMISSION_TRIGGERED{
+						name "Application Decommission Triggered"
+						uri "mms:DECOMMISSION_TRIGGERED"
+					}
+					
+					concept instance DECOMMISSION_FINISHED{
+						name "Application Decommission Finished"
+						uri "mms:DECOMMISSION_FINISHED"
+					}
+					
+					concept instance DECOMMISSION_FAILURE{
+						name "Application Decommission Failure"
+						uri "mms:DECOMMISSION_FAILURE"
+					}
+				}
+				
+				concept PlatformComponent{
+					name "Platform Component"
+					uri "mms:PlatformComponent"
+					
+					concept instance CP_GENERATOR{
+						name "CP Generator"
+						uri "mms:CP_GENERATOR"
+					}
+					
+					concept instance META_SOLVER{
+						name "Meta-Solver"
+						uri "mms:META_SOLVER"
+					}
+					
+					concept instance SOLVER_TO_DEPLOYMENT{
+						name "Solver-to-Deployment"
+						uri "mms:SOLVER_TO_DEPLOYMENT"
+					}
+					
+					concept instance ADAPTER{
+						name "Adapter"
+						uri "mms:ADAPTER"
+					}
+					
+					concept instance DLMS{
+						name "DLMS"
+						uri "mms:DLMS"
+					}
+				}
+			}
+			
+			concept UtilityNotions { 
+				name "Utility Notions"
+				uri "mms:UtilityNotions"
+				
+				concept UtilityRelatedProperties{
+					name "Properties related to utility"
+					uri "mms:UtilityRelatedProperties"
+					
+					property Cardinality{
+						name "Cardinality"
+						uri "mms:Cardinality"
+						type data
+						range uri "xsd:positiveInteger"				
+					}
+					
+					property Cost{
+						name "Cost"
+						uri "mms:Cost"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property ExecutionTime{
+						name "Execution Time"
+						uri "mms:ExecutionTime"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property ResponseTime{
+						name "Response Time"
+						uri "mms:ResponseTime"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property Availability{
+						name "Availability"
+						uri "mms:Availability"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property Reliability{
+						name "Reliability"
+						uri "mms:Reliability"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property NetworkLatency{
+						name "Network Latency"
+						uri "mms:NetworkLatency"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property CPUUtilisation{
+						name "CPU Utilisation"
+						uri "mms:CPUUtilisation"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property RAMUtilisation{
+						name "RAM Utilisation"
+						uri "mms:RAMUtilisation"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property DiskUtilisation{
+						name "Disk Utilisation"
+						uri "mms:DiskUtilisation"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property GPUUtilisation{
+						name "GPU Utilisation"
+						uri "mms:GPUUtilisation"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property ComputationPower{
+						name "Computation Power"
+						uri "mms:ComputationPower"
+						type data
+						range uri "xsd:double"				
+					}
+					
+					property Unmoveable{
+						name "Unmoveable"
+						uri "mms:Unmoveable"
+						description ["Property indicating that a component of an application cannot be moved"]
+						type data
+						range uri "xsd:double"				
+					}
+					
+					concept Utility{
+						name "Utility"
+						uri "mms:Utility"
+						
+						concept DLMSUtility{
+							name "DLMS Utility"
+							uri "mms:DSLMUtility"
+							
+							property AffinityAwareness{
+		            			name "Affinity Awareness"
+		            			uri "mms:AffinityAwareness"	
+		            			type data
+		            			range uri "xsd:double"
+		            		}
+		            		property DataCentreAwareness{
+		            			name "Data-Centre Awareness"
+		            			uri "mms:DataCentreAwareness"	
+		            			type data
+		            			range uri "xsd:double"
+		            		}
+		            		property SourceAwareness{
+		            			name "Source Awareness"
+		            			uri "mms:SourceAwareness"
+		            			type data
+		            			range uri "xsd:double"
+		            		}
+		            		property DLMSTotalUtility{
+		            			name "DLMS Total Utility"
+		            			uri "mms:DLMSTotalUtility"
+		            			type data
+		            			range uri "xsd:double"
+		            		}
+						}
+						
+						concept AdapterUtility{
+							name "Adapter Utility"
+							uri "mms:AdapterMUtility"
+						}				
+					}
+				}
+				 
+            }
+			
+			concept ContextAwareSecurityModel {
+				name ContextAwareSecurityModel 
+				uri "mms:ContextAwareSecurityModel" 
+				description [ "The Context Aware Security Model refers to the following top-level concepts; Security Context Element, Permission, Subject, Object, Context Patterns, and Handlers." ] 
+				concept ContextPattern {
+					name ContextPattern 
+					uri "mms:ContextPattern" 
+					description [ "Context patterns are recurring motives of object accesses that are recognised in repeating context element instances. Future access requests on sensitive data can be decided also considering such information (Verginadis et al., 2016). Its subclasses are: Location pattern, DateTime pattern, Connectivity pattern, Object pattern, Permission pattern, Access Sequence Pattern." ] 
+					concept ObjectPattern {
+						name ObjectPattern 
+						uri "mms:ObjectPattern" 
+						description [ "It refers to recurring motives of data access occurences that are recognized with respect to the Object context element." ] 
+						concept MostFrequentlyAccessedObject {
+							name MostFrequentlyAccessedObject 
+							uri "mms:MostFrequentlyAccessedObject" 
+							description [ "" ] 
+						}
+
+						concept RecentlyAccessedObject {
+							name RecentlyAccessedObject 
+							uri "mms:RecentlyAccessedObject" 
+							description [ "" ] 
+						}
+
+						concept UsuallyAccessedObject {
+							name UsuallyAccessedObject 
+							uri "mms:UsuallyAccessedObject" 
+							description [ "" ] 
+							property hasUAOThreshold {
+								name hasUAOThreshold 
+								uri "mms:hasUAOThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept LeastAccessedObject {
+							name LeastAccessedObject 
+							uri "mms:LeastAccessedObject" 
+							description [ "" ] 
+						}
+
+					}
+
+					concept PermissionPattern {
+						name PermissionPattern 
+						uri "mms:PermissionPattern" 
+						description [ "It refers to recurring motives of data access occurences that are recognized with respect to the Permission element." ] 
+						concept RecentlyDeniedPermission {
+							name RecentlyDeniedPermission 
+							uri "mms:RecentlyDeniedPermission" 
+							description [ "" ] 
+						}
+
+						concept MostFrequentlyDeniedPermission {
+							name MostFrequentlyDeniedPermission 
+							uri "mms:MostFrequentlyDeniedPermission" 
+							description [ "" ] 
+						}
+
+						concept MostFrequentlyGrantedPermission {
+							name MostFrequentlyGrantedPermission 
+							uri "mms:MostFrequentlyGrantedPermission" 
+							description [ "" ] 
+						}
+
+						concept RecentlyGrantedPermission {
+							name RecentlyGrantedPermission 
+							uri "mms:RecentlyGrantedPermission" 
+							description [ "" ] 
+						}
+
+						concept UsuallyGrantedPermission {
+							name UsuallyGrantedPermission 
+							uri "mms:UsuallyGrantedPermission" 
+							description [ "" ] 
+							property hasUGThreshold {
+								name hasUGThreshold 
+								uri "mms:hasUGThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						property hasPermission {
+							name hasPermission 
+							uri "mms:hasPermission" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/psm/2017/09/20#Permission" 
+						}
+
+					}
+
+					concept ConnectivityPattern {
+						name ConnectivityPattern 
+						uri "mms:ConnectivityPattern" 
+						description [ "It refers to recurring motives of data access occurences that are recognized with respect to the Connectivity context element." ] 
+						concept MostFrequentDeviceType {
+							name MostFrequentDeviceType 
+							uri "mms:MostFrequentDeviceType" 
+							description [ "" ] 
+							property hasDeviceType {
+								name hasDeviceType 
+								uri "mms:hasDeviceType" 
+								description [ "" ] 
+								type data 
+								range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#DeviceType" 
+							}
+
+						}
+
+						concept UsualConnectionSecurity {
+							name UsualConnectionSecurity 
+							uri "mms:UsualConnectionSecurity" 
+							description [ "" ] 
+							property hasConnectionSecurity {
+								name hasConnectionSecurity 
+								uri "mms:hasConnectionSecurity" 
+								description [ "" ] 
+								type data 
+								range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionSecurity" 
+							}
+
+							property hasUCSThreshold {
+								name hasUCSThreshold 
+								uri "mms:hasUCSThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept UsualDeviceType {
+							name UsualDeviceType 
+							uri "mms:UsualDeviceType" 
+							description [ "" ] 
+							property hasUDTThreshold {
+								name hasUDTThreshold 
+								uri "mms:hasUDTThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept MostFrequentConnectionType {
+							name MostFrequentConnectionType 
+							uri "mms:MostFrequentConnectionType" 
+							description [ "" ] 
+							property hasConnectionType {
+								name hasConnectionType 
+								uri "mms:hasConnectionType" 
+								description [ "" ] 
+								type data 
+								range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionType" 
+							}
+
+						}
+
+						concept UsualConnectionType {
+							name UsualConnectionType 
+							uri "mms:UsualConnectionType" 
+							description [ "" ] 
+							property hasUCTThreshold {
+								name hasUCTThreshold 
+								uri "mms:hasUCTThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+					}
+
+					concept LocationPattern {
+						name LocationPattern 
+						uri "mms:LocationPattern" 
+						description [ "It refers to recurring motives of data access occurences that are recognized with respect to the Location context element." ] 
+						concept UsualAccessLocation {
+							name UsualAccessLocation 
+							uri "mms:UsualAccessLocation" 
+							description [ "" ] 
+							property hasUAThreshold {
+								name hasUAThreshold 
+								uri "mms:hasUAThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept LeastFrequentAccessLocation {
+							name LeastFrequentAccessLocation 
+							uri "mms:LeastFrequentAccessLocation" 
+							description [ "" ] 
+						}
+
+						concept MostFrequentAccessLocation {
+							name MostFrequentAccessLocation 
+							uri "mms:MostFrequentAccessLocation" 
+							description [ "" ] 
+						}
+
+						concept RecentAccessLocation {
+							name RecentAccessLocation 
+							uri "mms:RecentAccessLocation" 
+							description [ "" ] 
+						}
+
+						property hasLocation {
+							name hasLocation 
+							uri "mms:hasLocation" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Location" 
+						}
+
+					}
+
+					concept DateTimePattern {
+						name DateTimePattern 
+						uri "mms:DateTimePattern" 
+						description [ "It refers to recurring motives of data access occurences that are recognized with respect to the DateTime context element." ] 
+						concept LeastFrequentDateTimeInterval {
+							name LeastFrequentDateTimeInterval 
+							uri "mms:LeastFrequentDateTimeInterval" 
+							description [ "" ] 
+						}
+
+						concept MostFrequentDateTimeInstance {
+							name MostFrequentDateTimeInstance 
+							uri "mms:MostFrequentDateTimeInstance" 
+							description [ "" ] 
+						}
+
+						concept UsualDateTimeInterval {
+							name UsualDateTimeInterval 
+							uri "mms:UsualDateTimeInterval" 
+							description [ "" ] 
+							property hasUTIThreshold {
+								name hasUTIThreshold 
+								uri "mms:hasUTIThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept UsualDateTimeInstance {
+							name UsualDateTimeInstance 
+							uri "mms:UsualDateTimeInstance" 
+							description [ "" ] 
+							property hasUTThreshold {
+								name hasUTThreshold 
+								uri "mms:hasUTThreshold" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept LeastFrequentDateTimeInstance {
+							name LeastFrequentDateTimeInstance 
+							uri "mms:LeastFrequentDateTimeInstance" 
+							description [ "" ] 
+						}
+
+						concept MostFrequentDateTimeInterval {
+							name MostFrequentDateTimeInterval 
+							uri "mms:MostFrequentDateTimeInterval" 
+							description [ "" ] 
+						}
+
+					}
+
+					concept AccessSequencePattern {
+						name AccessSequencePattern 
+						uri "mms:AccessSequencePattern" 
+						description [ "It refers to data access occurences that are recognized by any preceeding access actions of a specific subject." ] 
+						property hasAccessedObject {
+							name hasAccessedObject 
+							uri "mms:hasAccessedObject" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object" 
+						}
+
+					}
+
+					property refersToObject {
+						name refersToObject 
+						uri "mms:refersToObject" 
+						description [ "" ] 
+						type data 
+						range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object" 
+					}
+
+					property refersToPermission {
+						name refersToPermission 
+						uri "mms:refersToPermission" 
+						description [ "" ] 
+						type data 
+						range uri "http://www.melodic-project.eu/ontologies/psm/2017/09/20#Permission" 
+					}
+
+					property hasPattern {
+						name hasPattern 
+						uri "mms:hasPattern" 
+						description [ "" ] 
+						type data 
+						range uri "http://www.melodic-project.eu/ontologies/cpsm/2017/09/20#ContextPattern" 
+					}
+
+					property refersToSubject {
+						name refersToSubject 
+						uri "mms:refersToSubject" 
+						description [ "" ] 
+						type data 
+						range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Subject" 
+					}
+
+					property hasTimeWindow {
+						name hasTimeWindow 
+						uri "mms:hasTimeWindow" 
+						description [ "" ] 
+						type data 
+						range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime" 
+					}
+
+				}
+
+				concept Permission {
+					name Permission 
+					uri "mms:Permission" 
+					description [ "This class refers to the actions that a Subject is allowed to perform upon an Object (Verginadis et al., 2016)." ] 
+					concept DDLPermission {
+						name DDLPermission 
+						uri "mms:DDLPermission" 
+						description [ "This class reveals the data definition language (DDL) related actions on a specific Object (e.g. create/alter/drop datastore, Create/Delete/ChOwner a directory or file)." ] 
+						concept DatastoreDDLPermission {
+							name DatastoreDDLPermission 
+							uri "mms:DatastoreDDLPermission" 
+							description [ "" ] 
+						}
+
+						concept FileSystemStructurePermission {
+							name FileSystemStructurePermission 
+							uri "mms:FileSystemStructurePermission" 
+							description [ "" ] 
+						}
+
+						property hasEndTime {
+							name hasEndTime 
+							uri "mms:hasEndTime" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:dateTime" 
+						}
+
+						property hasResult {
+							name hasResult 
+							uri "mms:hasResult" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasActionStatus {
+							name hasActionStatus 
+							uri "mms:hasActionStatus" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasTarget {
+							name hasTarget 
+							uri "mms:hasTarget" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object" 
+						}
+
+						property hasStartTime {
+							name hasStartTime 
+							uri "mms:hasStartTime" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:dateTime" 
+						}
+
+					}
+
+					concept DataPermission {
+						name DataPermission 
+						uri "mms:DataPermission" 
+						description [ "This class refers to any action allowed by a Subject upon a data entity (e.g. datastore, file, web endpoint, volume access)." ] 
+						concept DatastorePermission {
+							name DatastorePermission 
+							uri "mms:DatastorePermission" 
+							description [ "This is a class that describes any action allowed by a direct agent upon a data entity in a datastore." ] 
+						}
+
+						concept WebEndpointPermission {
+							name WebEndpointPermission 
+							uri "mms:WebEndpointPermission" 
+							description [ "This is a class that describes any Web endpoint action allowed by a direct agent upon a data entity in a datastore." ] 
+						}
+
+						concept FilePermission {
+							name FilePermission 
+							uri "mms:FilePermission" 
+							description [ "This is a class that describes any action allowed by a direct agent upon a file." ] 
+						}
+
+						concept VolumePermission {
+							name VolumePermission 
+							uri "mms:VolumePermission" 
+							description [ "" ] 
+						}
+
+					}
+
+				}
+
+				concept SecurityContextElement {
+					name SecurityContextElement 
+					uri "mms:SecurityContextElement" 
+					description [ "The security context element class refers to all the relevant classes and properties that capture Location, DateTime and Connectivity aspects, and characterize subjects, objects, requests and the environment related to an interaction (Verginadis et al., 2016). Below we provide details only for the Location and Connectivity classes that are extended." ] 
+					concept Auth {
+						name Auth 
+						uri "mms:Auth" 
+						description [ "Common parent class of all Authentication, Authorization and Identity context element classes" ] 
+						concept AuthorizationMethod {
+							name AuthorizationMethod 
+							uri "mms:AuthorizationMethod" 
+							description [ "This class indicates the framework used for granting access rights to a subject." ] 
+						}
+
+						concept IdentityType {
+							name IdentityType 
+							uri "mms:IdentityType" 
+							description [ "This class refers to permanent/static and ephemeral information that can be used for identifying an agent." ] 
+							concept EphemeralId {
+								name EphemeralId 
+								uri "mms:EphemeralId" 
+								description [ "This class refers to frequently changing information that can be used for identifying an agent." ] 
+							}
+
+							concept PermanentId {
+								name PermanentId 
+								uri "mms:PermanentId" 
+								description [ "This class refers to unfrequently changing information that can be used for identifying an agent." ] 
+							}
+
+						}
+
+						concept AuthenticationMethod {
+							name AuthenticationMethod 
+							uri "mms:AuthenticationMethod" 
+							description [ "This class reveals the technological way used for validating the agent\'s identity during an access request." ] 
+						}
+
+					}
+
+					concept Location {
+						name Location 
+						uri "mms:Location" 
+						description [ "This class describes a physical, a network and/or a cloud location where data are stored or from which a particular entity is requesting to access data (Verginadis et al., 2016)." ] 
+						concept PhysicalLocation {
+							name PhysicalLocation 
+							uri "mms:PhysicalLocation" 
+							description [ "A physical location is a point or area of interest where data is stored, processed or from which a particular entity is requesting to access data. Physical locations might involve an address, a geographical position, an area, an abstract location and/or a Point of Interest [(Verginadis et al., 2016)." ] 
+							concept Address {
+								name Address 
+								uri "mms:Address" 
+								description [ "Physical address where data are stored or from which a particular entity is requesting to access sensitive data." ] 
+								property addressCountry {
+									name addressCountry 
+									uri "mms:addressCountry" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasFloorNumber {
+									name hasFloorNumber 
+									uri "mms:hasFloorNumber" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:nonNegativeInteger" 
+								}
+
+								property refersToContinentalUnion {
+									name refersToContinentalUnion 
+									uri "mms:refersToContinentalUnion" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property streetAddress {
+									name streetAddress 
+									uri "mms:streetAddress" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property addressLocality {
+									name addressLocality 
+									uri "mms:addressLocality" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property addressRegion {
+									name addressRegion 
+									uri "mms:addressRegion" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property postalCode {
+									name postalCode 
+									uri "mms:postalCode" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasBuildingNumber {
+									name hasBuildingNumber 
+									uri "mms:hasBuildingNumber" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property refersToEconomicUnion {
+									name refersToEconomicUnion 
+									uri "mms:refersToEconomicUnion" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasRoomNumber {
+									name hasRoomNumber 
+									uri "mms:hasRoomNumber" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept POI {
+								name POI 
+								uri "mms:POI" 
+								description [ "Points of interest that might be meanigful for access control of sensitive data." ] 
+								property hasAddress {
+									name hasAddress 
+									uri "mms:hasAddress" 
+									description [ "" ] 
+									type data 
+									range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Address" 
+								}
+
+							}
+
+							concept Point {
+								name Point 
+								uri "mms:Point" 
+								description [ "A specific spot where data are stored or from which a particular entity is requesting to access data." ] 
+								property hasPointCoordinates {
+									name hasPointCoordinates 
+									uri "mms:hasPointCoordinates" 
+									description [ "" ] 
+									type data 
+									range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Coordinates" 
+								}
+
+							}
+
+							concept Area {
+								name Area 
+								uri "mms:Area" 
+								description [ "This class describes a geographical region from which a data access request can be originated from." ] 
+								property hasRectangularRangeHeight {
+									name hasRectangularRangeHeight 
+									uri "mms:hasRectangularRangeHeight" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:double" 
+								}
+
+								property hasRectangularRangeWidth {
+									name hasRectangularRangeWidth 
+									uri "mms:hasRectangularRangeWidth" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:double" 
+								}
+
+								property hasAreaCoordinates {
+									name hasAreaCoordinates 
+									uri "mms:hasAreaCoordinates" 
+									description [ "" ] 
+									type data 
+									range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Coordinates" 
+								}
+
+								property hasCircularRadius {
+									name hasCircularRadius 
+									uri "mms:hasCircularRadius" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:double" 
+								}
+
+							}
+
+							concept AbstractLocation {
+								name AbstractLocation 
+								uri "mms:AbstractLocation" 
+								description [ "Conceptual characterization of a physical location (e.g. non-organization premises, building, room, section, department etc)" ] 
+								property hasArea {
+									name hasArea 
+									uri "mms:hasArea" 
+									description [ "" ] 
+									type data 
+									range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#Area" 
+								}
+
+								property hasName {
+									name hasName 
+									uri "mms:hasName" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept CloudLocation {
+								name CloudLocation 
+								uri "mms:CloudLocation" 
+								description [ "This subclass involves all the relevant concepts for positioning worldwide the hosts of cloud provider offerings. A cloud location is composed of Cloud Regions and Availability zones." ] 
+								concept CloudRegion {
+									name CloudRegion 
+									uri "mms:CloudRegion" 
+									description [ "This subclass of Cloud Location refers to separate geographical areas defined, where cloud provider datacentres may host virtualised infrastructure for storing or processing data (e.g. AWS – eu-west-1 located in Ireland)." ] 
+								}
+
+								concept AvailabilityZone {
+									name AvailabilityZone 
+									uri "mms:AvailabilityZone" 
+									description [ "This subclass of Cloud Location refers to an isolated location out of multiple available ones per cloud region that defines an area where several cloud offerings may or should originate from (e.g. aws eu-west-1a, eu-west-1b, eu-west-1c). Usually, availability zones are interconnected with fast, private fibre-optic networking facilities." ] 
+								}
+
+							}
+
+						}
+
+						concept NetworkLocation {
+							name NetworkLocation 
+							uri "mms:NetworkLocation" 
+							description [ "An identifier for a node or network telecommunication interface from which a particular subject is requesting to access data or where the data resides (Verginadis et al., 2016)." ] 
+							property hasIPAddressRange {
+								name hasIPAddressRange 
+								uri "mms:hasIPAddressRange" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasPort {
+								name hasPort 
+								uri "mms:hasPort" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasDomain {
+								name hasDomain 
+								uri "mms:hasDomain" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasIPAddress {
+								name hasIPAddress 
+								uri "mms:hasIPAddress" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasSubnet {
+								name hasSubnet 
+								uri "mms:hasSubnet" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasZone {
+								name hasZone 
+								uri "mms:hasZone" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						property isProcessingLocation {
+							name isProcessingLocation 
+							uri "mms:isProcessingLocation" 
+							description [ "This 
+							property associates the Location class with a boolean value that denotes whether or not that certain location is referred as a position where data processing can/will take place (i.e. value equals to true) or as an area where data may reside (i.e. value equals to false)." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+					}
+
+					concept Object {
+						name Object 
+						uri "mms:Object" 
+						description [ "This class refers to any kind of artefacts that shoud be protected based on their sensitivity levels. These artefacts may refer to (non)relational data or even software artefacts that manage sensitive data." ] 
+						concept SoftwareArtefact {
+							name SoftwareArtefact 
+							uri "mms:SoftwareArtefact" 
+							description [ "This class denotes any computerized medium that manages or gives access to sensitive data." ] 
+							concept Service {
+								name Service 
+								uri "mms:Service" 
+								description [ "It refers to a software endpoint that provides access and/or manages data." ] 
+								property hasEndpoint {
+									name hasEndpoint 
+									uri "mms:hasEndpoint" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:anyURI" 
+								}
+
+								property category {
+									name category 
+									uri "mms:category" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept Method {
+								name Method 
+								uri "mms:Method" 
+								description [ "" ] 
+								concept DAO {
+									name DAO 
+									uri "mms:DAO" 
+									description [ "It refers to a Data Access Object." ] 
+								}
+
+							}
+
+						}
+
+						concept InfrastructureArtefact {
+							name InfrastructureArtefact 
+							uri "mms:InfrastructureArtefact" 
+							description [ "" ] 
+							concept Volume {
+								name Volume 
+								uri "mms:Volume" 
+								description [ "" ] 
+								property hasVolumeType {
+									name hasVolumeType 
+									uri "mms:hasVolumeType" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property volumeOutputSpeed {
+									name volumeOutputSpeed 
+									uri "mms:volumeOutputSpeed" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property volumeInputSpeed {
+									name volumeInputSpeed 
+									uri "mms:volumeInputSpeed" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property isVolumeEncrypted {
+									name isVolumeEncrypted 
+									uri "mms:isVolumeEncrypted" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:boolean" 
+								}
+
+							}
+
+						}
+
+						concept DataArtefact {
+							name DataArtefact 
+							uri "mms:DataArtefact" 
+							description [ "This class refers to any sensitive data entitites stored in schema-based or schema-less databases that should be protected from unauthorized access." ] 
+							concept NonRelational {
+								name NonRelational 
+								uri "mms:NonRelational" 
+								description [ "This class refers to accessible data entities that exist in non-relational databases (i.e. schema-less)" ] 
+								concept HierarchicalDataStructure {
+									name HierarchicalDataStructure 
+									uri "mms:HierarchicalDataStructure" 
+									description [ "" ] 
+									property isChildOf {
+										name isChildOf 
+										uri "mms:isChildOf" 
+										description [ "" ] 
+										type data 
+										range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#HierarchicalDataStructure" 
+									}
+
+								}
+
+								property hasNonRelationalType {
+									name hasNonRelationalType 
+									uri "mms:hasNonRelationalType" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept Relational {
+								name Relational 
+								uri "mms:Relational" 
+								description [ "This class refers to accessible data entities that exist in relational databases, i.e. structured to recognize relations between stored items of information." ] 
+								property hasRelationalType {
+									name hasRelationalType 
+									uri "mms:hasRelationalType" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept File {
+								name File 
+								uri "mms:File" 
+								description [ "This class refers to any kind of sensitive information that is stored in a file based system." ] 
+								property hasFilePath {
+									name hasFilePath 
+									uri "mms:hasFilePath" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasFileName {
+									name hasFileName 
+									uri "mms:hasFileName" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasFileType {
+									name hasFileType 
+									uri "mms:hasFileType" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+						}
+
+						property ObjectHasTarget {
+							name ObjectHasTarget 
+							uri "mms:ObjectHasTarget" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Subject {
+						name Subject 
+						uri "mms:Subject" 
+						description [ "An instance of this class represents the legal agent seeking access to a particular offering. This can be a legal body, a person or a service. A business entity has at least a primary mailing address and contact details." ] 
+						concept Person {
+							name Person 
+							uri "mms:Person" 
+							description [ "" ] 
+						}
+
+						concept Organization {
+							name Organization 
+							uri "mms:Organization" 
+							description [ "" ] 
+						}
+
+						concept SoftwareAgent {
+							name SoftwareAgent 
+							uri "mms:SoftwareAgent" 
+							description [ "This class represents software that attempts to access sensitive data (Verginadis et al., 2016)" ] 
+						}
+
+						concept Group {
+							name Group 
+							uri "mms:Group" 
+							description [ "" ] 
+						}
+
+						property hasBrand {
+							name hasBrand 
+							uri "mms:hasBrand" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property legalName {
+							name legalName 
+							uri "mms:legalName" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasDUNS {
+							name hasDUNS 
+							uri "mms:hasDUNS" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasIdentityType {
+							name hasIdentityType 
+							uri "mms:hasIdentityType" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#IdentityType" 
+						}
+
+						property ^name {
+							name ^name 
+							uri "mms:name" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasAuthenticationMethod {
+							name hasAuthenticationMethod 
+							uri "mms:hasAuthenticationMethod" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#AuthenticationMethod" 
+						}
+
+						property hasAuthorizationMethod {
+							name hasAuthorizationMethod 
+							uri "mms:hasAuthorizationMethod" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#AuthorizationMethod" 
+						}
+
+						property hasRole {
+							name hasRole 
+							uri "mms:hasRole" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property ^description {
+							name ^description 
+							uri "mms:description" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Connectivity {
+						name Connectivity 
+						uri "mms:Connectivity" 
+						description [ "This class captures the information related to the connection used by the subject for accessing sensitive data (Verginadis et al., 2016). The following subclasses are included: Connection Type, Connection Metrics, Connection Security and Device Type." ] 
+						concept ConnectionSecurity {
+							name ConnectionSecurity 
+							uri "mms:ConnectionSecurity" 
+							description [ "This class provides details on the level of security in the established connection for accessing sensitive data." ] 
+							concept ConnectionCiphersuite {
+								name ConnectionCiphersuite 
+								uri "mms:ConnectionCiphersuite" 
+								description [ "This class refers to the mode or the ciphersuite used for establishing a secure connection." ] 
+							}
+
+							concept SecurityProtocol {
+								name SecurityProtocol 
+								uri "mms:SecurityProtocol" 
+								description [ "This class reveals the security technology or protocol adopted for establishing an encrypted link between a server and a client." ] 
+								property hasSecurityProtocolImplementation {
+									name hasSecurityProtocolImplementation 
+									uri "mms:hasSecurityProtocolImplementation" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+						}
+
+						concept ConnectionType {
+							name ConnectionType 
+							uri "mms:ConnectionType" 
+							description [ "This class refers to different ways of transmitting an access request (e.g. 3G, Cable, Satelite)." ] 
+							property hasConnectionMetric {
+								name hasConnectionMetric 
+								uri "mms:hasConnectionMetric" 
+								description [ "" ] 
+								type data 
+								range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionMetric" 
+							}
+
+							property hasTelecommunicationsProvider {
+								name hasTelecommunicationsProvider 
+								uri "mms:hasTelecommunicationsProvider" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						concept ConnectionMetric {
+							name ConnectionMetric 
+							uri "mms:ConnectionMetric" 
+							description [ "This class provides quantitative characteristics of the connection 
+							type used for accessing sensitive data." ] 
+							property hasDownloadRate {
+								name hasDownloadRate 
+								uri "mms:hasDownloadRate" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:nonNegativeInteger" 
+							}
+
+							property hasMetricUnit {
+								name hasMetricUnit 
+								uri "mms:hasMetricUnit" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasUploadRate {
+								name hasUploadRate 
+								uri "mms:hasUploadRate" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:nonNegativeInteger" 
+							}
+
+						}
+
+						concept DeviceType {
+							name DeviceType 
+							uri "mms:DeviceType" 
+							description [ "This class describes a device used when requesting access to sensitive data. Its subclasses include Mobile (i.e. portable device used when requesting access to sensitive data), Stationary (i.e. immobile devices used) and Software." ] 
+							concept Mobile {
+								name Mobile 
+								uri "mms:Mobile" 
+								description [ "It refers to a portable product used when requesting access to sensitive data." ] 
+								concept Notebook {
+									name Notebook 
+									uri "mms:Notebook" 
+									description [ "" ] 
+								}
+
+								concept Smartphone {
+									name Smartphone 
+									uri "mms:Smartphone" 
+									description [ "" ] 
+								}
+
+								concept Tablet {
+									name Tablet 
+									uri "mms:Tablet" 
+									description [ "" ] 
+								}
+
+								property hasIMSI {
+									name hasIMSI 
+									uri "mms:hasIMSI" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasMobileOS {
+									name hasMobileOS 
+									uri "mms:hasMobileOS" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property supportsEncryptedStorageMobile {
+									name supportsEncryptedStorageMobile 
+									uri "mms:supportsEncryptedStorageMobile" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property hasIMEI {
+									name hasIMEI 
+									uri "mms:hasIMEI" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept Stationary {
+								name Stationary 
+								uri "mms:Stationary" 
+								description [ "It refers to an immobile product used when requesting access to sensitive data." ] 
+								property hasStationaryOS {
+									name hasStationaryOS 
+									uri "mms:hasStationaryOS" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property supportsEncryptedStorageStationary {
+									name supportsEncryptedStorageStationary 
+									uri "mms:supportsEncryptedStorageStationary" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+						}
+
+					}
+
+					concept DateTime {
+						name DateTime 
+						uri "mms:DateTime" 
+						description [ "This class describes the specific chronological point expressed either as instant or interval that characterizes an access request." ] 
+						concept DateTimeInterval {
+							name DateTimeInterval 
+							uri "mms:DateTimeInterval" 
+							description [ "A period described by a start instance and end instance or a duration." ] 
+							property hasBeginning {
+								name hasBeginning 
+								uri "mms:hasBeginning" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:dateTime" 
+							}
+
+							property hasBeginningDay {
+								name hasBeginningDay 
+								uri "mms:hasBeginningDay" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasEndDay {
+								name hasEndDay 
+								uri "mms:hasEndDay" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasEnd {
+								name hasEnd 
+								uri "mms:hasEnd" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:dateTime" 
+							}
+
+						}
+
+						concept Instant {
+							name Instant 
+							uri "mms:Instant" 
+							description [ "A precise point in time used to specify which date the access request takes place." ] 
+							property hasDay {
+								name hasDay 
+								uri "mms:hasDay" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasMinute {
+								name hasMinute 
+								uri "mms:hasMinute" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:nonNegativeInteger" 
+							}
+
+							property hasSecond {
+								name hasSecond 
+								uri "mms:hasSecond" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:nonNegativeInteger" 
+							}
+
+							property hasHour {
+								name hasHour 
+								uri "mms:hasHour" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:nonNegativeInteger" 
+							}
+
+							property hasMonth {
+								name hasMonth 
+								uri "mms:hasMonth" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasYear {
+								name hasYear 
+								uri "mms:hasYear" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						property hasTimezone {
+							name hasTimezone 
+							uri "mms:hasTimezone" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property before {
+							name before 
+							uri "mms:before" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime" 
+						}
+
+						property after {
+							name after 
+							uri "mms:after" 
+							description [ "" ] 
+							type data 
+							range uri "http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime" 
+						}
+
+					}
+
+				}
+
+				concept Action {
+					name Action 
+					uri "mms:Action" 
+					description [ "" ] 
+				}
+
+				concept Handler {
+					name Handler 
+					uri "mms:Handler" 
+					description [ "This class refers to the characteristics of dedicated software components that are used for federating and processing raw data relevant to an access control decision and semantically uplifting them as instances of the Context Model (e.g. authentication, request, location, IP-address-to-city handlers etc. (Veloudis et al., 2017)" ] 
+				}
+
+				concept Request {
+					name Request 
+					uri "mms:Request" 
+					description [ "This class captures the characteristics that should be considered for evaluating an intercepted request (Veloudis et al., 2017)" ] 
+				}
+
+				concept Coordinates {
+					name Coordinates 
+					uri "mms:Coordinates" 
+					description [ "Refers to the positioning of an entity using a geographic coordinate system." ] 
+					property latitude {
+						name latitude 
+						uri "mms:latitude" 
+						description [ "" ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property longitude {
+						name longitude 
+						uri "mms:longitude" 
+						description [ "" ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property elevation {
+						name elevation 
+						uri "mms:elevation" 
+						description [ "" ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+				}
+
+				concept DDEElement {
+					name DDEElement 
+					uri "mms:DDEElement" 
+					description [ "Parent class of all PaaSword Data Distribution and Encryption Model elements" ] 
+					concept DataDistribution {
+						name DataDistribution 
+						uri "mms:DataDistribution" 
+						description [ "This class captures aspects of the data distribution required for enhancing the security of sensitive information." ] 
+						concept ExcludedProvider {
+							name ExcludedProvider 
+							uri "mms:ExcludedProvider" 
+							description [ "This class denotes certain untrusted IaaS providers that should be avoided when distributing sensitive data." ] 
+						}
+
+						concept DistributionMetric {
+							name DistributionMetric 
+							uri "mms:DistributionMetric" 
+							description [ "This class quantifies the data distribution required for enhancing the security of sensitive information." ] 
+							property numberOfPhysicalLocations {
+								name numberOfPhysicalLocations 
+								uri "mms:numberOfPhysicalLocations" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property numberOfVMs {
+								name numberOfVMs 
+								uri "mms:numberOfVMs" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property numberOfServers {
+								name numberOfServers 
+								uri "mms:numberOfServers" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept ExcludedLocation {
+							name ExcludedLocation 
+							uri "mms:ExcludedLocation" 
+							description [ "This class denotes the physical locations that should be avoided when distributing sensitive data." ] 
+						}
+
+						concept PreferredProvider {
+							name PreferredProvider 
+							uri "mms:PreferredProvider" 
+							description [ "This class denotes certain trusted IaaS providers that should be considered when distributing sensitive data." ] 
+						}
+
+						concept PreferredLocation {
+							name PreferredLocation 
+							uri "mms:PreferredLocation" 
+							description [ "This class denotes the physical locations that should be considered when distributing sensitive data." ] 
+						}
+
+					}
+
+					concept DatabaseFragmentation {
+						name DatabaseFragmentation 
+						uri "mms:DatabaseFragmentation" 
+						description [ "This class refers to the details concerning the way that the data should be fragmented in order to be distributed for security purposes." ] 
+						concept NonRelationalDataFragmentation {
+							name NonRelationalDataFragmentation 
+							uri "mms:NonRelationalDataFragmentation" 
+							description [ "This Class refers to different types of possible fragmentation of a non- relational database." ] 
+							concept Replication {
+								name Replication 
+								uri "mms:Replication" 
+								description [ "Replication class refers to the details of copying data/aggregates across multiple servers, so each bit of data can be found in multiple places." ] 
+								concept PeerToPeerReplication {
+									name PeerToPeerReplication 
+									uri "mms:PeerToPeerReplication" 
+									description [ "Peer-to-peer refers to the details of replication that allows writes to several nodes and synchronization between them." ] 
+								}
+
+								concept MasterSlaveReplication {
+									name MasterSlaveReplication 
+									uri "mms:MasterSlaveReplication" 
+									description [ "Master-slave replication refers into the details of making one node the authoritative copy that handles writes while slaves synchronizing with the master and handling reads." ] 
+								}
+
+							}
+
+							concept Sharding {
+								name Sharding 
+								uri "mms:Sharding" 
+								description [ "Sharding class refers to the details of different data distribution across multiple servers, so each server acts as the single source for a subset of data/aggregates." ] 
+							}
+
+						}
+
+						concept RelationalDataFragmentation {
+							name RelationalDataFragmentation 
+							uri "mms:RelationalDataFragmentation" 
+							description [ "This Class refers to different types of possible fragmentation of a relational database." ] 
+							concept MixedFragmentation {
+								name MixedFragmentation 
+								uri "mms:MixedFragmentation" 
+								description [ "This class refers to a two step fragmentation process of a relational database that may use both horizontal and vertical fragmentation based on certain conditions." ] 
+								property hasFragColumn {
+									name hasFragColumn 
+									uri "mms:hasFragColumn" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+							concept VerticalFragmentation {
+								name VerticalFragmentation 
+								uri "mms:VerticalFragmentation" 
+								description [ "This class refers to the fragmentation of a relational database across its columns." ] 
+							}
+
+							concept HorizontalFragmentation {
+								name HorizontalFragmentation 
+								uri "mms:HorizontalFragmentation" 
+								description [ "This class refers to the fragmentation of a relational database across its rows." ] 
+								property hasFragRow {
+									name hasFragRow 
+									uri "mms:hasFragRow" 
+									description [ "" ] 
+									type data 
+									range uri "xsd:nonNegativeInteger" 
+								}
+
+							}
+
+							property hasPrivacyConstraint {
+								name hasPrivacyConstraint 
+								uri "mms:hasPrivacyConstraint" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+					}
+
+					concept CryptographicType {
+						name CryptographicType 
+						uri "mms:CryptographicType" 
+						description [ "This class reveals details of the level of security required for specific sensitive data artefacts." ] 
+						concept Symmetric {
+							name Symmetric 
+							uri "mms:Symmetric" 
+							description [ "Refers to the details of algorithm for cryptography chosen that uses the same cryptographic keys for both encryption of plaintext and decryption of ciphertext." ] 
+							property hasSymmetricBlockSize {
+								name hasSymmetricBlockSize 
+								uri "mms:hasSymmetricBlockSize" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasSymmetricKeySize {
+								name hasSymmetricKeySize 
+								uri "mms:hasSymmetricKeySize" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept Asymmetric {
+							name Asymmetric 
+							uri "mms:Asymmetric" 
+							description [ "Refers to the details of algorithm for cryptography chosen that uses the different cryptographic keys for encryption (public key) of plaintext and decryption of ciphertext (private key)." ] 
+							concept Hybrid {
+								name Hybrid 
+								uri "mms:Hybrid" 
+								description [ "" ] 
+							}
+
+							property hasAsymmetricKeySize {
+								name hasAsymmetricKeySize 
+								uri "mms:hasAsymmetricKeySize" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasCurve {
+								name hasCurve 
+								uri "mms:hasCurve" 
+								description [ "" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						property hasModeofOperation {
+							name hasModeofOperation 
+							uri "mms:hasModeofOperation" 
+							description [ "" ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+				}
+
+			}
+
+			concept Big_DataModel {
+				name Big_DataModel 
+				uri "mms:Big_DataModel" 
+				description [ "The Big Data Model refers to the following top-level concepts; Big Data Aspects, Data Location, Data Timestamp, Data Management, and Data Domains." ] 
+				concept DataTimestamp {
+					name DataTimestamp 
+					uri "mms:DataTimestamp" 
+					description [ "This class includes all the necessary concepts for describing the temporal characteristics of data artefacts to be processed by a Melodic-enabled application." ] 
+					concept ProcessingDate {
+						name ProcessingDate 
+						uri "mms:ProcessingDate" 
+						description [ "This subclass is used for defining when a certain data element was processed." ] 
+					}
+
+					concept TransferDate {
+						name TransferDate 
+						uri "mms:TransferDate" 
+						description [ "This subclass is used for defining when a certain data element was transmitted from a data source." ] 
+					}
+
+					concept DeletionDate {
+						name DeletionDate 
+						uri "mms:DeletionDate" 
+						description [ "This subclass is used for defining when a certain data element was deleted." ] 
+					}
+
+					concept AcquisitionDate {
+						name AcquisitionDate 
+						uri "mms:AcquisitionDate" 
+						description [ "This subclass is used for defining when a certain data element was received by the Melodic-enabled application." ] 
+					}
+
+					concept CreationDate {
+						name CreationDate 
+						uri "mms:CreationDate" 
+						description [ "This subclass is used for defining when a certain data element was created." ] 
+					}
+
+					property hasTimePoint {
+						name hasTimePoint 
+						uri "mms:hasTimePoint" 
+						description [ "This 
+						property associates the Data Timestamp class with the Instant class of the Context Aware Security model for referring to the precise point in time at which data was created, deleted, acquired, processed or transferred." ] 
+						type object 
+						range ContextAwareSecurityModel.SecurityContextElement.DateTime.Instant 
+						range uri "xsd:dateTime" 
+					}
+
+					property hasTimeInterval {
+						name hasTimeInterval 
+						uri "mms:hasTimeInterval" 
+						description [ "This 
+						property associates the Data Timestamp class with the DateTimeInterval class of the Context Aware Security model for referring to a period of time bounded by two time points, during which data was created, deleted, acquired, processed or transferred." ] 
+						type object 
+						range ContextAwareSecurityModel.SecurityContextElement.DateTime.DateTimeInterval 
+						range uri "xsd:duration" 
+					}
+
+				}
+
+				concept DataLocation {
+					name DataLocation 
+					uri "mms:DataLocation" 
+					description [ "This class encapsulates all the concepts that can be used for describing the origin of data or the current or required physical/network location where the data can be stored or processed by a Melodic-enabled application." ] 
+					concept Origin {
+						name Origin 
+						uri "mms:Origin" 
+						description [ "This subclass involves all the relevant concepts for defining the source location of the data artefacts to be processed by a Melodic-enabled application." ] 
+						concept StreamOrigin {
+							name StreamOrigin 
+							uri "mms:StreamOrigin" 
+							description [ "This subclass defines the source location of data artefacts to be stream processed by a Melodic-enabled application." ] 
+						}
+
+						concept BatchOrigin {
+							name BatchOrigin 
+							uri "mms:BatchOrigin" 
+							description [ "This subclass defines the source location of data artefacts to be stored and processed in batch mode by a Melodic-enabled application." ] 
+						}
+
+					}
+
+					property hasPhysicalLocation {
+						name hasPhysicalLocation 
+						uri "mms:hasPhysicalLocation" 
+						description [ "This object 
+						property associates the Data Location class to the Physical Location from the Context Aware Security model in order to define the concrete physical region where data may be stored or processed." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property hasPreferredLocation {
+						name hasPreferredLocation 
+						uri "mms:hasPreferredLocation" 
+						description [ "This object 
+						property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of preferences for using certain network, physical and/or cloud location(s) in order to store or process data artefacts." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property sameAs {
+						name sameAs 
+						uri "mms:sameAs" 
+						description [ "This object 
+						property associates the Data location class to another Data location recursively in order to facilitate the expression of requirements that dictate the use of the same location(s) as the ones previously selected for other data artefacts." ] 
+						type object 
+						range DataLocation 
+					}
+
+					property hasSparsity {
+						name hasSparsity 
+						uri "mms:hasSparsity" 
+						description [ "This data 
+						property associates the Data location class to a string that denotes how distributed (e.g. Low, Medium, High) are the data sources or data locations exploited for producing a dataset to be processed by a Melodic-enabled application." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+					property hasUnacceptableLocation {
+						name hasUnacceptableLocation 
+						uri "mms:hasUnacceptableLocation" 
+						description [ "This object 
+						property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of forbidden network, physical and/or cloud location(s) for storing or processing data artefacts." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property hasNetworkLocation {
+						name hasNetworkLocation 
+						uri "mms:hasNetworkLocation" 
+						description [ "This object 
+						property associates the Data Location class to the Network Location from the Context Aware Security model in order to define the network region where data may be stored or processed." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property isStorageLocation {
+						name isStorageLocation 
+						uri "mms:isStorageLocation" 
+						description [ "This data 
+						property associates the Data Location class with a boolean value that specifies whether or not the data location mentioned is where the data will be stored or processed." ] 
+						type data 
+						range uri "xsd:boolean" 
+					}
+
+					property notSameAs {
+						name notSameAs 
+						uri "mms:notSameAs" 
+						description [ "This object 
+						property associates the Data location class to another Data location recursively in order to facilitate the expression of requirements that forbid the use of the same location(s) as the ones previously selected for other data artefacts." ] 
+						type object 
+						range DataLocation 
+					}
+
+					property hasAllowedLocation {
+						name hasAllowedLocation 
+						uri "mms:hasAllowedLocation" 
+						description [ "This object 
+						property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of permitted network, physical and/or cloud location(s) for storing or processing data artefacts." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property hasCloudLocation {
+						name hasCloudLocation 
+						uri "mms:hasCloudLocation" 
+						description [ "This object 
+						property associates the Data Location class to the Cloud Location from the Context Aware Security model in order to define the relevant concepts with respect to the worldwide positioning of cloud offerings hosts." ] 
+						type object 
+						range DataLocation 
+						range uri "xsd:string" 
+					}
+
+				}
+
+				concept DataManagement {
+					name DataManagement 
+					uri "mms:DataManagement" 
+					description [ "This class encapsulates all the relevant concepts that can be used in order to describe major technological choices with respect to how big data is acquired, stored, processed, transferred or replicated for redundancy reasons." ] 
+					concept BigDataProcessing {
+						name BigDataProcessing 
+						uri "mms:BigDataProcessing" 
+						description [ "This subclass encapsulates all the concepts that can be used for describing and classifying the various types of big data processing that can be conducted by a Melodic-enabled cloud application." ] 
+						concept DistributedML {
+							name DistributedML 
+							uri "mms:DistributedML" 
+							description [ "This subclass refers to big data processing techniques that are focused on implementing efficient machine learning algorithms in a distributed and scalable manner (Ranjan et al., 2015). Examples include: Apache Mahout, MLBase." ] 
+							concept instance MLBASE {
+								name MLBASE 
+								uri "mms:MLBASE" 
+								description [ MLBASE ] 
+							}
+
+							concept instance ApacheMAHOUT {
+								name ApacheMAHOUT 
+								uri "mms:ApacheMAHOUT" 
+								description [ "Apache MAHOUT" ] 
+							}
+
+						}
+
+						concept StreamProcessing {
+							name StreamProcessing 
+							uri "mms:StreamProcessing" 
+							description [ "This subclass refers to a processing paradigm also known as event stream processing that transforms, in real or near-real time, an incoming stream of unbounded data records/events that are small, self-contained, immutable objects containing the details of somethings happened at some point in time (Kleppmann, 2017)." ] 
+							concept StreamTransforming {
+								name StreamTransforming 
+								uri "mms:StreamTransforming" 
+								description [ "This subclass refers to a second 
+								type of stream processing that (instead of detecting occurrence patterns) focuses on incrementally converting (e.g. sorting, grouping, aggregating) streams to an analysis-friendly schema based on a number of devised jobs. Examples include: Apache STORM, Apache Flink." ] 
+								concept instance Concord {
+									name Concord 
+									uri "mms:Concord" 
+									description [ Concord ] 
+								}
+
+								concept instance ApacheFlink {
+									name ApacheFlink 
+									uri "mms:ApacheFlink" 
+									description [ "Apache Flink" ] 
+								}
+
+								concept instance ApacheSTORM {
+									name ApacheSTORM 
+									uri "mms:ApacheSTORM" 
+									description [ "Apache STORM" ] 
+								}
+
+								concept instance Samza {
+									name Samza 
+									uri "mms:Samza" 
+									description [ Samza ] 
+								}
+
+								concept instance GoogleCloudDataflow {
+									name GoogleCloudDataflow 
+									uri "mms:GoogleCloudDataflow" 
+									description [ "Google Cloud Dataflow" ] 
+								}
+
+								concept instance AzureStreamAnalytics {
+									name AzureStreamAnalytics 
+									uri "mms:AzureStreamAnalytics" 
+									description [ "Azure Stream Analytics" ] 
+								}
+
+								concept instance KafkaStreams {
+									name KafkaStreams 
+									uri "mms:KafkaStreams" 
+									description [ "Kafka Streams" ] 
+								}
+
+							}
+
+							concept CEP {
+								name CEP 
+								uri "mms:CEP" 
+								description [ "This subclass refers to one 
+								type of stream processing that aims to identify patterns and analyse cause-and-effect relationships among streams of information (data) in real time, allowing for proactive or reactive effective actions in response to specific situations (Luckham, 2002). It usually involves digestion of data from multiple and heterogeneous data. Examples include: Esper, SQLstream." ] 
+								concept instance Apama {
+									name Apama 
+									uri "mms:Apama" 
+									description [ Apama ] 
+								}
+
+								concept instance IBMInfoSphereStreams {
+									name IBMInfoSphereStreams 
+									uri "mms:IBMInfoSphereStreams" 
+									description [ "IBM InfoSphere Streams" ] 
+								}
+
+								concept instance SQLstream {
+									name SQLstream 
+									uri "mms:SQLstream" 
+									description [ SQLstream ] 
+								}
+
+								concept instance Esper {
+									name Esper 
+									uri "mms:Esper" 
+									description [ Esper ] 
+								}
+
+								concept instance TIBCOStreamBase {
+									name TIBCOStreamBase 
+									uri "mms:TIBCOStreamBase" 
+									description [ "TIBCO StreamBase" ] 
+								}
+
+							}
+
+							concept StreamJoins {
+								name StreamJoins 
+								uri "mms:StreamJoins" 
+								description [ "This subclass involves information about different pre-processing techniques for enhancing the input of a stream processing application (Kleppmann, 2017). Examples include: Stream-stream joins – combining two or more distinct streams, Stream-table joins – combining streams with data stored, Table-table joins – combining different types of stored data into a single stream." ] 
+								concept Table_tablejoins {
+									name Table_tablejoins 
+									uri "mms:Table_tablejoins" 
+									description [ "Table-table joins" ] 
+								}
+
+								concept Stream_tablejoins {
+									name Stream_tablejoins 
+									uri "mms:Stream_tablejoins" 
+									description [ "Stream-table joins" ] 
+								}
+
+								concept Stream_streamjoins {
+									name Stream_streamjoins 
+									uri "mms:Stream_streamjoins" 
+									description [ "Stream-stream joins" ] 
+								}
+
+							}
+
+						}
+
+						concept HybridProcessing {
+							name HybridProcessing 
+							uri "mms:HybridProcessing" 
+							description [ "This is a subclass that involves processing techniques that can be classified in the space between stream and batch processing. These are also called micro-batching techniques and treat streams as a sequence of small batches or chunks of data that are processed in near real-time (e.g. Apache Spark)." ] 
+							concept ApacheSPARK {
+								name ApacheSPARK 
+								uri "mms:ApacheSPARK" 
+								description [ "Apache SPARK" ] 
+								
+								property ClassName{
+									name "Class Name"
+									uri "mms:ClassName"
+									type data
+									range uri "xsd:string"
+								}
+								
+								concept ApplicationArguments{
+									name "Application Arguments"
+									uri "mms:ApplicationArguments"
+								}
+								
+								concept SPARKArguments{
+									name "SPARK Arguments"
+									uri "mms:SPARKArguments"
+								}
+								
+								concept SPARKConfiguration{
+									name "SPARK Configuration"
+									uri "mms:SPARKConfiguration"
+								}
+							}
+
+						}
+
+						concept ComputationalComplexity {
+							name ComputationalComplexity 
+							uri "mms:ComputationalComplexity" 
+							description [ "This subclass is used in order to provide concepts that classify processing techniques and systems based on the computation complexity that they introduce when processing big data. Example instances may include the use of linguistic terms like High, Medium, Low or 
+							property values that imply the expected complexity (e.g. job length)." ] 
+							property hasRequiredProcessingPower {
+								name hasRequiredProcessingPower 
+								uri "mms:hasRequiredProcessingPower" 
+								description [ "This 
+								property associates the Complexity class with the CPU class of the Application Placement model in order to indirectly indicate the involved complexity of a certain Melodic-enabled application." ] 
+								type object 
+								range BigDataProcessing 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasJobLength {
+								name hasJobLength 
+								uri "mms:hasJobLength" 
+								description [ "This 
+								property associates the Complexity class with an integer that denotes the size of each program used as a big data processing job." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+							concept instance Medium {
+								name Medium 
+								uri "mms:Medium" 
+								description [ Medium ] 
+							}
+
+							concept instance Low {
+								name Low 
+								uri "mms:Low" 
+								description [ Low ] 
+							}
+
+							concept instance High {
+								name High 
+								uri "mms:High" 
+								description [ High ] 
+							}
+
+						}
+
+						concept Methodology {
+							name Methodology 
+							uri "mms:Methodology" 
+							description [ "This subclass is used for characterising big data processing applications based on their scope and the kind of algorithmic approach used." ] 
+							concept PredictiveAnalysis {
+								name PredictiveAnalysis 
+								uri "mms:PredictiveAnalysis" 
+								description [ "This subclass refers to a number of techniques from data mining, statistics, predictive modelling, machine learning, and artificial intelligence employed to analyse big data in order to make predictions about future events (Nyce, 2007)." ] 
+							}
+
+							concept Query_Reporting {
+								name Query_Reporting 
+								uri "mms:Query_Reporting" 
+								description [ "This subclass refers to techniques and tools that perform simple or complex inquiries over a set of data and provide consolidated summaries of the results." ] 
+							}
+
+							concept OutlierDetection {
+								name OutlierDetection 
+								uri "mms:OutlierDetection" 
+								description [ "This subclass refers to the use of anomaly detection algorithms for identifying items, events or observations which do not conform to an expected pattern or other items in a dataset (Chandola et al., 2009)." ] 
+							}
+
+							concept CausalAnalysis {
+								name CausalAnalysis 
+								uri "mms:CausalAnalysis" 
+								description [ "This subclass refers to techniques that introduce counterfactual reasoning and causal assumptions in addition to observations and statistical assumptions in order to estimate the effect of intervention between two variables (Pearl, 2003)." ] 
+							}
+
+							concept ConfirmatoryAnalysis {
+								name ConfirmatoryAnalysis 
+								uri "mms:ConfirmatoryAnalysis" 
+								description [ "This subclass refers to the algorithms (often used in social research) corresponding to a special form of factor analysis that focus on testing and verifying hypothesized models (based on theory and/or previous analytic research) (Li, 2015)." ] 
+							}
+
+							concept CorrelationAnalysis {
+								name CorrelationAnalysis 
+								uri "mms:CorrelationAnalysis" 
+								description [ "This subclass refers to statistical evaluation techniques used on big data processing to study the strength of a relationship between two, numerically measured, continuous variables (Rodgers & Nicewander, 1988)." ] 
+							}
+
+							concept Miscellaneous {
+								name Miscellaneous 
+								uri "mms:Miscellaneous" 
+								description [ "This subclass refers to any other methodology used for big data processing that can be perceived as part of the above mentioned techniques. Examples include: 3D Reconstruction, Translation." ] 
+								concept ThreeDReconstruction {
+									name ThreeDReconstruction 
+									uri "mms:ThreeDReconstruction" 
+									description [ "3D Reconstruction" ] 
+								}
+
+								concept Translation {
+									name Translation 
+									uri "mms:Translation" 
+									description [ Translation ] 
+								}
+
+							}
+
+							concept ProbabilisticAnalysis {
+								name ProbabilisticAnalysis 
+								uri "mms:ProbabilisticAnalysis" 
+								description [ "This subclass refers to the use of certain algorithms that based on big data processing may infer with a certain degree of certainty, facts about the current situation." ] 
+							}
+
+							concept Analytical {
+								name Analytical 
+								uri "mms:Analytical" 
+								description [ "This subclass refers to the kind of big data processing that considers qualitative or quantitative information to discern patterns within the information, usually involving deductive reasoning. Examples include: Social Network Analysis, Text Analysis." ] 
+								concept Location_basedAnalysis {
+									name Location_basedAnalysis 
+									uri "mms:Location_basedAnalysis" 
+									description [ "Location-based Analysis" ] 
+								}
+
+								concept SpeechAnalytics {
+									name SpeechAnalytics 
+									uri "mms:SpeechAnalytics" 
+									description [ "Speech Analytics" ] 
+								}
+
+								concept Transcription {
+									name Transcription 
+									uri "mms:Transcription" 
+									description [ Transcription ] 
+								}
+
+								concept FeaturesRecognition {
+									name FeaturesRecognition 
+									uri "mms:FeaturesRecognition" 
+									description [ "Features Recognition" ] 
+								}
+
+								concept SocialNetworkAnalyis {
+									name SocialNetworkAnalyis 
+									uri "mms:SocialNetworkAnalyis" 
+									description [ "Social Network Analyis" ] 
+								}
+
+								concept TextAnalytics {
+									name TextAnalytics 
+									uri "mms:TextAnalytics" 
+									description [ "Text Analytics" ] 
+								}
+
+								concept ImageProcessing {
+									name ImageProcessing 
+									uri "mms:ImageProcessing" 
+									description [ "Image Processing" ] 
+								}
+
+							}
+
+						}
+
+						concept BatchProcessing {
+							name BatchProcessing 
+							uri "mms:BatchProcessing" 
+							description [ "This subclass refers to a processing paradigm also known as offline system that involves a series of jobs on a bounded bundle of inputs (fixed set of data) that produces a certain output (Kleppmann, 2017). Batch jobs are often scheduled to run periodically (e.g. once a day)." ] 
+							concept BulkSynchronousParallel {
+								name BulkSynchronousParallel 
+								uri "mms:BulkSynchronousParallel" 
+								description [ "This subclass refers to a bridging model for designing parallel algorithms which fits the needs of distributed computation (Valiant, 2011). Examples include: Apache Hama, Apache Giraph." ] 
+								concept instance ApacheGiraph {
+									name ApacheGiraph 
+									uri "mms:ApacheGiraph" 
+									description [ "Apache Giraph" ] 
+								}
+
+								concept instance ApacheHama {
+									name ApacheHama 
+									uri "mms:ApacheHama" 
+									description [ "Apache Hama" ] 
+								}
+
+								concept instance Pregel {
+									name Pregel 
+									uri "mms:Pregel" 
+									description [ Pregel ] 
+								}
+
+							}
+
+							concept MapReduce {
+								name MapReduce 
+								uri "mms:MapReduce" 
+								description [ "This subclass refers to Map-Reduce batch processing techniques for distributed computing. Examples include: Hadoop MapReduce, Apache S4." ] 
+								concept instance HadoopMR {
+									name HadoopMR 
+									uri "mms:HadoopMR" 
+									description [ "Hadoop MR" ] 
+								}
+
+								concept instance S4 {
+									name S4 
+									uri "mms:S4" 
+									description [ S4 ] 
+								}
+
+							}
+
+							property hasThroughput {
+								name hasThroughput 
+								uri "mms:hasThroughput" 
+								description [ "This 
+								property associates the Batch Processing with an integer that states the number of data records that an application can process per second, or the total time it takes to run a job on a dataset of a certain size (Kleppmann, 2017)." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+							property hasTotalTimePerJob {
+								name hasTotalTimePerJob 
+								uri "mms:hasTotalTimePerJob" 
+								description [ "This 
+								property associates the Batch Processing with a float that denotes the total time it lasts to execute a job on a dataset of a certain size (Kleppmann, 2017)." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+						}
+
+						property hasPriority {
+							name hasPriority 
+							uri "mms:hasPriority" 
+							description [ "This 
+							property associates the Processing class with a string that denotes how urgently a certain processing job should be executed." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasProcessingCost {
+							name hasProcessingCost 
+							uri "mms:hasProcessingCost" 
+							description [ "This 
+							property associates the Processing class with a float that expresses the cost for processing according to the designed functionalities of the Melodic-enabled cloud application." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasComplexMetric {
+							name hasComplexMetric 
+							uri "mms:hasComplexMetric" 
+							description [ "This 
+							property associates the Processing class with a string value that refers to another core conceptualisation of the CAMEL language (i.e. Composite Metric), which encapsulates composite measurements of specific non-functional attributes, derived via mathematical formulas over other metrics (e.g. average CPU usage, mean response time, Ratio Reads to Writes)." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isNearRealTime {
+							name isNearRealTime 
+							uri "mms:isNearRealTime" 
+							description [ "This 
+							property associates the Processing class with a boolean that denotes whether or not the processing takes place almost at the same time as input data is produced. This 
+							property implies a time delay introduced due to network lag, between the data source and the processing location." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isRealTime {
+							name isRealTime 
+							uri "mms:isRealTime" 
+							description [ "This 
+							property associates the Processing class with a boolean that denotes whether or not the processing takes place at the same time as input data is produced." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isLongLived {
+							name isLongLived 
+							uri "mms:isLongLived" 
+							description [ "This 
+							property associates the Processing class with a boolean that expresses whether or not a certain processing job is chronic." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasAppProcessingLocation {
+							name hasAppProcessingLocation 
+							uri "mms:hasAppProcessingLocation" 
+							description [ "This 
+							property associates the Processing class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location where the application is or will be hosted." ] 
+							type object 
+							range DataLocation 
+							range uri "xsd:string" 
+						}
+
+						property forProductionUsage {
+							name forProductionUsage 
+							uri "mms:forProductionUsage" 
+							description [ "This 
+							property associates the Processing class with a boolean that denotes whether or not the discussed processing refers to a production system." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasDataProcessingCost {
+							name hasDataProcessingCost 
+							uri "mms:hasDataProcessingCost" 
+							description [ "This 
+							property associates the Processing class with a float that expresses the cost for retrieving data to be processed by the Melodic-enabled cloud application." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasConstraints {
+							name hasConstraints 
+							uri "mms:hasConstraints" 
+							description [ "This 
+							property associates the Processing class with a string that denotes expressions over raw and complex metrics that bound the way processing will be performed." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasRawMetric {
+							name hasRawMetric 
+							uri "mms:hasRawMetric" 
+							description [ "This 
+							property associates the Processing class with a string value that refers to Raw Metric conceptualisation of the CAMEL language." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Transfer {
+						name Transfer 
+						uri "mms:Transfer" 
+						description [ "This subclass of Data Management class refers to any 
+						concept that can be used for describing aspects related to communicating data artefacts between their data sources and the processing or storing locations." ] 
+						property hasDataTransferDesiredCompletionTime {
+							name hasDataTransferDesiredCompletionTime 
+							uri "mms:hasDataTransferDesiredCompletionTime" 
+							description [ "This 
+							property associates the Transfer class with a date datatype in order to define the desired end time of a data-transferring task." ] 
+							type data 
+							range uri "xsd:dateTime" 
+						}
+
+						property hasDataTransferDesiredStartTime {
+							name hasDataTransferDesiredStartTime 
+							uri "mms:hasDataTransferDesiredStartTime" 
+							description [ "This 
+							property associates the Transfer class with a date datatype in order to define the desired start time of a data-transferring task." ] 
+							type data 
+							range uri "xsd:dateTime" 
+						}
+
+						property hasTransferOrigin {
+							name hasTransferOrigin 
+							uri "mms:hasTransferOrigin" 
+							description [ "This 
+							property associates the Transfer class with the Data Location class of the Big Data Model in order to identify the source location of a data-transferring task." ] 
+							type object 
+							range DataLocation 
+							range uri "xsd:string" 
+						}
+
+						property hasTransferTarget {
+							name hasTransferTarget 
+							uri "mms:hasTransferTarget" 
+							description [ "This 
+							property associates the Transfer class with the Data Location class of the Big Data Model in order to identify the sink location of a data-transferring task." ] 
+							type object 
+							range DataLocation 
+							range uri "xsd:string" 
+						}
+
+						property hasDataTransferCost {
+							name hasDataTransferCost 
+							uri "mms:hasDataTransferCost" 
+							description [ "This 
+							property associates the Transfer class with a float that denotes the actual or expected cost for transferring data." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasDataTransferDuration {
+							name hasDataTransferDuration 
+							uri "mms:hasDataTransferDuration" 
+							description [ "This 
+							property associates the Transfer class with a float that denotes the time needed for transferring data between different locations." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+					}
+
+					concept DataStorage {
+						name DataStorage 
+						uri "mms:DataStorage" 
+						description [ "This subclass encapsulates all the concepts that can be used for characterising the way that input or output data should be stored. The hierarchy involved updates the storage infrastructure taxonomy that (Murthy et al., 2014) presented." ] 
+						concept DatabaseManagementSystems {
+							name DatabaseManagementSystems 
+							uri "mms:DatabaseManagementSystems" 
+							description [ "This subclass encapsulates all the concepts that can be used for characterising data storage models for DBMS, encompassing those from cloud and Big Data research communities. The data storage models are classified into the two main categories, relational and non-relational storage." ] 
+							concept RelationalStorage {
+								name RelationalStorage 
+								uri "mms:RelationalStorage" 
+								description [ "This subclass refers to databases used for persisting data that are structured in a way that capture and present relations between stored data artefacts (Codd, 1970). Examples include: MySQL, PostgreSQL." ] 
+								concept NewSQL {
+									name NewSQL 
+									uri "mms:NewSQL" 
+									description [ "This subclass refers to a 
+									type of parallel database management systems that provides the same scalable performance of non-relational systems while still maintaining the same level of transactional support (i.e. support the properties of Atomicity, Consistency, Isolation, and Durability – ACID) as the traditional relational databases (Murthy et al., 2014)." ] 
+									concept instance NuoDB {
+										name NuoDB 
+										uri "mms:NuoDB" 
+										description [ "" ] 
+									}
+
+									concept instance VoltDB {
+										name VoltDB 
+										uri "mms:VoltDB" 
+										description [ "" ] 
+									}
+
+									concept instance CockroachDB {
+										name CockroachDB 
+										uri "mms:CockroachDB" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept RDBMS {
+									name RDBMS 
+									uri "mms:RDBMS" 
+									description [ "A Relational DBMS (RDBMS) stores data as tuples, forming an ordered set of attributes. RDBMSs provide SQL as the established interface for generic data definition, manipulation and querying. Moreover, a rich support for analytical queries and aggregations is generally available." ] 
+									concept instance MicrosoftSQLServer {
+										name MicrosoftSQLServer 
+										uri "mms:MicrosoftSQLServer" 
+										description [ "" ] 
+									}
+
+									concept instance MySQL {
+										name MySQL 
+										uri "mms:MySQL" 
+										description [ "" ] 
+									}
+
+									concept instance IBMDB2 {
+										name IBMDB2 
+										uri "mms:IBMDB2" 
+										description [ "" ] 
+									}
+
+									concept instance Oracle {
+										name Oracle 
+										uri "mms:Oracle" 
+										description [ "" ] 
+									}
+
+									concept instance PostgreSQL {
+										name PostgreSQL 
+										uri "mms:PostgreSQL" 
+										description [ "" ] 
+									}
+
+								}
+
+							}
+
+							concept Non_RelationalStorage {
+								name Non_RelationalStorage 
+								uri "mms:Non_RelationalStorage" 
+								description [ "This subclass refers to databases (also called NoSQL) used for persisting data that are not modelled using tabular relations and present certain advantages over the relational databases, especially for big data since they offer design simplicity and more efficient horizontal scaling." ] 
+								concept Document {
+									name Document 
+									uri "mms:Document" 
+									description [ "This is a subclass of the Key-value Store class that refers to a software application designed for performing CRUD operations over semi-structured data called document-oriented information. Examples include: MongoDB, Couchbase." ] 
+									concept instance MongoDB {
+										name MongoDB 
+										uri "mms:MongoDB" 
+										description [ "" ] 
+									}
+
+									concept instance Couchbase {
+										name Couchbase 
+										uri "mms:Couchbase" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept Time_SeriesDataBase {
+									name Time_SeriesDataBase 
+									uri "mms:Time_SeriesDataBase" 
+									description [ "Time-series (TS) storage is driven by the need for monitoring of large-scale Cloud and IoT applications and infrastructures, which require horizontally scalable DBMSs with analytical query support. Common TS DBMS are InfluxDB, Prometheus and Axibase." ] 
+									concept instance Axibase {
+										name Axibase 
+										uri "mms:Axibase" 
+										description [ "" ] 
+									}
+
+									concept instance Prometheus {
+										name Prometheus 
+										uri "mms:Prometheus" 
+										description [ "" ] 
+									}
+
+									concept instance OpenTSDB {
+										name OpenTSDB 
+										uri "mms:OpenTSDB" 
+										description [ "" ] 
+									}
+
+									concept instance InfluxDB {
+										name InfluxDB 
+										uri "mms:InfluxDB" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept Multi_Model {
+									name Multi_Model 
+									uri "mms:Multi_Model" 
+									description [ "This subclass refers to database management systems that support multiple data models (e.g. document, graph, relational, and key-value models) in one integrated backend (Lu & Holubová, 2017). Examples include: ArangoDB, OrientDB." ] 
+									concept instance ArangoDB {
+										name ArangoDB 
+										uri "mms:ArangoDB" 
+										description [ "" ] 
+									}
+
+									concept instance OrientDB {
+										name OrientDB 
+										uri "mms:OrientDB" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept Key_Value {
+									name Key_Value 
+									uri "mms:Key_Value" 
+									description [ "This subclass refers to a non-relational data storage paradigm designed for storing, retrieving, and managing associative arrays based on keys. These associative arrays contain a collection of objects with many different fields within them (Tweed & James, 2010)." ] 
+									concept instance Memcached {
+										name Memcached 
+										uri "mms:Memcached" 
+										description [ "" ] 
+									}
+
+									concept instance Redis {
+										name Redis 
+										uri "mms:Redis" 
+										description [ "" ] 
+									}
+
+									concept instance Voldemort {
+										name Voldemort 
+										uri "mms:Voldemort" 
+										description [ "" ] 
+									}
+
+									concept instance Aerospike {
+										name Aerospike 
+										uri "mms:Aerospike" 
+										description [ "" ] 
+									}
+
+									concept instance LevelDB {
+										name LevelDB 
+										uri "mms:LevelDB" 
+										description [ "" ] 
+									}
+
+									concept instance Risk {
+										name Risk 
+										uri "mms:Risk" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept Graph {
+									name Graph 
+									uri "mms:Graph" 
+									description [ "This subclass refers to databases that use graph structures (with nodes, edges and properties) for storing and retrieving data. Some are implemented adopting the relational paradigm by storing the graph data in a table while others use a key-value store or document-oriented database for storage (Angles & Gutierrez, 2008). Examples include: Neo4j, OnyxDB." ] 
+									concept instance Onyx {
+										name Onyx 
+										uri "mms:Onyx" 
+										description [ "" ] 
+									}
+
+									concept instance TITAN {
+										name TITAN 
+										uri "mms:TITAN" 
+										description [ "" ] 
+									}
+
+									concept instance Neo4J {
+										name Neo4J 
+										uri "mms:Neo4J" 
+										description [ "" ] 
+									}
+
+								}
+
+								concept Wide_Column {
+									name Wide_Column 
+									uri "mms:Wide_Column" 
+									description [ "Wide-column storage stores data by columns rather than by rows. This enables storing large amounts of data in bulk and for efficiently querying over very large, structured data sets. Some popular examples are Google’s DBaaS offering Bigtable, Apache Cassandra and Apache HBase." ] 
+									concept instance HBase {
+										name HBase 
+										uri "mms:HBase" 
+										description [ "" ] 
+									}
+
+									concept instance Cassandra {
+										name Cassandra 
+										uri "mms:Cassandra" 
+										description [ "" ] 
+									}
+
+									concept instance Scylla {
+										name Scylla 
+										uri "mms:Scylla" 
+										description [ "" ] 
+									}
+
+								}
+
+							}
+
+						}
+
+						concept FileSystems {
+							name FileSystems 
+							uri "mms:FileSystems" 
+							description [ "This subclass captures concepts related to File System architecture models. These can be classified into two categories; Distributed File Systems, and Local File Systems." ] 
+							concept DistributedFileSystems {
+								name DistributedFileSystems 
+								uri "mms:DistributedFileSystems" 
+								description [ "This subclass encapsulates all the concepts that can be used for characterising Distributed File Systems (DFS). A DFS provides a permanent storage to the data objects through a set of storage resources connected by a communication network. The DFSs can be classified into two broad classes based on the architecture model used: Client/Server and Clustered Distributed DFSs." ] 
+								concept ClusterDistributed {
+									name ClusterDistributed 
+									uri "mms:ClusterDistributed" 
+									description [ "This subclass encapsulates all the concepts related to Clustered Distributed architecture model of DFSs." ] 
+									concept SymmetricDFS {
+										name SymmetricDFS 
+										uri "mms:SymmetricDFS" 
+										description [ "This subclass encapsulates all the concepts related to Symmetric distributed DFS also called as peer-to-peer (P2P) file." ] 
+										concept instance RedHatGFS {
+											name RedHatGFS 
+											uri "mms:RedHatGFS" 
+										}
+
+										concept instance DHT_basedSystems {
+											name DHT_basedSystems 
+											uri "mms:DHT_basedSystems" 
+										}
+
+										concept instance PVFS {
+											name PVFS 
+											uri "mms:PVFS" 
+										}
+
+									}
+
+									concept DistributedMetadata {
+										name DistributedMetadata 
+										uri "mms:DistributedMetadata" 
+										description [ "This subclass encapsulates all the concepts related to clustered distributed DFSs which are based on distributed metadata." ] 
+										concept instance CephFS {
+											name CephFS 
+											uri "mms:CephFS" 
+										}
+
+									}
+
+									concept CentralizedMetadata {
+										name CentralizedMetadata 
+										uri "mms:CentralizedMetadata" 
+										description [ "This subclass captures concepts related to clustered distributed DFSs which are based on centralised metadata." ] 
+										concept instance MooseFS {
+											name MooseFS 
+											uri "mms:MooseFS" 
+										}
+
+										concept instance iRODS {
+											name iRODS 
+											uri "mms:iRODS" 
+										}
+
+										concept instance HDFS {
+											name HDFS 
+											uri "mms:HDFS" 
+										}
+
+									}
+
+								}
+
+								concept Client_Server {
+									name Client_Server 
+									uri "mms:Client_Server" 
+									description [ "This subclass captures concepts related to Client/Server architecture model of DFSs." ] 
+									concept instance GlusterFS {
+										name GlusterFS 
+										uri "mms:GlusterFS" 
+									}
+
+								}
+
+							}
+
+							concept LocalFileSystems {
+								name LocalFileSystems 
+								uri "mms:LocalFileSystems" 
+								description [ "This subclass refers to concepts that can be used for characterising Local File Systems (DFS)." ] 
+							}
+
+						}
+
+					}
+
+					concept Acquisition {
+						name Acquisition 
+						uri "mms:Acquisition" 
+						description [ "This subclass is used in order to describe the required or offered types of big data acquisition in the frame of a Melodic-enabled cloud application devised to process it." ] 
+						concept Push_based {
+							name Push_based 
+							uri "mms:Push_based" 
+							description [ "This subclass aims to capture concepts related to the push-based paradigm for acquiring data asynchronously, where the request for a given transaction is initiated by the publisher (Yang et al. 2017)." ] 
+							concept MessageBrokering {
+								name MessageBrokering 
+								uri "mms:MessageBrokering" 
+								description [ "This subclass refers to a certain 
+								type of push-based acquisition of data where an intermediary software component undertakes the task of translating and rooting data transparently to any given number of subscribed receivers (Melodic-enabled applications) that expect the acquisition of certain data in a pre-defined format (Hohpe & Woolf, 2004)." ] 
+								concept Centralized {
+									name Centralized 
+									uri "mms:Centralized" 
+									description [ "This is a subclass of the Message Brokering class where the push-based paradigm, for communicating data between producers and subscribers, is implemented with a central broker application, usually called enterprise service bus – ESB (Chappell, 2004). Examples include: WSO2 ESB , jBoss ESB , Mule ESB" ] 
+									concept instance ApacheActiveMQ {
+										name ApacheActiveMQ 
+										uri "mms:ApacheActiveMQ" 
+										description [ "Apache ActiveMQ" ] 
+									}
+
+									concept instance AzureSB {
+										name AzureSB 
+										uri "mms:AzureSB" 
+										description [ "Azure SB" ] 
+									}
+
+									concept instance IBMMQ {
+										name IBMMQ 
+										uri "mms:IBMMQ" 
+										description [ "IBM MQ" ] 
+									}
+
+									concept instance MuleESB {
+										name MuleESB 
+										uri "mms:MuleESB" 
+										description [ "Mule ESB" ] 
+									}
+
+									concept instance ApacheServicemix {
+										name ApacheServicemix 
+										uri "mms:ApacheServicemix" 
+										description [ "Apache Servicemix" ] 
+									}
+
+									concept instance jBossESB {
+										name jBossESB 
+										uri "mms:jBossESB" 
+										description [ "jBoss ESB" ] 
+									}
+
+									concept instance RabbitMQ {
+										name RabbitMQ 
+										uri "mms:RabbitMQ" 
+										description [ RabbitMQ ] 
+									}
+
+									concept instance WSO2ESB {
+										name WSO2ESB 
+										uri "mms:WSO2ESB" 
+										description [ "WSO2 ESB" ] 
+									}
+
+									concept instance GoogleCloudPub_Sub {
+										name GoogleCloudPub_Sub 
+										uri "mms:GoogleCloudPub_Sub" 
+										description [ "Google Cloud Pub/Sub" ] 
+									}
+
+									concept instance PetalsESB {
+										name PetalsESB 
+										uri "mms:PetalsESB" 
+										description [ "Petals ESB" ] 
+									}
+
+									concept instance ApacheCamel {
+										name ApacheCamel 
+										uri "mms:ApacheCamel" 
+										description [ "Apache Camel" ] 
+									}
+
+									concept instance TalendOpenStudio {
+										name TalendOpenStudio 
+										uri "mms:TalendOpenStudio" 
+										description [ "Talend Open Studio" ] 
+									}
+
+								}
+
+								concept Distributed {
+									name Distributed 
+									uri "mms:Distributed" 
+									description [ "This is a subclass of the Message Brokering class where the push-based paradigm for communicating data uses several dispersed, but integrated software applications (also called distributed ESB) with message brokering capabilities, instead of just one centralised broker entity in order to avoid any performance bottlenecks (e.g. Apache Kafka)." ] 
+									concept instance ApacheKafka {
+										name ApacheKafka 
+										uri "mms:ApacheKafka" 
+										description [ "Apache Kafka" ] 
+									}
+
+								}
+
+							}
+
+							concept BrokerlessMessaging {
+								name BrokerlessMessaging 
+								uri "mms:BrokerlessMessaging" 
+								description [ "This subclass refers to a certain 
+								type of push-based acquisition of data where there are not intermediaries in the middle for translating and rooting data, instead direct peer-to-peer communication between the data sources and the receivers (i.e. Melodic-enabled application) is considered for low latency and/or high transaction rate applications (ZeroMQ, 2008)." ] 
+								concept UDPmulticast {
+									name UDPmulticast 
+									uri "mms:UDPmulticast" 
+									description [ "This is a subclass of the Brokerless Messaging class and refers to the simultaneous group communication (multicast) using the User Datagram Protocol –UDP (Kurose & Ross, 2010). Examples include: StatsD, Brubeck." ] 
+									concept instance Brubeck {
+										name Brubeck 
+										uri "mms:Brubeck" 
+										description [ Brubeck ] 
+									}
+
+									concept instance StatsD {
+										name StatsD 
+										uri "mms:StatsD" 
+										description [ StatsD ] 
+									}
+
+								}
+
+								concept TCP_IPmulticast {
+									name TCP_IPmulticast 
+									uri "mms:TCP_IPmulticast" 
+									description [ "This is a subclass of the Brokerless Messaging class and refers to the technique for one-to-many communication over an IP infrastructure in a network. (Kurose & Ross, 2010). Examples include: ZeroMQ, MQTT." ] 
+									concept instance ZeroMQ {
+										name ZeroMQ 
+										uri "mms:ZeroMQ" 
+										description [ ZeroMQ ] 
+									}
+
+									concept instance MQTT {
+										name MQTT 
+										uri "mms:MQTT" 
+										description [ MQTT ] 
+									}
+
+								}
+
+							}
+
+							property usesAcknowledgments {
+								name usesAcknowledgments 
+								uri "mms:usesAcknowledgments" 
+								description [ "This 
+								property associates the Push-based class with a boolean value that defines whether or not the data source will repeatedly attempt to re-send the data to the Melodic-enabled application until a receipt confirmation message is sent." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+							property isOrdered {
+								name isOrdered 
+								uri "mms:isOrdered" 
+								description [ "This 
+								property associates the Push-based class with a boolean value that states whether or not the certain push-based technique used for relaying big data, guarantees the time ordering of the received data before their processing takes place." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+						}
+
+						concept Pull_based {
+							name Pull_based 
+							uri "mms:Pull_based" 
+							description [ "This subclass aims to capture concepts related to the pull-based paradigm for acquiring data, where there is a request for triggering the transmission of data which is initiated by the Melodic-enabled application, i.e. the receiver entity (Yang et al. 2017) and the receipt takes place in a synchronous manner." ] 
+						}
+
+						property appliesBackpressure {
+							name appliesBackpressure 
+							uri "mms:appliesBackpressure" 
+							description [ "This 
+							property associates the Acquisition class with a boolean value that denotes the capability of interrupting the data source transmission in cases that the receiver and its buffers are not able to receive additional data for a short period of time." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property buffersMessages {
+							name buffersMessages 
+							uri "mms:buffersMessages" 
+							description [ "This data 
+							property associates the Acquisition class with a boolean value that expresses the capability of a Melodic-enabled application to resolve any bottlenecks by buffering the surplus data, in cases that the data acquisition rates are larger than the processing rates." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property dropsMessages {
+							name dropsMessages 
+							uri "mms:dropsMessages" 
+							description [ "This 
+							property associates the Acquisition class with a boolean value that refers to bottleneck situations being resolved by dropping any surplus data." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isReliable {
+							name isReliable 
+							uri "mms:isReliable" 
+							description [ "This data 
+							property associates the Acquisition class with a boolean value that captures whether or not the means of data acquisition required or offered guarantee the accuracy of the data received." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasSource {
+							name hasSource 
+							uri "mms:hasSource" 
+							description [ "This 
+							property associates the Acquisition class with the Data Location class of the Big Data Model in order to describe the location of the data source to be used by a Melodic-enabled application." ] 
+							type object 
+							range DataLocation 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Redundancy {
+						name Redundancy 
+						uri "mms:Redundancy" 
+						description [ "This subclass encapsulates any approach used for persisting the same data artefacts in several separate places, either in a single database, or in remote databases for detecting and reconstructing lost or damaged data (Doorn & River, 2002)." ] 
+						concept AffinityReplication {
+							name AffinityReplication 
+							uri "mms:AffinityReplication" 
+							description [ "This subclass refers to replication techniques that consider or define resources to be used for replicating data." ] 
+						}
+
+						concept LocallyRedundantStorage {
+							name LocallyRedundantStorage 
+							uri "mms:LocallyRedundantStorage" 
+							description [ "This subclass refers to data redundancy that considers hosts for data replication situated on the same host." ] 
+						}
+
+						concept PhysicallyRedundantStorage {
+							name PhysicallyRedundantStorage 
+							uri "mms:PhysicallyRedundantStorage" 
+							description [ "This subclass refers to data redundancy that considers hosts for data replication situated in different physical locations." ] 
+							concept ReadAccess_PhysicallyRedundantStorage {
+								name ReadAccess_PhysicallyRedundantStorage 
+								uri "mms:ReadAccess_PhysicallyRedundantStorage" 
+								description [ "Read Access - Physically Redundant Storage" ] 
+							}
+
+						}
+
+						concept anti_AffinityReplication {
+							name anti_AffinityReplication 
+							uri "mms:anti_AffinityReplication" 
+							description [ "This subclass refers to replication techniques that consider or define resources to be excluded from replicating data." ] 
+						}
+
+						property refersToPMReplication {
+							name refersToPMReplication 
+							uri "mms:refersToPMReplication" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that mentions whether or not, a data redundancy approach is used for taking snapshots of a certain physical machine and copying it to another infrastructural resource." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasAsychronousReplication {
+							name hasAsychronousReplication 
+							uri "mms:hasAsychronousReplication" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that defines whether or not data is written to the replica after it has been persisted to the primary storage." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasStarReplicationTopology {
+							name hasStarReplicationTopology 
+							uri "mms:hasStarReplicationTopology" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that defines whether or not a central master node is used (where new data initially is stored) and a number of peripheral nodes are directly connected to the master node for replicating data." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasSychronousReplication {
+							name hasSychronousReplication 
+							uri "mms:hasSychronousReplication" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that defines whether or not data is written both to primary storage and the replica simultaneously, in order to accomplish a constant synchronization between data redundancy entities." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property refersToVMReplication {
+							name refersToVMReplication 
+							uri "mms:refersToVMReplication" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that mentions whether or not, for data redundancy reasons, an approach is used for taking a snapshot of a certain VM and copying it to another VM, situated either on the same or different physical hosts." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasCircularReplicationTopology {
+							name hasCircularReplicationTopology 
+							uri "mms:hasCircularReplicationTopology" 
+							description [ "This 
+							property associates the Redundancy class with a boolean that defines whether or not a master slave topology is used for replicating data where each master (where new data initially is stored) is also the slave (that receives copies of the initial data) of another master, in a circular fashion." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+					}
+
+					property hasAgent {
+						name hasAgent 
+						uri "mms:hasAgent" 
+						description [ "This object 
+						property associates the Data Management class with the Subject class of the Context Aware Security model in order to express the responsible entity for performing data acquisition, processing transferring and storage." ] 
+						type object 
+						range ContextAwareSecurityModel.SecurityContextElement.Subject 
+						range uri "xsd:string" 
+					}
+
+					property hasDataTimestamp {
+						name hasDataTimestamp 
+						uri "mms:hasDataTimestamp" 
+						description [ "This object 
+						property associates the Data Management class with the Data Timestamp class of the Big Data model in order to express the time when certain data artefacts where acquired, processed or transferred." ] 
+						type object 
+						range DataTimestamp 
+						range uri "xsd:dateTime" 
+					}
+
+				}
+
+				concept DataDomains {
+					name DataDomains 
+					uri "mms:DataDomains" 
+					description [ "This class encapsulates all the relevant concepts that characterize data based on the industries that produce it or need to extract information from it (Murthy et al., 2014). Specifically, we reuse and extend the big data taxonomy introduced by the Cloud Security Alliance (Murthy et al., 2014)." ] 
+					concept AudioMedia {
+						name AudioMedia 
+						uri "mms:AudioMedia" 
+						description [ "This is an additional subclass with respect to the big data taxonomy introduced by CSA (Murthy et al., 2014) and refers to data related to audio applications (e.g. gun fire detection)." ] 
+						concept AudioUnderstanding {
+							name AudioUnderstanding 
+							uri "mms:AudioUnderstanding" 
+							description [ "This is a subclass of the Audio Media class that refers to analysis of data for speech recognition and interaction." ] 
+						}
+
+					}
+
+					concept Retail {
+						name Retail 
+						uri "mms:Retail" 
+						description [ "This subclass encapsulates aspects of structured data analysed usually in near real-time that focus on all the relevant aspects of retail-related transactions or facts that may affect them (e.g. tweets used for sentiment analysis)." ] 
+						concept Location_basedTargeting {
+							name Location_basedTargeting 
+							uri "mms:Location_basedTargeting" 
+							description [ "This subclass refers to location and preferences related data that can be used for targeted advertising actions." ] 
+						}
+
+						concept BehavioralAnalysis {
+							name BehavioralAnalysis 
+							uri "mms:BehavioralAnalysis" 
+							description [ "This subclass refers to data that may reveal patterns of selling or buying conducts that can be exploited in different retail sectors." ] 
+						}
+
+					}
+
+					concept SocialNetworking {
+						name SocialNetworking 
+						uri "mms:SocialNetworking" 
+						description [ "This subclass refers to structured or semi-structured data produced from software sensors in various volumes, velocity and veracity that may be used for providing meaningful insights on the status and important aspects of a social network (e.g. user acquisition data)." ] 
+						concept SentimentAnalysis {
+							name SentimentAnalysis 
+							uri "mms:SentimentAnalysis" 
+							description [ "Sentiment Analysis" ] 
+						}
+
+						concept SocialGraphs {
+							name SocialGraphs 
+							uri "mms:SocialGraphs" 
+							description [ "This subclass refers to data that reveal all the interconnections and relationships between the members of an online social network." ] 
+						}
+
+					}
+
+					concept VisualMedia {
+						name VisualMedia 
+						uri "mms:VisualMedia" 
+						description [ "This subclass encapsulates aspects of unstructured data that are related to video analysis and may be processed in batch, near real-time or even real-time." ] 
+						concept ImageUnderstaning {
+							name ImageUnderstaning 
+							uri "mms:ImageUnderstaning" 
+							description [ "This is a subclass of the Visual Media class that addresses data related to detecting and comprehending images." ] 
+							concept FaceRecognition {
+								name FaceRecognition 
+								uri "mms:FaceRecognition" 
+								description [ "Face Recognition" ] 
+							}
+
+						}
+
+						concept SceneAnalysis {
+							name SceneAnalysis 
+							uri "mms:SceneAnalysis" 
+							description [ "This is a subclass of the Visual Media class that addresses data and video applications for analysing video scenes." ] 
+						}
+
+					}
+
+					concept Finance {
+						name Finance 
+						uri "mms:Finance" 
+						description [ "This subclass refers to structured data produced from software sensors coming from different financial sectors that usually have significant velocity and may be used for imprinting and analysing real-time financial transactions." ] 
+						concept FraudDetection {
+							name FraudDetection 
+							uri "mms:FraudDetection" 
+							description [ "This subclass refers to data relevant for exposing fraudulent financial activities." ] 
+						}
+
+						concept HighFrequencyTrading {
+							name HighFrequencyTrading 
+							uri "mms:HighFrequencyTrading" 
+							description [ "This subclass of the Finance class involves data that imprint, represent and can be used to analyse financial trading actions of high velocity." ] 
+						}
+
+					}
+
+					concept LargeScaleScience {
+						name LargeScaleScience 
+						uri "mms:LargeScaleScience" 
+						description [ "This subclass addresses all the different data artefacts that may be used or produced in large scale science experiments and activities. Such structured data are usually exploited through batch processing." ] 
+						concept HighEnergyPhysics {
+							name HighEnergyPhysics 
+							uri "mms:HighEnergyPhysics" 
+							description [ "This is a subclass of the Large Scale Science class that focuses on data related to high energy physics." ] 
+						}
+
+						concept Bioinformatics {
+							name Bioinformatics 
+							uri "mms:Bioinformatics" 
+							description [ "This is a subclass of the Large Scale Science class that focuses on data related to bioinformatics." ] 
+						}
+
+					}
+
+					concept SensorData {
+						name SensorData 
+						uri "mms:SensorData" 
+						description [ "This subclass refers to semi-structured data produced from hardware or software sensors in various volumes, velocity and veracity that may be used for predicting or reacting to situations." ] 
+						concept AnomalyDetection {
+							name AnomalyDetection 
+							uri "mms:AnomalyDetection" 
+							description [ "This is a subclass of Sensor Data that refers to data carrying valuable information for detecting irregularities on recognised long term trends and patterns (e.g. unexpected traffic congestion)." ] 
+						}
+
+						concept WeatherForecasting {
+							name WeatherForecasting 
+							uri "mms:WeatherForecasting" 
+							description [ "This is a subclass of Sensor Data that refers to data carrying valuable meteorological measurement that can be used for predicting weather information in the future." ] 
+						}
+
+					}
+
+					concept NetworkSecurity {
+						name NetworkSecurity 
+						uri "mms:NetworkSecurity" 
+						description [ "This subclass refers to unstructured or semi-structured data produced from hardware or software sensors in various volumes, velocity and veracity that may be used for recognising network security threats." ] 
+						concept IntrusionDetection {
+							name IntrusionDetection 
+							uri "mms:IntrusionDetection" 
+							description [ "This is a subclass of the Network Security class that refers to data coming from sensors that may reveal unauthorised access to computer systems." ] 
+						}
+
+						concept APTs {
+							name APTs 
+							uri "mms:APTs" 
+							description [ "This subclass stands for Advanced Persisted Threat (APT) and refers to data that can be used to detect continuous cyber-threats, in particular that of Internet-enabled espionage, using a variety of intelligence gathering techniques to access sensitive information (Dell SecureWorks, 2012)." ] 
+						}
+
+					}
+
+				}
+
+				concept Big_DataAspects {
+					name Big_DataAspects 
+					uri "mms:Big_DataAspects" 
+					description [ "This class encapsulates all the attributes that can be used in order to describe the main characteristics of big data to be processed by Melodic-enabled cloud applications hosted on multi-clouds. Based on such attributes, preferences on quantitative and qualitative dimensions of virtualized resources can be expressed." ] 
+					concept DataQuality {
+						name DataQuality 
+						uri "mms:DataQuality" 
+						description [ "This class encapsulates another group of important big data concepts that reveal aspects about how accessible, secure, compact, volatile or uncertain the data is." ] 
+						concept Encryption {
+							name Encryption 
+							uri "mms:Encryption" 
+							description [ "This subclass pertains to the details of the cryptographic paradigm used for protecting sensitive data by transforming a plaintext to ciphertext based on a cryptographic key." ] 
+							property usesMessageVerification {
+								name usesMessageVerification 
+								uri "mms:usesMessageVerification" 
+								description [ "This 
+								property associates the Encryption class to a string that denotes the technique used for protecting the integrity and authenticity of a data artefact transmission. This may involve the use of a digital signature that is a mathematical scheme for verifying the real data source produced it (authentication), guarantee non-repudiation and certify that data was not altered in transit (integrity)." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property usesBlockSize {
+								name usesBlockSize 
+								uri "mms:usesBlockSize" 
+								description [ "This 
+								property associates the Encryption class to an integer that corresponds to a fixed length string of bits upon which the cipher operates." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+							property hasEncryptionType {
+								name hasEncryptionType 
+								uri "mms:hasEncryptionType" 
+								description [ "This 
+								property associates the Encryption class to a string that states the cryptographic algorithm used for performing the data encryption (e.g. Advance Encryption Standard (AES) (Daemen & Rijmen, 2003), RSA (Rivest et al., 1978))." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property usesKeySize {
+								name usesKeySize 
+								uri "mms:usesKeySize" 
+								description [ "This 
+								property associates the Encryption class to an integer that corresponds to the length (in bits) of the cryptographic key used for encrypting or decrypting sensitive data." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+						}
+
+						concept Accessibility {
+							name Accessibility 
+							uri "mms:Accessibility" 
+							description [ "This subclass refers to the level of convenience offered when attempting to access certain data artefacts. For example, accessing encrypted data might deteriorate the accessibility with the benefit of securing sensitive data." ] 
+						}
+
+						concept Compression {
+							name Compression 
+							uri "mms:Compression" 
+							description [ "This class refers to if and how data has been encoded in order to use fewer bits than its original representation (i.e. as it was captured from the relevant data sources). This can be succeeded by identifying and eliminating statistical redundancy (lossless compression) or by removing unnecessary or less important information (lossy compression)." ] 
+							property hasCompressionAlgorithm {
+								name hasCompressionAlgorithm 
+								uri "mms:hasCompressionAlgorithm" 
+								description [ "This 
+								property associates the Compression class with string that mentions the compression algorithm used (e.g. Lempel–Ziv (1978))" ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasBitRateReduction {
+								name hasBitRateReduction 
+								uri "mms:hasBitRateReduction" 
+								description [ "This 
+								property associates the Compression class with string that denotes the compression ratio (e.g. 3,56 : 1 is the bit rate reduction when compressing 32 bytes to 9 bytes)." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						concept Veracity {
+							name Veracity 
+							uri "mms:Veracity" 
+							description [ "This subclass pertains to uncertainty due to data inconsistency, incompleteness and approximations that lead to reduced accuracy." ] 
+							concept Correctness {
+								name Correctness 
+								uri "mms:Correctness" 
+								description [ "This subclass is used to describe the level of faultlessness of data acquired which implies that both the data sources and the network communication used were validated as trustworthy." ] 
+							}
+
+							concept Consistency {
+								name Consistency 
+								uri "mms:Consistency" 
+								description [ "This subclass is used to describe the lack of any corrupted or conflicting data that could appear due to error-prone backup processes or unreliable transfer mediums." ] 
+							}
+
+							concept Credibility {
+								name Credibility 
+								uri "mms:Credibility" 
+								description [ "This subclass is used to describe the integrity of data acquired, which is bound to the credibility of the data sources and network communication used." ] 
+							}
+
+							concept Traceability {
+								name Traceability 
+								uri "mms:Traceability" 
+								description [ Traceability ] 
+							}
+
+							concept Accuracy {
+								name Accuracy 
+								uri "mms:Accuracy" 
+								description [ "This subclass is used to describe the exactness of data acquired, which implies lack of approximations and/or lack of detailed measurements." ] 
+							}
+
+							concept Completeness {
+								name Completeness 
+								uri "mms:Completeness" 
+								description [ "This subclass is used to describe the plenitude of data acquired, which implies the appropriate acquisition of all the relevant data needed at any given time." ] 
+							}
+
+						}
+
+						concept Volatility {
+							name Volatility 
+							uri "mms:Volatility" 
+							description [ "This subclass refers to the degree of variation of data values over a period of time. The higher the volatility is the shorter the stored data can be considered valid." ] 
+						}
+
+					}
+
+					concept DataDensity {
+						name DataDensity 
+						uri "mms:DataDensity" 
+						description [ "This subclass reveals details on big data observed or expected velocity and volume." ] 
+						concept DataVolume {
+							name DataVolume 
+							uri "mms:DataVolume" 
+							description [ "This subclass reveals details on the expected amount of data artefacts to be processed by the Melodic-enabled cloud application." ] 
+							concept Partitions {
+								name Partitions 
+								uri "mms:Partitions" 
+								description [ "This subclass is used to describe any details required for the data partitions to be used by Melodic-enabled cloud application." ] 
+							}
+
+							property hasNumberofRecords {
+								name hasNumberofRecords 
+								uri "mms:hasNumberofRecords" 
+								description [ "This 
+								property associates the Volume class with an integer that describes the size of the data expressed as the amount of records that it may involve." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property fitsToMemory {
+								name fitsToMemory 
+								uri "mms:fitsToMemory" 
+								description [ "This 
+								property associates the Volume class with a boolean value in order to clarify whether or not the data artefact can fit in memory. We note here that we have included this 
+								property although by definition big data cannot fit in memory, in order to cover cases where there need to be a consideration of smaller amounts of data partitions in an overall big data intensive application." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+							property canBePartitioned {
+								name canBePartitioned 
+								uri "mms:canBePartitioned" 
+								description [ "This 
+								property associates the Volume class with a boolean value in order to clarify whether or not the data artefact can be physically fragmented into segments that are more easily maintained or accessed." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+							property hasSize {
+								name hasSize 
+								uri "mms:hasSize" 
+								description [ "This 
+								property associates the Volume class with a float that describes the size of the data to be processed by the Melodic-enabled cloud applications (usually measured in gigabytes (GBs), terabytes (TBs), petabytes (PBs) etc)." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+						}
+
+						concept Velocity {
+							name Velocity 
+							uri "mms:Velocity" 
+							description [ "This subclass reveals details on the anticipated speed of data to be processed by the Melodic-enabled cloud application along with the types of feeds that may be encountered (e.g. Real-time, On demand, Time-series, Continuous)." ] 
+							concept Time_Series {
+								name Time_Series 
+								uri "mms:Time_Series" 
+								description [ "This subclass refers to data streams that can be characterized as series of data points indexed in time order." ] 
+							}
+
+							concept NearReal_timeFeed {
+								name NearReal_timeFeed 
+								uri "mms:NearReal_timeFeed" 
+								description [ "This subclass describes that the access to or processing of data can be performed almost at the same time as it is produced. This implies a time delay introduced, by automated data processing or network transmission, between the occurrence of an event and the use of the data." ] 
+							}
+
+							concept Real_timeFeed {
+								name Real_timeFeed 
+								uri "mms:Real_timeFeed" 
+								description [ "This subclass implies aspects of the data velocity since it describes the access to or processing of data at the same time as it is produced. Such an access to data streams is possible in the order of milliseconds, and sometimes microseconds." ] 
+							}
+
+							concept OnDemandFeed {
+								name OnDemandFeed 
+								uri "mms:OnDemandFeed" 
+								description [ "This subclass describes that the access to or processing of data can be performed upon request. This implies that the data is produced either at the moment of the access request (e.g. get a sensor measurement) or it is first stored in order to be retrieved later on upon request." ] 
+							}
+
+							property hasRate {
+								name hasRate 
+								uri "mms:hasRate" 
+								description [ "This 
+								property is used in order to provide a measurement of how fast the data is produced, usually measure in megabits per second (Mbps) or gigabits per second (Gbps)." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property isContinuous {
+								name isContinuous 
+								uri "mms:isContinuous" 
+								description [ "This 
+								property refers to a boolean value that denotes whether data is produced and received in a continuous or in an intermittent way." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+							property isOutputVelocity {
+								name isOutputVelocity 
+								uri "mms:isOutputVelocity" 
+								description [ "This 
+								property is used in order to measure the speed of data produced by a Melodic-enabled application (float value)." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+							property isInputVelocity {
+								name isInputVelocity 
+								uri "mms:isInputVelocity" 
+								description [ "This 
+								property is used in order to measure the speed of data coming in to a Melodic-enabled application for processing (float value)." ] 
+								type data 
+								range uri "xsd:boolean" 
+							}
+
+						}
+
+					}
+
+					concept DataValue {
+						name DataValue 
+						uri "mms:DataValue" 
+						description [ "This class refers to big data aspects that reveal the business importance of data which is bound to the potential of improving a business entity’s decision making capabilities." ] 
+						concept Uniqueness {
+							name Uniqueness 
+							uri "mms:Uniqueness" 
+							description [ "This subclass refers to the amount of singular data sources involved and the level of their irreplaceability for defining aspects of the true value of the acquired data for a business entity." ] 
+						}
+
+						concept Usability {
+							name Usability 
+							uri "mms:Usability" 
+							description [ "This subclass captures aspects of big data with respect to how relevant and useful is the data for a certain entity’s business goals and decisions." ] 
+						}
+
+						concept Comprehensiveness {
+							name Comprehensiveness 
+							uri "mms:Comprehensiveness" 
+							description [ "This subclass captures aspects of big data that are related to the semantic clarity, interpretability and thus usefulness of data acquired." ] 
+						}
+
+					}
+
+					concept DataVariety {
+						name DataVariety 
+						uri "mms:DataVariety" 
+						description [ "This class refers to the different types of data that should be processed by a Melodic-enabled cloud application, stating an increased diversity of data that should be stored, processed or combined." ] 
+						concept Type {
+							name Type 
+							uri "mms:Type" 
+							description [ "This subclass refers to the media variety that big data may involve with respect to the medium in which data get delivered (e.g. audio, image, video, text)." ] 
+							concept Text {
+								name Text 
+								uri "mms:Text" 
+								description [ Text ] 
+							}
+
+							concept Audio {
+								name Audio 
+								uri "mms:Audio" 
+								description [ Audio ] 
+							}
+
+							concept Image {
+								name Image 
+								uri "mms:Image" 
+								description [ Image ] 
+							}
+
+							concept Video {
+								name Video 
+								uri "mms:Video" 
+								description [ Video ] 
+							}
+
+						}
+
+						concept Format {
+							name Format 
+							uri "mms:Format" 
+							description [ "This subclass refers to the structural variety that big data may involve which is expressed using certain schemes and models (e.g. binary large object (BLOB), JSON, XML etc)." ] 
+							concept instance FileFormat {
+								name FileFormat 
+								uri "mms:FileFormat" 
+								description [ File ] 
+							}
+
+							concept instance BLOB {
+								name BLOB 
+								uri "mms:BLOB" 
+								description [ BLOB ] 
+							}
+
+							concept instance Event {
+								name Event 
+								uri "mms:Event" 
+								description [ Event ] 
+							}
+
+							concept instance JSON {
+								name JSON 
+								uri "mms:JSON" 
+								description [ JSON ] 
+							}
+
+							concept instance String {
+								name String 
+								uri "mms:String" 
+								description [ String ] 
+							}
+
+							concept instance Key_ValuePairs {
+								name Key_ValuePairs 
+								uri "mms:Key_ValuePairs" 
+								description [ "Key-Value Pairs" ] 
+							}
+
+							concept instance RDD {
+								name RDD 
+								uri "mms:RDD" 
+								description [ RDD ] 
+							}
+
+							concept instance XML {
+								name XML 
+								uri "mms:XML" 
+								description [ XML ] 
+							}
+
+							concept instance CSV {
+								name CSV 
+								uri "mms:CSV" 
+								description [ CSV ] 
+							}
+
+						}
+
+					}
+
+					property hasDataOwner {
+						name hasDataOwner 
+						uri "mms:hasDataOwner" 
+						description [ "This 
+						property associates the Big Data Aspects class with the Subject class of the Context Aware Security model in order to express the owner of the data to be handled by a Melodic-enabled application." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+				}
+
+			}
+
+			concept ApplicationPlacementModel {
+				name ApplicationPlacementModel 
+				uri "mms:ApplicationPlacementModel" 
+				description [ "The Application Placement Model refers to the following top-level concepts; IaaS, PaaS, and Provider." ] 
+				concept ^PaaS {
+					name ^PaaS 
+					uri "mms:PaaS" 
+					description [ "This class encapsulates all the attributes related to platform level cloud resources that are required and offered for deploying Melodic-enabled applications." ] 
+					concept ApplicationServer {
+						name ApplicationServer 
+						uri "mms:ApplicationServer" 
+						description [ "This subclass accumulates all the necessary application server that might be requested (e.g. Apache Tomcat 9.0.x, Jetty 9.3.3 etc)." ] 
+						concept instance ApacheTomcat9_0_x {
+							name ApacheTomcat9_0_x 
+							uri "mms:ApacheTomcat9_0_x" 
+							description [ "Apache Tomcat 9.0.x" ] 
+						}
+
+						concept instance Jetty9_3_3 {
+							name Jetty9_3_3 
+							uri "mms:Jetty9_3_3" 
+							description [ "Jetty 9.3.3" ] 
+						}
+
+					}
+
+					concept PlatformType {
+						name PlatformType 
+						uri "mms:PlatformType" 
+						description [ "This subclass is used to register and select any one of the different available PaaS offerings depending on the scope of their offered services (e.g. OpenShift, CloudFoundry etc.)." ] 
+						concept API {
+							name API 
+							uri "mms:API" 
+							concept instance AmazonML {
+								name AmazonML 
+								uri "mms:AmazonML" 
+							}
+
+							concept instance GoogleCloudAI {
+								name GoogleCloudAI 
+								uri "mms:GoogleCloudAI" 
+							}
+
+						}
+
+						concept instance CloudFoundry {
+							name CloudFoundry 
+							uri "mms:CloudFoundry" 
+							description [ CloudFoundry ] 
+						}
+
+						concept instance OpenShift {
+							name OpenShift 
+							uri "mms:OpenShift" 
+							description [ OpenShift ] 
+						}
+
+					}
+
+					concept PaaSConfiguration {
+						name PaaSConfiguration 
+						uri "mms:PaaSConfiguration" 
+						description [ "This subclass is used in order to register all the configuration details needed for using platform level cloud services." ] 
+						property hasAPI {
+							name hasAPI 
+							uri "mms:hasAPI" 
+							description [ "This 
+							property refers to a string for denoting the API that can be used for performing application management (e.g. upload applications to the cloud, start/stop, monitor application etc)." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasVersion {
+							name hasVersion 
+							uri "mms:hasVersion" 
+							description [ "This 
+							property refers to a string for denoting the version of a certain configuration." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasDownload {
+							name hasDownload 
+							uri "mms:hasDownload" 
+							description [ "This 
+							property refers to a string for denoting services needed to be downloaded and installed before hosting a cloud application." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept SecurityControls {
+						name SecurityControls 
+						uri "mms:SecurityControls" 
+						description [ "This is a subclass of the PaaS class and refers to all the possible security enforcement mechanisms that may be offered or required as a service for protecting the operation of hosted cloud applications. All its subclasses refer to specific security controls that have been classified based on the latest version of the Cloud Controls Matrix (CSA, 2016) introduced by the Cloud Security Alliance." ] 
+						concept CSA_BCR_02 {
+							name CSA_BCR_02 
+							uri "mms:CSA_BCR_02" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Business Continuity Management & Operational Resilience - Business Continuity Testing" ] 
+							concept SecurityTesting {
+								name SecurityTesting 
+								uri "mms:SecurityTesting" 
+								description [ "This subclass is used to mention any required or offered testing techniques and tools that verify the appropriate support of a certain virtualized resource for Confidentiality, Integrity, Authentication, Authorization, Availability and Non-repudiation. Example instances: FxCop, FindBugs, Appscan" ] 
+							}
+
+						}
+
+						concept CSA_EKM_02 {
+							name CSA_EKM_02 
+							uri "mms:CSA_EKM_02" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Encryption & Key Management - Key Generation" ] 
+							concept KeyManagement {
+								name KeyManagement 
+								uri "mms:KeyManagement" 
+								description [ "This subclass is used to mention required or offered mechanisms necessary for creating, revoking and relaying cryptographic keys (to be used for encrypting/decrypting sensitive data) and also ensuring that these keys will not revealed to any unauthorized or malicious users (Verginadis et al., 2015)" ] 
+							}
+
+						}
+
+						concept CSA_IVS_01 {
+							name CSA_IVS_01 
+							uri "mms:CSA_IVS_01" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure & Virtualization Security - Audit Logging / Intrusion Detection." ] 
+							concept IDS {
+								name IDS 
+								uri "mms:IDS" 
+								description [ "This subclass is used to provide information about the characteristics of intrusion detection systems (IDS) offered or required for monitoring the virtual resource for malicious activities or any policy violations." ] 
+							}
+
+						}
+
+						concept CSA_IVS_13 {
+							name CSA_IVS_13 
+							uri "mms:CSA_IVS_13" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure & Virtualization Security - Network Architecture." ] 
+							concept DDoSMitigation {
+								name DDoSMitigation 
+								uri "mms:DDoSMitigation" 
+								description [ "This subclass is used to provide details on the distributed denial-of-service (DDoS) prevention capabilities offered or required for alleviating cyber-attacks that aim to constitute a cloud resource temporarily or indefinitely unavailable by flooding it with superfluous requests." ] 
+							}
+
+						}
+
+						concept CSA_DSI_07 {
+							name CSA_DSI_07 
+							uri "mms:CSA_DSI_07" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Data Security & Information Lifecycle Management - Secure Disposal" ] 
+							concept DataSanitization {
+								name DataSanitization 
+								uri "mms:DataSanitization" 
+								description [ "This subclass denotes the capability of offering deliberate, permanent, and irreversible removal of data stored on a virtualised resource." ] 
+								concept DoD5220_22_M {
+									name DoD5220_22_M 
+									uri "mms:DoD5220_22_M" 
+									description [ "DoD 5220.22-M" ] 
+								}
+
+								property hasNotificationMethod {
+									name hasNotificationMethod 
+									uri "mms:hasNotificationMethod" 
+									description [ "This 
+									property associates the Data Sanitization class with a string for requesting or stating the method used for informing the cloud resource’s client about the successful sanitization of data." ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+							}
+
+						}
+
+						concept CSA_EKM_03 {
+							name CSA_EKM_03 
+							uri "mms:CSA_EKM_03" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Encryption & Key Management - Sensitive Data Protection" ] 
+							concept CSA_EKM_03_Encryption {
+								name CSA_EKM_03_Encryption 
+								uri "mms:CSA_EKM_03_Encryption" 
+								description [ "This subclass denotes the capability of offering encryption and decryption as a service from a certain virtualised resource." ] 
+							}
+
+						}
+
+						concept CSA_IVS_06 {
+							name CSA_IVS_06 
+							uri "mms:CSA_IVS_06" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure & Virtualization Security - Network Security." ] 
+							concept IPS {
+								name IPS 
+								uri "mms:IPS" 
+								description [ "This subclass is used to provide information about the characteristics of intrusion prevention systems (IPS) for examining network traffic flows and patterns in order to detect and prevent vulnerability exploits." ] 
+								concept Firewall {
+									name Firewall 
+									uri "mms:Firewall" 
+									description [ Firewall ] 
+								}
+
+							}
+
+						}
+
+						concept CSA_GRM_10 {
+							name CSA_GRM_10 
+							uri "mms:CSA_GRM_10" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Governance and Risk Management - Risk Assessments." ] 
+							concept SecurityRiskAssessment {
+								name SecurityRiskAssessment 
+								uri "mms:SecurityRiskAssessment" 
+								description [ "This subclass lists the requested or offered tools for determining the security risks related to the virtualised resources use." ] 
+								concept VulnerabilityAssessment {
+									name VulnerabilityAssessment 
+									uri "mms:VulnerabilityAssessment" 
+									description [ "This subclass of CSA-IVS-05 class is used to mention security vulnerability assessment tools offered or requested that accommodate the virtualization technologies used (i.e., virtualization aware) (CSA, 2016)" ] 
+								}
+
+								concept CSA_IVS_05 {
+									name CSA_IVS_05 
+									uri "mms:CSA_IVS_05" 
+									description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure & Virtualization Security - Vulnerability Management" ] 
+									concept VulnerabilityAssesment {
+										name VulnerabilityAssesment 
+										uri "mms:VulnerabilityAssesment" 
+										description [ "Vulnerability Assesment" ] 
+									}
+
+								}
+
+							}
+
+						}
+
+						concept CSA_IAM_09 {
+							name CSA_IAM_09 
+							uri "mms:CSA_IAM_09" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Identity & Access Management - User Access Authorization." ] 
+							concept Authorization {
+								name Authorization 
+								uri "mms:Authorization" 
+								description [ "This subclass is used to denote the offering or required functionalities for controlling the way access is permitted to cloud resources or persisted sensitive data (e.g. RBAC, Attribute-based access control)." ] 
+							}
+
+						}
+
+						concept CSA_IAM_02 {
+							name CSA_IAM_02 
+							uri "mms:CSA_IAM_02" 
+							description [ "This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Identity & Access Management - Credential Lifecycle / Provision Management." ] 
+							concept Identity_AccessManagement {
+								name Identity_AccessManagement 
+								uri "mms:Identity_AccessManagement" 
+								description [ "This subclass is used to denote the offering or required functionalities for registering and updating the identity of entities that may request access to cloud resources or sensitive data along with their access requests and actions logging." ] 
+								concept Authentication {
+									name Authentication 
+									uri "mms:Authentication" 
+									description [ "This is a subclass that encapsulates offered or required capabilities for attesting the identity of entities that may request access to cloud resources or sensitive data." ] 
+								}
+
+								concept CredentialLifeCycleManagement {
+									name CredentialLifeCycleManagement 
+									uri "mms:CredentialLifeCycleManagement" 
+									description [ "This subclass refers to end-user’s credential creation, update, deletion or revocation that may be offered or required in certain access control paradigms (e.g. Role-based access control (RBAC))." ] 
+								}
+
+								concept AccessLogging {
+									name AccessLogging 
+									uri "mms:AccessLogging" 
+									description [ "This subclass refers to mechanisms and their characteristics offered or required for registering and persisting all kind of access actions performed." ] 
+								}
+
+							}
+
+						}
+
+						property guaranteesNon_Repudiation {
+							name guaranteesNon_Repudiation 
+							uri "mms:guaranteesNon_Repudiation" 
+							description [ "This 
+							property refers to a boolean value that states whether or not the offered PaaS services can provide proof of the integrity and origin of data with high assurance." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+					}
+
+					concept Environment {
+						name Environment 
+						uri "mms:Environment" 
+						description [ "This subclass encapsulates all the aspects that identify the platform level cloud environment (Höfer & Karagiannis , 2011)." ] 
+						concept Framework {
+							name Framework 
+							uri "mms:Framework" 
+							description [ "This subclass describes the offered or requested web framework for rapid development (e.g. PLAY, DJANGO)" ] 
+							concept instance Joomla {
+								name Joomla 
+								uri "mms:Joomla" 
+								description [ Joomla ] 
+							}
+
+							concept instance Grails {
+								name Grails 
+								uri "mms:Grails" 
+								description [ Grails ] 
+							}
+
+							concept instance DJANGO {
+								name DJANGO 
+								uri "mms:DJANGO" 
+								description [ DJANGO ] 
+							}
+
+							concept instance Compound_JS {
+								name Compound_JS 
+								uri "mms:Compound_JS" 
+								description [ Compound_JS ] 
+							}
+
+							concept instance PLAY {
+								name PLAY 
+								uri "mms:PLAY" 
+								description [ PLAY ] 
+							}
+
+						}
+
+						concept HardwareImage {
+							name HardwareImage 
+							uri "mms:HardwareImage" 
+							description [ "This subclass describes any pre-installed cloud image available for initializing an IaaS resource." ] 
+							property hasImageId {
+								name hasImageId 
+								uri "mms:hasImageId" 
+								description [ "This 
+								property refers to an integer for referencing available cloud images." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						concept Container {
+							name Container 
+							uri "mms:Container" 
+							description [ "" ] 
+							concept instance Docker {
+								name Docker 
+								uri "mms:Docker" 
+								description [ "" ] 
+							}
+
+							concept instance Kubernetes {
+								name Kubernetes 
+								uri "mms:Kubernetes" 
+								description [ "" ] 
+							}
+
+						}
+
+						property hasLanguageSupport {
+							name hasLanguageSupport 
+							uri "mms:hasLanguageSupport" 
+							description [ "This 
+							property refers to the offered or requested development language support which implies certain related middleware (e.g. Java runtime, .NET runtime etc.). It associates the Environment class with a string." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasOS {
+							name hasOS 
+							uri "mms:hasOS" 
+							description [ "This 
+							property describes the offered or requested operating system (e.g. UbuntuServer, CentOs). It associates the Environment class with a string." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+						
+						property OSVersion {
+							name OSVersion 
+							uri "mms:OSVersion" 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					property isOfferededByProvider {
+						name isOfferededByProvider 
+						uri "mms:isOfferededByProvider" 
+						description [ "This object 
+						property associates the PaaS class with the Provider Class (of the Application Placement Model) for expressing characteristics and identity of the resource provider." ] 
+						type object 
+						range Provider 
+						range uri "xsd:boolean" 
+					}
+
+					property usesCloud {
+						name usesCloud 
+						uri "mms:usesCloud" 
+						description [ "This object 
+						property associates the PaaS class with the Cloud Class (of the Application Placement Model) for denoting with one reference the characteristics of the underlying IaaS level resources used for offering PaaS services." ] 
+						type object 
+						range IaaS.Cloud 
+					}
+
+					property hasAvailability {
+						name hasAvailability 
+						uri "mms:hasAvailability" 
+						description [ "This 
+						property may associate a PaaS resource with a float that expresses the expected uptime of the platform level resource." ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property hasCostFunction {
+						name hasCostFunction 
+						uri "mms:hasCostFunction" 
+						description [ "This 
+						property associates the PaaS class with a string that refers to a function that provides an accurate calculation of the expected cost for using platform level services." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+					property PaaSHasLocation {
+						name PaaSHasLocation 
+						uri "mms:PaaSHasLocation" 
+						description [ "This object 
+						property associates the PaaS class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location of the virtualised resource." ] 
+						type object 
+						range Big_DataModel.DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property hasPricingType {
+						name hasPricingType 
+						uri "mms:hasPricingType" 
+						description [ "This Property refers to the different pricing per use schemes that each provider may offer regarding platform level cloud resources." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+				}
+
+				concept Provider {
+					name Provider 
+					uri "mms:Provider" 
+					description [ "This class captures the characteristics of IaaS or PaaS providers and extends the hierarchy and concepts used in the Saloon ontology (Quinton et al., 2012; Quinton et al., 2013)" ] 
+					property offersPaaS {
+						name offersPaaS 
+						uri "mms:offersPaaS" 
+						description [ "This object 
+						property associates the Provider class with the PaaS class of the Application Placement model for describing its platform level offerings." ] 
+						type object 
+						range PaaS 
+					}
+
+					property offersIaaS {
+						name offersIaaS 
+						uri "mms:offersIaaS" 
+						description [ "This object 
+						property associates the Provider class with the IaaS class of the Application Placement model for describing its infrastructural offerings." ] 
+						type object 
+						range IaaS 
+					}
+
+					property hasGreenFootprint {
+						name hasGreenFootprint 
+						uri "mms:hasGreenFootprint" 
+						description [ "This 
+						property refers to a boolean value that denotes whether or not the provider’s offerings have the minimum possible impact on the environment." ] 
+						type data 
+						range uri "xsd:boolean" 
+					}
+
+					property hasProviderReputation {
+						name hasProviderReputation 
+						uri "mms:hasProviderReputation" 
+						description [ "This 
+						property refers to a string that denotes how appreciated is a certain provider based on its customers satisfaction." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+					concept instance Amazon {
+						name Amazon 
+						uri "mms:Amazon" 
+						description [ Amazon ] 
+					}
+
+					concept instance Rackspace {
+						name Rackspace 
+						uri "mms:Rackspace" 
+						description [ Rackspace ] 
+					}
+
+					concept instance ElasticHosts {
+						name ElasticHosts 
+						uri "mms:ElasticHosts" 
+						description [ ElasticHosts ] 
+					}
+
+					concept instance Google {
+						name Google 
+						uri "mms:Google" 
+						description [ Google ] 
+					}
+
+					concept instance Microsoft {
+						name Microsoft 
+						uri "mms:Microsoft" 
+						description [ Microsoft ] 
+					}
+
+					concept instance DigitalOcean {
+						name DigitalOcean 
+						uri "mms:DigitalOcean" 
+						description [ DigitalOcean ] 
+					}
+
+				}
+
+				concept ^IaaS {
+					name ^IaaS 
+					uri "mms:IaaS" 
+					description [ "This class encapsulates all the attributes related to cloud infrastructural resources that are required and offered for deploying Melodic-enabled applications. It reuses and extends the requirement model of CAMEL (Rossini et al., 2015)." ] 
+					concept Network {
+						name Network 
+						uri "mms:Network" 
+						description [ "This class refers to the network related aspects that bound the operation of an offered or a requested IaaS resource." ] 
+						property hasIPType {
+							name hasIPType 
+							uri "mms:hasIPType" 
+							description [ "This 
+							property is used to express the required or offered 
+							type of internet protocol with respect to its access availability. It associates the Network class with a string." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property networkHasSubnet {
+							name networkHasSubnet 
+							uri "mms:networkHasSubnet" 
+							description [ "This 
+							property corresponds to a string value that represent the subnet of an IaaS resource." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasAvailabilityZone {
+							name hasAvailabilityZone 
+							uri "mms:hasAvailabilityZone" 
+							description [ "This object 
+							property associates the Network class to the Availability Zone class of the Big Data Model for denoting isolated locations used to make network resources available." ] 
+							type object 
+							range ContextAwareSecurityModel.SecurityContextElement.Location.PhysicalLocation.CloudLocation.AvailabilityZone 
+							range uri "xsd:string" 
+						}
+
+						property networkHasVersion {
+							name networkHasVersion 
+							uri "mms:networkHasVersion" 
+							description [ "This 
+							property is used to express the required or offered IP version (e.g. IPv4, IPv6). It associates the Network class with a string." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasBandwidth {
+							name hasBandwidth 
+							uri "mms:hasBandwidth" 
+							description [ "This 
+							property associates the Network class with a float value that states the maximum throughput of a logical or physical communication path. It corresponds to the number of bits that can be conveyed per unit of time." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasPublicIP {
+							name hasPublicIP 
+							uri "mms:hasPublicIP" 
+							description [ "This 
+							property corresponds to a string value that represents the public IP of an IaaS resource." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasNetworkCost {
+							name hasNetworkCost 
+							uri "mms:hasNetworkCost" 
+							description [ "This 
+							property denotes a float value that expresses the cost for exploiting the network resources." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasPrivateIP {
+							name hasPrivateIP 
+							uri "mms:hasPrivateIP" 
+							description [ "This 
+							property corresponds to a string value that represents the private IP of an IaaS resource." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Storage {
+						name Storage 
+						uri "mms:Storage" 
+						description [ "This class describes the ephemeral or persistent storing capabilities that are required or offered by a certain IaaS resource." ] 
+						concept On_InstanceStorage {
+							name On_InstanceStorage 
+							uri "mms:On_InstanceStorage" 
+							description [ "This subclass refers to ephemeral storage capabilities requested or offered by a virtualised resource. Essentially the storage capabilities described with this class last until the certain resource is decommissioned." ] 
+							concept instance AmazonInstanceStore {
+								name AmazonInstanceStore 
+								uri "mms:AmazonInstanceStore" 
+								description [ "Amazon Instance Store" ] 
+							}
+
+							concept instance Nova {
+								name Nova 
+								uri "mms:Nova" 
+								description [ Nova ] 
+							}
+
+						}
+
+						concept Capacity {
+							name Capacity 
+							uri "mms:Capacity" 
+							description [ "This subclass is used for stating the size of storage space requested or offered by a certain IaaS resource." ] 
+							property hasMax {
+								name hasMax 
+								uri "mms:hasMax" 
+								description [ "This 
+								property denotes an integer that captures the maximum size of storage available or requested." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+							property hasMin {
+								name hasMin 
+								uri "mms:hasMin" 
+								description [ "This 
+								property denotes an integer that captures the minimum size of storage available or requested." ] 
+								type data 
+								range uri "xsd:integer" 
+							}
+
+							property hasUnit {
+								name hasUnit 
+								uri "mms:hasUnit" 
+								description [ "This 
+								property refers to a string that states the measurement unit used for declaring the storage capacity of a certain resource (e.g. GBs)." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						concept Off_InstanceStorage {
+							name Off_InstanceStorage 
+							uri "mms:Off_InstanceStorage" 
+							description [ "This subclass refers to persistent storage capabilities requested or offered by a virtualised resource." ] 
+							concept BlockStorage {
+								name BlockStorage 
+								uri "mms:BlockStorage" 
+								description [ "This subclass refers to a 
+								type of persistent storage where data are stored into evenly sized blocks, each with its own unique address." ] 
+								concept instance EBS {
+									name EBS 
+									uri "mms:EBS" 
+									description [ EBS ] 
+								}
+
+								concept instance Cinder {
+									name Cinder 
+									uri "mms:Cinder" 
+									description [ Cinder ] 
+								}
+
+							}
+
+							concept ObjectStorage {
+								name ObjectStorage 
+								uri "mms:ObjectStorage" 
+								description [ "This subclass refers to a 
+								type of persistent storage where data are stored as objects encapsulating the data artefacts, their 
+								metadata and a globally unique identifier." ] 
+								concept instance S3 {
+									name S3 
+									uri "mms:S3" 
+									description [ S3 ] 
+								}
+
+								concept instance SWIFT {
+									name SWIFT 
+									uri "mms:SWIFT" 
+									description [ SWIFT ] 
+								}
+
+							}
+
+						}
+
+						property isEnergyEfficient {
+							name isEnergyEfficient 
+							uri "mms:isEnergyEfficient" 
+							description [ "This 
+							property associates the Storage class with a boolean value that reveals the level of efficacy with respect to how much energy is needed for exploiting the storage capabilities of a resource." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasDataMigrationCost {
+							name hasDataMigrationCost 
+							uri "mms:hasDataMigrationCost" 
+							description [ hasDataMigrationCost ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasReadThroughput {
+							name hasReadThroughput 
+							uri "mms:hasReadThroughput" 
+							description [ "This 
+							property associates the Storage class with a float that represents the volume of data artefacts that can be retrieved a certain IaaS resource." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasDiskUsage {
+							name hasDiskUsage 
+							uri "mms:hasDiskUsage" 
+							description [ "This 
+							property denotes a float that represents the percentage of storing space used for persisting data artefacts." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property isPersistent {
+							name isPersistent 
+							uri "mms:isPersistent" 
+							description [ "This 
+							property associates the Storage class with a boolean value that states the ephemeral or persistent nature of storing capabilities offered by a certain IaaS resource." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasWriteThroughput {
+							name hasWriteThroughput 
+							uri "mms:hasWriteThroughput" 
+							description [ "This 
+							property associates the Storage class with a float that represents the volume of data artefacts that can be stored in a certain IaaS resource." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasReadCost {
+							name hasReadCost 
+							uri "mms:hasReadCost" 
+							description [ "This 
+							property associates the Storage class with a float that represents the cost for retrieving data artefacts from a certain IaaS resource." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasStorageCostFunction {
+							name hasStorageCostFunction 
+							uri "mms:hasStorageCostFunction" 
+							description [ "This 
+							property associates the Storage class with a string that refers to a function that provides an accurate calculation of the expected cost for storing data artefacts." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasSolidStateDrive {
+							name hasSolidStateDrive 
+							uri "mms:hasSolidStateDrive" 
+							description [ "This 
+							property denotes whether a 
+							type of non-volatile storage that is able to store and retrieve data artefacts using only electronic circuits is used." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property hasStorageLocation {
+							name hasStorageLocation 
+							uri "mms:hasStorageLocation" 
+							description [ "This object 
+							property associates the Storage class with the Cloud Location class of the Big Data Model for registering the location of an IaaS resource with storing capabilities." ] 
+							type object 
+							range Big_DataModel.DataLocation 
+							range uri "xsd:string" 
+						}
+
+						property hasWriteCost {
+							name hasWriteCost 
+							uri "mms:hasWriteCost" 
+							description [ "This 
+							property associates the Storage class with a float that represents the cost for accumulating data artefacts in a certain IaaS resource." ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+					}
+
+					concept Processing {
+						name Processing 
+						uri "mms:Processing" 
+						description [ "This class involves any infrastructural feature bound to the processing capability of virtualised resources." ] 
+						concept CPU {
+							name CPU 
+							uri "mms:CPU" 
+							description [ "This class refers to IaaS resources that use Central Processing Units (CPUs) for carrying out software instructions that specify the basic arithmetic, logical, control and input/output (I/O) operations." ] 
+							property hasMaxNumberofCores {
+								name hasMaxNumberofCores 
+								uri "mms:hasMaxNumberofCores" 
+								description [ "This 
+								property denotes an integer that captures the maximum number of CPU cores available or requested." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasCPUUtilization {
+								name hasCPUUtilization 
+								uri "mms:hasCPUUtilization" 
+								description [ "This 
+								property associates the CPU class with a double that represents the current percentage of use for a certain processing unit." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property hasMFLOPs {
+								name hasMFLOPs 
+								uri "mms:hasMFLOPs" 
+								description [ "This 
+								property associates the CPU class with an integer that represents the capability for mega floating-point operations per second." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasManufacturer {
+								name hasManufacturer 
+								uri "mms:hasManufacturer" 
+								description [ "This 
+								property expresses as a string the manufacturer of the certain processing unit." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasMinNumberofCores {
+								name hasMinNumberofCores 
+								uri "mms:hasMinNumberofCores" 
+								description [ "This 
+								property denotes an integer that captures the minimum number of CPU cores available or requested." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasMIPs {
+								name hasMIPs 
+								uri "mms:hasMIPs" 
+								description [ "This 
+								property associates the CPU class with an integer that expresses million instructions per second as a measure of processing speed supported by a certain IaaS resource." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasFrequency {
+								name hasFrequency 
+								uri "mms:hasFrequency" 
+								description [ "This 
+								property captures the CPU performance as it specifies the operating frequency of the CPU cores, expressed in cycles per second. It associates the CPU class with an integer value." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+						}
+
+						concept RAM {
+							name RAM 
+							uri "mms:RAM" 
+							description [ "This class corresponds to the memory capabilities of a virtualised resource." ] 
+							concept TotalMemory {
+								name TotalMemory 
+								uri "mms:TotalMemory" 
+								description [ "This subclass captures the desired or offered value of the virtualised storage dedicated for frequent program instructions." ] 
+								property totalMemoryHasUnit {
+									name totalMemoryHasUnit 
+									uri "mms:totalMemoryHasUnit" 
+									description [ "This 
+									property associates the Total Memory class with a string that represents the measurement module of the memory capacity." ] 
+									type data 
+									range uri "xsd:string" 
+								}
+
+								property totalMemoryHasMin {
+									name totalMemoryHasMin 
+									uri "mms:totalMemoryHasMin" 
+									description [ "This 
+									property associates the Total Memory class with an integer that represents the least amount of memory capacity required or offered." ] 
+									type data 
+									range uri "xsd:positiveInteger" 
+								}
+
+								property totalMemoryHasMax {
+									name totalMemoryHasMax 
+									uri "mms:totalMemoryHasMax" 
+									description [ "This 
+									property associates the Total Memory class with an integer that represents the largest amount of memory capacity required or offered." ] 
+									type data 
+									range uri "xsd:positiveInteger" 
+								}
+
+							}
+
+							property RAMhasManufacturer {
+								name RAMhasManufacturer 
+								uri "mms:RAMhasManufacturer" 
+								description [ "This 
+								property associates the RAM class with a string that denotes the producer of the hardware." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property hasUsedMemoryPercentage {
+								name hasUsedMemoryPercentage 
+								uri "mms:hasUsedMemoryPercentage" 
+								description [ hasUsedMemoryPercentage ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property hasFreeMemoryPercentage {
+								name hasFreeMemoryPercentage 
+								uri "mms:hasFreeMemoryPercentage" 
+								description [ hasFreeMemoryPercentage ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property hasFreeMemory {
+								name hasFreeMemory 
+								uri "mms:hasFreeMemory" 
+								description [ "This 
+								property associates the RAM class with a value expressed in double-precision floating-point format (double) that denotes the amount of unused memory currently available by the virtualised resource." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property hasUsedMemory {
+								name hasUsedMemory 
+								uri "mms:hasUsedMemory" 
+								description [ "This 
+								property associates the RAM class with a value expressed in double format that denotes the amount of used memory in the virtualised resource." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+						}
+
+						concept GPU {
+							name GPU 
+							uri "mms:GPU" 
+							description [ "This class refers to IaaS resources that use graphics processing units (GPUs), i.e. specialized electronic circuits initially designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer." ] 
+							property hasMemoryBandwidth {
+								name hasMemoryBandwidth 
+								uri "mms:hasMemoryBandwidth" 
+								description [ hasMemoryBandwidth ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasWarpSize {
+								name hasWarpSize 
+								uri "mms:hasWarpSize" 
+								description [ "This 
+								property expresses as an integer the number of threads supported to coalesce memory access and instruction dispatch." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property GPUhasMFLOPs {
+								name GPUhasMFLOPs 
+								uri "mms:GPUhasMFLOPs" 
+								description [ "This 
+								property associates the GPU class with an integer that represents the capability for mega floating-point operations per second, which is a common measure of processing speed." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasGPUUtilization {
+								name hasGPUUtilization 
+								uri "mms:hasGPUUtilization" 
+								description [ "This 
+								property associates the GPU class with a double that represents the current percentage of use for a certain processing unit." ] 
+								type data 
+								range uri "xsd:double" 
+							}
+
+							property hasMaxConcurrentWorkgroups {
+								name hasMaxConcurrentWorkgroups 
+								uri "mms:hasMaxConcurrentWorkgroups" 
+								description [ "This 
+								property denotes an integer that represents the maximum work-groups that may be simultaneously executed on compute units supported by a certain GPU." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property GPUhasMinNumberofCores {
+								name GPUhasMinNumberofCores 
+								uri "mms:GPUhasMinNumberofCores" 
+								description [ "This 
+								property denotes an integer that captures the minimum number of GPU cores available or requested." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasClockSpeed {
+								name hasClockSpeed 
+								uri "mms:hasClockSpeed" 
+								description [ "This 
+								property captures the GPU operating speed expressed in cycles per second. It associates the GPU class with an integer value." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property GPUhasManufacturer {
+								name GPUhasManufacturer 
+								uri "mms:GPUhasManufacturer" 
+								description [ "This 
+								property expresses as a string the manufacturer of the processing unit." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+							property GPUhasMaxNumberofCores {
+								name GPUhasMaxNumberofCores 
+								uri "mms:GPUhasMaxNumberofCores" 
+								description [ "This 
+								property denotes an integer that captures the maximum number of GPU cores available or requested." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasPEperCUs {
+								name hasPEperCUs 
+								uri "mms:hasPEperCUs" 
+								description [ "This 
+								property expresses with an integer the number of processing elements per compute units that a certain GPU offers." ] 
+								type data 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasStartUsageDate {
+								name hasStartUsageDate 
+								uri "mms:hasStartUsageDate" 
+								description [ "This 
+								property denotes the date when a certain GPU began to operate. It can be used as an attribute that reveals how new the processing units used by a certain IaaS resource are." ] 
+								type data 
+								range uri "xsd:dateTime" 
+							}
+
+						}
+
+						property GPUhasProcessingCost {
+							name GPUhasProcessingCost 
+							uri "mms:GPUhasProcessingCost" 
+							description [ hasProcessingCost ] 
+							type data 
+							range uri "xsd:double" 
+						}
+
+						property hasProcessingNodeLocation {
+							name hasProcessingNodeLocation 
+							uri "mms:hasProcessingNodeLocation" 
+							description [ hasProcessingNodeLocation ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasPowerConsumption {
+							name hasPowerConsumption 
+							uri "mms:hasPowerConsumption" 
+							description [ hasPowerConsumption ] 
+							type data 
+							range uri "xsd:positiveInteger" 
+						}
+
+					}
+
+					concept Hypervisor {
+						name Hypervisor 
+						uri "mms:Hypervisor" 
+						description [ "This class is used to express the characteristics of the used hypervisor software, firmware or hardware for creating and commissioning virtual machines." ] 
+						concept Hosted {
+							name Hosted 
+							uri "mms:Hosted" 
+							description [ "This subclass captures the characteristics of hypervisors that operate within a host OS for hosting guest operating systems inside of it." ] 
+							concept instance QEMU {
+								name QEMU 
+								uri "mms:QEMU" 
+								description [ QEMU ] 
+							}
+
+							concept instance VMwareWorkstation {
+								name VMwareWorkstation 
+								uri "mms:VMwareWorkstation" 
+								description [ "VMware Workstation" ] 
+							}
+
+							concept instance VirtualBox {
+								name VirtualBox 
+								uri "mms:VirtualBox" 
+								description [ VirtualBox ] 
+							}
+
+							concept instance VMWarePlayer {
+								name VMWarePlayer 
+								uri "mms:VMWarePlayer" 
+								description [ "VMWare Player" ] 
+							}
+
+						}
+
+						concept Bare_Metal {
+							name Bare_Metal 
+							uri "mms:Bare_Metal" 
+							description [ "This subclass captures the characteristics of hypervisors that operate directly on the hardware for hosting guest operating systems." ] 
+							concept instance VMwareESX_ESXi {
+								name VMwareESX_ESXi 
+								uri "mms:VMwareESX_ESXi" 
+								description [ "VMware ESX/ESXi" ] 
+							}
+
+							concept instance OracleVMServer {
+								name OracleVMServer 
+								uri "mms:OracleVMServer" 
+								description [ "Oracle VM Server" ] 
+							}
+
+							concept instance MicrosoftHyper_V {
+								name MicrosoftHyper_V 
+								uri "mms:MicrosoftHyper_V" 
+								description [ "Microsoft Hyper-V" ] 
+							}
+
+							concept instance Xen {
+								name Xen 
+								uri "mms:Xen" 
+								description [ Xen ] 
+							}
+
+						}
+
+						property supportsVirtualizationFormat {
+							name supportsVirtualizationFormat 
+							uri "mms:supportsVirtualizationFormat" 
+							description [ "This 
+							property associates the Hypervisor class with a string that denotes the format used for describing a virtual machine (e.g. Open Virtualization Format)." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+					}
+
+					concept Cloud {
+						name Cloud 
+						uri "mms:Cloud" 
+						description [ "This class groups the characteristics of virtualised resources for easier reference and use." ] 
+						concept VMFlavor {
+							name VMFlavor 
+							uri "mms:VMFlavor" 
+							description [ "This subclass denotes virtual hardware templates required or offered. This indirectly defines important IaaS level values (e.g. RAM, disk, number of cores etc.) of the offered or required IaaS resources." ] 
+							property hasStorage {
+								name hasStorage 
+								uri "mms:hasStorage" 
+								description [ "This object 
+								property associates the Cloud class to the CPU class of the Application Placement model for denoting the storage capability of the IaaS resource." ] 
+								type object 
+								range Storage 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasCPU {
+								name hasCPU 
+								uri "mms:hasCPU" 
+								description [ "This object 
+								property associates the Cloud class to the CPU class of the Application Placement model for denoting the CPU power of the IaaS resource." ] 
+								type object 
+								range Processing.CPU 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasGPU {
+								name hasGPU 
+								uri "mms:hasGPU" 
+								description [ "This object 
+								property associates the Cloud class to the GPU class of the Application Placement model for denoting the GPU power of the IaaS resource." ] 
+								type object 
+								range Processing.GPU 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property hasRAM {
+								name hasRAM 
+								uri "mms:hasRAM" 
+								description [ "This object 
+								property associates the Cloud class to the RAM class of the Application Placement model for denoting the available RAM of the IaaS resource." ] 
+								type object 
+								range Processing.RAM 
+								range uri "xsd:positiveInteger" 
+							}
+
+							property VMFlavorHasName {
+								name VMFlavorHasName 
+								uri "mms:VMFlavorHasName" 
+								description [ "This 
+								property corresponds to a string value that denotes the 
+								name of a VM flavour for easy referencing." ] 
+								type data 
+								range uri "xsd:string" 
+							}
+
+						}
+
+						property CloudhasName {
+							name CloudhasName 
+							uri "mms:CloudhasName" 
+							description [ "This 
+							property corresponds to a string value that denotes the 
+							name of a cloud offering for easy referencing." ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasDedicatedRole {
+							name hasDedicatedRole 
+							uri "mms:hasDedicatedRole" 
+							description [ hasDedicatedRole ] 
+							type data 
+							range uri "xsd:string" 
+						}
+
+						property hasID {
+							name hasID 
+							uri "mms:hasID" 
+							description [ "This 
+							property corresponds to an integer that denotes the identifier of a cloud offering for easy referencing." ] 
+							type data 
+							range uri "xsd:integer" 
+						}
+
+						property isPrivate {
+							name isPrivate 
+							uri "mms:isPrivate" 
+							description [ "This 
+							property associates the Cloud class with a boolean value that denotes whether or not the offered or requested cloud resource is private." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isPublic {
+							name isPublic 
+							uri "mms:isPublic" 
+							description [ "This 
+							property associates the Cloud class with a boolean value that denotes whether or not the offered or requested cloud resource is public." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+						property isDedicated {
+							name isDedicated 
+							uri "mms:isDedicated" 
+							description [ "This 
+							property associates the Cloud class with a boolean value that denotes whether or not the host of the offered resource is dedicated to only one user or more." ] 
+							type data 
+							range uri "xsd:boolean" 
+						}
+
+					}
+
+					property hasBareMetalCost {
+						name hasBareMetalCost 
+						uri "mms:hasBareMetalCost" 
+						description [ "This 
+						property associates the IaaS class with a value expressed in floating-point format (float) denoting the usage cost of a certain bare metal resource." ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property refersToVM {
+						name refersToVM 
+						uri "mms:refersToVM" 
+						description [ "This 
+						property clarifies that a certain IaaS resource (required or offered) is a virtual machine." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+					property CloudHasAvailability {
+						name CloudHasAvailability 
+						uri "mms:CloudHasAvailability" 
+						description [ "This 
+						property may associate an IaaS resource with a float that expresses the expected uptime of the resource." ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property hasCloudProvider {
+						name hasCloudProvider 
+						uri "mms:hasCloudProvider" 
+						description [ "This object 
+						property associates the IaaS class with the Provider Class (of the Application Placement Model) for expressing characteristics and identity of the resource provider." ] 
+						type object 
+						range Provider 
+						range uri "xsd:string" 
+					}
+
+					property supportsRequestsPerSecond {
+						name supportsRequestsPerSecond 
+						uri "mms:supportsRequestsPerSecond" 
+						description [ "This 
+						property may associate an IaaS resource with an integer that expresses the volume of requests that it can support." ] 
+						type data 
+						range uri "xsd:integer" 
+					}
+
+					property CloudHasLocation {
+						name CloudHasLocation 
+						uri "mms:CloudHasLocation" 
+						description [ "This object 
+						property associates the IaaS class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location of the virtualised resource." ] 
+						type object 
+						range Big_DataModel.DataLocation 
+						range uri "xsd:string" 
+					}
+
+					property hasVMCost {
+						name hasVMCost 
+						uri "mms:hasVMCost" 
+						description [ "This 
+						property associates the IaaS class with a value expressed in floating-point format (float) denoting the usage cost of a certain virtualised resource." ] 
+						type data 
+						range uri "xsd:double" 
+					}
+
+					property hasFlavour {
+						name hasFlavour 
+						uri "mms:hasFlavour" 
+						description [ hasFlavour ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+					property refersToRack {
+						name refersToRack 
+						uri "mms:refersToRack" 
+						description [ "This 
+						property clarifies that a certain IaaS resource (required or offered) corresponds to a specific rack of a datacentre." ] 
+						type data 
+						range uri "xsd:string" 
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

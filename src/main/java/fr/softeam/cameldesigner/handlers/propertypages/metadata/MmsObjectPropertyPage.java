@@ -6,7 +6,7 @@ import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementProperty
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("36423306-f950-4d13-ae37-2dc7c8cd2e25")
-public class MmsObjectPropertyPage<T extends MmsObject> extends NamedElementPropertyPage<T> {
+public abstract class MmsObjectPropertyPage<T extends MmsObject> extends NamedElementPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

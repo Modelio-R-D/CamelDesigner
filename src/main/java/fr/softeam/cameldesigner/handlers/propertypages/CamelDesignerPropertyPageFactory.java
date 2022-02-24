@@ -157,7 +157,7 @@ import fr.softeam.cameldesigner.api.typemodel.standard.class_.IntValue;
 import fr.softeam.cameldesigner.api.typemodel.standard.class_.Limit;
 import fr.softeam.cameldesigner.api.typemodel.standard.class_.StringValue;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
-import fr.softeam.cameldesigner.api.typemodel.standard.datatype.List;
+import fr.softeam.cameldesigner.api.typemodel.standard.datatype.CamelList;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;

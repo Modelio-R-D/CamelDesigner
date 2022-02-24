@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter.requirement;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement;
-import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import fr.softeam.cameldesigner.exchange.exporter.core.FeatureClassifierExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("5be1ac7f-27c0-4875-a9e2-28770c6d88a0")
-public abstract class RequirementExporter<T extends Requirement> extends FeatureExporter<T> {
+public abstract class RequirementExporter<T extends Requirement> extends FeatureClassifierExporter<T> {
     @objid ("078d2e5c-e51b-4c1b-a67f-2e0aed8b9b00")
     public RequirementExporter(T elt) {
         super(elt);

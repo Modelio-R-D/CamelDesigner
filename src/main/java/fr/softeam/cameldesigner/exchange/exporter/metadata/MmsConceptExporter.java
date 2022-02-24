@@ -27,7 +27,11 @@ public class MmsConceptExporter<T extends MmsConcept> extends MmsObjectExporter<
     @objid ("fa31fdbd-af14-4892-8408-ce866c757ae8")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.mms.MmsConcept) && (elt instanceof camel.mms.MmsConcept)) {
+            ((camel.mms.MmsConcept) context).getConcept().add((camel.mms.MmsConcept) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

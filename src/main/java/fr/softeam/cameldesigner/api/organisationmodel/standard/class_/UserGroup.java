@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("abad6f96-f2ec-4ca1-9fb0-a0beaa067a8f")
 public class UserGroup extends FeatureClass {
-    @objid ("34e01930-d593-4821-a85f-a9e7490b422d")
+    @objid ("b5d10494-d25a-488a-a840-22d4412ce4e5")
     public static final String STEREOTYPE_NAME = "UserGroup";
 
     /**
@@ -48,7 +48,7 @@ public class UserGroup extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c9d81ceb-3e6d-4b54-9b99-f77c2c8098ee")
+    @objid ("fe663b11-1045-4a4e-a2c1-d6e5280e9476")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UserGroup.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class UserGroup extends FeatureClass {
      * 
      * @return a {@link UserGroup} proxy on the created {@link Class}.
      */
-    @objid ("80e90072-751d-4c51-bd7d-9e6d0c57db7d")
+    @objid ("4ce6f87f-d9d4-48b6-bd96-ddee138c28b8")
     public static UserGroup create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, UserGroup.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class UserGroup extends FeatureClass {
      * @param obj a Class
      * @return a {@link UserGroup} proxy or <i>null</i>.
      */
-    @objid ("abad33b0-002d-4336-8298-f088b74e06d5")
+    @objid ("63248082-c772-44f1-9a8c-e1bb731f06b4")
     public static UserGroup instantiate(final Class obj) {
         return UserGroup.canInstantiate(obj) ? new UserGroup(obj) : null;
     }
@@ -85,7 +85,7 @@ public class UserGroup extends FeatureClass {
      * @return a {@link UserGroup} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("85279edb-70b9-4708-8734-b1436ff1b953")
+    @objid ("c0a719a7-e5bd-4568-9149-45f8c04980ae")
     public static UserGroup safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UserGroup.canInstantiate(obj))
         	return new UserGroup(obj);
@@ -99,7 +99,7 @@ public class UserGroup extends FeatureClass {
      * null
      * 
      */
-    @objid ("f9d025ad-5833-423c-a508-c35fc5b0f9b8")
+    @objid ("ad92fc54-957d-4f92-8ce6-aedb93cc7bc0")
     public void addUsers(final User obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -109,7 +109,7 @@ public class UserGroup extends FeatureClass {
         }
     }
 
-    @objid ("4c6a4df3-d9c2-4d80-957d-fa38e3cf59f5")
+    @objid ("9cecea06-3fc9-4091-86fb-cb6a6a3feb52")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -129,7 +129,7 @@ public class UserGroup extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("585d7b72-e46e-4764-9c2c-e3e206945abe")
+    @objid ("4bbba2ec-314e-4c1b-a1cc-5f77a9b0fcb3")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -141,7 +141,7 @@ public class UserGroup extends FeatureClass {
      * null
      * 
      */
-    @objid ("706f2f77-cd38-40af-8226-843d611d9461")
+    @objid ("9e79ec12-3e93-47be-b587-83804a84f195")
     public List<User> getUsers() {
         List<User> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -154,7 +154,7 @@ public class UserGroup extends FeatureClass {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("3c6edff7-9e0b-4464-9684-c3b1b4f14a56")
+    @objid ("b8bae2b6-98ba-4a06-937b-a367cf287047")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -166,7 +166,7 @@ public class UserGroup extends FeatureClass {
      * null
      * 
      */
-    @objid ("18677714-26d1-4f9d-b7ad-385b20d9d539")
+    @objid ("02d2279f-b812-4f50-9022-bd0ee0318612")
     public boolean removeUsers(final User obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -188,23 +188,23 @@ public class UserGroup extends FeatureClass {
         return result;
     }
 
-    @objid ("5fcd9182-e12b-458c-8850-e94f4f884890")
+    @objid ("290430e7-7a86-4dfc-80d9-f6f1f34aa17a")
     protected UserGroup(final Class elt) {
         super(elt);
     }
 
     @objid ("5c98c8d7-7e42-4650-94dd-2d4f9879ae9d")
     public static final class MdaTypes {
-        @objid ("f14dcfe6-6904-4de6-a906-74e5fc420518")
+        @objid ("25118495-6fd9-4cb5-b7ef-e660496e162d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("69978009-8017-4e55-be06-d9783c448910")
+        @objid ("88a8fa0e-1275-4492-92e1-2ee6acdd0856")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("23e11510-5300-4d38-a123-9a8e6ae8720c")
+        @objid ("6efe3408-6511-442f-8693-1226786d99e4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e91f2a28-81bb-4892-982b-f1f566b7d2d6")
+        @objid ("21122ca0-9ddb-4c58-80e7-1ae5c09b7e9b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a69e85bc-a398-4ffb-a9d6-267bdf5cf5b2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.scalability.ScalabilityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.FunctionalEventInstance;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("a10f6757-d867-4ca0-b745-4db6896c5cd9")
 public class FunctionalEventInstanceExporter<T extends FunctionalEventInstance> extends EventInstanceExporter<T> {

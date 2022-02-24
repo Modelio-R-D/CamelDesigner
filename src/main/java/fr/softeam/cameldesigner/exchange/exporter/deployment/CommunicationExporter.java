@@ -27,7 +27,11 @@ public class CommunicationExporter<T extends Communication> extends ComponentRel
     @objid ("4e3e280f-f93f-4860-82d1-fda81c3b931c")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.Communication)) {
+            ((camel.deployment.DeploymentTypeModel) context).getCommunications().add((camel.deployment.Communication) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

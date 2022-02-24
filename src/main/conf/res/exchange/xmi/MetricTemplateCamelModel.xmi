@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:CamelModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.camel-dsl.org/camel/core" xmlns:metric="http://www.camel-dsl.org/camel/metric" xmlns:mms="http://www.melodic.eu/metadata-schema" xmlns:type="http://www.camel-dsl.org/camel/type" xmlns:unit="http://www.camel-dsl.org/camel/unit" name="MetricTemplateCamelModel">
+  <metricModels xsi:type="metric:MetricTypeModel" name="MetricTemplateModel">
+    <attributes xsi:type="core:MeasurableAttribute" name="RAMUtilisation" annotations="RAMUtilisation"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="CPUUtilisation" annotations="CPUUtilisation"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="DiskUtilisation" annotations="DiskUtilisation"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="GPUUtilisation" annotations="GPUUtilisation"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="ResponseTime" annotations="ResponseTime"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="ExecutionTime" annotations="ExecutionTime"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="Availability" annotations="Availability"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="Reliability" annotations="Reliability"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="NetworkLatency" annotations="NetworkLatency"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="Cost" annotations="Cost"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="Utility" annotations="Utility"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="AdapterUtility" annotations="AdapterUtility"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="DLMSUtility" annotations="DLMSUtility"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="ComponentInstances" annotations="Cardinality"/>
+    <attributes xsi:type="core:MeasurableAttribute" name="ComputationPower" annotations="ComputationPower"/>
+    <metrics xsi:type="metric:RawMetric" name="RawCPUUtilisation" metricTemplate="//@metricModels.0/@templates.2"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageCPUUtilisation" metricTemplate="//@metricModels.0/@templates.2" formula="mean(RawCPUUtilisation)" componentMetrics="//@metricModels.0/@metrics.0"/>
+    <metrics xsi:type="metric:RawMetric" name="RawDiskUtilisation" metricTemplate="//@metricModels.0/@templates.1"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageDiskUtilisation" metricTemplate="//@metricModels.0/@templates.1" formula="mean(RawDiskUtilisation)" componentMetrics="//@metricModels.0/@metrics.2"/>
+    <metrics xsi:type="metric:RawMetric" name="RawRAMUtilisation" metricTemplate="//@metricModels.0/@templates.0"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageRAMUtilisation" metricTemplate="//@metricModels.0/@templates.0" formula="mean(RawRAMUtilisation)" componentMetrics="//@metricModels.0/@metrics.4"/>
+    <metrics xsi:type="metric:RawMetric" name="RawGPUUtilisation" metricTemplate="//@metricModels.0/@templates.3"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageGPUUtilisation" metricTemplate="//@metricModels.0/@templates.3" formula="mean(RawGPUUtilisation)" componentMetrics="//@metricModels.0/@metrics.6"/>
+    <metrics xsi:type="metric:RawMetric" name="RawExecutionTime" metricTemplate="//@metricModels.0/@templates.5"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageExecutionTime" metricTemplate="//@metricModels.0/@templates.5" formula="mean(RawExecutionTime)" componentMetrics="//@metricModels.0/@metrics.8"/>
+    <metrics xsi:type="metric:RawMetric" name="RawResponseTime" metricTemplate="//@metricModels.0/@templates.4"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageResponseTime" metricTemplate="//@metricModels.0/@templates.4" formula="mean(RawResponseTime)" componentMetrics="//@metricModels.0/@metrics.10"/>
+    <metrics xsi:type="metric:RawMetric" name="RawNetworkLatency" metricTemplate="//@metricModels.0/@templates.6"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageNetworkLatency" metricTemplate="//@metricModels.0/@templates.6" formula="mean(RawNetworkLatency)" componentMetrics="//@metricModels.0/@metrics.12"/>
+    <metrics xsi:type="metric:RawMetric" name="RawAvailability" metricTemplate="//@metricModels.0/@templates.7"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageAvailability" metricTemplate="//@metricModels.0/@templates.7" formula="mean(RawAvailability)" componentMetrics="//@metricModels.0/@metrics.14"/>
+    <metrics xsi:type="metric:RawMetric" name="RawMTBF" metricTemplate="//@metricModels.0/@templates.8"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageMTBF" metricTemplate="//@metricModels.0/@templates.8" formula="mean(RawMTBF)" componentMetrics="//@metricModels.0/@metrics.16"/>
+    <metrics xsi:type="metric:RawMetric" name="RawCostDollars" metricTemplate="//@metricModels.0/@templates.9"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageCostDollars" metricTemplate="//@metricModels.0/@templates.9" formula="mean(RawCostDollars)" componentMetrics="//@metricModels.0/@metrics.18"/>
+    <metrics xsi:type="metric:RawMetric" name="RawCostEuros" metricTemplate="//@metricModels.0/@templates.10"/>
+    <metrics xsi:type="metric:CompositeMetric" name="AverageCostEuros" metricTemplate="//@metricModels.0/@templates.10" formula="mean(RawCostEuros)" componentMetrics="//@metricModels.0/@metrics.20"/>
+    <metrics xsi:type="metric:RawMetric" name="RawInstanceNumber" metricTemplate="//@metricModels.0/@templates.14"/>
+    <metrics xsi:type="metric:RawMetric" name="RawCoreNumber" metricTemplate="//@metricModels.0/@templates.15"/>
+    <templates name="RAMUtilisationTemplate" valueType="//@typeModels.0/@valueTypes.1" unit="//@unitModels.0/@units.17" attribute="//@metricModels.0/@attributes.0"/>
+    <templates name="DiskUtilisationTemplate" valueType="//@typeModels.0/@valueTypes.1" unit="//@unitModels.0/@units.17" attribute="//@metricModels.0/@attributes.2"/>
+    <templates name="CPUUtilisationTemplate" valueType="//@typeModels.0/@valueTypes.1" unit="//@unitModels.0/@units.17" attribute="//@metricModels.0/@attributes.1"/>
+    <templates name="GPUUtilisationTemplate" valueType="//@typeModels.0/@valueTypes.1" unit="//@unitModels.0/@units.17" attribute="//@metricModels.0/@attributes.3"/>
+    <templates name="ResponseTimeTemplate" valueType="//@typeModels.0/@valueTypes.4" unit="//@unitModels.0/@units.1" attribute="//@metricModels.0/@attributes.4"/>
+    <templates name="ExecutionTimeTemplate" valueType="//@typeModels.0/@valueTypes.4" unit="//@unitModels.0/@units.1" attribute="//@metricModels.0/@attributes.5"/>
+    <templates name="NetworkLatencyTemplate" valueType="//@typeModels.0/@valueTypes.4" unit="//@unitModels.0/@units.1" attribute="//@metricModels.0/@attributes.8"/>
+    <templates name="AvailabilityTemplate" valueType="//@typeModels.0/@valueTypes.0" valueDirection="1" unit="//@unitModels.0/@units.18" attribute="//@metricModels.0/@attributes.6"/>
+    <templates name="MTBFTemplate" valueType="//@typeModels.0/@valueTypes.4" valueDirection="1" unit="//@unitModels.0/@units.1" attribute="//@metricModels.0/@attributes.7"/>
+    <templates name="CostTemplateDollars" valueType="//@typeModels.0/@valueTypes.4" unit="//@unitModels.0/@units.44" attribute="//@metricModels.0/@attributes.9"/>
+    <templates name="CostTemplateEuros" valueType="//@typeModels.0/@valueTypes.4" unit="//@unitModels.0/@units.43" attribute="//@metricModels.0/@attributes.9"/>
+    <templates name="UtilityTemplate" valueType="//@typeModels.0/@valueTypes.0" valueDirection="1" unit="//@unitModels.0/@units.18" attribute="//@metricModels.0/@attributes.10"/>
+    <templates name="AdapterUtilityTemplate" valueType="//@typeModels.0/@valueTypes.0" valueDirection="1" unit="//@unitModels.0/@units.18" attribute="//@metricModels.0/@attributes.11"/>
+    <templates name="DLMSUtilityTemplate" valueType="//@typeModels.0/@valueTypes.0" valueDirection="1" unit="//@unitModels.0/@units.18" attribute="//@metricModels.0/@attributes.12"/>
+    <templates name="ComponentInstanceTemplate" valueType="//@typeModels.0/@valueTypes.3" unit="//@unitModels.0/@units.41" attribute="//@metricModels.0/@attributes.13"/>
+    <templates name="ComputationPowerTemplate" valueType="//@typeModels.0/@valueTypes.3" unit="//@unitModels.0/@units.42" attribute="//@metricModels.0/@attributes.14"/>
+  </metricModels>
+  <typeModels name="TypeTemplateCamelModel_TypeTemplateModel">
+    <valueTypes xsi:type="type:Range" name="ZeroToOneDouble" primitiveType="DoubleType">
+      <lowerLimit included="true">
+        <value xsi:type="type:DoubleValue"/>
+      </lowerLimit>
+      <upperLimit included="true">
+        <value xsi:type="type:DoubleValue" value="1.0"/>
+      </upperLimit>
+    </valueTypes>
+    <valueTypes xsi:type="type:Range" name="ZeroToHundredDouble" primitiveType="DoubleType">
+      <lowerLimit included="true">
+        <value xsi:type="type:DoubleValue"/>
+      </lowerLimit>
+      <upperLimit included="true">
+        <value xsi:type="type:DoubleValue" value="100.0"/>
+      </upperLimit>
+    </valueTypes>
+    <valueTypes xsi:type="type:Range" name="ZeroToHundredInteger">
+      <lowerLimit included="true">
+        <value xsi:type="type:IntValue"/>
+      </lowerLimit>
+      <upperLimit included="true">
+        <value xsi:type="type:IntValue" value="100"/>
+      </upperLimit>
+    </valueTypes>
+    <valueTypes xsi:type="type:Range" name="ZeroToPositiveInfinityInteger">
+      <lowerLimit>
+        <value xsi:type="type:IntValue"/>
+      </lowerLimit>
+    </valueTypes>
+    <valueTypes xsi:type="type:Range" name="ZeroToPositiveInfinityDouble" primitiveType="DoubleType">
+      <lowerLimit>
+        <value xsi:type="type:DoubleValue"/>
+      </lowerLimit>
+    </valueTypes>
+  </typeModels>
+  <unitModels name="UnitTemplateCamelModel_UnitTemplateModel">
+    <units xsi:type="unit:SingleUnit" name="MilliSeconds" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Seconds" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Minutes" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Hours" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Days" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Weeks" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Months" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Years" dimension="//@unitModels.0/@dimensions.0"/>
+    <units xsi:type="unit:SingleUnit" name="Bits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="KiloBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="MegaBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="GigaBits" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="Bytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="KiloBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="MegaBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="GigaBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:SingleUnit" name="TeraBytes" dimension="//@unitModels.0/@dimensions.1"/>
+    <units xsi:type="unit:Dimensionless" name="Percentage"/>
+    <units xsi:type="unit:Dimensionless" name="Ratio"/>
+    <units xsi:type="unit:Dimensionless" name="utilityValue"/>
+    <units xsi:type="unit:CompositeUnit" name="BytesPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="Bytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="MegaBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="MegaBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="KiloBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="KiloBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBytesPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="GigaBytes / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBytesPerDays" dimension="//@unitModels.0/@dimensions.3" formula="GigaBytes / Days"/>
+    <units xsi:type="unit:CompositeUnit" name="BitsPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="Bits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="KiloBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="KiloBits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="MegaBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="MegaBits / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="GigaBitsPerSecond" dimension="//@unitModels.0/@dimensions.2" formula="GigaBits / Seconds"/>
+    <units xsi:type="unit:SingleUnit" name="Transactions" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Requests" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Simulations" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerSecond" dimension="//@unitModels.0/@dimensions.4" formula="Transactions / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerMinute" dimension="//@unitModels.0/@dimensions.4" formula="Transactions / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="TransactionsPerHour" dimension="//@unitModels.0/@dimensions.4" formula="Transactions / Hours"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerSecond" dimension="//@unitModels.0/@dimensions.4" formula="Requests / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerMinute" dimension="//@unitModels.0/@dimensions.4" formula="Requests / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="RequestsPerHour" dimension="//@unitModels.0/@dimensions.4" formula="Requests / Hours"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerSecond" dimension="//@unitModels.0/@dimensions.4" formula="Simulations / Seconds"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerMinute" dimension="//@unitModels.0/@dimensions.4" formula="Simulations / Minutes"/>
+    <units xsi:type="unit:CompositeUnit" name="SimulationsPerHour" dimension="//@unitModels.0/@dimensions.4" formula="Simulations / Hours"/>
+    <units xsi:type="unit:SingleUnit" name="Instances" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Cores" dimension="//@unitModels.0/@dimensions.5"/>
+    <units xsi:type="unit:SingleUnit" name="Euros" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Dollars" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Pounds" dimension="//@unitModels.0/@dimensions.6"/>
+    <units xsi:type="unit:SingleUnit" name="Hertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="KiloHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="MegaHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <units xsi:type="unit:SingleUnit" name="GigaHertz" dimension="//@unitModels.0/@dimensions.7"/>
+    <dimensions name="Time"/>
+    <dimensions name="Storage"/>
+    <dimensions name="NetworkSpeed"/>
+    <dimensions name="DataSpeed"/>
+    <dimensions name="ComputationalSpeed"/>
+    <dimensions name="NumberOf"/>
+    <dimensions name="Monetary"/>
+    <dimensions name="Frequency"/>
+  </unitModels>
+  <metadataModels name="MMS_MetaDataModel">
+    <metadataElements xsi:type="mms:MmsConcept" id="MELODICMetadataSchema" uri="mms:MELODICMetadataSchema" name="MELODICMetadataSchema" description="The Melodic Metadata Schema that comprises the following model facets; Application Placement Model, Big Data Model, and Context Aware Security model.">
+      <concept id="History" uri="mms:History" name="History">
+        <concept id="StateTransition" uri="mms:StateTransition" name="State Transition">
+          <instance id="APPLICATION_DEPLOYMENT" uri="mms:APPLICATION_DEPLOYMENT" name="Application Deployment"/>
+          <instance id="APPLICATION_RECONFIGURATION" uri="mms:APPLICATION_RECONFIGURATION" name="Application Reconfiguration"/>
+          <instance id="DATA_UPDATE" uri="mms:DATA_UPDATE" name="Data Update"/>
+          <instance id="APPLICATION_DECOMMISSION" uri="mms:APPLICATION_DECOMMISION" name="Application Decommission"/>
+        </concept>
+        <concept id="PlatformAction" uri="mms:PlatformAction" name="Platform Action">
+          <instance id="CP_MODEL_GENERATED" uri="mms:CP_MODEL_GENERATED" name="CP Model Generated"/>
+          <instance id="CP_GENERATION_FAILED" uri="mms:CP_GENERATION_FAILED" name="CP Model Generation Failed"/>
+          <instance id="CP_SOLUTION_PRODUCED" uri="mms:CP_SOLUTION_PRODUCED" name="CP Model Solution Produced"/>
+          <instance id="CP_SOLUTION_FAILED" uri="mms:CP_SOLUTION_FAILED" name="CP Model Solving Failed"/>
+          <instance id="DEPLOYMENT_SOLUTION_PRODUCED" uri="mms:DEPLOYMENT_SOLUTION_PRODUCED" name="Deployment Solution Produced"/>
+          <instance id="DEPLOYMENT_SOLUTION_FAILED" uri="mms:DEPLOYMENT_SOLUTION_FAILED" name="Deployment Solution FAILED"/>
+          <instance id="DEPLOYMENT_SOLUTION_VERIFIED" uri="mms:DEPLOYMENT_SOLUTION_VERIFIED" name="Deployment Solution Verified"/>
+          <instance id="DEPLOYMENT_SOLUTION_UNVERIFIED" uri="mms:DEPLOYMENT_SOLUTION_UNVERIFIED" name="Deployment Solution Unverified"/>
+          <instance id="DEPLOYMENT_SOLUTION_TRIGGERED" uri="mms:DEPLOYMENT_SOLUTION_TRIGGERED" name="Deployment Solution Triggered"/>
+          <instance id="SOLUTION_TRIGGERING_FAILURE" uri="mms:SOLUTION_TRIGGERING_FAILURE" name="Deployment Solution Triggering Failed"/>
+          <instance id="DEPLOYMENT_SOLUTION_SUCCESS" uri="mms:DEPLOYMENT_SOLUTION_SUCCESS" name="Deployment Solution Successfully Deployed"/>
+          <instance id="DEPLOYMENT_SOLUTION_FAILURE" uri="mms:DEPLOYMENT_SOLUTION_FAILURE" name="Deployment Solution Failure"/>
+          <instance id="NEW_DATASET" uri="mms:NEW_DATASET" name="New Dataset"/>
+          <instance id="DATASET_UPDATE" uri="mms:DATASET_UPDATE" name="Dataset Update"/>
+          <instance id="DATASET_DELETION" uri="mms:DATASET_DELETION" name="Dataset Deletion"/>
+          <instance id="DECOMMISSION_TRIGGERED" uri="mms:DECOMMISSION_TRIGGERED" name="Application Decommission Triggered"/>
+          <instance id="DECOMMISSION_FINISHED" uri="mms:DECOMMISSION_FINISHED" name="Application Decommission Finished"/>
+          <instance id="DECOMMISSION_FAILURE" uri="mms:DECOMMISSION_FAILURE" name="Application Decommission Failure"/>
+        </concept>
+        <concept id="PlatformComponent" uri="mms:PlatformComponent" name="Platform Component">
+          <instance id="CP_GENERATOR" uri="mms:CP_GENERATOR" name="CP Generator"/>
+          <instance id="META_SOLVER" uri="mms:META_SOLVER" name="Meta-Solver"/>
+          <instance id="SOLVER_TO_DEPLOYMENT" uri="mms:SOLVER_TO_DEPLOYMENT" name="Solver-to-Deployment"/>
+          <instance id="ADAPTER" uri="mms:ADAPTER" name="Adapter"/>
+          <instance id="DLMS" uri="mms:DLMS" name="DLMS"/>
+        </concept>
+      </concept>
+      <concept id="UtilityNotions" uri="mms:UtilityNotions" name="Utility Notions">
+        <concept id="UtilityRelatedProperties" uri="mms:UtilityRelatedProperties" name="Properties related to utility">
+          <concept id="Utility" uri="mms:Utility" name="Utility">
+            <concept id="DLMSUtility" uri="mms:DSLMUtility" name="DLMS Utility">
+              <property id="AffinityAwareness" uri="mms:AffinityAwareness" name="Affinity Awareness" rangeUri="xsd:double"/>
+              <property id="DataCentreAwareness" uri="mms:DataCentreAwareness" name="Data-Centre Awareness" rangeUri="xsd:double"/>
+              <property id="SourceAwareness" uri="mms:SourceAwareness" name="Source Awareness" rangeUri="xsd:double"/>
+              <property id="DLMSTotalUtility" uri="mms:DLMSTotalUtility" name="DLMS Total Utility" rangeUri="xsd:double"/>
+            </concept>
+            <concept id="AdapterUtility" uri="mms:AdapterMUtility" name="Adapter Utility"/>
+          </concept>
+          <property id="Cardinality" uri="mms:Cardinality" name="Cardinality" rangeUri="xsd:positiveInteger"/>
+          <property id="Cost" uri="mms:Cost" name="Cost" rangeUri="xsd:double"/>
+          <property id="ExecutionTime" uri="mms:ExecutionTime" name="Execution Time" rangeUri="xsd:double"/>
+          <property id="ResponseTime" uri="mms:ResponseTime" name="Response Time" rangeUri="xsd:double"/>
+          <property id="Availability" uri="mms:Availability" name="Availability" rangeUri="xsd:double"/>
+          <property id="Reliability" uri="mms:Reliability" name="Reliability" rangeUri="xsd:double"/>
+          <property id="NetworkLatency" uri="mms:NetworkLatency" name="Network Latency" rangeUri="xsd:double"/>
+          <property id="CPUUtilisation" uri="mms:CPUUtilisation" name="CPU Utilisation" rangeUri="xsd:double"/>
+          <property id="RAMUtilisation" uri="mms:RAMUtilisation" name="RAM Utilisation" rangeUri="xsd:double"/>
+          <property id="DiskUtilisation" uri="mms:DiskUtilisation" name="Disk Utilisation" rangeUri="xsd:double"/>
+          <property id="GPUUtilisation" uri="mms:GPUUtilisation" name="GPU Utilisation" rangeUri="xsd:double"/>
+          <property id="ComputationPower" uri="mms:ComputationPower" name="Computation Power" rangeUri="xsd:double"/>
+          <property id="Unmoveable" uri="mms:Unmoveable" name="Unmoveable" description="Property indicating that a component of an application cannot be moved" rangeUri="xsd:double"/>
+        </concept>
+      </concept>
+      <concept id="ContextAwareSecurityModel" uri="mms:ContextAwareSecurityModel" name="ContextAwareSecurityModel" description="The Context Aware Security Model refers to the following top-level concepts; Security Context Element, Permission, Subject, Object, Context Patterns, and Handlers.">
+        <concept id="ContextPattern" uri="mms:ContextPattern" name="ContextPattern" description="Context patterns are recurring motives of object accesses that are recognised in repeating context element instances. Future access requests on sensitive data can be decided also considering such information (Verginadis et al., 2016). Its subclasses are: Location pattern, DateTime pattern, Connectivity pattern, Object pattern, Permission pattern, Access Sequence Pattern.">
+          <concept id="ObjectPattern" uri="mms:ObjectPattern" name="ObjectPattern" description="It refers to recurring motives of data access occurences that are recognized with respect to the Object context element.">
+            <concept id="MostFrequentlyAccessedObject" uri="mms:MostFrequentlyAccessedObject" name="MostFrequentlyAccessedObject" description=""/>
+            <concept id="RecentlyAccessedObject" uri="mms:RecentlyAccessedObject" name="RecentlyAccessedObject" description=""/>
+            <concept id="UsuallyAccessedObject" uri="mms:UsuallyAccessedObject" name="UsuallyAccessedObject" description="">
+              <property id="hasUAOThreshold" uri="mms:hasUAOThreshold" name="hasUAOThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="LeastAccessedObject" uri="mms:LeastAccessedObject" name="LeastAccessedObject" description=""/>
+          </concept>
+          <concept id="PermissionPattern" uri="mms:PermissionPattern" name="PermissionPattern" description="It refers to recurring motives of data access occurences that are recognized with respect to the Permission element.">
+            <concept id="RecentlyDeniedPermission" uri="mms:RecentlyDeniedPermission" name="RecentlyDeniedPermission" description=""/>
+            <concept id="MostFrequentlyDeniedPermission" uri="mms:MostFrequentlyDeniedPermission" name="MostFrequentlyDeniedPermission" description=""/>
+            <concept id="MostFrequentlyGrantedPermission" uri="mms:MostFrequentlyGrantedPermission" name="MostFrequentlyGrantedPermission" description=""/>
+            <concept id="RecentlyGrantedPermission" uri="mms:RecentlyGrantedPermission" name="RecentlyGrantedPermission" description=""/>
+            <concept id="UsuallyGrantedPermission" uri="mms:UsuallyGrantedPermission" name="UsuallyGrantedPermission" description="">
+              <property id="hasUGThreshold" uri="mms:hasUGThreshold" name="hasUGThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <property id="hasPermission" uri="mms:hasPermission" name="hasPermission" description="" rangeUri="http://www.melodic-project.eu/ontologies/psm/2017/09/20#Permission"/>
+          </concept>
+          <concept id="ConnectivityPattern" uri="mms:ConnectivityPattern" name="ConnectivityPattern" description="It refers to recurring motives of data access occurences that are recognized with respect to the Connectivity context element.">
+            <concept id="MostFrequentDeviceType" uri="mms:MostFrequentDeviceType" name="MostFrequentDeviceType" description="">
+              <property id="hasDeviceType" uri="mms:hasDeviceType" name="hasDeviceType" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#DeviceType"/>
+            </concept>
+            <concept id="UsualConnectionSecurity" uri="mms:UsualConnectionSecurity" name="UsualConnectionSecurity" description="">
+              <property id="hasConnectionSecurity" uri="mms:hasConnectionSecurity" name="hasConnectionSecurity" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionSecurity"/>
+              <property id="hasUCSThreshold" uri="mms:hasUCSThreshold" name="hasUCSThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="UsualDeviceType" uri="mms:UsualDeviceType" name="UsualDeviceType" description="">
+              <property id="hasUDTThreshold" uri="mms:hasUDTThreshold" name="hasUDTThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="MostFrequentConnectionType" uri="mms:MostFrequentConnectionType" name="MostFrequentConnectionType" description="">
+              <property id="hasConnectionType" uri="mms:hasConnectionType" name="hasConnectionType" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionType"/>
+            </concept>
+            <concept id="UsualConnectionType" uri="mms:UsualConnectionType" name="UsualConnectionType" description="">
+              <property id="hasUCTThreshold" uri="mms:hasUCTThreshold" name="hasUCTThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+          </concept>
+          <concept id="LocationPattern" uri="mms:LocationPattern" name="LocationPattern" description="It refers to recurring motives of data access occurences that are recognized with respect to the Location context element.">
+            <concept id="UsualAccessLocation" uri="mms:UsualAccessLocation" name="UsualAccessLocation" description="">
+              <property id="hasUAThreshold" uri="mms:hasUAThreshold" name="hasUAThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="LeastFrequentAccessLocation" uri="mms:LeastFrequentAccessLocation" name="LeastFrequentAccessLocation" description=""/>
+            <concept id="MostFrequentAccessLocation" uri="mms:MostFrequentAccessLocation" name="MostFrequentAccessLocation" description=""/>
+            <concept id="RecentAccessLocation" uri="mms:RecentAccessLocation" name="RecentAccessLocation" description=""/>
+            <property id="hasLocation" uri="mms:hasLocation" name="hasLocation" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Location"/>
+          </concept>
+          <concept id="DateTimePattern" uri="mms:DateTimePattern" name="DateTimePattern" description="It refers to recurring motives of data access occurences that are recognized with respect to the DateTime context element.">
+            <concept id="LeastFrequentDateTimeInterval" uri="mms:LeastFrequentDateTimeInterval" name="LeastFrequentDateTimeInterval" description=""/>
+            <concept id="MostFrequentDateTimeInstance" uri="mms:MostFrequentDateTimeInstance" name="MostFrequentDateTimeInstance" description=""/>
+            <concept id="UsualDateTimeInterval" uri="mms:UsualDateTimeInterval" name="UsualDateTimeInterval" description="">
+              <property id="hasUTIThreshold" uri="mms:hasUTIThreshold" name="hasUTIThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="UsualDateTimeInstance" uri="mms:UsualDateTimeInstance" name="UsualDateTimeInstance" description="">
+              <property id="hasUTThreshold" uri="mms:hasUTThreshold" name="hasUTThreshold" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="LeastFrequentDateTimeInstance" uri="mms:LeastFrequentDateTimeInstance" name="LeastFrequentDateTimeInstance" description=""/>
+            <concept id="MostFrequentDateTimeInterval" uri="mms:MostFrequentDateTimeInterval" name="MostFrequentDateTimeInterval" description=""/>
+          </concept>
+          <concept id="AccessSequencePattern" uri="mms:AccessSequencePattern" name="AccessSequencePattern" description="It refers to data access occurences that are recognized by any preceeding access actions of a specific subject.">
+            <property id="hasAccessedObject" uri="mms:hasAccessedObject" name="hasAccessedObject" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object"/>
+          </concept>
+          <property id="refersToObject" uri="mms:refersToObject" name="refersToObject" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object"/>
+          <property id="refersToPermission" uri="mms:refersToPermission" name="refersToPermission" description="" rangeUri="http://www.melodic-project.eu/ontologies/psm/2017/09/20#Permission"/>
+          <property id="hasPattern" uri="mms:hasPattern" name="hasPattern" description="" rangeUri="http://www.melodic-project.eu/ontologies/cpsm/2017/09/20#ContextPattern"/>
+          <property id="refersToSubject" uri="mms:refersToSubject" name="refersToSubject" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Subject"/>
+          <property id="hasTimeWindow" uri="mms:hasTimeWindow" name="hasTimeWindow" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime"/>
+        </concept>
+        <concept id="Permission" uri="mms:Permission" name="Permission" description="This class refers to the actions that a Subject is allowed to perform upon an Object (Verginadis et al., 2016).">
+          <concept id="DDLPermission" uri="mms:DDLPermission" name="DDLPermission" description="This class reveals the data definition language (DDL) related actions on a specific Object (e.g. create/alter/drop datastore, Create/Delete/ChOwner a directory or file).">
+            <concept id="DatastoreDDLPermission" uri="mms:DatastoreDDLPermission" name="DatastoreDDLPermission" description=""/>
+            <concept id="FileSystemStructurePermission" uri="mms:FileSystemStructurePermission" name="FileSystemStructurePermission" description=""/>
+            <property id="hasEndTime" uri="mms:hasEndTime" name="hasEndTime" description="" rangeUri="xsd:dateTime"/>
+            <property id="hasResult" uri="mms:hasResult" name="hasResult" description="" rangeUri="xsd:string"/>
+            <property id="hasActionStatus" uri="mms:hasActionStatus" name="hasActionStatus" description="" rangeUri="xsd:string"/>
+            <property id="hasTarget" uri="mms:hasTarget" name="hasTarget" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Object"/>
+            <property id="hasStartTime" uri="mms:hasStartTime" name="hasStartTime" description="" rangeUri="xsd:dateTime"/>
+          </concept>
+          <concept id="DataPermission" uri="mms:DataPermission" name="DataPermission" description="This class refers to any action allowed by a Subject upon a data entity (e.g. datastore, file, web endpoint, volume access).">
+            <concept id="DatastorePermission" uri="mms:DatastorePermission" name="DatastorePermission" description="This is a class that describes any action allowed by a direct agent upon a data entity in a datastore."/>
+            <concept id="WebEndpointPermission" uri="mms:WebEndpointPermission" name="WebEndpointPermission" description="This is a class that describes any Web endpoint action allowed by a direct agent upon a data entity in a datastore."/>
+            <concept id="FilePermission" uri="mms:FilePermission" name="FilePermission" description="This is a class that describes any action allowed by a direct agent upon a file."/>
+            <concept id="VolumePermission" uri="mms:VolumePermission" name="VolumePermission" description=""/>
+          </concept>
+        </concept>
+        <concept id="SecurityContextElement" uri="mms:SecurityContextElement" name="SecurityContextElement" description="The security context element class refers to all the relevant classes and properties that capture Location, DateTime and Connectivity aspects, and characterize subjects, objects, requests and the environment related to an interaction (Verginadis et al., 2016). Below we provide details only for the Location and Connectivity classes that are extended.">
+          <concept id="Auth" uri="mms:Auth" name="Auth" description="Common parent class of all Authentication, Authorization and Identity context element classes">
+            <concept id="AuthorizationMethod" uri="mms:AuthorizationMethod" name="AuthorizationMethod" description="This class indicates the framework used for granting access rights to a subject."/>
+            <concept id="IdentityType" uri="mms:IdentityType" name="IdentityType" description="This class refers to permanent/static and ephemeral information that can be used for identifying an agent.">
+              <concept id="EphemeralId" uri="mms:EphemeralId" name="EphemeralId" description="This class refers to frequently changing information that can be used for identifying an agent."/>
+              <concept id="PermanentId" uri="mms:PermanentId" name="PermanentId" description="This class refers to unfrequently changing information that can be used for identifying an agent."/>
+            </concept>
+            <concept id="AuthenticationMethod" uri="mms:AuthenticationMethod" name="AuthenticationMethod" description="This class reveals the technological way used for validating the agent's identity during an access request."/>
+          </concept>
+          <concept id="Location" uri="mms:Location" name="Location" description="This class describes a physical, a network and/or a cloud location where data are stored or from which a particular entity is requesting to access data (Verginadis et al., 2016).">
+            <concept id="PhysicalLocation" uri="mms:PhysicalLocation" name="PhysicalLocation" description="A physical location is a point or area of interest where data is stored, processed or from which a particular entity is requesting to access data. Physical locations might involve an address, a geographical position, an area, an abstract location and/or a Point of Interest [(Verginadis et al., 2016).">
+              <concept id="Address" uri="mms:Address" name="Address" description="Physical address where data are stored or from which a particular entity is requesting to access sensitive data.">
+                <property id="addressCountry" uri="mms:addressCountry" name="addressCountry" description="" rangeUri="xsd:string"/>
+                <property id="hasFloorNumber" uri="mms:hasFloorNumber" name="hasFloorNumber" description="" rangeUri="xsd:nonNegativeInteger"/>
+                <property id="refersToContinentalUnion" uri="mms:refersToContinentalUnion" name="refersToContinentalUnion" description="" rangeUri="xsd:string"/>
+                <property id="streetAddress" uri="mms:streetAddress" name="streetAddress" description="" rangeUri="xsd:string"/>
+                <property id="addressLocality" uri="mms:addressLocality" name="addressLocality" description="" rangeUri="xsd:string"/>
+                <property id="addressRegion" uri="mms:addressRegion" name="addressRegion" description="" rangeUri="xsd:string"/>
+                <property id="postalCode" uri="mms:postalCode" name="postalCode" description="" rangeUri="xsd:string"/>
+                <property id="hasBuildingNumber" uri="mms:hasBuildingNumber" name="hasBuildingNumber" description="" rangeUri="xsd:string"/>
+                <property id="refersToEconomicUnion" uri="mms:refersToEconomicUnion" name="refersToEconomicUnion" description="" rangeUri="xsd:string"/>
+                <property id="hasRoomNumber" uri="mms:hasRoomNumber" name="hasRoomNumber" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="POI" uri="mms:POI" name="POI" description="Points of interest that might be meanigful for access control of sensitive data.">
+                <property id="hasAddress" uri="mms:hasAddress" name="hasAddress" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Address"/>
+              </concept>
+              <concept id="Point" uri="mms:Point" name="Point" description="A specific spot where data are stored or from which a particular entity is requesting to access data.">
+                <property id="hasPointCoordinates" uri="mms:hasPointCoordinates" name="hasPointCoordinates" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Coordinates"/>
+              </concept>
+              <concept id="Area" uri="mms:Area" name="Area" description="This class describes a geographical region from which a data access request can be originated from.">
+                <property id="hasRectangularRangeHeight" uri="mms:hasRectangularRangeHeight" name="hasRectangularRangeHeight" description="" rangeUri="xsd:double"/>
+                <property id="hasRectangularRangeWidth" uri="mms:hasRectangularRangeWidth" name="hasRectangularRangeWidth" description="" rangeUri="xsd:double"/>
+                <property id="hasAreaCoordinates" uri="mms:hasAreaCoordinates" name="hasAreaCoordinates" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Coordinates"/>
+                <property id="hasCircularRadius" uri="mms:hasCircularRadius" name="hasCircularRadius" description="" rangeUri="xsd:double"/>
+              </concept>
+              <concept id="AbstractLocation" uri="mms:AbstractLocation" name="AbstractLocation" description="Conceptual characterization of a physical location (e.g. non-organization premises, building, room, section, department etc)">
+                <property id="hasArea" uri="mms:hasArea" name="hasArea" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#Area"/>
+                <property id="hasName" uri="mms:hasName" name="hasName" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="CloudLocation" uri="mms:CloudLocation" name="CloudLocation" description="This subclass involves all the relevant concepts for positioning worldwide the hosts of cloud provider offerings. A cloud location is composed of Cloud Regions and Availability zones.">
+                <concept id="CloudRegion" uri="mms:CloudRegion" name="CloudRegion" description="This subclass of Cloud Location refers to separate geographical areas defined, where cloud provider datacentres may host virtualised infrastructure for storing or processing data (e.g. AWS &#xe2;&#x20ac;&#x201c; eu-west-1 located in Ireland)."/>
+                <concept id="AvailabilityZone" uri="mms:AvailabilityZone" name="AvailabilityZone" description="This subclass of Cloud Location refers to an isolated location out of multiple available ones per cloud region that defines an area where several cloud offerings may or should originate from (e.g. aws eu-west-1a, eu-west-1b, eu-west-1c). Usually, availability zones are interconnected with fast, private fibre-optic networking facilities."/>
+              </concept>
+            </concept>
+            <concept id="NetworkLocation" uri="mms:NetworkLocation" name="NetworkLocation" description="An identifier for a node or network telecommunication interface from which a particular subject is requesting to access data or where the data resides (Verginadis et al., 2016).">
+              <property id="hasIPAddressRange" uri="mms:hasIPAddressRange" name="hasIPAddressRange" description="" rangeUri="xsd:string"/>
+              <property id="hasPort" uri="mms:hasPort" name="hasPort" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="hasDomain" uri="mms:hasDomain" name="hasDomain" description="" rangeUri="xsd:string"/>
+              <property id="hasIPAddress" uri="mms:hasIPAddress" name="hasIPAddress" description="" rangeUri="xsd:string"/>
+              <property id="hasSubnet" uri="mms:hasSubnet" name="hasSubnet" description="" rangeUri="xsd:string"/>
+              <property id="hasZone" uri="mms:hasZone" name="hasZone" description="" rangeUri="xsd:string"/>
+            </concept>
+            <property id="isProcessingLocation" uri="mms:isProcessingLocation" name="isProcessingLocation" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Location class with a boolean value that denotes whether or not that certain location is referred as a position where data processing can/will take place (i.e. value equals to true) or as an area where data may reside (i.e. value equals to false)." rangeUri="xsd:boolean"/>
+          </concept>
+          <concept id="Object" uri="mms:Object" name="Object" description="This class refers to any kind of artefacts that shoud be protected based on their sensitivity levels. These artefacts may refer to (non)relational data or even software artefacts that manage sensitive data.">
+            <concept id="SoftwareArtefact" uri="mms:SoftwareArtefact" name="SoftwareArtefact" description="This class denotes any computerized medium that manages or gives access to sensitive data.">
+              <concept id="Service" uri="mms:Service" name="Service" description="It refers to a software endpoint that provides access and/or manages data.">
+                <property id="hasEndpoint" uri="mms:hasEndpoint" name="hasEndpoint" description="" rangeUri="xsd:anyURI"/>
+                <property id="category" uri="mms:category" name="category" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="Method" uri="mms:Method" name="Method" description="">
+                <concept id="DAO" uri="mms:DAO" name="DAO" description="It refers to a Data Access Object."/>
+              </concept>
+            </concept>
+            <concept id="InfrastructureArtefact" uri="mms:InfrastructureArtefact" name="InfrastructureArtefact" description="">
+              <concept id="Volume" uri="mms:Volume" name="Volume" description="">
+                <property id="hasVolumeType" uri="mms:hasVolumeType" name="hasVolumeType" description="" rangeUri="xsd:string"/>
+                <property id="volumeOutputSpeed" uri="mms:volumeOutputSpeed" name="volumeOutputSpeed" description="" rangeUri="xsd:string"/>
+                <property id="volumeInputSpeed" uri="mms:volumeInputSpeed" name="volumeInputSpeed" description="" rangeUri="xsd:string"/>
+                <property id="isVolumeEncrypted" uri="mms:isVolumeEncrypted" name="isVolumeEncrypted" description="" rangeUri="xsd:boolean"/>
+              </concept>
+            </concept>
+            <concept id="DataArtefact" uri="mms:DataArtefact" name="DataArtefact" description="This class refers to any sensitive data entitites stored in schema-based or schema-less databases that should be protected from unauthorized access.">
+              <concept id="NonRelational" uri="mms:NonRelational" name="NonRelational" description="This class refers to accessible data entities that exist in non-relational databases (i.e. schema-less)">
+                <concept id="HierarchicalDataStructure" uri="mms:HierarchicalDataStructure" name="HierarchicalDataStructure" description="">
+                  <property id="isChildOf" uri="mms:isChildOf" name="isChildOf" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#HierarchicalDataStructure"/>
+                </concept>
+                <property id="hasNonRelationalType" uri="mms:hasNonRelationalType" name="hasNonRelationalType" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="Relational" uri="mms:Relational" name="Relational" description="This class refers to accessible data entities that exist in relational databases, i.e. structured to recognize relations between stored items of information.">
+                <property id="hasRelationalType" uri="mms:hasRelationalType" name="hasRelationalType" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="File" uri="mms:File" name="File" description="This class refers to any kind of sensitive information that is stored in a file based system.">
+                <property id="hasFilePath" uri="mms:hasFilePath" name="hasFilePath" description="" rangeUri="xsd:string"/>
+                <property id="hasFileName" uri="mms:hasFileName" name="hasFileName" description="" rangeUri="xsd:string"/>
+                <property id="hasFileType" uri="mms:hasFileType" name="hasFileType" description="" rangeUri="xsd:string"/>
+              </concept>
+            </concept>
+            <property id="ObjectHasTarget" uri="mms:ObjectHasTarget" name="ObjectHasTarget" description="" rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Subject" uri="mms:Subject" name="Subject" description="An instance of this class represents the legal agent seeking access to a particular offering. This can be a legal body, a person or a service. A business entity has at least a primary mailing address and contact details.">
+            <concept id="Person" uri="mms:Person" name="Person" description=""/>
+            <concept id="Organization" uri="mms:Organization" name="Organization" description=""/>
+            <concept id="SoftwareAgent" uri="mms:SoftwareAgent" name="SoftwareAgent" description="This class represents software that attempts to access sensitive data (Verginadis et al., 2016)"/>
+            <concept id="Group" uri="mms:Group" name="Group" description=""/>
+            <property id="hasBrand" uri="mms:hasBrand" name="hasBrand" description="" rangeUri="xsd:string"/>
+            <property id="legalName" uri="mms:legalName" name="legalName" description="" rangeUri="xsd:string"/>
+            <property id="hasDUNS" uri="mms:hasDUNS" name="hasDUNS" description="" rangeUri="xsd:string"/>
+            <property id="hasIdentityType" uri="mms:hasIdentityType" name="hasIdentityType" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#IdentityType"/>
+            <property id="name" uri="mms:name" name="name" description="" rangeUri="xsd:string"/>
+            <property id="hasAuthenticationMethod" uri="mms:hasAuthenticationMethod" name="hasAuthenticationMethod" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#AuthenticationMethod"/>
+            <property id="hasAuthorizationMethod" uri="mms:hasAuthorizationMethod" name="hasAuthorizationMethod" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#AuthorizationMethod"/>
+            <property id="hasRole" uri="mms:hasRole" name="hasRole" description="" rangeUri="xsd:string"/>
+            <property id="description" uri="mms:description" name="description" description="" rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Connectivity" uri="mms:Connectivity" name="Connectivity" description="This class captures the information related to the connection used by the subject for accessing sensitive data (Verginadis et al., 2016). The following subclasses are included: Connection Type, Connection Metrics, Connection Security and Device Type.">
+            <concept id="ConnectionSecurity" uri="mms:ConnectionSecurity" name="ConnectionSecurity" description="This class provides details on the level of security in the established connection for accessing sensitive data.">
+              <concept id="ConnectionCiphersuite" uri="mms:ConnectionCiphersuite" name="ConnectionCiphersuite" description="This class refers to the mode or the ciphersuite used for establishing a secure connection."/>
+              <concept id="SecurityProtocol" uri="mms:SecurityProtocol" name="SecurityProtocol" description="This class reveals the security technology or protocol adopted for establishing an encrypted link between a server and a client.">
+                <property id="hasSecurityProtocolImplementation" uri="mms:hasSecurityProtocolImplementation" name="hasSecurityProtocolImplementation" description="" rangeUri="xsd:string"/>
+              </concept>
+            </concept>
+            <concept id="ConnectionType" uri="mms:ConnectionType" name="ConnectionType" description="This class refers to different ways of transmitting an access request (e.g. 3G, Cable, Satelite).">
+              <property id="hasConnectionMetric" uri="mms:hasConnectionMetric" name="hasConnectionMetric" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#ConnectionMetric"/>
+              <property id="hasTelecommunicationsProvider" uri="mms:hasTelecommunicationsProvider" name="hasTelecommunicationsProvider" description="" rangeUri="xsd:string"/>
+            </concept>
+            <concept id="ConnectionMetric" uri="mms:ConnectionMetric" name="ConnectionMetric" description="This class provides quantitative characteristics of the connection &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type used for accessing sensitive data.">
+              <property id="hasDownloadRate" uri="mms:hasDownloadRate" name="hasDownloadRate" description="" rangeUri="xsd:nonNegativeInteger"/>
+              <property id="hasMetricUnit" uri="mms:hasMetricUnit" name="hasMetricUnit" description="" rangeUri="xsd:string"/>
+              <property id="hasUploadRate" uri="mms:hasUploadRate" name="hasUploadRate" description="" rangeUri="xsd:nonNegativeInteger"/>
+            </concept>
+            <concept id="DeviceType" uri="mms:DeviceType" name="DeviceType" description="This class describes a device used when requesting access to sensitive data. Its subclasses include Mobile (i.e. portable device used when requesting access to sensitive data), Stationary (i.e. immobile devices used) and Software.">
+              <concept id="Mobile" uri="mms:Mobile" name="Mobile" description="It refers to a portable product used when requesting access to sensitive data.">
+                <concept id="Notebook" uri="mms:Notebook" name="Notebook" description=""/>
+                <concept id="Smartphone" uri="mms:Smartphone" name="Smartphone" description=""/>
+                <concept id="Tablet" uri="mms:Tablet" name="Tablet" description=""/>
+                <property id="hasIMSI" uri="mms:hasIMSI" name="hasIMSI" description="" rangeUri="xsd:string"/>
+                <property id="hasMobileOS" uri="mms:hasMobileOS" name="hasMobileOS" description="" rangeUri="xsd:string"/>
+                <property id="supportsEncryptedStorageMobile" uri="mms:supportsEncryptedStorageMobile" name="supportsEncryptedStorageMobile" description="" rangeUri="xsd:string"/>
+                <property id="hasIMEI" uri="mms:hasIMEI" name="hasIMEI" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="Stationary" uri="mms:Stationary" name="Stationary" description="It refers to an immobile product used when requesting access to sensitive data.">
+                <property id="hasStationaryOS" uri="mms:hasStationaryOS" name="hasStationaryOS" description="" rangeUri="xsd:string"/>
+                <property id="supportsEncryptedStorageStationary" uri="mms:supportsEncryptedStorageStationary" name="supportsEncryptedStorageStationary" description="" rangeUri="xsd:string"/>
+              </concept>
+            </concept>
+          </concept>
+          <concept id="DateTime" uri="mms:DateTime" name="DateTime" description="This class describes the specific chronological point expressed either as instant or interval that characterizes an access request.">
+            <concept id="DateTimeInterval" uri="mms:DateTimeInterval" name="DateTimeInterval" description="A period described by a start instance and end instance or a duration.">
+              <property id="hasBeginning" uri="mms:hasBeginning" name="hasBeginning" description="" rangeUri="xsd:dateTime"/>
+              <property id="hasBeginningDay" uri="mms:hasBeginningDay" name="hasBeginningDay" description="" rangeUri="xsd:string"/>
+              <property id="hasEndDay" uri="mms:hasEndDay" name="hasEndDay" description="" rangeUri="xsd:string"/>
+              <property id="hasEnd" uri="mms:hasEnd" name="hasEnd" description="" rangeUri="xsd:dateTime"/>
+            </concept>
+            <concept id="Instant" uri="mms:Instant" name="Instant" description="A precise point in time used to specify which date the access request takes place.">
+              <property id="hasDay" uri="mms:hasDay" name="hasDay" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="hasMinute" uri="mms:hasMinute" name="hasMinute" description="" rangeUri="xsd:nonNegativeInteger"/>
+              <property id="hasSecond" uri="mms:hasSecond" name="hasSecond" description="" rangeUri="xsd:nonNegativeInteger"/>
+              <property id="hasHour" uri="mms:hasHour" name="hasHour" description="" rangeUri="xsd:nonNegativeInteger"/>
+              <property id="hasMonth" uri="mms:hasMonth" name="hasMonth" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="hasYear" uri="mms:hasYear" name="hasYear" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <property id="hasTimezone" uri="mms:hasTimezone" name="hasTimezone" description="" rangeUri="xsd:string"/>
+            <property id="before" uri="mms:before" name="before" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime"/>
+            <property id="after" uri="mms:after" name="after" description="" rangeUri="http://www.melodic-project.eu/ontologies/casm/2017/09/20#DateTime"/>
+          </concept>
+        </concept>
+        <concept id="Action" uri="mms:Action" name="Action" description=""/>
+        <concept id="Handler" uri="mms:Handler" name="Handler" description="This class refers to the characteristics of dedicated software components that are used for federating and processing raw data relevant to an access control decision and semantically uplifting them as instances of the Context Model (e.g. authentication, request, location, IP-address-to-city handlers etc. (Veloudis et al., 2017)"/>
+        <concept id="Request" uri="mms:Request" name="Request" description="This class captures the characteristics that should be considered for evaluating an intercepted request (Veloudis et al., 2017)"/>
+        <concept id="Coordinates" uri="mms:Coordinates" name="Coordinates" description="Refers to the positioning of an entity using a geographic coordinate system.">
+          <property id="latitude" uri="mms:latitude" name="latitude" description="" rangeUri="xsd:double"/>
+          <property id="longitude" uri="mms:longitude" name="longitude" description="" rangeUri="xsd:double"/>
+          <property id="elevation" uri="mms:elevation" name="elevation" description="" rangeUri="xsd:double"/>
+        </concept>
+        <concept id="DDEElement" uri="mms:DDEElement" name="DDEElement" description="Parent class of all PaaSword Data Distribution and Encryption Model elements">
+          <concept id="DataDistribution" uri="mms:DataDistribution" name="DataDistribution" description="This class captures aspects of the data distribution required for enhancing the security of sensitive information.">
+            <concept id="ExcludedProvider" uri="mms:ExcludedProvider" name="ExcludedProvider" description="This class denotes certain untrusted IaaS providers that should be avoided when distributing sensitive data."/>
+            <concept id="DistributionMetric" uri="mms:DistributionMetric" name="DistributionMetric" description="This class quantifies the data distribution required for enhancing the security of sensitive information.">
+              <property id="numberOfPhysicalLocations" uri="mms:numberOfPhysicalLocations" name="numberOfPhysicalLocations" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="numberOfVMs" uri="mms:numberOfVMs" name="numberOfVMs" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="numberOfServers" uri="mms:numberOfServers" name="numberOfServers" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="ExcludedLocation" uri="mms:ExcludedLocation" name="ExcludedLocation" description="This class denotes the physical locations that should be avoided when distributing sensitive data."/>
+            <concept id="PreferredProvider" uri="mms:PreferredProvider" name="PreferredProvider" description="This class denotes certain trusted IaaS providers that should be considered when distributing sensitive data."/>
+            <concept id="PreferredLocation" uri="mms:PreferredLocation" name="PreferredLocation" description="This class denotes the physical locations that should be considered when distributing sensitive data."/>
+          </concept>
+          <concept id="DatabaseFragmentation" uri="mms:DatabaseFragmentation" name="DatabaseFragmentation" description="This class refers to the details concerning the way that the data should be fragmented in order to be distributed for security purposes.">
+            <concept id="NonRelationalDataFragmentation" uri="mms:NonRelationalDataFragmentation" name="NonRelationalDataFragmentation" description="This Class refers to different types of possible fragmentation of a non- relational database.">
+              <concept id="Replication" uri="mms:Replication" name="Replication" description="Replication class refers to the details of copying data/aggregates across multiple servers, so each bit of data can be found in multiple places.">
+                <concept id="PeerToPeerReplication" uri="mms:PeerToPeerReplication" name="PeerToPeerReplication" description="Peer-to-peer refers to the details of replication that allows writes to several nodes and synchronization between them."/>
+                <concept id="MasterSlaveReplication" uri="mms:MasterSlaveReplication" name="MasterSlaveReplication" description="Master-slave replication refers into the details of making one node the authoritative copy that handles writes while slaves synchronizing with the master and handling reads."/>
+              </concept>
+              <concept id="Sharding" uri="mms:Sharding" name="Sharding" description="Sharding class refers to the details of different data distribution across multiple servers, so each server acts as the single source for a subset of data/aggregates."/>
+            </concept>
+            <concept id="RelationalDataFragmentation" uri="mms:RelationalDataFragmentation" name="RelationalDataFragmentation" description="This Class refers to different types of possible fragmentation of a relational database.">
+              <concept id="MixedFragmentation" uri="mms:MixedFragmentation" name="MixedFragmentation" description="This class refers to a two step fragmentation process of a relational database that may use both horizontal and vertical fragmentation based on certain conditions.">
+                <property id="hasFragColumn" uri="mms:hasFragColumn" name="hasFragColumn" description="" rangeUri="xsd:string"/>
+              </concept>
+              <concept id="VerticalFragmentation" uri="mms:VerticalFragmentation" name="VerticalFragmentation" description="This class refers to the fragmentation of a relational database across its columns."/>
+              <concept id="HorizontalFragmentation" uri="mms:HorizontalFragmentation" name="HorizontalFragmentation" description="This class refers to the fragmentation of a relational database across its rows.">
+                <property id="hasFragRow" uri="mms:hasFragRow" name="hasFragRow" description="" rangeUri="xsd:nonNegativeInteger"/>
+              </concept>
+              <property id="hasPrivacyConstraint" uri="mms:hasPrivacyConstraint" name="hasPrivacyConstraint" description="" rangeUri="xsd:string"/>
+            </concept>
+          </concept>
+          <concept id="CryptographicType" uri="mms:CryptographicType" name="CryptographicType" description="This class reveals details of the level of security required for specific sensitive data artefacts.">
+            <concept id="Symmetric" uri="mms:Symmetric" name="Symmetric" description="Refers to the details of algorithm for cryptography chosen that uses the same cryptographic keys for both encryption of plaintext and decryption of ciphertext.">
+              <property id="hasSymmetricBlockSize" uri="mms:hasSymmetricBlockSize" name="hasSymmetricBlockSize" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="hasSymmetricKeySize" uri="mms:hasSymmetricKeySize" name="hasSymmetricKeySize" description="" rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="Asymmetric" uri="mms:Asymmetric" name="Asymmetric" description="Refers to the details of algorithm for cryptography chosen that uses the different cryptographic keys for encryption (public key) of plaintext and decryption of ciphertext (private key).">
+              <concept id="Hybrid" uri="mms:Hybrid" name="Hybrid" description=""/>
+              <property id="hasAsymmetricKeySize" uri="mms:hasAsymmetricKeySize" name="hasAsymmetricKeySize" description="" rangeUri="xsd:positiveInteger"/>
+              <property id="hasCurve" uri="mms:hasCurve" name="hasCurve" description="" rangeUri="xsd:string"/>
+            </concept>
+            <property id="hasModeofOperation" uri="mms:hasModeofOperation" name="hasModeofOperation" description="" rangeUri="xsd:string"/>
+          </concept>
+        </concept>
+      </concept>
+      <concept id="Big_DataModel" uri="mms:Big_DataModel" name="Big_DataModel" description="The Big Data Model refers to the following top-level concepts; Big Data Aspects, Data Location, Data Timestamp, Data Management, and Data Domains.">
+        <concept id="DataTimestamp" uri="mms:DataTimestamp" name="DataTimestamp" description="This class includes all the necessary concepts for describing the temporal characteristics of data artefacts to be processed by a Melodic-enabled application.">
+          <concept id="ProcessingDate" uri="mms:ProcessingDate" name="ProcessingDate" description="This subclass is used for defining when a certain data element was processed."/>
+          <concept id="TransferDate" uri="mms:TransferDate" name="TransferDate" description="This subclass is used for defining when a certain data element was transmitted from a data source."/>
+          <concept id="DeletionDate" uri="mms:DeletionDate" name="DeletionDate" description="This subclass is used for defining when a certain data element was deleted."/>
+          <concept id="AcquisitionDate" uri="mms:AcquisitionDate" name="AcquisitionDate" description="This subclass is used for defining when a certain data element was received by the Melodic-enabled application."/>
+          <concept id="CreationDate" uri="mms:CreationDate" name="CreationDate" description="This subclass is used for defining when a certain data element was created."/>
+          <property id="hasTimePoint" uri="mms:hasTimePoint" name="hasTimePoint" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Timestamp class with the Instant class of the Context Aware Security model for referring to the precise point in time at which data was created, deleted, acquired, processed or transferred." propertyType="ObjectProperty" range="Instant" rangeUri="xsd:dateTime"/>
+          <property id="hasTimeInterval" uri="mms:hasTimeInterval" name="hasTimeInterval" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Timestamp class with the DateTimeInterval class of the Context Aware Security model for referring to a period of time bounded by two time points, during which data was created, deleted, acquired, processed or transferred." propertyType="ObjectProperty" range="DateTimeInterval" rangeUri="xsd:duration"/>
+        </concept>
+        <concept id="DataLocation" uri="mms:DataLocation" name="DataLocation" description="This class encapsulates all the concepts that can be used for describing the origin of data or the current or required physical/network location where the data can be stored or processed by a Melodic-enabled application.">
+          <concept id="Origin" uri="mms:Origin" name="Origin" description="This subclass involves all the relevant concepts for defining the source location of the data artefacts to be processed by a Melodic-enabled application.">
+            <concept id="StreamOrigin" uri="mms:StreamOrigin" name="StreamOrigin" description="This subclass defines the source location of data artefacts to be stream processed by a Melodic-enabled application."/>
+            <concept id="BatchOrigin" uri="mms:BatchOrigin" name="BatchOrigin" description="This subclass defines the source location of data artefacts to be stored and processed in batch mode by a Melodic-enabled application."/>
+          </concept>
+          <property id="hasPhysicalLocation" uri="mms:hasPhysicalLocation" name="hasPhysicalLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Location class to the Physical Location from the Context Aware Security model in order to define the concrete physical region where data may be stored or processed." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="hasPreferredLocation" uri="mms:hasPreferredLocation" name="hasPreferredLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of preferences for using certain network, physical and/or cloud location(s) in order to store or process data artefacts." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="sameAs" uri="mms:sameAs" name="sameAs" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to another Data location recursively in order to facilitate the expression of requirements that dictate the use of the same location(s) as the ones previously selected for other data artefacts." propertyType="ObjectProperty" range="DataLocation"/>
+          <property id="hasSparsity" uri="mms:hasSparsity" name="hasSparsity" description="This data &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to a string that denotes how distributed (e.g. Low, Medium, High) are the data sources or data locations exploited for producing a dataset to be processed by a Melodic-enabled application." rangeUri="xsd:string"/>
+          <property id="hasUnacceptableLocation" uri="mms:hasUnacceptableLocation" name="hasUnacceptableLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of forbidden network, physical and/or cloud location(s) for storing or processing data artefacts." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="hasNetworkLocation" uri="mms:hasNetworkLocation" name="hasNetworkLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Location class to the Network Location from the Context Aware Security model in order to define the network region where data may be stored or processed." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="isStorageLocation" uri="mms:isStorageLocation" name="isStorageLocation" description="This data &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Location class with a boolean value that specifies whether or not the data location mentioned is where the data will be stored or processed." rangeUri="xsd:boolean"/>
+          <property id="notSameAs" uri="mms:notSameAs" name="notSameAs" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to another Data location recursively in order to facilitate the expression of requirements that forbid the use of the same location(s) as the ones previously selected for other data artefacts." propertyType="ObjectProperty" range="DataLocation"/>
+          <property id="hasAllowedLocation" uri="mms:hasAllowedLocation" name="hasAllowedLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data location class to the Location class of the Context Aware Security Model in order to facilitate the expression of permitted network, physical and/or cloud location(s) for storing or processing data artefacts." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="hasCloudLocation" uri="mms:hasCloudLocation" name="hasCloudLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Location class to the Cloud Location from the Context Aware Security model in order to define the relevant concepts with respect to the worldwide positioning of cloud offerings hosts." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+        </concept>
+        <concept id="DataManagement" uri="mms:DataManagement" name="DataManagement" description="This class encapsulates all the relevant concepts that can be used in order to describe major technological choices with respect to how big data is acquired, stored, processed, transferred or replicated for redundancy reasons.">
+          <concept id="BigDataProcessing" uri="mms:BigDataProcessing" name="BigDataProcessing" description="This subclass encapsulates all the concepts that can be used for describing and classifying the various types of big data processing that can be conducted by a Melodic-enabled cloud application.">
+            <concept id="DistributedML" uri="mms:DistributedML" name="DistributedML" description="This subclass refers to big data processing techniques that are focused on implementing efficient machine learning algorithms in a distributed and scalable manner (Ranjan et al., 2015). Examples include: Apache Mahout, MLBase.">
+              <instance id="MLBASE" uri="mms:MLBASE" name="MLBASE" description="MLBASE"/>
+              <instance id="ApacheMAHOUT" uri="mms:ApacheMAHOUT" name="ApacheMAHOUT" description="Apache MAHOUT"/>
+            </concept>
+            <concept id="StreamProcessing" uri="mms:StreamProcessing" name="StreamProcessing" description="This subclass refers to a processing paradigm also known as event stream processing that transforms, in real or near-real time, an incoming stream of unbounded data records/events that are small, self-contained, immutable objects containing the details of somethings happened at some point in time (Kleppmann, 2017).">
+              <concept id="StreamTransforming" uri="mms:StreamTransforming" name="StreamTransforming" description="This subclass refers to a second &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of stream processing that (instead of detecting occurrence patterns) focuses on incrementally converting (e.g. sorting, grouping, aggregating) streams to an analysis-friendly schema based on a number of devised jobs. Examples include: Apache STORM, Apache Flink.">
+                <instance id="Concord" uri="mms:Concord" name="Concord" description="Concord"/>
+                <instance id="ApacheFlink" uri="mms:ApacheFlink" name="ApacheFlink" description="Apache Flink"/>
+                <instance id="ApacheSTORM" uri="mms:ApacheSTORM" name="ApacheSTORM" description="Apache STORM"/>
+                <instance id="Samza" uri="mms:Samza" name="Samza" description="Samza"/>
+                <instance id="GoogleCloudDataflow" uri="mms:GoogleCloudDataflow" name="GoogleCloudDataflow" description="Google Cloud Dataflow"/>
+                <instance id="AzureStreamAnalytics" uri="mms:AzureStreamAnalytics" name="AzureStreamAnalytics" description="Azure Stream Analytics"/>
+                <instance id="KafkaStreams" uri="mms:KafkaStreams" name="KafkaStreams" description="Kafka Streams"/>
+              </concept>
+              <concept id="CEP" uri="mms:CEP" name="CEP" description="This subclass refers to one &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of stream processing that aims to identify patterns and analyse cause-and-effect relationships among streams of information (data) in real time, allowing for proactive or reactive effective actions in response to specific situations (Luckham, 2002). It usually involves digestion of data from multiple and heterogeneous data. Examples include: Esper, SQLstream.">
+                <instance id="Apama" uri="mms:Apama" name="Apama" description="Apama"/>
+                <instance id="IBMInfoSphereStreams" uri="mms:IBMInfoSphereStreams" name="IBMInfoSphereStreams" description="IBM InfoSphere Streams"/>
+                <instance id="SQLstream" uri="mms:SQLstream" name="SQLstream" description="SQLstream"/>
+                <instance id="Esper" uri="mms:Esper" name="Esper" description="Esper"/>
+                <instance id="TIBCOStreamBase" uri="mms:TIBCOStreamBase" name="TIBCOStreamBase" description="TIBCO StreamBase"/>
+              </concept>
+              <concept id="StreamJoins" uri="mms:StreamJoins" name="StreamJoins" description="This subclass involves information about different pre-processing techniques for enhancing the input of a stream processing application (Kleppmann, 2017). Examples include: Stream-stream joins &#xe2;&#x20ac;&#x201c; combining two or more distinct streams, Stream-table joins &#xe2;&#x20ac;&#x201c; combining streams with data stored, Table-table joins &#xe2;&#x20ac;&#x201c; combining different types of stored data into a single stream.">
+                <concept id="Table_tablejoins" uri="mms:Table_tablejoins" name="Table_tablejoins" description="Table-table joins"/>
+                <concept id="Stream_tablejoins" uri="mms:Stream_tablejoins" name="Stream_tablejoins" description="Stream-table joins"/>
+                <concept id="Stream_streamjoins" uri="mms:Stream_streamjoins" name="Stream_streamjoins" description="Stream-stream joins"/>
+              </concept>
+            </concept>
+            <concept id="HybridProcessing" uri="mms:HybridProcessing" name="HybridProcessing" description="This is a subclass that involves processing techniques that can be classified in the space between stream and batch processing. These are also called micro-batching techniques and treat streams as a sequence of small batches or chunks of data that are processed in near real-time (e.g. Apache Spark).">
+              <concept id="ApacheSPARK" uri="mms:ApacheSPARK" name="ApacheSPARK" description="Apache SPARK">
+                <concept id="ApplicationArguments" uri="mms:ApplicationArguments" name="Application Arguments"/>
+                <concept id="SPARKArguments" uri="mms:SPARKArguments" name="SPARK Arguments"/>
+                <concept id="SPARKConfiguration" uri="mms:SPARKConfiguration" name="SPARK Configuration"/>
+                <property id="ClassName" uri="mms:ClassName" name="Class Name" rangeUri="xsd:string"/>
+              </concept>
+            </concept>
+            <concept id="ComputationalComplexity" uri="mms:ComputationalComplexity" name="ComputationalComplexity" description="This subclass is used in order to provide concepts that classify processing techniques and systems based on the computation complexity that they introduce when processing big data. Example instances may include the use of linguistic terms like High, Medium, Low or &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property values that imply the expected complexity (e.g. job length).">
+              <property id="hasRequiredProcessingPower" uri="mms:hasRequiredProcessingPower" name="hasRequiredProcessingPower" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Complexity class with the CPU class of the Application Placement model in order to indirectly indicate the involved complexity of a certain Melodic-enabled application." propertyType="ObjectProperty" range="BigDataProcessing" rangeUri="xsd:positiveInteger"/>
+              <property id="hasJobLength" uri="mms:hasJobLength" name="hasJobLength" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Complexity class with an integer that denotes the size of each program used as a big data processing job." rangeUri="xsd:integer"/>
+              <instance id="Medium" uri="mms:Medium" name="Medium" description="Medium"/>
+              <instance id="Low" uri="mms:Low" name="Low" description="Low"/>
+              <instance id="High" uri="mms:High" name="High" description="High"/>
+            </concept>
+            <concept id="Methodology" uri="mms:Methodology" name="Methodology" description="This subclass is used for characterising big data processing applications based on their scope and the kind of algorithmic approach used.">
+              <concept id="PredictiveAnalysis" uri="mms:PredictiveAnalysis" name="PredictiveAnalysis" description="This subclass refers to a number of techniques from data mining, statistics, predictive modelling, machine learning, and artificial intelligence employed to analyse big data in order to make predictions about future events (Nyce, 2007)."/>
+              <concept id="Query_Reporting" uri="mms:Query_Reporting" name="Query_Reporting" description="This subclass refers to techniques and tools that perform simple or complex inquiries over a set of data and provide consolidated summaries of the results."/>
+              <concept id="OutlierDetection" uri="mms:OutlierDetection" name="OutlierDetection" description="This subclass refers to the use of anomaly detection algorithms for identifying items, events or observations which do not conform to an expected pattern or other items in a dataset (Chandola et al., 2009)."/>
+              <concept id="CausalAnalysis" uri="mms:CausalAnalysis" name="CausalAnalysis" description="This subclass refers to techniques that introduce counterfactual reasoning and causal assumptions in addition to observations and statistical assumptions in order to estimate the effect of intervention between two variables (Pearl, 2003)."/>
+              <concept id="ConfirmatoryAnalysis" uri="mms:ConfirmatoryAnalysis" name="ConfirmatoryAnalysis" description="This subclass refers to the algorithms (often used in social research) corresponding to a special form of factor analysis that focus on testing and verifying hypothesized models (based on theory and/or previous analytic research) (Li, 2015)."/>
+              <concept id="CorrelationAnalysis" uri="mms:CorrelationAnalysis" name="CorrelationAnalysis" description="This subclass refers to statistical evaluation techniques used on big data processing to study the strength of a relationship between two, numerically measured, continuous variables (Rodgers &amp; Nicewander, 1988)."/>
+              <concept id="Miscellaneous" uri="mms:Miscellaneous" name="Miscellaneous" description="This subclass refers to any other methodology used for big data processing that can be perceived as part of the above mentioned techniques. Examples include: 3D Reconstruction, Translation.">
+                <concept id="ThreeDReconstruction" uri="mms:ThreeDReconstruction" name="ThreeDReconstruction" description="3D Reconstruction"/>
+                <concept id="Translation" uri="mms:Translation" name="Translation" description="Translation"/>
+              </concept>
+              <concept id="ProbabilisticAnalysis" uri="mms:ProbabilisticAnalysis" name="ProbabilisticAnalysis" description="This subclass refers to the use of certain algorithms that based on big data processing may infer with a certain degree of certainty, facts about the current situation."/>
+              <concept id="Analytical" uri="mms:Analytical" name="Analytical" description="This subclass refers to the kind of big data processing that considers qualitative or quantitative information to discern patterns within the information, usually involving deductive reasoning. Examples include: Social Network Analysis, Text Analysis.">
+                <concept id="Location_basedAnalysis" uri="mms:Location_basedAnalysis" name="Location_basedAnalysis" description="Location-based Analysis"/>
+                <concept id="SpeechAnalytics" uri="mms:SpeechAnalytics" name="SpeechAnalytics" description="Speech Analytics"/>
+                <concept id="Transcription" uri="mms:Transcription" name="Transcription" description="Transcription"/>
+                <concept id="FeaturesRecognition" uri="mms:FeaturesRecognition" name="FeaturesRecognition" description="Features Recognition"/>
+                <concept id="SocialNetworkAnalyis" uri="mms:SocialNetworkAnalyis" name="SocialNetworkAnalyis" description="Social Network Analyis"/>
+                <concept id="TextAnalytics" uri="mms:TextAnalytics" name="TextAnalytics" description="Text Analytics"/>
+                <concept id="ImageProcessing" uri="mms:ImageProcessing" name="ImageProcessing" description="Image Processing"/>
+              </concept>
+            </concept>
+            <concept id="BatchProcessing" uri="mms:BatchProcessing" name="BatchProcessing" description="This subclass refers to a processing paradigm also known as offline system that involves a series of jobs on a bounded bundle of inputs (fixed set of data) that produces a certain output (Kleppmann, 2017). Batch jobs are often scheduled to run periodically (e.g. once a day).">
+              <concept id="BulkSynchronousParallel" uri="mms:BulkSynchronousParallel" name="BulkSynchronousParallel" description="This subclass refers to a bridging model for designing parallel algorithms which fits the needs of distributed computation (Valiant, 2011). Examples include: Apache Hama, Apache Giraph.">
+                <instance id="ApacheGiraph" uri="mms:ApacheGiraph" name="ApacheGiraph" description="Apache Giraph"/>
+                <instance id="ApacheHama" uri="mms:ApacheHama" name="ApacheHama" description="Apache Hama"/>
+                <instance id="Pregel" uri="mms:Pregel" name="Pregel" description="Pregel"/>
+              </concept>
+              <concept id="MapReduce" uri="mms:MapReduce" name="MapReduce" description="This subclass refers to Map-Reduce batch processing techniques for distributed computing. Examples include: Hadoop MapReduce, Apache S4.">
+                <instance id="HadoopMR" uri="mms:HadoopMR" name="HadoopMR" description="Hadoop MR"/>
+                <instance id="S4" uri="mms:S4" name="S4" description="S4"/>
+              </concept>
+              <property id="hasThroughput" uri="mms:hasThroughput" name="hasThroughput" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Batch Processing with an integer that states the number of data records that an application can process per second, or the total time it takes to run a job on a dataset of a certain size (Kleppmann, 2017)." rangeUri="xsd:integer"/>
+              <property id="hasTotalTimePerJob" uri="mms:hasTotalTimePerJob" name="hasTotalTimePerJob" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Batch Processing with a float that denotes the total time it lasts to execute a job on a dataset of a certain size (Kleppmann, 2017)." rangeUri="xsd:double"/>
+            </concept>
+            <property id="hasPriority" uri="mms:hasPriority" name="hasPriority" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a string that denotes how urgently a certain processing job should be executed." rangeUri="xsd:string"/>
+            <property id="hasProcessingCost" uri="mms:hasProcessingCost" name="hasProcessingCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a float that expresses the cost for processing according to the designed functionalities of the Melodic-enabled cloud application." rangeUri="xsd:double"/>
+            <property id="hasComplexMetric" uri="mms:hasComplexMetric" name="hasComplexMetric" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a string value that refers to another core conceptualisation of the CAMEL language (i.e. Composite Metric), which encapsulates composite measurements of specific non-functional attributes, derived via mathematical formulas over other metrics (e.g. average CPU usage, mean response time, Ratio Reads to Writes)." rangeUri="xsd:boolean"/>
+            <property id="isNearRealTime" uri="mms:isNearRealTime" name="isNearRealTime" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a boolean that denotes whether or not the processing takes place almost at the same time as input data is produced. This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property implies a time delay introduced due to network lag, between the data source and the processing location." rangeUri="xsd:boolean"/>
+            <property id="isRealTime" uri="mms:isRealTime" name="isRealTime" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a boolean that denotes whether or not the processing takes place at the same time as input data is produced." rangeUri="xsd:boolean"/>
+            <property id="isLongLived" uri="mms:isLongLived" name="isLongLived" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a boolean that expresses whether or not a certain processing job is chronic." rangeUri="xsd:boolean"/>
+            <property id="hasAppProcessingLocation" uri="mms:hasAppProcessingLocation" name="hasAppProcessingLocation" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location where the application is or will be hosted." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+            <property id="forProductionUsage" uri="mms:forProductionUsage" name="forProductionUsage" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a boolean that denotes whether or not the discussed processing refers to a production system." rangeUri="xsd:boolean"/>
+            <property id="hasDataProcessingCost" uri="mms:hasDataProcessingCost" name="hasDataProcessingCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a float that expresses the cost for retrieving data to be processed by the Melodic-enabled cloud application." rangeUri="xsd:double"/>
+            <property id="hasConstraints" uri="mms:hasConstraints" name="hasConstraints" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a string that denotes expressions over raw and complex metrics that bound the way processing will be performed." rangeUri="xsd:string"/>
+            <property id="hasRawMetric" uri="mms:hasRawMetric" name="hasRawMetric" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Processing class with a string value that refers to Raw Metric conceptualisation of the CAMEL language." rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Transfer" uri="mms:Transfer" name="Transfer" description="This subclass of Data Management class refers to any &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;concept that can be used for describing aspects related to communicating data artefacts between their data sources and the processing or storing locations.">
+            <property id="hasDataTransferDesiredCompletionTime" uri="mms:hasDataTransferDesiredCompletionTime" name="hasDataTransferDesiredCompletionTime" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with a date datatype in order to define the desired end time of a data-transferring task." rangeUri="xsd:dateTime"/>
+            <property id="hasDataTransferDesiredStartTime" uri="mms:hasDataTransferDesiredStartTime" name="hasDataTransferDesiredStartTime" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with a date datatype in order to define the desired start time of a data-transferring task." rangeUri="xsd:dateTime"/>
+            <property id="hasTransferOrigin" uri="mms:hasTransferOrigin" name="hasTransferOrigin" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with the Data Location class of the Big Data Model in order to identify the source location of a data-transferring task." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+            <property id="hasTransferTarget" uri="mms:hasTransferTarget" name="hasTransferTarget" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with the Data Location class of the Big Data Model in order to identify the sink location of a data-transferring task." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+            <property id="hasDataTransferCost" uri="mms:hasDataTransferCost" name="hasDataTransferCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with a float that denotes the actual or expected cost for transferring data." rangeUri="xsd:double"/>
+            <property id="hasDataTransferDuration" uri="mms:hasDataTransferDuration" name="hasDataTransferDuration" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Transfer class with a float that denotes the time needed for transferring data between different locations." rangeUri="xsd:double"/>
+          </concept>
+          <concept id="DataStorage" uri="mms:DataStorage" name="DataStorage" description="This subclass encapsulates all the concepts that can be used for characterising the way that input or output data should be stored. The hierarchy involved updates the storage infrastructure taxonomy that (Murthy et al., 2014) presented.">
+            <concept id="DatabaseManagementSystems" uri="mms:DatabaseManagementSystems" name="DatabaseManagementSystems" description="This subclass encapsulates all the concepts that can be used for characterising data storage models for DBMS, encompassing those from cloud and Big Data research communities. The data storage models are classified into the two main categories, relational and non-relational storage.">
+              <concept id="RelationalStorage" uri="mms:RelationalStorage" name="RelationalStorage" description="This subclass refers to databases used for persisting data that are structured in a way that capture and present relations between stored data artefacts (Codd, 1970). Examples include: MySQL, PostgreSQL.">
+                <concept id="NewSQL" uri="mms:NewSQL" name="NewSQL" description="This subclass refers to a &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of parallel database management systems that provides the same scalable performance of non-relational systems while still maintaining the same level of transactional support (i.e. support the properties of Atomicity, Consistency, Isolation, and Durability &#xe2;&#x20ac;&#x201c; ACID) as the traditional relational databases (Murthy et al., 2014).">
+                  <instance id="NuoDB" uri="mms:NuoDB" name="NuoDB" description=""/>
+                  <instance id="VoltDB" uri="mms:VoltDB" name="VoltDB" description=""/>
+                  <instance id="CockroachDB" uri="mms:CockroachDB" name="CockroachDB" description=""/>
+                </concept>
+                <concept id="RDBMS" uri="mms:RDBMS" name="RDBMS" description="A Relational DBMS (RDBMS) stores data as tuples, forming an ordered set of attributes. RDBMSs provide SQL as the established interface for generic data definition, manipulation and querying. Moreover, a rich support for analytical queries and aggregations is generally available.">
+                  <instance id="MicrosoftSQLServer" uri="mms:MicrosoftSQLServer" name="MicrosoftSQLServer" description=""/>
+                  <instance id="MySQL" uri="mms:MySQL" name="MySQL" description=""/>
+                  <instance id="IBMDB2" uri="mms:IBMDB2" name="IBMDB2" description=""/>
+                  <instance id="Oracle" uri="mms:Oracle" name="Oracle" description=""/>
+                  <instance id="PostgreSQL" uri="mms:PostgreSQL" name="PostgreSQL" description=""/>
+                </concept>
+              </concept>
+              <concept id="Non_RelationalStorage" uri="mms:Non_RelationalStorage" name="Non_RelationalStorage" description="This subclass refers to databases (also called NoSQL) used for persisting data that are not modelled using tabular relations and present certain advantages over the relational databases, especially for big data since they offer design simplicity and more efficient horizontal scaling.">
+                <concept id="Document" uri="mms:Document" name="Document" description="This is a subclass of the Key-value Store class that refers to a software application designed for performing CRUD operations over semi-structured data called document-oriented information. Examples include: MongoDB, Couchbase.">
+                  <instance id="MongoDB" uri="mms:MongoDB" name="MongoDB" description=""/>
+                  <instance id="Couchbase" uri="mms:Couchbase" name="Couchbase" description=""/>
+                </concept>
+                <concept id="Time_SeriesDataBase" uri="mms:Time_SeriesDataBase" name="Time_SeriesDataBase" description="Time-series (TS) storage is driven by the need for monitoring of large-scale Cloud and IoT applications and infrastructures, which require horizontally scalable DBMSs with analytical query support. Common TS DBMS are InfluxDB, Prometheus and Axibase.">
+                  <instance id="Axibase" uri="mms:Axibase" name="Axibase" description=""/>
+                  <instance id="Prometheus" uri="mms:Prometheus" name="Prometheus" description=""/>
+                  <instance id="OpenTSDB" uri="mms:OpenTSDB" name="OpenTSDB" description=""/>
+                  <instance id="InfluxDB" uri="mms:InfluxDB" name="InfluxDB" description=""/>
+                </concept>
+                <concept id="Multi_Model" uri="mms:Multi_Model" name="Multi_Model" description="This subclass refers to database management systems that support multiple data models (e.g. document, graph, relational, and key-value models) in one integrated backend (Lu &amp; Holubov&#xc3;&#xa1;, 2017). Examples include: ArangoDB, OrientDB.">
+                  <instance id="ArangoDB" uri="mms:ArangoDB" name="ArangoDB" description=""/>
+                  <instance id="OrientDB" uri="mms:OrientDB" name="OrientDB" description=""/>
+                </concept>
+                <concept id="Key_Value" uri="mms:Key_Value" name="Key_Value" description="This subclass refers to a non-relational data storage paradigm designed for storing, retrieving, and managing associative arrays based on keys. These associative arrays contain a collection of objects with many different fields within them (Tweed &amp; James, 2010).">
+                  <instance id="Memcached" uri="mms:Memcached" name="Memcached" description=""/>
+                  <instance id="Redis" uri="mms:Redis" name="Redis" description=""/>
+                  <instance id="Voldemort" uri="mms:Voldemort" name="Voldemort" description=""/>
+                  <instance id="Aerospike" uri="mms:Aerospike" name="Aerospike" description=""/>
+                  <instance id="LevelDB" uri="mms:LevelDB" name="LevelDB" description=""/>
+                  <instance id="Risk" uri="mms:Risk" name="Risk" description=""/>
+                </concept>
+                <concept id="Graph" uri="mms:Graph" name="Graph" description="This subclass refers to databases that use graph structures (with nodes, edges and properties) for storing and retrieving data. Some are implemented adopting the relational paradigm by storing the graph data in a table while others use a key-value store or document-oriented database for storage (Angles &amp; Gutierrez, 2008). Examples include: Neo4j, OnyxDB.">
+                  <instance id="Onyx" uri="mms:Onyx" name="Onyx" description=""/>
+                  <instance id="TITAN" uri="mms:TITAN" name="TITAN" description=""/>
+                  <instance id="Neo4J" uri="mms:Neo4J" name="Neo4J" description=""/>
+                </concept>
+                <concept id="Wide_Column" uri="mms:Wide_Column" name="Wide_Column" description="Wide-column storage stores data by columns rather than by rows. This enables storing large amounts of data in bulk and for efficiently querying over very large, structured data sets. Some popular examples are Google&#xe2;&#x20ac;&#x2122;s DBaaS offering Bigtable, Apache Cassandra and Apache HBase.">
+                  <instance id="HBase" uri="mms:HBase" name="HBase" description=""/>
+                  <instance id="Cassandra" uri="mms:Cassandra" name="Cassandra" description=""/>
+                  <instance id="Scylla" uri="mms:Scylla" name="Scylla" description=""/>
+                </concept>
+              </concept>
+            </concept>
+            <concept id="FileSystems" uri="mms:FileSystems" name="FileSystems" description="This subclass captures concepts related to File System architecture models. These can be classified into two categories; Distributed File Systems, and Local File Systems.">
+              <concept id="DistributedFileSystems" uri="mms:DistributedFileSystems" name="DistributedFileSystems" description="This subclass encapsulates all the concepts that can be used for characterising Distributed File Systems (DFS). A DFS provides a permanent storage to the data objects through a set of storage resources connected by a communication network. The DFSs can be classified into two broad classes based on the architecture model used: Client/Server and Clustered Distributed DFSs.">
+                <concept id="ClusterDistributed" uri="mms:ClusterDistributed" name="ClusterDistributed" description="This subclass encapsulates all the concepts related to Clustered Distributed architecture model of DFSs.">
+                  <concept id="SymmetricDFS" uri="mms:SymmetricDFS" name="SymmetricDFS" description="This subclass encapsulates all the concepts related to Symmetric distributed DFS also called as peer-to-peer (P2P) file.">
+                    <instance id="RedHatGFS" uri="mms:RedHatGFS" name="RedHatGFS"/>
+                    <instance id="DHT_basedSystems" uri="mms:DHT_basedSystems" name="DHT_basedSystems"/>
+                    <instance id="PVFS" uri="mms:PVFS" name="PVFS"/>
+                  </concept>
+                  <concept id="DistributedMetadata" uri="mms:DistributedMetadata" name="DistributedMetadata" description="This subclass encapsulates all the concepts related to clustered distributed DFSs which are based on distributed metadata.">
+                    <instance id="CephFS" uri="mms:CephFS" name="CephFS"/>
+                  </concept>
+                  <concept id="CentralizedMetadata" uri="mms:CentralizedMetadata" name="CentralizedMetadata" description="This subclass captures concepts related to clustered distributed DFSs which are based on centralised metadata.">
+                    <instance id="MooseFS" uri="mms:MooseFS" name="MooseFS"/>
+                    <instance id="iRODS" uri="mms:iRODS" name="iRODS"/>
+                    <instance id="HDFS" uri="mms:HDFS" name="HDFS"/>
+                  </concept>
+                </concept>
+                <concept id="Client_Server" uri="mms:Client_Server" name="Client_Server" description="This subclass captures concepts related to Client/Server architecture model of DFSs.">
+                  <instance id="GlusterFS" uri="mms:GlusterFS" name="GlusterFS"/>
+                </concept>
+              </concept>
+              <concept id="LocalFileSystems" uri="mms:LocalFileSystems" name="LocalFileSystems" description="This subclass refers to concepts that can be used for characterising Local File Systems (DFS)."/>
+            </concept>
+          </concept>
+          <concept id="Acquisition" uri="mms:Acquisition" name="Acquisition" description="This subclass is used in order to describe the required or offered types of big data acquisition in the frame of a Melodic-enabled cloud application devised to process it.">
+            <concept id="Push_based" uri="mms:Push_based" name="Push_based" description="This subclass aims to capture concepts related to the push-based paradigm for acquiring data asynchronously, where the request for a given transaction is initiated by the publisher (Yang et al. 2017).">
+              <concept id="MessageBrokering" uri="mms:MessageBrokering" name="MessageBrokering" description="This subclass refers to a certain &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of push-based acquisition of data where an intermediary software component undertakes the task of translating and rooting data transparently to any given number of subscribed receivers (Melodic-enabled applications) that expect the acquisition of certain data in a pre-defined format (Hohpe &amp; Woolf, 2004).">
+                <concept id="Centralized" uri="mms:Centralized" name="Centralized" description="This is a subclass of the Message Brokering class where the push-based paradigm, for communicating data between producers and subscribers, is implemented with a central broker application, usually called enterprise service bus &#xe2;&#x20ac;&#x201c; ESB (Chappell, 2004). Examples include: WSO2 ESB , jBoss ESB , Mule ESB">
+                  <instance id="ApacheActiveMQ" uri="mms:ApacheActiveMQ" name="ApacheActiveMQ" description="Apache ActiveMQ"/>
+                  <instance id="AzureSB" uri="mms:AzureSB" name="AzureSB" description="Azure SB"/>
+                  <instance id="IBMMQ" uri="mms:IBMMQ" name="IBMMQ" description="IBM MQ"/>
+                  <instance id="MuleESB" uri="mms:MuleESB" name="MuleESB" description="Mule ESB"/>
+                  <instance id="ApacheServicemix" uri="mms:ApacheServicemix" name="ApacheServicemix" description="Apache Servicemix"/>
+                  <instance id="jBossESB" uri="mms:jBossESB" name="jBossESB" description="jBoss ESB"/>
+                  <instance id="RabbitMQ" uri="mms:RabbitMQ" name="RabbitMQ" description="RabbitMQ"/>
+                  <instance id="WSO2ESB" uri="mms:WSO2ESB" name="WSO2ESB" description="WSO2 ESB"/>
+                  <instance id="GoogleCloudPub_Sub" uri="mms:GoogleCloudPub_Sub" name="GoogleCloudPub_Sub" description="Google Cloud Pub/Sub"/>
+                  <instance id="PetalsESB" uri="mms:PetalsESB" name="PetalsESB" description="Petals ESB"/>
+                  <instance id="ApacheCamel" uri="mms:ApacheCamel" name="ApacheCamel" description="Apache Camel"/>
+                  <instance id="TalendOpenStudio" uri="mms:TalendOpenStudio" name="TalendOpenStudio" description="Talend Open Studio"/>
+                </concept>
+                <concept id="Distributed" uri="mms:Distributed" name="Distributed" description="This is a subclass of the Message Brokering class where the push-based paradigm for communicating data uses several dispersed, but integrated software applications (also called distributed ESB) with message brokering capabilities, instead of just one centralised broker entity in order to avoid any performance bottlenecks (e.g. Apache Kafka).">
+                  <instance id="ApacheKafka" uri="mms:ApacheKafka" name="ApacheKafka" description="Apache Kafka"/>
+                </concept>
+              </concept>
+              <concept id="BrokerlessMessaging" uri="mms:BrokerlessMessaging" name="BrokerlessMessaging" description="This subclass refers to a certain &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of push-based acquisition of data where there are not intermediaries in the middle for translating and rooting data, instead direct peer-to-peer communication between the data sources and the receivers (i.e. Melodic-enabled application) is considered for low latency and/or high transaction rate applications (ZeroMQ, 2008).">
+                <concept id="UDPmulticast" uri="mms:UDPmulticast" name="UDPmulticast" description="This is a subclass of the Brokerless Messaging class and refers to the simultaneous group communication (multicast) using the User Datagram Protocol &#xe2;&#x20ac;&#x201c;UDP (Kurose &amp; Ross, 2010). Examples include: StatsD, Brubeck.">
+                  <instance id="Brubeck" uri="mms:Brubeck" name="Brubeck" description="Brubeck"/>
+                  <instance id="StatsD" uri="mms:StatsD" name="StatsD" description="StatsD"/>
+                </concept>
+                <concept id="TCP_IPmulticast" uri="mms:TCP_IPmulticast" name="TCP_IPmulticast" description="This is a subclass of the Brokerless Messaging class and refers to the technique for one-to-many communication over an IP infrastructure in a network. (Kurose &amp; Ross, 2010). Examples include: ZeroMQ, MQTT.">
+                  <instance id="ZeroMQ" uri="mms:ZeroMQ" name="ZeroMQ" description="ZeroMQ"/>
+                  <instance id="MQTT" uri="mms:MQTT" name="MQTT" description="MQTT"/>
+                </concept>
+              </concept>
+              <property id="usesAcknowledgments" uri="mms:usesAcknowledgments" name="usesAcknowledgments" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Push-based class with a boolean value that defines whether or not the data source will repeatedly attempt to re-send the data to the Melodic-enabled application until a receipt confirmation message is sent." rangeUri="xsd:boolean"/>
+              <property id="isOrdered" uri="mms:isOrdered" name="isOrdered" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Push-based class with a boolean value that states whether or not the certain push-based technique used for relaying big data, guarantees the time ordering of the received data before their processing takes place." rangeUri="xsd:boolean"/>
+            </concept>
+            <concept id="Pull_based" uri="mms:Pull_based" name="Pull_based" description="This subclass aims to capture concepts related to the pull-based paradigm for acquiring data, where there is a request for triggering the transmission of data which is initiated by the Melodic-enabled application, i.e. the receiver entity (Yang et al. 2017) and the receipt takes place in a synchronous manner."/>
+            <property id="appliesBackpressure" uri="mms:appliesBackpressure" name="appliesBackpressure" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Acquisition class with a boolean value that denotes the capability of interrupting the data source transmission in cases that the receiver and its buffers are not able to receive additional data for a short period of time." rangeUri="xsd:boolean"/>
+            <property id="buffersMessages" uri="mms:buffersMessages" name="buffersMessages" description="This data &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Acquisition class with a boolean value that expresses the capability of a Melodic-enabled application to resolve any bottlenecks by buffering the surplus data, in cases that the data acquisition rates are larger than the processing rates." rangeUri="xsd:boolean"/>
+            <property id="dropsMessages" uri="mms:dropsMessages" name="dropsMessages" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Acquisition class with a boolean value that refers to bottleneck situations being resolved by dropping any surplus data." rangeUri="xsd:boolean"/>
+            <property id="isReliable" uri="mms:isReliable" name="isReliable" description="This data &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Acquisition class with a boolean value that captures whether or not the means of data acquisition required or offered guarantee the accuracy of the data received." rangeUri="xsd:boolean"/>
+            <property id="hasSource" uri="mms:hasSource" name="hasSource" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Acquisition class with the Data Location class of the Big Data Model in order to describe the location of the data source to be used by a Melodic-enabled application." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Redundancy" uri="mms:Redundancy" name="Redundancy" description="This subclass encapsulates any approach used for persisting the same data artefacts in several separate places, either in a single database, or in remote databases for detecting and reconstructing lost or damaged data (Doorn &amp; River, 2002).">
+            <concept id="AffinityReplication" uri="mms:AffinityReplication" name="AffinityReplication" description="This subclass refers to replication techniques that consider or define resources to be used for replicating data."/>
+            <concept id="LocallyRedundantStorage" uri="mms:LocallyRedundantStorage" name="LocallyRedundantStorage" description="This subclass refers to data redundancy that considers hosts for data replication situated on the same host."/>
+            <concept id="PhysicallyRedundantStorage" uri="mms:PhysicallyRedundantStorage" name="PhysicallyRedundantStorage" description="This subclass refers to data redundancy that considers hosts for data replication situated in different physical locations.">
+              <concept id="ReadAccess_PhysicallyRedundantStorage" uri="mms:ReadAccess_PhysicallyRedundantStorage" name="ReadAccess_PhysicallyRedundantStorage" description="Read Access - Physically Redundant Storage"/>
+            </concept>
+            <concept id="anti_AffinityReplication" uri="mms:anti_AffinityReplication" name="anti_AffinityReplication" description="This subclass refers to replication techniques that consider or define resources to be excluded from replicating data."/>
+            <property id="refersToPMReplication" uri="mms:refersToPMReplication" name="refersToPMReplication" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that mentions whether or not, a data redundancy approach is used for taking snapshots of a certain physical machine and copying it to another infrastructural resource." rangeUri="xsd:boolean"/>
+            <property id="hasAsychronousReplication" uri="mms:hasAsychronousReplication" name="hasAsychronousReplication" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that defines whether or not data is written to the replica after it has been persisted to the primary storage." rangeUri="xsd:boolean"/>
+            <property id="hasStarReplicationTopology" uri="mms:hasStarReplicationTopology" name="hasStarReplicationTopology" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that defines whether or not a central master node is used (where new data initially is stored) and a number of peripheral nodes are directly connected to the master node for replicating data." rangeUri="xsd:boolean"/>
+            <property id="hasSychronousReplication" uri="mms:hasSychronousReplication" name="hasSychronousReplication" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that defines whether or not data is written both to primary storage and the replica simultaneously, in order to accomplish a constant synchronization between data redundancy entities." rangeUri="xsd:boolean"/>
+            <property id="refersToVMReplication" uri="mms:refersToVMReplication" name="refersToVMReplication" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that mentions whether or not, for data redundancy reasons, an approach is used for taking a snapshot of a certain VM and copying it to another VM, situated either on the same or different physical hosts." rangeUri="xsd:boolean"/>
+            <property id="hasCircularReplicationTopology" uri="mms:hasCircularReplicationTopology" name="hasCircularReplicationTopology" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Redundancy class with a boolean that defines whether or not a master slave topology is used for replicating data where each master (where new data initially is stored) is also the slave (that receives copies of the initial data) of another master, in a circular fashion." rangeUri="xsd:boolean"/>
+          </concept>
+          <property id="hasAgent" uri="mms:hasAgent" name="hasAgent" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Management class with the Subject class of the Context Aware Security model in order to express the responsible entity for performing data acquisition, processing transferring and storage." propertyType="ObjectProperty" range="Subject" rangeUri="xsd:string"/>
+          <property id="hasDataTimestamp" uri="mms:hasDataTimestamp" name="hasDataTimestamp" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Management class with the Data Timestamp class of the Big Data model in order to express the time when certain data artefacts where acquired, processed or transferred." propertyType="ObjectProperty" range="DataTimestamp" rangeUri="xsd:dateTime"/>
+        </concept>
+        <concept id="DataDomains" uri="mms:DataDomains" name="DataDomains" description="This class encapsulates all the relevant concepts that characterize data based on the industries that produce it or need to extract information from it (Murthy et al., 2014). Specifically, we reuse and extend the big data taxonomy introduced by the Cloud Security Alliance (Murthy et al., 2014).">
+          <concept id="AudioMedia" uri="mms:AudioMedia" name="AudioMedia" description="This is an additional subclass with respect to the big data taxonomy introduced by CSA (Murthy et al., 2014) and refers to data related to audio applications (e.g. gun fire detection).">
+            <concept id="AudioUnderstanding" uri="mms:AudioUnderstanding" name="AudioUnderstanding" description="This is a subclass of the Audio Media class that refers to analysis of data for speech recognition and interaction."/>
+          </concept>
+          <concept id="Retail" uri="mms:Retail" name="Retail" description="This subclass encapsulates aspects of structured data analysed usually in near real-time that focus on all the relevant aspects of retail-related transactions or facts that may affect them (e.g. tweets used for sentiment analysis).">
+            <concept id="Location_basedTargeting" uri="mms:Location_basedTargeting" name="Location_basedTargeting" description="This subclass refers to location and preferences related data that can be used for targeted advertising actions."/>
+            <concept id="BehavioralAnalysis" uri="mms:BehavioralAnalysis" name="BehavioralAnalysis" description="This subclass refers to data that may reveal patterns of selling or buying conducts that can be exploited in different retail sectors."/>
+          </concept>
+          <concept id="SocialNetworking" uri="mms:SocialNetworking" name="SocialNetworking" description="This subclass refers to structured or semi-structured data produced from software sensors in various volumes, velocity and veracity that may be used for providing meaningful insights on the status and important aspects of a social network (e.g. user acquisition data).">
+            <concept id="SentimentAnalysis" uri="mms:SentimentAnalysis" name="SentimentAnalysis" description="Sentiment Analysis"/>
+            <concept id="SocialGraphs" uri="mms:SocialGraphs" name="SocialGraphs" description="This subclass refers to data that reveal all the interconnections and relationships between the members of an online social network."/>
+          </concept>
+          <concept id="VisualMedia" uri="mms:VisualMedia" name="VisualMedia" description="This subclass encapsulates aspects of unstructured data that are related to video analysis and may be processed in batch, near real-time or even real-time.">
+            <concept id="ImageUnderstaning" uri="mms:ImageUnderstaning" name="ImageUnderstaning" description="This is a subclass of the Visual Media class that addresses data related to detecting and comprehending images.">
+              <concept id="FaceRecognition" uri="mms:FaceRecognition" name="FaceRecognition" description="Face Recognition"/>
+            </concept>
+            <concept id="SceneAnalysis" uri="mms:SceneAnalysis" name="SceneAnalysis" description="This is a subclass of the Visual Media class that addresses data and video applications for analysing video scenes."/>
+          </concept>
+          <concept id="Finance" uri="mms:Finance" name="Finance" description="This subclass refers to structured data produced from software sensors coming from different financial sectors that usually have significant velocity and may be used for imprinting and analysing real-time financial transactions.">
+            <concept id="FraudDetection" uri="mms:FraudDetection" name="FraudDetection" description="This subclass refers to data relevant for exposing fraudulent financial activities."/>
+            <concept id="HighFrequencyTrading" uri="mms:HighFrequencyTrading" name="HighFrequencyTrading" description="This subclass of the Finance class involves data that imprint, represent and can be used to analyse financial trading actions of high velocity."/>
+          </concept>
+          <concept id="LargeScaleScience" uri="mms:LargeScaleScience" name="LargeScaleScience" description="This subclass addresses all the different data artefacts that may be used or produced in large scale science experiments and activities. Such structured data are usually exploited through batch processing.">
+            <concept id="HighEnergyPhysics" uri="mms:HighEnergyPhysics" name="HighEnergyPhysics" description="This is a subclass of the Large Scale Science class that focuses on data related to high energy physics."/>
+            <concept id="Bioinformatics" uri="mms:Bioinformatics" name="Bioinformatics" description="This is a subclass of the Large Scale Science class that focuses on data related to bioinformatics."/>
+          </concept>
+          <concept id="SensorData" uri="mms:SensorData" name="SensorData" description="This subclass refers to semi-structured data produced from hardware or software sensors in various volumes, velocity and veracity that may be used for predicting or reacting to situations.">
+            <concept id="AnomalyDetection" uri="mms:AnomalyDetection" name="AnomalyDetection" description="This is a subclass of Sensor Data that refers to data carrying valuable information for detecting irregularities on recognised long term trends and patterns (e.g. unexpected traffic congestion)."/>
+            <concept id="WeatherForecasting" uri="mms:WeatherForecasting" name="WeatherForecasting" description="This is a subclass of Sensor Data that refers to data carrying valuable meteorological measurement that can be used for predicting weather information in the future."/>
+          </concept>
+          <concept id="NetworkSecurity" uri="mms:NetworkSecurity" name="NetworkSecurity" description="This subclass refers to unstructured or semi-structured data produced from hardware or software sensors in various volumes, velocity and veracity that may be used for recognising network security threats.">
+            <concept id="IntrusionDetection" uri="mms:IntrusionDetection" name="IntrusionDetection" description="This is a subclass of the Network Security class that refers to data coming from sensors that may reveal unauthorised access to computer systems."/>
+            <concept id="APTs" uri="mms:APTs" name="APTs" description="This subclass stands for Advanced Persisted Threat (APT) and refers to data that can be used to detect continuous cyber-threats, in particular that of Internet-enabled espionage, using a variety of intelligence gathering techniques to access sensitive information (Dell SecureWorks, 2012)."/>
+          </concept>
+        </concept>
+        <concept id="Big_DataAspects" uri="mms:Big_DataAspects" name="Big_DataAspects" description="This class encapsulates all the attributes that can be used in order to describe the main characteristics of big data to be processed by Melodic-enabled cloud applications hosted on multi-clouds. Based on such attributes, preferences on quantitative and qualitative dimensions of virtualized resources can be expressed.">
+          <concept id="DataQuality" uri="mms:DataQuality" name="DataQuality" description="This class encapsulates another group of important big data concepts that reveal aspects about how accessible, secure, compact, volatile or uncertain the data is.">
+            <concept id="Encryption" uri="mms:Encryption" name="Encryption" description="This subclass pertains to the details of the cryptographic paradigm used for protecting sensitive data by transforming a plaintext to ciphertext based on a cryptographic key.">
+              <property id="usesMessageVerification" uri="mms:usesMessageVerification" name="usesMessageVerification" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Encryption class to a string that denotes the technique used for protecting the integrity and authenticity of a data artefact transmission. This may involve the use of a digital signature that is a mathematical scheme for verifying the real data source produced it (authentication), guarantee non-repudiation and certify that data was not altered in transit (integrity)." rangeUri="xsd:string"/>
+              <property id="usesBlockSize" uri="mms:usesBlockSize" name="usesBlockSize" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Encryption class to an integer that corresponds to a fixed length string of bits upon which the cipher operates." rangeUri="xsd:integer"/>
+              <property id="hasEncryptionType" uri="mms:hasEncryptionType" name="hasEncryptionType" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Encryption class to a string that states the cryptographic algorithm used for performing the data encryption (e.g. Advance Encryption Standard (AES) (Daemen &amp; Rijmen, 2003), RSA (Rivest et al., 1978))." rangeUri="xsd:string"/>
+              <property id="usesKeySize" uri="mms:usesKeySize" name="usesKeySize" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Encryption class to an integer that corresponds to the length (in bits) of the cryptographic key used for encrypting or decrypting sensitive data." rangeUri="xsd:integer"/>
+            </concept>
+            <concept id="Accessibility" uri="mms:Accessibility" name="Accessibility" description="This subclass refers to the level of convenience offered when attempting to access certain data artefacts. For example, accessing encrypted data might deteriorate the accessibility with the benefit of securing sensitive data."/>
+            <concept id="Compression" uri="mms:Compression" name="Compression" description="This class refers to if and how data has been encoded in order to use fewer bits than its original representation (i.e. as it was captured from the relevant data sources). This can be succeeded by identifying and eliminating statistical redundancy (lossless compression) or by removing unnecessary or less important information (lossy compression).">
+              <property id="hasCompressionAlgorithm" uri="mms:hasCompressionAlgorithm" name="hasCompressionAlgorithm" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Compression class with string that mentions the compression algorithm used (e.g. Lempel&#xe2;&#x20ac;&#x201c;Ziv (1978))" rangeUri="xsd:string"/>
+              <property id="hasBitRateReduction" uri="mms:hasBitRateReduction" name="hasBitRateReduction" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Compression class with string that denotes the compression ratio (e.g. 3,56 : 1 is the bit rate reduction when compressing 32 bytes to 9 bytes)." rangeUri="xsd:string"/>
+            </concept>
+            <concept id="Veracity" uri="mms:Veracity" name="Veracity" description="This subclass pertains to uncertainty due to data inconsistency, incompleteness and approximations that lead to reduced accuracy.">
+              <concept id="Correctness" uri="mms:Correctness" name="Correctness" description="This subclass is used to describe the level of faultlessness of data acquired which implies that both the data sources and the network communication used were validated as trustworthy."/>
+              <concept id="Consistency" uri="mms:Consistency" name="Consistency" description="This subclass is used to describe the lack of any corrupted or conflicting data that could appear due to error-prone backup processes or unreliable transfer mediums."/>
+              <concept id="Credibility" uri="mms:Credibility" name="Credibility" description="This subclass is used to describe the integrity of data acquired, which is bound to the credibility of the data sources and network communication used."/>
+              <concept id="Traceability" uri="mms:Traceability" name="Traceability" description="Traceability"/>
+              <concept id="Accuracy" uri="mms:Accuracy" name="Accuracy" description="This subclass is used to describe the exactness of data acquired, which implies lack of approximations and/or lack of detailed measurements."/>
+              <concept id="Completeness" uri="mms:Completeness" name="Completeness" description="This subclass is used to describe the plenitude of data acquired, which implies the appropriate acquisition of all the relevant data needed at any given time."/>
+            </concept>
+            <concept id="Volatility" uri="mms:Volatility" name="Volatility" description="This subclass refers to the degree of variation of data values over a period of time. The higher the volatility is the shorter the stored data can be considered valid."/>
+          </concept>
+          <concept id="DataDensity" uri="mms:DataDensity" name="DataDensity" description="This subclass reveals details on big data observed or expected velocity and volume.">
+            <concept id="DataVolume" uri="mms:DataVolume" name="DataVolume" description="This subclass reveals details on the expected amount of data artefacts to be processed by the Melodic-enabled cloud application.">
+              <concept id="Partitions" uri="mms:Partitions" name="Partitions" description="This subclass is used to describe any details required for the data partitions to be used by Melodic-enabled cloud application."/>
+              <property id="hasNumberofRecords" uri="mms:hasNumberofRecords" name="hasNumberofRecords" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Volume class with an integer that describes the size of the data expressed as the amount of records that it may involve." rangeUri="xsd:positiveInteger"/>
+              <property id="fitsToMemory" uri="mms:fitsToMemory" name="fitsToMemory" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Volume class with a boolean value in order to clarify whether or not the data artefact can fit in memory. We note here that we have included this &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property although by definition big data cannot fit in memory, in order to cover cases where there need to be a consideration of smaller amounts of data partitions in an overall big data intensive application." rangeUri="xsd:boolean"/>
+              <property id="canBePartitioned" uri="mms:canBePartitioned" name="canBePartitioned" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Volume class with a boolean value in order to clarify whether or not the data artefact can be physically fragmented into segments that are more easily maintained or accessed." rangeUri="xsd:boolean"/>
+              <property id="hasSize" uri="mms:hasSize" name="hasSize" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Volume class with a float that describes the size of the data to be processed by the Melodic-enabled cloud applications (usually measured in gigabytes (GBs), terabytes (TBs), petabytes (PBs) etc)." rangeUri="xsd:double"/>
+            </concept>
+            <concept id="Velocity" uri="mms:Velocity" name="Velocity" description="This subclass reveals details on the anticipated speed of data to be processed by the Melodic-enabled cloud application along with the types of feeds that may be encountered (e.g. Real-time, On demand, Time-series, Continuous).">
+              <concept id="Time_Series" uri="mms:Time_Series" name="Time_Series" description="This subclass refers to data streams that can be characterized as series of data points indexed in time order."/>
+              <concept id="NearReal_timeFeed" uri="mms:NearReal_timeFeed" name="NearReal_timeFeed" description="This subclass describes that the access to or processing of data can be performed almost at the same time as it is produced. This implies a time delay introduced, by automated data processing or network transmission, between the occurrence of an event and the use of the data."/>
+              <concept id="Real_timeFeed" uri="mms:Real_timeFeed" name="Real_timeFeed" description="This subclass implies aspects of the data velocity since it describes the access to or processing of data at the same time as it is produced. Such an access to data streams is possible in the order of milliseconds, and sometimes microseconds."/>
+              <concept id="OnDemandFeed" uri="mms:OnDemandFeed" name="OnDemandFeed" description="This subclass describes that the access to or processing of data can be performed upon request. This implies that the data is produced either at the moment of the access request (e.g. get a sensor measurement) or it is first stored in order to be retrieved later on upon request."/>
+              <property id="hasRate" uri="mms:hasRate" name="hasRate" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property is used in order to provide a measurement of how fast the data is produced, usually measure in megabits per second (Mbps) or gigabits per second (Gbps)." rangeUri="xsd:double"/>
+              <property id="isContinuous" uri="mms:isContinuous" name="isContinuous" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a boolean value that denotes whether data is produced and received in a continuous or in an intermittent way." rangeUri="xsd:boolean"/>
+              <property id="isOutputVelocity" uri="mms:isOutputVelocity" name="isOutputVelocity" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property is used in order to measure the speed of data produced by a Melodic-enabled application (float value)." rangeUri="xsd:boolean"/>
+              <property id="isInputVelocity" uri="mms:isInputVelocity" name="isInputVelocity" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property is used in order to measure the speed of data coming in to a Melodic-enabled application for processing (float value)." rangeUri="xsd:boolean"/>
+            </concept>
+          </concept>
+          <concept id="DataValue" uri="mms:DataValue" name="DataValue" description="This class refers to big data aspects that reveal the business importance of data which is bound to the potential of improving a business entity&#xe2;&#x20ac;&#x2122;s decision making capabilities.">
+            <concept id="Uniqueness" uri="mms:Uniqueness" name="Uniqueness" description="This subclass refers to the amount of singular data sources involved and the level of their irreplaceability for defining aspects of the true value of the acquired data for a business entity."/>
+            <concept id="Usability" uri="mms:Usability" name="Usability" description="This subclass captures aspects of big data with respect to how relevant and useful is the data for a certain entity&#xe2;&#x20ac;&#x2122;s business goals and decisions."/>
+            <concept id="Comprehensiveness" uri="mms:Comprehensiveness" name="Comprehensiveness" description="This subclass captures aspects of big data that are related to the semantic clarity, interpretability and thus usefulness of data acquired."/>
+          </concept>
+          <concept id="DataVariety" uri="mms:DataVariety" name="DataVariety" description="This class refers to the different types of data that should be processed by a Melodic-enabled cloud application, stating an increased diversity of data that should be stored, processed or combined.">
+            <concept id="Type" uri="mms:Type" name="Type" description="This subclass refers to the media variety that big data may involve with respect to the medium in which data get delivered (e.g. audio, image, video, text).">
+              <concept id="Text" uri="mms:Text" name="Text" description="Text"/>
+              <concept id="Audio" uri="mms:Audio" name="Audio" description="Audio"/>
+              <concept id="Image" uri="mms:Image" name="Image" description="Image"/>
+              <concept id="Video" uri="mms:Video" name="Video" description="Video"/>
+            </concept>
+            <concept id="Format" uri="mms:Format" name="Format" description="This subclass refers to the structural variety that big data may involve which is expressed using certain schemes and models (e.g. binary large object (BLOB), JSON, XML etc).">
+              <instance id="FileFormat" uri="mms:FileFormat" name="FileFormat" description="File"/>
+              <instance id="BLOB" uri="mms:BLOB" name="BLOB" description="BLOB"/>
+              <instance id="Event" uri="mms:Event" name="Event" description="Event"/>
+              <instance id="JSON" uri="mms:JSON" name="JSON" description="JSON"/>
+              <instance id="String" uri="mms:String" name="String" description="String"/>
+              <instance id="Key_ValuePairs" uri="mms:Key_ValuePairs" name="Key_ValuePairs" description="Key-Value Pairs"/>
+              <instance id="RDD" uri="mms:RDD" name="RDD" description="RDD"/>
+              <instance id="XML" uri="mms:XML" name="XML" description="XML"/>
+              <instance id="CSV" uri="mms:CSV" name="CSV" description="CSV"/>
+            </concept>
+          </concept>
+          <property id="hasDataOwner" uri="mms:hasDataOwner" name="hasDataOwner" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Big Data Aspects class with the Subject class of the Context Aware Security model in order to express the owner of the data to be handled by a Melodic-enabled application." rangeUri="xsd:string"/>
+        </concept>
+      </concept>
+      <concept id="ApplicationPlacementModel" uri="mms:ApplicationPlacementModel" name="ApplicationPlacementModel" description="The Application Placement Model refers to the following top-level concepts; IaaS, PaaS, and Provider.">
+        <concept id="PaaS" uri="mms:PaaS" name="PaaS" description="This class encapsulates all the attributes related to platform level cloud resources that are required and offered for deploying Melodic-enabled applications.">
+          <concept id="ApplicationServer" uri="mms:ApplicationServer" name="ApplicationServer" description="This subclass accumulates all the necessary application server that might be requested (e.g. Apache Tomcat 9.0.x, Jetty 9.3.3 etc).">
+            <instance id="ApacheTomcat9_0_x" uri="mms:ApacheTomcat9_0_x" name="ApacheTomcat9_0_x" description="Apache Tomcat 9.0.x"/>
+            <instance id="Jetty9_3_3" uri="mms:Jetty9_3_3" name="Jetty9_3_3" description="Jetty 9.3.3"/>
+          </concept>
+          <concept id="PlatformType" uri="mms:PlatformType" name="PlatformType" description="This subclass is used to register and select any one of the different available PaaS offerings depending on the scope of their offered services (e.g. OpenShift, CloudFoundry etc.).">
+            <concept id="API" uri="mms:API" name="API">
+              <instance id="AmazonML" uri="mms:AmazonML" name="AmazonML"/>
+              <instance id="GoogleCloudAI" uri="mms:GoogleCloudAI" name="GoogleCloudAI"/>
+            </concept>
+            <instance id="CloudFoundry" uri="mms:CloudFoundry" name="CloudFoundry" description="CloudFoundry"/>
+            <instance id="OpenShift" uri="mms:OpenShift" name="OpenShift" description="OpenShift"/>
+          </concept>
+          <concept id="PaaSConfiguration" uri="mms:PaaSConfiguration" name="PaaSConfiguration" description="This subclass is used in order to register all the configuration details needed for using platform level cloud services.">
+            <property id="hasAPI" uri="mms:hasAPI" name="hasAPI" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a string for denoting the API that can be used for performing application management (e.g. upload applications to the cloud, start/stop, monitor application etc)." rangeUri="xsd:string"/>
+            <property id="hasVersion" uri="mms:hasVersion" name="hasVersion" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a string for denoting the version of a certain configuration." rangeUri="xsd:string"/>
+            <property id="hasDownload" uri="mms:hasDownload" name="hasDownload" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a string for denoting services needed to be downloaded and installed before hosting a cloud application." rangeUri="xsd:string"/>
+          </concept>
+          <concept id="SecurityControls" uri="mms:SecurityControls" name="SecurityControls" description="This is a subclass of the PaaS class and refers to all the possible security enforcement mechanisms that may be offered or required as a service for protecting the operation of hosted cloud applications. All its subclasses refer to specific security controls that have been classified based on the latest version of the Cloud Controls Matrix (CSA, 2016) introduced by the Cloud Security Alliance.">
+            <concept id="CSA_BCR_02" uri="mms:CSA_BCR_02" name="CSA_BCR_02" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Business Continuity Management &amp; Operational Resilience - Business Continuity Testing">
+              <concept id="SecurityTesting" uri="mms:SecurityTesting" name="SecurityTesting" description="This subclass is used to mention any required or offered testing techniques and tools that verify the appropriate support of a certain virtualized resource for Confidentiality, Integrity, Authentication, Authorization, Availability and Non-repudiation. Example instances: FxCop, FindBugs, Appscan"/>
+            </concept>
+            <concept id="CSA_EKM_02" uri="mms:CSA_EKM_02" name="CSA_EKM_02" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Encryption &amp; Key Management - Key Generation">
+              <concept id="KeyManagement" uri="mms:KeyManagement" name="KeyManagement" description="This subclass is used to mention required or offered mechanisms necessary for creating, revoking and relaying cryptographic keys (to be used for encrypting/decrypting sensitive data) and also ensuring that these keys will not revealed to any unauthorized or malicious users (Verginadis et al., 2015)"/>
+            </concept>
+            <concept id="CSA_IVS_01" uri="mms:CSA_IVS_01" name="CSA_IVS_01" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure &amp; Virtualization Security - Audit Logging / Intrusion Detection.">
+              <concept id="IDS" uri="mms:IDS" name="IDS" description="This subclass is used to provide information about the characteristics of intrusion detection systems (IDS) offered or required for monitoring the virtual resource for malicious activities or any policy violations."/>
+            </concept>
+            <concept id="CSA_IVS_13" uri="mms:CSA_IVS_13" name="CSA_IVS_13" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure &amp; Virtualization Security - Network Architecture.">
+              <concept id="DDoSMitigation" uri="mms:DDoSMitigation" name="DDoSMitigation" description="This subclass is used to provide details on the distributed denial-of-service (DDoS) prevention capabilities offered or required for alleviating cyber-attacks that aim to constitute a cloud resource temporarily or indefinitely unavailable by flooding it with superfluous requests."/>
+            </concept>
+            <concept id="CSA_DSI_07" uri="mms:CSA_DSI_07" name="CSA_DSI_07" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Data Security &amp; Information Lifecycle Management - Secure Disposal">
+              <concept id="DataSanitization" uri="mms:DataSanitization" name="DataSanitization" description="This subclass denotes the capability of offering deliberate, permanent, and irreversible removal of data stored on a virtualised resource.">
+                <concept id="DoD5220_22_M" uri="mms:DoD5220_22_M" name="DoD5220_22_M" description="DoD 5220.22-M"/>
+                <property id="hasNotificationMethod" uri="mms:hasNotificationMethod" name="hasNotificationMethod" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Data Sanitization class with a string for requesting or stating the method used for informing the cloud resource&#xe2;&#x20ac;&#x2122;s client about the successful sanitization of data." rangeUri="xsd:string"/>
+              </concept>
+            </concept>
+            <concept id="CSA_EKM_03" uri="mms:CSA_EKM_03" name="CSA_EKM_03" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Encryption &amp; Key Management - Sensitive Data Protection">
+              <concept id="CSA_EKM_03_Encryption" uri="mms:CSA_EKM_03_Encryption" name="CSA_EKM_03_Encryption" description="This subclass denotes the capability of offering encryption and decryption as a service from a certain virtualised resource."/>
+            </concept>
+            <concept id="CSA_IVS_06" uri="mms:CSA_IVS_06" name="CSA_IVS_06" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure &amp; Virtualization Security - Network Security.">
+              <concept id="IPS" uri="mms:IPS" name="IPS" description="This subclass is used to provide information about the characteristics of intrusion prevention systems (IPS) for examining network traffic flows and patterns in order to detect and prevent vulnerability exploits.">
+                <concept id="Firewall" uri="mms:Firewall" name="Firewall" description="Firewall"/>
+              </concept>
+            </concept>
+            <concept id="CSA_GRM_10" uri="mms:CSA_GRM_10" name="CSA_GRM_10" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Governance and Risk Management - Risk Assessments.">
+              <concept id="SecurityRiskAssessment" uri="mms:SecurityRiskAssessment" name="SecurityRiskAssessment" description="This subclass lists the requested or offered tools for determining the security risks related to the virtualised resources use.">
+                <concept id="VulnerabilityAssessment" uri="mms:VulnerabilityAssessment" name="VulnerabilityAssessment" description="This subclass of CSA-IVS-05 class is used to mention security vulnerability assessment tools offered or requested that accommodate the virtualization technologies used (i.e., virtualization aware) (CSA, 2016)"/>
+                <concept id="CSA_IVS_05" uri="mms:CSA_IVS_05" name="CSA_IVS_05" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Infrastructure &amp; Virtualization Security - Vulnerability Management">
+                  <concept id="VulnerabilityAssesment" uri="mms:VulnerabilityAssesment" name="VulnerabilityAssesment" description="Vulnerability Assesment"/>
+                </concept>
+              </concept>
+            </concept>
+            <concept id="CSA_IAM_09" uri="mms:CSA_IAM_09" name="CSA_IAM_09" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Identity &amp; Access Management - User Access Authorization.">
+              <concept id="Authorization" uri="mms:Authorization" name="Authorization" description="This subclass is used to denote the offering or required functionalities for controlling the way access is permitted to cloud resources or persisted sensitive data (e.g. RBAC, Attribute-based access control)."/>
+            </concept>
+            <concept id="CSA_IAM_02" uri="mms:CSA_IAM_02" name="CSA_IAM_02" description="This class refers to all the relevant security controls offered as a PaaS service that belong to the CSA control domain entitled as: Identity &amp; Access Management - Credential Lifecycle / Provision Management.">
+              <concept id="Identity_AccessManagement" uri="mms:Identity_AccessManagement" name="Identity_AccessManagement" description="This subclass is used to denote the offering or required functionalities for registering and updating the identity of entities that may request access to cloud resources or sensitive data along with their access requests and actions logging.">
+                <concept id="Authentication" uri="mms:Authentication" name="Authentication" description="This is a subclass that encapsulates offered or required capabilities for attesting the identity of entities that may request access to cloud resources or sensitive data."/>
+                <concept id="CredentialLifeCycleManagement" uri="mms:CredentialLifeCycleManagement" name="CredentialLifeCycleManagement" description="This subclass refers to end-user&#xe2;&#x20ac;&#x2122;s credential creation, update, deletion or revocation that may be offered or required in certain access control paradigms (e.g. Role-based access control (RBAC))."/>
+                <concept id="AccessLogging" uri="mms:AccessLogging" name="AccessLogging" description="This subclass refers to mechanisms and their characteristics offered or required for registering and persisting all kind of access actions performed."/>
+              </concept>
+            </concept>
+            <property id="guaranteesNon_Repudiation" uri="mms:guaranteesNon_Repudiation" name="guaranteesNon_Repudiation" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a boolean value that states whether or not the offered PaaS services can provide proof of the integrity and origin of data with high assurance." rangeUri="xsd:boolean"/>
+          </concept>
+          <concept id="Environment" uri="mms:Environment" name="Environment" description="This subclass encapsulates all the aspects that identify the platform level cloud environment (H&#xc3;&#xb6;fer &amp; Karagiannis , 2011).">
+            <concept id="Framework" uri="mms:Framework" name="Framework" description="This subclass describes the offered or requested web framework for rapid development (e.g. PLAY, DJANGO)">
+              <instance id="Joomla" uri="mms:Joomla" name="Joomla" description="Joomla"/>
+              <instance id="Grails" uri="mms:Grails" name="Grails" description="Grails"/>
+              <instance id="DJANGO" uri="mms:DJANGO" name="DJANGO" description="DJANGO"/>
+              <instance id="Compound_JS" uri="mms:Compound_JS" name="Compound_JS" description="Compound_JS"/>
+              <instance id="PLAY" uri="mms:PLAY" name="PLAY" description="PLAY"/>
+            </concept>
+            <concept id="HardwareImage" uri="mms:HardwareImage" name="HardwareImage" description="This subclass describes any pre-installed cloud image available for initializing an IaaS resource.">
+              <property id="hasImageId" uri="mms:hasImageId" name="hasImageId" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to an integer for referencing available cloud images." rangeUri="xsd:string"/>
+            </concept>
+            <concept id="Container" uri="mms:Container" name="Container" description="">
+              <instance id="Docker" uri="mms:Docker" name="Docker" description=""/>
+              <instance id="Kubernetes" uri="mms:Kubernetes" name="Kubernetes" description=""/>
+            </concept>
+            <property id="hasLanguageSupport" uri="mms:hasLanguageSupport" name="hasLanguageSupport" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to the offered or requested development language support which implies certain related middleware (e.g. Java runtime, .NET runtime etc.). It associates the Environment class with a string." rangeUri="xsd:string"/>
+            <property id="hasOS" uri="mms:hasOS" name="hasOS" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property describes the offered or requested operating system (e.g. UbuntuServer, CentOs). It associates the Environment class with a string." rangeUri="xsd:string"/>
+            <property id="OSVersion" uri="mms:OSVersion" name="OSVersion" rangeUri="xsd:string"/>
+          </concept>
+          <property id="isOfferededByProvider" uri="mms:isOfferededByProvider" name="isOfferededByProvider" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the PaaS class with the Provider Class (of the Application Placement Model) for expressing characteristics and identity of the resource provider." propertyType="ObjectProperty" range="Provider" rangeUri="xsd:boolean"/>
+          <property id="usesCloud" uri="mms:usesCloud" name="usesCloud" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the PaaS class with the Cloud Class (of the Application Placement Model) for denoting with one reference the characteristics of the underlying IaaS level resources used for offering PaaS services." propertyType="ObjectProperty" range="Cloud"/>
+          <property id="hasAvailability" uri="mms:hasAvailability" name="hasAvailability" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property may associate a PaaS resource with a float that expresses the expected uptime of the platform level resource." rangeUri="xsd:double"/>
+          <property id="hasCostFunction" uri="mms:hasCostFunction" name="hasCostFunction" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the PaaS class with a string that refers to a function that provides an accurate calculation of the expected cost for using platform level services." rangeUri="xsd:string"/>
+          <property id="PaaSHasLocation" uri="mms:PaaSHasLocation" name="PaaSHasLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the PaaS class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location of the virtualised resource." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="hasPricingType" uri="mms:hasPricingType" name="hasPricingType" description="This Property refers to the different pricing per use schemes that each provider may offer regarding platform level cloud resources." rangeUri="xsd:string"/>
+        </concept>
+        <concept id="Provider" uri="mms:Provider" name="Provider" description="This class captures the characteristics of IaaS or PaaS providers and extends the hierarchy and concepts used in the Saloon ontology (Quinton et al., 2012; Quinton et al., 2013)">
+          <property id="offersPaaS" uri="mms:offersPaaS" name="offersPaaS" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Provider class with the PaaS class of the Application Placement model for describing its platform level offerings." propertyType="ObjectProperty" range="PaaS"/>
+          <property id="offersIaaS" uri="mms:offersIaaS" name="offersIaaS" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Provider class with the IaaS class of the Application Placement model for describing its infrastructural offerings." propertyType="ObjectProperty" range="IaaS"/>
+          <property id="hasGreenFootprint" uri="mms:hasGreenFootprint" name="hasGreenFootprint" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a boolean value that denotes whether or not the provider&#xe2;&#x20ac;&#x2122;s offerings have the minimum possible impact on the environment." rangeUri="xsd:boolean"/>
+          <property id="hasProviderReputation" uri="mms:hasProviderReputation" name="hasProviderReputation" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a string that denotes how appreciated is a certain provider based on its customers satisfaction." rangeUri="xsd:string"/>
+          <instance id="Amazon" uri="mms:Amazon" name="Amazon" description="Amazon"/>
+          <instance id="Rackspace" uri="mms:Rackspace" name="Rackspace" description="Rackspace"/>
+          <instance id="ElasticHosts" uri="mms:ElasticHosts" name="ElasticHosts" description="ElasticHosts"/>
+          <instance id="Google" uri="mms:Google" name="Google" description="Google"/>
+          <instance id="Microsoft" uri="mms:Microsoft" name="Microsoft" description="Microsoft"/>
+          <instance id="DigitalOcean" uri="mms:DigitalOcean" name="DigitalOcean" description="DigitalOcean"/>
+        </concept>
+        <concept id="IaaS" uri="mms:IaaS" name="IaaS" description="This class encapsulates all the attributes related to cloud infrastructural resources that are required and offered for deploying Melodic-enabled applications. It reuses and extends the requirement model of CAMEL (Rossini et al., 2015).">
+          <concept id="Network" uri="mms:Network" name="Network" description="This class refers to the network related aspects that bound the operation of an offered or a requested IaaS resource.">
+            <property id="hasIPType" uri="mms:hasIPType" name="hasIPType" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property is used to express the required or offered &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of internet protocol with respect to its access availability. It associates the Network class with a string." rangeUri="xsd:string"/>
+            <property id="networkHasSubnet" uri="mms:networkHasSubnet" name="networkHasSubnet" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to a string value that represent the subnet of an IaaS resource." rangeUri="xsd:string"/>
+            <property id="hasAvailabilityZone" uri="mms:hasAvailabilityZone" name="hasAvailabilityZone" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Network class to the Availability Zone class of the Big Data Model for denoting isolated locations used to make network resources available." propertyType="ObjectProperty" range="AvailabilityZone" rangeUri="xsd:string"/>
+            <property id="networkHasVersion" uri="mms:networkHasVersion" name="networkHasVersion" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property is used to express the required or offered IP version (e.g. IPv4, IPv6). It associates the Network class with a string." rangeUri="xsd:string"/>
+            <property id="hasBandwidth" uri="mms:hasBandwidth" name="hasBandwidth" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Network class with a float value that states the maximum throughput of a logical or physical communication path. It corresponds to the number of bits that can be conveyed per unit of time." rangeUri="xsd:double"/>
+            <property id="hasPublicIP" uri="mms:hasPublicIP" name="hasPublicIP" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to a string value that represents the public IP of an IaaS resource." rangeUri="xsd:string"/>
+            <property id="hasNetworkCost" uri="mms:hasNetworkCost" name="hasNetworkCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes a float value that expresses the cost for exploiting the network resources." rangeUri="xsd:double"/>
+            <property id="hasPrivateIP" uri="mms:hasPrivateIP" name="hasPrivateIP" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to a string value that represents the private IP of an IaaS resource." rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Storage" uri="mms:Storage" name="Storage" description="This class describes the ephemeral or persistent storing capabilities that are required or offered by a certain IaaS resource.">
+            <concept id="On_InstanceStorage" uri="mms:On_InstanceStorage" name="On_InstanceStorage" description="This subclass refers to ephemeral storage capabilities requested or offered by a virtualised resource. Essentially the storage capabilities described with this class last until the certain resource is decommissioned.">
+              <instance id="AmazonInstanceStore" uri="mms:AmazonInstanceStore" name="AmazonInstanceStore" description="Amazon Instance Store"/>
+              <instance id="Nova" uri="mms:Nova" name="Nova" description="Nova"/>
+            </concept>
+            <concept id="Capacity" uri="mms:Capacity" name="Capacity" description="This subclass is used for stating the size of storage space requested or offered by a certain IaaS resource.">
+              <property id="hasMax" uri="mms:hasMax" name="hasMax" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the maximum size of storage available or requested." rangeUri="xsd:integer"/>
+              <property id="hasMin" uri="mms:hasMin" name="hasMin" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the minimum size of storage available or requested." rangeUri="xsd:integer"/>
+              <property id="hasUnit" uri="mms:hasUnit" name="hasUnit" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property refers to a string that states the measurement unit used for declaring the storage capacity of a certain resource (e.g. GBs)." rangeUri="xsd:string"/>
+            </concept>
+            <concept id="Off_InstanceStorage" uri="mms:Off_InstanceStorage" name="Off_InstanceStorage" description="This subclass refers to persistent storage capabilities requested or offered by a virtualised resource.">
+              <concept id="BlockStorage" uri="mms:BlockStorage" name="BlockStorage" description="This subclass refers to a &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of persistent storage where data are stored into evenly sized blocks, each with its own unique address.">
+                <instance id="EBS" uri="mms:EBS" name="EBS" description="EBS"/>
+                <instance id="Cinder" uri="mms:Cinder" name="Cinder" description="Cinder"/>
+              </concept>
+              <concept id="ObjectStorage" uri="mms:ObjectStorage" name="ObjectStorage" description="This subclass refers to a &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of persistent storage where data are stored as objects encapsulating the data artefacts, their &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;metadata and a globally unique identifier.">
+                <instance id="S3" uri="mms:S3" name="S3" description="S3"/>
+                <instance id="SWIFT" uri="mms:SWIFT" name="SWIFT" description="SWIFT"/>
+              </concept>
+            </concept>
+            <property id="isEnergyEfficient" uri="mms:isEnergyEfficient" name="isEnergyEfficient" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a boolean value that reveals the level of efficacy with respect to how much energy is needed for exploiting the storage capabilities of a resource." rangeUri="xsd:boolean"/>
+            <property id="hasDataMigrationCost" uri="mms:hasDataMigrationCost" name="hasDataMigrationCost" description="hasDataMigrationCost" rangeUri="xsd:double"/>
+            <property id="hasReadThroughput" uri="mms:hasReadThroughput" name="hasReadThroughput" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a float that represents the volume of data artefacts that can be retrieved a certain IaaS resource." rangeUri="xsd:double"/>
+            <property id="hasDiskUsage" uri="mms:hasDiskUsage" name="hasDiskUsage" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes a float that represents the percentage of storing space used for persisting data artefacts." rangeUri="xsd:double"/>
+            <property id="isPersistent" uri="mms:isPersistent" name="isPersistent" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a boolean value that states the ephemeral or persistent nature of storing capabilities offered by a certain IaaS resource." rangeUri="xsd:boolean"/>
+            <property id="hasWriteThroughput" uri="mms:hasWriteThroughput" name="hasWriteThroughput" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a float that represents the volume of data artefacts that can be stored in a certain IaaS resource." rangeUri="xsd:double"/>
+            <property id="hasReadCost" uri="mms:hasReadCost" name="hasReadCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a float that represents the cost for retrieving data artefacts from a certain IaaS resource." rangeUri="xsd:double"/>
+            <property id="hasStorageCostFunction" uri="mms:hasStorageCostFunction" name="hasStorageCostFunction" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a string that refers to a function that provides an accurate calculation of the expected cost for storing data artefacts." rangeUri="xsd:string"/>
+            <property id="hasSolidStateDrive" uri="mms:hasSolidStateDrive" name="hasSolidStateDrive" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes whether a &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;type of non-volatile storage that is able to store and retrieve data artefacts using only electronic circuits is used." rangeUri="xsd:boolean"/>
+            <property id="hasStorageLocation" uri="mms:hasStorageLocation" name="hasStorageLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with the Cloud Location class of the Big Data Model for registering the location of an IaaS resource with storing capabilities." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+            <property id="hasWriteCost" uri="mms:hasWriteCost" name="hasWriteCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Storage class with a float that represents the cost for accumulating data artefacts in a certain IaaS resource." rangeUri="xsd:double"/>
+          </concept>
+          <concept id="Processing" uri="mms:Processing" name="Processing" description="This class involves any infrastructural feature bound to the processing capability of virtualised resources.">
+            <concept id="CPU" uri="mms:CPU" name="CPU" description="This class refers to IaaS resources that use Central Processing Units (CPUs) for carrying out software instructions that specify the basic arithmetic, logical, control and input/output (I/O) operations.">
+              <property id="hasMaxNumberofCores" uri="mms:hasMaxNumberofCores" name="hasMaxNumberofCores" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the maximum number of CPU cores available or requested." rangeUri="xsd:positiveInteger"/>
+              <property id="hasCPUUtilization" uri="mms:hasCPUUtilization" name="hasCPUUtilization" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the CPU class with a double that represents the current percentage of use for a certain processing unit." rangeUri="xsd:double"/>
+              <property id="hasMFLOPs" uri="mms:hasMFLOPs" name="hasMFLOPs" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the CPU class with an integer that represents the capability for mega floating-point operations per second." rangeUri="xsd:positiveInteger"/>
+              <property id="hasManufacturer" uri="mms:hasManufacturer" name="hasManufacturer" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property expresses as a string the manufacturer of the certain processing unit." rangeUri="xsd:string"/>
+              <property id="hasMinNumberofCores" uri="mms:hasMinNumberofCores" name="hasMinNumberofCores" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the minimum number of CPU cores available or requested." rangeUri="xsd:positiveInteger"/>
+              <property id="hasMIPs" uri="mms:hasMIPs" name="hasMIPs" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the CPU class with an integer that expresses million instructions per second as a measure of processing speed supported by a certain IaaS resource." rangeUri="xsd:positiveInteger"/>
+              <property id="hasFrequency" uri="mms:hasFrequency" name="hasFrequency" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property captures the CPU performance as it specifies the operating frequency of the CPU cores, expressed in cycles per second. It associates the CPU class with an integer value." rangeUri="xsd:positiveInteger"/>
+            </concept>
+            <concept id="RAM" uri="mms:RAM" name="RAM" description="This class corresponds to the memory capabilities of a virtualised resource.">
+              <concept id="TotalMemory" uri="mms:TotalMemory" name="TotalMemory" description="This subclass captures the desired or offered value of the virtualised storage dedicated for frequent program instructions.">
+                <property id="totalMemoryHasUnit" uri="mms:totalMemoryHasUnit" name="totalMemoryHasUnit" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Total Memory class with a string that represents the measurement module of the memory capacity." rangeUri="xsd:string"/>
+                <property id="totalMemoryHasMin" uri="mms:totalMemoryHasMin" name="totalMemoryHasMin" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Total Memory class with an integer that represents the least amount of memory capacity required or offered." rangeUri="xsd:positiveInteger"/>
+                <property id="totalMemoryHasMax" uri="mms:totalMemoryHasMax" name="totalMemoryHasMax" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Total Memory class with an integer that represents the largest amount of memory capacity required or offered." rangeUri="xsd:positiveInteger"/>
+              </concept>
+              <property id="RAMhasManufacturer" uri="mms:RAMhasManufacturer" name="RAMhasManufacturer" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the RAM class with a string that denotes the producer of the hardware." rangeUri="xsd:string"/>
+              <property id="hasUsedMemoryPercentage" uri="mms:hasUsedMemoryPercentage" name="hasUsedMemoryPercentage" description="hasUsedMemoryPercentage" rangeUri="xsd:double"/>
+              <property id="hasFreeMemoryPercentage" uri="mms:hasFreeMemoryPercentage" name="hasFreeMemoryPercentage" description="hasFreeMemoryPercentage" rangeUri="xsd:double"/>
+              <property id="hasFreeMemory" uri="mms:hasFreeMemory" name="hasFreeMemory" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the RAM class with a value expressed in double-precision floating-point format (double) that denotes the amount of unused memory currently available by the virtualised resource." rangeUri="xsd:double"/>
+              <property id="hasUsedMemory" uri="mms:hasUsedMemory" name="hasUsedMemory" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the RAM class with a value expressed in double format that denotes the amount of used memory in the virtualised resource." rangeUri="xsd:double"/>
+            </concept>
+            <concept id="GPU" uri="mms:GPU" name="GPU" description="This class refers to IaaS resources that use graphics processing units (GPUs), i.e. specialized electronic circuits initially designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer.">
+              <property id="hasMemoryBandwidth" uri="mms:hasMemoryBandwidth" name="hasMemoryBandwidth" description="hasMemoryBandwidth" rangeUri="xsd:positiveInteger"/>
+              <property id="hasWarpSize" uri="mms:hasWarpSize" name="hasWarpSize" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property expresses as an integer the number of threads supported to coalesce memory access and instruction dispatch." rangeUri="xsd:positiveInteger"/>
+              <property id="GPUhasMFLOPs" uri="mms:GPUhasMFLOPs" name="GPUhasMFLOPs" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the GPU class with an integer that represents the capability for mega floating-point operations per second, which is a common measure of processing speed." rangeUri="xsd:positiveInteger"/>
+              <property id="hasGPUUtilization" uri="mms:hasGPUUtilization" name="hasGPUUtilization" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the GPU class with a double that represents the current percentage of use for a certain processing unit." rangeUri="xsd:double"/>
+              <property id="hasMaxConcurrentWorkgroups" uri="mms:hasMaxConcurrentWorkgroups" name="hasMaxConcurrentWorkgroups" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that represents the maximum work-groups that may be simultaneously executed on compute units supported by a certain GPU." rangeUri="xsd:positiveInteger"/>
+              <property id="GPUhasMinNumberofCores" uri="mms:GPUhasMinNumberofCores" name="GPUhasMinNumberofCores" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the minimum number of GPU cores available or requested." rangeUri="xsd:positiveInteger"/>
+              <property id="hasClockSpeed" uri="mms:hasClockSpeed" name="hasClockSpeed" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property captures the GPU operating speed expressed in cycles per second. It associates the GPU class with an integer value." rangeUri="xsd:positiveInteger"/>
+              <property id="GPUhasManufacturer" uri="mms:GPUhasManufacturer" name="GPUhasManufacturer" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property expresses as a string the manufacturer of the processing unit." rangeUri="xsd:string"/>
+              <property id="GPUhasMaxNumberofCores" uri="mms:GPUhasMaxNumberofCores" name="GPUhasMaxNumberofCores" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes an integer that captures the maximum number of GPU cores available or requested." rangeUri="xsd:positiveInteger"/>
+              <property id="hasPEperCUs" uri="mms:hasPEperCUs" name="hasPEperCUs" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property expresses with an integer the number of processing elements per compute units that a certain GPU offers." rangeUri="xsd:positiveInteger"/>
+              <property id="hasStartUsageDate" uri="mms:hasStartUsageDate" name="hasStartUsageDate" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property denotes the date when a certain GPU began to operate. It can be used as an attribute that reveals how new the processing units used by a certain IaaS resource are." rangeUri="xsd:dateTime"/>
+            </concept>
+            <property id="GPUhasProcessingCost" uri="mms:GPUhasProcessingCost" name="GPUhasProcessingCost" description="hasProcessingCost" rangeUri="xsd:double"/>
+            <property id="hasProcessingNodeLocation" uri="mms:hasProcessingNodeLocation" name="hasProcessingNodeLocation" description="hasProcessingNodeLocation" rangeUri="xsd:string"/>
+            <property id="hasPowerConsumption" uri="mms:hasPowerConsumption" name="hasPowerConsumption" description="hasPowerConsumption" rangeUri="xsd:positiveInteger"/>
+          </concept>
+          <concept id="Hypervisor" uri="mms:Hypervisor" name="Hypervisor" description="This class is used to express the characteristics of the used hypervisor software, firmware or hardware for creating and commissioning virtual machines.">
+            <concept id="Hosted" uri="mms:Hosted" name="Hosted" description="This subclass captures the characteristics of hypervisors that operate within a host OS for hosting guest operating systems inside of it.">
+              <instance id="QEMU" uri="mms:QEMU" name="QEMU" description="QEMU"/>
+              <instance id="VMwareWorkstation" uri="mms:VMwareWorkstation" name="VMwareWorkstation" description="VMware Workstation"/>
+              <instance id="VirtualBox" uri="mms:VirtualBox" name="VirtualBox" description="VirtualBox"/>
+              <instance id="VMWarePlayer" uri="mms:VMWarePlayer" name="VMWarePlayer" description="VMWare Player"/>
+            </concept>
+            <concept id="Bare_Metal" uri="mms:Bare_Metal" name="Bare_Metal" description="This subclass captures the characteristics of hypervisors that operate directly on the hardware for hosting guest operating systems.">
+              <instance id="VMwareESX_ESXi" uri="mms:VMwareESX_ESXi" name="VMwareESX_ESXi" description="VMware ESX/ESXi"/>
+              <instance id="OracleVMServer" uri="mms:OracleVMServer" name="OracleVMServer" description="Oracle VM Server"/>
+              <instance id="MicrosoftHyper_V" uri="mms:MicrosoftHyper_V" name="MicrosoftHyper_V" description="Microsoft Hyper-V"/>
+              <instance id="Xen" uri="mms:Xen" name="Xen" description="Xen"/>
+            </concept>
+            <property id="supportsVirtualizationFormat" uri="mms:supportsVirtualizationFormat" name="supportsVirtualizationFormat" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Hypervisor class with a string that denotes the format used for describing a virtual machine (e.g. Open Virtualization Format)." rangeUri="xsd:string"/>
+          </concept>
+          <concept id="Cloud" uri="mms:Cloud" name="Cloud" description="This class groups the characteristics of virtualised resources for easier reference and use.">
+            <concept id="VMFlavor" uri="mms:VMFlavor" name="VMFlavor" description="This subclass denotes virtual hardware templates required or offered. This indirectly defines important IaaS level values (e.g. RAM, disk, number of cores etc.) of the offered or required IaaS resources.">
+              <property id="hasStorage" uri="mms:hasStorage" name="hasStorage" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class to the CPU class of the Application Placement model for denoting the storage capability of the IaaS resource." propertyType="ObjectProperty" range="Storage" rangeUri="xsd:positiveInteger"/>
+              <property id="hasCPU" uri="mms:hasCPU" name="hasCPU" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class to the CPU class of the Application Placement model for denoting the CPU power of the IaaS resource." propertyType="ObjectProperty" range="CPU" rangeUri="xsd:positiveInteger"/>
+              <property id="hasGPU" uri="mms:hasGPU" name="hasGPU" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class to the GPU class of the Application Placement model for denoting the GPU power of the IaaS resource." propertyType="ObjectProperty" range="GPU" rangeUri="xsd:positiveInteger"/>
+              <property id="hasRAM" uri="mms:hasRAM" name="hasRAM" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class to the RAM class of the Application Placement model for denoting the available RAM of the IaaS resource." propertyType="ObjectProperty" range="RAM" rangeUri="xsd:positiveInteger"/>
+              <property id="VMFlavorHasName" uri="mms:VMFlavorHasName" name="VMFlavorHasName" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to a string value that denotes the &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;name of a VM flavour for easy referencing." rangeUri="xsd:string"/>
+            </concept>
+            <property id="CloudhasName" uri="mms:CloudhasName" name="CloudhasName" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to a string value that denotes the &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;name of a cloud offering for easy referencing." rangeUri="xsd:string"/>
+            <property id="hasDedicatedRole" uri="mms:hasDedicatedRole" name="hasDedicatedRole" description="hasDedicatedRole" rangeUri="xsd:string"/>
+            <property id="hasID" uri="mms:hasID" name="hasID" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property corresponds to an integer that denotes the identifier of a cloud offering for easy referencing." rangeUri="xsd:integer"/>
+            <property id="isPrivate" uri="mms:isPrivate" name="isPrivate" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class with a boolean value that denotes whether or not the offered or requested cloud resource is private." rangeUri="xsd:boolean"/>
+            <property id="isPublic" uri="mms:isPublic" name="isPublic" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class with a boolean value that denotes whether or not the offered or requested cloud resource is public." rangeUri="xsd:boolean"/>
+            <property id="isDedicated" uri="mms:isDedicated" name="isDedicated" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the Cloud class with a boolean value that denotes whether or not the host of the offered resource is dedicated to only one user or more." rangeUri="xsd:boolean"/>
+          </concept>
+          <property id="hasBareMetalCost" uri="mms:hasBareMetalCost" name="hasBareMetalCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the IaaS class with a value expressed in floating-point format (float) denoting the usage cost of a certain bare metal resource." rangeUri="xsd:double"/>
+          <property id="refersToVM" uri="mms:refersToVM" name="refersToVM" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property clarifies that a certain IaaS resource (required or offered) is a virtual machine." rangeUri="xsd:string"/>
+          <property id="CloudHasAvailability" uri="mms:CloudHasAvailability" name="CloudHasAvailability" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property may associate an IaaS resource with a float that expresses the expected uptime of the resource." rangeUri="xsd:double"/>
+          <property id="hasCloudProvider" uri="mms:hasCloudProvider" name="hasCloudProvider" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the IaaS class with the Provider Class (of the Application Placement Model) for expressing characteristics and identity of the resource provider." propertyType="ObjectProperty" range="Provider" rangeUri="xsd:string"/>
+          <property id="supportsRequestsPerSecond" uri="mms:supportsRequestsPerSecond" name="supportsRequestsPerSecond" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property may associate an IaaS resource with an integer that expresses the volume of requests that it can support." rangeUri="xsd:integer"/>
+          <property id="CloudHasLocation" uri="mms:CloudHasLocation" name="CloudHasLocation" description="This object &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the IaaS class with the Cloud Location Class (of the Big Data Model) for expressing the network or physical location of the virtualised resource." propertyType="ObjectProperty" range="DataLocation" rangeUri="xsd:string"/>
+          <property id="hasVMCost" uri="mms:hasVMCost" name="hasVMCost" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property associates the IaaS class with a value expressed in floating-point format (float) denoting the usage cost of a certain virtualised resource." rangeUri="xsd:double"/>
+          <property id="hasFlavour" uri="mms:hasFlavour" name="hasFlavour" description="hasFlavour" rangeUri="xsd:string"/>
+          <property id="refersToRack" uri="mms:refersToRack" name="refersToRack" description="This &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;property clarifies that a certain IaaS resource (required or offered) corresponds to a specific rack of a datacentre." rangeUri="xsd:string"/>
+        </concept>
+      </concept>
+    </metadataElements>
+  </metadataModels>
+</core:CamelModel>

@@ -3,11 +3,10 @@ package fr.softeam.cameldesigner.exchange.exporter.requirement;
 import camel.requirement.RequirementFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
-import fr.softeam.cameldesigner.exchange.exporter.core.NamedElementExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("d23db89a-a16f-44ab-9728-b29a7cf0882a")
-public class ResourceRequirementExporter<T extends ResourceRequirement> extends NamedElementExporter<T> {
+public class ResourceRequirementExporter<T extends ResourceRequirement> extends HardRequirementExporter<T> {
     @objid ("a8365dfe-9e66-4be7-a7c9-22f8f5197e2c")
     public ResourceRequirementExporter(T elt) {
         super(elt);

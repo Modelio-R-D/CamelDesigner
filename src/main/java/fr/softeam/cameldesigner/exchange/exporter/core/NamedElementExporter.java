@@ -22,7 +22,9 @@ public abstract class NamedElementExporter<T extends NamedElement> extends Camel
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
         if (elt instanceof camel.core.NamedElement) {
-            setName((camel.core.NamedElement) elt);
+            camel.core.NamedElement namedElt = (camel.core.NamedElement) elt;
+            setName(namedElt);
+            setDescription(namedElt);
         }
     }
 

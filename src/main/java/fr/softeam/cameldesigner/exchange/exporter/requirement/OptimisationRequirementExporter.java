@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.requirement;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.requirement.RequirementFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OptimisationRequirement;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("db9bc91d-f86b-4ecc-9e0d-8be565fbc164")
 public class OptimisationRequirementExporter<T extends OptimisationRequirement> extends SoftRequirementExporter<T> {

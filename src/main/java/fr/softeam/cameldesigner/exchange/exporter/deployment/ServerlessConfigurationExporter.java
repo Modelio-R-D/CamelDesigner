@@ -22,12 +22,27 @@ public class ServerlessConfigurationExporter<T extends ServerlessConfiguration> 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.ServerlessConfiguration) {
+            camel.deployment.ServerlessConfiguration sc = (camel.deployment.ServerlessConfiguration) elt;
+            setBinaryCodeURL(sc);
+            setContinuousDeployment(sc);
+        }
     }
 
     @objid ("fdbcb009-c8fc-4f08-b4a8-26f1f712f3a0")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("c1a1a193-6f5e-4c22-bb10-00f2d11846e0")
+    private void setContinuousDeployment(camel.deployment.ServerlessConfiguration sc) {
+        sc.setContinuousDeployment(this._element.isContinuousDeployment());
+    }
+
+    @objid ("8916f91a-69c4-4237-9a36-12325591b11c")
+    private void setBinaryCodeURL(camel.deployment.ServerlessConfiguration sc) {
+        sc.setBinaryCodeURL(this._element.getBinaryCodeURL());
     }
 
 }

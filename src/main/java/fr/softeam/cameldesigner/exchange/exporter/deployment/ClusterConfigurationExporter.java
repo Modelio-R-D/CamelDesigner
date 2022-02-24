@@ -22,12 +22,21 @@ public class ClusterConfigurationExporter<T extends ClusterConfiguration> extend
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.ClusterConfiguration) {
+            camel.deployment.ClusterConfiguration cc = (camel.deployment.ClusterConfiguration) elt;
+            setDownloadURL(cc);
+        }
     }
 
     @objid ("b6a1e496-9381-4d8e-99f4-47763be8cb68")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("46f49088-28fa-41b3-8a0d-d62cafdd4168")
+    private void setDownloadURL(camel.deployment.ClusterConfiguration cc) {
+        cc.setDownloadURL(this._element.getDownloadURL());
     }
 
 }

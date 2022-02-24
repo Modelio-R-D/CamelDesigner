@@ -23,12 +23,27 @@ public class HistoryRecordExporter<T extends HistoryRecord> extends FeatureClass
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.execution.HistoryRecord) {
+            camel.execution.HistoryRecord record = (camel.execution.HistoryRecord) elt;
+            setType(record);
+            setCause(record);
+            setStartTime(record);
+            setEndTime(record);
+            setFromDeployIM(record);
+            setToDeployIM(record);
+            setFromDataIM(record);
+            setToDataIM(record);
+        }
     }
 
     @objid ("8d47492e-58b1-4db6-a131-506dc52e5b07")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.execution.ExecutionModel) && (elt instanceof camel.execution.HistoryRecord)) {
+            ((camel.execution.ExecutionModel) context).getHistoryRecords().add((camel.execution.HistoryRecord) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

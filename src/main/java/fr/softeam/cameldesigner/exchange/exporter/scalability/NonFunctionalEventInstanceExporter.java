@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.scalability.ScalabilityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.NonFunctionalEventInstance;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("985ff8a3-f2a8-489a-9f79-6cfc2f505cb7")
 public class NonFunctionalEventInstanceExporter<T extends NonFunctionalEventInstance> extends EventInstanceExporter<T> {

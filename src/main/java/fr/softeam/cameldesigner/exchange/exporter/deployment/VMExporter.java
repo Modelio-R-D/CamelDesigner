@@ -24,4 +24,14 @@ public class VMExporter<T extends VM> extends CamelComponentExporter<T> {
         super.setProperties(elt);
     }
 
+    @objid ("328bf213-3a29-4a5b-be47-49fe34c469f2")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.VM)) {
+            ((camel.deployment.DeploymentTypeModel) context).getVms().add((camel.deployment.VM) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
 }

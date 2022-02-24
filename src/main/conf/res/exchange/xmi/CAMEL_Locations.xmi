@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:CamelModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:core="http://www.camel-dsl.org/camel/core" name="CAMEL_Locations">
+  <locationModels name="Locations">
+    <regions name="southern Asia" id="southern_Asia" parentRegions="//@locationModels.0/@regions.22">
+      <alternativeNames>Asie m&#xc3;&#xa9;ridionale; Asie du Sud</alternativeNames>
+      <alternativeNames>Asia meridionale</alternativeNames>
+      <alternativeNames>Asia meridional</alternativeNames>
+      <alternativeNames>southern Asia</alternativeNames>
+    </regions>
+    <regions name="Scandinavia" id="Scandinavia" parentRegions="//@locationModels.0/@regions.4 //@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>Scandinavie</alternativeNames>
+      <alternativeNames>Scandinavia</alternativeNames>
+      <alternativeNames>Escandinavia</alternativeNames>
+    </regions>
+    <regions name="south-eastern Asia" id="south_eastern_Asia" parentRegions="//@locationModels.0/@regions.22">
+      <alternativeNames>Asia du sud-est</alternativeNames>
+      <alternativeNames>Asia sud orientale</alternativeNames>
+      <alternativeNames>Asia sudoriental</alternativeNames>
+      <alternativeNames>south-eastern Asia</alternativeNames>
+    </regions>
+    <regions name="Baltic Region" id="Baltic_Region" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>R&#xc3;&#xa9;gion de la Baltique</alternativeNames>
+      <alternativeNames>Regione Baltico</alternativeNames>
+      <alternativeNames>Regi&#xc3;&#xb3;n del B&#xc3;&#xa1;ltico</alternativeNames>
+      <alternativeNames>Baltic</alternativeNames>
+      <alternativeNames>Baltique</alternativeNames>
+      <alternativeNames>Baltico</alternativeNames>
+      <alternativeNames>B&#xc3;&#xa1;ltico</alternativeNames>
+    </regions>
+    <regions name="Nordic Region" id="Nordic_Region" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>R&#xc3;&#xa9;gion Nordique</alternativeNames>
+      <alternativeNames>Regione Nordica</alternativeNames>
+      <alternativeNames>Regi&#xc3;&#xb3;n N&#xc3;&#xb3;rdica</alternativeNames>
+      <alternativeNames>Nordic</alternativeNames>
+      <alternativeNames>Nordique</alternativeNames>
+      <alternativeNames>Nordica</alternativeNames>
+      <alternativeNames>N&#xc3;&#xb3;rdica</alternativeNames>
+    </regions>
+    <regions name="southern Europe" id="southern_Europe" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>Europe m&#xc3;&#xa9;ridionale</alternativeNames>
+      <alternativeNames>Europa meridionale</alternativeNames>
+      <alternativeNames>Europa meridional</alternativeNames>
+      <alternativeNames>southern Europe</alternativeNames>
+    </regions>
+    <regions name="Melanesia" id="Melanesia" parentRegions="//@locationModels.0/@regions.31">
+      <alternativeNames>M&#xc3;&#xa9;lan&#xc3;&#xa9;sie</alternativeNames>
+      <alternativeNames>Melanesia</alternativeNames>
+    </regions>
+    <regions name="northern Africa" id="northern_Africa" parentRegions="//@locationModels.0/@regions.10">
+      <alternativeNames>Afrique septentrionale</alternativeNames>
+      <alternativeNames>Africa del Nord</alternativeNames>
+      <alternativeNames>&#xc3;&#xfffd;frica septentrional</alternativeNames>
+      <alternativeNames>northern Africa</alternativeNames>
+    </regions>
+    <regions name="Micronesia" id="Micronesia" parentRegions="//@locationModels.0/@regions.31">
+      <alternativeNames>Micron&#xc3;&#xa9;sie</alternativeNames>
+      <alternativeNames>Micronesia</alternativeNames>
+    </regions>
+    <regions name="middle Africa" id="middle_Africa" parentRegions="//@locationModels.0/@regions.10">
+      <alternativeNames>Afrique centrale</alternativeNames>
+      <alternativeNames>Africa centrale</alternativeNames>
+      <alternativeNames>Africa Central</alternativeNames>
+      <alternativeNames>middle Africa</alternativeNames>
+    </regions>
+    <regions name="Africa" id="Africa">
+      <alternativeNames>Afrique</alternativeNames>
+      <alternativeNames>Africa</alternativeNames>
+      <alternativeNames>&#xc3;&#xfffd;frica</alternativeNames>
+    </regions>
+    <regions name="eastern Asia" id="eastern_Asia" parentRegions="//@locationModels.0/@regions.22">
+      <alternativeNames>Asie orientale</alternativeNames>
+      <alternativeNames>Asia orientale</alternativeNames>
+      <alternativeNames>Asia oriental</alternativeNames>
+      <alternativeNames>eastern Asia</alternativeNames>
+    </regions>
+    <regions name="eastern Europe" id="eastern_Europe" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>Europe de l'Est; Europe orientale</alternativeNames>
+      <alternativeNames>Europa orientale</alternativeNames>
+      <alternativeNames>Europa oriental</alternativeNames>
+      <alternativeNames>eastern Europe</alternativeNames>
+    </regions>
+    <regions name="Benelux" id="Benelux" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.19">
+      <alternativeNames>Union Benelux</alternativeNames>
+      <alternativeNames>Benelux</alternativeNames>
+    </regions>
+    <regions name="Iberian Peninsula" id="Iberian_Peninsula" parentRegions="//@locationModels.0/@regions.5 //@locationModels.0/@regions.19">
+      <alternativeNames>P&#xc3;&#xa9;ninsule Ib&#xc3;&#xa9;rique</alternativeNames>
+      <alternativeNames>Penisola Iberica</alternativeNames>
+      <alternativeNames>Pen&#xc3;&#xad;nsula Ib&#xc3;&#xa9;rica</alternativeNames>
+      <alternativeNames>Iberia</alternativeNames>
+      <alternativeNames>Ib&#xc3;&#xa9;rie</alternativeNames>
+    </regions>
+    <regions name="central America" id="central_America" parentRegions="//@locationModels.0/@regions.24">
+      <alternativeNames>Am&#xc3;&#xa9;rique centrale</alternativeNames>
+      <alternativeNames>America centrale</alternativeNames>
+      <alternativeNames>Am&#xc3;&#xa9;rica central</alternativeNames>
+      <alternativeNames>central America</alternativeNames>
+    </regions>
+    <regions name="western Africa" id="western_Africa" parentRegions="//@locationModels.0/@regions.10">
+      <alternativeNames>Afrique occidentale</alternativeNames>
+      <alternativeNames>Africa occidentale</alternativeNames>
+      <alternativeNames>&#xc3;&#xfffd;frica occidental</alternativeNames>
+      <alternativeNames>western Africa</alternativeNames>
+    </regions>
+    <regions name="Balkan Peninsula" id="Balkan_Peninsula" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>P&#xc3;&#xa9;ninsule Balkanique</alternativeNames>
+      <alternativeNames>Penisola Balcanica</alternativeNames>
+      <alternativeNames>Pen&#xc3;&#xad;nsula de los Balcanes</alternativeNames>
+      <alternativeNames>Balkan</alternativeNames>
+      <alternativeNames>Balkanique</alternativeNames>
+      <alternativeNames>Balcanico</alternativeNames>
+      <alternativeNames>Balc&#xc3;&#xa1;nico</alternativeNames>
+    </regions>
+    <regions name="western Europe" id="western_Europe" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>Europe occidentale</alternativeNames>
+      <alternativeNames>Europa occidentale</alternativeNames>
+      <alternativeNames>Europa occidental</alternativeNames>
+      <alternativeNames>western Europe</alternativeNames>
+    </regions>
+    <regions name="Europe" id="Europe">
+      <alternativeNames>Europe</alternativeNames>
+      <alternativeNames>Europa</alternativeNames>
+    </regions>
+    <regions name="southern Africa" id="southern_Africa" parentRegions="//@locationModels.0/@regions.10">
+      <alternativeNames>Afrique australe</alternativeNames>
+      <alternativeNames>Africa del Sud</alternativeNames>
+      <alternativeNames>&#xc3;&#xfffd;frica austral</alternativeNames>
+      <alternativeNames>southern Africa</alternativeNames>
+    </regions>
+    <regions name="Australia and New Zealand" id="Australia_and_New_Zealand" parentRegions="//@locationModels.0/@regions.31">
+      <alternativeNames>Australie et Nouvelle-Z&#xc3;&#xa9;lande</alternativeNames>
+      <alternativeNames>Australia e Nuova Zelanda</alternativeNames>
+      <alternativeNames>Australia y Nueva Zelandia</alternativeNames>
+      <alternativeNames>Australia and New Zealand</alternativeNames>
+    </regions>
+    <regions name="Asia" id="Asia">
+      <alternativeNames>Asie</alternativeNames>
+      <alternativeNames>Asia </alternativeNames>
+      <alternativeNames>Asia</alternativeNames>
+    </regions>
+    <regions name="Central Asia" id="Central_Asia" parentRegions="//@locationModels.0/@regions.22">
+      <alternativeNames>Asie central</alternativeNames>
+      <alternativeNames>Asia centrale</alternativeNames>
+      <alternativeNames>Asia central</alternativeNames>
+      <alternativeNames>Central Asia</alternativeNames>
+    </regions>
+    <regions name="Americas" id="Americas">
+      <alternativeNames>Am&#xc3;&#xa9;riques</alternativeNames>
+      <alternativeNames>Americhe</alternativeNames>
+      <alternativeNames>Am&#xc3;&#xa9;ricas</alternativeNames>
+      <alternativeNames>Americas</alternativeNames>
+    </regions>
+    <regions name="Caribbean" id="Caribbean" parentRegions="//@locationModels.0/@regions.24">
+      <alternativeNames>Cara&#xc3;&#xaf;bes&#xc2;&#xa0;</alternativeNames>
+      <alternativeNames>Caraibi</alternativeNames>
+      <alternativeNames>Caribe</alternativeNames>
+      <alternativeNames>Caribbean</alternativeNames>
+    </regions>
+    <regions name="South America" id="South_America" parentRegions="//@locationModels.0/@regions.24">
+      <alternativeNames>Am&#xc3;&#xa9;rique du Sud</alternativeNames>
+      <alternativeNames>America del Sud</alternativeNames>
+      <alternativeNames>Am&#xc3;&#xa9;rica del Sur</alternativeNames>
+      <alternativeNames>South America</alternativeNames>
+    </regions>
+    <regions name="Polynesia" id="Polynesia" parentRegions="//@locationModels.0/@regions.31">
+      <alternativeNames>Polyn&#xc3;&#xa9;sie</alternativeNames>
+      <alternativeNames>Polinesia</alternativeNames>
+      <alternativeNames>Polynesia</alternativeNames>
+    </regions>
+    <regions name="northern America" id="northern_America" parentRegions="//@locationModels.0/@regions.24">
+      <alternativeNames>Am&#xc3;&#xa9;rique septentrionale</alternativeNames>
+      <alternativeNames>America del Nord</alternativeNames>
+      <alternativeNames>Am&#xc3;&#xa9;rica Septentrional; Norteam&#xc3;&#xa9;rica</alternativeNames>
+      <alternativeNames>northern America</alternativeNames>
+    </regions>
+    <regions name="northern Europe" id="northern_Europe" parentRegions="//@locationModels.0/@regions.19">
+      <alternativeNames>Europe septentrionale</alternativeNames>
+      <alternativeNames>Europa settentrionale</alternativeNames>
+      <alternativeNames>Europa septentrional</alternativeNames>
+      <alternativeNames>northern Europe</alternativeNames>
+    </regions>
+    <regions name="eastern Africa" id="eastern_Africa" parentRegions="//@locationModels.0/@regions.10">
+      <alternativeNames>Afrique orientale</alternativeNames>
+      <alternativeNames>Africa orientale</alternativeNames>
+      <alternativeNames>&#xc3;&#xfffd;frica oriental</alternativeNames>
+      <alternativeNames>eastern Africa</alternativeNames>
+    </regions>
+    <regions name="Oceania" id="Oceania">
+      <alternativeNames>Oc&#xc3;&#xa9;anie</alternativeNames>
+      <alternativeNames>Oceania</alternativeNames>
+      <alternativeNames>Ocean&#xc3;&#xad;a</alternativeNames>
+    </regions>
+    <regions name="western Asia" id="western_Asia" parentRegions="//@locationModels.0/@regions.22">
+      <alternativeNames>Asie occidentale; Asie de l'Ouest</alternativeNames>
+      <alternativeNames>Asia occidentale</alternativeNames>
+      <alternativeNames>Asia occidental</alternativeNames>
+      <alternativeNames>western Asia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Guyana" id="GY" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.26">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Guyana</alternativeNames>
+      <alternativeNames>Repubblica della Guyana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Guyana</alternativeNames>
+      <alternativeNames>Guyana</alternativeNames>
+      <alternativeNames>le Guyana</alternativeNames>
+    </regions>
+    <regions name="the People's Democratic Republic of Algeria" id="DZ" parentRegions="//@locationModels.0/@regions.7 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique alg&#xc3;&#xa9;rienne d&#xc3;&#xa9;mocratique et populaire</alternativeNames>
+      <alternativeNames>Repubblica algerina democratica e popolare</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Argelina Democr&#xc3;&#xa1;tica y Popular</alternativeNames>
+      <alternativeNames>Algeria</alternativeNames>
+      <alternativeNames>l'Alg&#xc3;&#xa9;rie</alternativeNames>
+      <alternativeNames>Argelia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Malawi" id="MW" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Malawi</alternativeNames>
+      <alternativeNames>Repubblica del Malawi</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Malawi</alternativeNames>
+      <alternativeNames>Malawi</alternativeNames>
+      <alternativeNames>le Malawi</alternativeNames>
+    </regions>
+    <regions name="the Republic of Cyprus" id="CY" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Chypre</alternativeNames>
+      <alternativeNames>Repubblica di Cipro</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Chipre</alternativeNames>
+      <alternativeNames>Cyprus</alternativeNames>
+      <alternativeNames>Chypre</alternativeNames>
+      <alternativeNames>Cipro</alternativeNames>
+      <alternativeNames>Chipre</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Niger" id="NE" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Niger</alternativeNames>
+      <alternativeNames>Repubblica del Niger</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del N&#xc3;&#xad;ger</alternativeNames>
+      <alternativeNames>the Niger</alternativeNames>
+      <alternativeNames>le Niger</alternativeNames>
+      <alternativeNames>Niger</alternativeNames>
+      <alternativeNames>el N&#xc3;&#xad;ger</alternativeNames>
+    </regions>
+    <regions name="the Republic of Iraq" id="IQ" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Iraq</alternativeNames>
+      <alternativeNames>Repubblica dell'Iraq</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Iraq</alternativeNames>
+      <alternativeNames>Iraq</alternativeNames>
+      <alternativeNames>l'Iraq</alternativeNames>
+      <alternativeNames>el Iraq</alternativeNames>
+    </regions>
+    <regions name="the Republic of Senegal" id="SN" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique du S&#xc3;&#xa9;n&#xc3;&#xa9;gal</alternativeNames>
+      <alternativeNames>Repubblica del Senegal</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Senegal</alternativeNames>
+      <alternativeNames>Senegal</alternativeNames>
+      <alternativeNames>le S&#xc3;&#xa9;n&#xc3;&#xa9;gal</alternativeNames>
+      <alternativeNames>el Senegal</alternativeNames>
+    </regions>
+    <regions name="the French Republic" id="FR" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.18">
+      <alternativeNames>la R&#xc3;&#xa9;publique fran&#xc3;&#xa7;aise</alternativeNames>
+      <alternativeNames>Repubblica francese</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Francesa</alternativeNames>
+      <alternativeNames>France</alternativeNames>
+      <alternativeNames>la France</alternativeNames>
+      <alternativeNames>Francia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Trinidad and Tobago" id="TT" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Trinit&#xc3;&#xa9;-et-Tobago</alternativeNames>
+      <alternativeNames>Repubblica di Trinidad e Tobago</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Trinidad y Tabago</alternativeNames>
+      <alternativeNames>Trinidad and Tobago</alternativeNames>
+      <alternativeNames>la Trinit&#xc3;&#xa9;-et-Tobago</alternativeNames>
+      <alternativeNames>Trinidad e Tobago</alternativeNames>
+      <alternativeNames>Trinidad y Tabago</alternativeNames>
+    </regions>
+    <regions name="the Republic of Malta" id="MT" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Malte</alternativeNames>
+      <alternativeNames>Repubblica di Malta</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Malta</alternativeNames>
+      <alternativeNames>Malta</alternativeNames>
+      <alternativeNames>Malte</alternativeNames>
+    </regions>
+    <regions name="the Republic of Botswana" id="BW" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.20">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Botswana</alternativeNames>
+      <alternativeNames>Repubblica del Botswana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Botswana</alternativeNames>
+      <alternativeNames>Botswana</alternativeNames>
+      <alternativeNames>le Botswana</alternativeNames>
+    </regions>
+    <regions name="Solomon Islands" id="SB" parentRegions="//@locationModels.0/@regions.6 //@locationModels.0/@regions.31">
+      <alternativeNames>les &#xc3;&#x17d;les Salomon</alternativeNames>
+      <alternativeNames>Isole Salomone</alternativeNames>
+      <alternativeNames>las Islas Salom&#xc3;&#xb3;n</alternativeNames>
+      <alternativeNames>Solomon Islands</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Congo" id="CG" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.9">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Congo</alternativeNames>
+      <alternativeNames>Repubblica del Congo</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Congo</alternativeNames>
+      <alternativeNames>the Congo</alternativeNames>
+      <alternativeNames>le Congo</alternativeNames>
+      <alternativeNames>Congo</alternativeNames>
+      <alternativeNames>el Congo</alternativeNames>
+    </regions>
+    <regions name="the United Republic of Tanzania" id="TZ" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique-Unie de Tanzanie</alternativeNames>
+      <alternativeNames>Repubblica unita di Tanzania</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Unida de Tanzan&#xc3;&#xad;a</alternativeNames>
+      <alternativeNames>the United Republic of Tanzania</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Thailand" id="TH" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.2">
+      <alternativeNames>le Royaume de Tha&#xc3;&#xaf;lande</alternativeNames>
+      <alternativeNames>Regno di Thailandia</alternativeNames>
+      <alternativeNames>el Reino de Tailandia</alternativeNames>
+      <alternativeNames>Thailand</alternativeNames>
+      <alternativeNames>la Tha&#xc3;&#xaf;lande</alternativeNames>
+      <alternativeNames>Thailandia</alternativeNames>
+      <alternativeNames>Tailandia</alternativeNames>
+    </regions>
+    <regions name="the Federated States of Micronesia" id="FM" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.8">
+      <alternativeNames>les &#xc3;&#x2030;tats f&#xc3;&#xa9;d&#xc3;&#xa9;r&#xc3;&#xa9;s de Micron&#xc3;&#xa9;sie</alternativeNames>
+      <alternativeNames>Stati federati di Micronesia</alternativeNames>
+      <alternativeNames>los Estados Federados de Micronesia</alternativeNames>
+      <alternativeNames>Micronesia (Federated States of)</alternativeNames>
+      <alternativeNames>Micron&#xc3;&#xa9;sie (&#xc3;&#x2030;tats f&#xc3;&#xa9;d&#xc3;&#xa9;r&#xc3;&#xa9;s de)</alternativeNames>
+      <alternativeNames>Micronesia (Stati federati di)</alternativeNames>
+      <alternativeNames>Micronesia (Estados Federados de)</alternativeNames>
+    </regions>
+    <regions name="the Grand Duchy of Luxembourg" id="LU" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.19 //@locationModels.0/@regions.13">
+      <alternativeNames>le Grand-Duch&#xc3;&#xa9; de Luxembourg</alternativeNames>
+      <alternativeNames>Granducato di Lussemburgo</alternativeNames>
+      <alternativeNames>el Gran Ducado de Luxemburgo</alternativeNames>
+      <alternativeNames>Luxembourg</alternativeNames>
+      <alternativeNames>le Luxembourg</alternativeNames>
+      <alternativeNames>Lussemburgo</alternativeNames>
+      <alternativeNames>Luxemburgo</alternativeNames>
+    </regions>
+    <regions name="the Central African Republic" id="CF" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique centrafricaine</alternativeNames>
+      <alternativeNames>Repubblica centrafricana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Centroafricana</alternativeNames>
+      <alternativeNames>the Central African Republic</alternativeNames>
+    </regions>
+    <regions name="the Republic of Estonia" id="EE" parentRegions="//@locationModels.0/@regions.29 //@locationModels.0/@regions.3 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Estonie</alternativeNames>
+      <alternativeNames>Repubblica di Estonia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Estonia</alternativeNames>
+      <alternativeNames>Estonia</alternativeNames>
+      <alternativeNames>l'Estonie</alternativeNames>
+    </regions>
+    <regions name="the Republic of Vanuatu" id="VU" parentRegions="//@locationModels.0/@regions.6 //@locationModels.0/@regions.31">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Vanuatu</alternativeNames>
+      <alternativeNames>Repubblica di Vanuatu</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Vanuatu</alternativeNames>
+      <alternativeNames>Vanuatu</alternativeNames>
+    </regions>
+    <regions name="the Swiss Confederation" id="CH" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.18">
+      <alternativeNames>la Conf&#xc3;&#xa9;d&#xc3;&#xa9;ration suisse</alternativeNames>
+      <alternativeNames>Confederazione svizzera</alternativeNames>
+      <alternativeNames>la Confederaci&#xc3;&#xb3;n Suiza</alternativeNames>
+      <alternativeNames>Switzerland</alternativeNames>
+      <alternativeNames>la Suisse</alternativeNames>
+      <alternativeNames>Svizzera</alternativeNames>
+      <alternativeNames>Suiza</alternativeNames>
+    </regions>
+    <regions name="Federal Democratic Republic of Nepal" id="NP" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>R&#xc3;&#xa9;publique d&#xc3;&#xa9;mocratique f&#xc3;&#xa9;d&#xc3;&#xa9;rale du Nepal</alternativeNames>
+      <alternativeNames>Repubblica Democratica Federale di Nepal</alternativeNames>
+      <alternativeNames>Rep&#xc3;&#xba;blica Federal Democr&#xc3;&#xa1;tica de Nepal</alternativeNames>
+      <alternativeNames>Nepal</alternativeNames>
+      <alternativeNames>le N&#xc3;&#xa9;pal</alternativeNames>
+    </regions>
+    <regions name="Faroe Islands" id="FO" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>les &#xc3;&#x17d;les F&#xc3;&#xa9;ro&#xc3;&#xa9;</alternativeNames>
+      <alternativeNames>Faer&#xc3;&#xb8;erne</alternativeNames>
+      <alternativeNames>las Islas Feroe</alternativeNames>
+      <alternativeNames>Faroe Islands</alternativeNames>
+      <alternativeNames>Islas Feroe</alternativeNames>
+    </regions>
+    <regions name="Papua New Guinea" id="PG" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.6">
+      <alternativeNames>la Papouasie-Nouvelle-Guin&#xc3;&#xa9;e</alternativeNames>
+      <alternativeNames>Stato indipendente di Papua Nuova Guinea</alternativeNames>
+      <alternativeNames>Papua Nueva Guinea</alternativeNames>
+      <alternativeNames>Papua New Guinea</alternativeNames>
+      <alternativeNames>Papua Nuova Guinea</alternativeNames>
+    </regions>
+    <regions name="the People's Republic of Bangladesh" id="BD" parentRegions="//@locationModels.0/@regions.0 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique populaire du Bangladesh</alternativeNames>
+      <alternativeNames>Repubblica popolare del Bangladesh</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Popular de Bangladesh</alternativeNames>
+      <alternativeNames>Bangladesh</alternativeNames>
+      <alternativeNames>le Bangladesh</alternativeNames>
+    </regions>
+    <regions name="the Russian Federation" id="RU" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.3 //@locationModels.0/@regions.12">
+      <alternativeNames>la F&#xc3;&#xa9;d&#xc3;&#xa9;ration de Russie</alternativeNames>
+      <alternativeNames>Federazione russa</alternativeNames>
+      <alternativeNames>la Federaci&#xc3;&#xb3;n de Rusia</alternativeNames>
+      <alternativeNames>the Russian Federation</alternativeNames>
+      <alternativeNames>Russia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Cape Verde" id="CV" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Cap-Vert</alternativeNames>
+      <alternativeNames>Repubblica del Capo Verde</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Cabo Verde</alternativeNames>
+      <alternativeNames>Cape Verde</alternativeNames>
+      <alternativeNames>le Cap-Vert</alternativeNames>
+      <alternativeNames>Capo Verde</alternativeNames>
+      <alternativeNames>Cabo Verde</alternativeNames>
+    </regions>
+    <regions name="the Argentine Republic" id="AR" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique argentine</alternativeNames>
+      <alternativeNames>Repubblica argentina</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Argentina</alternativeNames>
+      <alternativeNames>Argentina</alternativeNames>
+      <alternativeNames>l'Argentine</alternativeNames>
+      <alternativeNames>la Argentina</alternativeNames>
+    </regions>
+    <regions name="Canada" id="CA" parentRegions="//@locationModels.0/@regions.28 //@locationModels.0/@regions.24">
+      <alternativeNames>le Canada</alternativeNames>
+      <alternativeNames>Canada</alternativeNames>
+      <alternativeNames>el Canad&#xc3;&#xa1;</alternativeNames>
+    </regions>
+    <regions name="The former Yugoslav Republic of Macedonia" id="MK" parentRegions="//@locationModels.0/@regions.17 //@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>l'ex-R&#xc3;&#xa9;publique yougoslave de Mac&#xc3;&#xa9;doine</alternativeNames>
+      <alternativeNames>L'ex Repubblica jugoslava di Macedonia</alternativeNames>
+      <alternativeNames>la ex Rep&#xc3;&#xba;blica Yugoslava de Macedonia</alternativeNames>
+      <alternativeNames>The former Yugoslav Republic of Macedonia</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Morocco" id="MA" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.7">
+      <alternativeNames>le Royaume du Maroc</alternativeNames>
+      <alternativeNames>Regno del Marocco</alternativeNames>
+      <alternativeNames>el Reino de Marruecos</alternativeNames>
+      <alternativeNames>Morocco</alternativeNames>
+      <alternativeNames>le Maroc</alternativeNames>
+      <alternativeNames>Marocco</alternativeNames>
+      <alternativeNames>Marruecos</alternativeNames>
+    </regions>
+    <regions name="the Republic of Mali" id="ML" parentRegions="//@locationModels.0/@regions.16 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Mali</alternativeNames>
+      <alternativeNames>Repubblica del Mali</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Mal&#xc3;&#xad;</alternativeNames>
+      <alternativeNames>Mali</alternativeNames>
+      <alternativeNames>le Mali</alternativeNames>
+      <alternativeNames>Mal&#xc3;&#xad;</alternativeNames>
+    </regions>
+    <regions name="the Democratic Republic of Timor-Leste" id="TL" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique d&#xc3;&#xa9;mocratique du Timor-Leste</alternativeNames>
+      <alternativeNames>Repubblica democratica di Timor-Leste</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Democr&#xc3;&#xa1;tica de Timor-Leste</alternativeNames>
+      <alternativeNames>Timor-Leste</alternativeNames>
+      <alternativeNames>le Timor-Leste</alternativeNames>
+    </regions>
+    <regions name="Bosnia and Herzegovina" id="BA" parentRegions="//@locationModels.0/@regions.17 //@locationModels.0/@regions.5 //@locationModels.0/@regions.19">
+      <alternativeNames>la Bosnie-Herz&#xc3;&#xa9;govine</alternativeNames>
+      <alternativeNames>Bosnia-Erzegovina</alternativeNames>
+      <alternativeNames>Bosnia y Herzegovina</alternativeNames>
+      <alternativeNames>Bosnia and Herzegovina</alternativeNames>
+    </regions>
+    <regions name="the Sultanate of Oman" id="OM" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>le Sultanat d'Oman</alternativeNames>
+      <alternativeNames>Sultanato dell'Oman</alternativeNames>
+      <alternativeNames>la Sultan&#xc3;&#xad;a de Om&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Oman</alternativeNames>
+      <alternativeNames>l'Oman</alternativeNames>
+      <alternativeNames>Om&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Kiribati" id="KI" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.8">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Kiribati</alternativeNames>
+      <alternativeNames>Repubblica di Kiribati</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Kiribati</alternativeNames>
+      <alternativeNames>Kiribati</alternativeNames>
+    </regions>
+    <regions name="the Republic of Burundi" id="BI" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Burundi</alternativeNames>
+      <alternativeNames>Repubblica di Burundi</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Burundi</alternativeNames>
+      <alternativeNames>Burundi</alternativeNames>
+      <alternativeNames>le Burundi</alternativeNames>
+    </regions>
+    <regions name="the Republic of Cuba" id="CU" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.25">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Cuba</alternativeNames>
+      <alternativeNames>Repubblica di Cuba</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Cuba</alternativeNames>
+      <alternativeNames>Cuba</alternativeNames>
+    </regions>
+    <regions name="the Republic of Uzbekistan" id="UZ" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.23">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Ouzb&#xc3;&#xa9;kistan</alternativeNames>
+      <alternativeNames>Repubblica dell'Uzbekistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Uzbekist&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Uzbekistan</alternativeNames>
+      <alternativeNames>l'Ouzb&#xc3;&#xa9;kistan</alternativeNames>
+      <alternativeNames>Uzbekist&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Lesotho" id="LS" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.20">
+      <alternativeNames>le Royaume du Lesotho</alternativeNames>
+      <alternativeNames>Regno di Lesotho</alternativeNames>
+      <alternativeNames>el Reino de Lesotho</alternativeNames>
+      <alternativeNames>Lesotho</alternativeNames>
+      <alternativeNames>le Lesotho</alternativeNames>
+    </regions>
+    <regions name="the Dominican Republic" id="DO" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique dominicaine</alternativeNames>
+      <alternativeNames>Repubblica dominicana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Dominicana</alternativeNames>
+      <alternativeNames>Dominican Republic (the)</alternativeNames>
+    </regions>
+    <regions name="the Republic of Italy" id="IT" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique italienne</alternativeNames>
+      <alternativeNames>Repubblica italiana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Italiana</alternativeNames>
+      <alternativeNames>Italy</alternativeNames>
+      <alternativeNames>l'Italie</alternativeNames>
+      <alternativeNames>Italia</alternativeNames>
+    </regions>
+    <regions name="the Eastern Republic of Uruguay" id="UY" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.26">
+      <alternativeNames>la R&#xc3;&#xa9;publique orientale de l'Uruguay</alternativeNames>
+      <alternativeNames>Repubblica orientale dell'Uruguay</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Oriental del Uruguay</alternativeNames>
+      <alternativeNames>Uruguay</alternativeNames>
+      <alternativeNames>l'Uruguay</alternativeNames>
+      <alternativeNames>el Uruguay</alternativeNames>
+    </regions>
+    <regions name="the Republic of South Africa" id="ZA" parentRegions="//@locationModels.0/@regions.20 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique sud-africaine</alternativeNames>
+      <alternativeNames>Repubblica del Sudafrica</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Sud&#xc3;&#xa1;frica</alternativeNames>
+      <alternativeNames>South Africa</alternativeNames>
+      <alternativeNames>l'Afrique du Sud</alternativeNames>
+      <alternativeNames>Sudafrica</alternativeNames>
+      <alternativeNames>Sud&#xc3;&#xa1;frica</alternativeNames>
+    </regions>
+    <regions name="the Republic of Liberia" id="LR" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Lib&#xc3;&#xa9;ria</alternativeNames>
+      <alternativeNames>Repubblica di Liberia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Liberia</alternativeNames>
+      <alternativeNames>Liberia</alternativeNames>
+      <alternativeNames>le Lib&#xc3;&#xa9;ria</alternativeNames>
+    </regions>
+    <regions name="the Republic of Chad" id="TD" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.9">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Tchad</alternativeNames>
+      <alternativeNames>Repubblica del Ciad</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Chad</alternativeNames>
+      <alternativeNames>Chad</alternativeNames>
+      <alternativeNames>le Tchad</alternativeNames>
+      <alternativeNames>Ciad</alternativeNames>
+      <alternativeNames>el Chad</alternativeNames>
+    </regions>
+    <regions name="Saint Kitts and Nevis" id="KN" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>Saint-Kitts-et-Nevis</alternativeNames>
+      <alternativeNames>Federazione di Saint Cristopher e Nevis</alternativeNames>
+      <alternativeNames>Saint Kitts y Nevis</alternativeNames>
+      <alternativeNames>Saint Kitts and Nevis</alternativeNames>
+      <alternativeNames>Saint Christopher e Nevis</alternativeNames>
+    </regions>
+    <regions name="the Republic of Korea" id="KR" parentRegions="//@locationModels.0/@regions.11 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Cor&#xc3;&#xa9;e</alternativeNames>
+      <alternativeNames>Repubblica di Corea</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Corea</alternativeNames>
+      <alternativeNames>the Republic of Korea</alternativeNames>
+    </regions>
+    <regions name="the Republic of Poland" id="PL" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.12 //@locationModels.0/@regions.3">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Pologne</alternativeNames>
+      <alternativeNames>Repubblica di Polonia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Polonia</alternativeNames>
+      <alternativeNames>Poland</alternativeNames>
+      <alternativeNames>la Pologne</alternativeNames>
+      <alternativeNames>Polonia</alternativeNames>
+    </regions>
+    <regions name="Romania" id="RO" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.12">
+      <alternativeNames>la Roumanie</alternativeNames>
+      <alternativeNames>Romania</alternativeNames>
+      <alternativeNames>Rumania</alternativeNames>
+    </regions>
+    <regions name="the Republic of Niue" id="NU" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.27">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Niou&#xc3;&#xa9;</alternativeNames>
+      <alternativeNames>Repubblica di Niue</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Niue</alternativeNames>
+      <alternativeNames>Niue</alternativeNames>
+      <alternativeNames>Niou&#xc3;&#xa9;</alternativeNames>
+    </regions>
+    <regions name="the Republic of Singapore" id="SG" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Singapour</alternativeNames>
+      <alternativeNames>Repubblica di Singapore</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Singapur</alternativeNames>
+      <alternativeNames>Singapore</alternativeNames>
+      <alternativeNames>Singapour</alternativeNames>
+      <alternativeNames>Singapur</alternativeNames>
+    </regions>
+    <regions name="the Republic of El Salvador" id="SV" parentRegions="//@locationModels.0/@regions.15 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'El Salvador</alternativeNames>
+      <alternativeNames>Repubblica di El Salvador</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de El Salvador</alternativeNames>
+      <alternativeNames>El Salvador</alternativeNames>
+    </regions>
+    <regions name="the Republic of Zimbabwe" id="ZW" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Zimbabwe</alternativeNames>
+      <alternativeNames>Repubblica dello Zimbabwe</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Zimbabwe</alternativeNames>
+      <alternativeNames>Zimbabwe</alternativeNames>
+      <alternativeNames>le Zimbabwe</alternativeNames>
+    </regions>
+    <regions name="the Republic of Uganda" id="UG" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique de l'Ouganda</alternativeNames>
+      <alternativeNames>Repubblica dell'Uganda</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Uganda</alternativeNames>
+      <alternativeNames>Uganda</alternativeNames>
+      <alternativeNames>l'Ouganda</alternativeNames>
+    </regions>
+    <regions name="the Commonwealth of Dominica" id="DM" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>le Commonwealth de la Dominique</alternativeNames>
+      <alternativeNames>Commonwealth di Dominica</alternativeNames>
+      <alternativeNames>el Commonwealth de Dominica</alternativeNames>
+      <alternativeNames>Dominica</alternativeNames>
+      <alternativeNames>la Dominique</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Cambodia" id="KH" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>le Royaume du Cambodge</alternativeNames>
+      <alternativeNames>Regno di Cambogia</alternativeNames>
+      <alternativeNames>el Reino de Camboya</alternativeNames>
+      <alternativeNames>Cambodia</alternativeNames>
+      <alternativeNames>le Cambodge</alternativeNames>
+      <alternativeNames>Cambogia</alternativeNames>
+      <alternativeNames>Camboya</alternativeNames>
+    </regions>
+    <regions name="the Republic of Costa Rica" id="CR" parentRegions="//@locationModels.0/@regions.15 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Costa Rica</alternativeNames>
+      <alternativeNames>Repubblica di Costa Rica</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Costa Rica</alternativeNames>
+      <alternativeNames>Costa Rica</alternativeNames>
+      <alternativeNames>le Costa Rica</alternativeNames>
+    </regions>
+    <regions name="the Gabonese Republic" id="GA" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique gabonaise</alternativeNames>
+      <alternativeNames>Repubblica gabonese</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Gabonesa</alternativeNames>
+      <alternativeNames>Gabon</alternativeNames>
+      <alternativeNames>le Gabon</alternativeNames>
+      <alternativeNames>el Gab&#xc3;&#xb3;n</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of the Netherlands" id="NL" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.13 //@locationModels.0/@regions.19">
+      <alternativeNames>le Royaume des Pays-Bas</alternativeNames>
+      <alternativeNames>Regno dei Paesi Bassi</alternativeNames>
+      <alternativeNames>el Reino de los Pa&#xc3;&#xad;ses Bajos</alternativeNames>
+      <alternativeNames>the Netherlands</alternativeNames>
+      <alternativeNames>les Pays-Bas</alternativeNames>
+      <alternativeNames>Paesi Bassi</alternativeNames>
+      <alternativeNames>los Pa&#xc3;&#xad;ses Bajos</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Belgium" id="BE" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.13 //@locationModels.0/@regions.19">
+      <alternativeNames>le Royaume de Belgique</alternativeNames>
+      <alternativeNames>Regno del Belgio</alternativeNames>
+      <alternativeNames>el Reino de B&#xc3;&#xa9;lgica</alternativeNames>
+      <alternativeNames>Belgium</alternativeNames>
+      <alternativeNames>la Belgique</alternativeNames>
+      <alternativeNames>Belgio</alternativeNames>
+      <alternativeNames>B&#xc3;&#xa9;lgica</alternativeNames>
+    </regions>
+    <regions name="the Commonwealth of the Bahamas" id="BS" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>le Commonwealth des Bahamas</alternativeNames>
+      <alternativeNames>Commonwealth delle Bahamas</alternativeNames>
+      <alternativeNames>el Commonwealth de las Bahamas</alternativeNames>
+      <alternativeNames>the Bahamas</alternativeNames>
+      <alternativeNames>les Bahamas</alternativeNames>
+      <alternativeNames>Bahamas</alternativeNames>
+      <alternativeNames>las Bahamas</alternativeNames>
+    </regions>
+    <regions name="the Republic of Moldova" id="MD" parentRegions="//@locationModels.0/@regions.12 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Moldova</alternativeNames>
+      <alternativeNames>Repubblica di Moldova</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Moldova</alternativeNames>
+      <alternativeNames>Republic of Moldova</alternativeNames>
+      <alternativeNames>R&#xc3;&#xa9;publique de Moldova</alternativeNames>
+      <alternativeNames>Moldavia</alternativeNames>
+      <alternativeNames>Rep&#xc3;&#xba;blica de Moldova</alternativeNames>
+    </regions>
+    <regions name="Barbados" id="BB" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>la Barbade</alternativeNames>
+      <alternativeNames>Barbados</alternativeNames>
+    </regions>
+    <regions name="the Democratic People's Republic of Korea" id="KP" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.11">
+      <alternativeNames>la R&#xc3;&#xa9;publique populaire d&#xc3;&#xa9;mocratique de Cor&#xc3;&#xa9;e</alternativeNames>
+      <alternativeNames>Repubblica popolare democratica di Corea</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Popular Democr&#xc3;&#xa1;tica de Corea</alternativeNames>
+      <alternativeNames>the Democratic People's Republic of Korea</alternativeNames>
+    </regions>
+    <regions name="Antigua and Barbuda" id="AG" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.25">
+      <alternativeNames>Antigua-et-Barbuda</alternativeNames>
+      <alternativeNames>Antigua e Barbuda</alternativeNames>
+      <alternativeNames>Antigua y Barbuda</alternativeNames>
+      <alternativeNames>Antigua and Barbuda</alternativeNames>
+    </regions>
+    <regions name="the Republic of Guinea-Bissau" id="GW" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Guin&#xc3;&#xa9;e-Bissau</alternativeNames>
+      <alternativeNames>Repubblica di Guinea-Bissau</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Guinea-Bissau</alternativeNames>
+      <alternativeNames>Guinea-Bissau</alternativeNames>
+      <alternativeNames>la Guin&#xc3;&#xa9;e-Bissau</alternativeNames>
+    </regions>
+    <regions name="the Republic of Seychelles" id="SC" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique des Seychelles</alternativeNames>
+      <alternativeNames>Repubblica delle Seicelle</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Seychelles</alternativeNames>
+      <alternativeNames>Seychelles</alternativeNames>
+      <alternativeNames>les Seychelles</alternativeNames>
+    </regions>
+    <regions name="the Republic of Austria" id="AT" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Autriche</alternativeNames>
+      <alternativeNames>Repubblica d'Austria</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Austria</alternativeNames>
+      <alternativeNames>Austria</alternativeNames>
+      <alternativeNames>l'Autriche</alternativeNames>
+    </regions>
+    <regions name="the Republic of Lithuania" id="LT" parentRegions="//@locationModels.0/@regions.3 //@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Lituanie</alternativeNames>
+      <alternativeNames>Repubblica di Lituania</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Lituania</alternativeNames>
+      <alternativeNames>Lithuania</alternativeNames>
+      <alternativeNames>la Lituanie</alternativeNames>
+      <alternativeNames>Lituania</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Denmark" id="DK" parentRegions="//@locationModels.0/@regions.3 //@locationModels.0/@regions.4 //@locationModels.0/@regions.29 //@locationModels.0/@regions.1 //@locationModels.0/@regions.19">
+      <alternativeNames>le Royaume du Danemark</alternativeNames>
+      <alternativeNames>Regno di Danimarca</alternativeNames>
+      <alternativeNames>el Reino de Dinamarca</alternativeNames>
+      <alternativeNames>Denmark</alternativeNames>
+      <alternativeNames>le Danemark</alternativeNames>
+      <alternativeNames>Danimarca</alternativeNames>
+      <alternativeNames>Dinamarca</alternativeNames>
+    </regions>
+    <regions name="the Republic of Nicaragua" id="NI" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.15">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Nicaragua</alternativeNames>
+      <alternativeNames>Repubblica di Nicaragua</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Nicaragua</alternativeNames>
+      <alternativeNames>Nicaragua</alternativeNames>
+      <alternativeNames>le Nicaragua</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Marshall Islands" id="MH" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.8">
+      <alternativeNames>la R&#xc3;&#xa9;publique des &#xc3;&#x17d;les Marshall</alternativeNames>
+      <alternativeNames>Repubblica delle Isole Marshall</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de las Islas Marshall</alternativeNames>
+      <alternativeNames>the Marshall Islands</alternativeNames>
+      <alternativeNames>les &#xc3;&#x17d;les Marshall</alternativeNames>
+      <alternativeNames>Marshall</alternativeNames>
+      <alternativeNames>las Islas Marshall</alternativeNames>
+    </regions>
+    <regions name="the Republic of Colombia" id="CO" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Colombie</alternativeNames>
+      <alternativeNames>Repubblica di Colombia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Colombia</alternativeNames>
+      <alternativeNames>Colombia</alternativeNames>
+      <alternativeNames>la Colombie</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Union of Myanmar " id="MM" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>R&#xc3;&#xa9;publique de l'Union du Myanmar </alternativeNames>
+      <alternativeNames>Repubblica dell'Unione di Myanmar </alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de la Uni&#xc3;&#xb3;n de Myanmar </alternativeNames>
+      <alternativeNames>Myanmar</alternativeNames>
+      <alternativeNames>le Myanmar</alternativeNames>
+    </regions>
+    <regions name="Malaysia" id="MY" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.2">
+      <alternativeNames>la Malaisie</alternativeNames>
+      <alternativeNames>Malesia</alternativeNames>
+      <alternativeNames>Malasia</alternativeNames>
+      <alternativeNames>Malaysia</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Sudan" id="SD">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Soudan</alternativeNames>
+      <alternativeNames>Repubblica del Sudan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Sud&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>the Sudan</alternativeNames>
+      <alternativeNames>le Soudan</alternativeNames>
+      <alternativeNames>Sudan</alternativeNames>
+      <alternativeNames>el Sud&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Bulgaria" id="BG" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.17 //@locationModels.0/@regions.12">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Bulgarie</alternativeNames>
+      <alternativeNames>Repubblica di Bulgaria</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Bulgaria</alternativeNames>
+      <alternativeNames>Bulgaria</alternativeNames>
+      <alternativeNames>la Bulgarie</alternativeNames>
+    </regions>
+    <regions name="the Republic of Rwanda" id="RW" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Rwanda</alternativeNames>
+      <alternativeNames>Repubblica del Ruanda</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Rwanda</alternativeNames>
+      <alternativeNames>Rwanda</alternativeNames>
+      <alternativeNames>le Rwanda</alternativeNames>
+      <alternativeNames>Ruanda</alternativeNames>
+    </regions>
+    <regions name="the Republic of Peru" id="PE" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique du P&#xc3;&#xa9;rou</alternativeNames>
+      <alternativeNames>Repubblica del Per&#xc3;&#xb9;</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Per&#xc3;&#xba;</alternativeNames>
+      <alternativeNames>Peru</alternativeNames>
+      <alternativeNames>le P&#xc3;&#xa9;rou</alternativeNames>
+      <alternativeNames>Per&#xc3;&#xb9;</alternativeNames>
+      <alternativeNames>Per&#xc3;&#xba;</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Bhutan" id="BT" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>le Royaume du Bhoutan</alternativeNames>
+      <alternativeNames>Regno del Bhutan</alternativeNames>
+      <alternativeNames>el Reino de Bhut&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Bhutan</alternativeNames>
+      <alternativeNames>le Bhoutan</alternativeNames>
+      <alternativeNames>Bhut&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Ghana" id="GH" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Ghana</alternativeNames>
+      <alternativeNames>Repubblica del Ghana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Ghana</alternativeNames>
+      <alternativeNames>Ghana</alternativeNames>
+      <alternativeNames>le Ghana</alternativeNames>
+    </regions>
+    <regions name="Burkina Faso" id="BF" parentRegions="//@locationModels.0/@regions.16 //@locationModels.0/@regions.10">
+      <alternativeNames>le Burkina Faso</alternativeNames>
+      <alternativeNames>Burkina Faso</alternativeNames>
+    </regions>
+    <regions name="the Bolivarian Republic of Venezuela" id="VE" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique bolivarienne du Venezuela</alternativeNames>
+      <alternativeNames>Repubblica bolivariana di Venezuela</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Bolivariana de Venezuela</alternativeNames>
+      <alternativeNames>Venezuela (Bolivarian Republic of)</alternativeNames>
+      <alternativeNames>Venezuela (R&#xc3;&#xa9;publique bolivarienne du)</alternativeNames>
+      <alternativeNames>Venezuela (Repubblica bolivariana di)</alternativeNames>
+      <alternativeNames>Venezuela (Rep&#xc3;&#xba;blica Bolivariana de)</alternativeNames>
+    </regions>
+    <regions name="the Republic of Tunisia" id="TN" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.7">
+      <alternativeNames>la R&#xc3;&#xa9;publique tunisienne</alternativeNames>
+      <alternativeNames>Repubblica tunisina</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de T&#xc3;&#xba;nez</alternativeNames>
+      <alternativeNames>Tunisia</alternativeNames>
+      <alternativeNames>la Tunisie</alternativeNames>
+      <alternativeNames>T&#xc3;&#xba;nez</alternativeNames>
+    </regions>
+    <regions name="the Czech Republic" id="CZ" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.12">
+      <alternativeNames>la R&#xc3;&#xa9;publique tch&#xc3;&#xa8;que</alternativeNames>
+      <alternativeNames>Repubblica ceca</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Checa</alternativeNames>
+      <alternativeNames>the Czech Republic</alternativeNames>
+    </regions>
+    <regions name="Grenada" id="GD" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.25">
+      <alternativeNames>la Grenade</alternativeNames>
+      <alternativeNames>Grenada</alternativeNames>
+      <alternativeNames>Granada</alternativeNames>
+    </regions>
+    <regions name="Ukraine" id="UA" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.12">
+      <alternativeNames>l'Ukraine</alternativeNames>
+      <alternativeNames>Ucraina</alternativeNames>
+      <alternativeNames>Ucrania</alternativeNames>
+      <alternativeNames>Ukraine</alternativeNames>
+    </regions>
+    <regions name="the Republic of Mauritius" id="MU" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Maurice</alternativeNames>
+      <alternativeNames>Repubblica di Maurizio</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Mauricio</alternativeNames>
+      <alternativeNames>Mauritius</alternativeNames>
+      <alternativeNames>Maurice</alternativeNames>
+      <alternativeNames>Maurizio</alternativeNames>
+      <alternativeNames>Mauricio</alternativeNames>
+    </regions>
+    <regions name="Turkmenistan" id="TM" parentRegions="//@locationModels.0/@regions.23 //@locationModels.0/@regions.22">
+      <alternativeNames>le Turkm&#xc3;&#xa9;nistan</alternativeNames>
+      <alternativeNames>Repubblica di Turkmenistan</alternativeNames>
+      <alternativeNames>Turkmenist&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Turkmenistan</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Norway" id="NO" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.4 //@locationModels.0/@regions.29 //@locationModels.0/@regions.1">
+      <alternativeNames>le Royaume de Norv&#xc3;&#xa8;ge</alternativeNames>
+      <alternativeNames>Regno di Norvegia</alternativeNames>
+      <alternativeNames>el Reino de Noruega</alternativeNames>
+      <alternativeNames>Norway</alternativeNames>
+      <alternativeNames>la Norv&#xc3;&#xa8;ge</alternativeNames>
+      <alternativeNames>Norvegia</alternativeNames>
+      <alternativeNames>Noruega</alternativeNames>
+    </regions>
+    <regions name="the Republic of Finland" id="FI" parentRegions="//@locationModels.0/@regions.4 //@locationModels.0/@regions.3 //@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Finlande</alternativeNames>
+      <alternativeNames>Repubblica di Finlandia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Finlandia</alternativeNames>
+      <alternativeNames>Finland</alternativeNames>
+      <alternativeNames>la Finlande</alternativeNames>
+      <alternativeNames>Finlandia</alternativeNames>
+    </regions>
+    <regions name="the Syrian Arab Republic" id="SY" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>la R&#xc3;&#xa9;publique arabe syrienne</alternativeNames>
+      <alternativeNames>Repubblica araba siriana</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica &#xc3;&#xfffd;rabe Siria</alternativeNames>
+      <alternativeNames>the Syrian Arab Republic</alternativeNames>
+      <alternativeNames>Siria</alternativeNames>
+    </regions>
+    <regions name="the Republic of Palau" id="PW" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.8">
+      <alternativeNames>la R&#xc3;&#xa9;publique des Palaos</alternativeNames>
+      <alternativeNames>Repubblica di Palau</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Palau</alternativeNames>
+      <alternativeNames>Palau</alternativeNames>
+      <alternativeNames>les Palaos</alternativeNames>
+    </regions>
+    <regions name="the United States of America" id="US" parentRegions="//@locationModels.0/@regions.28 //@locationModels.0/@regions.24">
+      <alternativeNames>les &#xc3;&#x2030;tats-Unis d'Am&#xc3;&#xa9;rique</alternativeNames>
+      <alternativeNames>Stati Uniti d'America</alternativeNames>
+      <alternativeNames>los Estados Unidos de Am&#xc3;&#xa9;rica</alternativeNames>
+      <alternativeNames>the United States of America</alternativeNames>
+    </regions>
+    <regions name="the Lao People's Democratic Republic" id="LA" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique d&#xc3;&#xa9;mocratique populaire lao</alternativeNames>
+      <alternativeNames>Repubblica democratica popolare lao</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Democr&#xc3;&#xa1;tica Popular Lao</alternativeNames>
+      <alternativeNames>the Lao People's Democratic Republic</alternativeNames>
+    </regions>
+    <regions name="the Principality of Liechtenstein" id="LI" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.18">
+      <alternativeNames>la Principaut&#xc3;&#xa9; du Liechtenstein</alternativeNames>
+      <alternativeNames>Principato del Liechtenstein</alternativeNames>
+      <alternativeNames>el Principado de Liechtenstein</alternativeNames>
+      <alternativeNames>Liechtenstein</alternativeNames>
+      <alternativeNames>le Liechtenstein</alternativeNames>
+    </regions>
+    <regions name="Hungary " id="HU" parentRegions="//@locationModels.0/@regions.12 //@locationModels.0/@regions.19">
+      <alternativeNames>Hongrie (la)</alternativeNames>
+      <alternativeNames>Ungheria </alternativeNames>
+      <alternativeNames>Hungr&#xc3;&#xad;a </alternativeNames>
+      <alternativeNames>Hungary</alternativeNames>
+      <alternativeNames>Hongrie</alternativeNames>
+      <alternativeNames>Ungheria</alternativeNames>
+      <alternativeNames>Hungr&#xc3;&#xad;a</alternativeNames>
+    </regions>
+    <regions name="Saint Lucia" id="LC" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>Sainte-Lucie</alternativeNames>
+      <alternativeNames>Saint Lucia</alternativeNames>
+      <alternativeNames>Santa Luc&#xc3;&#xad;a</alternativeNames>
+    </regions>
+    <regions name="the Republic of Kazakhstan" id="KZ" parentRegions="//@locationModels.0/@regions.23 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Kazakhstan</alternativeNames>
+      <alternativeNames>Repubblica del Kazakistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Kazajst&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Kazakhstan</alternativeNames>
+      <alternativeNames>le Kazakhstan</alternativeNames>
+      <alternativeNames>Kazakistan</alternativeNames>
+      <alternativeNames>Kazajst&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Angola" id="AO" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Angola</alternativeNames>
+      <alternativeNames>Repubblica d'Angola</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Angola</alternativeNames>
+      <alternativeNames>Angola</alternativeNames>
+      <alternativeNames>l'Angola</alternativeNames>
+    </regions>
+    <regions name="the State of Israel" id="IL" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>l'&#xc3;&#x2030;tat d'Isra&#xc3;&#xab;l</alternativeNames>
+      <alternativeNames>Stato d'Israele</alternativeNames>
+      <alternativeNames>el Estado de Israel</alternativeNames>
+      <alternativeNames>Israel</alternativeNames>
+      <alternativeNames>Isra&#xc3;&#xab;l</alternativeNames>
+      <alternativeNames>Israele</alternativeNames>
+    </regions>
+    <regions name="the Republic of Mozambique" id="MZ" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Mozambique</alternativeNames>
+      <alternativeNames>Repubblica del Mozambico</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Mozambique</alternativeNames>
+      <alternativeNames>Mozambique</alternativeNames>
+      <alternativeNames>le Mozambique</alternativeNames>
+      <alternativeNames>Mozambico</alternativeNames>
+    </regions>
+    <regions name="The Islamic Republic of Afghanistan" id="AF" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>la R&#xc3;&#xa9;publique islamique d'Afghanistan</alternativeNames>
+      <alternativeNames>la Repubblica islamica dell'Afghanistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Isl&#xc3;&#xa1;mica del Afganist&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Afghanistan</alternativeNames>
+      <alternativeNames>l'Afghanistan</alternativeNames>
+      <alternativeNames>el Afganist&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="Tokelau" id="TK" parentRegions="//@locationModels.0/@regions.27 //@locationModels.0/@regions.31">
+      <alternativeNames>Tok&#xc3;&#xa9;laou</alternativeNames>
+      <alternativeNames>Tokelau</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Tonga" id="TO" parentRegions="//@locationModels.0/@regions.27 //@locationModels.0/@regions.31">
+      <alternativeNames>le Royaume des Tonga</alternativeNames>
+      <alternativeNames>Regno di Tonga</alternativeNames>
+      <alternativeNames>el Reino de Tonga</alternativeNames>
+      <alternativeNames>Tonga</alternativeNames>
+      <alternativeNames>les Tonga</alternativeNames>
+    </regions>
+    <regions name="the Independent State of Samoa" id="WS" parentRegions="//@locationModels.0/@regions.27 //@locationModels.0/@regions.31">
+      <alternativeNames>l'&#xc3;&#x2030;tat ind&#xc3;&#xa9;pendant du Samoa</alternativeNames>
+      <alternativeNames>Stato indipendente di Samoa</alternativeNames>
+      <alternativeNames>el Estado Independiente de Samoa</alternativeNames>
+      <alternativeNames>Samoa</alternativeNames>
+      <alternativeNames>le Samoa</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Philippines" id="PH" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique des Philippines</alternativeNames>
+      <alternativeNames>Repubblica delle Filippine</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Filipinas</alternativeNames>
+      <alternativeNames>the Philippines</alternativeNames>
+      <alternativeNames>les Philippines</alternativeNames>
+      <alternativeNames>Filippine</alternativeNames>
+      <alternativeNames>Filipinas</alternativeNames>
+    </regions>
+    <regions name="Saint Vincent and the Grenadines" id="VC" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.25">
+      <alternativeNames>Saint-Vincent-et-les Grenadines</alternativeNames>
+      <alternativeNames>Saint Vincent e Grenadine</alternativeNames>
+      <alternativeNames>San Vicente y las Granadinas</alternativeNames>
+      <alternativeNames>Saint Vincent and the Grenadines</alternativeNames>
+    </regions>
+    <regions name="Brunei Darussalam" id="BN" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>le Brun&#xc3;&#xa9;i Darussalam</alternativeNames>
+      <alternativeNames>Stato di Brunei Darussalam</alternativeNames>
+      <alternativeNames>Brunei Darussalam</alternativeNames>
+      <alternativeNames>Brunei</alternativeNames>
+    </regions>
+    <regions name="the Republic of C&#xc3;&#xb4;te d'Ivoire" id="CI" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique de C&#xc3;&#xb4;te d'Ivoire</alternativeNames>
+      <alternativeNames>Repubblica della C&#xc3;&#xb4;te d'Ivoire</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de C&#xc3;&#xb4;te d'Ivoire</alternativeNames>
+      <alternativeNames>C&#xc3;&#xb4;te d'Ivoire</alternativeNames>
+      <alternativeNames>la C&#xc3;&#xb4;te d'Ivoire</alternativeNames>
+    </regions>
+    <regions name="the Socialist Republic of Viet Nam" id="VN" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.2">
+      <alternativeNames>la R&#xc3;&#xa9;publique socialiste du Viet Nam</alternativeNames>
+      <alternativeNames>Repubblica socialista del Vietnam</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Socialista de Viet Nam</alternativeNames>
+      <alternativeNames>Viet Nam</alternativeNames>
+      <alternativeNames>le Viet Nam</alternativeNames>
+      <alternativeNames>Vietnam</alternativeNames>
+    </regions>
+    <regions name="the Republic of Tajikistan" id="TJ" parentRegions="//@locationModels.0/@regions.23 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Tadjikistan</alternativeNames>
+      <alternativeNames>Repubblica del Tagikistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Tayikist&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Tajikistan</alternativeNames>
+      <alternativeNames>le Tadjikistan</alternativeNames>
+      <alternativeNames>Tagikistan</alternativeNames>
+      <alternativeNames>Tayikist&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="Holy See" id="VA" parentRegions="//@locationModels.0/@regions.5 //@locationModels.0/@regions.19">
+      <alternativeNames>le Saint-Si&#xc3;&#xa8;ge</alternativeNames>
+      <alternativeNames>Santa Sede</alternativeNames>
+      <alternativeNames>la Santa Sede</alternativeNames>
+      <alternativeNames>Holy See</alternativeNames>
+    </regions>
+    <regions name="the Republic of Nauru" id="NR" parentRegions="//@locationModels.0/@regions.8 //@locationModels.0/@regions.31">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Nauru</alternativeNames>
+      <alternativeNames>Repubblica di Nauru</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Nauru</alternativeNames>
+      <alternativeNames>Nauru</alternativeNames>
+    </regions>
+    <regions name="Libya" id="LY" parentRegions="//@locationModels.0/@regions.7 //@locationModels.0/@regions.10">
+      <alternativeNames>Libye</alternativeNames>
+      <alternativeNames>Libia</alternativeNames>
+      <alternativeNames>Libya</alternativeNames>
+    </regions>
+    <regions name="Republic of South Sudan " id="SS" parentRegions="//@locationModels.0/@regions.7 //@locationModels.0/@regions.10">
+      <alternativeNames>R&#xc3;&#xa9;publique du Soudan du Sud </alternativeNames>
+      <alternativeNames>Repubblica del Sud Sudan </alternativeNames>
+      <alternativeNames>Rep&#xc3;&#xba;blica de Sud&#xc3;&#xa1;n del Sur </alternativeNames>
+      <alternativeNames>South Sudan</alternativeNames>
+      <alternativeNames>Soudan du Sud</alternativeNames>
+      <alternativeNames>Sud Sudan </alternativeNames>
+      <alternativeNames>Sud&#xc3;&#xa1;n del Sur </alternativeNames>
+    </regions>
+    <regions name="Belize" id="BZ" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.15">
+      <alternativeNames>le Belize</alternativeNames>
+      <alternativeNames>Belize</alternativeNames>
+      <alternativeNames>Belice</alternativeNames>
+    </regions>
+    <regions name="the Republic of Cameroon" id="CM" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Cameroun</alternativeNames>
+      <alternativeNames>Repubblica del Camerun</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Camer&#xc3;&#xba;n</alternativeNames>
+      <alternativeNames>Cameroon</alternativeNames>
+      <alternativeNames>le Cameroun</alternativeNames>
+      <alternativeNames>Camerun</alternativeNames>
+      <alternativeNames>el Camer&#xc3;&#xba;n</alternativeNames>
+    </regions>
+    <regions name="Libya" id="LY">
+      <alternativeNames>Libye</alternativeNames>
+      <alternativeNames>Libia</alternativeNames>
+      <alternativeNames>Libya</alternativeNames>
+    </regions>
+    <regions name="the Republic of Guatemala" id="GT" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.15">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Guatemala</alternativeNames>
+      <alternativeNames>Repubblica del Guatemala</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Guatemala</alternativeNames>
+      <alternativeNames>Guatemala</alternativeNames>
+      <alternativeNames>le Guatemala</alternativeNames>
+    </regions>
+    <regions name="the Republic of Djibouti" id="DJ" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Djibouti</alternativeNames>
+      <alternativeNames>Repubblica di Gibuti</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Djibouti</alternativeNames>
+      <alternativeNames>Djibouti</alternativeNames>
+      <alternativeNames>Gibuti</alternativeNames>
+    </regions>
+    <regions name="the Slovak Republic" id="SK" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.12">
+      <alternativeNames>la R&#xc3;&#xa9;publique slovaque</alternativeNames>
+      <alternativeNames>Repubblica slovacca</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Eslovaca</alternativeNames>
+      <alternativeNames>Slovakia</alternativeNames>
+      <alternativeNames>la Slovaquie</alternativeNames>
+      <alternativeNames>Slovacchia</alternativeNames>
+      <alternativeNames>Eslovaquia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Maldives" id="MV" parentRegions="//@locationModels.0/@regions.0 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique des Maldives</alternativeNames>
+      <alternativeNames>Repubblica delle Maldive</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Maldivas</alternativeNames>
+      <alternativeNames>Maldives</alternativeNames>
+      <alternativeNames>les Maldives</alternativeNames>
+      <alternativeNames> Repubblica di Moldova</alternativeNames>
+      <alternativeNames>Maldivas</alternativeNames>
+    </regions>
+    <regions name="the Republic of Guinea" id="GN" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Guin&#xc3;&#xa9;e</alternativeNames>
+      <alternativeNames>Repubblica di Guinea</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Guinea</alternativeNames>
+      <alternativeNames>Guinea</alternativeNames>
+      <alternativeNames>la Guin&#xc3;&#xa9;e</alternativeNames>
+    </regions>
+    <regions name="Ireland" id="IE" parentRegions="//@locationModels.0/@regions.29 //@locationModels.0/@regions.19">
+      <alternativeNames>l'Irlande</alternativeNames>
+      <alternativeNames>Irlanda</alternativeNames>
+      <alternativeNames>Ireland</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Saudi Arabia" id="SA" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>le Royaume d'Arabie saoudite</alternativeNames>
+      <alternativeNames>Regno dell'Arabia Saudita</alternativeNames>
+      <alternativeNames>el Reino de Arabia Saudita</alternativeNames>
+      <alternativeNames>Saudi Arabia</alternativeNames>
+      <alternativeNames>l'Arabie saoudite</alternativeNames>
+      <alternativeNames>Arabia Saudita</alternativeNames>
+      <alternativeNames>la Arabia Saudita</alternativeNames>
+    </regions>
+    <regions name="the Republic of Turkey" id="TR" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique turque</alternativeNames>
+      <alternativeNames>Repubblica di Turchia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Turqu&#xc3;&#xad;a</alternativeNames>
+      <alternativeNames>Turkey</alternativeNames>
+      <alternativeNames>la Turquie</alternativeNames>
+      <alternativeNames>Turchia</alternativeNames>
+      <alternativeNames>Turqu&#xc3;&#xad;a</alternativeNames>
+    </regions>
+    <regions name="the State of Kuwait" id="KW" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>l'&#xc3;&#x2030;tat du Kowe&#xc3;&#xaf;t</alternativeNames>
+      <alternativeNames>Stato del Kuwait</alternativeNames>
+      <alternativeNames>el Estado de Kuwait</alternativeNames>
+      <alternativeNames>Kuwait</alternativeNames>
+      <alternativeNames>le Kowe&#xc3;&#xaf;t</alternativeNames>
+    </regions>
+    <regions name="the Federative Republic of Brazil" id="BR" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique f&#xc3;&#xa9;d&#xc3;&#xa9;rative du Br&#xc3;&#xa9;sil</alternativeNames>
+      <alternativeNames>Repubblica federativa del Brasile</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Federativa del Brasil</alternativeNames>
+      <alternativeNames>Brazil</alternativeNames>
+      <alternativeNames>le Br&#xc3;&#xa9;sil</alternativeNames>
+      <alternativeNames>Brasile</alternativeNames>
+      <alternativeNames>el Brasil</alternativeNames>
+    </regions>
+    <regions name="the Republic of Iceland" id="IS" parentRegions="//@locationModels.0/@regions.29 //@locationModels.0/@regions.19 //@locationModels.0/@regions.4">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Islande</alternativeNames>
+      <alternativeNames>Repubblica d'Islanda</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Islandia</alternativeNames>
+      <alternativeNames>Iceland</alternativeNames>
+      <alternativeNames>l'Islande</alternativeNames>
+      <alternativeNames>Islanda</alternativeNames>
+      <alternativeNames>Islandia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Fiji " id="FJ" parentRegions="//@locationModels.0/@regions.6 //@locationModels.0/@regions.31">
+      <alternativeNames>la R&#xc3;&#xa9;publique des Fidji </alternativeNames>
+      <alternativeNames>Repubblica delle Isole Figi </alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Fiji</alternativeNames>
+      <alternativeNames>Fiji</alternativeNames>
+      <alternativeNames>les Fidji</alternativeNames>
+      <alternativeNames>Figi</alternativeNames>
+    </regions>
+    <regions name="the Republic of Namibia" id="NA" parentRegions="//@locationModels.0/@regions.20 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Namibie</alternativeNames>
+      <alternativeNames>Repubblica di Namibia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Namibia</alternativeNames>
+      <alternativeNames>Namibia</alternativeNames>
+      <alternativeNames>la Namibie</alternativeNames>
+    </regions>
+    <regions name="the Republic of Haiti" id="HT" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.25">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Ha&#xc3;&#xaf;ti</alternativeNames>
+      <alternativeNames>Repubblica di Haiti</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Hait&#xc3;&#xad;</alternativeNames>
+      <alternativeNames>Haiti</alternativeNames>
+      <alternativeNames>Ha&#xc3;&#xaf;ti</alternativeNames>
+      <alternativeNames>Hait&#xc3;&#xad;</alternativeNames>
+    </regions>
+    <regions name="the Kyrgyz Republic" id="KG" parentRegions="//@locationModels.0/@regions.23 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique kirghize</alternativeNames>
+      <alternativeNames>Repubblica di Kirghizistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Kirguisa</alternativeNames>
+      <alternativeNames>Kyrgyzstan</alternativeNames>
+      <alternativeNames>le Kirghizistan</alternativeNames>
+      <alternativeNames>Kirghizistan</alternativeNames>
+      <alternativeNames>Kirguist&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Yemen" id="YE" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Y&#xc3;&#xa9;men</alternativeNames>
+      <alternativeNames>Repubblica dello Yemen</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Yemen</alternativeNames>
+      <alternativeNames>Yemen</alternativeNames>
+      <alternativeNames>le Y&#xc3;&#xa9;men</alternativeNames>
+      <alternativeNames>el Yemen</alternativeNames>
+    </regions>
+    <regions name="Eritrea" id="ER" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>l'&#xc3;&#x2030;rythr&#xc3;&#xa9;e</alternativeNames>
+      <alternativeNames>Stato d'Eritrea</alternativeNames>
+      <alternativeNames>Eritrea</alternativeNames>
+    </regions>
+    <regions name="the Republic of San Marino" id="SM" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Saint-Marin</alternativeNames>
+      <alternativeNames>Repubblica di San Marino</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de San Marino</alternativeNames>
+      <alternativeNames>San Marino</alternativeNames>
+      <alternativeNames>Saint-Marin</alternativeNames>
+    </regions>
+    <regions name="the Portuguese Republic" id="PT" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.14 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique portugaise</alternativeNames>
+      <alternativeNames>Repubblica portoghese</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Portuguesa</alternativeNames>
+      <alternativeNames>Portugal</alternativeNames>
+      <alternativeNames>le Portugal</alternativeNames>
+      <alternativeNames>Portogallo</alternativeNames>
+    </regions>
+    <regions name="the Republic of Equatorial Guinea" id="GQ" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Guin&#xc3;&#xa9;e &#xc3;&#xa9;quatoriale</alternativeNames>
+      <alternativeNames>Repubblica di Guinea equatoriale</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Guinea Ecuatorial</alternativeNames>
+      <alternativeNames>Equatorial Guinea</alternativeNames>
+      <alternativeNames>la Guin&#xc3;&#xa9;e &#xc3;&#xa9;quatoriale</alternativeNames>
+      <alternativeNames>Guinea equatoriale</alternativeNames>
+      <alternativeNames>Guinea Ecuatorial</alternativeNames>
+    </regions>
+    <regions name="the Hellenic Republic" id="GR" parentRegions="//@locationModels.0/@regions.5 //@locationModels.0/@regions.17 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique hell&#xc3;&#xa9;nique</alternativeNames>
+      <alternativeNames>Repubblica ellenica</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Hel&#xc3;&#xa9;nica</alternativeNames>
+      <alternativeNames>Greece</alternativeNames>
+      <alternativeNames>la Gr&#xc3;&#xa8;ce</alternativeNames>
+      <alternativeNames>Grecia</alternativeNames>
+    </regions>
+    <regions name="Georgia" id="GE" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>la G&#xc3;&#xa9;orgie</alternativeNames>
+      <alternativeNames>Georgia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Madagascar" id="MG" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Madagascar</alternativeNames>
+      <alternativeNames>Repubblica del Madagascar</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Madagascar</alternativeNames>
+      <alternativeNames>Madagascar</alternativeNames>
+    </regions>
+    <regions name="the Republic of Indonesia" id="ID" parentRegions="//@locationModels.0/@regions.2 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Indon&#xc3;&#xa9;sie</alternativeNames>
+      <alternativeNames>Repubblica di Indonesia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Indonesia</alternativeNames>
+      <alternativeNames>Indonesia</alternativeNames>
+      <alternativeNames>l'Indon&#xc3;&#xa9;sie</alternativeNames>
+    </regions>
+    <regions name="the Principality of Monaco" id="MC" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.19">
+      <alternativeNames>la Principaut&#xc3;&#xa9; de Monaco</alternativeNames>
+      <alternativeNames>Principato di Monaco</alternativeNames>
+      <alternativeNames>el Principado de M&#xc3;&#xb3;naco</alternativeNames>
+      <alternativeNames>Monaco</alternativeNames>
+      <alternativeNames>M&#xc3;&#xb3;naco</alternativeNames>
+    </regions>
+    <regions name="the Islamic Republic of Pakistan" id="PK" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>la R&#xc3;&#xa9;publique islamique du Pakistan</alternativeNames>
+      <alternativeNames>Repubblica islamica del Pakistan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Isl&#xc3;&#xa1;mica del Pakist&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Pakistan</alternativeNames>
+      <alternativeNames>le Pakistan</alternativeNames>
+      <alternativeNames>el Pakist&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the United Kingdom of Great Britain and Northern Ireland" id="GB" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.29">
+      <alternativeNames>le Royaume-Uni de Grande-Bretagne et d'Irlande du Nord</alternativeNames>
+      <alternativeNames>Regno Unito di Gran Bretagna e Irlanda del Nord</alternativeNames>
+      <alternativeNames>el Reino Unido de Gran Breta&#xc3;&#xb1;a e Irlanda del Norte</alternativeNames>
+      <alternativeNames>the United Kingdom of Great Britain and Northern Ireland</alternativeNames>
+      <alternativeNames>Regno Unito</alternativeNames>
+    </regions>
+    <regions name="Mongolia" id="MN" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.11">
+      <alternativeNames>la Mongolie</alternativeNames>
+      <alternativeNames>Mongolia</alternativeNames>
+    </regions>
+    <regions name="the Democratic Republic of Sao Tome and Principe" id="ST" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique d&#xc3;&#xa9;mocratique de Sao Tom&#xc3;&#xa9;-et-Principe</alternativeNames>
+      <alternativeNames>Repubblica democratica di S&#xc3;&#xa3;o Tom&#xc3;&#xa9; e Pr&#xc3;&#xad;ncipe</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Democr&#xc3;&#xa1;tica de Santo Tom&#xc3;&#xa9; y Pr&#xc3;&#xad;ncipe</alternativeNames>
+      <alternativeNames>Sao Tome and Principe</alternativeNames>
+      <alternativeNames>Sao Tom&#xc3;&#xa9;-et-Principe</alternativeNames>
+      <alternativeNames>S&#xc3;&#xa3;o Tom&#xc3;&#xa9; e Pr&#xc3;&#xad;ncipe</alternativeNames>
+      <alternativeNames>Santo Tom&#xc3;&#xa9; y Pr&#xc3;&#xad;ncipe</alternativeNames>
+    </regions>
+    <regions name="Japan" id="JP" parentRegions="//@locationModels.0/@regions.11 //@locationModels.0/@regions.22">
+      <alternativeNames>le Japon</alternativeNames>
+      <alternativeNames>Giappone</alternativeNames>
+      <alternativeNames>el Jap&#xc3;&#xb3;n</alternativeNames>
+      <alternativeNames>Japan</alternativeNames>
+    </regions>
+    <regions name="Montenegro" id="ME" parentRegions="//@locationModels.0/@regions.17 //@locationModels.0/@regions.5 //@locationModels.0/@regions.19">
+      <alternativeNames>le Mont&#xc3;&#xa9;n&#xc3;&#xa9;gro</alternativeNames>
+      <alternativeNames>la Montenegro</alternativeNames>
+      <alternativeNames>Montenegro</alternativeNames>
+      <alternativeNames>Montenegro (la)</alternativeNames>
+    </regions>
+    <regions name="the Republic of Chile" id="CL" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Chili</alternativeNames>
+      <alternativeNames>Repubblica del Cile</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Chile</alternativeNames>
+      <alternativeNames>Chile</alternativeNames>
+      <alternativeNames>le Chili</alternativeNames>
+      <alternativeNames>Cile</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Sudan" id="SD" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.7">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Soudan</alternativeNames>
+      <alternativeNames>Repubblica del Sudan</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Sud&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>the Sudan</alternativeNames>
+      <alternativeNames>le Soudan</alternativeNames>
+      <alternativeNames>Sudan</alternativeNames>
+      <alternativeNames>el Sud&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Swaziland" id="SZ" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.20">
+      <alternativeNames>le Royaume du Swaziland</alternativeNames>
+      <alternativeNames>Regno dello Swaziland</alternativeNames>
+      <alternativeNames>el Reino de Swazilandia</alternativeNames>
+      <alternativeNames>Swaziland</alternativeNames>
+      <alternativeNames>le Swaziland</alternativeNames>
+      <alternativeNames>Swazilandia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Zambia" id="ZM" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Zambie</alternativeNames>
+      <alternativeNames>Repubblica dello Zambia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Zambia</alternativeNames>
+      <alternativeNames>Zambia</alternativeNames>
+      <alternativeNames>la Zambie</alternativeNames>
+    </regions>
+    <regions name="Jamaica" id="JM" parentRegions="//@locationModels.0/@regions.25 //@locationModels.0/@regions.24">
+      <alternativeNames>la Jama&#xc3;&#xaf;que</alternativeNames>
+      <alternativeNames>Giamaica</alternativeNames>
+      <alternativeNames>Jamaica</alternativeNames>
+    </regions>
+    <regions name="the Republic of Albania" id="AL" parentRegions="//@locationModels.0/@regions.17 //@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Albanie</alternativeNames>
+      <alternativeNames>Repubblica d'Albania</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Albania</alternativeNames>
+      <alternativeNames>Albania</alternativeNames>
+      <alternativeNames>l'Albanie</alternativeNames>
+    </regions>
+    <regions name="the Republic of India" id="IN" parentRegions="//@locationModels.0/@regions.0 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique de l'Inde</alternativeNames>
+      <alternativeNames>Repubblica dell'India</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de la India</alternativeNames>
+      <alternativeNames>India</alternativeNames>
+      <alternativeNames>l'Inde</alternativeNames>
+      <alternativeNames>la India</alternativeNames>
+    </regions>
+    <regions name="the Cook Islands" id="CK" parentRegions="//@locationModels.0/@regions.27 //@locationModels.0/@regions.31">
+      <alternativeNames>les &#xc3;&#x17d;les Cook</alternativeNames>
+      <alternativeNames>Isole Cook</alternativeNames>
+      <alternativeNames>las Islas Cook</alternativeNames>
+      <alternativeNames>the Cook Islands</alternativeNames>
+    </regions>
+    <regions name="Australia" id="AU" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.21">
+      <alternativeNames>l'Australie</alternativeNames>
+      <alternativeNames>Australia</alternativeNames>
+    </regions>
+    <regions name="Tuvalu" id="TV" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.27">
+      <alternativeNames>Tuvalu</alternativeNames>
+    </regions>
+    <regions name="the Federal Democratic Republic of Ethiopia" id="ET" parentRegions="//@locationModels.0/@regions.30 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique f&#xc3;&#xa9;d&#xc3;&#xa9;rale d&#xc3;&#xa9;mocratique d'&#xc3;&#x2030;thiopie</alternativeNames>
+      <alternativeNames>Repubblica federale democratica di Etiopia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Democr&#xc3;&#xa1;tica Federal de Etiop&#xc3;&#xad;a</alternativeNames>
+      <alternativeNames>Ethiopia</alternativeNames>
+      <alternativeNames>l'&#xc3;&#x2030;thiopie</alternativeNames>
+      <alternativeNames>Etiopia</alternativeNames>
+      <alternativeNames>Etiop&#xc3;&#xad;a</alternativeNames>
+    </regions>
+    <regions name="the Republic of Suriname" id="SR" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.26">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Suriname</alternativeNames>
+      <alternativeNames>Repubblica di Suriname</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Suriname</alternativeNames>
+      <alternativeNames>Suriname</alternativeNames>
+      <alternativeNames>le Suriname</alternativeNames>
+    </regions>
+    <regions name="the Principality of Andorra" id="AD" parentRegions="//@locationModels.0/@regions.14 //@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la Principaut&#xc3;&#xa9; d'Andorre</alternativeNames>
+      <alternativeNames>Principato d'Andorra</alternativeNames>
+      <alternativeNames>el Principado de Andorra</alternativeNames>
+      <alternativeNames>Andorra</alternativeNames>
+      <alternativeNames>l'Andorre</alternativeNames>
+    </regions>
+    <regions name="the Democratic Republic of the Congo" id="CD" parentRegions="//@locationModels.0/@regions.9 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique d&#xc3;&#xa9;mocratique du Congo</alternativeNames>
+      <alternativeNames>Repubblica democratica del Congo</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Democr&#xc3;&#xa1;tica del Congo</alternativeNames>
+      <alternativeNames>the Democratic Republic of the Congo</alternativeNames>
+    </regions>
+    <regions name="the Republic of Serbia" id="RS" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.17 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Serbie</alternativeNames>
+      <alternativeNames>la Repubblica di Serbia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Serbia</alternativeNames>
+      <alternativeNames>Serbia</alternativeNames>
+      <alternativeNames>la Serbie</alternativeNames>
+      <alternativeNames>la Serbia</alternativeNames>
+    </regions>
+    <regions name="the Somali Republic" id="SO" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique somalienne</alternativeNames>
+      <alternativeNames>Repubblica somala</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Somal&#xc3;&#xad;</alternativeNames>
+      <alternativeNames>Somalia</alternativeNames>
+      <alternativeNames>la Somalie</alternativeNames>
+    </regions>
+    <regions name="the Republic of Slovenia" id="SI" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.5">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Slov&#xc3;&#xa9;nie</alternativeNames>
+      <alternativeNames>Repubblica di Slovenia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Eslovenia</alternativeNames>
+      <alternativeNames>Slovenia</alternativeNames>
+      <alternativeNames>la Slov&#xc3;&#xa9;nie</alternativeNames>
+      <alternativeNames>Eslovenia</alternativeNames>
+    </regions>
+    <regions name="the Federal Republic of Nigeria" id="NG" parentRegions="//@locationModels.0/@regions.16 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique f&#xc3;&#xa9;d&#xc3;&#xa9;rale du Nig&#xc3;&#xa9;ria</alternativeNames>
+      <alternativeNames>Repubblica federale della Nigeria</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Federal de Nigeria</alternativeNames>
+      <alternativeNames>Nigeria</alternativeNames>
+      <alternativeNames>le Nig&#xc3;&#xa9;ria</alternativeNames>
+    </regions>
+    <regions name="the Islamic Republic of Iran" id="IR" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>la R&#xc3;&#xa9;publique islamique d'Iran</alternativeNames>
+      <alternativeNames>Repubblica islamica dell'Iran</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Isl&#xc3;&#xa1;mica del Ir&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Iran (Islamic Republic of)</alternativeNames>
+      <alternativeNames>Iran (R&#xc3;&#xa9;publique islamique d')</alternativeNames>
+      <alternativeNames>Iran</alternativeNames>
+      <alternativeNames>Ir&#xc3;&#xa1;n (Rep&#xc3;&#xba;blica Isl&#xc3;&#xa1;mica del)</alternativeNames>
+    </regions>
+    <regions name="the Republic of Benin" id="BJ" parentRegions="//@locationModels.0/@regions.16 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique du B&#xc3;&#xa9;nin</alternativeNames>
+      <alternativeNames>Repubblica del Benin</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Benin</alternativeNames>
+      <alternativeNames>Benin</alternativeNames>
+      <alternativeNames>le B&#xc3;&#xa9;nin</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Bahrain" id="BH" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>le Royaume de Bahre&#xc3;&#xaf;n</alternativeNames>
+      <alternativeNames>Regno del Bahrein</alternativeNames>
+      <alternativeNames>el Reino de Bahrein</alternativeNames>
+      <alternativeNames>Bahrain</alternativeNames>
+      <alternativeNames>Bahre&#xc3;&#xaf;n</alternativeNames>
+      <alternativeNames>Bahrein</alternativeNames>
+    </regions>
+    <regions name="the Republic of Panama" id="PA" parentRegions="//@locationModels.0/@regions.15 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Panama</alternativeNames>
+      <alternativeNames>Repubblica del Panama</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Panam&#xc3;&#xa1;</alternativeNames>
+      <alternativeNames>Panama</alternativeNames>
+      <alternativeNames>le Panama</alternativeNames>
+      <alternativeNames>Panam&#xc3;&#xa1;</alternativeNames>
+    </regions>
+    <regions name="the Republic of Sierra Leone" id="SL" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Sierra Leone</alternativeNames>
+      <alternativeNames>Repubblica di Sierra Leone</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Sierra Leona</alternativeNames>
+      <alternativeNames>Sierra Leone</alternativeNames>
+      <alternativeNames>la Sierra Leone</alternativeNames>
+      <alternativeNames>Sierra Leona</alternativeNames>
+    </regions>
+    <regions name="the Republic of Honduras" id="HN" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.15">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Honduras</alternativeNames>
+      <alternativeNames>Repubblica di Honduras</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Honduras</alternativeNames>
+      <alternativeNames>Honduras</alternativeNames>
+      <alternativeNames>le Honduras</alternativeNames>
+    </regions>
+    <regions name="the Lebanese Republic" id="LB" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique libanaise</alternativeNames>
+      <alternativeNames>Repubblica libanese</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica libanesa</alternativeNames>
+      <alternativeNames>Lebanon</alternativeNames>
+      <alternativeNames>le Liban</alternativeNames>
+      <alternativeNames>Libano</alternativeNames>
+      <alternativeNames>el L&#xc3;&#xad;bano</alternativeNames>
+    </regions>
+    <regions name="the Republic of the Gambia" id="GM" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Gambie</alternativeNames>
+      <alternativeNames>Repubblica della Gambia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Gambia</alternativeNames>
+      <alternativeNames>the Gambia</alternativeNames>
+      <alternativeNames>la Gambie</alternativeNames>
+      <alternativeNames>Gambia</alternativeNames>
+    </regions>
+    <regions name="the Union of the Comoros" id="KM" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>l'Union des Comores</alternativeNames>
+      <alternativeNames>Unione delle Comore</alternativeNames>
+      <alternativeNames>la Uni&#xc3;&#xb3;n de las Comoras</alternativeNames>
+      <alternativeNames>the Comoros</alternativeNames>
+      <alternativeNames>les Comores</alternativeNames>
+      <alternativeNames>Isole Comore</alternativeNames>
+      <alternativeNames>las Comoras</alternativeNames>
+    </regions>
+    <regions name="the Hashemite Kingdom of Jordan" id="JO" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>le Royaume hach&#xc3;&#xa9;mite de Jordanie</alternativeNames>
+      <alternativeNames>Regno hascemita di Giordania</alternativeNames>
+      <alternativeNames>el Reino Hachemita de Jordania</alternativeNames>
+      <alternativeNames>Jordan</alternativeNames>
+      <alternativeNames>la Jordanie</alternativeNames>
+      <alternativeNames>Giordania</alternativeNames>
+      <alternativeNames>Jordania</alternativeNames>
+    </regions>
+    <regions name="the Republic of Latvia" id="LV" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.29 //@locationModels.0/@regions.3">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Lettonie</alternativeNames>
+      <alternativeNames>Repubblica di Lettonia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Letonia</alternativeNames>
+      <alternativeNames>Latvia</alternativeNames>
+      <alternativeNames>la Lettonie</alternativeNames>
+      <alternativeNames>Lettonia</alternativeNames>
+      <alternativeNames>Letonia</alternativeNames>
+    </regions>
+    <regions name="the Republic of Croatia" id="HR" parentRegions="//@locationModels.0/@regions.5 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique de Croatie</alternativeNames>
+      <alternativeNames>Repubblica di Croazia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Croacia</alternativeNames>
+      <alternativeNames>Croatia</alternativeNames>
+      <alternativeNames>la Croatie</alternativeNames>
+      <alternativeNames>Croazia</alternativeNames>
+      <alternativeNames>Croacia</alternativeNames>
+    </regions>
+    <regions name="the Arab Republic of Egypt" id="EG" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.7">
+      <alternativeNames>la R&#xc3;&#xa9;publique arabe d'&#xc3;&#x2030;gypte</alternativeNames>
+      <alternativeNames>Repubblica araba d'Egitto</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica &#xc3;&#xfffd;rabe de Egipto</alternativeNames>
+      <alternativeNames>Egypt</alternativeNames>
+      <alternativeNames>l'&#xc3;&#x2030;gypte</alternativeNames>
+      <alternativeNames>Egitto</alternativeNames>
+      <alternativeNames>Egipto</alternativeNames>
+    </regions>
+    <regions name="the Republic of Paraguay" id="PY" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Paraguay</alternativeNames>
+      <alternativeNames>Repubblica del Paraguay</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Paraguay</alternativeNames>
+      <alternativeNames>Paraguay</alternativeNames>
+      <alternativeNames>le Paraguay</alternativeNames>
+      <alternativeNames>el Paraguay</alternativeNames>
+    </regions>
+    <regions name="New Zealand" id="NZ" parentRegions="//@locationModels.0/@regions.31 //@locationModels.0/@regions.21">
+      <alternativeNames>la Nouvelle-Z&#xc3;&#xa9;lande</alternativeNames>
+      <alternativeNames>Nuova Zelanda</alternativeNames>
+      <alternativeNames>Nueva Zelandia</alternativeNames>
+      <alternativeNames>New Zealand</alternativeNames>
+    </regions>
+    <regions name="the Federal Republic of Germany" id="DE" parentRegions="//@locationModels.0/@regions.18 //@locationModels.0/@regions.19 //@locationModels.0/@regions.3">
+      <alternativeNames>la R&#xc3;&#xa9;publique f&#xc3;&#xa9;d&#xc3;&#xa9;rale d'Allemagne</alternativeNames>
+      <alternativeNames>Repubblica federale di Germania</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Federal de Alemania</alternativeNames>
+      <alternativeNames>Germany</alternativeNames>
+      <alternativeNames>l'Allemagne</alternativeNames>
+      <alternativeNames>Germania</alternativeNames>
+      <alternativeNames>Alemania</alternativeNames>
+    </regions>
+    <regions name="the Togolese Republic" id="TG" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.16">
+      <alternativeNames>la R&#xc3;&#xa9;publique togolaise</alternativeNames>
+      <alternativeNames>Repubblica del Togo</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Togolesa</alternativeNames>
+      <alternativeNames>Togo</alternativeNames>
+      <alternativeNames>le Togo</alternativeNames>
+      <alternativeNames>el Togo</alternativeNames>
+    </regions>
+    <regions name="the United Mexican States" id="MX" parentRegions="//@locationModels.0/@regions.15 //@locationModels.0/@regions.24">
+      <alternativeNames>les &#xc3;&#x2030;tats-Unis du Mexique</alternativeNames>
+      <alternativeNames>Stati Uniti messicani</alternativeNames>
+      <alternativeNames>los Estados Unidos Mexicanos</alternativeNames>
+      <alternativeNames>Mexico</alternativeNames>
+      <alternativeNames>le Mexique</alternativeNames>
+      <alternativeNames>Messico</alternativeNames>
+      <alternativeNames>M&#xc3;&#xa9;xico</alternativeNames>
+    </regions>
+    <regions name="the State of Qatar" id="QA" parentRegions="//@locationModels.0/@regions.32 //@locationModels.0/@regions.22">
+      <alternativeNames>l'&#xc3;&#x2030;tat du Qatar</alternativeNames>
+      <alternativeNames>Stato del Qatar</alternativeNames>
+      <alternativeNames>el Estado de Qatar</alternativeNames>
+      <alternativeNames>Qatar</alternativeNames>
+      <alternativeNames>le Qatar</alternativeNames>
+    </regions>
+    <regions name="the United Arab Emirates" id="AE" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>les &#xc3;&#x2030;mirats arabes unis</alternativeNames>
+      <alternativeNames>Emirati arabi uniti</alternativeNames>
+      <alternativeNames>los Emiratos &#xc3;&#xfffd;rabes Unidos</alternativeNames>
+      <alternativeNames>the United Arab Emirates</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Sweden" id="SE" parentRegions="//@locationModels.0/@regions.1 //@locationModels.0/@regions.3 //@locationModels.0/@regions.29 //@locationModels.0/@regions.19 //@locationModels.0/@regions.4">
+      <alternativeNames>le Royaume de Su&#xc3;&#xa8;de</alternativeNames>
+      <alternativeNames>Regno di Svezia</alternativeNames>
+      <alternativeNames>el Reino de Suecia</alternativeNames>
+      <alternativeNames>Sweden</alternativeNames>
+      <alternativeNames>la Su&#xc3;&#xa8;de</alternativeNames>
+      <alternativeNames>Svezia</alternativeNames>
+      <alternativeNames>Suecia</alternativeNames>
+    </regions>
+    <regions name="the People's Republic of China" id="CN" parentRegions="//@locationModels.0/@regions.11 //@locationModels.0/@regions.22">
+      <alternativeNames>la R&#xc3;&#xa9;publique populaire de Chine</alternativeNames>
+      <alternativeNames>Repubblica popolare cinese</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Popular China</alternativeNames>
+      <alternativeNames>China</alternativeNames>
+      <alternativeNames>la Chine</alternativeNames>
+      <alternativeNames>Cina</alternativeNames>
+    </regions>
+    <regions name="the Republic of Kenya" id="KE" parentRegions="//@locationModels.0/@regions.10 //@locationModels.0/@regions.30">
+      <alternativeNames>la R&#xc3;&#xa9;publique du Kenya</alternativeNames>
+      <alternativeNames>Repubblica del Kenya</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Kenya</alternativeNames>
+      <alternativeNames>Kenya</alternativeNames>
+      <alternativeNames>le Kenya</alternativeNames>
+    </regions>
+    <regions name="the Republic of Belarus" id="BY" parentRegions="//@locationModels.0/@regions.12 //@locationModels.0/@regions.19">
+      <alternativeNames>la R&#xc3;&#xa9;publique du B&#xc3;&#xa9;larus</alternativeNames>
+      <alternativeNames>Repubblica di Bielorussia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Belar&#xc3;&#xba;s</alternativeNames>
+      <alternativeNames>Belarus</alternativeNames>
+      <alternativeNames>le B&#xc3;&#xa9;larus</alternativeNames>
+      <alternativeNames>Bielorussia</alternativeNames>
+      <alternativeNames>Belar&#xc3;&#xba;s</alternativeNames>
+    </regions>
+    <regions name="the Republic of Azerbaijan" id="AZ" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Azerba&#xc3;&#xaf;djan</alternativeNames>
+      <alternativeNames>Repubblica dell'Azerbaigian</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Azerbaiy&#xc3;&#xa1;n</alternativeNames>
+      <alternativeNames>Azerbaijan</alternativeNames>
+      <alternativeNames>l'Azerba&#xc3;&#xaf;djan</alternativeNames>
+      <alternativeNames>Azerbaigian</alternativeNames>
+      <alternativeNames>Azerbaiy&#xc3;&#xa1;n</alternativeNames>
+    </regions>
+    <regions name="the Republic of Ecuador" id="EC" parentRegions="//@locationModels.0/@regions.24 //@locationModels.0/@regions.26">
+      <alternativeNames>la R&#xc3;&#xa9;publique de l'&#xc3;&#x2030;quateur</alternativeNames>
+      <alternativeNames>Repubblica dell'Ecuador</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica del Ecuador</alternativeNames>
+      <alternativeNames>Ecuador</alternativeNames>
+      <alternativeNames>l'&#xc3;&#x2030;quateur</alternativeNames>
+      <alternativeNames>el Ecuador</alternativeNames>
+    </regions>
+    <regions name="the Republic of Armenia" id="AM" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.32">
+      <alternativeNames>la R&#xc3;&#xa9;publique d'Arm&#xc3;&#xa9;nie</alternativeNames>
+      <alternativeNames>Repubblica d'Armenia</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica de Armenia</alternativeNames>
+      <alternativeNames>Armenia</alternativeNames>
+      <alternativeNames>l'Arm&#xc3;&#xa9;nie</alternativeNames>
+    </regions>
+    <regions name="the Democratic Socialist Republic of Sri Lanka" id="LK" parentRegions="//@locationModels.0/@regions.22 //@locationModels.0/@regions.0">
+      <alternativeNames>la R&#xc3;&#xa9;publique socialiste d&#xc3;&#xa9;mocratique de Sri Lanka</alternativeNames>
+      <alternativeNames>Repubblica democratica socialista di Sri Lanka</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Socialista Democr&#xc3;&#xa1;tica de Sri Lanka</alternativeNames>
+      <alternativeNames>Sri Lanka</alternativeNames>
+      <alternativeNames>Sri Lanka (f&#xc3;&#xa9;m.)</alternativeNames>
+    </regions>
+    <regions name="the Kingdom of Spain" id="ES" parentRegions="//@locationModels.0/@regions.19 //@locationModels.0/@regions.5 //@locationModels.0/@regions.14">
+      <alternativeNames>le Royaume d'Espagne</alternativeNames>
+      <alternativeNames>Regno di Spagna</alternativeNames>
+      <alternativeNames>el Reino de Espa&#xc3;&#xb1;a</alternativeNames>
+      <alternativeNames>Spain</alternativeNames>
+      <alternativeNames>l'Espagne</alternativeNames>
+      <alternativeNames>Spagna</alternativeNames>
+      <alternativeNames>Espa&#xc3;&#xb1;a</alternativeNames>
+    </regions>
+    <regions name="the Islamic Republic of Mauritania" id="MR" parentRegions="//@locationModels.0/@regions.16 //@locationModels.0/@regions.10">
+      <alternativeNames>la R&#xc3;&#xa9;publique islamique de Mauritanie</alternativeNames>
+      <alternativeNames>Repubblica islamica di Mauritania</alternativeNames>
+      <alternativeNames>la Rep&#xc3;&#xba;blica Isl&#xc3;&#xa1;mica de Mauritania</alternativeNames>
+      <alternativeNames>Mauritania</alternativeNames>
+      <alternativeNames>la Mauritanie</alternativeNames>
+    </regions>
+    <regions name="the Plurinational State of Bolivia" id="BO" parentRegions="//@locationModels.0/@regions.26 //@locationModels.0/@regions.24">
+      <alternativeNames>l'&#xc3;&#x2030;tat plurinational de Bolivie</alternativeNames>
+      <alternativeNames>Stato plurinazionale della Bolivia</alternativeNames>
+      <alternativeNames>el Estado Plurinacional de Bolivia</alternativeNames>
+      <alternativeNames>Bolivia (Plurinational State of)</alternativeNames>
+      <alternativeNames>Bolivie (&#xc3;&#x2030;tat plurinational de)</alternativeNames>
+      <alternativeNames>Bolivia (Stato plurinazionale della)</alternativeNames>
+      <alternativeNames>Bolivia (Estado Plurinacional de)</alternativeNames>
+    </regions>
+  </locationModels>
+</core:CamelModel>

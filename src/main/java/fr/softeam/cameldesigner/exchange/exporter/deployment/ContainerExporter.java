@@ -24,4 +24,14 @@ public class ContainerExporter<T extends Container> extends CamelComponentExport
         super.setProperties(elt);
     }
 
+    @objid ("947b1d9a-9fea-45ee-8870-c3c9168932d9")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if ((context instanceof camel.deployment.DeploymentTypeModel) && (elt instanceof camel.deployment.Container)) {
+            ((camel.deployment.DeploymentTypeModel) context).getContainers().add((camel.deployment.Container) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
 }

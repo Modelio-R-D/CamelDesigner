@@ -23,12 +23,49 @@ public class BuildConfigurationExporter<T extends BuildConfiguration> extends Fe
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.deployment.BuildConfiguration) {
+            camel.deployment.BuildConfiguration bc = (camel.deployment.BuildConfiguration) elt;
+            setArtifactId(bc);
+            setBuildFramework(bc);
+            setSourceCodeURL(bc);
+            setInclude(bc);
+            setExclude(bc);
+        }
     }
 
     @objid ("7d00c646-95fb-4b15-a452-949c1cb40b30")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.ServerlessConfiguration) && (elt instanceof camel.deployment.BuildConfiguration)) {
+            ((camel.deployment.ServerlessConfiguration) context).setBuildConfiguration((camel.deployment.BuildConfiguration) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("14dec351-b810-4539-bdfb-4d2a79374c34")
+    private void setExclude(camel.deployment.BuildConfiguration bc) {
+        bc.setExclude(this._element.getExclude());
+    }
+
+    @objid ("febfaa0b-3a23-4203-b7d8-fa3f364418aa")
+    private void setInclude(camel.deployment.BuildConfiguration bc) {
+        bc.setInclude(this._element.getInclude());
+    }
+
+    @objid ("ed36892e-a130-44b0-899b-38b28c0f8c7c")
+    private void setSourceCodeURL(camel.deployment.BuildConfiguration bc) {
+        bc.setSourceCodeURL(this._element.getSourceCodeURL());
+    }
+
+    @objid ("1aa54531-3352-44c2-9008-525e29c7deb3")
+    private void setBuildFramework(camel.deployment.BuildConfiguration bc) {
+        bc.setBuildFramework(this._element.getBuildFramework());
+    }
+
+    @objid ("6bf6d9e2-21ea-46c7-9ec4-f984f536761b")
+    private void setArtifactId(camel.deployment.BuildConfiguration bc) {
+        bc.setArtifactId(this._element.getArtifactId());
     }
 
 }

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/18/22 3:46 PM by Modelio Studio.
+ * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -39,16 +39,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("61cc6fd1-460e-4076-9418-4a79ca600092")
 public class RoleAssignment extends FeatureClass {
-    @objid ("a7120415-c983-41b2-b164-b12031553b35")
+    @objid ("77f1f316-3500-45dc-8ba0-fb09bc24520f")
     public static final String STEREOTYPE_NAME = "RoleAssignment";
 
-    @objid ("933ef328-a6f8-4a76-9d81-340ebfd347ba")
+    @objid ("6040fddd-d421-47f8-8d53-98879570f846")
     public static final String ASSIGNMENTTIME_TAGTYPE = "assignmentTime";
 
-    @objid ("3ba4f4d4-98e3-40a0-a893-ac2177df2745")
+    @objid ("14ca135e-3775-4245-bf61-2e80c5c98a06")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("96e3432a-442e-4269-99fd-550c05affb86")
+    @objid ("4642f680-9102-4b59-a729-6e9cde4fc218")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
     /**
@@ -59,7 +59,7 @@ public class RoleAssignment extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("353a2ada-7d2a-4149-9e8d-6f021cda9b56")
+    @objid ("e59d9be1-ebd2-4361-ae27-a5412ecaa03c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RoleAssignment.STEREOTYPE_NAME));
     }
@@ -69,7 +69,7 @@ public class RoleAssignment extends FeatureClass {
      * 
      * @return a {@link RoleAssignment} proxy on the created {@link Class}.
      */
-    @objid ("9623f891-0e68-4fda-bc32-4431f2e90a25")
+    @objid ("b54dcd57-4556-4a75-8006-4cc643a40fe6")
     public static RoleAssignment create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RoleAssignment.STEREOTYPE_NAME);
@@ -83,7 +83,7 @@ public class RoleAssignment extends FeatureClass {
      * @param obj a Class
      * @return a {@link RoleAssignment} proxy or <i>null</i>.
      */
-    @objid ("5438037d-01cb-4f4f-9127-653d2441bdd9")
+    @objid ("bc96222c-77f1-4ad2-b91b-184b7a7f695f")
     public static RoleAssignment instantiate(final Class obj) {
         return RoleAssignment.canInstantiate(obj) ? new RoleAssignment(obj) : null;
     }
@@ -96,7 +96,7 @@ public class RoleAssignment extends FeatureClass {
      * @return a {@link RoleAssignment} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3d03d43c-33d5-419f-9d00-ddd1ccbebf51")
+    @objid ("103565c4-604d-47f8-9dd1-62ba9fb50c9f")
     public static RoleAssignment safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RoleAssignment.canInstantiate(obj))
         	return new RoleAssignment(obj);
@@ -104,7 +104,7 @@ public class RoleAssignment extends FeatureClass {
         	throw new IllegalArgumentException("RoleAssignment: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8819abc3-0834-4ed6-b541-2910dab330fa")
+    @objid ("e75c36f5-4b02-4526-b9d2-ee5a34cc18aa")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -125,7 +125,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6f5933bd-18c4-4b37-98cd-fcb12007539e")
+    @objid ("d22e31d3-6a82-49b4-9690-eea65cb1a74e")
     public String getAssignmentTime() {
         return this.elt.getTagValue(RoleAssignment.MdaTypes.ASSIGNMENTTIME_TAGTYPE_ELT);
     }
@@ -134,7 +134,7 @@ public class RoleAssignment extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("c902bf9e-1efc-479e-8313-ddad95caefdc")
+    @objid ("adef8f35-653a-461f-abe3-854f5bdce68a")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -145,7 +145,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("25f996a4-0895-44ad-8df4-948086c77d58")
+    @objid ("96592c74-5239-4f7e-afa5-16aa9b89f37a")
     public String getEndTime() {
         return this.elt.getTagValue(RoleAssignment.MdaTypes.ENDTIME_TAGTYPE_ELT);
     }
@@ -156,7 +156,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("3564c725-6408-4093-abdf-a3e206614ce1")
+    @objid ("f22524c3-ae05-4e86-8360-3851ac084e04")
     public Role getRole() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RoleAssignment.MdaTypes.MDAASSOCDEP)
@@ -173,7 +173,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7f422da3-25b8-4d41-a715-e153ecea321f")
+    @objid ("8383f842-776f-470a-96f3-77f019e8a148")
     public String getStartTime() {
         return this.elt.getTagValue(RoleAssignment.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
@@ -184,7 +184,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("a965a79a-d964-4174-8a90-70cbdff12359")
+    @objid ("86febeb8-013b-489b-b94d-e3dc5fb534fb")
     public User getUser() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RoleAssignment.MdaTypes.MDAASSOCDEP)
@@ -202,7 +202,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("08a14fb4-e118-4910-89f9-4490d3bddbfa")
+    @objid ("7859319f-f602-44f4-8796-0d571a5ddb0b")
     public UserGroup getUserGroup() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RoleAssignment.MdaTypes.MDAASSOCDEP)
@@ -214,7 +214,7 @@ public class RoleAssignment extends FeatureClass {
         return null;
     }
 
-    @objid ("15a536ca-5eef-4692-8978-cbe876fc8d7b")
+    @objid ("1540921a-2234-4a6e-82a4-7238406c2637")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -225,7 +225,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("18fbc5c9-b338-445b-8311-4965efe50b2b")
+    @objid ("0de1c8af-182d-48e9-8fe2-818cc9f38a00")
     public void setAssignmentTime(final String value) {
         this.elt.putTagValue(RoleAssignment.MdaTypes.ASSIGNMENTTIME_TAGTYPE_ELT, value);
     }
@@ -235,7 +235,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("eb49b24e-4e43-4f7c-92e9-d69cbd66f022")
+    @objid ("7527085a-bb82-4272-a6be-45f744fc6b38")
     public void setEndTime(final String value) {
         this.elt.putTagValue(RoleAssignment.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
     }
@@ -246,7 +246,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("e2bbc082-f015-482b-9d8d-2432e3c23a90")
+    @objid ("16872e2f-d5b8-4ced-b363-cf5e0ee78039")
     public void setRole(final Role obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -271,7 +271,7 @@ public class RoleAssignment extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0420a27d-95cf-4592-b1fa-f5a0293fe650")
+    @objid ("5d9e34ce-ffa9-449a-94b7-ec5df5d8471f")
     public void setStartTime(final String value) {
         this.elt.putTagValue(RoleAssignment.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -282,7 +282,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("6163b321-6273-4def-9d02-47c0f6261803")
+    @objid ("2920e956-4be1-444c-b4ee-ea42af0d4d1a")
     public void setUser(final User obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -308,7 +308,7 @@ public class RoleAssignment extends FeatureClass {
      * null
      * 
      */
-    @objid ("43ebde89-b8dc-4e81-b055-357ca8d1ff2a")
+    @objid ("45bdfccc-08aa-4c1d-beb8-7656ed8cdcd4")
     public void setUserGroup(final UserGroup obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -336,32 +336,32 @@ public class RoleAssignment extends FeatureClass {
         return result;
     }
 
-    @objid ("93326191-51ef-46af-b3dd-c79d89dd2ae4")
+    @objid ("b27cb89c-593b-4f44-87af-869f27afc94a")
     protected RoleAssignment(final Class elt) {
         super(elt);
     }
 
     @objid ("25797b38-26a8-436f-90d6-470cd2d7d27e")
     public static final class MdaTypes {
-        @objid ("1ac807ac-22f1-4ec3-9820-3c4b574b7e50")
+        @objid ("f9be547e-cf44-4959-a9ca-a7ae08cc239b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e7e6a7cb-a096-46b7-aeda-04d9ddfeda60")
+        @objid ("a389eaba-1109-432b-99e6-1049acbe2657")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("4d7a995a-1535-4c92-a274-3c8f70d9ff56")
+        @objid ("e5ecd267-44fd-402f-bd07-7fd63a6401df")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("d65509fc-2ba1-43a9-a1a2-61d9b1566e7c")
+        @objid ("8e2d49c3-b6b4-4000-a13c-de4ec8d14524")
         public static TagType ASSIGNMENTTIME_TAGTYPE_ELT;
 
-        @objid ("f87bd487-dd93-4580-9347-3bce1fbffb1e")
+        @objid ("c588ea50-a926-4c43-9b8b-0c6ec08f92cd")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9483b2e8-b19a-4f1b-b799-b934783edc01")
+        @objid ("61781b60-704c-4539-8c3c-1343ea2700f1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("077b7bf1-7c6b-499d-b426-9bdf7508df00")
+        @objid ("45ede3dc-27ff-461c-aadc-eb4a56755712")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "25d04405-c94a-44a0-848d-8563ca51ba23");
             STARTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "18d4111c-a2ed-4810-84d3-509d97db6890");

@@ -23,12 +23,39 @@ public class MmsPropertyExporter<T extends MmsProperty> extends NamedElementExpo
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.mms.MmsProperty) {
+            camel.mms.MmsProperty mp = (camel.mms.MmsProperty) elt;
+            setPropertyType(mp);
+            setRange(mp);
+            setRangeURI(mp);
+        }
     }
 
     @objid ("3e151642-6338-41b5-97e8-f8204d9cc7ba")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.mms.MmsConcept) && (elt instanceof camel.mms.MmsProperty)) {
+            ((camel.mms.MmsConcept) context).getProperty().add((camel.mms.MmsProperty) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("094a1926-24d0-4356-8761-64192f4d66e4")
+    private void setRangeURI(camel.mms.MmsProperty mp) {
+        mp.setRangeUri(this._element.getRangeUri());
+    }
+
+    @objid ("ade8ef49-7298-453c-bd3a-92a0513e7dce")
+    private void setRange(camel.mms.MmsProperty mp) {
+        CDOObject mc =  this._process.getElement(this._element.getRange());
+        if ((mc != null) &&  (mc instanceof camel.mms.MmsConcept))
+            mp.setRange((camel.mms.MmsConcept) mc);
+    }
+
+    @objid ("9472781e-7282-459c-a161-91d93db385a7")
+    private void setPropertyType(camel.mms.MmsProperty mp) {
+        mp.setPropertyType(this._element.getMmsPropertyType());
     }
 
 }

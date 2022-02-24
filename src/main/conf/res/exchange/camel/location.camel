@@ -1,0 +1,1162 @@
+camel model CAMEL_Locations {
+  location model Locations {
+    region southern_Asia {
+      name "southern Asia"
+      alternative names [ "Asie méridionale; Asie du Sud" , "Asia meridionale" , "Asia meridional" , "southern Asia" ]
+      parents [ Locations.Asia ]
+    }
+    region Scandinavia {
+      name Scandinavia
+      alternative names [ Scandinavie , Scandinavia , Escandinavia ]
+      parents [ Locations.Nordic_Region , Locations.Europe , Locations.northern_Europe ]
+    }
+    region south_eastern_Asia {
+      name "south-eastern Asia"
+      alternative names [ "Asia du sud-est" , "Asia sud orientale" , "Asia sudoriental" , "south-eastern Asia" ]
+      parents [ Locations.Asia ]
+    }
+    region Baltic_Region {
+      name "Baltic Region"
+      alternative names [ "Région de la Baltique" , "Regione Baltico" , "Región del Báltico" , Baltic , Baltique , Baltico , "Báltico" ]
+      parents [ Locations.Europe ]
+    }
+    region Nordic_Region {
+      name "Nordic Region"
+      alternative names [ "Région Nordique" , "Regione Nordica" , "Región Nórdica" , Nordic , Nordique , Nordica , "Nórdica" ]
+      parents [ Locations.Europe , Locations.northern_Europe ]
+    }
+    region southern_Europe {
+      name "southern Europe"
+      alternative names [ "Europe méridionale" , "Europa meridionale" , "Europa meridional" , "southern Europe" ]
+      parents [ Locations.Europe ]
+    }
+    region Melanesia {
+      name Melanesia
+      alternative names [ "Mélanésie" , Melanesia ]
+      parents [ Locations.Oceania ]
+    }
+    region northern_Africa {
+      name "northern Africa"
+      alternative names [ "Afrique septentrionale" , "Africa del Nord" , "África septentrional" , "northern Africa" ]
+      parents [ Locations.Africa ]
+    }
+    region Micronesia {
+      name Micronesia
+      alternative names [ "Micronésie" , Micronesia ]
+      parents [ Locations.Oceania ]
+    }
+    region middle_Africa {
+      name "middle Africa"
+      alternative names [ "Afrique centrale" , "Africa centrale" , "Africa Central" , "middle Africa" ]
+      parents [ Locations.Africa ]
+    }
+    region Africa {
+      name Africa
+      alternative names [ Afrique , Africa , "África" ]
+    }
+    region eastern_Asia {
+      name "eastern Asia"
+      alternative names [ "Asie orientale" , "Asia orientale" , "Asia oriental" , "eastern Asia" ]
+      parents [ Locations.Asia ]
+    }
+    region eastern_Europe {
+      name "eastern Europe"
+      alternative names [ "Europe de l\'Est; Europe orientale" , "Europa orientale" , "Europa oriental" , "eastern Europe" ]
+      parents [ Locations.Europe ]
+    }
+    region Benelux {
+      name Benelux
+      alternative names [ "Union Benelux" , Benelux ]
+      parents [ Locations.western_Europe , Locations.Europe ]
+    }
+    region Iberian_Peninsula {
+      name "Iberian Peninsula"
+      alternative names [ "Péninsule Ibérique" , "Penisola Iberica" , "Península Ibérica" , Iberia , "Ibérie" ]
+      parents [ Locations.southern_Europe , Locations.Europe ]
+    }
+    region central_America {
+      name "central America"
+      alternative names [ "Amérique centrale" , "America centrale" , "América central" , "central America" ]
+      parents [ Locations.Americas ]
+    }
+    region western_Africa {
+      name "western Africa"
+      alternative names [ "Afrique occidentale" , "Africa occidentale" , "África occidental" , "western Africa" ]
+      parents [ Locations.Africa ]
+    }
+    region Balkan_Peninsula {
+      name "Balkan Peninsula"
+      alternative names [ "Péninsule Balkanique" , "Penisola Balcanica" , "Península de los Balcanes" , Balkan , Balkanique , Balcanico , "Balcánico" ]
+      parents [ Locations.Europe ]
+    }
+    region western_Europe {
+      name "western Europe"
+      alternative names [ "Europe occidentale" , "Europa occidentale" , "Europa occidental" , "western Europe" ]
+      parents [ Locations.Europe ]
+    }
+    region Europe {
+      name Europe
+      alternative names [ Europe , Europa ]
+    }
+    region southern_Africa {
+      name "southern Africa"
+      alternative names [ "Afrique australe" , "Africa del Sud" , "África austral" , "southern Africa" ]
+      parents [ Locations.Africa ]
+    }
+    region Australia_and_New_Zealand {
+      name "Australia and New Zealand"
+      alternative names [ "Australie et Nouvelle-Zélande" , "Australia e Nuova Zelanda" , "Australia y Nueva Zelandia" , "Australia and New Zealand" ]
+      parents [ Locations.Oceania ]
+    }
+    region Asia {
+      name Asia
+      alternative names [ Asie , "Asia " , Asia ]
+    }
+    region Central_Asia {
+      name "Central Asia"
+      alternative names [ "Asie central" , "Asia centrale" , "Asia central" , "Central Asia" ]
+      parents [ Locations.Asia ]
+    }
+    region Americas {
+      name Americas
+      alternative names [ "Amériques" , Americhe , "Américas" , Americas ]
+    }
+    region Caribbean {
+      name Caribbean
+      alternative names [ "Caraïbes " , Caraibi , Caribe , Caribbean ]
+      parents [ Locations.Americas ]
+    }
+    region South_America {
+      name "South America"
+      alternative names [ "Amérique du Sud" , "America del Sud" , "América del Sur" , "South America" ]
+      parents [ Locations.Americas ]
+    }
+    region Polynesia {
+      name Polynesia
+      alternative names [ "Polynésie" , Polinesia , Polynesia ]
+      parents [ Locations.Oceania ]
+    }
+    region northern_America {
+      name "northern America"
+      alternative names [ "Amérique septentrionale" , "America del Nord" , "América Septentrional; Norteamérica" , "northern America" ]
+      parents [ Locations.Americas ]
+    }
+    region northern_Europe {
+      name "northern Europe"
+      alternative names [ "Europe septentrionale" , "Europa settentrionale" , "Europa septentrional" , "northern Europe" ]
+      parents [ Locations.Europe ]
+    }
+    region eastern_Africa {
+      name "eastern Africa"
+      alternative names [ "Afrique orientale" , "Africa orientale" , "África oriental" , "eastern Africa" ]
+      parents [ Locations.Africa ]
+    }
+    region Oceania {
+      name Oceania
+      alternative names [ "Océanie" , Oceania , "Oceanía" ]
+    }
+    region western_Asia {
+      name "western Asia"
+      alternative names [ "Asie occidentale; Asie de l\'Ouest" , "Asia occidentale" , "Asia occidental" , "western Asia" ]
+      parents [ Locations.Asia ]
+    }
+    region GY {
+      name "the Republic of Guyana"
+      alternative names [ "la République du Guyana" , "Repubblica della Guyana" , "la República de Guyana" , Guyana , "le Guyana" ]
+      parents [ Locations.Americas , Locations.South_America ]
+    }
+    region DZ {
+      name "the People\'s Democratic Republic of Algeria"
+      alternative names [ "la République algérienne démocratique et populaire" , "Repubblica algerina democratica e popolare" , "la República Argelina Democrática y Popular" , Algeria , "l\'Algérie" , Argelia ]
+      parents [ Locations.northern_Africa , Locations.Africa ]
+    }
+    region MW {
+      name "the Republic of Malawi"
+      alternative names [ "la République du Malawi" , "Repubblica del Malawi" , "la República de Malawi" , Malawi , "le Malawi" ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region CY {
+      name "the Republic of Cyprus"
+      alternative names [ "la République de Chypre" , "Repubblica di Cipro" , "la República de Chipre" , Cyprus , Chypre , Cipro , Chipre ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region NE {
+      name "the Republic of the Niger"
+      alternative names [ "la République du Niger" , "Repubblica del Niger" , "la República del Níger" , "the Niger" , "le Niger" , Niger , "el Níger" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region IQ {
+      name "the Republic of Iraq"
+      alternative names [ "la République d\'Iraq" , "Repubblica dell\'Iraq" , "la República del Iraq" , Iraq , "l\'Iraq" , "el Iraq" ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region SN {
+      name "the Republic of Senegal"
+      alternative names [ "la République du Sénégal" , "Repubblica del Senegal" , "la República del Senegal" , Senegal , "le Sénégal" , "el Senegal" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region FR {
+      name "the French Republic"
+      alternative names [ "la République française" , "Repubblica francese" , "la República Francesa" , France , "la France" , Francia ]
+      parents [ Locations.Europe , Locations.western_Europe ]
+    }
+    region TT {
+      name "the Republic of Trinidad and Tobago"
+      alternative names [ "la République de Trinité-et-Tobago" , "Repubblica di Trinidad e Tobago" , "la República de Trinidad y Tabago" , "Trinidad and Tobago" , "la Trinité-et-Tobago" , "Trinidad e Tobago" , "Trinidad y Tabago" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region MT {
+      name "the Republic of Malta"
+      alternative names [ "la République de Malte" , "Repubblica di Malta" , "la República de Malta" , Malta , Malte ]
+      parents [ Locations.Europe , Locations.southern_Europe ]
+    }
+    region BW {
+      name "the Republic of Botswana"
+      alternative names [ "la République du Botswana" , "Repubblica del Botswana" , "la República de Botswana" , Botswana , "le Botswana" ]
+      parents [ Locations.Africa , Locations.southern_Africa ]
+    }
+    region SB {
+      name "Solomon Islands"
+      alternative names [ "les Îles Salomon" , "Isole Salomone" , "las Islas Salomón" , "Solomon Islands" ]
+      parents [ Locations.Melanesia , Locations.Oceania ]
+    }
+    region CG {
+      name "the Republic of the Congo"
+      alternative names [ "la République du Congo" , "Repubblica del Congo" , "la República del Congo" , "the Congo" , "le Congo" , Congo , "el Congo" ]
+      parents [ Locations.Africa , Locations.middle_Africa ]
+    }
+    region TZ {
+      name "the United Republic of Tanzania"
+      alternative names [ "la République-Unie de Tanzanie" , "Repubblica unita di Tanzania" , "la República Unida de Tanzanía" , "the United Republic of Tanzania" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region TH {
+      name "the Kingdom of Thailand"
+      alternative names [ "le Royaume de Thaïlande" , "Regno di Thailandia" , "el Reino de Tailandia" , Thailand , "la Thaïlande" , Thailandia , Tailandia ]
+      parents [ Locations.Asia , Locations.south_eastern_Asia ]
+    }
+    region FM {
+      name "the Federated States of Micronesia"
+      alternative names [ "les États fédérés de Micronésie" , "Stati federati di Micronesia" , "los Estados Federados de Micronesia" , "Micronesia (Federated States of)" , "Micronésie (États fédérés de)" , "Micronesia (Stati federati di)" , "Micronesia (Estados Federados de)" ]
+      parents [ Locations.Oceania , Locations.Micronesia ]
+    }
+    region LU {
+      name "the Grand Duchy of Luxembourg"
+      alternative names [ "le Grand-Duché de Luxembourg" , "Granducato di Lussemburgo" , "el Gran Ducado de Luxemburgo" , Luxembourg , "le Luxembourg" , Lussemburgo , Luxemburgo ]
+      parents [ Locations.western_Europe , Locations.Europe , Locations.Benelux ]
+    }
+    region CF {
+      name "the Central African Republic"
+      alternative names [ "la République centrafricaine" , "Repubblica centrafricana" , "la República Centroafricana" , "the Central African Republic" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region EE {
+      name "the Republic of Estonia"
+      alternative names [ "la République d\'Estonie" , "Repubblica di Estonia" , "la República de Estonia" , Estonia , "l\'Estonie" ]
+      parents [ Locations.northern_Europe , Locations.Baltic_Region , Locations.Europe ]
+    }
+    region VU {
+      name "the Republic of Vanuatu"
+      alternative names [ "la République de Vanuatu" , "Repubblica di Vanuatu" , "la República de Vanuatu" , Vanuatu ]
+      parents [ Locations.Melanesia , Locations.Oceania ]
+    }
+    region CH {
+      name "the Swiss Confederation"
+      alternative names [ "la Confédération suisse" , "Confederazione svizzera" , "la Confederación Suiza" , Switzerland , "la Suisse" , Svizzera , Suiza ]
+      parents [ Locations.Europe , Locations.western_Europe ]
+    }
+    region NP {
+      name "Federal Democratic Republic of Nepal"
+      alternative names [ "République démocratique fédérale du Nepal" , "Repubblica Democratica Federale di Nepal" , "República Federal Democrática de Nepal" , Nepal , "le Népal" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region FO {
+      name "Faroe Islands"
+      alternative names [ "les Îles Féroé" , "Faerøerne" , "las Islas Feroe" , "Faroe Islands" , "Islas Feroe" ]
+      parents [ Locations.Europe , Locations.northern_Europe ]
+    }
+    region PG {
+      name "Papua New Guinea"
+      alternative names [ "la Papouasie-Nouvelle-Guinée" , "Stato indipendente di Papua Nuova Guinea" , "Papua Nueva Guinea" , "Papua New Guinea" , "Papua Nuova Guinea" ]
+      parents [ Locations.Oceania , Locations.Melanesia ]
+    }
+    region BD {
+      name "the People\'s Republic of Bangladesh"
+      alternative names [ "la République populaire du Bangladesh" , "Repubblica popolare del Bangladesh" , "la República Popular de Bangladesh" , Bangladesh , "le Bangladesh" ]
+      parents [ Locations.southern_Asia , Locations.Asia ]
+    }
+    region RU {
+      name "the Russian Federation"
+      alternative names [ "la Fédération de Russie" , "Federazione russa" , "la Federación de Rusia" , "the Russian Federation" , Russia ]
+      parents [ Locations.Europe , Locations.Baltic_Region , Locations.eastern_Europe ]
+    }
+    region CV {
+      name "the Republic of Cape Verde"
+      alternative names [ "la République du Cap-Vert" , "Repubblica del Capo Verde" , "la República de Cabo Verde" , "Cape Verde" , "le Cap-Vert" , "Capo Verde" , "Cabo Verde" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region AR {
+      name "the Argentine Republic"
+      alternative names [ "la République argentine" , "Repubblica argentina" , "la República Argentina" , Argentina , "l\'Argentine" , "la Argentina" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region CA {
+      name Canada
+      alternative names [ "le Canada" , Canada , "el Canadá" ]
+      parents [ Locations.northern_America , Locations.Americas ]
+    }
+    region MK {
+      name "The former Yugoslav Republic of Macedonia"
+      alternative names [ "l\'ex-République yougoslave de Macédoine" , "L\'ex Repubblica jugoslava di Macedonia" , "la ex República Yugoslava de Macedonia" , "The former Yugoslav Republic of Macedonia" ]
+      parents [ Locations.Balkan_Peninsula , Locations.Europe , Locations.southern_Europe ]
+    }
+    region MA {
+      name "the Kingdom of Morocco"
+      alternative names [ "le Royaume du Maroc" , "Regno del Marocco" , "el Reino de Marruecos" , Morocco , "le Maroc" , Marocco , Marruecos ]
+      parents [ Locations.Africa , Locations.northern_Africa ]
+    }
+    region ML {
+      name "the Republic of Mali"
+      alternative names [ "la République du Mali" , "Repubblica del Mali" , "la República de Malí" , Mali , "le Mali" , "Malí" ]
+      parents [ Locations.western_Africa , Locations.Africa ]
+    }
+    region TL {
+      name "the Democratic Republic of Timor-Leste"
+      alternative names [ "la République démocratique du Timor-Leste" , "Repubblica democratica di Timor-Leste" , "la República Democrática de Timor-Leste" , "Timor-Leste" , "le Timor-Leste" ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region BA {
+      name "Bosnia and Herzegovina"
+      alternative names [ "la Bosnie-Herzégovine" , "Bosnia-Erzegovina" , "Bosnia y Herzegovina" , "Bosnia and Herzegovina" ]
+      parents [ Locations.Balkan_Peninsula , Locations.southern_Europe , Locations.Europe ]
+    }
+    region OM {
+      name "the Sultanate of Oman"
+      alternative names [ "le Sultanat d\'Oman" , "Sultanato dell\'Oman" , "la Sultanía de Omán" , Oman , "l\'Oman" , "Omán" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region KI {
+      name "the Republic of Kiribati"
+      alternative names [ "la République de Kiribati" , "Repubblica di Kiribati" , "la República de Kiribati" , Kiribati ]
+      parents [ Locations.Oceania , Locations.Micronesia ]
+    }
+    region BI {
+      name "the Republic of Burundi"
+      alternative names [ "la République du Burundi" , "Repubblica di Burundi" , "la República de Burundi" , Burundi , "le Burundi" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region CU {
+      name "the Republic of Cuba"
+      alternative names [ "la République de Cuba" , "Repubblica di Cuba" , "la República de Cuba" , Cuba ]
+      parents [ Locations.Americas , Locations.Caribbean ]
+    }
+    region UZ {
+      name "the Republic of Uzbekistan"
+      alternative names [ "la République d\'Ouzbékistan" , "Repubblica dell\'Uzbekistan" , "la República de Uzbekistán" , Uzbekistan , "l\'Ouzbékistan" , "Uzbekistán" ]
+      parents [ Locations.Asia , Locations.Central_Asia ]
+    }
+    region LS {
+      name "the Kingdom of Lesotho"
+      alternative names [ "le Royaume du Lesotho" , "Regno di Lesotho" , "el Reino de Lesotho" , Lesotho , "le Lesotho" ]
+      parents [ Locations.Africa , Locations.southern_Africa ]
+    }
+    region DO {
+      name "the Dominican Republic"
+      alternative names [ "la République dominicaine" , "Repubblica dominicana" , "la República Dominicana" , "Dominican Republic (the)" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region IT {
+      name "the Republic of Italy"
+      alternative names [ "la République italienne" , "Repubblica italiana" , "la República Italiana" , Italy , "l\'Italie" , Italia ]
+      parents [ Locations.Europe , Locations.southern_Europe ]
+    }
+    region UY {
+      name "the Eastern Republic of Uruguay"
+      alternative names [ "la République orientale de l\'Uruguay" , "Repubblica orientale dell\'Uruguay" , "la República Oriental del Uruguay" , Uruguay , "l\'Uruguay" , "el Uruguay" ]
+      parents [ Locations.Americas , Locations.South_America ]
+    }
+    region ZA {
+      name "the Republic of South Africa"
+      alternative names [ "la République sud-africaine" , "Repubblica del Sudafrica" , "la República de Sudáfrica" , "South Africa" , "l\'Afrique du Sud" , Sudafrica , "Sudáfrica" ]
+      parents [ Locations.southern_Africa , Locations.Africa ]
+    }
+    region LR {
+      name "the Republic of Liberia"
+      alternative names [ "la République du Libéria" , "Repubblica di Liberia" , "la República de Liberia" , Liberia , "le Libéria" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region TD {
+      name "the Republic of Chad"
+      alternative names [ "la République du Tchad" , "Repubblica del Ciad" , "la República del Chad" , Chad , "le Tchad" , Ciad , "el Chad" ]
+      parents [ Locations.Africa , Locations.middle_Africa ]
+    }
+    region KN {
+      name "Saint Kitts and Nevis"
+      alternative names [ "Saint-Kitts-et-Nevis" , "Federazione di Saint Cristopher e Nevis" , "Saint Kitts y Nevis" , "Saint Kitts and Nevis" , "Saint Christopher e Nevis" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region KR {
+      name "the Republic of Korea"
+      alternative names [ "la République de Corée" , "Repubblica di Corea" , "la República de Corea" , "the Republic of Korea" ]
+      parents [ Locations.eastern_Asia , Locations.Asia ]
+    }
+    region PL {
+      name "the Republic of Poland"
+      alternative names [ "la République de Pologne" , "Repubblica di Polonia" , "la República de Polonia" , Poland , "la Pologne" , Polonia ]
+      parents [ Locations.Europe , Locations.eastern_Europe , Locations.Baltic_Region ]
+    }
+    region RO {
+      name Romania
+      alternative names [ "la Roumanie" , Romania , Rumania ]
+      parents [ Locations.Europe , Locations.eastern_Europe ]
+    }
+    region NU {
+      name "the Republic of Niue"
+      alternative names [ "la République de Nioué" , "Repubblica di Niue" , "la República de Niue" , Niue , "Nioué" ]
+      parents [ Locations.Oceania , Locations.Polynesia ]
+    }
+    region SG {
+      name "the Republic of Singapore"
+      alternative names [ "la République de Singapour" , "Repubblica di Singapore" , "la República de Singapur" , Singapore , Singapour , Singapur ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region SV {
+      name "the Republic of El Salvador"
+      alternative names [ "la République d\'El Salvador" , "Repubblica di El Salvador" , "la República de El Salvador" , "El Salvador" ]
+      parents [ Locations.central_America , Locations.Americas ]
+    }
+    region ZW {
+      name "the Republic of Zimbabwe"
+      alternative names [ "la République du Zimbabwe" , "Repubblica dello Zimbabwe" , "la República de Zimbabwe" , Zimbabwe , "le Zimbabwe" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region UG {
+      name "the Republic of Uganda"
+      alternative names [ "la République de l\'Ouganda" , "Repubblica dell\'Uganda" , "la República de Uganda" , Uganda , "l\'Ouganda" ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region DM {
+      name "the Commonwealth of Dominica"
+      alternative names [ "le Commonwealth de la Dominique" , "Commonwealth di Dominica" , "el Commonwealth de Dominica" , Dominica , "la Dominique" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region KH {
+      name "the Kingdom of Cambodia"
+      alternative names [ "le Royaume du Cambodge" , "Regno di Cambogia" , "el Reino de Camboya" , Cambodia , "le Cambodge" , Cambogia , Camboya ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region CR {
+      name "the Republic of Costa Rica"
+      alternative names [ "la République du Costa Rica" , "Repubblica di Costa Rica" , "la República de Costa Rica" , "Costa Rica" , "le Costa Rica" ]
+      parents [ Locations.central_America , Locations.Americas ]
+    }
+    region GA {
+      name "the Gabonese Republic"
+      alternative names [ "la République gabonaise" , "Repubblica gabonese" , "la República Gabonesa" , Gabon , "le Gabon" , "el Gabón" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region NL {
+      name "the Kingdom of the Netherlands"
+      alternative names [ "le Royaume des Pays-Bas" , "Regno dei Paesi Bassi" , "el Reino de los Países Bajos" , "the Netherlands" , "les Pays-Bas" , "Paesi Bassi" , "los Países Bajos" ]
+      parents [ Locations.western_Europe , Locations.Benelux , Locations.Europe ]
+    }
+    region BE {
+      name "the Kingdom of Belgium"
+      alternative names [ "le Royaume de Belgique" , "Regno del Belgio" , "el Reino de Bélgica" , Belgium , "la Belgique" , Belgio , "Bélgica" ]
+      parents [ Locations.western_Europe , Locations.Benelux , Locations.Europe ]
+    }
+    region BS {
+      name "the Commonwealth of the Bahamas"
+      alternative names [ "le Commonwealth des Bahamas" , "Commonwealth delle Bahamas" , "el Commonwealth de las Bahamas" , "the Bahamas" , "les Bahamas" , Bahamas , "las Bahamas" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region MD {
+      name "the Republic of Moldova"
+      alternative names [ "la République de Moldova" , "Repubblica di Moldova" , "la República de Moldova" , "Republic of Moldova" , "République de Moldova" , Moldavia , "República de Moldova" ]
+      parents [ Locations.eastern_Europe , Locations.Europe ]
+    }
+    region BB {
+      name Barbados
+      alternative names [ "la Barbade" , Barbados ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region KP {
+      name "the Democratic People\'s Republic of Korea"
+      alternative names [ "la République populaire démocratique de Corée" , "Repubblica popolare democratica di Corea" , "la República Popular Democrática de Corea" , "the Democratic People\'s Republic of Korea" ]
+      parents [ Locations.Asia , Locations.eastern_Asia ]
+    }
+    region AG {
+      name "Antigua and Barbuda"
+      alternative names [ "Antigua-et-Barbuda" , "Antigua e Barbuda" , "Antigua y Barbuda" , "Antigua and Barbuda" ]
+      parents [ Locations.Americas , Locations.Caribbean ]
+    }
+    region GW {
+      name "the Republic of Guinea-Bissau"
+      alternative names [ "la République de Guinée-Bissau" , "Repubblica di Guinea-Bissau" , "la República de Guinea-Bissau" , "Guinea-Bissau" , "la Guinée-Bissau" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region SC {
+      name "the Republic of Seychelles"
+      alternative names [ "la République des Seychelles" , "Repubblica delle Seicelle" , "la República de Seychelles" , Seychelles , "les Seychelles" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region AT {
+      name "the Republic of Austria"
+      alternative names [ "la République d\'Autriche" , "Repubblica d\'Austria" , "la República de Austria" , Austria , "l\'Autriche" ]
+      parents [ Locations.western_Europe , Locations.Europe ]
+    }
+    region LT {
+      name "the Republic of Lithuania"
+      alternative names [ "la République de Lituanie" , "Repubblica di Lituania" , "la República de Lituania" , Lithuania , "la Lituanie" , Lituania ]
+      parents [ Locations.Baltic_Region , Locations.Europe , Locations.northern_Europe ]
+    }
+    region DK {
+      name "the Kingdom of Denmark"
+      alternative names [ "le Royaume du Danemark" , "Regno di Danimarca" , "el Reino de Dinamarca" , Denmark , "le Danemark" , Danimarca , Dinamarca ]
+      parents [ Locations.Baltic_Region , Locations.Nordic_Region , Locations.northern_Europe , Locations.Scandinavia , Locations.Europe ]
+    }
+    region NI {
+      name "the Republic of Nicaragua"
+      alternative names [ "la République du Nicaragua" , "Repubblica di Nicaragua" , "la República de Nicaragua" , Nicaragua , "le Nicaragua" ]
+      parents [ Locations.Americas , Locations.central_America ]
+    }
+    region MH {
+      name "the Republic of the Marshall Islands"
+      alternative names [ "la République des Îles Marshall" , "Repubblica delle Isole Marshall" , "la República de las Islas Marshall" , "the Marshall Islands" , "les Îles Marshall" , Marshall , "las Islas Marshall" ]
+      parents [ Locations.Oceania , Locations.Micronesia ]
+    }
+    region CO {
+      name "the Republic of Colombia"
+      alternative names [ "la République de Colombie" , "Repubblica di Colombia" , "la República de Colombia" , Colombia , "la Colombie" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region MM {
+      name "the Republic of the Union of Myanmar "
+      alternative names [ "République de l\'Union du Myanmar " , "Repubblica dell\'Unione di Myanmar " , "la República de la Unión de Myanmar " , Myanmar , "le Myanmar" ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region MY {
+      name Malaysia
+      alternative names [ "la Malaisie" , Malesia , Malasia , Malaysia ]
+      parents [ Locations.Asia , Locations.south_eastern_Asia ]
+    }
+    region SD {
+      name "the Republic of the Sudan"
+      alternative names [ "la République du Soudan" , "Repubblica del Sudan" , "la República del Sudán" , "the Sudan" , "le Soudan" , Sudan , "el Sudán" ]
+    }
+    region BG {
+      name "the Republic of Bulgaria"
+      alternative names [ "la République de Bulgarie" , "Repubblica di Bulgaria" , "la República de Bulgaria" , Bulgaria , "la Bulgarie" ]
+      parents [ Locations.Europe , Locations.Balkan_Peninsula , Locations.eastern_Europe ]
+    }
+    region RW {
+      name "the Republic of Rwanda"
+      alternative names [ "la République du Rwanda" , "Repubblica del Ruanda" , "la República de Rwanda" , Rwanda , "le Rwanda" , Ruanda ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region PE {
+      name "the Republic of Peru"
+      alternative names [ "la République du Pérou" , "Repubblica del Perù" , "la República del Perú" , Peru , "le Pérou" , "Perù" , "Perú" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region BT {
+      name "the Kingdom of Bhutan"
+      alternative names [ "le Royaume du Bhoutan" , "Regno del Bhutan" , "el Reino de Bhután" , Bhutan , "le Bhoutan" , "Bhután" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region GH {
+      name "the Republic of Ghana"
+      alternative names [ "la République du Ghana" , "Repubblica del Ghana" , "la República de Ghana" , Ghana , "le Ghana" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region BF {
+      name "Burkina Faso"
+      alternative names [ "le Burkina Faso" , "Burkina Faso" ]
+      parents [ Locations.western_Africa , Locations.Africa ]
+    }
+    region VE {
+      name "the Bolivarian Republic of Venezuela"
+      alternative names [ "la République bolivarienne du Venezuela" , "Repubblica bolivariana di Venezuela" , "la República Bolivariana de Venezuela" , "Venezuela (Bolivarian Republic of)" , "Venezuela (République bolivarienne du)" , "Venezuela (Repubblica bolivariana di)" , "Venezuela (República Bolivariana de)" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region TN {
+      name "the Republic of Tunisia"
+      alternative names [ "la République tunisienne" , "Repubblica tunisina" , "la República de Túnez" , Tunisia , "la Tunisie" , "Túnez" ]
+      parents [ Locations.Africa , Locations.northern_Africa ]
+    }
+    region CZ {
+      name "the Czech Republic"
+      alternative names [ "la République tchèque" , "Repubblica ceca" , "la República Checa" , "the Czech Republic" ]
+      parents [ Locations.Europe , Locations.eastern_Europe ]
+    }
+    region GD {
+      name Grenada
+      alternative names [ "la Grenade" , Grenada , Granada ]
+      parents [ Locations.Americas , Locations.Caribbean ]
+    }
+    region UA {
+      name Ukraine
+      alternative names [ "l\'Ukraine" , Ucraina , Ucrania , Ukraine ]
+      parents [ Locations.Europe , Locations.eastern_Europe ]
+    }
+    region MU {
+      name "the Republic of Mauritius"
+      alternative names [ "la République de Maurice" , "Repubblica di Maurizio" , "la República de Mauricio" , Mauritius , Maurice , Maurizio , Mauricio ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region TM {
+      name Turkmenistan
+      alternative names [ "le Turkménistan" , "Repubblica di Turkmenistan" , "Turkmenistán" , Turkmenistan ]
+      parents [ Locations.Central_Asia , Locations.Asia ]
+    }
+    region NO {
+      name "the Kingdom of Norway"
+      alternative names [ "le Royaume de Norvège" , "Regno di Norvegia" , "el Reino de Noruega" , Norway , "la Norvège" , Norvegia , Noruega ]
+      parents [ Locations.Europe , Locations.Nordic_Region , Locations.northern_Europe , Locations.Scandinavia ]
+    }
+    region FI {
+      name "the Republic of Finland"
+      alternative names [ "la République de Finlande" , "Repubblica di Finlandia" , "la República de Finlandia" , Finland , "la Finlande" , Finlandia ]
+      parents [ Locations.Nordic_Region , Locations.Baltic_Region , Locations.Europe , Locations.northern_Europe ]
+    }
+    region SY {
+      name "the Syrian Arab Republic"
+      alternative names [ "la République arabe syrienne" , "Repubblica araba siriana" , "la República Árabe Siria" , "the Syrian Arab Republic" , Siria ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region PW {
+      name "the Republic of Palau"
+      alternative names [ "la République des Palaos" , "Repubblica di Palau" , "la República de Palau" , Palau , "les Palaos" ]
+      parents [ Locations.Oceania , Locations.Micronesia ]
+    }
+    region US {
+      name "the United States of America"
+      alternative names [ "les États-Unis d\'Amérique" , "Stati Uniti d\'America" , "los Estados Unidos de América" , "the United States of America" ]
+      parents [ Locations.northern_America , Locations.Americas ]
+    }
+    region LA {
+      name "the Lao People\'s Democratic Republic"
+      alternative names [ "la République démocratique populaire lao" , "Repubblica democratica popolare lao" , "la República Democrática Popular Lao" , "the Lao People\'s Democratic Republic" ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region LI {
+      name "the Principality of Liechtenstein"
+      alternative names [ "la Principauté du Liechtenstein" , "Principato del Liechtenstein" , "el Principado de Liechtenstein" , Liechtenstein , "le Liechtenstein" ]
+      parents [ Locations.Europe , Locations.western_Europe ]
+    }
+    region HU {
+      name "Hungary "
+      alternative names [ "Hongrie (la)" , "Ungheria " , "Hungría " , Hungary , Hongrie , Ungheria , "Hungría" ]
+      parents [ Locations.eastern_Europe , Locations.Europe ]
+    }
+    region LC {
+      name "Saint Lucia"
+      alternative names [ "Sainte-Lucie" , "Saint Lucia" , "Santa Lucía" ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region KZ {
+      name "the Republic of Kazakhstan"
+      alternative names [ "la République du Kazakhstan" , "Repubblica del Kazakistan" , "la República de Kazajstán" , Kazakhstan , "le Kazakhstan" , Kazakistan , "Kazajstán" ]
+      parents [ Locations.Central_Asia , Locations.Asia ]
+    }
+    region AO {
+      name "the Republic of Angola"
+      alternative names [ "la République d\'Angola" , "Repubblica d\'Angola" , "la República de Angola" , Angola , "l\'Angola" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region IL {
+      name "the State of Israel"
+      alternative names [ "l\'État d\'Israël" , "Stato d\'Israele" , "el Estado de Israel" , Israel , "Israël" , Israele ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region MZ {
+      name "the Republic of Mozambique"
+      alternative names [ "la République du Mozambique" , "Repubblica del Mozambico" , "la República de Mozambique" , Mozambique , "le Mozambique" , Mozambico ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region AF {
+      name "The Islamic Republic of Afghanistan"
+      alternative names [ "la République islamique d\'Afghanistan" , "la Repubblica islamica dell\'Afghanistan" , "la República Islámica del Afganistán" , Afghanistan , "l\'Afghanistan" , "el Afganistán" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region TK {
+      name Tokelau
+      alternative names [ "Tokélaou" , Tokelau ]
+      parents [ Locations.Polynesia , Locations.Oceania ]
+    }
+    region TO {
+      name "the Kingdom of Tonga"
+      alternative names [ "le Royaume des Tonga" , "Regno di Tonga" , "el Reino de Tonga" , Tonga , "les Tonga" ]
+      parents [ Locations.Polynesia , Locations.Oceania ]
+    }
+    region WS {
+      name "the Independent State of Samoa"
+      alternative names [ "l\'État indépendant du Samoa" , "Stato indipendente di Samoa" , "el Estado Independiente de Samoa" , Samoa , "le Samoa" ]
+      parents [ Locations.Polynesia , Locations.Oceania ]
+    }
+    region PH {
+      name "the Republic of the Philippines"
+      alternative names [ "la République des Philippines" , "Repubblica delle Filippine" , "la República de Filipinas" , "the Philippines" , "les Philippines" , Filippine , Filipinas ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region VC {
+      name "Saint Vincent and the Grenadines"
+      alternative names [ "Saint-Vincent-et-les Grenadines" , "Saint Vincent e Grenadine" , "San Vicente y las Granadinas" , "Saint Vincent and the Grenadines" ]
+      parents [ Locations.Americas , Locations.Caribbean ]
+    }
+    region BN {
+      name "Brunei Darussalam"
+      alternative names [ "le Brunéi Darussalam" , "Stato di Brunei Darussalam" , "Brunei Darussalam" , Brunei ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region CI {
+      name "the Republic of Côte d\'Ivoire"
+      alternative names [ "la République de Côte d\'Ivoire" , "Repubblica della Côte d\'Ivoire" , "la República de Côte d\'Ivoire" , "Côte d\'Ivoire" , "la Côte d\'Ivoire" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region VN {
+      name "the Socialist Republic of Viet Nam"
+      alternative names [ "la République socialiste du Viet Nam" , "Repubblica socialista del Vietnam" , "la República Socialista de Viet Nam" , "Viet Nam" , "le Viet Nam" , Vietnam ]
+      parents [ Locations.Asia , Locations.south_eastern_Asia ]
+    }
+    region TJ {
+      name "the Republic of Tajikistan"
+      alternative names [ "la République du Tadjikistan" , "Repubblica del Tagikistan" , "la República de Tayikistán" , Tajikistan , "le Tadjikistan" , Tagikistan , "Tayikistán" ]
+      parents [ Locations.Central_Asia , Locations.Asia ]
+    }
+    region VA {
+      name "Holy See"
+      alternative names [ "le Saint-Siège" , "Santa Sede" , "la Santa Sede" , "Holy See" ]
+      parents [ Locations.southern_Europe , Locations.Europe ]
+    }
+    region NR {
+      name "the Republic of Nauru"
+      alternative names [ "la République de Nauru" , "Repubblica di Nauru" , "la República de Nauru" , Nauru ]
+      parents [ Locations.Micronesia , Locations.Oceania ]
+    }
+    region LY {
+      name Libya
+      alternative names [ Libye , Libia , Libya ]
+      parents [ Locations.northern_Africa , Locations.Africa ]
+    }
+    region SS {
+      name "Republic of South Sudan "
+      alternative names [ "République du Soudan du Sud " , "Repubblica del Sud Sudan " , "República de Sudán del Sur " , "South Sudan" , "Soudan du Sud" , "Sud Sudan " , "Sudán del Sur " ]
+      parents [ Locations.northern_Africa , Locations.Africa ]
+    }
+    region BZ {
+      name Belize
+      alternative names [ "le Belize" , Belize , Belice ]
+      parents [ Locations.Americas , Locations.central_America ]
+    }
+    region CM {
+      name "the Republic of Cameroon"
+      alternative names [ "la République du Cameroun" , "Repubblica del Camerun" , "la República del Camerún" , Cameroon , "le Cameroun" , Camerun , "el Camerún" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region LY {
+      name Libya
+      alternative names [ Libye , Libia , Libya ]
+    }
+    region GT {
+      name "the Republic of Guatemala"
+      alternative names [ "la République du Guatemala" , "Repubblica del Guatemala" , "la República de Guatemala" , Guatemala , "le Guatemala" ]
+      parents [ Locations.Americas , Locations.central_America ]
+    }
+    region DJ {
+      name "the Republic of Djibouti"
+      alternative names [ "la République de Djibouti" , "Repubblica di Gibuti" , "la República de Djibouti" , Djibouti , Gibuti ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region SK {
+      name "the Slovak Republic"
+      alternative names [ "la République slovaque" , "Repubblica slovacca" , "la República Eslovaca" , Slovakia , "la Slovaquie" , Slovacchia , Eslovaquia ]
+      parents [ Locations.Europe , Locations.eastern_Europe ]
+    }
+    region MV {
+      name "the Republic of Maldives"
+      alternative names [ "la République des Maldives" , "Repubblica delle Maldive" , "la República de Maldivas" , Maldives , "les Maldives" , " Repubblica di Moldova" , Maldivas ]
+      parents [ Locations.southern_Asia , Locations.Asia ]
+    }
+    region GN {
+      name "the Republic of Guinea"
+      alternative names [ "la République de Guinée" , "Repubblica di Guinea" , "la República de Guinea" , Guinea , "la Guinée" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region IE {
+      name Ireland
+      alternative names [ "l\'Irlande" , Irlanda , Ireland ]
+      parents [ Locations.northern_Europe , Locations.Europe ]
+    }
+    region SA {
+      name "the Kingdom of Saudi Arabia"
+      alternative names [ "le Royaume d\'Arabie saoudite" , "Regno dell\'Arabia Saudita" , "el Reino de Arabia Saudita" , "Saudi Arabia" , "l\'Arabie saoudite" , "Arabia Saudita" , "la Arabia Saudita" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region TR {
+      name "the Republic of Turkey"
+      alternative names [ "la République turque" , "Repubblica di Turchia" , "la República de Turquía" , Turkey , "la Turquie" , Turchia , "Turquía" ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region KW {
+      name "the State of Kuwait"
+      alternative names [ "l\'État du Koweït" , "Stato del Kuwait" , "el Estado de Kuwait" , Kuwait , "le Koweït" ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region BR {
+      name "the Federative Republic of Brazil"
+      alternative names [ "la République fédérative du Brésil" , "Repubblica federativa del Brasile" , "la República Federativa del Brasil" , Brazil , "le Brésil" , Brasile , "el Brasil" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region IS {
+      name "the Republic of Iceland"
+      alternative names [ "la République d\'Islande" , "Repubblica d\'Islanda" , "la República de Islandia" , Iceland , "l\'Islande" , Islanda , Islandia ]
+      parents [ Locations.northern_Europe , Locations.Europe , Locations.Nordic_Region ]
+    }
+    region FJ {
+      name "the Republic of Fiji "
+      alternative names [ "la République des Fidji " , "Repubblica delle Isole Figi " , "la República de Fiji" , Fiji , "les Fidji" , Figi ]
+      parents [ Locations.Melanesia , Locations.Oceania ]
+    }
+    region NA {
+      name "the Republic of Namibia"
+      alternative names [ "la République de Namibie" , "Repubblica di Namibia" , "la República de Namibia" , Namibia , "la Namibie" ]
+      parents [ Locations.southern_Africa , Locations.Africa ]
+    }
+    region HT {
+      name "the Republic of Haiti"
+      alternative names [ "la République d\'Haïti" , "Repubblica di Haiti" , "la República de Haití" , Haiti , "Haïti" , "Haití" ]
+      parents [ Locations.Americas , Locations.Caribbean ]
+    }
+    region KG {
+      name "the Kyrgyz Republic"
+      alternative names [ "la République kirghize" , "Repubblica di Kirghizistan" , "la República Kirguisa" , Kyrgyzstan , "le Kirghizistan" , Kirghizistan , "Kirguistán" ]
+      parents [ Locations.Central_Asia , Locations.Asia ]
+    }
+    region YE {
+      name "the Republic of Yemen"
+      alternative names [ "la République du Yémen" , "Repubblica dello Yemen" , "la República del Yemen" , Yemen , "le Yémen" , "el Yemen" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region ER {
+      name Eritrea
+      alternative names [ "l\'Érythrée" , "Stato d\'Eritrea" , Eritrea ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region SM {
+      name "the Republic of San Marino"
+      alternative names [ "la République de Saint-Marin" , "Repubblica di San Marino" , "la República de San Marino" , "San Marino" , "Saint-Marin" ]
+      parents [ Locations.Europe , Locations.southern_Europe ]
+    }
+    region PT {
+      name "the Portuguese Republic"
+      alternative names [ "la République portugaise" , "Repubblica portoghese" , "la República Portuguesa" , Portugal , "le Portugal" , Portogallo ]
+      parents [ Locations.Europe , Locations.Iberian_Peninsula , Locations.southern_Europe ]
+    }
+    region GQ {
+      name "the Republic of Equatorial Guinea"
+      alternative names [ "la République de Guinée équatoriale" , "Repubblica di Guinea equatoriale" , "la República de Guinea Ecuatorial" , "Equatorial Guinea" , "la Guinée équatoriale" , "Guinea equatoriale" , "Guinea Ecuatorial" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region GR {
+      name "the Hellenic Republic"
+      alternative names [ "la République hellénique" , "Repubblica ellenica" , "la República Helénica" , Greece , "la Grèce" , Grecia ]
+      parents [ Locations.southern_Europe , Locations.Balkan_Peninsula , Locations.Europe ]
+    }
+    region GE {
+      name Georgia
+      alternative names [ "la Géorgie" , Georgia ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region MG {
+      name "the Republic of Madagascar"
+      alternative names [ "la République de Madagascar" , "Repubblica del Madagascar" , "la República de Madagascar" , Madagascar ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region ID {
+      name "the Republic of Indonesia"
+      alternative names [ "la République d\'Indonésie" , "Repubblica di Indonesia" , "la República de Indonesia" , Indonesia , "l\'Indonésie" ]
+      parents [ Locations.south_eastern_Asia , Locations.Asia ]
+    }
+    region MC {
+      name "the Principality of Monaco"
+      alternative names [ "la Principauté de Monaco" , "Principato di Monaco" , "el Principado de Mónaco" , Monaco , "Mónaco" ]
+      parents [ Locations.western_Europe , Locations.Europe ]
+    }
+    region PK {
+      name "the Islamic Republic of Pakistan"
+      alternative names [ "la République islamique du Pakistan" , "Repubblica islamica del Pakistan" , "la República Islámica del Pakistán" , Pakistan , "le Pakistan" , "el Pakistán" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region GB {
+      name "the United Kingdom of Great Britain and Northern Ireland"
+      alternative names [ "le Royaume-Uni de Grande-Bretagne et d\'Irlande du Nord" , "Regno Unito di Gran Bretagna e Irlanda del Nord" , "el Reino Unido de Gran Bretaña e Irlanda del Norte" , "the United Kingdom of Great Britain and Northern Ireland" , "Regno Unito" ]
+      parents [ Locations.Europe , Locations.northern_Europe ]
+    }
+    region MN {
+      name Mongolia
+      alternative names [ "la Mongolie" , Mongolia ]
+      parents [ Locations.Asia , Locations.eastern_Asia ]
+    }
+    region ST {
+      name "the Democratic Republic of Sao Tome and Principe"
+      alternative names [ "la République démocratique de Sao Tomé-et-Principe" , "Repubblica democratica di São Tomé e Príncipe" , "la República Democrática de Santo Tomé y Príncipe" , "Sao Tome and Principe" , "Sao Tomé-et-Principe" , "São Tomé e Príncipe" , "Santo Tomé y Príncipe" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region JP {
+      name Japan
+      alternative names [ "le Japon" , Giappone , "el Japón" , Japan ]
+      parents [ Locations.eastern_Asia , Locations.Asia ]
+    }
+    region ME {
+      name Montenegro
+      alternative names [ "le Monténégro" , "la Montenegro" , Montenegro , "Montenegro (la)" ]
+      parents [ Locations.Balkan_Peninsula , Locations.southern_Europe , Locations.Europe ]
+    }
+    region CL {
+      name "the Republic of Chile"
+      alternative names [ "la République du Chili" , "Repubblica del Cile" , "la República de Chile" , Chile , "le Chili" , Cile ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region SD {
+      name "the Republic of the Sudan"
+      alternative names [ "la République du Soudan" , "Repubblica del Sudan" , "la República del Sudán" , "the Sudan" , "le Soudan" , Sudan , "el Sudán" ]
+      parents [ Locations.Africa , Locations.northern_Africa ]
+    }
+    region SZ {
+      name "the Kingdom of Swaziland"
+      alternative names [ "le Royaume du Swaziland" , "Regno dello Swaziland" , "el Reino de Swazilandia" , Swaziland , "le Swaziland" , Swazilandia ]
+      parents [ Locations.Africa , Locations.southern_Africa ]
+    }
+    region ZM {
+      name "the Republic of Zambia"
+      alternative names [ "la République de Zambie" , "Repubblica dello Zambia" , "la República de Zambia" , Zambia , "la Zambie" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region JM {
+      name Jamaica
+      alternative names [ "la Jamaïque" , Giamaica , Jamaica ]
+      parents [ Locations.Caribbean , Locations.Americas ]
+    }
+    region AL {
+      name "the Republic of Albania"
+      alternative names [ "la République d\'Albanie" , "Repubblica d\'Albania" , "la República de Albania" , Albania , "l\'Albanie" ]
+      parents [ Locations.Balkan_Peninsula , Locations.Europe , Locations.southern_Europe ]
+    }
+    region IN {
+      name "the Republic of India"
+      alternative names [ "la République de l\'Inde" , "Repubblica dell\'India" , "la República de la India" , India , "l\'Inde" , "la India" ]
+      parents [ Locations.southern_Asia , Locations.Asia ]
+    }
+    region CK {
+      name "the Cook Islands"
+      alternative names [ "les Îles Cook" , "Isole Cook" , "las Islas Cook" , "the Cook Islands" ]
+      parents [ Locations.Polynesia , Locations.Oceania ]
+    }
+    region AU {
+      name Australia
+      alternative names [ "l\'Australie" , Australia ]
+      parents [ Locations.Oceania , Locations.Australia_and_New_Zealand ]
+    }
+    region TV {
+      name Tuvalu
+      alternative names [ Tuvalu ]
+      parents [ Locations.Oceania , Locations.Polynesia ]
+    }
+    region ET {
+      name "the Federal Democratic Republic of Ethiopia"
+      alternative names [ "la République fédérale démocratique d\'Éthiopie" , "Repubblica federale democratica di Etiopia" , "la República Democrática Federal de Etiopía" , Ethiopia , "l\'Éthiopie" , Etiopia , "Etiopía" ]
+      parents [ Locations.eastern_Africa , Locations.Africa ]
+    }
+    region SR {
+      name "the Republic of Suriname"
+      alternative names [ "la République du Suriname" , "Repubblica di Suriname" , "la República de Suriname" , Suriname , "le Suriname" ]
+      parents [ Locations.Americas , Locations.South_America ]
+    }
+    region AD {
+      name "the Principality of Andorra"
+      alternative names [ "la Principauté d\'Andorre" , "Principato d\'Andorra" , "el Principado de Andorra" , Andorra , "l\'Andorre" ]
+      parents [ Locations.Iberian_Peninsula , Locations.Europe , Locations.southern_Europe ]
+    }
+    region CD {
+      name "the Democratic Republic of the Congo"
+      alternative names [ "la République démocratique du Congo" , "Repubblica democratica del Congo" , "la República Democrática del Congo" , "the Democratic Republic of the Congo" ]
+      parents [ Locations.middle_Africa , Locations.Africa ]
+    }
+    region RS {
+      name "the Republic of Serbia"
+      alternative names [ "la République de Serbie" , "la Repubblica di Serbia" , "la República de Serbia" , Serbia , "la Serbie" , "la Serbia" ]
+      parents [ Locations.Europe , Locations.Balkan_Peninsula , Locations.southern_Europe ]
+    }
+    region SO {
+      name "the Somali Republic"
+      alternative names [ "la République somalienne" , "Repubblica somala" , "la República Somalí" , Somalia , "la Somalie" ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region SI {
+      name "the Republic of Slovenia"
+      alternative names [ "la République de Slovénie" , "Repubblica di Slovenia" , "la República de Eslovenia" , Slovenia , "la Slovénie" , Eslovenia ]
+      parents [ Locations.Europe , Locations.southern_Europe ]
+    }
+    region NG {
+      name "the Federal Republic of Nigeria"
+      alternative names [ "la République fédérale du Nigéria" , "Repubblica federale della Nigeria" , "la República Federal de Nigeria" , Nigeria , "le Nigéria" ]
+      parents [ Locations.western_Africa , Locations.Africa ]
+    }
+    region IR {
+      name "the Islamic Republic of Iran"
+      alternative names [ "la République islamique d\'Iran" , "Repubblica islamica dell\'Iran" , "la República Islámica del Irán" , "Iran (Islamic Republic of)" , "Iran (République islamique d\')" , Iran , "Irán (República Islámica del)" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region BJ {
+      name "the Republic of Benin"
+      alternative names [ "la République du Bénin" , "Repubblica del Benin" , "la República de Benin" , Benin , "le Bénin" ]
+      parents [ Locations.western_Africa , Locations.Africa ]
+    }
+    region BH {
+      name "the Kingdom of Bahrain"
+      alternative names [ "le Royaume de Bahreïn" , "Regno del Bahrein" , "el Reino de Bahrein" , Bahrain , "Bahreïn" , Bahrein ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region PA {
+      name "the Republic of Panama"
+      alternative names [ "la République du Panama" , "Repubblica del Panama" , "la República de Panamá" , Panama , "le Panama" , "Panamá" ]
+      parents [ Locations.central_America , Locations.Americas ]
+    }
+    region SL {
+      name "the Republic of Sierra Leone"
+      alternative names [ "la République de Sierra Leone" , "Repubblica di Sierra Leone" , "la República de Sierra Leona" , "Sierra Leone" , "la Sierra Leone" , "Sierra Leona" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region HN {
+      name "the Republic of Honduras"
+      alternative names [ "la République du Honduras" , "Repubblica di Honduras" , "la República de Honduras" , Honduras , "le Honduras" ]
+      parents [ Locations.Americas , Locations.central_America ]
+    }
+    region LB {
+      name "the Lebanese Republic"
+      alternative names [ "la République libanaise" , "Repubblica libanese" , "la República libanesa" , Lebanon , "le Liban" , Libano , "el Líbano" ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region GM {
+      name "the Republic of the Gambia"
+      alternative names [ "la République de Gambie" , "Repubblica della Gambia" , "la República de Gambia" , "the Gambia" , "la Gambie" , Gambia ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region KM {
+      name "the Union of the Comoros"
+      alternative names [ "l\'Union des Comores" , "Unione delle Comore" , "la Unión de las Comoras" , "the Comoros" , "les Comores" , "Isole Comore" , "las Comoras" ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region JO {
+      name "the Hashemite Kingdom of Jordan"
+      alternative names [ "le Royaume hachémite de Jordanie" , "Regno hascemita di Giordania" , "el Reino Hachemita de Jordania" , Jordan , "la Jordanie" , Giordania , Jordania ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region LV {
+      name "the Republic of Latvia"
+      alternative names [ "la République de Lettonie" , "Repubblica di Lettonia" , "la República de Letonia" , Latvia , "la Lettonie" , Lettonia , Letonia ]
+      parents [ Locations.Europe , Locations.northern_Europe , Locations.Baltic_Region ]
+    }
+    region HR {
+      name "the Republic of Croatia"
+      alternative names [ "la République de Croatie" , "Repubblica di Croazia" , "la República de Croacia" , Croatia , "la Croatie" , Croazia , Croacia ]
+      parents [ Locations.southern_Europe , Locations.Europe ]
+    }
+    region EG {
+      name "the Arab Republic of Egypt"
+      alternative names [ "la République arabe d\'Égypte" , "Repubblica araba d\'Egitto" , "la República Árabe de Egipto" , Egypt , "l\'Égypte" , Egitto , Egipto ]
+      parents [ Locations.Africa , Locations.northern_Africa ]
+    }
+    region PY {
+      name "the Republic of Paraguay"
+      alternative names [ "la République du Paraguay" , "Repubblica del Paraguay" , "la República del Paraguay" , Paraguay , "le Paraguay" , "el Paraguay" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+    region NZ {
+      name "New Zealand"
+      alternative names [ "la Nouvelle-Zélande" , "Nuova Zelanda" , "Nueva Zelandia" , "New Zealand" ]
+      parents [ Locations.Oceania , Locations.Australia_and_New_Zealand ]
+    }
+    region DE {
+      name "the Federal Republic of Germany"
+      alternative names [ "la République fédérale d\'Allemagne" , "Repubblica federale di Germania" , "la República Federal de Alemania" , Germany , "l\'Allemagne" , Germania , Alemania ]
+      parents [ Locations.western_Europe , Locations.Europe , Locations.Baltic_Region ]
+    }
+    region TG {
+      name "the Togolese Republic"
+      alternative names [ "la République togolaise" , "Repubblica del Togo" , "la República Togolesa" , Togo , "le Togo" , "el Togo" ]
+      parents [ Locations.Africa , Locations.western_Africa ]
+    }
+    region MX {
+      name "the United Mexican States"
+      alternative names [ "les États-Unis du Mexique" , "Stati Uniti messicani" , "los Estados Unidos Mexicanos" , Mexico , "le Mexique" , Messico , "México" ]
+      parents [ Locations.central_America , Locations.Americas ]
+    }
+    region QA {
+      name "the State of Qatar"
+      alternative names [ "l\'État du Qatar" , "Stato del Qatar" , "el Estado de Qatar" , Qatar , "le Qatar" ]
+      parents [ Locations.western_Asia , Locations.Asia ]
+    }
+    region AE {
+      name "the United Arab Emirates"
+      alternative names [ "les Émirats arabes unis" , "Emirati arabi uniti" , "los Emiratos Árabes Unidos" , "the United Arab Emirates" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region SE {
+      name "the Kingdom of Sweden"
+      alternative names [ "le Royaume de Suède" , "Regno di Svezia" , "el Reino de Suecia" , Sweden , "la Suède" , Svezia , Suecia ]
+      parents [ Locations.Scandinavia , Locations.Baltic_Region , Locations.northern_Europe , Locations.Europe , Locations.Nordic_Region ]
+    }
+    region CN {
+      name "the People\'s Republic of China"
+      alternative names [ "la République populaire de Chine" , "Repubblica popolare cinese" , "la República Popular China" , China , "la Chine" , Cina ]
+      parents [ Locations.eastern_Asia , Locations.Asia ]
+    }
+    region KE {
+      name "the Republic of Kenya"
+      alternative names [ "la République du Kenya" , "Repubblica del Kenya" , "la República de Kenya" , Kenya , "le Kenya" ]
+      parents [ Locations.Africa , Locations.eastern_Africa ]
+    }
+    region BY {
+      name "the Republic of Belarus"
+      alternative names [ "la République du Bélarus" , "Repubblica di Bielorussia" , "la República de Belarús" , Belarus , "le Bélarus" , Bielorussia , "Belarús" ]
+      parents [ Locations.eastern_Europe , Locations.Europe ]
+    }
+    region AZ {
+      name "the Republic of Azerbaijan"
+      alternative names [ "la République d\'Azerbaïdjan" , "Repubblica dell\'Azerbaigian" , "la República de Azerbaiyán" , Azerbaijan , "l\'Azerbaïdjan" , Azerbaigian , "Azerbaiyán" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region EC {
+      name "the Republic of Ecuador"
+      alternative names [ "la République de l\'Équateur" , "Repubblica dell\'Ecuador" , "la República del Ecuador" , Ecuador , "l\'Équateur" , "el Ecuador" ]
+      parents [ Locations.Americas , Locations.South_America ]
+    }
+    region AM {
+      name "the Republic of Armenia"
+      alternative names [ "la République d\'Arménie" , "Repubblica d\'Armenia" , "la República de Armenia" , Armenia , "l\'Arménie" ]
+      parents [ Locations.Asia , Locations.western_Asia ]
+    }
+    region LK {
+      name "the Democratic Socialist Republic of Sri Lanka"
+      alternative names [ "la République socialiste démocratique de Sri Lanka" , "Repubblica democratica socialista di Sri Lanka" , "la República Socialista Democrática de Sri Lanka" , "Sri Lanka" , "Sri Lanka (fém.)" ]
+      parents [ Locations.Asia , Locations.southern_Asia ]
+    }
+    region ES {
+      name "the Kingdom of Spain"
+      alternative names [ "le Royaume d\'Espagne" , "Regno di Spagna" , "el Reino de España" , Spain , "l\'Espagne" , Spagna , "España" ]
+      parents [ Locations.Europe , Locations.southern_Europe , Locations.Iberian_Peninsula ]
+    }
+    region MR {
+      name "the Islamic Republic of Mauritania"
+      alternative names [ "la République islamique de Mauritanie" , "Repubblica islamica di Mauritania" , "la República Islámica de Mauritania" , Mauritania , "la Mauritanie" ]
+      parents [ Locations.western_Africa , Locations.Africa ]
+    }
+    region BO {
+      name "the Plurinational State of Bolivia"
+      alternative names [ "l\'État plurinational de Bolivie" , "Stato plurinazionale della Bolivia" , "el Estado Plurinacional de Bolivia" , "Bolivia (Plurinational State of)" , "Bolivie (État plurinational de)" , "Bolivia (Stato plurinazionale della)" , "Bolivia (Estado Plurinacional de)" ]
+      parents [ Locations.South_America , Locations.Americas ]
+    }
+  }
+}

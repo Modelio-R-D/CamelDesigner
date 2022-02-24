@@ -27,7 +27,11 @@ public class CommunicationInstanceExporter<T extends CommunicationInstance> exte
     @objid ("05da811d-6afd-404d-9f87-7727cdfdcef3")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.DeploymentInstanceModel) && (elt instanceof camel.deployment.CommunicationInstance)) {
+            ((camel.deployment.DeploymentInstanceModel) context).getCommunicationInstances().add((camel.deployment.CommunicationInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

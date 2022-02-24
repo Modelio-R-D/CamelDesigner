@@ -12,12 +12,6 @@ public class OSRequirementExporter<T extends OSRequirement> extends HardRequirem
         super(elt);
     }
 
-    @objid ("4355df39-6d28-48c1-8737-dfc88b91c1b5")
-    @Override
-    public CDOObject createCamelElt(CDOObject context) {
-        return RequirementFactory.eINSTANCE.createOSRequirement();
-    }
-
     @objid ("64698b38-3c56-4b26-9507-3e1b6d6fe8bf")
     @Override
     public void setProperties(CDOObject elt) {
@@ -28,6 +22,12 @@ public class OSRequirementExporter<T extends OSRequirement> extends HardRequirem
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("4355df39-6d28-48c1-8737-dfc88b91c1b5")
+    @Override
+    public CDOObject createCamelElt(CDOObject context) {
+        return RequirementFactory.eINSTANCE.createOSRequirement();
     }
 
 }
