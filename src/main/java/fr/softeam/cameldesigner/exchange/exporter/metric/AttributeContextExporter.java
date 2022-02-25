@@ -23,6 +23,11 @@ public class AttributeContextExporter<T extends AttributeContext> extends Featur
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.AttributeContext) {
+            camel.metric.AttributeContext context = (camel.metric.AttributeContext) elt;
+            setAttribute(context);
+            setObjectContext(context);
+        }
     }
 
     @objid ("822adfe7-5ba2-44bc-a38c-09225deac7b0")
@@ -33,6 +38,20 @@ public class AttributeContextExporter<T extends AttributeContext> extends Featur
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("a2d294b0-2b3f-4695-ab57-e21619d20577")
+    private void setAttribute(camel.metric.AttributeContext context) {
+        CDOObject att = this._process.getElement(this._element.getAttribute());
+        if ((att != null) &&  (att instanceof camel.core.Attribute))
+            context.setAttribute((camel.core.Attribute) att);
+    }
+
+    @objid ("231cf793-8b85-4134-93ab-2f12b4191b63")
+    private void setObjectContext(camel.metric.AttributeContext context) {
+        CDOObject objContext = this._process.getElement(this._element.getObjectContext());
+        if ((objContext != null) &&  (objContext instanceof camel.metric.ObjectContext))
+            context.setObjectContext((camel.metric.ObjectContext) objContext);
     }
 
 }

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -35,19 +35,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fb9d9a88-d4a0-4e3f-a3de-0a99ce0662d5")
 public class CloudProvider extends Organisation {
-    @objid ("06c81b94-57b1-48c9-bfde-d76d1ad22d12")
+    @objid ("8efcceb2-80d0-4963-b814-ee82b389c164")
     public static final String STEREOTYPE_NAME = "CloudProvider";
 
-    @objid ("ecd64a21-d50f-4861-bf42-5838873c450b")
+    @objid ("516e31d1-23b6-4970-9db4-1f49511ee941")
     public static final String IAAS_TAGTYPE = "IaaS";
 
-    @objid ("e2c04a7b-17e7-45d0-9ca8-f4b8c536b79a")
+    @objid ("30a1618e-62bc-41e4-b80e-56c91265eca0")
     public static final String PAAS_TAGTYPE = "PaaS";
 
-    @objid ("5b7b5531-9bc0-4518-9180-556576343b66")
+    @objid ("4cd580ad-dc57-4daf-a315-dd45189fc273")
     public static final String SAAS_TAGTYPE = "SaaS";
 
-    @objid ("e3456182-da80-495a-9c10-17c126867879")
+    @objid ("0ef8518b-29bd-4781-89b8-cc502a229e41")
     public static final String PUBLIC_TAGTYPE = "public";
 
     /**
@@ -58,7 +58,7 @@ public class CloudProvider extends Organisation {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f149d706-7c7a-4e3e-b2e2-e0519bb8e478")
+    @objid ("99c4a907-0997-44ec-9589-f5972be96e5d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CloudProvider.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class CloudProvider extends Organisation {
      * 
      * @return a {@link CloudProvider} proxy on the created {@link Class}.
      */
-    @objid ("5d0e5672-848a-480e-9cd8-36625b198556")
+    @objid ("9e9b630a-eff0-415c-93e9-a1c06111fde0")
     public static CloudProvider create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CloudProvider.STEREOTYPE_NAME);
@@ -82,7 +82,7 @@ public class CloudProvider extends Organisation {
      * @param obj a Class
      * @return a {@link CloudProvider} proxy or <i>null</i>.
      */
-    @objid ("af0b85fa-302a-4df2-8eaf-fbe40a76d1c8")
+    @objid ("2a44093e-02dc-4916-a1ed-502eac40c231")
     public static CloudProvider instantiate(final Class obj) {
         return CloudProvider.canInstantiate(obj) ? new CloudProvider(obj) : null;
     }
@@ -95,7 +95,7 @@ public class CloudProvider extends Organisation {
      * @return a {@link CloudProvider} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6dbe8689-17eb-4cb2-bda7-e5640a98c790")
+    @objid ("f522daad-ed52-40a7-9201-b8badde4abab")
     public static CloudProvider safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudProvider.canInstantiate(obj))
         	return new CloudProvider(obj);
@@ -103,7 +103,7 @@ public class CloudProvider extends Organisation {
         	throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("54ee63cf-b2a9-4f88-8134-98fad7708297")
+    @objid ("23cad761-45ec-482f-9706-58af4e44b38c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -123,7 +123,7 @@ public class CloudProvider extends Organisation {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("21e83819-7ed3-46df-97e3-d91f978d8628")
+    @objid ("5950074e-e3d3-48de-9576-089a4e58e2bf")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -134,7 +134,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e693f024-6d2f-4763-9ace-ec15d79f21ac")
+    @objid ("cf3c5139-38be-44db-b78c-8b09a1d52609")
     public String getIaaS() {
         return this.elt.getTagValue(CloudProvider.MdaTypes.IAAS_TAGTYPE_ELT);
     }
@@ -144,7 +144,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9fe6323b-d3b0-4d8b-b5fd-ddc3d60f7952")
+    @objid ("4cb178b4-90e5-4d64-823c-f452d29e60da")
     public String getPaaS() {
         return this.elt.getTagValue(CloudProvider.MdaTypes.PAAS_TAGTYPE_ELT);
     }
@@ -154,7 +154,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("85f0b87a-a444-4f36-a61b-81e8839950a6")
+    @objid ("93880625-1cb1-4b46-80a3-885d6a769459")
     public String getPublic() {
         return this.elt.getTagValue(CloudProvider.MdaTypes.PUBLIC_TAGTYPE_ELT);
     }
@@ -164,12 +164,12 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3ce1becd-edac-4dfa-88cf-71c994944c7a")
+    @objid ("b3d95555-86c0-43e5-9d1d-3c6d1ebe0355")
     public String getSaaS() {
         return this.elt.getTagValue(CloudProvider.MdaTypes.SAAS_TAGTYPE_ELT);
     }
 
-    @objid ("b3a14be5-aa04-4c84-a6a2-0938831f700a")
+    @objid ("0ee824e0-8769-46e9-b9bc-67d9f2bc7223")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -180,7 +180,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("92448c08-ad2a-4359-a9c9-012ac3e95207")
+    @objid ("eae6109f-094a-4037-86fd-5888f1beafb8")
     public void setIaaS(final String value) {
         this.elt.putTagValue(CloudProvider.MdaTypes.IAAS_TAGTYPE_ELT, value);
     }
@@ -190,7 +190,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4515441d-cb86-4c3a-a0a7-f8820a0c9239")
+    @objid ("04a6d781-7a06-4e34-a462-c768b1f46841")
     public void setPaaS(final String value) {
         this.elt.putTagValue(CloudProvider.MdaTypes.PAAS_TAGTYPE_ELT, value);
     }
@@ -200,7 +200,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b60fb24e-029d-4a90-a44b-f0423f096983")
+    @objid ("dd9baaca-e10d-43eb-9afa-febf36af39d4")
     public void setPublic(final String value) {
         this.elt.putTagValue(CloudProvider.MdaTypes.PUBLIC_TAGTYPE_ELT, value);
     }
@@ -210,7 +210,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5797ac14-29fe-4696-a585-93ebbffcc01c")
+    @objid ("23f628d0-02fc-42af-992f-104a3c946e01")
     public void setSaaS(final String value) {
         this.elt.putTagValue(CloudProvider.MdaTypes.SAAS_TAGTYPE_ELT, value);
     }
@@ -223,35 +223,35 @@ public class CloudProvider extends Organisation {
         return result;
     }
 
-    @objid ("1f503052-88cc-4eba-b343-31b081e757b7")
+    @objid ("488266c9-44ee-4d35-80f4-7c134ef16d6a")
     protected CloudProvider(final Class elt) {
         super(elt);
     }
 
     @objid ("3a9e1b7d-4edb-4361-aa5d-657d494731fb")
     public static final class MdaTypes {
-        @objid ("d3b07c10-e410-4a7c-9821-c8e0121ff70a")
+        @objid ("2bc86d5f-6f77-4387-89c8-4a45252aafa1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("30401f98-dd3e-4cc4-ae4e-14e6cb75baa6")
+        @objid ("32fb07f9-b576-4ddd-a706-0138fd533696")
         public static TagType PUBLIC_TAGTYPE_ELT;
 
-        @objid ("632fefdc-f66b-4241-b102-add78ee0faca")
+        @objid ("40bf6553-2e6c-476a-9bd4-28928bb48d02")
         public static TagType SAAS_TAGTYPE_ELT;
 
-        @objid ("e7868393-973f-45de-9c0b-152f3ddc1d83")
+        @objid ("180298a9-a2a4-45dc-9a73-656de22ce5c0")
         public static TagType PAAS_TAGTYPE_ELT;
 
-        @objid ("f3a1d87a-82cb-4165-b52f-58f796aebdfa")
+        @objid ("a4f55462-8763-430f-8d5f-e74a3ad4cd17")
         public static TagType IAAS_TAGTYPE_ELT;
 
-        @objid ("6ca61fe5-a493-4bd4-ac62-7d887c115791")
+        @objid ("49d69529-a71e-45af-977c-cbb6d3779a75")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("3ab4511f-23cc-4769-834a-3546cf7ca781")
+        @objid ("355def2a-a439-4aff-bd20-6e1e5f73d1b0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("609aec7c-aba9-426d-8dd1-8b70b4e355a7")
+        @objid ("8d983fce-e428-4f9f-b5f9-df1ec1f2d3f4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "eb3e5683-72bd-4e46-8bda-1ea07af0c09e");
             PUBLIC_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a7b7a414-a54a-45b1-a53e-3126883211b8");

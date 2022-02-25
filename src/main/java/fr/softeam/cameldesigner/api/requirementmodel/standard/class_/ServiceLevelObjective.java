@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -47,7 +47,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c1a7b9fb-e797-4f38-a956-d25268a52f8d")
 public class ServiceLevelObjective extends HardRequirement {
-    @objid ("e930f476-dd8f-43bf-9f7b-080a8331f28b")
+    @objid ("79db571f-7cdf-4791-9eb1-6eae74e8603b")
     public static final String STEREOTYPE_NAME = "ServiceLevelObjective";
 
     /**
@@ -58,7 +58,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2cc7de04-d1ed-4448-8eda-a7213be55ab4")
+    @objid ("d10b4d18-5ed2-4bf0-b986-35935b7bfe42")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ServiceLevelObjective.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * 
      * @return a {@link ServiceLevelObjective} proxy on the created {@link Class}.
      */
-    @objid ("053317a2-6b20-4231-aaa4-069c0b1b122b")
+    @objid ("6617831b-fcfc-4196-95b6-9a8a401c944e")
     public static ServiceLevelObjective create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ServiceLevelObjective.STEREOTYPE_NAME);
@@ -82,7 +82,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * @param obj a Class
      * @return a {@link ServiceLevelObjective} proxy or <i>null</i>.
      */
-    @objid ("bb3947eb-9645-4a95-b1fe-edad6aae7c60")
+    @objid ("ff530303-d940-401a-99c5-1a6a1920d8cb")
     public static ServiceLevelObjective instantiate(final Class obj) {
         return ServiceLevelObjective.canInstantiate(obj) ? new ServiceLevelObjective(obj) : null;
     }
@@ -95,7 +95,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * @return a {@link ServiceLevelObjective} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("54dc6e62-dc47-4a1e-b3f2-ac926952daf0")
+    @objid ("8d1d5b7e-b988-47e0-9fa9-0557361f8771")
     public static ServiceLevelObjective safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ServiceLevelObjective.canInstantiate(obj))
         	return new ServiceLevelObjective(obj);
@@ -103,7 +103,7 @@ public class ServiceLevelObjective extends HardRequirement {
         	throw new IllegalArgumentException("ServiceLevelObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("7f0fc8da-c22a-4519-8de0-1707266fe06c")
+    @objid ("92ae9c6b-dfc3-4b51-a519-c65db870ae90")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -125,7 +125,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * null
      * 
      */
-    @objid ("f062f1c9-efa1-4147-bd36-7755a46ccb92")
+    @objid ("94212130-6412-4008-9ec7-78c9429a0594")
     public CamelConstraint getConstraint() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ServiceLevelObjective.MdaTypes.MDAASSOCDEP)
@@ -149,7 +149,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("fda875aa-1875-452d-bd70-b46e06e3e451")
+    @objid ("ac3c66a4-01bd-4933-a010-14873ca545b5")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -161,7 +161,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * null
      * 
      */
-    @objid ("f385bd85-d21c-4727-8254-0bcfbe502389")
+    @objid ("f3e13f4d-9f8c-42e3-9e8f-d48d264116c4")
     public Event getViolationEvent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ServiceLevelObjective.MdaTypes.MDAASSOCDEP)
@@ -179,7 +179,7 @@ public class ServiceLevelObjective extends HardRequirement {
         return null;
     }
 
-    @objid ("de0f36b6-e34e-4603-b6cd-c8248537eb9b")
+    @objid ("f6a9eddf-418e-426c-9dc9-7ab496297f15")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -191,7 +191,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * null
      * 
      */
-    @objid ("7cdd39e5-4b7a-4479-97ef-27661eeb7ea9")
+    @objid ("c46ffa60-0065-479e-9e35-6b6749670b99")
     public void setConstraint(final CamelConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -217,7 +217,7 @@ public class ServiceLevelObjective extends HardRequirement {
      * null
      * 
      */
-    @objid ("f0898a99-fef3-4e58-abb1-a98acd71b31a")
+    @objid ("4146f426-948f-4f3c-8356-f03f0e3240e1")
     public void setViolationEvent(final Event obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -245,23 +245,23 @@ public class ServiceLevelObjective extends HardRequirement {
         return result;
     }
 
-    @objid ("98d699e6-e915-4e63-b4f4-fc0bd55a6af4")
+    @objid ("9c0a00ca-c452-4b94-add5-42ce3d143171")
     protected ServiceLevelObjective(final Class elt) {
         super(elt);
     }
 
     @objid ("798dc94a-b673-4408-9cfc-a760eac81e13")
     public static final class MdaTypes {
-        @objid ("c372b502-17a5-461b-bfa2-3dbadbea5246")
+        @objid ("4b9561eb-1497-48b3-ac16-0d11f84d2d95")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3456e1c4-dae9-43d7-8dce-01133f6ec225")
+        @objid ("90dd7962-1313-4599-976e-2d8a1d2dedcc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f1c79625-e48c-437e-a07e-944ca4791fdd")
+        @objid ("a8844161-284c-4a12-b680-da99890d7603")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("58ea30c8-632d-4492-be6d-990abbd97f89")
+        @objid ("4f0a5e8e-a738-42e1-ad83-714172f469e8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "72de5d29-7d68-48f4-a3ac-eace289da2c6");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

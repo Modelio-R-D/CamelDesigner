@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f5103c3d-e058-41f9-b48b-a3555f8f176c")
 public class PaaSRequirement extends HardRequirement {
-    @objid ("e6dffedb-9832-413e-b81e-3316391f8add")
+    @objid ("9f7b6156-45ee-45b9-a05b-052a78758a60")
     public static final String STEREOTYPE_NAME = "PaaSRequirement";
 
     /**
@@ -47,7 +47,7 @@ public class PaaSRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("aced546a-7a69-4a11-a6fc-e6d3539efc7c")
+    @objid ("5953d5c7-59d9-4bdb-b21f-866f04bc31f7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaSRequirement.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class PaaSRequirement extends HardRequirement {
      * 
      * @return a {@link PaaSRequirement} proxy on the created {@link Class}.
      */
-    @objid ("1df655b6-2d42-4ed7-9760-9f1c127214d3")
+    @objid ("993f3f87-32a2-433c-8660-0673928cc16d")
     public static PaaSRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PaaSRequirement.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class PaaSRequirement extends HardRequirement {
      * @param obj a Class
      * @return a {@link PaaSRequirement} proxy or <i>null</i>.
      */
-    @objid ("866d396f-7435-4f2d-b1eb-0ca3f66448d8")
+    @objid ("0a21992f-5859-4211-8e3e-b69882447321")
     public static PaaSRequirement instantiate(final Class obj) {
         return PaaSRequirement.canInstantiate(obj) ? new PaaSRequirement(obj) : null;
     }
@@ -84,7 +84,7 @@ public class PaaSRequirement extends HardRequirement {
      * @return a {@link PaaSRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("91bc9d9c-25e5-4eea-98f7-7760e43b1fa0")
+    @objid ("b815b770-7ab2-4fc7-9c4f-aa653d2a2cc4")
     public static PaaSRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PaaSRequirement.canInstantiate(obj))
         	return new PaaSRequirement(obj);
@@ -92,7 +92,7 @@ public class PaaSRequirement extends HardRequirement {
         	throw new IllegalArgumentException("PaaSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9f833de7-6c56-445c-a0ea-781595710879")
+    @objid ("7d619683-094b-4265-abde-7e6ebc4534c7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class PaaSRequirement extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("820206f3-ffd5-42e1-bbfe-8a315e9aee39")
+    @objid ("26965e17-8bf9-4a90-8631-31448fe31b8b")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("6382a3a2-1441-43b5-aced-363041d1ec2e")
+    @objid ("a7b5131b-9578-4b1d-afe7-82c36764632d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class PaaSRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("74054357-a753-4d87-8541-7ecb69572ac5")
+    @objid ("be769aba-efae-405c-b740-8a250d29e66a")
     protected PaaSRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("f1ab105f-3a9a-4d24-8c32-5dd406174ad0")
     public static final class MdaTypes {
-        @objid ("c2025a29-fbe7-4b5c-ab4e-d11824112386")
+        @objid ("bc14724f-d5e1-4baa-b63b-d1664681cfea")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("298ec066-ee97-4f50-a8a2-9e04a72b72dc")
+        @objid ("34362e7b-cbd7-43b1-9350-c556efba3835")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fe38759f-ba06-4f32-8166-39bf3aa6e357")
+        @objid ("1018b7bd-0973-4ffe-8c31-5d4cc817aa75")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e24d0952-8748-483f-a4ef-9eaee00fe9bf")
+        @objid ("dc5c3150-f62e-4a2a-8ad2-4ca03c131d41")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1b4b9489-ad62-4a1b-be52-900e21e7f441");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

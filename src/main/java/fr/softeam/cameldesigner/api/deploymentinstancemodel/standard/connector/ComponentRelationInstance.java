@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fe63e6e1-a973-4acb-910b-2f0927d76eb1")
 public abstract class ComponentRelationInstance extends FeatureConnector {
-    @objid ("a781f395-29d2-4a42-9f74-b617d66bea17")
+    @objid ("b81c5613-3f86-4312-b928-9712ec068187")
     public static final String STEREOTYPE_NAME = "ComponentRelationInstance";
 
     /**
@@ -47,12 +47,12 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7b8792b3-1b53-4e61-83d9-bd4c231fa1f2")
+    @objid ("71efd8f3-3771-455f-8aa6-ad3a82cc05e8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ComponentRelationInstance.STEREOTYPE_NAME));
     }
 
-    @objid ("4ecb54e7-2b3a-4d7b-abf7-60801c161544")
+    @objid ("ce5930b5-46dc-4be6-8a1f-d27e342595b8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,13 +72,13 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
      * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("1e9220c0-1070-4a12-877f-1a8038fdd7e5")
+    @objid ("683e4a20-70d4-4b17-8b8b-ee59fedef1db")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
     }
 
-    @objid ("af3cf7a7-9ebf-4406-9e2a-4f340451d623")
+    @objid ("810d1c7b-7028-4aa0-86de-e07d26c9e96c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +92,23 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
         return result;
     }
 
-    @objid ("c07dde77-8cfd-4bb7-b06a-1b935e07411b")
+    @objid ("ac34f1e6-b584-4651-80ca-742c5863b3e2")
     protected ComponentRelationInstance(final Connector elt) {
         super(elt);
     }
 
     @objid ("d927b287-6b8d-4d81-8f18-9bc21a636dd4")
     public static final class MdaTypes {
-        @objid ("a7c41493-96f2-4693-a40e-a7431f5f5291")
+        @objid ("492313a5-7260-4e80-8c12-aeb5ed766803")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("fdaf154a-ab29-48d1-8aaf-6d274fce4f70")
+        @objid ("948c285a-8a69-4b9e-92b3-1085cf419323")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6b5687a2-b211-4066-8a33-538126fb1a05")
+        @objid ("b393b9ad-682a-41d2-b82e-e4735ac39e46")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8f2c7db1-01fd-427a-a087-64e623521118")
+        @objid ("c57576a5-92e8-4a16-8925-218ef5c90ff1")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b055b982-4854-4f90-adad-1833553f489e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

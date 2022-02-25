@@ -29,13 +29,18 @@ public class MetricInstanceExporter<T extends MetricInstance> extends FeatureIns
             camel.metric.MetricInstance mi = (camel.metric.MetricInstance) elt;
             setObjectBinding(mi);
             setMetricContext(mi);
+            setComposingMetricInstances(mi);
         }
     }
 
     @objid ("578679c5-520a-4110-aeb3-9e3284d29ed1")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricInstanceModel) && (elt instanceof camel.metric.MetricInstance)) {
+            ((camel.metric.MetricInstanceModel) context).getMetricInstances().add((camel.metric.MetricInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
     @objid ("0b436703-7136-4aaa-85cf-6c123858d66e")
@@ -55,7 +60,7 @@ public class MetricInstanceExporter<T extends MetricInstance> extends FeatureIns
     @objid ("b310f071-0606-4838-ab38-c5d472c7bbba")
     private void setComposingMetricInstances(camel.metric.MetricInstance mi) {
         List<camel.metric.MetricInstance> metricInstances = new ArrayList<>();
-        for (MetricInstance cmi : this._element.getCompositngMetricInstances()) {
+        for (MetricInstance cmi : this._element.getComposingMetricInstances()) {
             CDOObject camelMI = this._process.getElement(cmi);
             if ((camelMI != null) &&  (camelMI instanceof camel.metric.MetricInstance))
                 metricInstances.add((camel.metric.MetricInstance) camelMI);

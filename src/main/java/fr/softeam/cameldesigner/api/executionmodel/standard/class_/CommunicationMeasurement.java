@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("edb868dc-4070-4b7f-8e36-da2647d6198a")
 public class CommunicationMeasurement extends Measurement {
-    @objid ("5fdbdb04-73e1-4e61-a26f-42dbd0806eb7")
+    @objid ("a685cce3-4812-400f-a131-b363300638f5")
     public static final String STEREOTYPE_NAME = "CommunicationMeasurement";
 
     /**
@@ -48,7 +48,7 @@ public class CommunicationMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("af27675f-46ae-432c-9fc3-322aa9ce790f")
+    @objid ("b2255961-3bbe-4078-9cb1-e257e4e17180")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationMeasurement.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class CommunicationMeasurement extends Measurement {
      * 
      * @return a {@link CommunicationMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("d770440c-acf9-46fc-b29d-05b8e07099ed")
+    @objid ("51aeb58a-76f8-4c7b-a472-70c91be1e030")
     public static CommunicationMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationMeasurement.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class CommunicationMeasurement extends Measurement {
      * @param obj a Class
      * @return a {@link CommunicationMeasurement} proxy or <i>null</i>.
      */
-    @objid ("846d57c2-2717-4e3a-af3c-8b1790f46275")
+    @objid ("76945dc4-7c9e-4f70-9454-77a9e68987e4")
     public static CommunicationMeasurement instantiate(final Class obj) {
         return CommunicationMeasurement.canInstantiate(obj) ? new CommunicationMeasurement(obj) : null;
     }
@@ -85,7 +85,7 @@ public class CommunicationMeasurement extends Measurement {
      * @return a {@link CommunicationMeasurement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f83d892e-6e17-4029-9dd9-283714cb6cd0")
+    @objid ("7890ae19-e085-4be9-8eef-0720b4eaaf17")
     public static CommunicationMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CommunicationMeasurement.canInstantiate(obj))
         	return new CommunicationMeasurement(obj);
@@ -93,7 +93,7 @@ public class CommunicationMeasurement extends Measurement {
         	throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a0a1cc2a-3054-41cb-81bd-c11912228d3d")
+    @objid ("8633a8e1-cc81-4070-b66b-c5b8963f04dc")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class CommunicationMeasurement extends Measurement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("6ce35901-f556-4b2a-ae80-cba0abd3ac2d")
+    @objid ("c2b0176d-7836-4b2f-8875-9cbaf4ec1ee5")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -125,7 +125,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("9c4c3edd-1269-465d-86c0-a5cf37edccc7")
+    @objid ("b6b7233f-4a84-4922-8ac1-eb8a421d5853")
     public VM getSourceVM() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -143,7 +143,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("22c1ff04-dfa9-4acc-9af5-83f1081849ce")
+    @objid ("1b6de0d7-cf66-422f-8b9e-f9e05ae7d235")
     public VMInstance getSourceVMInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -161,7 +161,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("45b3e13b-fdcc-4e6e-ac41-4ed713ee98fc")
+    @objid ("28fc280b-2eb1-4be4-9b4b-46543139596e")
     public VM getTargetVM() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -179,7 +179,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("cc5ddfc7-3289-44fe-8287-71b5651a1c8d")
+    @objid ("865bc71e-ecb0-4e0a-9d0c-57f78a4683db")
     public VMInstance getTargetVMInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationMeasurement.MdaTypes.MDAASSOCDEP)
@@ -191,7 +191,7 @@ public class CommunicationMeasurement extends Measurement {
         return null;
     }
 
-    @objid ("3fc8336f-ef78-4d2c-93c3-c052c3b01667")
+    @objid ("f39b1d9d-6567-4942-965c-0dd243c19620")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -203,7 +203,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("97110c89-3744-400e-a9f6-935d08cfabf7")
+    @objid ("519c8914-ea41-4d49-9a23-88fe9acc0ec4")
     public void setSourceVM(final VM obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -229,7 +229,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("6e6bb5d3-27bf-434e-805b-0ed21b3f6e3c")
+    @objid ("7abd3416-5dde-48cb-85b1-6eb68374549e")
     public void setSourceVMInstance(final VMInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -255,7 +255,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("a9984279-a8eb-4009-b48a-070ddb523ab8")
+    @objid ("ae9f2397-a4ba-4313-8c35-918da0b80fae")
     public void setTargetVM(final VM obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -281,7 +281,7 @@ public class CommunicationMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("5663eed7-01e1-4cc5-a814-2270a506e35d")
+    @objid ("558d2cb5-315f-43a7-ab35-5f2e096d803a")
     public void setTargetVMInstance(final VMInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -309,23 +309,23 @@ public class CommunicationMeasurement extends Measurement {
         return result;
     }
 
-    @objid ("bc68682b-c76d-4372-b460-4fb425be4586")
+    @objid ("3b116721-57a4-4b42-9c35-3ddb16baef8f")
     protected CommunicationMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("2bc724e6-be76-4f04-8dd1-ded2cd7a4cf6")
     public static final class MdaTypes {
-        @objid ("734be1cc-1d50-4188-bba4-e934d77c1820")
+        @objid ("728db0d7-d3aa-4b1b-af68-9430bb7e2f1d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("07c7a729-2920-468b-a072-04abc390db8f")
+        @objid ("19c5459f-6838-4a10-aff6-a2381e71ca13")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("dd5a1025-45ac-4dcc-82b6-e0a0bcb2492e")
+        @objid ("d0577aeb-43ba-494d-b378-aa825f3c1dca")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ffb15aad-d0c2-467e-ac1c-a883a8d8fef6")
+        @objid ("7dd2d6b4-e5e2-4642-a41e-fd23b085b766")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "438c005e-3455-4a76-ba8b-3791473a3e5a");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

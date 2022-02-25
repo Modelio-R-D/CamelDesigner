@@ -23,12 +23,35 @@ public class MetricObjectBindingExporter<T extends MetricObjectBinding> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.MetricObjectBinding) {
+            camel.metric.MetricObjectBinding mob = (camel.metric.MetricObjectBinding) elt;
+            setExecutionModel(mob);
+            setComponentInstance(mob);
+        }
     }
 
     @objid ("5d99b341-8151-4b1c-a2ba-c7a1cc218086")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.metric.MetricInstanceModel) && (elt instanceof camel.metric.MetricObjectBinding)) {
+            ((camel.metric.MetricInstanceModel) context).getBindings().add((camel.metric.MetricObjectBinding) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("2ac48207-005c-498b-ab4d-3b95bf1b430f")
+    private void setExecutionModel(camel.metric.MetricObjectBinding mob) {
+        CDOObject model = this._process.getElement(this._element.getExecutionModel());
+        if ((model != null) &&  (model instanceof camel.execution.ExecutionModel))
+            mob.setExecutionModel((camel.execution.ExecutionModel) model);
+    }
+
+    @objid ("f7da6ae9-41f3-4a34-bbd5-4a1546db4c4f")
+    private void setComponentInstance(camel.metric.MetricObjectBinding mob) {
+        CDOObject comp = this._process.getElement(this._element.getComponentInstance());
+        if ((comp != null) &&  (comp instanceof camel.deployment.ComponentInstance))
+            mob.setComponentInstance((camel.deployment.ComponentInstance) comp);
     }
 
 }

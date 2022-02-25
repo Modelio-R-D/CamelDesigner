@@ -23,6 +23,11 @@ public class SensorExporter<T extends Sensor> extends SoftwareComponentExporter<
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.Sensor) {
+            camel.metric.Sensor sensor = (camel.metric.Sensor) elt;
+            setConfiguration(sensor);
+            setIsPush(sensor);
+        }
     }
 
     @objid ("559125d2-cb81-4b31-a967-a94d6f1c9808")
@@ -33,6 +38,16 @@ public class SensorExporter<T extends Sensor> extends SoftwareComponentExporter<
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("1200f829-58dd-4c31-ac75-60d8066d17dd")
+    private void setIsPush(camel.metric.Sensor sensor) {
+        sensor.setIsPush(Boolean.valueOf(this._element.isIsPush()));
+    }
+
+    @objid ("8f8cb6e5-7067-4ed3-88b6-5cc716d0c845")
+    private void setConfiguration(camel.metric.Sensor sensor) {
+        sensor.setConfiguration(this._element.getConfiguration());
     }
 
 }

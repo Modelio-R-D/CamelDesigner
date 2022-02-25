@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("dddfb99b-2d25-4bf8-a552-181e1549079a")
 public class PaaSInstance extends ComponentInstance {
-    @objid ("2d1b1313-7ec3-4db7-8534-2f5b8f927b69")
+    @objid ("89ced0d7-49a3-406e-a4c3-7e52b4d00c4c")
     public static final String STEREOTYPE_NAME = "PaaSInstance";
 
     /**
@@ -47,7 +47,7 @@ public class PaaSInstance extends ComponentInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("53242cf4-7af2-46ec-a612-fa5da5b3e8c7")
+    @objid ("b749c7ae-9c38-4420-9dd9-121b241f2a8d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaSInstance.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class PaaSInstance extends ComponentInstance {
      * 
      * @return a {@link PaaSInstance} proxy on the created {@link Instance}.
      */
-    @objid ("a2c649df-81ea-46a7-87cd-b1ac6b595e02")
+    @objid ("59ceb31c-5158-49ae-bdef-020bccec539d")
     public static PaaSInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PaaSInstance.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class PaaSInstance extends ComponentInstance {
      * @param obj a Instance
      * @return a {@link PaaSInstance} proxy or <i>null</i>.
      */
-    @objid ("1d605885-a38e-4272-8c11-7f5c8196fe8e")
+    @objid ("52cfb1d5-6509-4335-a431-ae159aed2b98")
     public static PaaSInstance instantiate(final Instance obj) {
         return PaaSInstance.canInstantiate(obj) ? new PaaSInstance(obj) : null;
     }
@@ -84,7 +84,7 @@ public class PaaSInstance extends ComponentInstance {
      * @return a {@link PaaSInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5bf2aa63-bb67-440c-acf4-319a74dc20a4")
+    @objid ("409b4ed6-9845-47f1-88d4-df90c975816d")
     public static PaaSInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (PaaSInstance.canInstantiate(obj))
         	return new PaaSInstance(obj);
@@ -92,7 +92,7 @@ public class PaaSInstance extends ComponentInstance {
         	throw new IllegalArgumentException("PaaSInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("424d966c-8325-4fd4-b481-a80cdfb7c2f2")
+    @objid ("ccd2b5b6-9886-4e40-978d-bcedabb41d47")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,7 +112,7 @@ public class PaaSInstance extends ComponentInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("88c6bb85-db2e-4831-ad67-160c80e80f5a")
+    @objid ("cb790160-2bcd-4188-affa-0533b96f2024")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -124,12 +124,12 @@ public class PaaSInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("0286dd61-bbf7-4e04-b2d7-b0987bbfa161")
+    @objid ("0d2f7450-d992-4731-8f0b-2bf96270fe82")
     public DeploymentInstanceModel getParent() {
         return (DeploymentInstanceModel)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getOwner(), DeploymentInstanceModel.STEREOTYPE_NAME);
     }
 
-    @objid ("ad042210-9a2e-43b4-8523-aeffb70c1845")
+    @objid ("f2b1d7d8-81e0-4eaf-881f-0ae323076f6f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -141,7 +141,7 @@ public class PaaSInstance extends ComponentInstance {
      * null
      * 
      */
-    @objid ("80c6170e-533e-45f2-a44f-57e549f68828")
+    @objid ("a46b885a-9fec-44bf-b692-5df00af12a5c")
     public void setParent(final DeploymentInstanceModel obj) {
         ((Instance) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -154,23 +154,23 @@ public class PaaSInstance extends ComponentInstance {
         return result;
     }
 
-    @objid ("5e144e5f-771b-4a83-a14d-7fd824441127")
+    @objid ("d550b3ca-7329-47d4-a02c-c9dffe7ae186")
     protected PaaSInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("387fa399-3754-4069-9e53-4383d23163dc")
     public static final class MdaTypes {
-        @objid ("376a2f3f-9991-4bdd-8d90-40557ccb280f")
+        @objid ("78b0a569-5b58-475b-a7a4-a8825c501735")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a4d52815-c3d7-4d3e-b525-efbe3c5c2aff")
+        @objid ("068b455d-a9e7-43e3-9177-25a23ff50e10")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("33f10fae-51d4-49ec-b82d-4084c83c777c")
+        @objid ("ad25dc1b-0524-4373-b080-dd627e4cd508")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d01ce030-37fb-4947-a5f0-b2b03189fc00")
+        @objid ("9142cb6b-64e7-4a88-98c0-0b89cf556df2")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8d6e2b24-ed30-4aad-9c44-39b18b4c76d8");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

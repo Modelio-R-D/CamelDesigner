@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
@@ -35,10 +35,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("539e2a12-8c48-42f5-9783-5248ca11085c")
 public abstract class SoftRequirement extends Requirement {
-    @objid ("89319d20-ae17-422f-bf68-636956845d29")
+    @objid ("3f39de99-d3db-4ba3-889f-05a26b5714f6")
     public static final String STEREOTYPE_NAME = "SoftRequirement";
 
-    @objid ("5723def7-d4ce-483c-8aa6-bc9ba79c03cc")
+    @objid ("59f2cf16-dc93-43a0-9f0f-9131ade7c5f6")
     public static final String PRIORITY_TAGTYPE = "priority";
 
     /**
@@ -49,12 +49,12 @@ public abstract class SoftRequirement extends Requirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1e870764-1ba7-4fd5-8f80-2981ff6a06a2")
+    @objid ("e2773cd1-3051-466d-8684-08680bdd50ba")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof GeneralClass) && ((GeneralClass) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftRequirement.STEREOTYPE_NAME));
     }
 
-    @objid ("a615587f-7279-49bc-ac76-ae3cee7c816b")
+    @objid ("5591a826-f83a-4a6d-bc3d-4a1192a90243")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -74,7 +74,7 @@ public abstract class SoftRequirement extends Requirement {
      * Get the underlying {@link GeneralClass}. 
      * @return the GeneralClass represented by this proxy, never null.
      */
-    @objid ("3468ffcc-4bac-454a-8c04-e4e22e968112")
+    @objid ("9ae2cadf-53f6-4292-a3a7-26d6a656f82c")
     @Override
     public GeneralClass getElement() {
         return (GeneralClass)super.getElement();
@@ -85,12 +85,12 @@ public abstract class SoftRequirement extends Requirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1bae7ee6-6ea3-47ce-bf72-9da97140705d")
+    @objid ("ae8cbce0-864a-40e4-a1bd-46f105236a1f")
     public String getPriority() {
         return this.elt.getTagValue(SoftRequirement.MdaTypes.PRIORITY_TAGTYPE_ELT);
     }
 
-    @objid ("1f1c33e9-fd7f-490f-bbfc-538f2e5b547a")
+    @objid ("513ae392-b2b9-4c8b-97fb-79922ab6cd37")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -101,7 +101,7 @@ public abstract class SoftRequirement extends Requirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1d3eec21-9761-405a-ab4d-58bf8373faa3")
+    @objid ("68415974-895e-4ff6-8889-a11ded91fe65")
     public void setPriority(final String value) {
         this.elt.putTagValue(SoftRequirement.MdaTypes.PRIORITY_TAGTYPE_ELT, value);
     }
@@ -114,26 +114,26 @@ public abstract class SoftRequirement extends Requirement {
         return result;
     }
 
-    @objid ("475f57f5-a7b7-4f59-9d3d-6b790d487ae7")
+    @objid ("b51a31d6-f021-49bf-8cdc-9b1d66dc7566")
     protected SoftRequirement(final GeneralClass elt) {
         super(elt);
     }
 
     @objid ("e11f1b31-a2cb-4b0a-a55c-c134d2473491")
     public static final class MdaTypes {
-        @objid ("76a6da5d-df87-4159-87c6-7c37aab20b32")
+        @objid ("34364497-debb-487e-af72-b620b61c180d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9cbfc03f-2d17-4c34-abbb-8b006bf04eef")
+        @objid ("ef748730-2c52-41b5-ac6b-a082aac7056f")
         public static TagType PRIORITY_TAGTYPE_ELT;
 
-        @objid ("0d6879dd-6493-45fa-b30c-ff476a78aefb")
+        @objid ("363e9593-ea95-4f0f-857e-6040f79c5970")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("14bd926a-60bb-4598-939e-a8dc567f9fe2")
+        @objid ("4c6aa481-7311-40bb-9ddd-5f09c836dfa2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("37fb71b8-0621-495a-b71d-bd13afb75a2c")
+        @objid ("9a9d9969-3f91-4187-966e-618ad0c1e508")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fc1abdeb-e2fa-4a04-9253-4e15a223bce2");
             PRIORITY_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1f38e006-1584-4036-8ddc-f39a5b607306");

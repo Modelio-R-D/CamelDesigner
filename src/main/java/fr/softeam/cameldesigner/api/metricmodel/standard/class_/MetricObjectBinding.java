@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -43,7 +43,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f5340f1c-c3cf-49b5-938b-4ac6b35cbc07")
 public class MetricObjectBinding extends FeatureClass {
-    @objid ("b5b95999-24a8-499c-bd25-730c504ffe0d")
+    @objid ("5f843e51-2852-4fe7-a7df-dfe2701a7335")
     public static final String STEREOTYPE_NAME = "MetricObjectBinding";
 
     /**
@@ -54,7 +54,7 @@ public class MetricObjectBinding extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1373ec85-86a8-48d1-8d5c-693ebbb6e41f")
+    @objid ("a7fed476-c5b3-479d-82c6-7ff3786bb08b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricObjectBinding.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class MetricObjectBinding extends FeatureClass {
      * 
      * @return a {@link MetricObjectBinding} proxy on the created {@link Class}.
      */
-    @objid ("b47d843a-52b6-4f30-beb2-0ace20b84f19")
+    @objid ("d2d89462-8bfc-4cec-9f67-69b852212e85")
     public static MetricObjectBinding create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricObjectBinding.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class MetricObjectBinding extends FeatureClass {
      * @param obj a Class
      * @return a {@link MetricObjectBinding} proxy or <i>null</i>.
      */
-    @objid ("39263293-56a8-4e42-a6d3-4ae3747357e8")
+    @objid ("ed2f7cfb-10ac-4cb2-8ee9-81d72bc598ab")
     public static MetricObjectBinding instantiate(final Class obj) {
         return MetricObjectBinding.canInstantiate(obj) ? new MetricObjectBinding(obj) : null;
     }
@@ -91,7 +91,7 @@ public class MetricObjectBinding extends FeatureClass {
      * @return a {@link MetricObjectBinding} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("be81434e-82a5-4e08-a5ea-a275b4c8b960")
+    @objid ("60d05b65-f4a4-408f-ac7e-006864389853")
     public static MetricObjectBinding safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricObjectBinding.canInstantiate(obj))
         	return new MetricObjectBinding(obj);
@@ -99,7 +99,7 @@ public class MetricObjectBinding extends FeatureClass {
         	throw new IllegalArgumentException("MetricObjectBinding: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("184b1f8a-a192-4120-b286-59818af021db")
+    @objid ("a09ddc55-d844-46aa-acbc-fd091d0aa11b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,7 +121,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("9cd365fa-ac8e-4975-8f64-86ee22ed5a81")
+    @objid ("0d4da0be-736e-4fe3-a970-736683af941f")
     public CommunicationInstance getCommunicationInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricObjectBinding.MdaTypes.MDAASSOCDEP)
@@ -139,7 +139,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("8fa7c17c-6c6d-42d5-bab0-433754a90e76")
+    @objid ("17507588-c806-4913-b974-8521b7211027")
     public ComponentInstance getComponentInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricObjectBinding.MdaTypes.MDAASSOCDEP)
@@ -161,7 +161,7 @@ public class MetricObjectBinding extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e6b1a11f-ea45-4d9d-8151-6b3ff2482614")
+    @objid ("64a76d47-af44-4172-9f86-3172c5d4c8e2")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -173,7 +173,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("b565fd3c-207a-4b6e-9dc9-c0abc531594b")
+    @objid ("8125baac-6a0b-4fa2-9cb1-74dee0858d45")
     public ExecutionModel getExecutionModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricObjectBinding.MdaTypes.MDAASSOCDEP)
@@ -185,7 +185,7 @@ public class MetricObjectBinding extends FeatureClass {
         return null;
     }
 
-    @objid ("791d1938-0335-4d3b-ac95-80753fc30f4c")
+    @objid ("9ee07a9c-0c38-4782-bce1-7a5de6c7281e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -197,7 +197,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("c712076e-4490-4901-9734-b8ec2fe82629")
+    @objid ("809c1482-621e-449f-b24f-795e0ac20980")
     public void setCommunicationInstance(final CommunicationInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -223,7 +223,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("ae95c6ea-8846-4222-8b3c-227353c82d03")
+    @objid ("b89f8b2b-fdb1-41ef-a8b3-73cfcbc4aab2")
     public void setComponentInstance(final ComponentInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -249,7 +249,7 @@ public class MetricObjectBinding extends FeatureClass {
      * null
      * 
      */
-    @objid ("d7fc0dd4-bf6b-4746-b418-79d3ae6ee91d")
+    @objid ("58608dea-c1a5-439e-a627-284f7fd9b3ae")
     public void setExecutionModel(final ExecutionModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -277,23 +277,23 @@ public class MetricObjectBinding extends FeatureClass {
         return result;
     }
 
-    @objid ("52068778-3845-41a7-af46-6bfa91d8a999")
+    @objid ("2e1da044-8896-4699-b836-888afc5280dc")
     protected MetricObjectBinding(final Class elt) {
         super(elt);
     }
 
     @objid ("272f62f0-81e6-49eb-82ae-aabe9b0a0678")
     public static final class MdaTypes {
-        @objid ("6cd1b1ae-8bfd-4bad-a077-ea87dd813daa")
+        @objid ("8cc061b8-2842-49c3-8d74-2f8c24d21bf3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0c9043eb-4c47-4e73-a94e-79b810ba6948")
+        @objid ("e39fce97-2bd0-4618-8cbf-f2c284e19b0f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ebef1c83-3822-493c-a313-35998d76799c")
+        @objid ("b27a81b2-af87-4b67-b791-e43832774396")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1f367e3d-983e-4539-981c-8a0f97a7fa59")
+        @objid ("18fac52b-d2bf-4ffd-935a-bfa3cb641d6c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "53d4e08f-3c02-461e-91e7-e2adf292b0c2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

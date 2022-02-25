@@ -23,6 +23,11 @@ public class FunctionExporter<T extends Function> extends FeatureExporter<T> {
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.Function) {
+            camel.metric.Function function = (camel.metric.Function) elt;
+            setExpression(function);
+            setArguments(function);
+        }
     }
 
     @objid ("bd966468-f336-44da-88a4-78b5e0a52240")
@@ -33,6 +38,16 @@ public class FunctionExporter<T extends Function> extends FeatureExporter<T> {
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("80139c55-936e-495e-b571-51884fe61397")
+    private void setArguments(camel.metric.Function function) {
+        function.getArguments().addAll(this._element.getArguments());
+    }
+
+    @objid ("3148cdd2-6a27-4756-8fed-978f3ea919ec")
+    private void setExpression(camel.metric.Function function) {
+        function.setExpression(this._element.getExpression());
     }
 
 }

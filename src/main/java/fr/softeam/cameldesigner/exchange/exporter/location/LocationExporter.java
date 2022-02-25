@@ -22,12 +22,20 @@ public abstract class LocationExporter<T extends Location> extends FeatureEnumer
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.location.Location) {
+            setId((camel.location.Location) elt);
+        }
     }
 
     @objid ("fca643f2-87e4-44ff-a6dc-cfd383fc2284")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("926b20f4-7279-4e89-994a-f02d596c3ce7")
+    private void setId(camel.location.Location elt) {
+        elt.setId(this._element.getId());
     }
 
 }

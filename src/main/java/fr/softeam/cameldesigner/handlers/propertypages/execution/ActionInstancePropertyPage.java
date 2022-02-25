@@ -39,14 +39,14 @@ public class ActionInstancePropertyPage<T extends ActionInstance> extends Featur
             break;
         
         case 3 :
-            this._element.setSuccessful(value);
+            this._element.setSuccessful(Boolean.valueOf(value));
             break;
         
         case 4 :
             ModelElement elt = getModelElt(this._action, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Action.STEREOTYPE_NAME)) {
                 this._element.setAction((Action) elt);
-            }            
+            }
             break;
         }
         
@@ -66,7 +66,7 @@ public class ActionInstancePropertyPage<T extends ActionInstance> extends Featur
         
         table.addProperty("Start Time",  getValue(this._element.getStartTime()));
         table.addProperty("End Time",  getValue(this._element.getEndTime()));
-        table.addProperty("Successful",  getValue(this._element.getSuccessful()));
+        table.addProperty("Successful",  this._element.isSuccessful());
         
         
         this._action = CamelDesignerAbstractProxy.getActions();

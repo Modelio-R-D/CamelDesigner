@@ -22,6 +22,10 @@ public abstract class MetricExporter<T extends Metric> extends FeatureExporter<T
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.Metric) {
+            camel.metric.Metric metric = (camel.metric.Metric) elt;
+            setMetricTemplate(metric);
+        }
     }
 
     @objid ("d8cb3b4c-17d2-41c6-9bfd-303700c2ef6f")
@@ -32,6 +36,13 @@ public abstract class MetricExporter<T extends Metric> extends FeatureExporter<T
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("d79cf6fa-feb1-456d-87f8-ed436e877c83")
+    private void setMetricTemplate(camel.metric.Metric metric) {
+        CDOObject mt = this._process.getElement(this._element.getMetricTemplate());
+        if ((mt != null) &&  (mt instanceof camel.metric.MetricTemplate))
+            metric.setMetricTemplate((camel.metric.MetricTemplate) mt);
     }
 
 }

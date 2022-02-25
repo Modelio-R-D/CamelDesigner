@@ -1173,7 +1173,7 @@
                         name="expression" parameter-card="1" uid="8e19ff42-15d1-4aa8-b24d-934d6c6f8774"/>
                     <TagType is-hidden="false" is-signed="false"
                         label="%tagtype.arguments.label"
-                        name="arguments" parameter-card="1" uid="e6a87341-c973-4532-970a-be2e90fe9dda"/>
+                        name="arguments" parameter-card="*" uid="e6a87341-c973-4532-970a-be2e90fe9dda"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype is-abstract="true" is-hidden="true"

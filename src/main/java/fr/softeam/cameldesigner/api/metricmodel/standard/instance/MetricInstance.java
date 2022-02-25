@@ -21,15 +21,11 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricObjectBind
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -40,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("5336bcd3-259d-4b82-a7c1-f1ce23e0ed30")
 public class MetricInstance extends FeatureInstance {
-    @objid ("82dd887d-8af3-4aa5-a3a7-a5dcf4ec43b8")
+    @objid ("f813e9ea-c33d-4ba2-9d2f-b0142dcbf6a5")
     public static final String STEREOTYPE_NAME = "MetricInstance";
 
     /**
@@ -51,7 +47,7 @@ public class MetricInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8f03aeb1-a656-44fd-a7ea-86236bac0966")
+    @objid ("c481c3ac-7cac-4e04-8f44-b731b8f59bfe")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricInstance.STEREOTYPE_NAME));
     }
@@ -61,7 +57,7 @@ public class MetricInstance extends FeatureInstance {
      * 
      * @return a {@link MetricInstance} proxy on the created {@link Instance}.
      */
-    @objid ("d92feaf1-c524-45b5-9c51-63c71358c987")
+    @objid ("1f6a8b98-f85e-4651-9507-ff87cad336ba")
     public static MetricInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricInstance.STEREOTYPE_NAME);
@@ -69,41 +65,42 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MetricInstance} proxy or <i>null</i>.
      */
-    @objid ("423ba621-2f4c-47fd-b5d7-54bab1925aae")
+    @objid ("c802ee6b-b42f-405c-b142-b79a835e3a95")
     public static MetricInstance instantiate(final Instance obj) {
         return MetricInstance.canInstantiate(obj) ? new MetricInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricInstance} proxy from a {@link Instance} stereotyped << MetricInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MetricInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("78af154c-3df7-4f8b-a54c-ac2a53cf4896")
+    @objid ("29c2e27c-e55b-4c54-a092-048bc8054209")
     public static MetricInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MetricInstance.canInstantiate(obj))
-        	return new MetricInstance(obj);
+            return new MetricInstance(obj);
         else
-        	throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("51a80e86-c9be-4dee-9e9d-c7f2a6ff4b48")
-    public void addCompositngMetricInstances(final MetricInstance obj) {
+    @objid ("c536095c-e3d2-448d-9f8d-0e6ef77b112f")
+    public void addComposingMetricInstances(final MetricInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
             Dependency d = session.getModel().createDependency(obj.getElement(), this.elt, MetricInstance.MdaTypes.MDAASSOCDEP);
@@ -112,7 +109,7 @@ public class MetricInstance extends FeatureInstance {
         }
     }
 
-    @objid ("45b9e3c2-86a8-42d3-86f7-f14fce4083e4")
+    @objid ("308df3c1-eb45-4711-ac2a-a86e1645a8f0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,10 +129,9 @@ public class MetricInstance extends FeatureInstance {
      * Get the values of the 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("2377222f-ccc1-4499-afa5-e7311b117102")
-    public List<MetricInstance> getCompositngMetricInstances() {
+    @objid ("14913c26-85e1-44c1-a96e-9157fbdf7fb2")
+    public List<MetricInstance> getComposingMetricInstances() {
         List<MetricInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
           if (d.isStereotyped(MetricInstance.MdaTypes.MDAASSOCDEP)
@@ -148,10 +144,11 @@ public class MetricInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("8c1dce40-5959-40f3-b10d-107818323844")
+    @objid ("2cbe5742-5282-49d0-9195-8bca092dda22")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -161,9 +158,8 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("f0a56d80-1805-43cc-8c86-9d8824f760b4")
+    @objid ("d8984b3d-e904-4d92-be38-e729155fc44a")
     public MetricContext getMetricContext() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricInstance.MdaTypes.MDAASSOCDEP)
@@ -181,9 +177,8 @@ public class MetricInstance extends FeatureInstance {
      * Get the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("a381f0f2-c1fb-409a-bca4-18e68c8605df")
+    @objid ("133458ad-c263-4ca2-acf7-ad7c7fb53595")
     public MetricObjectBinding getObjectBinding() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(MetricInstance.MdaTypes.MDAASSOCDEP)
@@ -195,7 +190,7 @@ public class MetricInstance extends FeatureInstance {
         return null;
     }
 
-    @objid ("8dc89bb3-7b76-4e40-a2c7-fb059871e0e4")
+    @objid ("b41bed8f-eb5d-474e-93d9-570cce1259ff")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -205,10 +200,9 @@ public class MetricInstance extends FeatureInstance {
      * Remove a value from 'compositngMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("982c9744-f6d3-4f24-9ed6-c117e1f5c57c")
-    public boolean removeCompositngMetricInstances(final MetricInstance obj) {
+    @objid ("b3724894-a2fd-4beb-ad4b-80214367378b")
+    public boolean removeComposingMetricInstances(final MetricInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
             if (d.isStereotyped(MetricInstance.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(MetricInstance.MdaTypes.MDAASSOCDEP_ROLE), ""))
@@ -225,9 +219,8 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("7a798339-15d5-4781-b627-fe0e58071684")
+    @objid ("b296262b-7503-4f5c-a4f3-1824ff2fb2f1")
     public void setMetricContext(final MetricContext obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -251,9 +244,8 @@ public class MetricInstance extends FeatureInstance {
      * Set the value of the 'objectBinding' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("1602058e-6fe1-4f79-9fdf-c855f58dc215")
+    @objid ("69bcd321-455d-4666-aee3-6b63e0244293")
     public void setObjectBinding(final MetricObjectBinding obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -281,23 +273,23 @@ public class MetricInstance extends FeatureInstance {
         return result;
     }
 
-    @objid ("2d84e94e-7cb2-49bc-bc7d-c8dcab9dbc19")
+    @objid ("c9b45a61-60fc-4fa1-9761-c0f5ce921a31")
     protected MetricInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("45ad6582-8f92-4a4c-8f72-6829ca4fe86b")
     public static final class MdaTypes {
-        @objid ("b0c613ef-d13c-4f4a-b120-d6969903eae8")
+        @objid ("4488661f-c82c-4715-b0b5-fbda025575bf")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d726c028-1359-46b2-a872-31b81dae7899")
+        @objid ("95a5bb0c-978d-4690-8df6-9be71b4c9d16")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("11c71edf-82f3-4acb-84a2-62f66f3d97b7")
+        @objid ("e96bcd11-8234-41ec-9c2c-6d256abbf6b3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1e8a273b-605f-459a-8cde-1e2fa84a55b2")
+        @objid ("76979830-5c17-4321-ac60-b7a4b53298f3")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "52b2d53f-cfda-455d-ae3d-dd97fed6fa84");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -305,11 +297,11 @@ public class MetricInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

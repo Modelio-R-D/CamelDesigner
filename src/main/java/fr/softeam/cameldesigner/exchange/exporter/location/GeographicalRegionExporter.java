@@ -23,12 +23,24 @@ public class GeographicalRegionExporter<T extends GeographicalRegion> extends Na
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.location.GeographicalRegion) {
+            setAlternativeNames((camel.location.GeographicalRegion) elt);
+        }
     }
 
     @objid ("5dd9b184-d434-4765-b920-eaf123b01632")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ( (elt instanceof camel.location.GeographicalRegion) && (context instanceof camel.location.LocationModel))  {
+            ((camel.location.LocationModel) context).getRegions().add((camel.location.GeographicalRegion) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("73aff6f7-27d6-4e53-be33-c7be7d9b27df")
+    private void setAlternativeNames(camel.location.GeographicalRegion elt) {
+        elt.getAlternativeNames().addAll(this._element.getAlternativeNames());
     }
 
 }

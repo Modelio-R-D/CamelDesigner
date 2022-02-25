@@ -22,12 +22,22 @@ public class RawMetricContextExporter<T extends RawMetricContext> extends Metric
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.RawMetricContext) {
+            setSensor((camel.metric.RawMetricContext) elt);
+        }
     }
 
     @objid ("245a0f68-e66e-42ad-9f93-f99c6344acac")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("63b802b5-6cd5-4e41-980c-e65c503867fa")
+    private void setSensor(camel.metric.RawMetricContext context) {
+        CDOObject sensor = this._process.getElement(this._element.getSensor());
+        if ((sensor != null) &&  (sensor instanceof camel.metric.Sensor))
+            context.setSensor((camel.metric.Sensor) sensor);
     }
 
 }

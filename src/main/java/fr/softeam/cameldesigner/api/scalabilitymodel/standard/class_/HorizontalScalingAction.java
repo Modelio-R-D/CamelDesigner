@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("9043ebaf-e900-49af-8abc-87dbea13b475")
 public class HorizontalScalingAction extends ScalingAction {
-    @objid ("d5bbb226-5f11-4fda-b43e-6451362edb03")
+    @objid ("140e4fa8-1a62-4a66-935e-19d6a0240b5e")
     public static final String STEREOTYPE_NAME = "HorizontalScalingAction";
 
-    @objid ("ed3c3941-4739-4949-9870-d22a6b50d817")
+    @objid ("d6012c87-14ab-480d-a904-26cad5bccc75")
     public static final String COUNT_TAGTYPE = "count";
 
     /**
@@ -50,7 +50,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("87d2d923-35fb-4b39-8f36-ce6c02b1f843")
+    @objid ("613ac1bd-08da-4e45-a24d-861177a05264")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScalingAction.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * 
      * @return a {@link HorizontalScalingAction} proxy on the created {@link Class}.
      */
-    @objid ("dd4a9247-e75a-40d1-a328-f47b8fbd7bb5")
+    @objid ("7a1b7018-d40c-4e7a-83cb-1c3fcca9f709")
     public static HorizontalScalingAction create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScalingAction.STEREOTYPE_NAME);
@@ -74,7 +74,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * @param obj a Class
      * @return a {@link HorizontalScalingAction} proxy or <i>null</i>.
      */
-    @objid ("2eba5acd-359e-4198-90bd-4ce9a388dd14")
+    @objid ("c4994196-f2fb-4679-a162-985f9386dc2c")
     public static HorizontalScalingAction instantiate(final Class obj) {
         return HorizontalScalingAction.canInstantiate(obj) ? new HorizontalScalingAction(obj) : null;
     }
@@ -87,7 +87,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * @return a {@link HorizontalScalingAction} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e9a941f6-8b12-492d-86fd-029913e1cd4c")
+    @objid ("ef3a7b50-78bc-4af3-9727-47e9ae3ea9dd")
     public static HorizontalScalingAction safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HorizontalScalingAction.canInstantiate(obj))
         	return new HorizontalScalingAction(obj);
@@ -95,7 +95,7 @@ public class HorizontalScalingAction extends ScalingAction {
         	throw new IllegalArgumentException("HorizontalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b8d8fa3f-9e9b-4544-ae05-03a9ea92110c")
+    @objid ("ba16a9f8-0b04-4f0b-954f-ad37a79ebd70")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -116,7 +116,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("27336709-fdef-4ef4-9ac9-395f12b207ce")
+    @objid ("29518617-dfef-46bb-8128-85db286cc233")
     public String getCount() {
         return this.elt.getTagValue(HorizontalScalingAction.MdaTypes.COUNT_TAGTYPE_ELT);
     }
@@ -125,13 +125,13 @@ public class HorizontalScalingAction extends ScalingAction {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("742fe392-43de-4ed2-9463-db5ed5d8bc30")
+    @objid ("462b1382-0c46-4201-bb45-76b599ddc80c")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("f01c09e5-f652-48c4-a82e-b4131d9a622a")
+    @objid ("63052b86-3bc5-4bfb-8ede-0ee4c27dafff")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,7 +142,7 @@ public class HorizontalScalingAction extends ScalingAction {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f7cbdb6e-c67d-43c8-a920-b5cdca61d793")
+    @objid ("567e5cce-2d87-4ec1-ba96-f10684184b84")
     public void setCount(final String value) {
         this.elt.putTagValue(HorizontalScalingAction.MdaTypes.COUNT_TAGTYPE_ELT, value);
     }
@@ -155,26 +155,26 @@ public class HorizontalScalingAction extends ScalingAction {
         return result;
     }
 
-    @objid ("28f73c1f-c7d4-4905-9985-090474cd27d9")
+    @objid ("55d35d7e-7215-46ca-a3f1-0ff2073f2cc6")
     protected HorizontalScalingAction(final Class elt) {
         super(elt);
     }
 
     @objid ("903e4b65-68e5-46fa-8af6-f2905c82423f")
     public static final class MdaTypes {
-        @objid ("4b152aa1-b733-4ae6-b80a-11a98bc442e5")
+        @objid ("e5096033-395d-4c58-98cc-e872e8dc0eb2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c87a3e11-f02a-423b-8cc7-e3797099c023")
+        @objid ("e258420d-74ea-4e15-8e60-704ae7ecb3dd")
         public static TagType COUNT_TAGTYPE_ELT;
 
-        @objid ("8ced0886-b85c-4584-b8f3-9f194c9d48ac")
+        @objid ("87198bad-b2ed-4cd6-818c-a03ac1e876b8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("28aa29f7-0662-4662-b216-876efbf91309")
+        @objid ("51d1ce22-3ec3-48d0-8221-8a37b0266336")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1da0c584-3945-4733-9478-aba0dcae375e")
+        @objid ("73e9c952-1f55-4d25-82e7-732182565d9a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "99008d6c-2622-4467-8283-6059df42c240");
             COUNT_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d52b6541-1841-4607-96a8-591ad329e65f");

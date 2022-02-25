@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.standard.package_;
 
@@ -41,7 +41,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("bffe392b-7477-486d-851e-fb774d44120c")
 public class MetaDataModel extends SubModel {
-    @objid ("c8bba86b-a219-43f7-8cff-ec68eac88574")
+    @objid ("f1fa1a0f-31f4-4809-af2f-8d98b3fab242")
     public static final String STEREOTYPE_NAME = "MetaDataModel";
 
     /**
@@ -52,7 +52,7 @@ public class MetaDataModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f7255d78-5fe9-411e-a5bb-ade4495bcb79")
+    @objid ("3458d3ee-0e93-4878-a01a-3750d3259584")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetaDataModel.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class MetaDataModel extends SubModel {
      * 
      * @return a {@link MetaDataModel} proxy on the created {@link Package}.
      */
-    @objid ("7ecfe9eb-e1f8-4007-a8dd-ea7ee42715f8")
+    @objid ("a90e77ad-2670-4418-b198-04744e4db9ad")
     public static MetaDataModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetaDataModel.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class MetaDataModel extends SubModel {
      * @param obj a Package
      * @return a {@link MetaDataModel} proxy or <i>null</i>.
      */
-    @objid ("aaf7317a-f467-4f35-83ef-6ca9efdf76cf")
+    @objid ("daee9afd-a24c-4866-841e-180aff2d9714")
     public static MetaDataModel instantiate(final Package obj) {
         return MetaDataModel.canInstantiate(obj) ? new MetaDataModel(obj) : null;
     }
@@ -89,7 +89,7 @@ public class MetaDataModel extends SubModel {
      * @return a {@link MetaDataModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("497e883c-84b0-4b12-8a4c-c6d1cb3c52a4")
+    @objid ("42dafc03-5130-4940-bd7c-55debc29f742")
     public static MetaDataModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (MetaDataModel.canInstantiate(obj))
         	return new MetaDataModel(obj);
@@ -103,7 +103,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("c1837caf-e7d8-4b64-bd97-11bfe1acd680")
+    @objid ("084f3872-cab9-4fbe-9055-0cdef0a2e4f5")
     public void addConcept(final MmsConcept obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -115,13 +115,13 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("8f050c21-1593-4fe6-85a6-d3bb80a8f1b4")
+    @objid ("ae53fca7-ae12-4053-9050-26219d9e7211")
     public void addConceptInstance(final MmsConceptInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
     }
 
-    @objid ("082a7e21-7d1c-428d-beb0-f51c6e06d1b4")
+    @objid ("c4b19cd5-0cfe-4369-9142-886a4c2eaf21")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -143,7 +143,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("25d9b1d6-5463-403f-a7ad-c46c4a6eca8e")
+    @objid ("803453c7-b306-4f81-bfeb-531fd90b3b64")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -154,7 +154,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("0638dcd8-cc42-48bc-bec2-c748dce08364")
+    @objid ("4b1a8033-009a-40d2-8170-bf01c853948e")
     public List<MmsConcept> getConcept() {
         List<MmsConcept> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -170,7 +170,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("257cac34-7ab9-4726-96fa-2c0e7a12ad14")
+    @objid ("cb8a9544-bb17-4598-be12-b1df9cc05c6c")
     public List<MmsConceptInstance> getConceptInstance() {
         List<MmsConceptInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -184,13 +184,13 @@ public class MetaDataModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("5da76329-e0f6-477f-8fb0-e8b761fae4c7")
+    @objid ("f6efcaa2-41d3-45d3-bdcb-e645da048378")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("e0dc9a59-7cc0-4ec4-a763-66d399d7b916")
+    @objid ("9943e9c4-039d-44ba-ae51-e3c0ea45c1db")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -202,7 +202,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("2ef152c9-c90a-45a3-813c-fc436f0ad18e")
+    @objid ("ba7dd5ef-3460-4ab1-be22-81d979a73007")
     public boolean removeConcept(final MmsConcept obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -213,7 +213,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("7ca3c6d1-f67d-4c14-ac41-d2477bf8f4a7")
+    @objid ("07fd2599-f8a7-4a85-8469-bbdee1dfaf8b")
     public boolean removeConceptInstance(final MmsConceptInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -224,7 +224,7 @@ public class MetaDataModel extends SubModel {
      * null
      * 
      */
-    @objid ("fe25fd15-0091-4075-9ca1-aae37b222f1e")
+    @objid ("e50f28cd-ae21-4f06-abf6-5e3394d2555d")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -239,23 +239,23 @@ public class MetaDataModel extends SubModel {
         return result;
     }
 
-    @objid ("465f2373-21c0-498c-8c4b-3423d57a8ac7")
+    @objid ("7df6118d-5aa3-4643-94ad-5f1e9b7005b1")
     protected MetaDataModel(final Package elt) {
         super(elt);
     }
 
     @objid ("dcdbd03e-a04b-4330-976d-64d85bfa5c03")
     public static final class MdaTypes {
-        @objid ("aef8258b-647b-4310-83a6-d98d642e8c74")
+        @objid ("898af2b1-5d1d-4e43-8bf5-eb3a79749e53")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("069069ac-6ff6-4f49-93ec-74fb4ef99da2")
+        @objid ("3acc1993-9a37-4d78-b2ce-286689d9dec2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a684b6e7-1599-47ee-84f5-b2fd965f73f0")
+        @objid ("cb8060fb-54e0-4298-a950-f86e6c05cd6c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7bb0812a-6b28-482f-8c3e-a66967a91d28")
+        @objid ("dd9d8fef-f5ce-4366-8bed-0e6b6286e8a5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "73200409-c934-45d3-b418-8d71c00e7382");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

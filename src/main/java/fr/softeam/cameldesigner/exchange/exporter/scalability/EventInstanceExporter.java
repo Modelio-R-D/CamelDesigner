@@ -27,7 +27,11 @@ public abstract class EventInstanceExporter<T extends EventInstance> extends Fea
     @objid ("6051b8cc-33c8-4c3f-b097-b041e61c3d6a")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.execution.Cause) && (elt instanceof camel.scalability.EventInstance)) {
+            ((camel.execution.Cause) context).getEventInstances().add((camel.scalability.EventInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

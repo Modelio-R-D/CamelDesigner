@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.package_;
 
@@ -55,7 +55,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("30ab5720-bd4b-4612-8c18-791b8446b14d")
 public class MetricTypeModel extends MetricModel {
-    @objid ("6204d5ba-2890-4e99-88ab-cfeabf4057a5")
+    @objid ("f7860f2e-3963-4789-9125-e13a7b399862")
     public static final String STEREOTYPE_NAME = "MetricTypeModel";
 
     /**
@@ -66,7 +66,7 @@ public class MetricTypeModel extends MetricModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5cf8cf4d-c71b-43d6-95ea-0977fd596750")
+    @objid ("9012709b-0570-4031-a9e4-fe9bc0328efc")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricTypeModel.STEREOTYPE_NAME));
     }
@@ -76,7 +76,7 @@ public class MetricTypeModel extends MetricModel {
      * 
      * @return a {@link MetricTypeModel} proxy on the created {@link Package}.
      */
-    @objid ("63ed32d0-4ab7-4577-a853-2ccc18bbbe0e")
+    @objid ("b4f5164e-3eb1-4491-85b0-93e5f66535fd")
     public static MetricTypeModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricTypeModel.STEREOTYPE_NAME);
@@ -90,7 +90,7 @@ public class MetricTypeModel extends MetricModel {
      * @param obj a Package
      * @return a {@link MetricTypeModel} proxy or <i>null</i>.
      */
-    @objid ("cebed9d6-4279-44bb-90d6-db320a35582a")
+    @objid ("dc81d95b-9d7d-4e2c-904c-72bc09471084")
     public static MetricTypeModel instantiate(final Package obj) {
         return MetricTypeModel.canInstantiate(obj) ? new MetricTypeModel(obj) : null;
     }
@@ -103,7 +103,7 @@ public class MetricTypeModel extends MetricModel {
      * @return a {@link MetricTypeModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8e4e06c7-c800-4521-abe9-e319ed6afa0d")
+    @objid ("932dfbec-3be5-41e2-87ea-9c68c6a7ad80")
     public static MetricTypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (MetricTypeModel.canInstantiate(obj))
         	return new MetricTypeModel(obj);
@@ -117,7 +117,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("780a0052-698a-4ef8-8142-91c5bde63324")
+    @objid ("11002272-748b-417d-8789-ccfb4616b070")
     public void addAttributContexts(final AttributeContext obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -129,7 +129,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("83793948-1aaf-4835-890e-7128aabd83ff")
+    @objid ("dc0df508-0b02-42c8-aca6-9e6c11404602")
     public void addFunctions(final Function obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -141,7 +141,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("ce281961-d265-4bc9-afab-6539ecfbf46b")
+    @objid ("199e4931-0207-4380-ba84-2ec03aab3e8c")
     public void addMetricContexts(final MetricContext obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -153,7 +153,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("692d301b-c2b0-4fdf-bfa3-3bbea729f6c0")
+    @objid ("fbe455b2-a2cd-4a71-a6f7-54886de07151")
     public void addMetrics(final Metric obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -165,7 +165,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("00f4b324-c359-40d0-a3fe-874c568f0152")
+    @objid ("1fe23bf8-9067-4312-9b83-9f5f530de884")
     public void addObjectContexts(final ObjectContext obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -177,7 +177,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("4eefa078-9a71-4ead-8368-40b32889b654")
+    @objid ("7ff0a571-58fa-4d0e-8ae0-bda4534cefcb")
     public void addSchedules(final Schedule obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -189,7 +189,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("0e558138-9138-4c12-b22f-9a692f61b2eb")
+    @objid ("52785f62-fe35-46b3-a43d-8253b72257eb")
     public void addSensors(final Sensor obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -201,7 +201,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("9d0046a5-dc87-4c42-bf61-3cadf806613c")
+    @objid ("8546e9a9-0264-4a10-82f5-26d46d6bf893")
     public void addTemplates(final MetricTemplate obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -213,13 +213,13 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("e4d202a0-4ba3-4882-9939-8e196de7590f")
+    @objid ("8f208973-bad6-4764-a32b-07ef403b72ec")
     public void addWindows(final Window obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("ee63b2fd-28c7-4906-87ae-8d2699762c7b")
+    @objid ("dc080695-e4ae-4be8-8077-71b5413fb5c9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -241,7 +241,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("255ddcf7-a40b-4d24-81c0-e10a26173aab")
+    @objid ("190b430b-61a7-4349-884d-547b6bbf3b70")
     public List<AttributeContext> getAttributContexts() {
         List<AttributeContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -255,7 +255,7 @@ public class MetricTypeModel extends MetricModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("48169768-b277-4dbb-954f-c3a89ae01894")
+    @objid ("a8b5cb67-d734-4ed3-bd79-7174a87f8799")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -267,7 +267,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("1cfa25c4-0b6b-4d39-8e56-7a19d60f86c3")
+    @objid ("66c2a130-8de4-4943-ad8c-e1cf622c15e3")
     public List<Function> getFunctions() {
         List<Function> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -283,7 +283,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("75276eba-3baa-40af-b49b-911cc6313ed7")
+    @objid ("fd199353-f73b-47eb-968d-5ea9eb53f928")
     public List<MetricContext> getMetricContexts() {
         List<MetricContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -301,7 +301,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("3d527f40-0c51-49df-a973-90af0194f0f6")
+    @objid ("5fe4e59f-5823-4999-bfe7-ba53038682ce")
     public List<Metric> getMetrics() {
         List<Metric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -325,7 +325,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("20bbdc9f-dddc-4eb1-b8c8-b938975849dd")
+    @objid ("d324aee5-ea7b-4abe-8598-5772f3d72147")
     public List<ObjectContext> getObjectContexts() {
         List<ObjectContext> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -341,7 +341,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("68d5e159-e791-41ec-b565-6851c63f77f3")
+    @objid ("ad361351-cbfb-4902-821f-a9d1a6da0d4e")
     public List<Schedule> getSchedules() {
         List<Schedule> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -357,7 +357,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("3364d257-a3ee-4a2a-a690-219a6c6aa957")
+    @objid ("8639bd78-63e5-48e4-8bd2-45f192ba5eef")
     public List<Sensor> getSensors() {
         List<Sensor> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -373,7 +373,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("8cfbfe25-a078-4a37-bb5c-710f830db014")
+    @objid ("4d1b4be8-8cd4-4324-9f5a-e0fc6e982183")
     public List<MetricTemplate> getTemplates() {
         List<MetricTemplate> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -389,7 +389,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("277d855b-21c2-4b89-9ea2-7d68717d1142")
+    @objid ("7e1b263c-7743-422b-a876-a241ed3d1b80")
     public List<Window> getWindows() {
         List<Window> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -399,7 +399,7 @@ public class MetricTypeModel extends MetricModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("b6c819b0-f9a5-4803-b6df-dc5427e3e1a3")
+    @objid ("3097be16-ecc4-4f5a-b5f5-b0ca2039c961")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -411,7 +411,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("c9f44720-0dd3-4887-b229-8a8ed5bcbada")
+    @objid ("e472d042-a120-4fe6-86d3-92e635af19ba")
     public boolean removeAttributContexts(final AttributeContext obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -422,7 +422,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("342b5c77-854a-44da-8995-dcacb7db007a")
+    @objid ("533e6b83-be19-427b-9a2a-11c1f94121fa")
     public boolean removeFunctions(final Function obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -433,7 +433,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("ea13815f-8150-476e-889c-73bb8c74e8c6")
+    @objid ("8784dfd6-1543-44dc-9bd9-9776d9681e73")
     public boolean removeMetricContexts(final MetricContext obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -444,7 +444,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("8cada163-e242-44f9-b2e7-8980b339abcb")
+    @objid ("e934c77c-cadd-4282-aff4-7cc1f50538b9")
     public boolean removeMetrics(final Metric obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -455,7 +455,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("7dc67af5-c895-4825-9a5d-227163faa1f3")
+    @objid ("2eabdf28-f40f-4c30-9482-829158808830")
     public boolean removeObjectContexts(final ObjectContext obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -466,7 +466,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("5c9c090a-9970-4198-98de-a7ad46f50ca7")
+    @objid ("f0f5ef64-9f7d-4550-bed3-806d125a2e8d")
     public boolean removeSchedules(final Schedule obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -477,7 +477,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("87bd7581-8152-4397-b542-a796187b8756")
+    @objid ("4d2867ec-cef0-4df9-a59a-d62f037a3465")
     public boolean removeSensors(final Sensor obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -488,7 +488,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("b3dadb21-f6a7-4e78-93af-0632b96f7438")
+    @objid ("e6940784-abbb-40dd-b3f9-9d9934737fba")
     public boolean removeTemplates(final MetricTemplate obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -499,7 +499,7 @@ public class MetricTypeModel extends MetricModel {
      * null
      * 
      */
-    @objid ("c0a28290-d8aa-4194-a123-4eb8eeecd970")
+    @objid ("97534a8e-e610-4c2f-9594-e350c4672ebb")
     public boolean removeWindows(final Window obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -584,23 +584,23 @@ public class MetricTypeModel extends MetricModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("01a50fb4-39d8-4dbc-b14d-0d6c7ed83b04")
+    @objid ("f2361957-20f7-4840-a442-f5c5dfae890a")
     protected MetricTypeModel(final Package elt) {
         super(elt);
     }
 
     @objid ("b2e0d996-4162-4a1b-ad97-a59aa22661b6")
     public static final class MdaTypes {
-        @objid ("4b91f5df-3db4-445e-a91e-96b1b0df81f4")
+        @objid ("1e4ace96-2674-4d3a-b8a8-8c14f6edd5fb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bd98364a-184b-47cf-a074-89cacaf1f15d")
+        @objid ("5f05eae3-7b01-42c0-aa13-9f54b93120ac")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e19bb668-0193-4567-ad2f-fb43b0f355da")
+        @objid ("84b0ebce-e8af-41a8-ab05-2f6196977392")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("850b1589-083f-4214-a082-15282fa1845c")
+        @objid ("05270ec9-b8a9-472e-87f0-a25e23df91c1")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "76545176-b1ff-442f-8629-bc2c4845dbdb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -22,12 +22,22 @@ public class MetricInstanceModelExporter<T extends MetricInstanceModel> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.MetricInstanceModel) {
+            setType( (camel.metric.MetricInstanceModel) elt);
+        }
     }
 
     @objid ("81431a6c-9ccd-4ef2-8798-08a74258cc3f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("3920e604-64e3-4b9a-908e-ee772ea3659d")
+    private void setType(camel.metric.MetricInstanceModel elt) {
+        CDOObject type = this._process.getElement(this._element.getType());
+        if ((type != null) &&  (type instanceof camel.metric.MetricTypeModel))
+            elt.setType((camel.metric.MetricTypeModel) type);
     }
 
 }

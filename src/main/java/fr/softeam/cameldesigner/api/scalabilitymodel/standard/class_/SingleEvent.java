@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/23/22 5:02 PM by Modelio Studio.
+ * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("b740d58f-0acd-4aba-bdc8-6394a8467e6c")
 public abstract class SingleEvent extends Event {
-    @objid ("a19a7bc7-2d06-4306-9583-7b48d2317acd")
+    @objid ("780f278c-ffc9-4f69-80f2-51d1bb1e2c47")
     public static final String STEREOTYPE_NAME = "SingleEvent";
 
     /**
@@ -46,12 +46,12 @@ public abstract class SingleEvent extends Event {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ccd3a997-2803-455c-93c7-280d4c4b7a4a")
+    @objid ("907b5bdf-6e50-4cc4-9146-5cbc44ba9cf3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SingleEvent.STEREOTYPE_NAME));
     }
 
-    @objid ("4615e764-f52a-4537-a2ae-84456661c1f0")
+    @objid ("ece4e9a2-ee25-41c2-9891-193a33b5078d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -71,13 +71,13 @@ public abstract class SingleEvent extends Event {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("0b2bc492-92f8-4f87-a57a-45a52677db13")
+    @objid ("bd4cec1c-65de-4815-a52a-b5ef5acd62b7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("e9be20b0-17c3-4645-815c-973f1d054a33")
+    @objid ("52b3af58-d519-44c2-953d-ffa8d15b76de")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -91,23 +91,23 @@ public abstract class SingleEvent extends Event {
         return result;
     }
 
-    @objid ("c26c1c7b-e27d-483c-b7f4-8c1bbde8616c")
+    @objid ("c8127f3a-c17e-41a3-b3c0-fab5e15633e1")
     protected SingleEvent(final Class elt) {
         super(elt);
     }
 
     @objid ("4e5c23d4-7cb6-45fd-804e-c2745676a29b")
     public static final class MdaTypes {
-        @objid ("24c229f3-b09f-4114-8488-25e77e89fce1")
+        @objid ("731ff7c0-aea9-48a5-b855-2b382e0ebabf")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2336e031-ff68-4692-bfe9-64ebfe9188d3")
+        @objid ("86769e5c-01b6-4a88-b942-660cd7573a4d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("033d7c44-d533-4bc5-9dc2-77b497610f61")
+        @objid ("e427ce76-6dad-450a-9b6b-db32d4c06225")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4ab4f253-51a6-4b8a-a207-9a98c08281fc")
+        @objid ("cd51b7a9-ddfa-47b6-b551-aa808ce190cb")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "40acd9bb-daad-41f6-96cd-d9267430eabf");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

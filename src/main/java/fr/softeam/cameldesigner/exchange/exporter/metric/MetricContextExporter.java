@@ -22,6 +22,13 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.metric.MetricContext) {
+            camel.metric.MetricContext context = (camel.metric.MetricContext) elt;
+            setMetric(context);
+            setWindow(context);
+            setSchedule(context);
+            setObjectContext(context);
+        }
     }
 
     @objid ("66d769fb-3f0d-4fc1-b8e5-63ce4d7918bf")
@@ -32,6 +39,34 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("8e182837-bb1e-41bf-b8a3-b6dcb06721a4")
+    private void setObjectContext(camel.metric.MetricContext context) {
+        CDOObject objContext = this._process.getElement(this._element.getObjectContext());
+        if ((objContext != null) &&  (objContext instanceof camel.metric.ObjectContext))
+            context.setObjectContext((camel.metric.ObjectContext) objContext);
+    }
+
+    @objid ("050fe825-a12e-4d58-b43d-4af3953e7ebf")
+    private void setSchedule(camel.metric.MetricContext context) {
+        CDOObject schedule = this._process.getElement(this._element.getSchedule());
+        if ((schedule != null) &&  (schedule instanceof camel.metric.Schedule))
+            context.setSchedule((camel.metric.Schedule) schedule);
+    }
+
+    @objid ("2fc043c3-1975-470c-ab65-861382ba6bed")
+    private void setWindow(camel.metric.MetricContext context) {
+        CDOObject window = this._process.getElement(this._element.getWindow());
+        if ((window != null) &&  (window instanceof camel.metric.Window))
+            context.setWindow((camel.metric.Window) window);
+    }
+
+    @objid ("a9f516c4-fc30-45c2-9bf6-f6c68f52ed3f")
+    private void setMetric(camel.metric.MetricContext context) {
+        CDOObject metric = this._process.getElement(this._element.getMetric());
+        if ((metric != null) &&  (metric instanceof camel.metric.Metric))
+            context.setMetric((camel.metric.Metric) metric);
     }
 
 }
