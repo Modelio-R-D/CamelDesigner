@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.standard.instance;
 
@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("28cc79c1-8e23-4dd7-b100-83242c265aac")
 public class MmsConceptInstance extends MmsObject {
-    @objid ("d8e15c18-582e-4a43-ac89-e7bd9dddef5d")
+    @objid ("4c77a047-a7d1-411d-a019-c43c2930648c")
     public static final String STEREOTYPE_NAME = "MmsConceptInstance";
 
     /**
@@ -49,7 +49,7 @@ public class MmsConceptInstance extends MmsObject {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6b6e99ee-6016-4cf5-8645-5e89d6bc7461")
+    @objid ("3b17ade5-ac19-49b3-ac80-91e314e9f43a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConceptInstance.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public class MmsConceptInstance extends MmsObject {
      * 
      * @return a {@link MmsConceptInstance} proxy on the created {@link Instance}.
      */
-    @objid ("94bbac14-567d-45f9-aa83-381c0cdc119d")
+    @objid ("08b9afba-fe3c-43ba-8601-b331efde8031")
     public static MmsConceptInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MmsConceptInstance.STEREOTYPE_NAME);
@@ -73,7 +73,7 @@ public class MmsConceptInstance extends MmsObject {
      * @param obj a Instance
      * @return a {@link MmsConceptInstance} proxy or <i>null</i>.
      */
-    @objid ("7805e3bd-8e53-4a33-9807-be307d01879d")
+    @objid ("1a4accfd-d413-4674-ad4e-6302bcc0a6b3")
     public static MmsConceptInstance instantiate(final Instance obj) {
         return MmsConceptInstance.canInstantiate(obj) ? new MmsConceptInstance(obj) : null;
     }
@@ -86,7 +86,7 @@ public class MmsConceptInstance extends MmsObject {
      * @return a {@link MmsConceptInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9edd367e-3eb0-489a-bb62-634863c7ab40")
+    @objid ("f5012516-4fee-4080-9646-4e95f79507de")
     public static MmsConceptInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MmsConceptInstance.canInstantiate(obj))
         	return new MmsConceptInstance(obj);
@@ -100,13 +100,13 @@ public class MmsConceptInstance extends MmsObject {
      * null
      * 
      */
-    @objid ("9acde57c-fb07-42c4-b336-abadc1e0f500")
+    @objid ("6938450d-1446-4094-8a44-f47e51df5b3d")
     public void addPropertyInstance(final MmsPropertyInstance obj) {
         if (obj!=null)
           ((Instance) this.elt).getSlot().add(obj.getElement());
     }
 
-    @objid ("aa6c779b-48d2-4b21-b9a3-1fa4c48d85e7")
+    @objid ("2c4535a5-b01a-4d6a-96da-333067fd9679")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +126,7 @@ public class MmsConceptInstance extends MmsObject {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("2c912244-25a3-4fef-a0fc-a145dffa1aff")
+    @objid ("2243289c-4edf-47ed-8f16-fbe595c4f14a")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -138,7 +138,7 @@ public class MmsConceptInstance extends MmsObject {
      * null
      * 
      */
-    @objid ("95a39bde-e9f2-49c2-a047-c2814aa08a10")
+    @objid ("7c2a6444-eff4-4de0-a146-13929a84bfab")
     public List<MmsPropertyInstance> getPropertyInstance() {
         List<MmsPropertyInstance> results = new ArrayList<>();
         for (AttributeLink mObj : ((Instance) this.elt).getSlot()){
@@ -148,7 +148,7 @@ public class MmsConceptInstance extends MmsObject {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("013abae7-8333-47a0-8137-a0d5c7901f78")
+    @objid ("e0205db9-e4cd-4891-80b2-ed13e151c001")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -160,7 +160,7 @@ public class MmsConceptInstance extends MmsObject {
      * null
      * 
      */
-    @objid ("85c8794e-c96b-4ddb-8749-0ee82a5ec4a6")
+    @objid ("d4e70368-de30-4c48-b35f-2f89818c770d")
     public boolean removePropertyInstance(final MmsPropertyInstance obj) {
         return (obj!=null)? ((Instance) this.elt).getSlot().remove(obj.getElement()) : false;
     }
@@ -173,23 +173,23 @@ public class MmsConceptInstance extends MmsObject {
         return result;
     }
 
-    @objid ("89b39bc9-fd2b-4fdd-a1fa-90647a408291")
+    @objid ("35d82129-b94c-4b82-981a-a6076354eddb")
     protected MmsConceptInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("862d75e0-5992-4012-8c83-7a0ec8b66ab5")
     public static final class MdaTypes {
-        @objid ("252d32fb-db40-43e6-946d-172fb6c01457")
+        @objid ("b426e746-51ad-4d33-a193-f172a3f4db41")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7243e6bf-eb2b-4145-9b1b-b3fec9ce3f92")
+        @objid ("bd32e091-9a4c-49e8-9c9f-12b80a915649")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b537bc1e-b438-4810-b840-7e8a6c7405c0")
+        @objid ("067e9b8f-80fd-4c87-84b2-cfa110f25461")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("05afb374-f97b-4c74-8524-9a83799b2e09")
+        @objid ("0e719d9a-d595-44b2-a501-ddb516c60f5a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "81bc1a2f-1255-41fb-b517-5ca503ccc73e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

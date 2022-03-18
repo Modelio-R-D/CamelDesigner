@@ -51,7 +51,10 @@ public class LocationCouplingExporter<T extends LocationCoupling> extends Compon
 
     @objid ("132071fb-fd52-4e4c-9df0-e676d9c51a31")
     private void setCouplingType(camel.deployment.LocationCoupling lc) {
-        lc.setCouplingType(LocationCouplingType.valueOf(this._element.getCouplingType()));
+        String content = this._element.getCouplingType();
+        if (content != null) {
+            lc.setCouplingType(LocationCouplingType.valueOf(content));
+        }
     }
 
     @objid ("3b1a553f-d4e6-4555-8813-0f08f8191ee8")

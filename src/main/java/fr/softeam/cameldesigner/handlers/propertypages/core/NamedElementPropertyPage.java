@@ -39,9 +39,9 @@ public abstract class NamedElementPropertyPage<T extends NamedElement> extends C
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Name",   getValue(this._element.getName()));
+        table.addProperty("Name",   getNotNull(this._element.getName()));
         
-        table.addProperty("Description",   getValue(this._element.getDescription()));
+        table.addProperty("Description",   getNotNull(this._element.getDescription()));
     }
 
     @objid ("703eb3be-3c0b-45dc-8667-0e2e6f3bbd23")

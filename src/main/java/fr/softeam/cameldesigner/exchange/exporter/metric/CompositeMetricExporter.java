@@ -38,7 +38,7 @@ public class CompositeMetricExporter<T extends CompositeMetric> extends MetricEx
         super.attach(elt, context);
     }
 
-    @objid ("ff1604e5-8362-4d44-96a9-20eaf1136b1d")
+    @objid ("7041a891-51ec-4e99-bd4a-a22541b1f0ae")
     private void setComponentMetrics(camel.metric.CompositeMetric cMetric) {
         List<camel.metric.Metric> metrics = new ArrayList<>();
         for (Metric metric : this._element.getComponentMetrics()) {
@@ -50,9 +50,11 @@ public class CompositeMetricExporter<T extends CompositeMetric> extends MetricEx
         cMetric.getComponentMetrics().addAll(metrics);
     }
 
-    @objid ("30563b8d-5210-45e6-9898-d6ceb9b75be4")
+    @objid ("22d5285a-f0bb-4738-ad13-f7e0bbc63c0c")
     private void setFormula(camel.metric.CompositeMetric cMetric) {
-        cMetric.setFormula(this._element.getFormula());
+        String content = this._element.getFormula();
+        if (content != null)
+            cMetric.setFormula(content);
     }
 
 }

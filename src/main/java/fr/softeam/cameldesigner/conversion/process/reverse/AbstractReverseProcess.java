@@ -16,11 +16,11 @@ import org.modelio.metamodel.uml.statik.Port;
 
 @objid ("8252e63d-68de-4dd8-8beb-0144ac974cd4")
 public abstract class AbstractReverseProcess implements IElementProcess {
+    @objid ("07274479-6a5b-440f-a5e3-7e97b34c3518")
+    protected ModelElement umlElementParent;
+
     @objid ("ba71fc6d-7f0c-4684-935c-9ff24767bc12")
     protected Map<CDOObject, CamelElement> processedCamelElements;
-
-    @objid ("80dc889f-6be4-4759-9b9b-0ab9de0cd75b")
-    protected ModelElement umlElementParent;
 
     @objid ("782dad31-8c48-40ff-9f85-f31298fa11ca")
     public AbstractReverseProcess(ModelElement umlElementParent, Map<CDOObject, CamelElement> processedCamelElements) {

@@ -40,10 +40,10 @@ public class CamelModelPropertyPage<T extends CamelModel> extends ExpendableElem
         super.update(table);
         
         //Application Name
-        table.addProperty(CamelDesignerResourcesManager.getPropertyName(CamelModel.APPLICATIONNAME_TAGTYPE), getValue(this._element.getApplicationName()));
+        table.addProperty(CamelDesignerResourcesManager.getPropertyName(CamelModel.APPLICATIONNAME_TAGTYPE), getNotNull(this._element.getApplicationName()));
         
         //Application Version
-        table.addProperty(CamelDesignerResourcesManager.getPropertyName(CamelModel.APPLICATIONVERSION_TAGTYPE), getValue(this._element.getApplicationVersion()));
+        table.addProperty(CamelDesignerResourcesManager.getPropertyName(CamelModel.APPLICATIONVERSION_TAGTYPE), getNotNull(this._element.getApplicationVersion()));
     }
 
     @objid ("5539f5f3-bfb0-472f-9b11-98387323b990")

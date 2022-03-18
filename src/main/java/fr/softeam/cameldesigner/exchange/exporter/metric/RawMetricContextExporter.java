@@ -33,7 +33,7 @@ public class RawMetricContextExporter<T extends RawMetricContext> extends Metric
         super.attach(elt, context);
     }
 
-    @objid ("63b802b5-6cd5-4e41-980c-e65c503867fa")
+    @objid ("4a1662ae-1157-4331-9c50-45a5f706816e")
     private void setSensor(camel.metric.RawMetricContext context) {
         CDOObject sensor = this._process.getElement(this._element.getSensor());
         if ((sensor != null) &&  (sensor instanceof camel.metric.Sensor))

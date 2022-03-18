@@ -22,12 +22,22 @@ public class NonFunctionalEventInstanceExporter<T extends NonFunctionalEventInst
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.scalability.NonFunctionalEventInstance) {
+            setMetricInstance((camel.scalability.NonFunctionalEventInstance) elt);
+        }
     }
 
     @objid ("f0e0fefa-1d04-42dc-b0bb-98a56a67e936")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("70030553-9ddf-4549-b14b-b89bf3486146")
+    private void setMetricInstance(camel.scalability.NonFunctionalEventInstance eventInstance) {
+        CDOObject metInstance = this._process.getElement(this._element.getMetricInstance());
+        if ((metInstance != null) &&  (metInstance instanceof camel.metric.MetricInstance))
+            eventInstance.setMetricInstance((camel.metric.MetricInstance) metInstance);
     }
 
 }

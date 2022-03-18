@@ -14,13 +14,13 @@ import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("55311e4b-6b19-4075-a553-7859762db246")
 public class HistoryInfoPropertyPage<T extends HistoryInfo> extends FeatureClassPropertyPage<T> {
-    @objid ("388d5c35-0586-4ddb-9819-0ba52d340282")
+    @objid ("bc5e47d0-95bf-480a-b175-f77cbca471e8")
     private List<ModelElement> _subject = null;
 
-    @objid ("7fcd0379-17a1-440a-a3bd-f38d37b16498")
+    @objid ("5f67cf6d-ed11-4721-ba5d-5af9b2aec12a")
     private List<ModelElement> _action = null;
 
-    @objid ("ecac3626-19c2-404e-8473-f005f7a5b3cb")
+    @objid ("d122dea3-c912-4055-9bdc-124d5b18defd")
     private List<ModelElement> _objectRef = null;
 
     /**
@@ -87,9 +87,9 @@ public class HistoryInfoPropertyPage<T extends HistoryInfo> extends FeatureClass
         super.update(table);
         
         
-        table.addProperty("Object", getValue(this._element.getObject()));
-        table.addProperty("Start Time", getValue(this._element.getStartTime()));
-        table.addProperty("End Time", getValue(this._element.getEndTime()));
+        table.addProperty("Object", getNotNull(this._element.getObject()));
+        table.addProperty("Start Time", getNotNull(this._element.getStartTime()));
+        table.addProperty("End Time", getNotNull(this._element.getEndTime()));
         
         //Subject
         this._subject = CamelDesignerAbstractProxy.getMMSObject();

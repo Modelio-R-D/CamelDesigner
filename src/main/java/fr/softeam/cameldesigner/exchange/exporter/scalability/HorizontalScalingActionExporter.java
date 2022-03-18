@@ -22,12 +22,22 @@ public class HorizontalScalingActionExporter<T extends HorizontalScalingAction> 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.scalability.HorizontalScalingAction) {
+            setCount((camel.scalability.HorizontalScalingAction) elt);
+        }
     }
 
     @objid ("ec49c2f8-8478-42c7-83fe-3f60036c40a7")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("fd989e38-085d-44a5-8b6c-6d247cfb2e2a")
+    private void setCount(camel.scalability.HorizontalScalingAction elt) {
+        String content = this._element.getCount();
+        if (content != null)
+            elt.setCount(Integer.valueOf(content));
     }
 
 }

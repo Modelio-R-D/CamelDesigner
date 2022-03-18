@@ -23,6 +23,32 @@ public class DataExporter<T extends Data> extends NamedElementExporter<T> {
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.data.Data) {
+            setDataSource((camel.data.Data) elt);
+        }
+    }
+
+    @objid ("75b29bbf-a257-473f-89be-b94ff130a6ee")
+    private void setDataSource(camel.data.Data data) {
+        CDOObject source =  this._process.getElement(this._element.getDataSource());
+        if ((source != null) &&  (source instanceof camel.data.DataSource))
+            data.setDataSource((camel.data.DataSource) source);
+    }
+
+    @objid ("9953dbfe-b9db-4ab0-a9c9-60f5595a396f")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if  (elt instanceof camel.data.Data) {
+            if (context instanceof camel.data.DataTypeModel) {
+               ((camel.data.DataTypeModel) context).getData().add((camel.data.Data) elt);
+            }else   if (context instanceof camel.data.Data) {
+                ((camel.data.Data) context).getIncludesData().add((camel.data.Data) elt);
+            }else {
+                super.attach(elt, context);
+            }
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

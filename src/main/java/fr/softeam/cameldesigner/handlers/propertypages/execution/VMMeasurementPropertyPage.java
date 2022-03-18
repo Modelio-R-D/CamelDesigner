@@ -15,10 +15,10 @@ import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("451847ca-2d63-4a36-9c09-8fe4a9339b52")
 public class VMMeasurementPropertyPage<T extends VMMeasurement> extends FeatureClassPropertyPage<T> {
-    @objid ("4dc45424-950a-44d4-9eed-07bac2dd2fb6")
+    @objid ("95d7a2e3-a805-4cd7-ab6f-07a14cb47ab2")
     private List<ModelElement> _vm = null;
 
-    @objid ("57d65c9b-1c35-4581-9787-1723a395be29")
+    @objid ("2a31d64c-5360-45ca-bc03-f8be8606dd58")
     private List<ModelElement> _vmInstance = null;
 
     /**

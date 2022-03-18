@@ -76,25 +76,25 @@ public class ScriptConfigurationPropertyPage<T extends ScriptConfiguration> exte
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Upload Command", getValue(this._element.getUploadCommandNote()));
+        table.addProperty("Upload Command", getNotNull(this._element.getUploadCommandNote()));
         
-        table.addProperty("Install Command",  getValue(this._element.getInstallCommandNote()));
+        table.addProperty("Install Command",  getNotNull(this._element.getInstallCommandNote()));
         
-        table.addProperty("Start Command",  getValue(this._element.getStartCommandNote()));
+        table.addProperty("Start Command",  getNotNull(this._element.getStartCommandNote()));
         
-        table.addProperty("Stop Command",  getValue(this._element.getStopCommandNote()));
+        table.addProperty("Stop Command",  getNotNull(this._element.getStopCommandNote()));
         
-        table.addProperty("Download Command",  getValue(this._element.getDownloadCommandNote()));
+        table.addProperty("Download Command",  getNotNull(this._element.getDownloadCommandNote()));
         
-        table.addProperty("Configure Command",  getValue(this._element.getConfigureCommandNote()));
+        table.addProperty("Configure Command",  getNotNull(this._element.getConfigureCommandNote()));
         
-        table.addProperty("Update Command",  getValue(this._element.getUpdateCommandNote()));
+        table.addProperty("Update Command",  getNotNull(this._element.getUpdateCommandNote()));
         
-        table.addProperty("Devops Tool",  getValue(this._element.getDevopsTool()));
+        table.addProperty("Devops Tool",  getNotNull(this._element.getDevopsTool()));
         
-        table.addProperty("OS",  getValue(this._element.getOs()));
+        table.addProperty("OS",  getNotNull(this._element.getOs()));
         
-        table.addProperty("ImageId",  getValue(this._element.getImageId()));
+        table.addProperty("ImageId",  getNotNull(this._element.getImageId()));
     }
 
     @objid ("0d24f7cf-c568-4ca9-88d1-d308b0dee95c")

@@ -37,7 +37,7 @@ public abstract class LocationPropertyPage<T extends Location> extends FeatureEn
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Id",  getValue(this._element.getId()));
+        table.addProperty("Id",  getNotNull(this._element.getId()));
     }
 
     @objid ("e0111422-68ff-458c-a5bf-7e240a491b76")

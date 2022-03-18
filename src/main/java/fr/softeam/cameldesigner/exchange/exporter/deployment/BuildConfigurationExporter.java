@@ -45,27 +45,37 @@ public class BuildConfigurationExporter<T extends BuildConfiguration> extends Fe
 
     @objid ("14dec351-b810-4539-bdfb-4d2a79374c34")
     private void setExclude(camel.deployment.BuildConfiguration bc) {
-        bc.setExclude(this._element.getExclude());
+        String content = this._element.getExclude();
+        if (content != null)
+            bc.setExclude(content);
     }
 
     @objid ("febfaa0b-3a23-4203-b7d8-fa3f364418aa")
     private void setInclude(camel.deployment.BuildConfiguration bc) {
-        bc.setInclude(this._element.getInclude());
+        String content = this._element.getInclude();
+        if (content != null)
+            bc.setInclude(content);
     }
 
     @objid ("ed36892e-a130-44b0-899b-38b28c0f8c7c")
     private void setSourceCodeURL(camel.deployment.BuildConfiguration bc) {
-        bc.setSourceCodeURL(this._element.getSourceCodeURL());
+        String content = this._element.getSourceCodeURL();
+        if (content != null)
+            bc.setSourceCodeURL(content);
     }
 
     @objid ("1aa54531-3352-44c2-9008-525e29c7deb3")
     private void setBuildFramework(camel.deployment.BuildConfiguration bc) {
-        bc.setBuildFramework(this._element.getBuildFramework());
+        String content = this._element.getBuildFramework();
+        if (content != null)
+            bc.setBuildFramework(content);
     }
 
     @objid ("6bf6d9e2-21ea-46c7-9ec4-f984f536761b")
     private void setArtifactId(camel.deployment.BuildConfiguration bc) {
-        bc.setArtifactId(this._element.getArtifactId());
+        String content = this._element.getArtifactId();
+        if (content != null)
+            bc.setArtifactId(content);
     }
 
 }

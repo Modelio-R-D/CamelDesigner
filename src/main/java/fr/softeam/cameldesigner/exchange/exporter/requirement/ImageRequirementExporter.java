@@ -22,12 +22,23 @@ public class ImageRequirementExporter<T extends ImageRequirement> extends HardRe
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.requirement.ImageRequirement) {
+            setImages((camel.requirement.ImageRequirement) elt);
+        }
     }
 
     @objid ("8af3e1f9-5d47-4c0a-9f53-01b8948548e3")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("b57df064-e977-4cb8-9be0-4e45010d9b9e")
+    private void setImages(camel.requirement.ImageRequirement elt) {
+        elt.getImages().clear();
+        for(String image : this._element.getImages()) {
+            elt.getImages().add(image);
+        }
     }
 
 }

@@ -39,17 +39,26 @@ public class CommunicationPortExporter<T extends CommunicationPort> extends Name
 
     @objid ("4f9bc289-cad7-4832-af61-320473f00899")
     private void setHighPortNumber(camel.deployment.CommunicationPort cp) {
-        cp.setHighPortNumber(Integer.valueOf(this._element.getHighPortNumber()));
+        String content = this._element.getHighPortNumber();
+        if (content != null) {
+            cp.setHighPortNumber(Integer.valueOf(this._element.getHighPortNumber()));
+        }
     }
 
     @objid ("205ab60e-0fb8-4e26-b2c2-0315c9ad759a")
     private void setLowPortNumber(camel.deployment.CommunicationPort cp) {
-        cp.setLowPortNumber(Integer.valueOf(this._element.getLowPortNumber()));
+        String content = this._element.getLowPortNumber();
+        if (content != null) {
+            cp.setLowPortNumber(Integer.valueOf(content));
+        }
     }
 
     @objid ("50d71aed-41da-4516-82aa-9473e2399c94")
     private void setPortNumber(camel.deployment.CommunicationPort cp) {
-        cp.setPortNumber(Integer.valueOf(this._element.getName()));
+        String content = this._element.getName();
+        if (content != null) {
+            cp.setPortNumber(Integer.valueOf(content));
+        }
     }
 
 }

@@ -14,10 +14,10 @@ import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("d5e3f916-27ef-444e-83ef-120b3a283a61")
 public class PaaSMeasurementPropertyPage<T extends PaaSMeasurement> extends MeasurementPropertyPage<T> {
-    @objid ("840e3224-cfad-41b0-8072-425f4bcd7c9d")
+    @objid ("c379cc3c-1651-4063-87f0-78c7b85ca9f1")
     private List<ModelElement> _paasInstance = null;
 
-    @objid ("118979ff-b9e8-49b0-8a4e-d481a6540c0f")
+    @objid ("a55296f3-8040-4189-bf04-685fb9b6105f")
     private List<ModelElement> _paas = null;
 
     /**

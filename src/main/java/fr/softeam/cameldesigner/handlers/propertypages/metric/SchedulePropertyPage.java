@@ -63,19 +63,19 @@ public class SchedulePropertyPage<T extends Schedule> extends FeaturePropertyPag
         super.update(table);
         
         //Start
-        table.addProperty("Start", this._element.getStart());
+        table.addProperty("Start", getNotNull(this._element.getStart()));
         
         //End
-        table.addProperty("End", this._element.getEnd());
+        table.addProperty("End", getNotNull(this._element.getEnd()));
         
         //Time Unit
         table.addProperty("Time Unit", getCamelName(this._element.getTimeUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));
         
         //Repetitions
-        table.addProperty("Repetitions", this._element.getRepetitions());
+        table.addProperty("Repetitions", getNotNull(this._element.getRepetitions()));
         
         //Interval
-        table.addProperty("Interval", this._element.getInterval());
+        table.addProperty("Interval", getNotNull(this._element.getInterval()));
     }
 
     @objid ("edc4bff2-39b8-430e-b1fc-10aa26c53127")

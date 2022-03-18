@@ -41,28 +41,28 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
         }
     }
 
-    @objid ("8e182837-bb1e-41bf-b8a3-b6dcb06721a4")
+    @objid ("53484584-1d4e-4339-bf27-379a27a5e672")
     private void setObjectContext(camel.metric.MetricContext context) {
         CDOObject objContext = this._process.getElement(this._element.getObjectContext());
         if ((objContext != null) &&  (objContext instanceof camel.metric.ObjectContext))
             context.setObjectContext((camel.metric.ObjectContext) objContext);
     }
 
-    @objid ("050fe825-a12e-4d58-b43d-4af3953e7ebf")
+    @objid ("706d35bf-e13b-4c4c-9d9a-904e38974ba6")
     private void setSchedule(camel.metric.MetricContext context) {
         CDOObject schedule = this._process.getElement(this._element.getSchedule());
         if ((schedule != null) &&  (schedule instanceof camel.metric.Schedule))
             context.setSchedule((camel.metric.Schedule) schedule);
     }
 
-    @objid ("2fc043c3-1975-470c-ab65-861382ba6bed")
+    @objid ("019b30e4-8b81-4051-a6d3-0bca7611e48f")
     private void setWindow(camel.metric.MetricContext context) {
         CDOObject window = this._process.getElement(this._element.getWindow());
         if ((window != null) &&  (window instanceof camel.metric.Window))
             context.setWindow((camel.metric.Window) window);
     }
 
-    @objid ("a9f516c4-fc30-45c2-9bf6-f6c68f52ed3f")
+    @objid ("86a87fa4-8ed5-47a3-9058-ca21fa3ce8e6")
     private void setMetric(camel.metric.MetricContext context) {
         CDOObject metric = this._process.getElement(this._element.getMetric());
         if ((metric != null) &&  (metric instanceof camel.metric.Metric))

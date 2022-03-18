@@ -1,12 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.requirement;
 
-import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.Constraint;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("9b9e8414-3daa-4344-ac39-4bcbcb22c147")
 public class ProviderRequirementPropertyPage<T extends ProviderRequirement> extends HardRequirementPropertyPage<T> {
@@ -25,10 +21,8 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
         
         if(this._currentRow == 1){
             this._element.setCloudType(value);
-        }
+        }else if(this._currentRow == 2){
         
-        if(this._currentRow == 2){
-           
         }
         
         this._currentRow -= 2;
@@ -46,13 +40,12 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
         super.update(table);
         
         //Cloud Type
-        table.addProperty("<"
-                + "Cloud Type", this._element.getCloudType());
-           
+        table.addProperty("Cloud Type", this._element.getCloudType());
+        
         //Provider Names
         String providerNames = "";
         for(  String providerName: this._element.getProviderNames()) {
-            providerNames =    providerName ;
+            providerNames +=    providerName  + " ";
         }
         
         table.addProperty("Provider Names", providerNames);

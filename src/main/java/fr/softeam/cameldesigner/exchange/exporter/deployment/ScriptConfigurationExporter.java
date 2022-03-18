@@ -48,28 +48,28 @@ public class ScriptConfigurationExporter<T extends ScriptConfiguration> extends 
     @objid ("022a99c4-080e-420d-a196-083d4562c342")
     private void setImageId(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getImageId();
-        if (!(content.equals("")))
+        if (content != null)
             config.setImageId(content);
     }
 
     @objid ("bda98405-3035-4a35-9c0a-6685a9f8e0e2")
     private void setOs(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getOs();
-        if (!(content.equals("")))
+        if (content != null)
             config.setOs(content);
     }
 
     @objid ("aea15d75-0598-42ea-8606-6e05f90b8a25")
     private void setDevopsTool(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getDevopsTool();
-        if (!(content.equals("")))
+        if (content != null)
             config.setDevopsTool(content);
     }
 
     @objid ("5510210a-a7e3-49c1-83d1-36397375e6db")
     private void setUpdateCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getUpdateCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setUpdateCommand(content);
     }
 
@@ -111,7 +111,7 @@ public class ScriptConfigurationExporter<T extends ScriptConfiguration> extends 
     @objid ("63438a5e-4c03-4b35-a8b0-71b8a4bdf75f")
     private void setUploadCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getUploadCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setUploadCommand(content);
     }
 

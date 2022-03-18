@@ -11,7 +11,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("c35db71b-fae1-4269-bbbf-486b422d8fd5")
 public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends FeaturePropertyPage<T> {
-    @objid ("2c5b7b81-096d-4e51-a299-983d20d3d7e5")
+    @objid ("da0fab1e-8c49-4da7-9baa-c06620b75267")
     private List<ModelElement> _event = null;
 
     /**
@@ -34,7 +34,7 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
                 this._element.setEvent( (Event)elt);
             }
             break;
-            
+        
         case 2 :
             this._element.setOccurrenceNum(value);;
             break;
@@ -42,7 +42,7 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
         case 3 :
             this._element.setOperator(value);;
             break;
-            
+        
         }
         this._currentRow -= 3;
     }
@@ -62,8 +62,8 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
         this._event = Event.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Event ", getCamelName(this._element.getEvent()), getCamelNames(this._event));
         
-        table.addProperty("Occurence Num",getValue(this._element.getOccurrenceNum()));
-        table.addProperty("Operator",getValue(this._element.getOperator()));
+        table.addProperty("Occurence Num",getNotNull(this._element.getOccurrenceNum()));
+        table.addProperty("Operator",getNotNull(this._element.getOperator()));
     }
 
     @objid ("b877cba3-e639-47de-9aad-eb2fe8838e2e")

@@ -51,12 +51,16 @@ public abstract class MeasurementExporter<T extends Measurement> extends Feature
 
     @objid ("4e798996-0aa4-4bf5-964c-e267c9729d3f")
     private void setMeasurementTime(camel.execution.Measurement measurement) {
-        measurement.setMeasurementTime(Date.valueOf(this._element.getMeasurementTime()));
+        String content = this._element.getMeasurementTime();
+        if (content != null)
+            measurement.setMeasurementTime(Date.valueOf(content));
     }
 
     @objid ("0815571a-348c-4ba4-829c-658a4bb550fa")
     private void setValue(camel.execution.Measurement measurement) {
-        measurement.setValue(Double.valueOf(this._element.getValue()));
+        String content = this._element.getValue();
+        if (content != null)
+            measurement.setValue(Double.valueOf(content));
     }
 
     @objid ("e29720f3-020c-4469-b5d5-e35d4d8365d5")

@@ -15,6 +15,9 @@ public abstract class SoftRequirementExporter<T extends SoftRequirement> extends
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.requirement.SoftRequirement) {
+            setPriority((camel.requirement.SoftRequirement) elt);
+        }
     }
 
     @objid ("fc7a859e-daf2-4cab-a4cd-4af9129ff5e7")
@@ -27,6 +30,13 @@ public abstract class SoftRequirementExporter<T extends SoftRequirement> extends
     @Override
     public CDOObject createCamelElt(CDOObject context) {
         return super.createCamelElt(context);
+    }
+
+    @objid ("3600e0d7-3a21-4537-8bb9-f0e4a36d26fe")
+    private void setPriority(camel.requirement.SoftRequirement elt) {
+        String content = this._element.getPriority();
+        if (content != null)
+            elt.setPriority(Double.valueOf(content));
     }
 
 }

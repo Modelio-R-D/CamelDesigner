@@ -5,21 +5,19 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.Measurement;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.api.metricmodel.standard.instance.MetricInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance.EventInstance;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeatureClassPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("15944fc8-4af0-44dc-af63-647c6842cac8")
 public class MeasurementPropertyPage<T extends Measurement> extends FeatureClassPropertyPage<T> {
-    @objid ("48ef08ff-ce42-4a4a-b125-4d6df4fefad1")
+    @objid ("93d6b2aa-e2ee-481a-9471-7f78c0e08926")
     private List<ModelElement> _eventInstance = null;
 
-    @objid ("f7a6c71d-d771-498b-a9fd-b44c9ff86520")
+    @objid ("110a02e4-a4f5-488d-bfbe-335ee081a3f8")
     private List<ModelElement> _metricInstance = null;
 
     /**
@@ -73,8 +71,8 @@ public class MeasurementPropertyPage<T extends Measurement> extends FeatureClass
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Value", getValue(this._element.getValue()));
-        table.addProperty("Measurement Time", getValue(this._element.getMeasurementTime()));
+        table.addProperty("Value", getNotNull(this._element.getValue()));
+        table.addProperty("Measurement Time", getNotNull(this._element.getMeasurementTime()));
         
         // Event Instance
         this._eventInstance = CamelDesignerAbstractProxy.getEventInstances();

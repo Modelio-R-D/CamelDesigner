@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("0daa56af-0081-4d09-ba8b-b2b01233ee1d")
 public class VMMeasurement extends Measurement {
-    @objid ("f76e029e-b1dc-4222-831c-f0ef83a62601")
+    @objid ("955f86b7-34b4-4350-b398-2a59b0e78838")
     public static final String STEREOTYPE_NAME = "VMMeasurement";
 
     /**
@@ -48,7 +48,7 @@ public class VMMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b7e5fa3b-4450-4f9d-a30a-78711cba5ce1")
+    @objid ("3e84bf0d-fed9-4511-a468-b60a87a0f9ef")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VMMeasurement.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class VMMeasurement extends Measurement {
      * 
      * @return a {@link VMMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("d12552dc-256e-457e-93dd-7677e52e7e18")
+    @objid ("f90395bc-f3e7-470b-a184-5d619bdb87e2")
     public static VMMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, VMMeasurement.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class VMMeasurement extends Measurement {
      * @param obj a Class
      * @return a {@link VMMeasurement} proxy or <i>null</i>.
      */
-    @objid ("3fc65a4d-de3a-44b6-b07a-7474e110069e")
+    @objid ("d200bb17-8772-4b9f-90c8-eab1811ad1d5")
     public static VMMeasurement instantiate(final Class obj) {
         return VMMeasurement.canInstantiate(obj) ? new VMMeasurement(obj) : null;
     }
@@ -85,7 +85,7 @@ public class VMMeasurement extends Measurement {
      * @return a {@link VMMeasurement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c86668cd-f3d8-4897-b6af-ebe97f55f6ce")
+    @objid ("d8754da2-529d-4868-a3e1-4f9d1d075189")
     public static VMMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (VMMeasurement.canInstantiate(obj))
         	return new VMMeasurement(obj);
@@ -93,7 +93,7 @@ public class VMMeasurement extends Measurement {
         	throw new IllegalArgumentException("VMMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("465054cb-75fd-4bfe-b5c1-5adce500586a")
+    @objid ("911c19dd-fd6b-446a-b705-ce4f2f7116d2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class VMMeasurement extends Measurement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("98748500-af11-4721-a743-926f74c7d0c8")
+    @objid ("f7cc6880-8ace-492b-8205-48846c94ffa4")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -125,7 +125,7 @@ public class VMMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("fc578e71-efea-4e6c-9a07-b461aa2ed3f3")
+    @objid ("f7d3526c-7843-4791-aacc-e38b7d09dc23")
     public VM getVm() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(VMMeasurement.MdaTypes.MDAASSOCDEP)
@@ -143,7 +143,7 @@ public class VMMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("56e1cde9-20c8-4309-be9f-71ee075b80d2")
+    @objid ("d7c36b42-7246-4e37-81de-4646472a1bfb")
     public VMInstance getVmInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(VMMeasurement.MdaTypes.MDAASSOCDEP)
@@ -155,7 +155,7 @@ public class VMMeasurement extends Measurement {
         return null;
     }
 
-    @objid ("3284dadc-e6f8-40b0-a552-12a4af366c00")
+    @objid ("8a82d171-ac4a-4ed5-ad13-468243925616")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -167,7 +167,7 @@ public class VMMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("306ac101-a9cd-4240-97c3-3936b7e10b09")
+    @objid ("6e048662-4e22-4304-9adb-64ed11e9328a")
     public void setVm(final VM obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -193,7 +193,7 @@ public class VMMeasurement extends Measurement {
      * null
      * 
      */
-    @objid ("acef8d50-2cfb-4c9b-ad7c-5f027ac4cd8a")
+    @objid ("62f41f84-cf61-4129-8a6d-1f3c8474c614")
     public void setVmInstance(final VMInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -221,23 +221,23 @@ public class VMMeasurement extends Measurement {
         return result;
     }
 
-    @objid ("9eb379ab-4c2f-4dce-8310-82bd96e181e7")
+    @objid ("916a4f27-a366-4bc0-b8a0-9d653d3c7c2c")
     protected VMMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("722c2a2d-2b4b-4306-9ed5-0f04e5426046")
     public static final class MdaTypes {
-        @objid ("99b12381-3585-45f2-a132-3a7652a8912c")
+        @objid ("8deb2ae6-8f3d-4aa1-9663-8781063decc0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("52b5157c-2135-48f4-9ff9-794d681a0dab")
+        @objid ("7ad0a62e-96fb-4355-80f8-113768d1cfbf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e8496876-5b76-4232-a98f-909a9615145a")
+        @objid ("d1006d85-5595-42e6-807c-c447d41b137a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("bc2c8de1-06d9-488f-a67b-62139829c5a2")
+        @objid ("9e7268dd-021e-4dbc-b8f0-5a674cd2ec5e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a33f8ce2-8fb0-4642-be2c-588ae287f860");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

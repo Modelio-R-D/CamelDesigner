@@ -23,11 +23,11 @@ import org.modelio.vcore.smkernel.mapi.MClass;
  */
 @objid ("eb17cdb2-e6e0-40cb-8425-d0955e892705")
 public class UmlModelService {
+    @objid ("5d7e868f-3c2c-47ff-92e0-84b0991348f0")
+    private static IModuleContext MODULE_CONTEXT = CamelDesignerModule.getInstance().getModuleContext();
+
     @objid ("d07920e8-0d49-4d47-a732-7722f80df82e")
     private CamelDiagramsService camelDiagramService = new CamelDiagramsService();
-
-    @objid ("1835e7f9-e0b3-4079-b07c-8d1925a43dc5")
-    private static IModuleContext MODULE_CONTEXT = CamelDesignerModule.getInstance().getModuleContext();
 
     @objid ("3a184ba4-c42e-4e50-9f1f-d408ee628d0a")
     public Package createCamelModel(ModelElement packageOwner, String name) {

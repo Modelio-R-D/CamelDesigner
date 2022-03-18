@@ -3,30 +3,23 @@ package fr.softeam.cameldesigner.handlers.propertypages.execution;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.Measurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.SLOViolation;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.DataType;
 
 @objid ("fc39fb0b-e1a8-4b6c-b5b6-f9055fde833c")
 public class SLOViolationPropertyPage<T extends SLOViolation> extends CausePropertyPage<T> {
-    @objid ("650abf47-6655-4c1d-8b55-202c5bee1f26")
+    @objid ("60ed485e-7201-4ad3-bf55-caf13ff354f0")
     private List<ModelElement> _slo = null;
 
-    @objid ("2c96a7d2-ed89-4e0c-819f-3d1db31f5ee5")
+    @objid ("3ec6ef74-a70e-43d5-a5b3-ff9205ab2860")
     private List<ModelElement> _measurement = null;
 
-    @objid ("ebba3caa-d25e-42d5-bea2-0e656dd42f46")
+    @objid ("45788fa6-9430-45e3-b8b0-b37db8af5c5c")
     private List<ModelElement> _assessmentTime = null;
 
     /**
@@ -59,7 +52,7 @@ public class SLOViolationPropertyPage<T extends SLOViolation> extends CausePrope
         
         else if(this._currentRow == 3){
             this._element.setAssessmentTime(value);
-           
+        
         }
         
         this._currentRow -= 3;
@@ -85,7 +78,7 @@ public class SLOViolationPropertyPage<T extends SLOViolation> extends CausePrope
         table.addProperty("Measurement", getCamelName(this._element.getMeasurement()), getCamelNames(this._measurement));
         
         //Assessment Time
-        table.addProperty("Value", getValue(this._element.getAssessmentTime()));
+        table.addProperty("Value", getNotNull(this._element.getAssessmentTime()));
     }
 
     @objid ("1dfe709f-499d-4adb-968c-30672b1dbeba")

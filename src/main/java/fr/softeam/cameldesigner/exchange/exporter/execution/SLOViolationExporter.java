@@ -43,7 +43,9 @@ public class SLOViolationExporter<T extends SLOViolation> extends CauseExporter<
 
     @objid ("d7c1a42a-c841-40d3-b400-3f13b90318cb")
     private void setAssessmentTime(camel.execution.SLOViolation slov) {
-        slov.setAssessmentTime(Date.valueOf(this._element.getAssessmentTime()));
+        String content = this._element.getAssessmentTime();
+        if (content != null)
+            slov.setAssessmentTime(Date.valueOf(content));
     }
 
     @objid ("c09459a3-18d9-42e2-b7ad-c993dfb30102")

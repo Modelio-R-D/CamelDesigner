@@ -44,10 +44,10 @@ public abstract class AbstractSwtWizardWindow extends Dialog {
     @objid ("490bd008-5766-4f54-a7b1-a87802a710cc")
     protected String path = "";
 
-    @objid ("a0913517-01ab-45dd-a0dd-baafba0b7864")
+    @objid ("fcfab3ad-baff-44c7-ade6-c76350915cbc")
     protected org.modelio.metamodel.uml.statik.Package selectedElt = null;
 
-    @objid ("bc373cd7-ae0b-4b6b-8d98-e2cf8219cae7")
+    @objid ("6daa6141-c8ab-4306-8921-7e48bda12d97")
     protected Shell shell = null;
 
     @objid ("f29d190d-c138-44c4-964d-0fc69751553f")

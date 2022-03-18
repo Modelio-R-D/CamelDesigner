@@ -41,7 +41,7 @@ public class MetricVariableExporter<T extends MetricVariable> extends MetricExpo
         super.attach(elt, context);
     }
 
-    @objid ("e9363f2b-bdf4-4d45-826e-5f1ac3281872")
+    @objid ("20425670-2107-4423-820d-f2372e317724")
     private void setComponentMetrics(camel.metric.MetricVariable cMetric) {
         List<camel.metric.Metric> metrics = new ArrayList<>();
         for (Metric metric : this._element.getComponentMetrics()) {
@@ -53,24 +53,26 @@ public class MetricVariableExporter<T extends MetricVariable> extends MetricExpo
         cMetric.getComponentMetrics().addAll(metrics);
     }
 
-    @objid ("bd673c8f-dd2f-4c12-9508-283076ba1152")
+    @objid ("998a3456-2b3a-42ae-ab8e-d3fa7a54cd28")
     private void setFormula(camel.metric.MetricVariable cMetric) {
-        cMetric.setFormula(this._element.getFormula());
+        String content = this._element.getFormula();
+        if (content != null)
+            cMetric.setFormula(content);
     }
 
-    @objid ("9e72bbf2-322a-4c0e-8898-1e1ffa93a556")
+    @objid ("f5312ced-87aa-473d-bfd2-6930f1542fcc")
     private void setOnNodeCandidates(camel.metric.MetricVariable cMetric) {
         cMetric.setOnNodeCandidates(this._element.isOnNodeCandidates());
     }
 
-    @objid ("1995d60d-bd4b-4af4-a8c9-e3f96d8887f8")
+    @objid ("5ccc9fa4-c6d9-4dfc-bccd-03a9eb44532c")
     private void setComponent(camel.metric.MetricVariable cMetric) {
         CDOObject comp = this._process.getElement(this._element.getComponent());
         if ((comp != null) &&  (comp instanceof camel.deployment.Component))
             cMetric.setComponent((camel.deployment.Component) comp);
     }
 
-    @objid ("d4c5d243-6a51-456c-a5bc-ac78f3050f0c")
+    @objid ("4947ca44-8c6b-4bef-a221-d40516c83a5e")
     private void setCurrentConfiguration(camel.metric.MetricVariable cMetric) {
         cMetric.setCurrentConfiguration(this._element.isCurrentConfiguration());
     }

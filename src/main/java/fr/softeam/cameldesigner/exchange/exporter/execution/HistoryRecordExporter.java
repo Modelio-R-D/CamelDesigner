@@ -47,52 +47,56 @@ public class HistoryRecordExporter<T extends HistoryRecord> extends FeatureClass
         }
     }
 
-    @objid ("9976feb8-3e03-4a92-b023-24f3eb1a8a97")
+    @objid ("48cab6c6-2035-48a4-8aef-03fb3aa9816f")
     private void setFromDataIM(camel.execution.HistoryRecord record) {
         CDOObject fromDIM  =  this._process.getElement(this._element.getFromDataInstanceModel());
         if ((fromDIM != null) &&  (fromDIM instanceof camel.data.DataInstanceModel))
             record.setFromDataInstanceModel((camel.data.DataInstanceModel) fromDIM);
     }
 
-    @objid ("1c65ca66-5d38-4f18-8de1-ea37fb70e54c")
+    @objid ("3cf3421c-446d-49cf-95e6-63bf814edf15")
     private void setFromDeployIM(camel.execution.HistoryRecord record) {
         CDOObject fromDIM  =  this._process.getElement(this._element.getFromDeploymentInstanceModel());
         if ((fromDIM != null) &&  (fromDIM instanceof camel.deployment.DeploymentInstanceModel))
             record.setFromDeploymentInstanceModel((camel.deployment.DeploymentInstanceModel) fromDIM);
     }
 
-    @objid ("34454404-04c9-444d-939c-6b3fb71d2a66")
+    @objid ("36027c10-83a7-439c-a05f-75f0bf5aa540")
     private void setToDataIM(camel.execution.HistoryRecord record) {
         CDOObject toDIM  =  this._process.getElement(this._element.getToDataInstanceModel());
         if ((toDIM != null) &&  (toDIM instanceof camel.data.DataInstanceModel))
             record.setToDataInstanceModel((camel.data.DataInstanceModel) toDIM);
     }
 
-    @objid ("fe52500e-0def-4dc5-9f53-a017e087f37a")
+    @objid ("c183a70f-e084-443b-846f-5fab74588b4d")
     private void setToDeployIM(camel.execution.HistoryRecord record) {
         CDOObject toDIM  =  this._process.getElement(this._element.getToDeploymentInstanceModel());
         if ((toDIM != null) &&  (toDIM instanceof camel.deployment.DeploymentInstanceModel))
             record.setToDeploymentInstanceModel((camel.deployment.DeploymentInstanceModel) toDIM);
     }
 
-    @objid ("0e17d170-df44-4205-a1d2-a8141512c52e")
+    @objid ("c42ec304-ac59-4915-bec1-23ab273e5293")
     private void setEndTime(camel.execution.HistoryRecord record) {
-        record.setEndTime(Date.valueOf(this._element.getEndTime()));
+        String content = this._element.getEndTime();
+        if (content != null)
+            record.setEndTime(Date.valueOf(content));
     }
 
-    @objid ("ace90ce8-e565-40ab-8506-d51d1e973e6e")
+    @objid ("8fea9af0-ae61-4d44-985e-dbefc76d18a4")
     private void setStartTime(camel.execution.HistoryRecord record) {
-        record.setStartTime(Date.valueOf(this._element.getStartTime()));
+        String content = this._element.getStartTime();
+        if (content != null)
+            record.setStartTime(Date.valueOf(content));
     }
 
-    @objid ("a99b0d77-8e15-457a-80d7-7ac9e5048d6d")
+    @objid ("03a9736f-2ad0-4e16-a803-542f40a53d46")
     private void setCause(camel.execution.HistoryRecord record) {
         CDOObject cause =  this._process.getElement(this._element.getCause());
         if ((cause != null) &&  (cause instanceof camel.execution.Cause))
             record.setCause((camel.execution.Cause) cause);
     }
 
-    @objid ("146354b6-b618-4412-b1a0-f8fa02251fca")
+    @objid ("1d382cdf-92dd-4105-8cb4-62a59c42b19f")
     private void setType(camel.execution.HistoryRecord record) {
         CDOObject type =  this._process.getElement(this._element.getType());
         if ((type != null) &&  (type instanceof camel.mms.MmsObject))

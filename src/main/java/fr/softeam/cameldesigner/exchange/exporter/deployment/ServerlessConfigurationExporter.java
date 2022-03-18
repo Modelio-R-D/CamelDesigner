@@ -42,7 +42,9 @@ public class ServerlessConfigurationExporter<T extends ServerlessConfiguration> 
 
     @objid ("8916f91a-69c4-4237-9a36-12325591b11c")
     private void setBinaryCodeURL(camel.deployment.ServerlessConfiguration sc) {
-        sc.setBinaryCodeURL(this._element.getBinaryCodeURL());
+        String content = this._element.getBinaryCodeURL();
+        if (content != null)
+            sc.setBinaryCodeURL(content);
     }
 
 }

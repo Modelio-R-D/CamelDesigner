@@ -7,11 +7,11 @@ import org.modelio.vbasic.version.Version;
 
 @objid ("4b2a6f55-96b5-4bd8-8f83-c440dd3e930c")
 public class CamelDesignerPeerModule implements ICamelDesignerPeerModule {
+    @objid ("636e1216-cc93-4a08-8b15-d6544347a5e2")
+    private IModuleAPIConfiguration peerConfiguration;
+
     @objid ("22edf731-59dc-41e5-9421-14fdd671305a")
     private CamelDesignerModule module = null;
-
-    @objid ("bb97c493-1118-4595-b6a3-4c151b5ed11b")
-    private IModuleAPIConfiguration peerConfiguration;
 
     @objid ("3539600b-f9f6-4a25-b187-4cb5d5db12a6")
     public CamelDesignerPeerModule(final CamelDesignerModule module, final IModuleAPIConfiguration peerConfiguration) {

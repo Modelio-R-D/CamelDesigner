@@ -43,7 +43,7 @@ public class MetricPropertyPage<T extends Metric> extends FeaturePropertyPage<T>
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-              //Template
+        //Template
         table.addProperty("Template", getCamelName(this._element.getMetricTemplate()), getCamelNames(MetricTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 

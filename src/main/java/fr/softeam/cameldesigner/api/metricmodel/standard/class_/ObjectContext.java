@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -44,7 +44,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6b0e8788-1e8c-4f51-b3be-5895fa33507f")
 public class ObjectContext extends FeatureClass {
-    @objid ("2bd3faf5-47d1-40ed-81ce-0e17a5c46802")
+    @objid ("16067bb2-4065-4541-937c-9222c5a606ee")
     public static final String STEREOTYPE_NAME = "ObjectContext";
 
     /**
@@ -55,7 +55,7 @@ public class ObjectContext extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ccd57297-4c31-45a1-bc1f-f7a294cd986c")
+    @objid ("f30c4d95-40e9-4826-a672-f238f84f4c1b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ObjectContext.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public class ObjectContext extends FeatureClass {
      * 
      * @return a {@link ObjectContext} proxy on the created {@link Class}.
      */
-    @objid ("648cb8c4-1f17-477d-934e-da038f858498")
+    @objid ("b9abe409-67d0-4c9f-a955-cfc2cd6ad16d")
     public static ObjectContext create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ObjectContext.STEREOTYPE_NAME);
@@ -79,7 +79,7 @@ public class ObjectContext extends FeatureClass {
      * @param obj a Class
      * @return a {@link ObjectContext} proxy or <i>null</i>.
      */
-    @objid ("3ed7c5c3-8a0c-4a5d-896d-2356cc4525b3")
+    @objid ("503d4ec2-c89f-47ff-b270-c1e8557e736f")
     public static ObjectContext instantiate(final Class obj) {
         return ObjectContext.canInstantiate(obj) ? new ObjectContext(obj) : null;
     }
@@ -92,7 +92,7 @@ public class ObjectContext extends FeatureClass {
      * @return a {@link ObjectContext} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("518da97d-d94f-4e17-be64-3fad3629049f")
+    @objid ("c52b207c-eacc-4abf-93fe-ed3ce7884052")
     public static ObjectContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ObjectContext.canInstantiate(obj))
         	return new ObjectContext(obj);
@@ -100,7 +100,7 @@ public class ObjectContext extends FeatureClass {
         	throw new IllegalArgumentException("ObjectContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3eb39a78-f86f-4b44-80a1-f9ca81bf57bb")
+    @objid ("c67fd7da-7b7d-4d8e-80f7-e31be3f01277")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -122,7 +122,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("0826c5a7-637d-4e54-a74c-db3d8ccd0a6d")
+    @objid ("749c4da2-b7fa-4b8c-b27a-09fc9bd2ea30")
     public Communication getCommunication() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ObjectContext.MdaTypes.MDAASSOCDEP)
@@ -140,7 +140,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("ee8eb9ac-c331-4b5c-81c7-da03e6dba5f5")
+    @objid ("c63f1a22-e22a-41cf-b4d7-f25cb3e6de0b")
     public CamelComponent getComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ObjectContext.MdaTypes.MDAASSOCDEP)
@@ -166,7 +166,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("1e7b8151-d8e3-4101-8393-2f3ac0e113ae")
+    @objid ("eb4f3011-5e64-4635-a614-ac36764ff4f2")
     public Data getData() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ObjectContext.MdaTypes.MDAASSOCDEP)
@@ -182,13 +182,13 @@ public class ObjectContext extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("ef0d9552-afa3-4e1f-8e9f-fc3e24902280")
+    @objid ("2beed570-9557-4f3b-aa7d-91a46c6b2c2b")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("cfdf4405-82b7-4baf-9372-5e19831ab38c")
+    @objid ("c632ae2e-ef4e-4094-a469-2ddf1adcedd4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -200,7 +200,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("56900415-d5a4-4ea1-8263-9cfffb61b850")
+    @objid ("baed7c39-292c-44d0-8987-050f2b394f86")
     public void setCommunication(final Communication obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -226,7 +226,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("eb2d5880-3f54-4113-ad1e-c301c3b2d3cd")
+    @objid ("591d4ef6-672b-408a-8aa0-6f0bbebef222")
     public void setComponent(final CamelComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -252,7 +252,7 @@ public class ObjectContext extends FeatureClass {
      * null
      * 
      */
-    @objid ("3be24b5a-ef02-403a-a2c4-27c35c034078")
+    @objid ("18a796f3-8308-4380-9efd-0b2077d62ad7")
     public void setData(final Data obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -280,23 +280,23 @@ public class ObjectContext extends FeatureClass {
         return result;
     }
 
-    @objid ("f6914cc4-a753-4812-b4a6-d79846f05d60")
+    @objid ("4a394bc2-4f8e-49c8-ae37-cd5c9737f26e")
     protected ObjectContext(final Class elt) {
         super(elt);
     }
 
     @objid ("5fffe97f-3562-4512-9295-ad884699b40d")
     public static final class MdaTypes {
-        @objid ("c4d50ee5-7e36-44d3-a673-c51a5975fdf8")
+        @objid ("8fc6462e-febb-4fc1-af17-b01ed0d48beb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("43c1f22f-d8b3-4fd9-9030-b80c79f8c4ea")
+        @objid ("4e256020-8402-45cd-abfe-f5d62df4bb42")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1b510b07-2491-4269-b0de-f413c77ad42a")
+        @objid ("1e324b96-184b-48b6-9e74-575333add8ea")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b7386f9a-1408-4e05-9061-2fcd243819db")
+        @objid ("deeae435-f364-4dd8-a08c-ce1446d825e5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b5ec870a-0a52-4a49-a5f3-ee6a50acb0c7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

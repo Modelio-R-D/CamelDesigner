@@ -2,18 +2,15 @@ package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Timer;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("c1e3d22f-dba0-4cc7-8093-4a7716322c90")
 public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
-    @objid ("909c70a1-db0c-4d70-8dfa-5e0bd3771995")
+    @objid ("86f13313-0a94-4669-abbd-fa6c03ea0e40")
     private List<ModelElement> _unit = null;
 
     /**
@@ -46,7 +43,7 @@ public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
         case 4:
             ModelElement elt =  getModelElt(this._unit, value);
             if (Unit.canInstantiate(elt)) {
-                this._element.set((Unit) elt);
+                this._element.setUnit((Unit) elt);
             }
             break;
         
@@ -64,13 +61,13 @@ public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Type",getValue(this._element.getType()));
-        table.addProperty("Time Value",getValue(this._element.getTimeValue()));
-        table.addProperty("Max Occurence Num",getValue(this._element.getMaxOccurrenceNum()));
+        table.addProperty("Type",getNotNull(this._element.getType()));
+        table.addProperty("Time Value",getNotNull(this._element.getTimeValue()));
+        table.addProperty("Max Occurence Num",getNotNull(this._element.getMaxOccurrenceNum()));
         
         //Unit
         this._unit = Unit.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
-        table.addProperty("Unit ", getCamelName(this._element.get()), getCamelNames(this._unit));
+        table.addProperty("Unit ", getCamelName(this._element.getUnit()), getCamelNames(this._unit));
     }
 
     @objid ("90e9a8b4-ec73-4308-bbb1-e447547fbf5c")

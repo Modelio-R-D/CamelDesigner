@@ -16,6 +16,11 @@ public class OSRequirementExporter<T extends OSRequirement> extends HardRequirem
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.requirement.OSRequirement) {
+            camel.requirement.OSRequirement osr = (camel.requirement.OSRequirement) elt;
+            setOS(osr);
+            set64OS(osr);
+        }
     }
 
     @objid ("d302ffb0-702f-4478-8828-d755b27ea8e8")
@@ -28,6 +33,18 @@ public class OSRequirementExporter<T extends OSRequirement> extends HardRequirem
     @Override
     public CDOObject createCamelElt(CDOObject context) {
         return RequirementFactory.eINSTANCE.createOSRequirement();
+    }
+
+    @objid ("738e60cc-3533-49ef-a57e-6e493bcbb4ec")
+    private void set64OS(camel.requirement.OSRequirement osr) {
+        osr.setIs64os(this._element.isIs64os());
+    }
+
+    @objid ("debb8da0-29f9-4766-9e6f-3b24c64dc498")
+    private void setOS(camel.requirement.OSRequirement osr) {
+        String content = this._element.getOs();
+        if (content != null)
+            osr.setOs(content);
     }
 
 }

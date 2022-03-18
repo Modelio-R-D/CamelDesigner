@@ -22,12 +22,26 @@ public class PlatformCredentialsExporter<T extends PlatformCredentials> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.PlatformCredentials) {
+            setPassword((camel.organisation.PlatformCredentials) elt);
+        }
     }
 
     @objid ("117e246c-8c12-476c-afd6-102044d11944")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.organisation.User) && (elt instanceof camel.organisation.PlatformCredentials)) {
+            ((camel.organisation.User) context).setPlatformCredentials((camel.organisation.PlatformCredentials) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("abcb9fc1-0899-480f-a1ea-3b9194f22f20")
+    private void setPassword(camel.organisation.PlatformCredentials elt) {
+        String content = this._element.getPassword();
+        if (content != null)
+            elt.setPassword(content);
     }
 
 }

@@ -2,20 +2,18 @@ package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.standard.namespace.Action;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("995883d0-c1ed-4c9b-b529-bd2772bec0d2")
 public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extends FeaturePropertyPage<T> {
-    @objid ("5b6ee74a-d06b-4a88-8d22-fff233900e2e")
+    @objid ("7d7cc7ad-bae6-4c7d-afb5-9b4275fc431a")
     private List<ModelElement> _leftEvent = null;
 
-    @objid ("1853c0db-3b19-4862-8040-0c220890cca2")
+    @objid ("47a66b9c-9a80-4edd-ad54-c606120cfc19")
     private List<ModelElement> _rightEvent = null;
 
     /**
@@ -39,7 +37,7 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
                 this._element.setLeftEvent((Event) elt);
             }
             break;
-            
+        
         case 2 :
             elt = getModelElt(this._rightEvent, value);
             if (Event.canInstantiate(elt)) {
@@ -50,11 +48,11 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
         case 3 :
             this._element.setLowerOccurrenceBound(value);;
             break;
-            
+        
         case 4:
             this._element.setUpperOccurrenceBound(value);;
             break;
-            
+        
         case 5 :
             this._element.setOperator(value);;
             break;
@@ -76,14 +74,14 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
         //Left Event
         this._leftEvent = Event.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Left Event", getCamelName(this._element.getLeftEvent()), getCamelNames(this._leftEvent));
-            
+        
         // Right Event
         this._rightEvent = Event.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Right Event", getCamelName(this._element.getRightEvent()), getCamelNames(this._rightEvent));
-            
-        table.addProperty("Lower Occurrence Bound",getValue(this._element.getLowerOccurrenceBound()));
-        table.addProperty("Upper Occurence Bound",getValue(this._element.getUpperOccurrenceBound()));
-        table.addProperty("Operator",getValue(this._element.getOperator()));
+        
+        table.addProperty("Lower Occurrence Bound",getNotNull(this._element.getLowerOccurrenceBound()));
+        table.addProperty("Upper Occurence Bound",getNotNull(this._element.getUpperOccurrenceBound()));
+        table.addProperty("Operator",getNotNull(this._element.getOperator()));
     }
 
     @objid ("f2c35708-5543-49fa-9960-65e30459d059")

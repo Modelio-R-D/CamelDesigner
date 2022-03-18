@@ -29,7 +29,7 @@ public class HistoryInfoExporter<T extends HistoryInfo> extends FeatureClassExpo
             setSubject(info);
             setAction(info);
             setObject(info);
-        //            setObjectRef(info);
+            //            setObjectRef(info);
             setStartTime(info);
             setEndTime(info);
         }
@@ -41,29 +41,35 @@ public class HistoryInfoExporter<T extends HistoryInfo> extends FeatureClassExpo
         super.attach(elt, context);
     }
 
-    @objid ("09c8cbee-adc7-43af-b80a-4900bb4c564f")
+    @objid ("a35d6eab-a8e1-49ff-b14e-87c45dedda40")
     private void setEndTime(camel.execution.HistoryInfo info) {
-        info.setEndTime(Date.valueOf(this._element.getEndTime()));
+        String content = this._element.getEndTime();
+        if (content != null)
+            info.setEndTime(Date.valueOf(content));
     }
 
-    @objid ("df04741a-89ea-4fe9-9f55-ba8b10404a7e")
+    @objid ("a8ae5e64-8e7d-4f96-801c-956bd647fd10")
     private void setStartTime(camel.execution.HistoryInfo info) {
-        info.setStartTime(Date.valueOf(this._element.getStartTime()));
+        String content = this._element.getStartTime();
+        if (content != null)
+            info.setStartTime(Date.valueOf(content));
     }
 
-    @objid ("723baef3-ac89-4c90-9369-e3d77c8cc4fa")
+    @objid ("3913bba6-1f50-4230-bda0-d2bf0dc6d12b")
     private void setObject(camel.execution.HistoryInfo info) {
-        info.setObject(this._element.getObject());
+        String content = this._element.getObject();
+        if (content != null)
+            info.setObject(content);
     }
 
-    @objid ("009cca51-9902-48e3-b5c4-49d1e5a576d2")
+    @objid ("a65f0a81-155c-4177-96b1-0e771b2090c3")
     private void setAction(camel.execution.HistoryInfo info) {
         CDOObject action  =  this._process.getElement(this._element.getAction());
         if ((action != null) &&  (action instanceof camel.mms.MmsObject))
             info.setAction((camel.mms.MmsObject) action);
     }
 
-    @objid ("3bf16745-c6c3-41c1-997f-5d88b10ddbab")
+    @objid ("3ada1c00-c906-40b9-a4fc-76a0f18b3085")
     private void setSubject(camel.execution.HistoryInfo info) {
         CDOObject subject  =  this._process.getElement(this._element.getSubject());
         if ((subject != null) &&  (subject instanceof camel.mms.MmsObject))

@@ -10,7 +10,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("242f61fc-7385-436b-b440-99171d6a4040")
 public class DataInstancePropertyPage<T extends DataInstance> extends FeatureInstancePropertyPage<T> {
-    @objid ("cf07d7d7-8270-456b-9544-34b36b0a7048")
+    @objid ("b6f26a3d-4542-434e-939f-b275c966f748")
     private List<ModelElement> _dataSourceInstances;
 
     /**

@@ -42,26 +42,26 @@ public class MetricTemplateExporter<T extends MetricTemplate> extends FeatureExp
         }
     }
 
-    @objid ("7eeddc1e-ab97-43ba-983d-7a0d293f0565")
+    @objid ("0c30a7a3-1747-4193-b9dc-122be0e75ad8")
     private void setAttribute(camel.metric.MetricTemplate template) {
         CDOObject att = this._process.getElement(this._element.getAttribute());
         if ((att != null) &&  (att instanceof camel.core.MeasurableAttribute))
             template.setAttribute((camel.core.MeasurableAttribute) att);
     }
 
-    @objid ("c6704f09-8270-46ca-827a-67414ff6bbc9")
+    @objid ("811e9c1f-494a-4b59-9e57-7bf985408d0c")
     private void setUnit(camel.metric.MetricTemplate template) {
         CDOObject unit = this._process.getElement(this._element.getUnit());
         if ((unit != null) &&  (unit instanceof camel.unit.Unit))
             template.setUnit((camel.unit.Unit) unit);
     }
 
-    @objid ("3559bcf3-5cbf-4368-ad77-8948981492ad")
+    @objid ("2c806d3b-495d-4e39-87a0-ac0c1d0f80b7")
     private void setValueDirection(camel.metric.MetricTemplate template) {
         template.setValueDirection(Short.valueOf(this._element.getValueDirection()));
     }
 
-    @objid ("3175529c-1f3b-472d-89f5-c885a4a19c90")
+    @objid ("7e1a6062-13c1-4bd5-b9c5-cc5ca9012109")
     private void setValueType(camel.metric.MetricTemplate template) {
         CDOObject vt = this._process.getElement(this._element.getValueType());
         if ((vt != null) &&  (vt instanceof camel.type.ValueType))

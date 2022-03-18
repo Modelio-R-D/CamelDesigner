@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.connector;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e8779648-b44d-4776-a06d-d33bf013b2d7")
 public class FeatureConnector extends Feature {
-    @objid ("3b0a5d09-0789-4ba9-83e0-6936e2eb6b66")
+    @objid ("2e15e091-8963-4ad1-a902-09be68c9d1ae")
     public static final String STEREOTYPE_NAME = "Feature_Connector";
 
     /**
@@ -47,7 +47,7 @@ public class FeatureConnector extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("15f3abc7-7ad8-480d-9e51-ee1202d864ad")
+    @objid ("e5e2cc84-72f3-454e-8683-1acf6e3447cf")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureConnector.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class FeatureConnector extends Feature {
      * 
      * @return a {@link FeatureConnector} proxy on the created {@link Connector}.
      */
-    @objid ("1a1ef780-f87a-4cc9-819c-6476d40e2103")
+    @objid ("7ec5463a-b9f5-4b43-b82c-78d56a0c5c2d")
     public static FeatureConnector create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeatureConnector.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class FeatureConnector extends Feature {
      * @param obj a Connector
      * @return a {@link FeatureConnector} proxy or <i>null</i>.
      */
-    @objid ("4d4959cb-a38d-48e9-b9ec-c94a6edc00f9")
+    @objid ("f2d937b1-d7b7-47c3-b4ee-9e3558d208d0")
     public static FeatureConnector instantiate(final Connector obj) {
         return FeatureConnector.canInstantiate(obj) ? new FeatureConnector(obj) : null;
     }
@@ -84,7 +84,7 @@ public class FeatureConnector extends Feature {
      * @return a {@link FeatureConnector} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6ca7dcdc-772b-40a3-9e1f-01483441b0a9")
+    @objid ("f8c4d193-260f-4f26-884e-1e159d62297f")
     public static FeatureConnector safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (FeatureConnector.canInstantiate(obj))
         	return new FeatureConnector(obj);
@@ -92,7 +92,7 @@ public class FeatureConnector extends Feature {
         	throw new IllegalArgumentException("FeatureConnector: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bdd26dae-31b4-4200-89d8-ada8f274002b")
+    @objid ("ca588fde-d5ab-4e2f-9339-df5244c2f689")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class FeatureConnector extends Feature {
      * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("f79b9da4-58a0-4db4-b1cb-51eff169078b")
+    @objid ("39822bc9-841b-49b1-b6a7-ee2a692b2828")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
     }
 
-    @objid ("45ee6f90-d8c9-44eb-9677-bdf43ff69af6")
+    @objid ("cd11677d-81f9-4270-ac55-56a4d899fa1b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class FeatureConnector extends Feature {
         return result;
     }
 
-    @objid ("1bba4048-11a9-43d1-ae19-7d075e20f41d")
+    @objid ("77310cd3-63ea-42f9-b279-b28b6a0fded4")
     protected FeatureConnector(final Connector elt) {
         super(elt);
     }
 
     @objid ("6b5ec3ef-f04f-448d-b275-ff41664d9e6e")
     public static final class MdaTypes {
-        @objid ("1e2b78c4-3b3a-4822-9c01-0d662680fc45")
+        @objid ("f1732a14-48c9-4c90-9db8-4a1de36234e7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("78d7211e-90f3-4314-9716-4872de125070")
+        @objid ("547ce43a-1038-4a24-afd5-24fc73de9ba0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("cb3c2dfc-92e2-4095-bbd5-531d148a1cc2")
+        @objid ("cfb1144c-78d2-43a3-8345-f2bd6ed10c31")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4ae0b6d4-681e-4d9c-a0ec-fe6fd385a6a9")
+        @objid ("65609ce7-c0c1-45a0-8d45-8b74ec15b7a7")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e94d1d27-429c-47ce-a373-e940bf1bf49b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

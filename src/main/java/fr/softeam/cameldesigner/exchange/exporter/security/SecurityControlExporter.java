@@ -28,7 +28,11 @@ public class SecurityControlExporter<T extends SecurityControl> extends FeatureE
     @objid ("9a0e3806-950b-44d2-9eee-549c396aa3d5")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.security.SecurityModel) && (elt instanceof camel.security.SecurityControl)) {
+            ((camel.security.SecurityModel) context).getSecurityControls().add((camel.security.SecurityControl) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

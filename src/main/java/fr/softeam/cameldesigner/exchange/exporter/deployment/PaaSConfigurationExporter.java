@@ -39,22 +39,30 @@ public class PaaSConfigurationExporter<T extends PaaSConfiguration> extends Conf
 
     @objid ("03576ab9-a115-4aa0-912a-a1e747c6cbad")
     private void setDownloadURL(camel.deployment.PaaSConfiguration pc) {
-        pc.setDownloadURL(this._element.getDownloadURL());
+        String content = this._element.getDownloadURL();
+        if (content != null)
+            pc.setDownloadURL(content);
     }
 
     @objid ("ab07611e-1953-4a77-b832-29e800fc8c41")
     private void setEndPoint(camel.deployment.PaaSConfiguration pc) {
-        pc.setEndpoint(this._element.getEndpoint());
+        String content = this._element.getEndpoint();
+        if (content != null)
+            pc.setEndpoint(content);
     }
 
     @objid ("34b0ef79-7267-4b33-8765-6ad5b880b224")
     private void setVersion(camel.deployment.PaaSConfiguration pc) {
-        pc.setVersion(this._element.getVersion());
+        String content = this._element.getVersion();
+        if (content != null)
+            pc.setVersion(content);
     }
 
     @objid ("b010c723-bd3c-4935-b781-5d4192f6cae3")
     private void setAPI(camel.deployment.PaaSConfiguration pc) {
-        pc.setApi(this._element.getApi());
+        String content = this._element.getApi();
+        if (content != null)
+            pc.setApi(content);
     }
 
 }

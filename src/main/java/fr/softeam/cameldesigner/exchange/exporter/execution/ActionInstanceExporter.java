@@ -46,12 +46,16 @@ public class ActionInstanceExporter<T extends ActionInstance> extends FeatureExp
 
     @objid ("c61617d8-66b8-4091-babf-843fd2adc400")
     private void setStartTime(camel.execution.ActionInstance ai) {
-        ai.setStartTime(Date.valueOf(this._element.getStartTime()));
+        String content = this._element.getStartTime();
+        if (content != null)
+            ai.setStartTime(Date.valueOf(content));
     }
 
     @objid ("8ee360ad-24fa-4366-a0b7-ace5e6b17c17")
     private void setEndTime(camel.execution.ActionInstance ai) {
-        ai.setEndTime(Date.valueOf(this._element.getEndTime()));
+        String content = this._element.getEndTime();
+        if (content != null)
+            ai.setEndTime(Date.valueOf(content));
     }
 
     @objid ("ef19de19-11af-40cc-a910-8be9ea613509")

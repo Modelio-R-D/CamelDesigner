@@ -36,7 +36,9 @@ public class ClusterConfigurationExporter<T extends ClusterConfiguration> extend
 
     @objid ("46f49088-28fa-41b3-8a0d-d62cafdd4168")
     private void setDownloadURL(camel.deployment.ClusterConfiguration cc) {
-        cc.setDownloadURL(this._element.getDownloadURL());
+        String content = this._element.getDownloadURL();
+        if (content != null)
+            cc.setDownloadURL(content);
     }
 
 }

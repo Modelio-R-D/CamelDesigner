@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.class_;
 
@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("d6e20c69-fb86-4fa7-8543-54421e74bd48")
 public class Data extends FeatureClass {
-    @objid ("1a41f50c-d9d4-4421-8f13-8b9d168409d9")
+    @objid ("fa0a61e3-de53-44b5-82a1-3d15ed20ceea")
     public static final String STEREOTYPE_NAME = "Data";
 
     /**
@@ -49,7 +49,7 @@ public class Data extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b2f59108-9952-4800-8a44-1fd0bf14c91b")
+    @objid ("85da23ba-5ab7-44fc-b855-41938e571aa7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Data.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public class Data extends FeatureClass {
      * 
      * @return a {@link Data} proxy on the created {@link Class}.
      */
-    @objid ("aa0a4936-d68f-43e7-b103-bc5c9a1e44b6")
+    @objid ("75371b50-918b-4cc8-ac5e-7600362b1849")
     public static Data create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Data.STEREOTYPE_NAME);
@@ -73,7 +73,7 @@ public class Data extends FeatureClass {
      * @param obj a Class
      * @return a {@link Data} proxy or <i>null</i>.
      */
-    @objid ("d9442dc0-c99e-4bfa-a259-af43d93f45c5")
+    @objid ("242efbaf-d757-4bcd-9654-05756e685387")
     public static Data instantiate(final Class obj) {
         return Data.canInstantiate(obj) ? new Data(obj) : null;
     }
@@ -86,7 +86,7 @@ public class Data extends FeatureClass {
      * @return a {@link Data} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6bdba03a-69bb-427b-b018-800164d5a23e")
+    @objid ("2ebb936d-38bf-4826-b1f1-b798a58cead3")
     public static Data safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Data.canInstantiate(obj))
         	return new Data(obj);
@@ -100,13 +100,13 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("d346735c-3137-457d-853f-3fb680564611")
+    @objid ("4a7c5d6d-6115-40bd-b8f0-491946ae6c43")
     public void addIncludesData(final Data obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("75ae9259-880d-4442-85f4-64f6bbd5188d")
+    @objid ("a3ab7f22-1f12-49ac-a37c-1e2baa33af77")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,7 +128,7 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("1215ff67-052c-4682-a807-1977848518b4")
+    @objid ("dc6e7040-51d2-4ff5-9eb0-d14d0952c7dd")
     public DataSource getDataSource() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Data.MdaTypes.MDAASSOCDEP)
@@ -144,7 +144,7 @@ public class Data extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("4c779d55-238e-4654-91da-a28f060c15b9")
+    @objid ("6ef17240-6c4a-427d-ba93-3d721bcbd9ba")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -156,7 +156,7 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("6d640019-0f99-4f2a-a6e9-95a24e6a877a")
+    @objid ("0ce98233-e700-4e04-8b82-a82e1997d202")
     public List<Data> getIncludesData() {
         List<Data> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
@@ -172,12 +172,12 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("6a97c3c2-998d-40cc-a0cd-879809fff0b2")
+    @objid ("9421b7a7-29fb-4750-9fb9-c10e2f02e8ed")
     public Data getParent() {
         return (Data)CamelDesignerProxyFactory.instantiate(((Class) this.elt).getOwner(), Data.STEREOTYPE_NAME);
     }
 
-    @objid ("bdb90575-56f9-480e-bdef-97db716dd09a")
+    @objid ("1d495023-aef2-4f96-9020-b5301cdce82a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -189,7 +189,7 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("f61f9585-a9b1-4638-b1d3-8e2e9d00e837")
+    @objid ("1828e81f-e5db-4ba2-a8c2-6758f3fd084e")
     public boolean removeIncludesData(final Data obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -200,7 +200,7 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("d4043593-95b3-4cf8-974a-0d7c33725725")
+    @objid ("b9242c6e-391e-45f8-a8b0-ab3ea969a267")
     public void setDataSource(final DataSource obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -226,7 +226,7 @@ public class Data extends FeatureClass {
      * null
      * 
      */
-    @objid ("f1471bc2-408f-4c12-807c-b44b947f27f2")
+    @objid ("1053b6b3-4c03-44e3-97af-703392d4c376")
     public void setParent(final Data obj) {
         ((Class) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -239,23 +239,23 @@ public class Data extends FeatureClass {
         return result;
     }
 
-    @objid ("2e585181-ab84-45fa-8dd3-bf8ffed097d9")
+    @objid ("eaab1588-2cf4-41a4-a5de-93ca78a2fe22")
     protected Data(final Class elt) {
         super(elt);
     }
 
     @objid ("feaa10e5-fc37-4158-ac9e-1c714c329e25")
     public static final class MdaTypes {
-        @objid ("341e192c-f724-463d-a899-cb1741a1bc2f")
+        @objid ("22646030-41d7-48e2-9715-165973ac1ba8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3b1127da-04bd-4f98-9e0d-f90475f024cd")
+        @objid ("11e82946-52bc-4c34-8e5f-1d0f68ae60ff")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0b610cd9-9960-4b8e-b062-4429c93f2544")
+        @objid ("5fac630d-e8e6-4c3a-85f2-b5be1f974db3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b0c9d754-8bac-444d-a33a-77d2fb4acbf0")
+        @objid ("376e6e24-1578-4a68-b1a4-fa7ed6ce233e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fe12d8bd-3047-4893-8e67-549a85ecb744");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

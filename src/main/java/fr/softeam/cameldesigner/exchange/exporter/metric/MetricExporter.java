@@ -38,7 +38,7 @@ public abstract class MetricExporter<T extends Metric> extends FeatureExporter<T
         }
     }
 
-    @objid ("d79cf6fa-feb1-456d-87f8-ed436e877c83")
+    @objid ("1f6fe65f-ee74-4ce2-a588-6fe528f2c93a")
     private void setMetricTemplate(camel.metric.Metric metric) {
         CDOObject mt = this._process.getElement(this._element.getMetricTemplate());
         if ((mt != null) &&  (mt instanceof camel.metric.MetricTemplate))

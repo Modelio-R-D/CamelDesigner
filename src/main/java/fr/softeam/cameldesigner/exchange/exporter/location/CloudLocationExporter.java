@@ -44,14 +44,14 @@ public class CloudLocationExporter<T extends CloudLocation> extends NamedElement
         }
     }
 
-    @objid ("f8454ef4-347f-4cc4-b346-dc81a4a8dc3d")
+    @objid ("b43bc7e6-1e4f-4f6f-a045-8005f5da5d3a")
     private void setGeographicalRegion(camel.location.CloudLocation cl) {
         CDOObject gr =  this._process.getElement(this._element.getGeographicalRegion());
         if ((gr != null) &&  (gr instanceof camel.location.GeographicalRegion))
             cl.setGeographicalRegion((camel.location.GeographicalRegion) gr);
     }
 
-    @objid ("e243c67a-f36d-4f40-9a6f-36bffc3c6cce")
+    @objid ("1dceb35c-b25a-415f-a8b1-bf0fcf388451")
     private void setIsAssignable(camel.location.CloudLocation cl) {
         cl.setIsAssignable(this._element.isIsAssignable());
     }

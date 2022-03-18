@@ -28,7 +28,11 @@ public class RoleExporter<T extends Role> extends FeatureExporter<T> {
     @objid ("8c70e7bb-e379-4bcf-b131-827f59fe1c8e")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.organisation.OrganisationModel) && (elt instanceof camel.organisation.Role)) {
+            ((camel.organisation.OrganisationModel) context).getRoles().add((camel.organisation.Role) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

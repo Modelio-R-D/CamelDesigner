@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.scalability;
 
+import camel.scalability.BinaryPatternOperatorType;
 import camel.scalability.ScalabilityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
@@ -22,12 +23,55 @@ public class BinaryEventPatternExporter<T extends BinaryEventPattern> extends Ev
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.scalability.BinaryEventPattern) {
+            camel.scalability.BinaryEventPattern bep = (camel.scalability.BinaryEventPattern) elt;
+            setLeftEvent(bep);
+            setRightEvent(bep);
+            setLowerOccurrenceBound(bep);
+            setUpperOccurrenceBound(bep);
+            setOperator(bep);
+        }
     }
 
     @objid ("0eaa29d1-3b95-4142-9326-2f60e0e0eea6")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("bdb60f4d-dff9-4c89-be7f-d74ef6fd17e5")
+    private void setOperator(camel.scalability.BinaryEventPattern bep) {
+        String content = this._element.getOperator();
+        if (content != null)
+            bep.setOperator(BinaryPatternOperatorType.valueOf(content));
+    }
+
+    @objid ("f066e3db-930c-4988-928a-b56f08896a6b")
+    private void setLowerOccurrenceBound(camel.scalability.BinaryEventPattern bep) {
+        String content = this._element.getLowerOccurrenceBound();
+        if (content != null)
+            bep.setLowerOccurrenceBound(Double.valueOf(content));
+    }
+
+    @objid ("17f887ef-087f-4828-9425-e461a3f37972")
+    private void setUpperOccurrenceBound(camel.scalability.BinaryEventPattern bep) {
+        String content = this._element.getUpperOccurrenceBound();
+        if (content != null)
+            bep.setUpperOccurrenceBound(Double.valueOf(content));
+    }
+
+    @objid ("345e0a97-b712-413f-a2fe-b8a86bf237cc")
+    private void setLeftEvent(camel.scalability.BinaryEventPattern bep) {
+        CDOObject event = this._process.getElement(this._element.getLeftEvent());
+        if ((event != null) &&  (event instanceof camel.scalability.Event))
+            bep.setLeftEvent((camel.scalability.Event) event);
+    }
+
+    @objid ("1519d752-5848-4d62-bd63-0d938f0594e3")
+    private void setRightEvent(camel.scalability.BinaryEventPattern bep) {
+        CDOObject event = this._process.getElement(this._element.getRightEvent());
+        if ((event != null) &&  (event instanceof camel.scalability.Event))
+            bep.setRightEvent((camel.scalability.Event) event);
     }
 
 }

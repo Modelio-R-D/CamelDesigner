@@ -22,12 +22,26 @@ public abstract class ScalingActionExporter<T extends ScalingAction> extends Act
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.scalability.ScalingAction) {
+            setSoftwareComponent((camel.scalability.ScalingAction) elt);
+        }
     }
 
     @objid ("703c2fa2-4e7f-43f6-a722-1796ef381f6e")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.scalability.ScalabilityModel) && (elt instanceof camel.scalability.ScalingAction)) {
+            ((camel.scalability.ScalabilityModel) context).getActions().add((camel.scalability.ScalingAction) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("254e615b-6157-4aa1-8458-568765dcf50c")
+    private void setSoftwareComponent(camel.scalability.ScalingAction action) {
+        CDOObject comp = this._process.getElement(this._element.getSoftwareComponent());
+        if ((comp != null) &&  (comp instanceof camel.deployment.SoftwareComponent))
+            action.setSoftwareComponent((camel.deployment.SoftwareComponent) comp);
     }
 
 }

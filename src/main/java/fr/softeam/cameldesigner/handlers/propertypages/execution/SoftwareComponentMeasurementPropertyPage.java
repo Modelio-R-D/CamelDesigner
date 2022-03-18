@@ -15,10 +15,10 @@ import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("23a75b81-3bb5-4688-999e-2619c489286e")
 public class SoftwareComponentMeasurementPropertyPage<T extends SoftwareComponentMeasurement> extends MeasurementPropertyPage<T> {
-    @objid ("5210d675-b495-4a76-b2b0-b2704cf2f5fa")
+    @objid ("f51eb6ce-bc4b-4b9b-af97-468e9267b096")
     private List<ModelElement> _software_component_instance = null;
 
-    @objid ("d537b720-e195-4baa-9ecd-e0c54335ca6a")
+    @objid ("e81bb48a-f4fd-4764-8156-8d32c40fbd05")
     private List<ModelElement> _software_component = null;
 
     /**

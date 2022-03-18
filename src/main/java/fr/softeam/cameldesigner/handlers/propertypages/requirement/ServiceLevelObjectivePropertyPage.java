@@ -15,7 +15,7 @@ import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("2bd0133b-cd47-4d99-a488-72aadda3b0f8")
 public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> extends HardRequirementPropertyPage<T> {
-    @objid ("498d7ce3-2e6d-45f5-99fe-02d185f80f8e")
+    @objid ("a07fe0b4-d8c6-43fd-b603-874bdbc33055")
     private List<ModelElement> _violentEvent;
 
     /**

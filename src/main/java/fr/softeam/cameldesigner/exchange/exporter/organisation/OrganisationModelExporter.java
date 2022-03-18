@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange.exporter.organisation;
 
 import camel.organisation.OrganisationFactory;
+import camel.organisation.SecurityLevel;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.package_.OrganisationModel;
 import fr.softeam.cameldesigner.exchange.exporter.core.SubModelExporter;
@@ -23,12 +24,23 @@ public class OrganisationModelExporter<T extends OrganisationModel> extends SubM
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.OrganisationModel) {
+            camel.organisation.OrganisationModel om = (camel.organisation.OrganisationModel) elt;
+            setSecurityLevel(om);
+        }
     }
 
     @objid ("19743cd6-be73-4790-85fd-e40a9f3d8af5")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("36f2a71b-3e62-4386-a249-3a24ecfe395b")
+    private void setSecurityLevel(camel.organisation.OrganisationModel context) {
+        String content = this._element.getSecurityLevel();
+        if (content != null)
+            context.setSecurityLevel(SecurityLevel.valueOf(content));
     }
 
 }

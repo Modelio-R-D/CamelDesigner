@@ -10,11 +10,11 @@ import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("4f8da10e-3712-4da0-a73c-880faa47c543")
 public class GenerateMap {
-    @objid ("34f3b679-db04-44f3-9c16-1bf43cdd5633")
-    private Map<CamelElement, CDOObject> modelMap;
-
     @objid ("0a0c521c-e57e-4261-82e8-4e40d0f4939f")
     private static GenerateMap theSingleInstance;
+
+    @objid ("c4d83587-c063-4740-88ed-95c8ba412020")
+    private Map<CamelElement, CDOObject> modelMap;
 
     @objid ("1e184643-e1bf-49da-93e9-a2eabc3e62a8")
     public void clear() {

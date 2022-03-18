@@ -37,12 +37,16 @@ public class HorizontalScaleRequirementExporter<T extends HorizontalScaleRequire
 
     @objid ("64d083e1-20f9-4987-bd61-4ead4c655b79")
     private void setMaxInstances(camel.requirement.HorizontalScaleRequirement hsr) {
-        hsr.setMaxInstances(Integer.valueOf(this._element.getMaxInstances()));
+        String content = this._element.getMaxInstances();
+        if (content != null)
+            hsr.setMaxInstances(Integer.valueOf(content));
     }
 
     @objid ("04967042-2a3c-477c-8ef8-a47ca644b04f")
     private void setMinInstances(camel.requirement.HorizontalScaleRequirement hsr) {
-        hsr.setMinInstances(Integer.valueOf(this._element.getMinInstances()));
+        String content = this._element.getMinInstances();
+        if (content != null)
+            hsr.setMinInstances(Integer.valueOf(content));
     }
 
 }

@@ -39,12 +39,16 @@ public abstract class ComponentInstanceExporter<T extends ComponentInstance> ext
 
     @objid ("1b5cbdc7-f367-4ce7-9e0f-c25f958da5d2")
     private void setDestroyedOn(camel.deployment.ComponentInstance ci) {
-        ci.setDestroyedOn(Date.valueOf(this._element.getDestroyedOn()));
+        String content = this._element.getDestroyedOn();
+        if (content != null)
+            ci.setDestroyedOn(Date.valueOf(content));
     }
 
     @objid ("5e17ad5b-b469-4c57-a710-90ac74fb3a6e")
     private void setInstantiatedOn(camel.deployment.ComponentInstance ci) {
-        ci.setInstantiatedOn(Date.valueOf(this._element.getInstantiatedOn()));
+        String content = this._element.getInstantiatedOn();
+        if (content != null)
+            ci.setInstantiatedOn(Date.valueOf(content));
     }
 
     @objid ("d86dbe53-307e-4f6b-bfb1-1a4d9b0a2507")

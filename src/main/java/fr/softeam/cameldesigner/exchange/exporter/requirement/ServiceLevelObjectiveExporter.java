@@ -22,12 +22,31 @@ public class ServiceLevelObjectiveExporter<T extends ServiceLevelObjective> exte
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.requirement.ServiceLevelObjective) {
+            camel.requirement.ServiceLevelObjective slo = (camel.requirement.ServiceLevelObjective) elt;
+            setConstraint(slo);
+            setViolationEvent(slo);
+        }
     }
 
     @objid ("f9245c87-48ac-4cda-83d6-37157225f3fb")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("3eb191a1-559b-444b-8463-b5bfb2d7bec3")
+    private void setViolationEvent(camel.requirement.ServiceLevelObjective slo) {
+        CDOObject event = this._process.getElement(this._element.getViolationEvent());
+        if ((event != null) &&  (event instanceof camel.scalability.Event))
+            slo.setViolationEvent((camel.scalability.Event) event);
+    }
+
+    @objid ("9d33f69f-66a5-4bc4-bec1-4523455ef75d")
+    private void setConstraint(camel.requirement.ServiceLevelObjective slo) {
+        CDOObject constraint = this._process.getElement(this._element.getConstraint());
+        if ((constraint != null) &&  (constraint instanceof camel.constraint.Constraint))
+            slo.setConstraint((camel.constraint.Constraint) constraint);
     }
 
 }

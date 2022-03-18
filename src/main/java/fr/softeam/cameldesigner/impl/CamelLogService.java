@@ -8,7 +8,7 @@ import org.modelio.api.module.context.log.ILogService;
  */
 @objid ("7dd10dcb-fb7e-4171-80f7-033a28d009ca")
 public class CamelLogService {
-    @objid ("161cc86f-9163-4ddd-bc80-f6258af0eaf7")
+    @objid ("d0ebbe0a-ab30-4b0c-b9fc-c3c5e38bd4ab")
     private ILogService logService;
 
     /**

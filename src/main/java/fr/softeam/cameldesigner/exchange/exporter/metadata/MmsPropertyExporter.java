@@ -43,7 +43,9 @@ public class MmsPropertyExporter<T extends MmsProperty> extends NamedElementExpo
 
     @objid ("094a1926-24d0-4356-8761-64192f4d66e4")
     private void setRangeURI(camel.mms.MmsProperty mp) {
-        mp.setRangeUri(this._element.getRangeUri());
+        String content = this._element.getRangeUri();
+        if (content != null)
+            mp.setRangeUri(content);
     }
 
     @objid ("ade8ef49-7298-453c-bd3a-92a0513e7dce")

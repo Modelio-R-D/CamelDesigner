@@ -48,9 +48,9 @@ public class CommunicationPortPropertyPage<T extends CommunicationPort> extends 
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Low Port Number", getValue(this._element.getLowPortNumber()));
+        table.addProperty("Low Port Number", getNotNull(this._element.getLowPortNumber()));
         
-        table.addProperty("High Port Number", getValue(this._element.getHighPortNumber()));
+        table.addProperty("High Port Number", getNotNull(this._element.getHighPortNumber()));
     }
 
 }

@@ -49,7 +49,9 @@ public class MmsPropertyInstanceExporter<T extends MmsPropertyInstance> extends 
 
     @objid ("9b1c1734-33b5-4ffd-a508-e20e20705870")
     private void setPropertyValue(camel.mms.MmsPropertyInstance pi) {
-        pi.setPropertyValue(this._element.getPropertyValue());
+        String content = this._element.getPropertyValue();
+        if (content != null)
+            pi.setPropertyValue(content);
     }
 
 }

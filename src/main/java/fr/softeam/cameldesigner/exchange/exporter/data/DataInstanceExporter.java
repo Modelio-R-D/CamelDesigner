@@ -23,6 +23,41 @@ public class DataInstanceExporter<T extends DataInstance> extends NamedElementEx
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.data.DataInstance) {
+            camel.data.DataInstance dataInstance = (camel.data.DataInstance) elt;
+            setDataSourceInstance(dataInstance);
+            setType(dataInstance);
+        }
+    }
+
+    @objid ("76c78abc-ef29-44d6-9e06-f0a21421313c")
+    private void setDataSourceInstance(camel.data.DataInstance data) {
+        CDOObject source =  this._process.getElement(this._element.getDataSourceInstance());
+        if ((source != null) &&  (source instanceof camel.data.DataSourceInstance))
+            data.setDataSourceInstance((camel.data.DataSourceInstance) source);
+    }
+
+    @objid ("89c508a8-1ba0-471f-bcd0-0272b651d140")
+    private void setType(camel.data.DataInstance data) {
+        CDOObject type =  this._process.getElement(this._element.getType());
+        if ((type != null) &&  (type instanceof camel.data.Data))
+            data.setType((camel.data.Data) type);
+    }
+
+    @objid ("77e9f424-da0f-4b33-af29-083932246701")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        if  (elt instanceof camel.data.DataInstance) {
+            if (context instanceof camel.data.DataInstanceModel) {
+               ((camel.data.DataInstanceModel) context).getDataInstances().add((camel.data.DataInstance) elt);
+            }else   if (context instanceof camel.data.DataInstance) {
+                ((camel.data.DataInstance) context).getIncludesDataInstance().add((camel.data.DataInstance) elt);
+            }else {
+                super.attach(elt, context);
+            }
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

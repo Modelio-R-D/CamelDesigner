@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("4afad244-096e-4660-b995-b2061cfa5947")
 public abstract class ValueType extends ExpendableElement {
-    @objid ("31496af1-0076-4b03-821f-9ef7e99a9ee7")
+    @objid ("f94cf535-7420-42f4-8677-9b01c7f08caa")
     public static final String STEREOTYPE_NAME = "ValueType";
 
-    @objid ("52941c6e-cf9f-44f3-9d96-c9acca62d167")
+    @objid ("84d91472-c4be-46ff-9db8-a6b02cf8652a")
     public static final String PRIMITIVETYPE_TAGTYPE = "primitiveType";
 
     /**
@@ -50,7 +50,7 @@ public abstract class ValueType extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a2b9ec36-e484-47f4-b9da-7408dfaa7f93")
+    @objid ("eaa72108-19e5-46cb-8c17-a56ebb962b20")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ValueType.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public abstract class ValueType extends ExpendableElement {
                             RangeUnion.canInstantiate(obj) ? new RangeUnion(obj) : null;
     }
 
-    @objid ("e4bf479a-e08f-4303-bdcc-57f1086a088e")
+    @objid ("785cb5f4-86fe-4f3e-a4d7-a5081036322c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -85,7 +85,7 @@ public abstract class ValueType extends ExpendableElement {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("1d92476c-8343-4900-8d7b-db74d48f63e3")
+    @objid ("77beaffc-29b1-402e-9c72-c97528774fe8")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
@@ -96,12 +96,12 @@ public abstract class ValueType extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a188db0e-2aae-43e7-80ca-0e3eec6e71e7")
+    @objid ("33967947-5fe0-440e-be00-650d3d20200c")
     public String getPrimitiveType() {
         return this.elt.getTagValue(ValueType.MdaTypes.PRIMITIVETYPE_TAGTYPE_ELT);
     }
 
-    @objid ("a2060ecd-48eb-4033-9fe6-ca98db6e07f4")
+    @objid ("d0f203c7-d749-4975-90f4-64f93e24f6ec")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -112,7 +112,7 @@ public abstract class ValueType extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cce04b81-ada9-4863-888c-950a305a2546")
+    @objid ("3b634b38-7a0a-4cc2-8fd6-5076a0514798")
     public void setPrimitiveType(final String value) {
         this.elt.putTagValue(ValueType.MdaTypes.PRIMITIVETYPE_TAGTYPE_ELT, value);
     }
@@ -125,26 +125,26 @@ public abstract class ValueType extends ExpendableElement {
         return result;
     }
 
-    @objid ("015d9918-029d-4244-bd84-19f2de7321a2")
+    @objid ("84258998-494c-42f3-a3c2-bc3f99b76e84")
     protected ValueType(final DataType elt) {
         super(elt);
     }
 
     @objid ("efcfe0b2-71a4-471e-afbf-52a17a61448e")
     public static final class MdaTypes {
-        @objid ("7ee1d7e3-d7e4-458e-8979-8b75378e3504")
+        @objid ("c5619f33-b97c-4056-a2cd-f1430e24b0b1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("fd7995bf-0b9c-4a58-893e-5796e83f305c")
+        @objid ("a32f465d-0d71-4b04-aee3-0e707fdae74d")
         public static TagType PRIMITIVETYPE_TAGTYPE_ELT;
 
-        @objid ("4849d79b-c4b8-4eee-90a8-1ac2455ccf67")
+        @objid ("330fc9f7-942c-4160-b13a-bbade2e71188")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9b7a9606-af0f-4aa4-a8d8-3d979a28b63a")
+        @objid ("3cfac91a-48da-4492-bdf1-90b5deb50bdf")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a73d63c7-98c7-44d7-a215-d6f4ea19e4d1")
+        @objid ("dfa399f2-81a0-4d4b-9b33-9e8eb681b1da")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4fa7ea19-f563-4658-8d2a-755724d85061");
             PRIMITIVETYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "23bfa9f4-034d-4dcf-9837-9cdd4bd55ba2");

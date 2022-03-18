@@ -12,7 +12,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("dd3a565f-0002-463d-b238-e9eb4d165af4")
 public class ActionInstancePropertyPage<T extends ActionInstance> extends FeaturePropertyPage<T> {
-    @objid ("080b35b9-3b1b-43e7-b8e6-d17c30f024e1")
+    @objid ("be369786-91fc-4383-aaff-d1bd0511025b")
     private List<ModelElement> _action = null;
 
     /**
@@ -64,8 +64,8 @@ public class ActionInstancePropertyPage<T extends ActionInstance> extends Featur
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Start Time",  getValue(this._element.getStartTime()));
-        table.addProperty("End Time",  getValue(this._element.getEndTime()));
+        table.addProperty("Start Time",  getNotNull(this._element.getStartTime()));
+        table.addProperty("End Time",  getNotNull(this._element.getEndTime()));
         table.addProperty("Successful",  this._element.isSuccessful());
         
         

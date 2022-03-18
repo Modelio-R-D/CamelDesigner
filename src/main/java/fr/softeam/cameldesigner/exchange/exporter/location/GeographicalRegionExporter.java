@@ -38,7 +38,7 @@ public class GeographicalRegionExporter<T extends GeographicalRegion> extends Na
         }
     }
 
-    @objid ("73aff6f7-27d6-4e53-be33-c7be7d9b27df")
+    @objid ("c25c5884-11b9-46b0-8fd4-a200e3135ceb")
     private void setAlternativeNames(camel.location.GeographicalRegion elt) {
         elt.getAlternativeNames().addAll(this._element.getAlternativeNames());
     }

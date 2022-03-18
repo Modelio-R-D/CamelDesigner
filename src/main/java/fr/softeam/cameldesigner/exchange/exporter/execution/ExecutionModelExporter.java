@@ -77,12 +77,16 @@ public class ExecutionModelExporter<T extends ExecutionModel> extends SubModelEx
 
     @objid ("213c87a0-c6ed-47b3-93c4-3f890b28f6c7")
     private void setEndTime(camel.execution.ExecutionModel em) {
-        em.setEndTime(Date.valueOf(this._element.getEndTime()));
+        String content = this._element.getEndTime();
+        if (content != null)
+            em.setEndTime(Date.valueOf(content));
     }
 
     @objid ("9ea74efc-aeb9-410f-8730-0b5ea497df66")
     private void setStartTime(camel.execution.ExecutionModel em) {
-        em.setStartTime(Date.valueOf(this._element.getStartTime()));
+        String content = this._element.getStartTime();
+        if (content != null)
+            em.setStartTime(Date.valueOf(content));
     }
 
 }

@@ -65,16 +65,16 @@ public class WindowPropertyPage<T extends Window> extends FeaturePropertyPage<T>
         table.addProperty("Time Unit", getCamelName(this._element.getTimeUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));
         
         //Window Type
-        table.addProperty("Window Type", this._element.getWindowType());
+        table.addProperty("Window Type", getNotNull(this._element.getWindowType()));
         
         //Size Type
-        table.addProperty("Size Type", this._element.getSizeType());
+        table.addProperty("Size Type", getNotNull(this._element.getSizeType()));
         
         //Measurement Size
-        table.addProperty("Start", this._element.getMeasurementSize());
+        table.addProperty("Start", getNotNull(this._element.getMeasurementSize()));
         
         //Time Size
-        table.addProperty("Time Size", this._element.getTimeSize());
+        table.addProperty("Time Size", getNotNull(this._element.getTimeSize()));
     }
 
     @objid ("5067070d-79e4-4c9e-9fe5-1a63c84db1f9")

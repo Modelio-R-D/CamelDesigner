@@ -45,27 +45,35 @@ public class WindowExporter<T extends Window> extends FeatureExporter<T> {
         }
     }
 
-    @objid ("32e888e5-a27e-46eb-9680-a6cdbaa283b8")
+    @objid ("22aa7ac3-8f22-4482-bd8e-c431ce718abb")
     private void setTimeSize(camel.metric.Window window) {
-        window.setTimeSize(Long.valueOf(this._element.getTimeSize()));
+        String content = this._element.getTimeSize();
+        if (content != null)
+            window.setTimeSize(Long.valueOf(content));
     }
 
-    @objid ("7478fd21-2742-418c-8078-64b769337f0c")
+    @objid ("151321ab-3221-404e-b868-a96cb7602f08")
     private void setMeasurementSize(camel.metric.Window window) {
-        window.setMeasurementSize(Long.valueOf(this._element.getMeasurementSize()));
+        String content = this._element.getMeasurementSize();
+        if (content != null)
+            window.setMeasurementSize(Long.valueOf(content));
     }
 
-    @objid ("2d287bcc-5376-4600-8085-c0b3745f470d")
+    @objid ("39c66303-cd90-4950-9186-08de5fd28058")
     private void setSizeType(camel.metric.Window window) {
-        window.setSizeType(WindowSizeType.valueOf(this._element.getSizeType()));
+        String content = this._element.getSizeType();
+        if (content != null)
+            window.setSizeType(WindowSizeType.valueOf(content));
     }
 
-    @objid ("dd6353fe-f8e8-49ac-8df4-a956ba32f680")
+    @objid ("97501a4a-2b57-4e9b-923c-74a6697e3ffc")
     private void setWindowType(camel.metric.Window window) {
-        window.setWindowType(WindowType.valueOf(this._element.getWindowType()));
+        String content = this._element.getWindowType();
+        if (content != null)
+            window.setWindowType(WindowType.valueOf(content));
     }
 
-    @objid ("8bc73d1f-e698-44df-b9dd-840bdf697803")
+    @objid ("59a6acf6-87bc-420c-8ba2-b9b1315e5fa8")
     private void setTimeUnit(camel.metric.Window window) {
         CDOObject timeUnit = this._process.getElement(this._element.getTimeUnit());
         if ((timeUnit != null) &&  (timeUnit instanceof camel.unit.Unit))

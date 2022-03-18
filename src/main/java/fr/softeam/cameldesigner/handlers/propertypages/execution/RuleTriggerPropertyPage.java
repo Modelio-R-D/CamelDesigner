@@ -3,8 +3,6 @@ package fr.softeam.cameldesigner.handlers.propertypages.execution;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.RuleTrigger;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.ScalabilityRule;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -12,7 +10,7 @@ import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("15a7dee8-e8e4-4b93-8df0-ff99e113a4f5")
 public class RuleTriggerPropertyPage<T extends RuleTrigger> extends CausePropertyPage<T> {
-    @objid ("4a60a347-85f0-4bc0-aa55-fc7cba91b1fa")
+    @objid ("3ab45972-5a3d-4697-b671-90c47f9f4cae")
     private List<ModelElement> _scalabilityRule = null;
 
     /**
@@ -59,7 +57,7 @@ public class RuleTriggerPropertyPage<T extends RuleTrigger> extends CausePropert
         table.addProperty("Scalability Rule", getCamelName(this._element.getScalabilityRule()), getCamelNames(this._scalabilityRule));
         
         //Trigerring time
-        table.addProperty("Trigerring time", getValue(this._element.getTriggeringTime()));
+        table.addProperty("Trigerring time", getNotNull(this._element.getTriggeringTime()));
     }
 
     @objid ("d70c0d3c-d209-4499-8d81-2a83bbe433ef")

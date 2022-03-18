@@ -12,10 +12,10 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("49fc2b50-4a75-408b-a5df-a2721e7e8c28")
 public class OptimisationRequirementPropertyPage<T extends OptimisationRequirement> extends SoftRequirementPropertyPage<T> {
-    @objid ("79b3d784-07bf-45d9-b10f-c2ffc8d92471")
+    @objid ("f64e43fa-096d-44d3-bc96-82181f09032b")
     private List<ModelElement> _metricContexts;
 
-    @objid ("50965ce8-1284-44ad-afea-8cbdc0af1fba")
+    @objid ("91983a92-7664-4dcb-a601-406ddd7a0f35")
     private List<ModelElement> _metricVariables;
 
     /**
@@ -37,7 +37,7 @@ public class OptimisationRequirementPropertyPage<T extends OptimisationRequireme
             if (value.equals("")) {
                 this._element.setMetricContext(null);
             }else {
-                ModelElement metricContex = getModelElt(_metricContexts, value);
+                ModelElement metricContex = getModelElt(this._metricContexts, value);
                 if (MetricContext.canInstantiate(metricContex)) {
                     this._element.setMetricContext((MetricContext) CamelDesignerProxyFactory.instantiate(metricContex));
                 }
@@ -48,7 +48,7 @@ public class OptimisationRequirementPropertyPage<T extends OptimisationRequireme
             if (value.equals("")) {
                 this._element.setMetricVariable(null);
             }else {
-                ModelElement metricVariable = getModelElt(_metricVariables, value);
+                ModelElement metricVariable = getModelElt(this._metricVariables, value);
                 if (MetricVariable.canInstantiate(metricVariable)) {
                     this._element.setMetricVariable((MetricVariable) CamelDesignerProxyFactory.instantiate(metricVariable));
                 }

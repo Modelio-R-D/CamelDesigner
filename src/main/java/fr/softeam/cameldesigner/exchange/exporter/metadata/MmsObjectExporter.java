@@ -41,12 +41,16 @@ public abstract class MmsObjectExporter<T extends MmsObject> extends NamedElemen
 
     @objid ("f888d3ff-d9e7-43e0-b515-2480d70907ff")
     private void setURI(camel.mms.MmsObject mo) {
-        mo.setUri(this._element.getUri());
+        String content = this._element.getUri();
+        if (content != null)
+            mo.setUri(content);
     }
 
     @objid ("c833df3f-cf82-43b8-97c3-f4ed40c425fe")
     private void setId(camel.mms.MmsObject mo) {
-        mo.setId(this._element.getId());
+        String content = this._element.getId();
+        if (content != null)
+            mo.setId(content);
     }
 
 }

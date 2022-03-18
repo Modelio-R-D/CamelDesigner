@@ -1,7 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.requirement;
 
+import java.util.ArrayList;
+import java.util.List;
 import camel.requirement.RequirementFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -22,12 +25,34 @@ public class LocationRequirementExporter<T extends LocationRequirement> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.requirement.LocationRequirement) {
+            camel.requirement.LocationRequirement locReq = (camel.requirement.LocationRequirement) elt;
+            setLocation(locReq);
+            setAllRequired(locReq);
+        }
     }
 
     @objid ("c5401454-6ebd-43f4-9739-c9b6cab1382f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("7986f9a8-621d-4279-8a7e-28b8d49e3330")
+    private void setAllRequired(camel.requirement.LocationRequirement locReq) {
+        locReq.setAllRequired(this._element.isAllRequired());
+    }
+
+    @objid ("d460dd96-cef6-494c-8bfb-4d1150bc8882")
+    private void setLocation(camel.requirement.LocationRequirement locReq) {
+        List<camel.location.Location> locations = new ArrayList<>();
+        for (Location location : this._element.getLocations()) {
+            CDOObject camelLocation = this._process.getElement(location);
+            if ((camelLocation != null) &&  (camelLocation instanceof camel.location.Location))
+                locations.add((camel.location.Location) camelLocation);
+        }
+        
+        locReq.getLocations().addAll(locations);
     }
 
 }

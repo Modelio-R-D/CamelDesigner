@@ -56,7 +56,7 @@ public class CompositeMetricPropertyPage<T extends CompositeMetric> extends Metr
         super.update(table);
         
         //Formula
-        table.addProperty("Formula", this._element.getFormula());
+        table.addProperty("Formula", getNotNull(this._element.getFormula()));
         
         //Component Metric
         table.addProperty("Component Metric", getCamelValue(this._element.getComponentMetrics()), getAddRemove( CamelDesignerAbstractProxy.getMetrics(), this._element.getComponentMetrics()));

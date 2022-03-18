@@ -43,7 +43,7 @@ public class SensorPropertyPage<T extends Sensor> extends SoftwareComponentPrope
         super.update(table);
         
         //Configuration
-        table.addProperty("Configuration", this._element.getConfiguration());
+        table.addProperty("Configuration", getNotNull(this._element.getConfiguration()));
         
         //isPush
         table.addProperty("IsPush", this._element.isIsPush());

@@ -38,7 +38,7 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
         super.update(table);
         
         //Value
-        table.addProperty("Value", this._element.getValue());
+        table.addProperty("Value", getNotNull(this._element.getValue()));
     }
 
     @objid ("7845573e-61c1-45d8-b8b6-1826903ef6d0")

@@ -44,10 +44,10 @@ public class HorizontalScaleRequirementPropertyPage<T extends HorizontalScaleReq
         super.update(table);
         
         //MinInstances
-        table.addProperty("MinInstances", this._element.getMinInstances());
+        table.addProperty("MinInstances", getNotNull(this._element.getMinInstances()));
         
         //MaxInstances
-        table.addProperty("MaxInstances", this._element.getMaxInstances());
+        table.addProperty("MaxInstances", getNotNull(this._element.getMaxInstances()));
     }
 
     @objid ("c6649dce-893d-4827-8345-f11c92c40aa4")

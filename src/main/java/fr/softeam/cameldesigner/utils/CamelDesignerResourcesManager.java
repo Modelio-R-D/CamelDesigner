@@ -46,11 +46,11 @@ public class CamelDesignerResourcesManager {
     @objid ("5b2bbfc8-093e-48c4-9f42-d1653e0b9707")
     private static String xmiFile = "FCRwithDataLocality.xmi";
 
+    @objid ("dce9d4f6-5526-4433-b4f9-c27af36a6fde")
+    private IModule _mdac;
+
     @objid ("845f28ee-9a8c-400b-9fc5-494dcc16c5d6")
     private static CamelDesignerResourcesManager instance = null;
-
-    @objid ("f7c23cc5-6195-45a9-a506-c0949c646d74")
-    private IModule _mdac;
 
     /**
      * Method ResourcesManager

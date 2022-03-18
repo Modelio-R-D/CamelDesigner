@@ -40,14 +40,17 @@ public class FunctionExporter<T extends Function> extends FeatureExporter<T> {
         }
     }
 
-    @objid ("80139c55-936e-495e-b571-51884fe61397")
+    @objid ("7823b8d4-3ca3-46c5-b7ce-8dd858e2118f")
     private void setArguments(camel.metric.Function function) {
+        function.getArguments().clear();
         function.getArguments().addAll(this._element.getArguments());
     }
 
-    @objid ("3148cdd2-6a27-4756-8fed-978f3ea919ec")
+    @objid ("0c58a9ac-1ef9-4ec1-ae8c-29f2591b83a1")
     private void setExpression(camel.metric.Function function) {
-        function.setExpression(this._element.getExpression());
+        String content = this._element.getExpression();
+        if (content != null)
+            function.setExpression(content);
     }
 
 }

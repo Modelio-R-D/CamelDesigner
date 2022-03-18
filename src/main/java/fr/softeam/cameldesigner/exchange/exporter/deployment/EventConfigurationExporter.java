@@ -51,12 +51,16 @@ public class EventConfigurationExporter<T extends EventConfiguration> extends Fe
 
     @objid ("3d5bc664-cf90-42d7-8739-3cfd3b5eef2e")
     private void setHttpMethodType(camel.deployment.EventConfiguration ec) {
-        ec.setHttpMethodType(HTTPMethodType.valueOf(this._element.getHttpMethodType()));
+        String content = this._element.getHttpMethodType();
+        if (content != null)
+            ec.setHttpMethodType(HTTPMethodType.valueOf(content));
     }
 
     @objid ("8dd5f452-ddf8-440d-a19c-8b984ceab647")
     private void setHttpMethodName(camel.deployment.EventConfiguration ec) {
-        ec.setHttpMethodName(this._element.getHttpMethodName());
+        String content = this._element.getHttpMethodName();
+        if (content != null)
+            ec.setHttpMethodName(content);
     }
 
 }

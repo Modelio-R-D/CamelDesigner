@@ -12,7 +12,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("7632f2b8-13f8-4fa0-81c5-e6f9b47b10ad")
 public abstract class ExpendableElementPropertyPage<T extends ExpendableElement> extends NamedElementPropertyPage<T> {
-    @objid ("a6d87a30-ec60-4d4f-adea-480563da60bd")
+    @objid ("e1fe94ce-c75d-4010-8f8f-e03ba047f4fd")
     private List<ModelElement> _annotations = CamelDesignerAbstractProxy.getMMSObject();
 
     /**

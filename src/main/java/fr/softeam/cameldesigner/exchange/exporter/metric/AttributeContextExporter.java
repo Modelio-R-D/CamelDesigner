@@ -40,14 +40,14 @@ public class AttributeContextExporter<T extends AttributeContext> extends Featur
         }
     }
 
-    @objid ("a2d294b0-2b3f-4695-ab57-e21619d20577")
+    @objid ("6c4e97eb-ea9c-4d31-8bb6-e44b24eed282")
     private void setAttribute(camel.metric.AttributeContext context) {
         CDOObject att = this._process.getElement(this._element.getAttribute());
         if ((att != null) &&  (att instanceof camel.core.Attribute))
             context.setAttribute((camel.core.Attribute) att);
     }
 
-    @objid ("231cf793-8b85-4134-93ab-2f12b4191b63")
+    @objid ("5a85d8e4-d613-45bc-bce2-6f6304fc8161")
     private void setObjectContext(camel.metric.AttributeContext context) {
         CDOObject objContext = this._process.getElement(this._element.getObjectContext());
         if ((objContext != null) &&  (objContext instanceof camel.metric.ObjectContext))

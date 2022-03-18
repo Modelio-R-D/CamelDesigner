@@ -48,10 +48,10 @@ public abstract class FileWizardWindow extends Dialog {
     @objid ("2d049287-73e6-48d3-b6ec-3dfaa152d24e")
     protected String path = "";
 
-    @objid ("f6e61c9b-251c-4d12-ba10-8b5d514a1d5a")
+    @objid ("8d1e979e-24d4-49ff-95a8-de9c8903d9aa")
     protected ModelElement selectedElt = null;
 
-    @objid ("62260d4c-8f15-4433-8923-26ace593c41f")
+    @objid ("0bc5f5e8-7318-4d73-84e5-264c8a1bbe42")
     protected Shell shell = null;
 
     @objid ("25fb404d-c7d3-4e77-8867-e01accbea399")

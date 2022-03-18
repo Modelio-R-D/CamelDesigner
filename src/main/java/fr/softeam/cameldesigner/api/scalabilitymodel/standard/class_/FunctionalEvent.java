@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -48,7 +48,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6506e3fc-10e0-4ba7-b4b6-3bccd0b9a073")
 public class FunctionalEvent extends SingleEvent {
-    @objid ("1a63543b-d72e-44cc-a008-8a1ab5012210")
+    @objid ("e326fd45-69f7-4374-a959-5b070bda808d")
     public static final String STEREOTYPE_NAME = "FunctionalEvent";
 
     /**
@@ -59,7 +59,7 @@ public class FunctionalEvent extends SingleEvent {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("fbc3d8ec-b7eb-4774-8936-36bb3053d0a5")
+    @objid ("99e403d9-a29f-4297-85c9-2c9dc4d96832")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FunctionalEvent.STEREOTYPE_NAME));
     }
@@ -69,7 +69,7 @@ public class FunctionalEvent extends SingleEvent {
      * 
      * @return a {@link FunctionalEvent} proxy on the created {@link Class}.
      */
-    @objid ("4e0b974c-3ca9-458e-b8b1-6d1fcd3d1441")
+    @objid ("5fa41df7-4841-43c7-8836-7eed7e6dcabc")
     public static FunctionalEvent create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FunctionalEvent.STEREOTYPE_NAME);
@@ -83,7 +83,7 @@ public class FunctionalEvent extends SingleEvent {
      * @param obj a Class
      * @return a {@link FunctionalEvent} proxy or <i>null</i>.
      */
-    @objid ("fe15fc52-1f18-4bf2-bdc6-b3d7fb6da4dc")
+    @objid ("9d10476c-de08-4c7c-815d-0d2b09543f41")
     public static FunctionalEvent instantiate(final Class obj) {
         return FunctionalEvent.canInstantiate(obj) ? new FunctionalEvent(obj) : null;
     }
@@ -96,7 +96,7 @@ public class FunctionalEvent extends SingleEvent {
      * @return a {@link FunctionalEvent} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("10bc535f-29c3-4e0c-982f-d3ae0b158d42")
+    @objid ("afef65d6-cb82-4396-b229-ff17997d7ea4")
     public static FunctionalEvent safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (FunctionalEvent.canInstantiate(obj))
         	return new FunctionalEvent(obj);
@@ -104,7 +104,7 @@ public class FunctionalEvent extends SingleEvent {
         	throw new IllegalArgumentException("FunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8bdf1471-1ecb-46fd-8744-b93d095ed880")
+    @objid ("137edad6-5841-4927-ab25-60cf9f6dd3ae")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +126,7 @@ public class FunctionalEvent extends SingleEvent {
      * <Enter note text here>
      * 
      */
-    @objid ("c17b4c3c-6987-4b48-bfdf-0794643a9770")
+    @objid ("e02f1b57-e3aa-42f0-9167-640ef50f7128")
     public CamelComponent getComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(FunctionalEvent.MdaTypes.MDAASSOCDEP)
@@ -150,7 +150,7 @@ public class FunctionalEvent extends SingleEvent {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e833bafd-00a0-4876-95c7-cb4f0716412e")
+    @objid ("f7c84ba2-60a0-4986-ae34-95129019d92f")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -162,7 +162,7 @@ public class FunctionalEvent extends SingleEvent {
      * <Enter note text here>
      * 
      */
-    @objid ("6ace769b-4278-4285-a22d-a55afcc334ed")
+    @objid ("af08e107-d0fc-4430-bdaf-96273f6649e6")
     public CamelAttribute getFunctionalType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(FunctionalEvent.MdaTypes.MDAASSOCDEP)
@@ -184,7 +184,7 @@ public class FunctionalEvent extends SingleEvent {
         return null;
     }
 
-    @objid ("33c63499-41ce-48a7-ad63-f9f597ad6a51")
+    @objid ("487c2a2e-b58a-4f6c-845e-2258af8a4c60")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -196,7 +196,7 @@ public class FunctionalEvent extends SingleEvent {
      * <Enter note text here>
      * 
      */
-    @objid ("ad54368a-049a-48b2-afb4-8835322cb517")
+    @objid ("85c7546c-d084-4265-8ce6-08e97e5b6826")
     public void setComponent(final CamelComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -222,7 +222,7 @@ public class FunctionalEvent extends SingleEvent {
      * <Enter note text here>
      * 
      */
-    @objid ("278b0e55-ffc0-40c3-bb40-3cdd5ed29bfb")
+    @objid ("fde929ef-af55-4486-a975-9a80c60173f4")
     public void setFunctionalType(final CamelAttribute obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -250,23 +250,23 @@ public class FunctionalEvent extends SingleEvent {
         return result;
     }
 
-    @objid ("d18f09ab-a25d-4b45-8361-d8c881dd463d")
+    @objid ("8acf70e0-fba0-48af-b032-c4ed83c36de8")
     protected FunctionalEvent(final Class elt) {
         super(elt);
     }
 
     @objid ("1a266afd-186e-43cc-a4d6-d8eda707e81a")
     public static final class MdaTypes {
-        @objid ("a00b76dd-23dc-45ae-a1a5-f5b8f981ab54")
+        @objid ("45eb02da-c1bd-4155-9f72-a52a1cc91334")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a493801d-158c-4b5e-ac57-98baedae8f0d")
+        @objid ("ced3cf3b-6303-4a15-b933-84a3eb848b58")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2fc7c4c2-eec3-4030-9051-3dc1caa2ad80")
+        @objid ("0b4e75d8-625a-456e-815d-c9d783a8ce4e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("29c062f0-8007-4e07-b546-1dcc6f88d10d")
+        @objid ("830a02bb-bf57-4267-8235-8c65e6b36e18")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8d4865c6-d973-416b-ba6e-62311853e410");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

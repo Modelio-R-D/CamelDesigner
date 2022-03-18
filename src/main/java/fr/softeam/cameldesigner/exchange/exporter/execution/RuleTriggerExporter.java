@@ -42,7 +42,9 @@ public class RuleTriggerExporter<T extends RuleTrigger> extends CauseExporter<T>
 
     @objid ("63f52aa7-44d0-436e-844d-ea34bb295527")
     private void setTrigerringTime(camel.execution.RuleTrigger rule) {
-        rule.setTrigerringTime(Date.valueOf(this._element.getTriggeringTime()));
+        String content = this._element.getTriggeringTime();
+        if (content != null)
+            rule.setTrigerringTime(Date.valueOf(content));
     }
 
     @objid ("6c120901-3a04-4323-98c1-90a8ab22467d")

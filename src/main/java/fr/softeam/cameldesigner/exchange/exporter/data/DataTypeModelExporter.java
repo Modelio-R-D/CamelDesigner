@@ -24,4 +24,10 @@ public class DataTypeModelExporter<T extends DataTypeModel> extends DataModelExp
         super.setProperties(elt);
     }
 
+    @objid ("ade43843-520d-406e-b938-499be79fbceb")
+    @Override
+    public void attach(CDOObject elt, CDOObject context) {
+        super.attach(elt, context);
+    }
+
 }

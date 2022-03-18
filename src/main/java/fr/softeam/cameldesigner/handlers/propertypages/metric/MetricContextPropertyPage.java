@@ -72,7 +72,6 @@ public class MetricContextPropertyPage<T extends MetricContext> extends FeatureP
         //Metric
         table.addProperty("Metric", getCamelName(this._element.getMetric()), getCamelNames(CamelDesignerAbstractProxy.getMetrics()));
         
-        
         //Window
         table.addProperty("Window", getCamelName(this._element.getWindow()), getCamelNames(Window.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
         

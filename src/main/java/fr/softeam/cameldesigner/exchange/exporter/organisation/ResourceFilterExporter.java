@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.organisation;
 
+import camel.organisation.ResourcePattern;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
@@ -22,12 +23,26 @@ public abstract class ResourceFilterExporter<T extends ResourceFilter> extends F
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.ResourceFilter) {
+            setResourcePattern((camel.organisation.ResourceFilter) elt);
+        }
     }
 
     @objid ("63448b13-1bf5-45b1-9ceb-68bcfc1d5278")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.organisation.OrganisationModel) && (elt instanceof camel.organisation.ResourceFilter)) {
+            ((camel.organisation.OrganisationModel) context).getResourceFilters().add((camel.organisation.ResourceFilter) elt);
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("14b0dafa-81db-4799-8045-30e812990fd3")
+    private void setResourcePattern(camel.organisation.ResourceFilter resFilter) {
+        String content = this._element.getResourcePattern();
+        if (content != null)
+            resFilter.setResourcePattern(ResourcePattern.valueOf(content));
     }
 
 }

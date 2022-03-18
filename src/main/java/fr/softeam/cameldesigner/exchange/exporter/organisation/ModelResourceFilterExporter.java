@@ -22,12 +22,29 @@ public class ModelResourceFilterExporter<T extends ModelResourceFilter> extends 
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.ModelResourceFilter) {
+            camel.organisation.ModelResourceFilter mrf = (camel.organisation.ModelResourceFilter) elt;
+            setInformationResourcePath(mrf);
+            setEveryInformationResource(mrf);
+        }
     }
 
     @objid ("73d54bd2-217f-48ee-9f37-0e1c96552970")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("3c2f8806-a1d8-4a0c-809a-7051f042d9cf")
+    private void setInformationResourcePath(camel.organisation.ModelResourceFilter resFilter) {
+        String content = this._element.getInformationResourcePath();
+        if (content != null)
+            resFilter.setInformationResourcePath(content);
+    }
+
+    @objid ("fe311705-7763-4308-b3d8-7a268e1934c2")
+    private void setEveryInformationResource(camel.organisation.ModelResourceFilter resFilter) {
+        resFilter.setEveryInformationResource(this._element.isEveryInformationResource());
     }
 
 }

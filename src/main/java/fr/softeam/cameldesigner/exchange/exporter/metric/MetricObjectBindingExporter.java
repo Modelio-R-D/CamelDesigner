@@ -40,14 +40,14 @@ public class MetricObjectBindingExporter<T extends MetricObjectBinding> extends 
         }
     }
 
-    @objid ("2ac48207-005c-498b-ab4d-3b95bf1b430f")
+    @objid ("fe4e770d-994d-400c-999d-23c1731540e1")
     private void setExecutionModel(camel.metric.MetricObjectBinding mob) {
         CDOObject model = this._process.getElement(this._element.getExecutionModel());
         if ((model != null) &&  (model instanceof camel.execution.ExecutionModel))
             mob.setExecutionModel((camel.execution.ExecutionModel) model);
     }
 
-    @objid ("f7da6ae9-41f3-4a34-bbd5-4a1546db4c4f")
+    @objid ("96d3d91b-f205-4f75-bd7b-0dda656ff6b7")
     private void setComponentInstance(camel.metric.MetricObjectBinding mob) {
         CDOObject comp = this._process.getElement(this._element.getComponentInstance());
         if ((comp != null) &&  (comp instanceof camel.deployment.ComponentInstance))

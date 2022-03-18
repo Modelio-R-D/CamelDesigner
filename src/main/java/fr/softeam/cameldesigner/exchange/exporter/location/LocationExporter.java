@@ -33,7 +33,7 @@ public abstract class LocationExporter<T extends Location> extends FeatureEnumer
         super.attach(elt, context);
     }
 
-    @objid ("926b20f4-7279-4e89-994a-f02d596c3ce7")
+    @objid ("db854c9f-1e4c-4995-a3a6-eaecf917ed33")
     private void setId(camel.location.Location elt) {
         elt.setId(this._element.getId());
     }

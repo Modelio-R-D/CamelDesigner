@@ -11,7 +11,7 @@ import org.modelio.metamodel.uml.statik.Enumeration;
 
 @objid ("e0e4c6eb-93a7-42eb-912f-63f8999c94c0")
 public class LocationRequirementPropertyPage<T extends LocationRequirement> extends HardRequirementPropertyPage<T> {
-    @objid ("977ae49a-5751-480b-a1ac-0a9b758f0ec3")
+    @objid ("0c8ca218-d40b-4fdc-91ef-7cd8d879f358")
     private List<ModelElement> _locations = null;
 
     /**

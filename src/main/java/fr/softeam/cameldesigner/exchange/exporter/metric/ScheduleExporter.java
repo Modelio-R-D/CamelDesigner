@@ -44,31 +44,39 @@ public class ScheduleExporter<T extends Schedule> extends FeatureExporter<T> {
         }
     }
 
-    @objid ("47d47370-fbb6-4851-8abb-c79b28bd1b78")
+    @objid ("1ff64f01-e46c-4a4e-b507-929412564cac")
     private void setInterval(camel.metric.Schedule schedule) {
-        schedule.setInterval(Long.valueOf(this._element.getInterval()));
+        String content = this._element.getInterval();
+        if (content != null)
+            schedule.setInterval(Long.valueOf(content));
     }
 
-    @objid ("5876f71d-614b-496a-9244-583dc4c19558")
+    @objid ("94a9a137-24cb-4f06-a973-cf4c96f66169")
     private void setRepetitions(camel.metric.Schedule schedule) {
-        schedule.setRepetitions(Integer.valueOf(this._element.getRepetitions()));
+        String content = this._element.getRepetitions();
+        if (content != null)
+            schedule.setRepetitions(Integer.valueOf(content));
     }
 
-    @objid ("69f5d7fd-3f24-4a5b-b8ca-9bff33142819")
+    @objid ("e80bec99-5194-479f-8b99-a9a413540070")
     private void setTimeUnit(camel.metric.Schedule schedule) {
         CDOObject timeUnit = this._process.getElement(this._element.getTimeUnit());
         if ((timeUnit != null) &&  (timeUnit instanceof camel.unit.Unit))
             schedule.setTimeUnit((camel.unit.Unit) timeUnit);
     }
 
-    @objid ("6a5eb863-bf98-4032-999e-ec926f2a42ba")
+    @objid ("2aa748ab-eee5-4139-ac23-356a43dd3bc4")
     private void setEnd(camel.metric.Schedule schedule) {
-        schedule.setEnd(Date.valueOf(this._element.getEnd()));
+        String content = this._element.getEnd();
+        if (content != null)
+            schedule.setEnd(Date.valueOf(content));
     }
 
-    @objid ("541e4150-3e4a-49c7-b13a-7d5399fce70a")
+    @objid ("00a624a1-aaa7-4487-a86e-6bdc4c81928a")
     private void setStart(camel.metric.Schedule schedule) {
-        schedule.setStart(Date.valueOf(this._element.getStart()));
+        String content = this._element.getStart();
+        if (content != null)
+            schedule.setStart(Date.valueOf(content));
     }
 
 }

@@ -111,7 +111,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         = fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement.create();
         
         proxyOSRequirement.setOs(element.getOs());
-        proxyOSRequirement.setIs64os(proxyOSRequirement.getIs64os());
+        proxyOSRequirement.setIs64os(proxyOSRequirement.isIs64os());
         //proxyOSRequirement.
         //IUmlModel umlModel = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel();
         

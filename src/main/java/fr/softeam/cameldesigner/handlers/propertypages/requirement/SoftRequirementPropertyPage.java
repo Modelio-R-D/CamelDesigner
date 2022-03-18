@@ -39,7 +39,7 @@ public abstract class SoftRequirementPropertyPage<T extends SoftRequirement> ext
         super.update(table);
         
         //Mimimise
-        table.addProperty("Priority", this._element.getPriority());
+        table.addProperty("Priority", getNotNull(this._element.getPriority()));
     }
 
     @objid ("68c59007-4a50-4368-83ca-7741792c6b11")

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.06
 
- * This file was generated on 2/25/22 11:13 AM by Modelio Studio.
+ * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.package_;
 
@@ -54,7 +54,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("12da9c0b-7f68-4c3c-abc2-84b8c9b97aaa")
 public class RequirementModel extends SubModel {
-    @objid ("9536e3f9-2f79-4ff5-99a0-fcf4cee8fde6")
+    @objid ("c6c1a9b7-ea55-40c8-ad5a-9022ab29397f")
     public static final String STEREOTYPE_NAME = "RequirementModel";
 
     /**
@@ -65,7 +65,7 @@ public class RequirementModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("fdbafef4-7623-4e2c-aa2b-75861c97a4b5")
+    @objid ("bfe87730-2ffe-45c2-bd18-f4eaccf02e0d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RequirementModel.STEREOTYPE_NAME));
     }
@@ -75,7 +75,7 @@ public class RequirementModel extends SubModel {
      * 
      * @return a {@link RequirementModel} proxy on the created {@link Package}.
      */
-    @objid ("d40dbc5b-cf4f-4cc4-a53f-7272683b2f86")
+    @objid ("57c30260-cd67-432f-a4d7-09caeca2382f")
     public static RequirementModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RequirementModel.STEREOTYPE_NAME);
@@ -89,7 +89,7 @@ public class RequirementModel extends SubModel {
      * @param obj a Package
      * @return a {@link RequirementModel} proxy or <i>null</i>.
      */
-    @objid ("db7bc162-74ff-487f-a423-823c5ea6d1e7")
+    @objid ("451005a5-460b-4354-bc15-fa69eb6a1851")
     public static RequirementModel instantiate(final Package obj) {
         return RequirementModel.canInstantiate(obj) ? new RequirementModel(obj) : null;
     }
@@ -102,7 +102,7 @@ public class RequirementModel extends SubModel {
      * @return a {@link RequirementModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c43ed315-2d92-4413-b8bf-305f49bd463f")
+    @objid ("b0155a36-0b96-4528-a777-ffe382d64ab6")
     public static RequirementModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (RequirementModel.canInstantiate(obj))
         	return new RequirementModel(obj);
@@ -116,13 +116,13 @@ public class RequirementModel extends SubModel {
      * null
      * 
      */
-    @objid ("766b11ec-390b-4d17-899d-3c9a6648dd77")
+    @objid ("865fd91a-98d8-4261-947c-2045a3688c69")
     public void addRequirements(final Requirement obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("48928ad3-5357-4a5e-a92f-de42eeec7a45")
+    @objid ("43d21a52-fe1f-46e4-8033-c376b6a6cec0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -144,7 +144,7 @@ public class RequirementModel extends SubModel {
      * null
      * 
      */
-    @objid ("b175a375-14ef-4922-af36-1c41692d35f0")
+    @objid ("0714ba9b-37cb-4955-815f-8375a037813c")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -153,7 +153,7 @@ public class RequirementModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("fc388223-f6d7-40ff-9c8f-9902f856e754")
+    @objid ("83df9c73-6695-46fc-b8f6-cc13b324d8a7")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -165,7 +165,7 @@ public class RequirementModel extends SubModel {
      * null
      * 
      */
-    @objid ("81f13e45-5b33-4bc0-98aa-eafec7c762b4")
+    @objid ("e667a368-d553-4dc2-81c1-9d556264354f")
     public List<Requirement> getRequirements() {
         List<Requirement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -197,7 +197,7 @@ public class RequirementModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("c6795b3e-1ee0-45b3-8b05-7d752fb95e92")
+    @objid ("3a1ec2a5-899d-46c7-b798-f3ad08d43483")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -209,7 +209,7 @@ public class RequirementModel extends SubModel {
      * null
      * 
      */
-    @objid ("b150b977-ed7b-4859-97c4-09fd90361918")
+    @objid ("9ce50a6b-2649-4025-8676-d5b7b1098614")
     public boolean removeRequirements(final Requirement obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -220,7 +220,7 @@ public class RequirementModel extends SubModel {
      * null
      * 
      */
-    @objid ("bf54a3dc-4a16-44fb-9ab5-ecde258ffc78")
+    @objid ("b1fe52fa-598e-4c67-819b-dbac5058549a")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -303,23 +303,23 @@ public class RequirementModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("5e7798a8-45cc-48d7-bc7b-ff0a68e7db23")
+    @objid ("4ee77a79-a55c-4ddb-b1ed-c81d875818a8")
     protected RequirementModel(final Package elt) {
         super(elt);
     }
 
     @objid ("cda79ab4-0c73-48f6-9745-469f013ec194")
     public static final class MdaTypes {
-        @objid ("8f9b83e1-5dd6-4659-934e-630bea861043")
+        @objid ("6e3716fb-e85e-4c6d-bb0b-04efdd26b1dc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d08e9e20-c829-4272-86da-7167b7bdf8d4")
+        @objid ("29d72b64-c6f1-4d62-ac6f-6a0defbeb79d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7b806491-bc28-444d-bb7d-3f0f34323864")
+        @objid ("e65797b2-1a88-4ef8-8d4a-ac477ae12b8e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("727e2aba-fe39-405d-a723-7fd56ac43697")
+        @objid ("28539630-901a-4375-ae17-548eecda5447")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a6bb7236-ef3d-41b8-a879-26c642be9cb8");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

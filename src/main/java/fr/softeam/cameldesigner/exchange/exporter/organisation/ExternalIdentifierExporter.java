@@ -23,12 +23,34 @@ public class ExternalIdentifierExporter<T extends ExternalIdentifier> extends Fe
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.ExternalIdentifier) {
+            setIdentifier((camel.organisation.ExternalIdentifier) elt);
+        }
     }
 
     @objid ("88523812-9212-42bd-b752-f76d78ebae8d")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if (elt instanceof camel.organisation.ExternalIdentifier) {
+            camel.organisation.ExternalIdentifier extId = (camel.organisation.ExternalIdentifier) elt;
+        
+            if (context instanceof camel.organisation.OrganisationModel) {
+                ((camel.organisation.OrganisationModel) context).getExternalIdentifiers().add(extId);
+            }else    if (context instanceof camel.organisation.User) {
+                ((camel.organisation.User) context).getExternalIdentifiers().add(extId);
+            }else {
+                super.attach(elt, context);
+            }
+        }else {
+            super.attach(elt, context);
+        }
+    }
+
+    @objid ("f4e5982d-9732-43ac-a154-7e44012a1ac4")
+    private void setIdentifier(camel.organisation.ExternalIdentifier id) {
+        String content = this._element.getIdentifier();
+        if (content != null)
+            id.setIdentifier(content);
     }
 
 }

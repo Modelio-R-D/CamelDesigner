@@ -75,7 +75,7 @@ public class MetricVariablePropertyPage<T extends MetricVariable> extends Metric
         //Current Configuration
         table.addProperty("Current Configuration", this._element.isCurrentConfiguration());
         
-              //Component
+        //Component
         table.addProperty("Component", getCamelName(this._element.getComponent()), getCamelNames(CamelDesignerAbstractProxy.getComponents()));
         
         //On Node Candidates
@@ -83,7 +83,7 @@ public class MetricVariablePropertyPage<T extends MetricVariable> extends Metric
         
         
         //Formula
-        table.addProperty("Formula", this._element.getFormula());
+        table.addProperty("Formula", getNotNull(this._element.getFormula()));
         
         //ComponentMetric Context
         table.addProperty("Component Metric", getCamelValue(this._element.getComponentMetrics()), getAddRemove(CamelDesignerAbstractProxy.getMetrics(), this._element.getComponentMetrics()));

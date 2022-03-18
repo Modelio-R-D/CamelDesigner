@@ -22,12 +22,29 @@ public class ServiceResourceFilterExporter<T extends ServiceResourceFilter> exte
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.organisation.ServiceResourceFilter) {
+            camel.organisation.ServiceResourceFilter srf = (camel.organisation.ServiceResourceFilter) elt;
+            setServiceURL(srf);
+            setEveryService(srf);
+        }
     }
 
     @objid ("7a55a2e8-6350-40b8-89d8-db1539b4b3f7")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("adc5e7d3-9f25-4122-97a1-68f6e38fee9c")
+    private void setServiceURL(camel.organisation.ServiceResourceFilter servFilter) {
+        String content = this._element.getServiceURL();
+        if (content != null)
+            servFilter.setServiceURL(content);
+    }
+
+    @objid ("b64a705b-f18b-45a2-a1ec-c71308ad4b52")
+    private void setEveryService(camel.organisation.ServiceResourceFilter servFilter) {
+        servFilter.setEveryService(this._element.isEveryService());
     }
 
 }

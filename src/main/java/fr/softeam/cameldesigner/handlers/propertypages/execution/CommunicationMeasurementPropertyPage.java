@@ -19,16 +19,16 @@ import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("3dc9a0e5-ecaf-4568-8741-6788681cf3cd")
 public class CommunicationMeasurementPropertyPage<T extends CommunicationMeasurement> extends FeatureClassPropertyPage<T> {
-    @objid ("3f5bf951-27a0-4aaf-9c0d-f5da19261274")
+    @objid ("831b9eee-98d9-4054-b7a7-94028bcbe050")
     private List<ModelElement> _sourceVMInstance = null;
 
-    @objid ("c33061b4-579d-4111-b017-bfacd14c1f52")
+    @objid ("7ab5cfb6-8cbf-4158-8b54-2f3b7d65cd1e")
     private List<ModelElement> _targetVMInstance = null;
 
-    @objid ("97edd7c7-7d3b-48d0-95f9-8cdc1cd737a3")
+    @objid ("15145c63-e2c0-4d2b-a291-4eb77fa912db")
     private List<ModelElement> _sourceVM = null;
 
-    @objid ("fde64b71-891b-4fbe-8856-a18849d5fa59")
+    @objid ("d71d4942-d2e6-44b0-8750-7b1d24ab374b")
     private List<ModelElement> _targetVM = null;
 
     /**

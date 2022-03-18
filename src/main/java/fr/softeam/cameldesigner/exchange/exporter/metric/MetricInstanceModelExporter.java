@@ -33,7 +33,7 @@ public class MetricInstanceModelExporter<T extends MetricInstanceModel> extends 
         super.attach(elt, context);
     }
 
-    @objid ("3920e604-64e3-4b9a-908e-ee772ea3659d")
+    @objid ("80c2584f-7ccd-403e-8818-cd72d3d02ea7")
     private void setType(camel.metric.MetricInstanceModel elt) {
         CDOObject type = this._process.getElement(this._element.getType());
         if ((type != null) &&  (type instanceof camel.metric.MetricTypeModel))

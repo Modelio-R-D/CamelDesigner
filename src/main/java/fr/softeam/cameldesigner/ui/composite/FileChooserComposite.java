@@ -26,17 +26,17 @@ import org.eclipse.swt.widgets.Text;
  */
 @objid ("250cf164-45e4-4865-9c0a-2b46cb30a893")
 public class FileChooserComposite extends Composite {
-    @objid ("25a42bb5-0e36-45a6-9545-17c9cfeaabbf")
-    private File currentFile = null;
-
-    @objid ("16dc098b-75f5-4ef8-b165-ea6cea9ecf9c")
+    @objid ("2fbb8184-5f94-437e-bdc7-39c813bfc5fc")
     private Text text = null;
 
-    @objid ("1ae63f67-3087-4578-9f67-80ca0698a2b1")
+    @objid ("5f2f8aac-3ad2-43f7-bff5-374440274965")
     private Button searchButton = null;
 
-    @objid ("5fd7d761-617c-4ed4-9729-a99403624da9")
+    @objid ("350d45b7-670c-4bfc-aab7-a7825086ac27")
     protected FileDialog dialog = null;
+
+    @objid ("25a42bb5-0e36-45a6-9545-17c9cfeaabbf")
+    private File currentFile = null;
 
     /**
      * This method returns the chosen file

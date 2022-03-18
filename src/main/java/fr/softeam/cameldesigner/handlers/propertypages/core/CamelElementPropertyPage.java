@@ -59,13 +59,6 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
         this._element = elt;
     }
 
-    @objid ("5bc21a83-568c-45f0-a003-dee26d0f1049")
-    protected String getValue(String value) {
-        if (value == null)
-            return "";
-        return value;
-    }
-
     /**
      * Compute the name of the Camel Element
      * 
@@ -178,6 +171,13 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
             }
         }
         return null;
+    }
+
+    @objid ("18cbfa0e-d73d-4ebe-a3dc-d4f9a02ce256")
+    protected String getNotNull(String value) {
+        if (value == null)
+            return "" ;
+        return value;
     }
 
 }

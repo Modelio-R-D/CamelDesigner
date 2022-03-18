@@ -40,14 +40,16 @@ public class SensorExporter<T extends Sensor> extends SoftwareComponentExporter<
         }
     }
 
-    @objid ("1200f829-58dd-4c31-ac75-60d8066d17dd")
+    @objid ("423b861c-b322-4b94-a75f-1b6192174e6e")
     private void setIsPush(camel.metric.Sensor sensor) {
         sensor.setIsPush(Boolean.valueOf(this._element.isIsPush()));
     }
 
-    @objid ("8f8cb6e5-7067-4ed3-88b6-5cc716d0c845")
+    @objid ("bf6da60e-cf00-49fc-9960-fcb86ab79468")
     private void setConfiguration(camel.metric.Sensor sensor) {
-        sensor.setConfiguration(this._element.getConfiguration());
+        String content = this._element.getConfiguration();
+        if (content != null)
+            sensor.setConfiguration(content);
     }
 
 }
