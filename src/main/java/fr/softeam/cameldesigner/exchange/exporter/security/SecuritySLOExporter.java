@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import camel.security.SecurityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.security.SecurityFactory;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecuritySLO;
 import fr.softeam.cameldesigner.exchange.exporter.requirement.ServiceLevelObjectiveExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("51529210-b155-4e8c-9249-28e68f4e1c59")
 public class SecuritySLOExporter<T extends SecuritySLO> extends ServiceLevelObjectiveExporter<T> {
@@ -28,7 +28,11 @@ public class SecuritySLOExporter<T extends SecuritySLO> extends ServiceLevelObje
     @objid ("16ebbb0a-25ef-4333-a0f5-4632ad47ae51")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.security.SecurityModel) && (elt instanceof camel.security.SecuritySLO)) {
+            ((camel.security.SecurityModel) context).getSecuritySLOs().add((camel.security.SecuritySLO) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

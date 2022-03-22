@@ -9,6 +9,14 @@ package fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement;
 import java.util.ArrayList;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -18,14 +26,6 @@ import org.modelio.metamodel.uml.statik.AttributeLink;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.vcore.smkernel.mapi.MObject;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.attributelink.MmsPropertyInstance;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link ModelElement} with << MmsObject >> stereotype.
@@ -47,7 +47,7 @@ public abstract class MmsObject extends NamedElement {
      * Tells whether a {@link MmsObject proxy} can be instantiated from a {@link MObject} checking it is a {@link ModelElement} stereotyped << MmsObject >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     *
+     * 
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -82,6 +82,7 @@ public abstract class MmsObject extends NamedElement {
 
     /**
      * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
     @objid ("82dd51a7-b77e-4569-b2d3-ba1f679cb980")
@@ -176,11 +177,11 @@ public abstract class MmsObject extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

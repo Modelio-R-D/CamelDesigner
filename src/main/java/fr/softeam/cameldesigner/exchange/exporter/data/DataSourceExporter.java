@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.data;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.data.DataFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource;
 import fr.softeam.cameldesigner.exchange.exporter.core.NamedElementExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("3a22d107-09c9-4584-bc6a-de51525e929e")
 public class DataSourceExporter<T extends DataSource> extends NamedElementExporter<T> {

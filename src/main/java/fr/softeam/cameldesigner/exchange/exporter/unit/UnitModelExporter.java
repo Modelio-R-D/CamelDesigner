@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.unit;
 
-import camel.unit.UnitFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.unit.UnitFactory;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.exchange.exporter.core.SubModelExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("040710ef-dcad-48b5-9676-f360ce3a71d5")
 public class UnitModelExporter<T extends UnitModel> extends SubModelExporter<T> {

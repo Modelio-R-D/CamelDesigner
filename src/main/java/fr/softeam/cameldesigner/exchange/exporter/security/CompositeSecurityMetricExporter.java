@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import camel.security.SecurityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.security.SecurityFactory;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.CompositeSecurityMetric;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("32caaad5-d3be-41f0-bd3b-a5a2c03ab48b")
 public class CompositeSecurityMetricExporter<T extends CompositeSecurityMetric> extends FeatureExporter<T> {
@@ -28,7 +28,11 @@ public class CompositeSecurityMetricExporter<T extends CompositeSecurityMetric> 
     @objid ("61c57908-5ae9-4c05-bfdc-02de7c554ad5")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.security.SecurityModel) && (elt instanceof camel.security.CompositeSecurityMetric)) {
+            ((camel.security.SecurityModel) context).getCompositeSecurityMetrics().add((camel.security.CompositeSecurityMetric) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

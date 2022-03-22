@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter.requirement;
 
 import java.util.ArrayList;
 import java.util.List;
-import camel.requirement.RequirementFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.requirement.RequirementFactory;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityRequirement;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityControl;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8177f8dc-af29-4754-84a9-5d77be30b41c")
 public class SecurityRequirementExporter<T extends SecurityRequirement> extends HardRequirementExporter<T> {
@@ -33,7 +33,11 @@ public class SecurityRequirementExporter<T extends SecurityRequirement> extends 
     @objid ("1a52af56-c5ab-486f-ab93-94c85131d2c1")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.security.SecurityModel) && (elt instanceof camel.requirement.SecurityRequirement)) {
+            ((camel.security.SecurityModel) context).getSecurityRequirements().add((camel.requirement.SecurityRequirement) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
     @objid ("8ee43a1f-2d4e-478a-b2b5-975cd8d45393")
@@ -44,7 +48,7 @@ public class SecurityRequirementExporter<T extends SecurityRequirement> extends 
             if ((camelSc != null) &&  (camelSc instanceof camel.security.SecurityControl))
                 controls.add((camel.security.SecurityControl) camelSc);
         }
-        
+
         sr.getSecurityControls().addAll(controls);
     }
 

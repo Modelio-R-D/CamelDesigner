@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import camel.security.SecurityFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.security.SecurityFactory;
 import fr.softeam.cameldesigner.api.securitymodel.standard.instance.SecurityMetricInstance;
 import fr.softeam.cameldesigner.exchange.exporter.metric.MetricInstanceExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("b9d7596f-0998-4d14-80ac-6df1deb5a9a8")
 public class SecurityMetricInstanceExporter<T extends SecurityMetricInstance> extends MetricInstanceExporter<T> {
@@ -28,7 +28,11 @@ public class SecurityMetricInstanceExporter<T extends SecurityMetricInstance> ex
     @objid ("3d07c6a7-d9bd-4a7e-90c9-78b9a4aa0362")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.security.SecurityModel) && (elt instanceof camel.security.SecurityMetricInstance)) {
+            ((camel.security.SecurityModel) context).getSecurityMetricInstances().add((camel.security.SecurityMetricInstance) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

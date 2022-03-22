@@ -2,11 +2,6 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
@@ -1932,7 +1927,7 @@
             </Tool>
             <Tool id="LocationModel" label="%tool.LocationModel.label" tooltip="%tool.LocationModel.tooltip" image="res/icon/gui/locationModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateLocationModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateLocationModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#LocationModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="LocationModel"/>
@@ -2013,7 +2008,7 @@
             </Tool>
             <Tool id="MetricInstanceModel" label="%tool.MetricInstanceModel.label" tooltip="%tool.MetricInstanceModel.tooltip" image="res/icon/gui/MetricInstanceModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateMetricInstanceModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateMetricInstanceModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#MetricInstanceModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="MetricInstanceModel"/>
@@ -2133,7 +2128,7 @@
             </Tool>
             <Tool id="OrganisationModel" label="%tool.OrganisationModel.label" tooltip="%tool.OrganisationModel.tooltip" image="res/icon/gui/organisationModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateOrganisationModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateOrganisationModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#OrganisationModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="OrganisationModel"/>
@@ -2294,7 +2289,7 @@
             </Tool>
             <Tool id="ScalabilityModel" label="%tool.ScalabilityModel.label" tooltip="%tool.ScalabilityModel.tooltip" image="res/icon/gui/scalabilityModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateScalabilityModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateScalabilityModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#ScalabilityModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="ScalabilityModel"/>
@@ -2333,8 +2328,8 @@
                 </Handler>
             </Tool>
             <Tool id="SecurityModel" label="%tool.SecurityModel.label" tooltip="%tool.SecurityModel.tooltip" image="res/icon/gui/securityModel_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype=""/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateSecurityModel">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateSecurityModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#SecurityModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="SecurityModel"/>
@@ -2454,7 +2449,7 @@
             </Tool>
             <Tool id="TypeModel" label="%tool.TypeModel.label" tooltip="%tool.TypeModel.tooltip" image="res/icon/gui/typeModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateTypeModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateTypeModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#TypeModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="Type Model"/>
@@ -2478,7 +2473,7 @@
             </Tool>
             <Tool id="UnitModel" label="%tool.UnitModel.label" tooltip="%tool.UnitModel.tooltip" image="res/icon/gui/unitModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateUnitModel">
+                <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateUnitModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#UnitModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="Unit Model"/>
