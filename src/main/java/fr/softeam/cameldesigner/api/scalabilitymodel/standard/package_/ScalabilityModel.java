@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_;
 
@@ -53,7 +53,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("aa6941bf-42c8-468d-869b-0d991fac6251")
 public class ScalabilityModel extends SubModel {
-    @objid ("44500fe9-9984-49eb-8fcd-97817ca30e13")
+    @objid ("452762ae-a434-4410-a603-ad0ed61db505")
     public static final String STEREOTYPE_NAME = "ScalabilityModel";
 
     /**
@@ -64,7 +64,7 @@ public class ScalabilityModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("30f7cfcc-6544-4d36-8d6a-6d6c6f4b1885")
+    @objid ("c210f49b-8483-4778-bb8d-bb381822ab04")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityModel.STEREOTYPE_NAME));
     }
@@ -74,7 +74,7 @@ public class ScalabilityModel extends SubModel {
      * 
      * @return a {@link ScalabilityModel} proxy on the created {@link Package}.
      */
-    @objid ("12acdc79-76db-42e9-80d1-ade27dacc217")
+    @objid ("26a97ef9-377f-45d6-93b0-b77c65452376")
     public static ScalabilityModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityModel.STEREOTYPE_NAME);
@@ -88,7 +88,7 @@ public class ScalabilityModel extends SubModel {
      * @param obj a Package
      * @return a {@link ScalabilityModel} proxy or <i>null</i>.
      */
-    @objid ("bb878359-8be2-41f6-b9a8-94a061de5067")
+    @objid ("1a91e130-4b0a-4850-8e2d-da1fbe8445b4")
     public static ScalabilityModel instantiate(final Package obj) {
         return ScalabilityModel.canInstantiate(obj) ? new ScalabilityModel(obj) : null;
     }
@@ -101,7 +101,7 @@ public class ScalabilityModel extends SubModel {
      * @return a {@link ScalabilityModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("189ec302-177d-4775-bb44-3ea6776f49b3")
+    @objid ("d807b469-bea4-4163-95b9-23a6c20fdf45")
     public static ScalabilityModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (ScalabilityModel.canInstantiate(obj))
         	return new ScalabilityModel(obj);
@@ -115,7 +115,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("c640c399-2fa4-427c-81e4-924955db4f85")
+    @objid ("d3e1a45e-6652-4de0-a2c7-c48b6288d983")
     public void addActions(final ScalingAction obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -127,7 +127,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("87ca663c-511a-449b-bee3-10c0de0fbc31")
+    @objid ("ce0f58c1-ab41-4bbd-be93-cdd01c370e05")
     public void addEventInstances(final EventInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -139,7 +139,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("7a64fc22-eb5c-4ace-a34d-5db2259bf250")
+    @objid ("846fcaec-a055-4b10-aedd-b7882cdb7035")
     public void addEvents(final SingleEvent obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -151,7 +151,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("ee5107b3-fe5b-4c25-a1a9-339018692144")
+    @objid ("337d7fb5-eadc-494d-adc6-abc1e3f63bd1")
     public void addPatterns(final EventPattern obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -163,7 +163,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("73d79104-a8b2-4e0a-87d8-b2f1c293fb91")
+    @objid ("06544c18-327e-48f3-a669-9e140a092c97")
     public void addRules(final ScalabilityRule obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -175,13 +175,13 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("a880d781-bcdf-47e6-8625-fe1cddf4e28f")
+    @objid ("73c9e255-d924-4912-a013-50978c74ed70")
     public void addTimers(final Timer obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("d794f06c-08aa-4aa6-ac40-6d4e1d6ac429")
+    @objid ("7024eb7b-edb6-4563-9262-be3444eaf5a6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -203,7 +203,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("cd70514c-6165-4440-b0ae-6800beab85f4")
+    @objid ("a7830afd-c746-4727-b772-dfb1b3179f1f")
     public List<ScalingAction> getActions() {
         List<ScalingAction> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -221,7 +221,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("c23b63ad-d342-483f-8105-988a55b8913c")
+    @objid ("afd5a744-b3f5-453f-ab2f-9ee23685a4c5")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -230,7 +230,7 @@ public class ScalabilityModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("42c16825-4cbd-465b-8957-9f574ecaf80b")
+    @objid ("082aaafe-e1fc-4c82-aae2-576d169b503e")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -242,7 +242,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("d93d110e-0789-4bb6-987f-c27b38196aed")
+    @objid ("c2a0fca1-b446-4a5b-9aa6-bf1f0eb7ec64")
     public List<EventInstance> getEventInstances() {
         List<EventInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -260,7 +260,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("cf3b9369-74bc-47b6-9a9f-3ae273634bd7")
+    @objid ("0ce79414-c841-423b-9ba9-080c3e270939")
     public List<SingleEvent> getEvents() {
         List<SingleEvent> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -278,7 +278,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("5dc2509a-f3b0-485a-8b77-0a3cd2a60a9e")
+    @objid ("cb0bcda1-0f48-4f94-9641-4d262ba355d1")
     public List<EventPattern> getPatterns() {
         List<EventPattern> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -296,7 +296,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("4950a300-0136-4925-b3e4-8406d727dee2")
+    @objid ("f84c7594-629a-4e3e-a035-a6654bd15956")
     public List<ScalabilityRule> getRules() {
         List<ScalabilityRule> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -312,7 +312,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("0c0209b5-d9f4-4e2b-8a81-48857d8e2305")
+    @objid ("45b19b5d-abf0-4327-a47e-08584fe2f01f")
     public List<Timer> getTimers() {
         List<Timer> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -322,7 +322,7 @@ public class ScalabilityModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("fc577e7c-6bd1-4ac6-9bfc-85c0629d32c0")
+    @objid ("c43d2c79-6da2-4a8c-a597-9b8a2f1cded2")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -334,7 +334,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("44472293-0474-4d4f-a66c-0d7d6749dad0")
+    @objid ("e71edbe8-ab21-4920-a46f-7d82f51ac258")
     public boolean removeActions(final ScalingAction obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -345,7 +345,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("2a7b2ca8-2c1b-4203-a3ca-481b941ef5c0")
+    @objid ("a557355a-9d96-4e12-91e6-bac9e00c4824")
     public boolean removeEventInstances(final EventInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -356,7 +356,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("8ff708bc-6e2a-4c9c-8a61-f4716576625a")
+    @objid ("b5ebc206-43c7-4198-8974-19c13df16fbd")
     public boolean removeEvents(final SingleEvent obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -367,7 +367,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("9d99fc4c-db51-4ea7-81c3-7ff0e78a8427")
+    @objid ("4f269816-904c-442a-8230-81aea5d3d551")
     public boolean removePatterns(final EventPattern obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -378,7 +378,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("9e667bce-6ae4-4454-b0d0-8d760f0fe54d")
+    @objid ("59c8e86a-f9b4-4d1c-8c5e-4f01247d1708")
     public boolean removeRules(final ScalabilityRule obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -389,7 +389,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("77e6aab1-e62f-4657-a826-05b3555de51a")
+    @objid ("dbce0878-a268-4cb4-a167-f2b98a039a05")
     public boolean removeTimers(final Timer obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -400,7 +400,7 @@ public class ScalabilityModel extends SubModel {
      * null
      * 
      */
-    @objid ("112228c2-2a09-4d84-bb5a-fc48e8db77a0")
+    @objid ("310dc2dc-311d-4c00-8f7a-ee179d495561")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -413,23 +413,23 @@ public class ScalabilityModel extends SubModel {
         return result;
     }
 
-    @objid ("7bd1d812-af63-4f6d-8aac-3a94ac959169")
+    @objid ("f2f4a4c8-4345-46cb-bf23-49cb0480287e")
     protected ScalabilityModel(final Package elt) {
         super(elt);
     }
 
     @objid ("c8089b03-881d-4197-88c6-c19a2044ecb8")
     public static final class MdaTypes {
-        @objid ("5a31886d-6a49-40b8-ac6e-6b89adfdea02")
+        @objid ("0cdb86eb-5bc2-410b-bde6-895d839c4662")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8225d111-4529-4299-af6b-3b393c805d22")
+        @objid ("3f84a675-47f6-4fff-af78-e34b7e4f9759")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("878318b7-f223-4cdf-8e9e-1075a71764e5")
+        @objid ("7c36729c-f6de-4688-bbb1-3e552118d1de")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("679bd267-dc94-4cde-b4cf-9e4d1c318c07")
+        @objid ("09b2b424-7c73-42e2-9550-88b224fc3299")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0e1f4eeb-63ca-467d-b99c-92a54f34fcb5");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

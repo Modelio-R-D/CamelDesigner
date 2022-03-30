@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecuritySLO;
 import fr.softeam.cameldesigner.exchange.exporter.requirement.ServiceLevelObjectiveExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("51529210-b155-4e8c-9249-28e68f4e1c59")
 public class SecuritySLOExporter<T extends SecuritySLO> extends ServiceLevelObjectiveExporter<T> {

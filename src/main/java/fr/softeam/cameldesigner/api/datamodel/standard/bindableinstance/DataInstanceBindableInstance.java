@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.bindableinstance;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f23e6d20-b54c-47fc-848b-1b0ab1c02666")
 public class DataInstanceBindableInstance extends DataInstance {
-    @objid ("8902eb38-61d4-4079-85d9-729d449b443b")
+    @objid ("6e930e0d-8775-42b6-a6a7-f0b54bcb6428")
     public static final String STEREOTYPE_NAME = "DataInstance_BindableInstance";
 
     /**
@@ -47,7 +47,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("57f529fa-c8ef-4fd5-a510-2a8c0fa10db0")
+    @objid ("f07b4753-1775-40dc-8109-d6a2f829ddad")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof BindableInstance) && ((BindableInstance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataInstanceBindableInstance.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * 
      * @return a {@link DataInstanceBindableInstance} proxy on the created {@link BindableInstance}.
      */
-    @objid ("22e68126-2c96-4a8a-b551-2584ef776f06")
+    @objid ("e2a9c363-c681-4256-9332-0ffaf0f4603b")
     public static DataInstanceBindableInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.BindableInstance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataInstanceBindableInstance.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * @param obj a BindableInstance
      * @return a {@link DataInstanceBindableInstance} proxy or <i>null</i>.
      */
-    @objid ("a66cc526-d9e4-496a-8275-a3ff48656db3")
+    @objid ("372adfd9-d7f6-43b5-8d74-3abd89fee4ea")
     public static DataInstanceBindableInstance instantiate(final BindableInstance obj) {
         return DataInstanceBindableInstance.canInstantiate(obj) ? new DataInstanceBindableInstance(obj) : null;
     }
@@ -84,7 +84,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * @return a {@link DataInstanceBindableInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e784bbff-e208-449d-966e-1463ccb12e95")
+    @objid ("c40cd7d7-307c-4d60-8dc1-40218ccf180b")
     public static DataInstanceBindableInstance safeInstantiate(final BindableInstance obj) throws IllegalArgumentException {
         if (DataInstanceBindableInstance.canInstantiate(obj))
         	return new DataInstanceBindableInstance(obj);
@@ -92,7 +92,7 @@ public class DataInstanceBindableInstance extends DataInstance {
         	throw new IllegalArgumentException("DataInstanceBindableInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a5dd4f27-0f5e-4282-b011-7177b0f7d454")
+    @objid ("5cde9a5e-2aec-4eeb-9f63-1eff73ea372e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,7 +112,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * Get the underlying {@link BindableInstance}. 
      * @return the BindableInstance represented by this proxy, never null.
      */
-    @objid ("d1a91106-ec62-49a7-a963-7e77aa1b5ff8")
+    @objid ("a14c9e01-fc8d-464e-a94e-ca33b276a391")
     @Override
     public BindableInstance getElement() {
         return (BindableInstance)super.getElement();
@@ -124,12 +124,12 @@ public class DataInstanceBindableInstance extends DataInstance {
      * null
      * 
      */
-    @objid ("228bccd7-7ccb-4921-890b-a80ac97befb9")
+    @objid ("5760e46c-28c2-4142-ba4d-9054ec1a4cad")
     public DataInstance getOwner() {
         return (DataInstance)CamelDesignerProxyFactory.instantiate(((BindableInstance) this.elt).getCluster(), DataInstance.STEREOTYPE_NAME);
     }
 
-    @objid ("4493c5fc-f10d-4c9e-9f55-4a52bdd6321e")
+    @objid ("d231ae64-5f83-4478-a9c5-a9e0f5feefda")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -141,7 +141,7 @@ public class DataInstanceBindableInstance extends DataInstance {
      * null
      * 
      */
-    @objid ("d90111d1-d9bc-4d52-a4bf-f2297b7e2567")
+    @objid ("548668f8-80f6-404f-9fe9-039d7294fac6")
     public void setOwner(final DataInstance obj) {
         ((BindableInstance) this.elt).setCluster((obj != null) ? obj.getElement() : null);
     }
@@ -154,23 +154,23 @@ public class DataInstanceBindableInstance extends DataInstance {
         return result;
     }
 
-    @objid ("e1ed4490-8cec-4b2f-9c43-6b536332f445")
+    @objid ("74186e4f-bc5f-4855-92bd-0d8012db228f")
     protected DataInstanceBindableInstance(final BindableInstance elt) {
         super(elt);
     }
 
     @objid ("a85bfe4a-348a-47dc-afe9-847afd7550b8")
     public static final class MdaTypes {
-        @objid ("63e99f8e-2e59-4263-a148-e515e5cc2ee6")
+        @objid ("a1e51274-af96-4dce-bd59-c3bc1fdc7164")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("143e0a96-18af-4817-8140-5acfa1325b51")
+        @objid ("009c7f65-5f4a-49de-aec7-55f02097f3af")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("343604bd-0b29-4212-b595-6f3d7c8b40eb")
+        @objid ("8264e6f6-efe9-4860-acfc-dcad36d48ba0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6c9dab88-dd8e-47a9-8534-8c511eda391e")
+        @objid ("1ea5ce7d-ed00-4f7c-916d-0be97c970e86")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ca031a70-7376-4397-ae2a-7ff762e285e1");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

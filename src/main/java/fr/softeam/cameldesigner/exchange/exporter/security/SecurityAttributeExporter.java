@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityAttribute;
 import fr.softeam.cameldesigner.exchange.exporter.core.QualityAttributeExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("210f651e-1c5d-4dfa-9c2c-9deb6e46896b")
 public class SecurityAttributeExporter<T extends SecurityAttribute> extends QualityAttributeExporter<T> {
@@ -28,13 +28,6 @@ public class SecurityAttributeExporter<T extends SecurityAttribute> extends Qual
         }
     }
 
-    private void setDomain(camel.security.SecurityAttribute sc) {
-        CDOObject domain = this._process.getElement(this._element.getDomain());
-        if ((domain != null) &&  (domain instanceof camel.security.SecurityDomain))
-            sc.setDomain((camel.security.SecurityDomain) domain);
-    }
-
-
     @objid ("0592936a-d831-4ceb-939f-4ef11012132d")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
@@ -43,6 +36,13 @@ public class SecurityAttributeExporter<T extends SecurityAttribute> extends Qual
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("16932072-7d45-48a2-8235-cbca8a1dac51")
+    private void setDomain(camel.security.SecurityAttribute sc) {
+        CDOObject domain = this._process.getElement(this._element.getDomain());
+        if ((domain != null) &&  (domain instanceof camel.security.SecurityDomain))
+            sc.setDomain((camel.security.SecurityDomain) domain);
     }
 
 }

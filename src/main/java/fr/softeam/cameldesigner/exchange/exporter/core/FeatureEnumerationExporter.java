@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
+import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.standard.enumeration.FeatureEnumeration;
 import org.eclipse.emf.cdo.CDOObject;
@@ -14,7 +15,7 @@ public class FeatureEnumerationExporter<T extends FeatureEnumeration> extends Fe
     @objid ("31a07f11-5dab-400d-a03e-cabb1c5badf5")
     @Override
     public CDOObject createCamelElt(CDOObject context) {
-        return super.createCamelElt(context);
+        return CoreFactory.eINSTANCE.createFeature();
     }
 
     @objid ("0a96f5b5-a911-43fe-9500-e7c3d6df69e9")

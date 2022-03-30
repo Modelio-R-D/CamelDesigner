@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("92bee481-90ec-4831-ae16-86a6451589ef")
 public class RuleTrigger extends Cause {
-    @objid ("dbb5355c-f1bd-4fe3-a533-eb14cadd3984")
+    @objid ("ddbf2a5c-85c1-4ae6-bf94-a76421bbb35e")
     public static final String STEREOTYPE_NAME = "RuleTrigger";
 
-    @objid ("459b81ea-dd03-4061-9579-910caabe0f38")
+    @objid ("9bd07300-b3fb-4ef2-8a11-0699c20d5f12")
     public static final String TRIGGERINGTIME_TAGTYPE = "TriggeringTime";
 
     /**
@@ -50,7 +50,7 @@ public class RuleTrigger extends Cause {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("86f65957-6a2b-4bb2-9bc7-20a3d43b5864")
+    @objid ("8ac278c4-1e9c-4466-8356-1e4d93c7f292")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RuleTrigger.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class RuleTrigger extends Cause {
      * 
      * @return a {@link RuleTrigger} proxy on the created {@link Class}.
      */
-    @objid ("b3c3565f-5897-4cf4-9dde-9ae721ead84c")
+    @objid ("91abdfcd-4f51-492d-8c0b-465f8d086910")
     public static RuleTrigger create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RuleTrigger.STEREOTYPE_NAME);
@@ -74,7 +74,7 @@ public class RuleTrigger extends Cause {
      * @param obj a Class
      * @return a {@link RuleTrigger} proxy or <i>null</i>.
      */
-    @objid ("719848f1-2ddb-45b4-bcfd-99947137c378")
+    @objid ("f5dd0966-3d6f-40c4-99e1-3878e292085b")
     public static RuleTrigger instantiate(final Class obj) {
         return RuleTrigger.canInstantiate(obj) ? new RuleTrigger(obj) : null;
     }
@@ -87,7 +87,7 @@ public class RuleTrigger extends Cause {
      * @return a {@link RuleTrigger} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0609836f-ccaf-4e9d-9d31-64005d42890b")
+    @objid ("926e0f1b-698a-4b59-97ff-edc72c96f6d8")
     public static RuleTrigger safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RuleTrigger.canInstantiate(obj))
         	return new RuleTrigger(obj);
@@ -95,7 +95,7 @@ public class RuleTrigger extends Cause {
         	throw new IllegalArgumentException("RuleTrigger: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("338cba09-675b-4aa3-95ee-50e37c1ced79")
+    @objid ("49635386-ea58-4772-a11f-c015fcee28a5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class RuleTrigger extends Cause {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("65f4e92e-df43-4d7e-9778-a75b2288e669")
+    @objid ("a0fc8733-9b05-45ee-8dd2-af5d9022cece")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -127,7 +127,7 @@ public class RuleTrigger extends Cause {
      * null
      * 
      */
-    @objid ("7db64a94-c37d-4dc1-a2cc-c075f99c8675")
+    @objid ("44aa6c8e-2413-4ca4-ae3a-905210552ea8")
     public ScalabilityRule getScalabilityRule() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RuleTrigger.MdaTypes.MDAASSOCDEP)
@@ -144,12 +144,12 @@ public class RuleTrigger extends Cause {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("83e48e97-11d2-410b-853b-6b8f479c7ce0")
+    @objid ("ed8571de-094f-46b6-be70-bd35a56e9d05")
     public String getTriggeringTime() {
         return this.elt.getTagValue(RuleTrigger.MdaTypes.TRIGGERINGTIME_TAGTYPE_ELT);
     }
 
-    @objid ("d00990f0-9639-4d43-b891-ec8316bccf4d")
+    @objid ("ceb15914-9cdc-4a6c-a5ce-fe4d70fb65eb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -161,7 +161,7 @@ public class RuleTrigger extends Cause {
      * null
      * 
      */
-    @objid ("c9ad32c3-03c0-42db-a38c-157e2a1cb715")
+    @objid ("ba85fcd4-e7e2-4f92-9dc7-db10854bcc7e")
     public void setScalabilityRule(final ScalabilityRule obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -186,7 +186,7 @@ public class RuleTrigger extends Cause {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e13612c5-4fa9-4d68-81e8-db2e4fb03aba")
+    @objid ("cc5c79d7-17f1-41ad-afe7-3b2d54b6c67e")
     public void setTriggeringTime(final String value) {
         this.elt.putTagValue(RuleTrigger.MdaTypes.TRIGGERINGTIME_TAGTYPE_ELT, value);
     }
@@ -199,26 +199,26 @@ public class RuleTrigger extends Cause {
         return result;
     }
 
-    @objid ("f91e46f4-a29c-461a-8e6c-9c35f7fe597d")
+    @objid ("31312cc7-4493-48e5-a792-514152cd0850")
     protected RuleTrigger(final Class elt) {
         super(elt);
     }
 
     @objid ("4d25ae3c-a321-44a2-bbb9-74f641ada07d")
     public static final class MdaTypes {
-        @objid ("9a258ead-0434-45da-9827-ed270ee193f1")
+        @objid ("51bbc890-fc13-4e50-a7e9-39f033d08b01")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ecb9edcb-27a4-4fab-b966-3cdac26ab72a")
+        @objid ("9cb202a9-f577-494d-b666-23a04c4aa94d")
         public static TagType TRIGGERINGTIME_TAGTYPE_ELT;
 
-        @objid ("20922e86-3100-4094-8490-8c3f1b330e6a")
+        @objid ("fb3d027f-c790-4732-a919-2de00a77a661")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("571b0a10-d29b-4cb5-947f-f0e775b0c59f")
+        @objid ("18210948-5116-4a08-b14c-fdf0c4ae95f0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("612d8f54-1995-4b03-8c05-892fe89c7481")
+        @objid ("1290928b-f1f0-485a-9ce2-3877ff7f4b44")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6feb668e-fc53-4354-93a8-d98b00fdb186");
             TRIGGERINGTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "222df9b1-1654-420c-9e13-31a2c7f0da8d");

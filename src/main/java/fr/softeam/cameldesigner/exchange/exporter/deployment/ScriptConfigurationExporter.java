@@ -76,35 +76,35 @@ public class ScriptConfigurationExporter<T extends ScriptConfiguration> extends 
     @objid ("9ed6b435-dc6e-492c-aec8-b334dded42eb")
     private void setConfigureCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getConfigureCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setConfigureCommand(content);
     }
 
     @objid ("fd750d55-166b-4401-b805-ac77556ef6de")
     private void setDownloadCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getDownloadCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setDownloadCommand(content);
     }
 
     @objid ("77886cd8-c609-437c-a8a6-fdabf47e0c6e")
     private void setStopCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getStopCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setStopCommand(content);
     }
 
     @objid ("04080cf6-7c7a-42bb-a485-68db27cc4f5f")
     private void setStartCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getStartCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setStartCommand(content);
     }
 
     @objid ("11726689-83b9-4c70-b14c-211fe55816be")
     private void setInstallCommand(camel.deployment.ScriptConfiguration config) {
         String content = this._element.getInstallCommandNote();
-        if (!(content.equals("")))
+        if (content != null)
             config.setInstallCommand(content);
     }
 

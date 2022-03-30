@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
@@ -55,13 +55,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("67058037-b681-4ff5-91f4-e5aa09469cd2")
 public class CamelModel extends ExpendableElement {
-    @objid ("67c6a430-4949-4ee1-90b4-6594f83f51fc")
+    @objid ("14d7b18d-6f38-4166-aaeb-b10ab6466231")
     public static final String STEREOTYPE_NAME = "CamelModel";
 
-    @objid ("bb31dfce-cce4-44c1-9746-0af4ddc0adbe")
+    @objid ("64362d47-2269-4bdd-9c90-476082561005")
     public static final String APPLICATIONNAME_TAGTYPE = "applicationName";
 
-    @objid ("8edc9f38-1aa1-4081-8ae4-a7c07793d60c")
+    @objid ("def5fe75-96e5-4cb0-8c3e-418364285a66")
     public static final String APPLICATIONVERSION_TAGTYPE = "applicationVersion";
 
     /**
@@ -72,7 +72,7 @@ public class CamelModel extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9c3b7a4c-d74c-4576-b536-6877f979204a")
+    @objid ("c3768d52-9113-4132-bfbe-b6dcfb161f2e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME));
     }
@@ -82,7 +82,7 @@ public class CamelModel extends ExpendableElement {
      * 
      * @return a {@link CamelModel} proxy on the created {@link Package}.
      */
-    @objid ("60553779-6625-4f98-8030-64439cc2869e")
+    @objid ("720ba4a2-e6c3-4ee2-90af-9c7018356737")
     public static CamelModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME);
@@ -96,7 +96,7 @@ public class CamelModel extends ExpendableElement {
      * @param obj a Package
      * @return a {@link CamelModel} proxy or <i>null</i>.
      */
-    @objid ("deec2da7-0a70-4b70-a581-0f6b2040baf0")
+    @objid ("7f7dd575-aa77-43c2-b204-97de1c3aeaa4")
     public static CamelModel instantiate(final Package obj) {
         return CamelModel.canInstantiate(obj) ? new CamelModel(obj) : null;
     }
@@ -109,7 +109,7 @@ public class CamelModel extends ExpendableElement {
      * @return a {@link CamelModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c6d94efa-3e4f-49ef-b484-f66eac7cfdf1")
+    @objid ("390a8f4f-f6d6-4cba-83c2-ad622c60216e")
     public static CamelModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (CamelModel.canInstantiate(obj))
         	return new CamelModel(obj);
@@ -123,7 +123,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("480486f6-0fcf-4d0f-9687-0ea5f598d2cb")
+    @objid ("75680257-f49b-40e4-a3a5-d9dc5da169ba")
     public void addDataModels(final DataModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -135,7 +135,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("cf1addf5-81fb-42b2-a1df-5366a771d320")
+    @objid ("25d202af-ceda-4fd6-8631-14e9cc245af0")
     public void addDeploymentModels(final DeploymentModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -147,7 +147,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("18758b91-7399-46dc-974b-5fd320c3f5c0")
+    @objid ("03a59c8a-50ff-4070-bc9d-889a2a86002d")
     public void addExecutionModels(final ExecutionModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -159,7 +159,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("9872bb61-69dc-4b9b-9024-bc8f319db88b")
+    @objid ("1348f864-909b-4831-80b8-5c67956d73fe")
     public void addLocationModels(final LocationModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -171,7 +171,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("352b3eab-d47b-45f7-848c-d835200f76e9")
+    @objid ("8dd76c99-5b6d-40e3-a209-868dd1f7799b")
     public void addMetaDataModels(final MetaDataModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -183,7 +183,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("4b320297-2b79-4ebb-9341-f26ed1f91f25")
+    @objid ("26af70f0-c038-4e28-acb9-e6d3d5d07a21")
     public void addMetricModels(final MetricModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -195,7 +195,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("fc321afe-9132-498a-ac9a-334b07cd528a")
+    @objid ("3e0ffa41-c688-4bc4-84bf-9ae58d65a203")
     public void addOrganisationModels(final OrganisationModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -207,7 +207,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("22e1b4c1-7300-4e58-9c43-c02a6d14a8ae")
+    @objid ("21685d2b-99d1-431f-b955-50a3743e37c0")
     public void addRequirementModels(final RequirementModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -219,7 +219,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("7eb903dc-fa5c-453b-9276-45448d556273")
+    @objid ("f785309f-faf1-48dd-a08d-a34f6eb7c1b9")
     public void addScalabilityModels(final ScalabilityModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -231,7 +231,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("47e40154-9bb5-433b-afaa-1ae9df150123")
+    @objid ("48cd9eb9-8fce-44ce-b4fa-2868cba020a3")
     public void addSecurityModels(final SecurityModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -243,7 +243,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("c5e85549-6c99-4aeb-a5dd-2b994b1d44fe")
+    @objid ("8da5825b-f24a-42d2-94fb-e82f150d0fe6")
     public void addTypeModels(final TypeModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -255,13 +255,13 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("69b74440-5a8f-4262-97a0-284ff2725bcc")
+    @objid ("538f5025-83ac-4bc6-a00a-66458e884c2b")
     public void addUnitModels(final UnitModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("586e37dc-4b2a-453e-8001-81d43f306d97")
+    @objid ("cee696f4-1d59-475e-8f4f-d0cd05ecca3d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -282,7 +282,7 @@ public class CamelModel extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c6275d78-2996-434c-a083-cfb064cfc243")
+    @objid ("a66bc531-7ea9-4526-8ebd-dfe61a8f7e44")
     public String getApplicationName() {
         return this.elt.getTagValue(CamelModel.MdaTypes.APPLICATIONNAME_TAGTYPE_ELT);
     }
@@ -292,7 +292,7 @@ public class CamelModel extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("63ccb282-a3e5-4d67-8780-d25dc91ec129")
+    @objid ("433106b2-cfbc-4523-8716-e37680ad910a")
     public String getApplicationVersion() {
         return this.elt.getTagValue(CamelModel.MdaTypes.APPLICATIONVERSION_TAGTYPE_ELT);
     }
@@ -303,7 +303,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("a25d5cd8-5c5c-4c28-a9b1-45028a3a9522")
+    @objid ("857bd649-ea3c-4cc2-9839-44061e1eae3a")
     public List<DataModel> getDataModels() {
         List<DataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -321,7 +321,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("301fa7f3-1cf9-413c-827b-4e3d5de761bb")
+    @objid ("c06fc22e-e291-4690-95a1-d51b87db5f76")
     public List<DeploymentModel> getDeploymentModels() {
         List<DeploymentModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -337,7 +337,7 @@ public class CamelModel extends ExpendableElement {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("1a172072-c493-4d15-88ef-c83701a8543a")
+    @objid ("34ce5182-aeaf-494a-9121-d82cdb014dbe")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -349,7 +349,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("037775c1-03cf-4c40-a737-3ef3a86f8456")
+    @objid ("d097a2df-9b07-4fe4-a515-65033433dc5a")
     public List<ExecutionModel> getExecutionModels() {
         List<ExecutionModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -365,7 +365,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("4519066a-117a-4ae3-b9f4-195e9adf7e6a")
+    @objid ("7f05f668-aeac-45fd-8a5d-7d233933cb6e")
     public List<LocationModel> getLocationModels() {
         List<LocationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -381,7 +381,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("4cd213f0-a1d6-4fbd-af26-48760dce8518")
+    @objid ("e7992f6b-6b6c-49db-9fab-540c9f93a080")
     public List<MetaDataModel> getMetaDataModels() {
         List<MetaDataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -397,7 +397,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("585a0861-834c-461f-a742-0125c0a758b0")
+    @objid ("61c07a98-f816-41af-a2e7-53429fa89a59")
     public List<MetricModel> getMetricModels() {
         List<MetricModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -415,7 +415,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("5677328e-db7a-49f3-ac5d-8155c1503653")
+    @objid ("01e604e2-9715-464c-a029-a1b7e6d39008")
     public List<OrganisationModel> getOrganisationModels() {
         List<OrganisationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -431,7 +431,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("4f4b4633-8cb1-4104-a911-2b552676ab28")
+    @objid ("28b002a4-9bf5-489d-b467-096905f15bc4")
     public List<RequirementModel> getRequirementModels() {
         List<RequirementModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -447,7 +447,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("ddeb2910-ebef-4db9-aae3-b559567598de")
+    @objid ("c7aabbdc-fb0a-45c6-b233-26b6b25b5ac0")
     public List<ScalabilityModel> getScalabilityModels() {
         List<ScalabilityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -463,7 +463,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("004482b8-a3b3-4689-bb36-833303ba7173")
+    @objid ("aad68742-8e35-4ed4-9465-a827e049f339")
     public List<SecurityModel> getSecurityModels() {
         List<SecurityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -479,7 +479,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("be6571ca-e1e4-4b51-92fd-a56775697c70")
+    @objid ("fcac2270-a4ef-4b72-a217-66042caf15dd")
     public List<TypeModel> getTypeModels() {
         List<TypeModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -495,7 +495,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("95d5be95-af09-47e6-b983-32926b89efbd")
+    @objid ("8b995917-9d1d-408b-a31b-c715d4f58cae")
     public List<UnitModel> getUnitModels() {
         List<UnitModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -505,7 +505,7 @@ public class CamelModel extends ExpendableElement {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("a7851144-19cb-45ca-9d37-f7a7bb265ed0")
+    @objid ("d7084627-4145-4187-8c0d-54e7dda74578")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -517,7 +517,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("7aa6e347-bb31-465d-a99a-d12fdbb16a30")
+    @objid ("2e32765a-a640-4a97-a998-46a0cfbdbd42")
     public boolean removeDataModels(final DataModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -528,7 +528,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("134daf74-f8e2-4ed3-8c95-07ca367e8a75")
+    @objid ("81644925-2d41-45cc-a88e-836690884c73")
     public boolean removeDeploymentModels(final DeploymentModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -539,7 +539,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("41823a3c-b814-4b2a-affb-abe62341e275")
+    @objid ("5d563717-8ff7-4eaf-a3a2-9ae34fce4150")
     public boolean removeExecutionModels(final ExecutionModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -550,7 +550,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("2b0b6c69-ba92-4415-9859-53f1d9c5b7ae")
+    @objid ("968614df-8985-42f1-92ce-83e29e5055ca")
     public boolean removeLocationModels(final LocationModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -561,7 +561,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("5575a7af-db02-4eff-a042-77066a1e03b2")
+    @objid ("71fe6b49-838c-4b2e-96bf-fd874e710da9")
     public boolean removeMetaDataModels(final MetaDataModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -572,7 +572,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("094df909-8637-4771-9a8d-e49fdb9c1cc2")
+    @objid ("e2729abc-e881-4fdb-af15-b3d92486b3d3")
     public boolean removeMetricModels(final MetricModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -583,7 +583,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("b9cf7d3b-06e3-4b3e-b1d1-0f8436c98df1")
+    @objid ("227a299c-3c8e-4031-bd3c-4a23bfd75e82")
     public boolean removeOrganisationModels(final OrganisationModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -594,7 +594,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("5ed2a07b-456e-433f-bc81-515d8ff79983")
+    @objid ("678116f0-b97a-4d99-8e65-f5debf8d0e1f")
     public boolean removeRequirementModels(final RequirementModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -605,7 +605,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("a54ad59c-5c05-49b5-914c-9a219fee06b0")
+    @objid ("811dd16a-527e-4226-9ee8-bb04cde8c64d")
     public boolean removeScalabilityModels(final ScalabilityModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -616,7 +616,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("74fe2530-88fd-44d7-b60d-862af0ebc1a0")
+    @objid ("13ee4049-282f-4f50-8400-e929230f2aa0")
     public boolean removeSecurityModels(final SecurityModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -627,7 +627,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("dadd73e6-689d-4220-bc7b-254dfde6150c")
+    @objid ("09a13414-4833-4d38-9b51-b5acbe8abdf3")
     public boolean removeTypeModels(final TypeModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -638,7 +638,7 @@ public class CamelModel extends ExpendableElement {
      * null
      * 
      */
-    @objid ("5627a650-1932-4289-8ab4-af7b4768c948")
+    @objid ("812ddcc5-6d32-4500-8121-6c6e67c21039")
     public boolean removeUnitModels(final UnitModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -648,7 +648,7 @@ public class CamelModel extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9ee0be41-3de5-4a91-87f4-0c39aa92c7e8")
+    @objid ("54986c02-41ae-4c8b-b723-a2dfa20f9c51")
     public void setApplicationName(final String value) {
         this.elt.putTagValue(CamelModel.MdaTypes.APPLICATIONNAME_TAGTYPE_ELT, value);
     }
@@ -658,7 +658,7 @@ public class CamelModel extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("72741cdd-4965-4b12-8683-50709abffce3")
+    @objid ("5a053cfe-d391-4312-8d56-9f65cb7a63ac")
     public void setApplicationVersion(final String value) {
         this.elt.putTagValue(CamelModel.MdaTypes.APPLICATIONVERSION_TAGTYPE_ELT, value);
     }
@@ -682,29 +682,29 @@ public class CamelModel extends ExpendableElement {
         return result;
     }
 
-    @objid ("a15c51da-1b57-4a6e-9e6e-a543519b61b8")
+    @objid ("d886779c-9832-439f-a103-e5952a1ff89a")
     protected CamelModel(final Package elt) {
         super(elt);
     }
 
     @objid ("18704a21-5db9-4f8d-9058-4c21969dcd9d")
     public static final class MdaTypes {
-        @objid ("44f27825-781a-48fa-bfb1-18972be97c52")
+        @objid ("33c7cef3-6833-4e1c-8077-be82e71208be")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4f2334b0-c5ae-4b35-9d77-1eead460b95d")
+        @objid ("fc99e244-192e-4a43-9f90-098ee36a1873")
         public static TagType APPLICATIONNAME_TAGTYPE_ELT;
 
-        @objid ("0ff518b4-b454-4bbd-b53d-563adc82c9c9")
+        @objid ("22f36092-6189-4810-b29e-b6fa10ae6db2")
         public static TagType APPLICATIONVERSION_TAGTYPE_ELT;
 
-        @objid ("13db1545-3eee-47cb-8d75-287a9e37ebbf")
+        @objid ("d4ab9bad-24db-4a47-ae1d-2889bbd7e834")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fd404403-ce5c-4658-b33e-7777025c9ab3")
+        @objid ("6f065378-b271-47f8-8a70-0c36008fad3e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6f3cb1b5-e3ca-44b9-a591-269cd45dd9c3")
+        @objid ("fb2fec34-a284-4d79-a9d3-fa9a7089623a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e33cb0ef-7003-4579-8739-638c171ab891");
             APPLICATIONNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1e31728e-d8b4-4498-9d67-219b020ee5ff");

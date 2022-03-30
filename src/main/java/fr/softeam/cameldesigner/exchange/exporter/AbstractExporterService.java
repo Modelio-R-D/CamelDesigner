@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter;
 
 import java.util.Map;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import camel.core.Application;
 import camel.core.CamelModel;
 import camel.core.CoreFactory;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.walker.IWalker;
 import fr.softeam.cameldesigner.exchange.walker.umlwalker.UmlWalker;
@@ -28,11 +28,11 @@ public abstract class AbstractExporterService {
     @objid ("86a9eda7-eff9-4f95-a189-c5b5ec63be29")
     public void exportCamelUMLModelToFile(fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel camelUMLModel, String filePath) {
         CamelModel camelModel = generateCamelModelRoot(camelUMLModel);
-        
+
         GenerateMap genMap = GenerateMap.getInstance();
         genMap.clear();
-        genMap.put(camelUMLModel, camelModel);
-        
+        genMap.put(camelUMLModel.getElement(), camelModel);
+
         GenerateProcess generateProcess = new GenerateProcess(null);
         try {
             IWalker<CamelElement> umlWalker = new UmlWalker(generateProcess);
@@ -40,7 +40,7 @@ public abstract class AbstractExporterService {
         }catch(Exception e) {
             CamelDesignerModule.logService.error(e);
         }
-        
+
         this.exportCamel(camelModel, filePath);
     }
 
@@ -51,7 +51,7 @@ public abstract class AbstractExporterService {
     private CamelModel generateCamelModelRoot(fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel rootProxy) {
         CamelModel camelModel = CoreFactory.eINSTANCE.createCamelModel();
         camelModel.setName(rootProxy.getElement().getName());
-        
+
         Application application = CoreFactory.eINSTANCE.createApplication();
         application.setName(rootProxy.getApplicationName());
         application.setVersion(rootProxy.getApplicationVersion());

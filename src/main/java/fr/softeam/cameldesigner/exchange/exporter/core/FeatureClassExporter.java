@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
+import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import org.eclipse.emf.cdo.CDOObject;
@@ -14,7 +15,7 @@ public class FeatureClassExporter<T extends FeatureClass> extends FeatureClassif
     @objid ("62c1a4a2-995d-47fa-bf2c-efa1e0a876d1")
     @Override
     public CDOObject createCamelElt(CDOObject context) {
-        return super.createCamelElt(context);
+        return CoreFactory.eINSTANCE.createFeature();
     }
 
     @objid ("30f4e645-6587-40b0-95fa-2a10a50594df")

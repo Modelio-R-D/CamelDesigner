@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.instance;
 
@@ -37,16 +37,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a76b8220-83aa-410e-a6dc-9369e64f59e2")
 public class ActionInstance extends FeatureInstance {
-    @objid ("2bcfcfe4-d482-4bc6-9072-f53603bb8dad")
+    @objid ("6afcca07-db18-47b7-8b67-f85d8f653f3c")
     public static final String STEREOTYPE_NAME = "ActionInstance";
 
-    @objid ("075e25e7-3b2e-4a8a-8091-3265bb42532a")
+    @objid ("d4d48904-65d0-4a2f-861f-7bfe5e1616f8")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("cf61003b-cf1f-4ab1-b0ea-d79e1b0285f2")
+    @objid ("d15f2287-4930-48e9-82df-7a772adf5f83")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
-    @objid ("161dddf3-d106-458f-8743-01b4c94658a8")
+    @objid ("3ba11925-b0aa-48c3-b2de-e6165b5a9e4d")
     public static final String SUCCESSFUL_TAGTYPE = "successful";
 
     /**
@@ -57,7 +57,7 @@ public class ActionInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ce4ae541-01f3-432a-a9b5-a5bf1a6c5ef0")
+    @objid ("08e0a330-1ba1-4a47-b43c-669213558d1a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ActionInstance.STEREOTYPE_NAME));
     }
@@ -67,7 +67,7 @@ public class ActionInstance extends FeatureInstance {
      * 
      * @return a {@link ActionInstance} proxy on the created {@link Instance}.
      */
-    @objid ("a8c49b0f-fad6-4511-96ed-730ab7d25465")
+    @objid ("58a004b4-1e1e-4db7-81bc-f1cf2642662c")
     public static ActionInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ActionInstance.STEREOTYPE_NAME);
@@ -81,7 +81,7 @@ public class ActionInstance extends FeatureInstance {
      * @param obj a Instance
      * @return a {@link ActionInstance} proxy or <i>null</i>.
      */
-    @objid ("d2409c96-7bce-427c-ab70-b040e174cbaf")
+    @objid ("57c25e65-9eb0-46a3-93db-6aeab4314131")
     public static ActionInstance instantiate(final Instance obj) {
         return ActionInstance.canInstantiate(obj) ? new ActionInstance(obj) : null;
     }
@@ -94,7 +94,7 @@ public class ActionInstance extends FeatureInstance {
      * @return a {@link ActionInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2e1057d5-f3b9-4991-8c31-82b0dfbd1b3b")
+    @objid ("63a3ab4a-d270-4f36-b42a-902300f177b7")
     public static ActionInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (ActionInstance.canInstantiate(obj))
         	return new ActionInstance(obj);
@@ -102,7 +102,7 @@ public class ActionInstance extends FeatureInstance {
         	throw new IllegalArgumentException("ActionInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("d79d70d2-6cb1-4ddb-ac27-aed2f1241e82")
+    @objid ("2c6d786a-a8b5-410f-a738-13d2a1dbbbea")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -122,7 +122,7 @@ public class ActionInstance extends FeatureInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("a294ab36-d274-4d3a-a295-6a869eade1c9")
+    @objid ("41769632-08e1-4a65-9e08-e182b8a9cdf9")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -133,7 +133,7 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ecb88bcb-defd-4042-a232-ce35a79133e5")
+    @objid ("836828cf-6d24-4ad3-9414-227f3aba7691")
     public String getEndTime() {
         return this.elt.getTagValue(ActionInstance.MdaTypes.ENDTIME_TAGTYPE_ELT);
     }
@@ -143,12 +143,12 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5142e909-396c-4665-a888-ec2375ababd9")
+    @objid ("731fd907-de58-4af4-8aba-61be7cc2cef6")
     public String getStartTime() {
         return this.elt.getTagValue(ActionInstance.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
 
-    @objid ("c4d0ee64-fbd7-4171-a348-40c6a1df84fd")
+    @objid ("a69e7302-e85a-4f0a-8e90-89e5c1b1aa9a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -159,7 +159,7 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("32c4e8da-f5b0-4390-b88d-ac8748a1ff79")
+    @objid ("68ecec23-871d-41c4-8bbc-5d9087dfd92f")
     public boolean isSuccessful() {
         return this.elt.isTagged(ActionInstance.MdaTypes.SUCCESSFUL_TAGTYPE_ELT);
     }
@@ -169,7 +169,7 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e4c87bce-d05d-44d6-99a2-e7c56f0fd60c")
+    @objid ("80e64473-ec5f-469b-ab95-5fa98158aeb4")
     public void setEndTime(final String value) {
         this.elt.putTagValue(ActionInstance.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
     }
@@ -179,7 +179,7 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b0b50eea-c6a7-46a0-853d-4166bf885d51")
+    @objid ("23b2767d-e1d0-41d1-855c-3fb1f9ac28fb")
     public void setStartTime(final String value) {
         this.elt.putTagValue(ActionInstance.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -189,7 +189,7 @@ public class ActionInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6eacb27e-6749-48f3-be63-40220d66cbaa")
+    @objid ("9deb118c-7d3d-4c19-b549-7b86a1246469")
     public void setSuccessful(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(ActionInstance.MdaTypes.SUCCESSFUL_TAGTYPE_ELT, this.elt);
@@ -215,32 +215,32 @@ public class ActionInstance extends FeatureInstance {
         getElement().setBase(value.getElement());
     }
 
-    @objid ("851ee4cb-008f-4a42-bb1b-da396ca403ba")
+    @objid ("6193cd8b-8ae4-42b4-8aae-737c144cd6e2")
     protected ActionInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("e6124144-40b2-4d8e-9200-f628fda5f4f2")
     public static final class MdaTypes {
-        @objid ("10a859bc-d148-47ea-b677-8f869ed33d75")
+        @objid ("8b8086b6-c285-4abb-a5e9-60d84dd4734d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ba3a3114-e2b4-4fa8-86cf-a24bcbee49b3")
+        @objid ("dd7f67b4-3fff-4336-85ec-724da0704e4a")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("fc512911-8214-4bdd-a6e5-099465b8750e")
+        @objid ("d57696ab-22ba-47f2-998c-9c0b7be3ce9c")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("e303c087-146b-41b4-9553-f59a98b0e5fb")
+        @objid ("8d92a571-9b03-489a-af3f-df735c67487f")
         public static TagType SUCCESSFUL_TAGTYPE_ELT;
 
-        @objid ("4ce6abfc-dfa5-4c8d-b6a7-0672a57a054a")
+        @objid ("063fac1a-e4f5-40d7-9a3c-4436e2b3866b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("43fd2e30-ec23-4109-a70b-d78e55ca64ae")
+        @objid ("f1cb0f9f-cf2c-4c6e-931a-35a475344b71")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("91ccb1ea-635c-49b7-8099-51b8d634c7d3")
+        @objid ("91473167-433f-4537-8eb0-4cb0ba509287")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fe6343f1-1474-4d9e-a80f-e88b019c9e46");
             STARTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "b0fbf0b8-55e7-49bd-8638-48285c121023");

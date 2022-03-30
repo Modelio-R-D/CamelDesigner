@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("3bde63ac-785b-4593-8950-0fc92c6f6722")
 public class LocationModelDiagram extends AbstractCamelDiagram {
-    @objid ("6860fe2f-9fe0-440b-bd31-a8ba3a7f941e")
+    @objid ("3e054efd-8fea-47f7-8ce7-ce31467de1fe")
     public static final String STEREOTYPE_NAME = "LocationModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("381db1d3-a4a6-4fce-9558-9fb374738c87")
+    @objid ("1dc24310-4459-4874-8da7-313dbfececca")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LocationModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link LocationModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("54e55f64-4873-496f-8b6c-0d1f8b3b1c9c")
+    @objid ("a65155b1-22e3-460b-8c36-739ddfda3741")
     public static LocationModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, LocationModelDiagram.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
      * @param obj a ClassDiagram
      * @return a {@link LocationModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("9e61af4a-01a8-4e4a-b5bd-f2211eee974a")
+    @objid ("cab12925-b9a5-4abe-8d41-32a6f8004a66")
     public static LocationModelDiagram instantiate(final ClassDiagram obj) {
         return LocationModelDiagram.canInstantiate(obj) ? new LocationModelDiagram(obj) : null;
     }
@@ -84,7 +84,7 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
      * @return a {@link LocationModelDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("65f2d9c7-a3ca-40b4-8af3-a1a92a51a639")
+    @objid ("b9c0f1f8-9dd2-45a6-aa08-7b88e122c7dc")
     public static LocationModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (LocationModelDiagram.canInstantiate(obj))
         	return new LocationModelDiagram(obj);
@@ -92,7 +92,7 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
         	throw new IllegalArgumentException("LocationModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("369919c5-583f-4bad-9c8f-451dc080576d")
+    @objid ("0e07ce04-524d-427c-9c19-69630f26e30c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
      * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("facdd9df-cafd-413b-b6ae-143e8270d4dd")
+    @objid ("c08523d1-47dc-4308-b929-586e5f569cb9")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("946cece8-9453-464b-9f3d-b7631e433b66")
+    @objid ("33935eb5-ab35-45b8-b4d4-5814235fc8d9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class LocationModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("c2404f60-b12a-4a6a-9b55-f36a930c62ee")
+    @objid ("66b73ce9-3bb3-446e-a56d-3f332212bbe4")
     protected LocationModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("d138d97f-c7b6-4d2d-8920-f01b2cc9522e")
     public static final class MdaTypes {
-        @objid ("1f1cd748-3bf6-4708-b66a-66f4a95c4f08")
+        @objid ("9031a3e6-cffa-4bf8-aa29-39d4f14ad144")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("74789d97-e999-4ef5-ab6d-60f7019f17de")
+        @objid ("254b12d4-0b41-410c-844f-0f178173a8d1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("cad152d6-5f34-4a88-ae93-d93d29d7d405")
+        @objid ("09523091-755a-4ab2-b53f-70d9cf0dc407")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0307909d-7a66-4984-a1db-d216017eeaae")
+        @objid ("ca3cc42e-4fce-4266-a21f-07e0015a92f6")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8417972e-6235-45f0-b45e-8f6202da12d9");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

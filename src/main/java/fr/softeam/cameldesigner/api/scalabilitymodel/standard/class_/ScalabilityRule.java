@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -44,7 +44,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8af1d7c2-a602-48ad-a7fe-b5775f92342e")
 public class ScalabilityRule extends FeatureClass {
-    @objid ("93a76155-1e8f-4618-8f6f-617f67610e3e")
+    @objid ("11351f21-f604-43a1-af56-a73d793c556d")
     public static final String STEREOTYPE_NAME = "ScalabilityRule";
 
     /**
@@ -55,7 +55,7 @@ public class ScalabilityRule extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("12f3063b-bb91-40ec-b1bd-26d44fee62b5")
+    @objid ("ab9b03a2-f731-4562-a37f-119b103224c0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityRule.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public class ScalabilityRule extends FeatureClass {
      * 
      * @return a {@link ScalabilityRule} proxy on the created {@link Class}.
      */
-    @objid ("e399fc34-e919-4046-9300-23ea51c831df")
+    @objid ("8cb91fef-d17a-4bae-91f4-65a3eb75c5c3")
     public static ScalabilityRule create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityRule.STEREOTYPE_NAME);
@@ -79,7 +79,7 @@ public class ScalabilityRule extends FeatureClass {
      * @param obj a Class
      * @return a {@link ScalabilityRule} proxy or <i>null</i>.
      */
-    @objid ("77a58ffd-9503-49f7-b910-a07b323b0c15")
+    @objid ("b3ae4449-7bd1-499f-8c0d-ca01d4c6075a")
     public static ScalabilityRule instantiate(final Class obj) {
         return ScalabilityRule.canInstantiate(obj) ? new ScalabilityRule(obj) : null;
     }
@@ -92,7 +92,7 @@ public class ScalabilityRule extends FeatureClass {
      * @return a {@link ScalabilityRule} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("736c50e5-1278-4024-bf20-647d831431ab")
+    @objid ("a1f7bfd1-9d00-43ca-a908-8dd37fabefdc")
     public static ScalabilityRule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ScalabilityRule.canInstantiate(obj))
         	return new ScalabilityRule(obj);
@@ -106,7 +106,7 @@ public class ScalabilityRule extends FeatureClass {
      * null
      * 
      */
-    @objid ("436d24f8-1286-4a25-893c-8a6d8f39d53b")
+    @objid ("f50da7d4-b2cd-41b1-aef1-3c26d0f71804")
     public void addActions(final Action obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -116,7 +116,7 @@ public class ScalabilityRule extends FeatureClass {
         }
     }
 
-    @objid ("0bdf782d-10b9-44d7-a6b4-e1d4c66efe95")
+    @objid ("40526554-8a0d-48f6-a3fb-ac8208e2b0f1")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -138,7 +138,7 @@ public class ScalabilityRule extends FeatureClass {
      * null
      * 
      */
-    @objid ("69eaed31-8528-40bb-8fa2-7a774b28f9ab")
+    @objid ("022c997c-40f3-4bbb-8def-55f455e174d3")
     public List<Action> getActions() {
         List<Action> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -157,7 +157,7 @@ public class ScalabilityRule extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("a5fa6352-f7b2-4b5b-a2aa-ffcab30fd233")
+    @objid ("74178675-c20a-493a-9d9b-e4cdc1193ad8")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -169,7 +169,7 @@ public class ScalabilityRule extends FeatureClass {
      * null
      * 
      */
-    @objid ("2c9e7361-53eb-42e7-9a17-a6808fd638a3")
+    @objid ("33c3e546-960b-4aa8-8354-f32af29e7f59")
     public Event getEvent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ScalabilityRule.MdaTypes.MDAASSOCDEP)
@@ -187,7 +187,7 @@ public class ScalabilityRule extends FeatureClass {
         return null;
     }
 
-    @objid ("0ef72502-07cf-41da-a819-b2924945d3ff")
+    @objid ("55b627b7-a462-424f-8c99-bc6f5fd7d18a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -199,7 +199,7 @@ public class ScalabilityRule extends FeatureClass {
      * null
      * 
      */
-    @objid ("15ead2b4-9cf4-4ba4-8c5c-e69aba70cfb7")
+    @objid ("f2daecfb-c870-430d-9467-ea0112733aba")
     public boolean removeActions(final Action obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -219,7 +219,7 @@ public class ScalabilityRule extends FeatureClass {
      * null
      * 
      */
-    @objid ("4947d072-2c1c-49a8-a62f-01ae3da46224")
+    @objid ("3856b644-f508-4587-aba3-7e9d81c59b37")
     public void setEvent(final Event obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -247,23 +247,23 @@ public class ScalabilityRule extends FeatureClass {
         return result;
     }
 
-    @objid ("ab5a32f1-1234-4a4d-8f8f-a199de2478d0")
+    @objid ("44729bc5-f20a-4858-918b-17b026ec7dcb")
     protected ScalabilityRule(final Class elt) {
         super(elt);
     }
 
     @objid ("d6312fb9-a345-484c-b4fc-57f81b6fe120")
     public static final class MdaTypes {
-        @objid ("ce089555-2ef4-4650-b855-10e8b85efa03")
+        @objid ("199a9c99-3bcb-469d-9e1d-f8ad3bcb3375")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7cce4bcd-1d06-4395-8af4-a539ae6d0b7d")
+        @objid ("e20dfde9-f718-4eee-9196-726bcba471b3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c347be82-9030-489c-a5f8-125ee2db73e4")
+        @objid ("728e4838-5fcd-49b5-9545-3b37b56522ac")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e8605086-016c-4fe0-b884-f66ef1617461")
+        @objid ("4b192206-282c-4b77-88f6-1c6dcfbad94d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "cf2a4cc5-0c2d-4f57-9f3e-35cf455ef4cb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

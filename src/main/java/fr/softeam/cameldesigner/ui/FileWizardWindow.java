@@ -51,14 +51,14 @@ public abstract class FileWizardWindow extends Dialog {
     @objid ("8d1e979e-24d4-49ff-95a8-de9c8903d9aa")
     protected ModelElement selectedElt = null;
 
-    @objid ("0bc5f5e8-7318-4d73-84e5-264c8a1bbe42")
-    protected Shell shell = null;
-
     @objid ("25fb404d-c7d3-4e77-8867-e01accbea399")
     protected NameComposite nameComposite = null;
 
     @objid ("799750ed-529c-4efd-810b-5a63ca556d65")
     private ValidationBoutonComposite validateComposite = null;
+
+    @objid ("bee9141c-397a-4394-a7c7-71d3f92551d9")
+    protected Shell shell = null;
 
     @objid ("7707c8da-18a8-4126-b967-09f5b394dff8")
     public Object open() {

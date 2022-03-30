@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,19 +33,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2a6827af-e370-4823-ae3a-3c11ff9acb3c")
 public class Limit {
-    @objid ("17f746ce-0cd7-4209-a818-b23b483535c3")
+    @objid ("db7cd499-d2af-4f9d-adc9-9af631dec740")
     public static final String STEREOTYPE_NAME = "Limit";
 
-    @objid ("6f0a25e0-a12d-4431-a45a-d328281d3251")
+    @objid ("9b8be761-07a3-4333-a3c6-f1ce532d4306")
     public static final String INCLUDED_TAGTYPE = "included";
 
-    @objid ("72d5d709-3354-4960-9eba-fade34c80b3e")
+    @objid ("c0fed60d-cd96-4c26-93e0-2e3639859462")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("4c3f3345-111d-4d06-8bd0-741d528e9d88")
+    @objid ("25994c6b-8302-4a8b-b3a7-acc975dc8670")
     protected final Class elt;
 
     /**
@@ -56,7 +56,7 @@ public class Limit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2fcc2ba9-630e-4ae8-a264-1a2c40b433fa")
+    @objid ("1bb605e7-7b2c-49d2-8e18-6394fa5ec037")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Limit.STEREOTYPE_NAME));
     }
@@ -66,7 +66,7 @@ public class Limit {
      * 
      * @return a {@link Limit} proxy on the created {@link Class}.
      */
-    @objid ("0ee1a60b-7137-4f05-b5fe-fbad0593d630")
+    @objid ("f9d1895b-b260-4065-819f-80a2b181c475")
     public static Limit create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Limit.STEREOTYPE_NAME);
@@ -80,7 +80,7 @@ public class Limit {
      * @param obj a Class
      * @return a {@link Limit} proxy or <i>null</i>.
      */
-    @objid ("cc8f4cea-d638-47c7-bbb4-9813f2a803ce")
+    @objid ("1f062419-150a-419b-9812-91db2a0fb1b7")
     public static Limit instantiate(final Class obj) {
         return Limit.canInstantiate(obj) ? new Limit(obj) : null;
     }
@@ -93,7 +93,7 @@ public class Limit {
      * @return a {@link Limit} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("757c30e3-6dc8-4fa7-ab0c-fba966374803")
+    @objid ("f1a04a8e-8c29-4840-93a1-53caddc42c38")
     public static Limit safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Limit.canInstantiate(obj))
         	return new Limit(obj);
@@ -101,7 +101,7 @@ public class Limit {
         	throw new IllegalArgumentException("Limit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3bdc04c7-0236-4bc7-a9f0-005ec409b3e0")
+    @objid ("8eba2c5f-4c83-42ed-bdfd-b6f5ca4a677f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,7 +121,7 @@ public class Limit {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d005df5f-be67-445b-b598-642c9af50e17")
+    @objid ("9124c21c-74e3-4ff3-b78d-a8ed3d361b0b")
     public Class getElement() {
         return this.elt;
     }
@@ -131,12 +131,12 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("949040a4-e41d-49ef-9bdd-b7e690ffbd07")
+    @objid ("75196a0c-b384-4f6d-8bee-20d8c72e4695")
     public String getValue() {
         return this.elt.getTagValue(Limit.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("6d369a5e-0529-4706-a3f5-f43d57932e19")
+    @objid ("75b1356e-35f3-45ca-8947-9a4180efefdc")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -147,7 +147,7 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8df6069f-de3e-4ab8-b1dd-83191deabf3e")
+    @objid ("197586bd-39d4-4224-96b9-bc297022ecac")
     public boolean isIncluded() {
         return this.elt.isTagged(Limit.MdaTypes.INCLUDED_TAGTYPE_ELT);
     }
@@ -157,7 +157,7 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e3355671-8aca-4eb6-85ee-c0f845ddce18")
+    @objid ("6cec7078-dc55-43aa-a934-86cfcd45e572")
     public void setIncluded(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(Limit.MdaTypes.INCLUDED_TAGTYPE_ELT, this.elt);
@@ -170,34 +170,34 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3796b695-9487-49fe-b4c3-bba04d1992b7")
+    @objid ("db4a9526-f3ed-4b5e-b644-894791a47336")
     public void setValue(final String value) {
         this.elt.putTagValue(Limit.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("ae4d3839-192c-4794-a133-3915cdc44d42")
+    @objid ("c2ecf314-0818-42ae-a314-6827b6297e19")
     protected Limit(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("c9d6905c-c70f-42d9-b241-d1855860ebde")
     public static final class MdaTypes {
-        @objid ("b696204e-3324-403f-9de9-9903cb795608")
+        @objid ("bf172968-eb1e-43b8-b6fc-1743a1d0cec1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2e135688-8424-44a8-bc6e-c45840c9403b")
+        @objid ("73122e28-f952-4125-8363-7dcc040d6ad6")
         public static TagType INCLUDED_TAGTYPE_ELT;
 
-        @objid ("ef42c627-3cea-485d-b4eb-63e1531f50af")
+        @objid ("330eae1a-8bf9-4bf1-9ff0-ebd604f6a638")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("b02ba055-a57a-43f8-9a91-601e5f860057")
+        @objid ("3590dbe2-d45e-4431-8c0a-3e432a536c89")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("171d539b-59aa-45b6-b902-16f7bac0f527")
+        @objid ("34a97f96-9706-47ea-bb99-cfea2393c68c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6213e225-f66f-431d-9a1d-2e788ec38e71")
+        @objid ("2d9adca1-477e-4b01-8cd3-fbf1ff5fe60f")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "bf1d744a-e1f0-4ace-be02-64e9edfbbba2");
             INCLUDED_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "74608d88-801b-4173-8a41-35e922bd8144");

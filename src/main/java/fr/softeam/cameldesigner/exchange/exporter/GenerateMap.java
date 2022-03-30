@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("4f8da10e-3712-4da0-a73c-880faa47c543")
 public class GenerateMap {
@@ -14,7 +14,7 @@ public class GenerateMap {
     private static GenerateMap theSingleInstance;
 
     @objid ("c4d83587-c063-4740-88ed-95c8ba412020")
-    private Map<CamelElement, CDOObject> modelMap;
+    private Map<ModelElement, CDOObject> modelMap;
 
     @objid ("1e184643-e1bf-49da-93e9-a2eabc3e62a8")
     public void clear() {
@@ -22,7 +22,7 @@ public class GenerateMap {
     }
 
     @objid ("ed50b597-6219-4141-94c0-7ef1c5364475")
-    public boolean containsKey(CamelElement key) {
+    public boolean containsKey(ModelElement key) {
         return  this.modelMap.containsKey(key);
     }
 
@@ -32,7 +32,7 @@ public class GenerateMap {
     }
 
     @objid ("87e72af7-a2b7-444e-be69-05e9b8d6a989")
-    public CDOObject get(CamelElement key) {
+    public CDOObject get(ModelElement key) {
         return  this.modelMap.get(key);
     }
 
@@ -49,17 +49,17 @@ public class GenerateMap {
     }
 
     @objid ("60371c93-8208-4ccb-95cb-cd9d0ef989e7")
-    public Set<CamelElement> keySet() {
+    public Set<ModelElement> keySet() {
         return  this.modelMap.keySet();
     }
 
     @objid ("9166db97-32c9-4c29-88c6-b66d9127bd2e")
-    public CDOObject put(CamelElement key, CDOObject value) {
+    public CDOObject put(ModelElement key, CDOObject value) {
         return  this.modelMap.put(key, value);
     }
 
     @objid ("cb201db1-94a4-45b2-b1d0-aedebf73d205")
-    public CDOObject remove(CamelElement key) {
+    public CDOObject remove(ModelElement key) {
         return  this.modelMap.remove(key);
     }
 

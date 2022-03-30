@@ -47,14 +47,14 @@ public abstract class AbstractSwtWizardWindow extends Dialog {
     @objid ("fcfab3ad-baff-44c7-ade6-c76350915cbc")
     protected org.modelio.metamodel.uml.statik.Package selectedElt = null;
 
-    @objid ("6daa6141-c8ab-4306-8921-7e48bda12d97")
-    protected Shell shell = null;
-
     @objid ("f29d190d-c138-44c4-964d-0fc69751553f")
     protected FileChooserComposite fileChooserComposite = null;
 
     @objid ("a9dac488-63d5-42ee-a321-370944a3aaca")
     protected ValidationBoutonComposite validateComposite = null;
+
+    @objid ("afb19478-4b1f-43c7-8531-9ab5cf04d138")
+    protected Shell shell = null;
 
     @objid ("5c0ebf98-0dcf-4d0a-9d57-124d9ca2b2af")
     protected Object open() {

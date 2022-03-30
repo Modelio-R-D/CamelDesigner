@@ -24,7 +24,6 @@
  * @package    com.modeliosoft.modelio.sysml.utils
  * @author     Modelio
  * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @version    2.0.08
  **/
 package fr.softeam.cameldesigner.utils;
 
@@ -33,9 +32,9 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Featur
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.statik.Classifier;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * This class handles the creation of abstract Camel elements
@@ -51,7 +50,7 @@ public class CamelFactory {
      * @return the created Feature
      */
     @objid ("7215894b-25c0-48d8-b350-6c380c7fe993")
-    public static Feature createCamelFeature(MObject owner) {
+    public static Feature createCamelFeature(ModelElement owner) {
         try {
         
             Feature feature = null;
@@ -75,7 +74,7 @@ public class CamelFactory {
      * @return the created Feature
      */
     @objid ("2aa292c8-98cc-41ef-b818-d2686b2928a0")
-    public static AttributeAttribute createCamelAttribute(MObject owner) {
+    public static AttributeAttribute createCamelAttribute(ModelElement owner) {
         try {
         
             AttributeAttribute attribute = null;

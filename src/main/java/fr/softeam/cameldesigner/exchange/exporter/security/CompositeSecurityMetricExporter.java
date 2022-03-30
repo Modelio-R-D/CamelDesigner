@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.CompositeSecurityMetric;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("32caaad5-d3be-41f0-bd3b-a5a2c03ab48b")
 public class CompositeSecurityMetricExporter<T extends CompositeSecurityMetric> extends FeatureExporter<T> {

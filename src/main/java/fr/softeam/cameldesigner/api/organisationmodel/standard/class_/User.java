@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -46,25 +46,25 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("27994015-90c9-40c1-8a60-3c9bc12fff11")
 public class User extends Entity {
-    @objid ("af6d4e82-b3df-4c37-9e4a-83448b415601")
+    @objid ("c059fe6f-17cb-4625-a750-24667b12edd6")
     public static final String STEREOTYPE_NAME = "User";
 
-    @objid ("3eb58746-3880-458b-b392-29798a792e90")
+    @objid ("8791c086-7d4c-4760-a68c-85fc78d26def")
     public static final String EMAIL_TAGTYPE = "email";
 
-    @objid ("753ff02e-52cb-4cef-bfec-16ba95cadf27")
+    @objid ("052a04ae-2187-41e9-9793-5a62fa0808aa")
     public static final String FIRSTNAME_TAGTYPE = "firstName";
 
-    @objid ("a50600c5-1260-4422-a980-c2b32d6bf94e")
+    @objid ("bd857088-477f-4072-8848-2287c8db43b7")
     public static final String LASTNAME_TAGTYPE = "lastName";
 
-    @objid ("f35b3b9c-25e2-4cf1-88a0-d200a15270e2")
+    @objid ("9c098791-b62e-4380-a8dc-eee5a0dfb62c")
     public static final String PLATFORMCREDENTIALNAME_TAGTYPE = "platformCredentialName";
 
-    @objid ("58577e38-9ca5-4da6-8cc1-b48aa37e99df")
+    @objid ("000e4c24-ae25-4212-a4fd-dd0ec0a1e193")
     public static final String PLATFORMCREDENTIALPASSWORD_TAGTYPE = "platformCredentialPassword";
 
-    @objid ("1e7d1bd8-4c64-49bb-98ba-81ae6e725c35")
+    @objid ("a94378ab-75b6-45ca-b1fe-87540e459922")
     public static final String WWW_TAGTYPE = "www";
 
     /**
@@ -75,7 +75,7 @@ public class User extends Entity {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("00da6bba-6a77-4afb-b009-4568a527f9d0")
+    @objid ("eee0e322-3d9e-41c1-9a36-85070b1b76a6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, User.STEREOTYPE_NAME));
     }
@@ -85,7 +85,7 @@ public class User extends Entity {
      * 
      * @return a {@link User} proxy on the created {@link Class}.
      */
-    @objid ("b862dd3f-aa74-41ff-821a-6c5c1afed7dc")
+    @objid ("c1752583-9aba-44b4-ac06-e2deac9d2055")
     public static User create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, User.STEREOTYPE_NAME);
@@ -99,7 +99,7 @@ public class User extends Entity {
      * @param obj a Class
      * @return a {@link User} proxy or <i>null</i>.
      */
-    @objid ("f0ce7815-11bc-456e-8de8-de5b1275a446")
+    @objid ("04104f1a-2c39-46e6-ad38-d7d3610ec8b4")
     public static User instantiate(final Class obj) {
         return User.canInstantiate(obj) ? new User(obj) : null;
     }
@@ -112,7 +112,7 @@ public class User extends Entity {
      * @return a {@link User} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("889a46fe-a9ed-4fa0-85a5-50924122f7de")
+    @objid ("57df33f7-904b-41c8-8e6f-8db3510b076b")
     public static User safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (User.canInstantiate(obj))
         	return new User(obj);
@@ -126,7 +126,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("f36d5c78-4013-4a23-9ea9-894221ac0458")
+    @objid ("c5241c74-c3ea-4d43-8949-d6dfd2e05b70")
     public void addDeploymentModels(final DeploymentModel obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -142,7 +142,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("f311d2e7-4859-4747-a8ce-09b0c47e1be3")
+    @objid ("d8bade2a-ce25-423b-ad10-0ce3f0e7f67b")
     public void addExternalIdentifiers(final ExternalIdentifier obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
@@ -154,7 +154,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("e9de2c59-d020-43e8-bce7-04858dab7c25")
+    @objid ("af069077-38b2-49d0-834e-5f370b67e9e0")
     public void addMetricModels(final MetricModel obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -170,7 +170,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("8120234a-1777-49fb-88d2-2bb19f8c980d")
+    @objid ("6627eeb7-3f08-4794-ae60-27ae9dbf73fa")
     public void addRequirementModels(final RequirementModel obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -186,7 +186,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("4360ed87-2bc8-465d-acdc-67844aaf0467")
+    @objid ("df478911-701d-45b1-ac2b-c2c9ecb1a777")
     public void addScalabilityModels(final ScalabilityModel obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -196,7 +196,7 @@ public class User extends Entity {
         }
     }
 
-    @objid ("b7f8c967-30e1-4e72-ae50-d80a24d1c85c")
+    @objid ("0bc1672b-ddbe-4b03-8913-256a3f57a0f9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -218,7 +218,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("c7cfdb82-3d74-4631-b356-84944401d065")
+    @objid ("74d56a3b-9bb3-45dc-a914-34ddcf37af35")
     public List<DeploymentModel> getDeploymentModels() {
         List<DeploymentModel> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -237,7 +237,7 @@ public class User extends Entity {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("399c2bf1-deb1-4226-b8ff-e36bea98624b")
+    @objid ("cb953303-0f78-456f-9cb9-1963a290de37")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -248,7 +248,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3f1f6e0e-27c6-4f34-8b36-570a638e91ba")
+    @objid ("b5222ac7-855b-477e-a33e-8084302f4ac2")
     public String getEmail() {
         return this.elt.getTagValue(User.MdaTypes.EMAIL_TAGTYPE_ELT);
     }
@@ -259,7 +259,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("a4799f8e-c42f-4a0f-9428-ab2385f35c50")
+    @objid ("ad8452d6-33fe-4641-99ee-7b233b429a50")
     public List<ExternalIdentifier> getExternalIdentifiers() {
         List<ExternalIdentifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
@@ -274,7 +274,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5456429d-d527-4406-9b42-32e3e22e03e7")
+    @objid ("e0bd4c10-b20d-4c2e-95fd-962f739daa82")
     public String getFirstName() {
         return this.elt.getTagValue(User.MdaTypes.FIRSTNAME_TAGTYPE_ELT);
     }
@@ -284,7 +284,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e5ce03d7-76d8-4a09-acb0-39dfc618df86")
+    @objid ("f984d23b-d0c2-46f2-a4eb-ba5bba7235c0")
     public String getLastName() {
         return this.elt.getTagValue(User.MdaTypes.LASTNAME_TAGTYPE_ELT);
     }
@@ -295,7 +295,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("3075aa91-2a48-4fc2-b4ed-bc5558a330e6")
+    @objid ("e3b711d1-1980-4e2d-aec3-c182a6d5750c")
     public List<MetricModel> getMetricModels() {
         List<MetricModel> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -315,7 +315,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4bce9544-db97-410c-9d7e-b06fe4f53e18")
+    @objid ("5dc93c83-0b3d-4677-a2e5-9aacff596930")
     public String getPlatformCredentialName() {
         return this.elt.getTagValue(User.MdaTypes.PLATFORMCREDENTIALNAME_TAGTYPE_ELT);
     }
@@ -325,7 +325,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a030042f-3f3b-4aaf-acb4-929710674d36")
+    @objid ("f9634a6b-6336-4b62-b2d7-5cb55641b919")
     public String getPlatformCredentialPassword() {
         return this.elt.getTagValue(User.MdaTypes.PLATFORMCREDENTIALPASSWORD_TAGTYPE_ELT);
     }
@@ -336,7 +336,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("2bb78440-012c-4d33-b699-66ef4429c594")
+    @objid ("24d9685f-6593-4e9e-86e9-b886ec24edbe")
     public PlatformCredentials getPlatformCredentials() {
           for (Class obj : ((Class) this.elt).getOwnedElement(Class.class)) {
            if (PlatformCredentials.canInstantiate(obj))
@@ -351,7 +351,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("701e0de6-3c0d-4809-832f-fbd90cde3524")
+    @objid ("b256b005-9076-403b-ba3f-1ac407106bf0")
     public List<RequirementModel> getRequirementModels() {
         List<RequirementModel> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -370,7 +370,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("5111fe69-de74-4bfe-b285-689d24d02c52")
+    @objid ("5103eda7-4fe4-4ea1-8b98-7e4bd7f20c91")
     public List<ScalabilityModel> getScalabilityModels() {
         List<ScalabilityModel> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -388,12 +388,12 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("df31d366-db03-46dc-9fb3-7de53fc4cf25")
+    @objid ("2ba4f9c6-9a12-47d0-9fbf-c9680fd508f7")
     public String getWww() {
         return this.elt.getTagValue(User.MdaTypes.WWW_TAGTYPE_ELT);
     }
 
-    @objid ("5e6c409b-3c93-4b38-94b9-91b6bb309b12")
+    @objid ("0dd9b8e9-7a2b-4941-8f16-91d166786a55")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -405,7 +405,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("acfdd179-5ba1-41d7-89c3-8a2c56409cc5")
+    @objid ("df9e73dd-9f36-4eec-bd73-6c89db1e3e94")
     public boolean removeDeploymentModels(final DeploymentModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -425,7 +425,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("15a9e7a8-b303-4dbe-a203-70bf6282b32c")
+    @objid ("dc707544-078c-42b7-b599-6f2b4dc7a4f0")
     public boolean removeExternalIdentifiers(final ExternalIdentifier obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -436,7 +436,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("6b2ca8c4-20a4-4dd6-b4a7-0ec4aec3c037")
+    @objid ("01b360e2-033d-4931-993b-c8053ad917d3")
     public boolean removeMetricModels(final MetricModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -456,7 +456,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("67a333f6-3f85-41f4-b656-8ea300768938")
+    @objid ("c5f41f38-35da-4782-ab06-40ae40b1efce")
     public boolean removeRequirementModels(final RequirementModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -476,7 +476,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("d07781cf-2d98-463f-872b-b312c1c295c3")
+    @objid ("6b49f71e-4b50-4447-b265-c9e8955cad94")
     public boolean removeScalabilityModels(final ScalabilityModel obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -495,7 +495,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("06378fa1-3898-41e7-aa0e-8ae7d6f0f577")
+    @objid ("d6057c20-29ca-4281-ad33-d8d62a286bcf")
     public void setEmail(final String value) {
         this.elt.putTagValue(User.MdaTypes.EMAIL_TAGTYPE_ELT, value);
     }
@@ -505,7 +505,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f45a005f-1d9b-4d3b-82ec-8b5980c31341")
+    @objid ("55ae531b-a22c-42fe-96f6-19024fd96b44")
     public void setFirstName(final String value) {
         this.elt.putTagValue(User.MdaTypes.FIRSTNAME_TAGTYPE_ELT, value);
     }
@@ -515,7 +515,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("edbe444f-2412-4c9e-8758-3d22fb00b94f")
+    @objid ("e352624b-0c0d-4a21-8dc6-971d321a08b4")
     public void setLastName(final String value) {
         this.elt.putTagValue(User.MdaTypes.LASTNAME_TAGTYPE_ELT, value);
     }
@@ -525,7 +525,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d633caa8-adbe-4824-8062-f919865744ad")
+    @objid ("065f492d-b32f-40c6-b66b-7a4c0393eefb")
     public void setPlatformCredentialName(final String value) {
         this.elt.putTagValue(User.MdaTypes.PLATFORMCREDENTIALNAME_TAGTYPE_ELT, value);
     }
@@ -535,7 +535,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d7f37cdd-67da-4eab-a311-bc4a0ad05efa")
+    @objid ("bb6cd6a6-2193-4417-a0c8-8c35798d0efb")
     public void setPlatformCredentialPassword(final String value) {
         this.elt.putTagValue(User.MdaTypes.PLATFORMCREDENTIALPASSWORD_TAGTYPE_ELT, value);
     }
@@ -546,7 +546,7 @@ public class User extends Entity {
      * null
      * 
      */
-    @objid ("3e73b56f-9afd-4794-94c2-39c8e53bd348")
+    @objid ("f8c2f790-d081-4e36-98d0-7d051e8e5f88")
     public void setPlatformCredentials(final PlatformCredentials obj) {
         // Remove existing PlatformCredentialss
         for (Class e : ((Class) this.elt).getOwnedElement(Class.class)) {
@@ -565,7 +565,7 @@ public class User extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9cd1d4fd-0328-440b-9dbc-1b15ea8a4e49")
+    @objid ("302c05fb-be89-42c1-870c-7246af3fd886")
     public void setWww(final String value) {
         this.elt.putTagValue(User.MdaTypes.WWW_TAGTYPE_ELT, value);
     }
@@ -578,41 +578,41 @@ public class User extends Entity {
         return result;
     }
 
-    @objid ("0a13a60c-c6ff-4049-bbbb-f640708f7c15")
+    @objid ("e9dfc59a-7592-4cd2-b5e9-b05055975279")
     protected User(final Class elt) {
         super(elt);
     }
 
     @objid ("e7a907de-dc21-4d17-9104-6dae192d680b")
     public static final class MdaTypes {
-        @objid ("5c7d7e82-da88-4bb1-ad34-75f4fd725033")
+        @objid ("137daace-a5b7-4138-97e4-b31604f1c183")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1c567868-0a1c-426c-97d2-626b4dc0f3f9")
+        @objid ("b140e110-bb11-4ba9-b927-b6a380c138bf")
         public static TagType EMAIL_TAGTYPE_ELT;
 
-        @objid ("ffc0f68b-67ca-4767-bcf9-1f5fbe545e25")
+        @objid ("052c8fce-0b63-46ba-ae78-ddb300982091")
         public static TagType FIRSTNAME_TAGTYPE_ELT;
 
-        @objid ("6e8ab1b7-3406-4a40-bad8-fa90334d9ffa")
+        @objid ("927c58fc-32f5-4e50-8039-1f862c5674ea")
         public static TagType LASTNAME_TAGTYPE_ELT;
 
-        @objid ("3367591a-d6b5-47d6-af4e-06fe458d8834")
+        @objid ("7ce0c51b-8146-4dac-bc2d-1c9c6fb3fdc9")
         public static TagType WWW_TAGTYPE_ELT;
 
-        @objid ("27029561-d748-4dc9-9f20-f27958cef372")
+        @objid ("0a8ac187-540d-4ae3-bc49-0b1cc43e7091")
         public static TagType PLATFORMCREDENTIALNAME_TAGTYPE_ELT;
 
-        @objid ("439286df-fb18-4c87-8635-123a2764c6de")
+        @objid ("82b6b8b4-10a0-41d3-b1ab-f55734d1eece")
         public static TagType PLATFORMCREDENTIALPASSWORD_TAGTYPE_ELT;
 
-        @objid ("85315689-bb1d-4583-8bbd-0f45da0a096e")
+        @objid ("8aaaf613-a7f0-443d-9377-d7aebe19f3a7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("be7b5c5f-3252-4e3e-b5f6-54c133cbf48a")
+        @objid ("5113a83f-8bf1-4072-b6d1-3571283a44d3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9de372f0-d0a3-4e2a-a4b9-f22393c4acae")
+        @objid ("548c8a9b-b62a-4ca6-aa28-8daa949ad41d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a36b6005-fc91-4d36-bf4a-4b39194d892b");
             EMAIL_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "23c8cc8c-ec83-45ef-aa8c-3089186d0437");

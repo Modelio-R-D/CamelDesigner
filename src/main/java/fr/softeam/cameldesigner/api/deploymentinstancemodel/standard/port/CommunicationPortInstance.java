@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("69c260bf-5f8b-43c5-99e2-3e3608ba3eb2")
 public class CommunicationPortInstance extends FeaturePort {
-    @objid ("cdaadd07-c658-4c41-9e3e-6a3541be207c")
+    @objid ("04f9b437-7e99-4487-932c-0f151061dfdb")
     public static final String STEREOTYPE_NAME = "CommunicationPortInstance";
 
     /**
@@ -48,7 +48,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7567bf95-9906-4426-94d8-25bd4396f2cd")
+    @objid ("f7ba550f-2537-4351-bdd8-b4e92f0e5138")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationPortInstance.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * 
      * @return a {@link CommunicationPortInstance} proxy on the created {@link Port}.
      */
-    @objid ("5039ac2b-14c5-4882-acde-2da6b034755a")
+    @objid ("577295fe-9052-425c-9aca-58158de377f6")
     public static CommunicationPortInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationPortInstance.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * @param obj a Port
      * @return a {@link CommunicationPortInstance} proxy or <i>null</i>.
      */
-    @objid ("8a77e89f-5455-4707-a798-2a252527cd68")
+    @objid ("6331820e-28e9-4258-a7a5-ca2f9edf8432")
     public static CommunicationPortInstance instantiate(final Port obj) {
         return CommunicationPortInstance.canInstantiate(obj) ? new CommunicationPortInstance(obj) : null;
     }
@@ -85,7 +85,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * @return a {@link CommunicationPortInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a31d0f07-8d9d-4f8a-9b08-90f6ae4d0d77")
+    @objid ("5cdb93aa-e125-4452-9cac-b6fa2549822e")
     public static CommunicationPortInstance safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPortInstance.canInstantiate(obj))
         	return new CommunicationPortInstance(obj);
@@ -93,7 +93,7 @@ public class CommunicationPortInstance extends FeaturePort {
         	throw new IllegalArgumentException("CommunicationPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9869ed9e-588b-4de4-b48c-a8252286c00d")
+    @objid ("ca757f04-211f-4ee9-abdd-346c88c757e1")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("acb77391-7f19-4306-9e5c-026fc3d662be")
+    @objid ("0bc4dae5-5fc7-48fe-8a5e-b9f58e62e31b")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
@@ -125,12 +125,12 @@ public class CommunicationPortInstance extends FeaturePort {
      * null
      * 
      */
-    @objid ("186bf294-3b44-4130-97d9-36c12f9f46ec")
+    @objid ("da78e031-23c0-4db7-80d3-2bddc4218fd3")
     public CommunicationPort getType() {
         return (CommunicationPort)CamelDesignerProxyFactory.instantiate(((Port) this.elt).getRepresentedFeature(), CommunicationPort.STEREOTYPE_NAME);
     }
 
-    @objid ("fcc5f35c-4cc4-4ba8-ac1f-fad3a17f2b62")
+    @objid ("78fed9c8-fc4b-4edb-b677-8c0db1ccd6c5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,7 +142,7 @@ public class CommunicationPortInstance extends FeaturePort {
      * null
      * 
      */
-    @objid ("a843aff3-1bea-4ade-b76d-c970a5194393")
+    @objid ("8742a5c9-21a1-488c-a5ec-a868a7824317")
     public void setType(final CommunicationPort obj) {
         ((Port) this.elt).setRepresentedFeature((obj != null) ? obj.getElement() : null);
     }
@@ -155,23 +155,23 @@ public class CommunicationPortInstance extends FeaturePort {
         return result;
     }
 
-    @objid ("65d0cff0-0ba4-4def-b910-e789e9060ce5")
+    @objid ("aaf49811-5415-44f5-9c20-3555cbe40282")
     protected CommunicationPortInstance(final Port elt) {
         super(elt);
     }
 
     @objid ("504cf2f2-0359-4c14-b98c-237508d0590f")
     public static final class MdaTypes {
-        @objid ("3685041d-4406-4286-ad4a-41e79a173d4c")
+        @objid ("c03a785a-b1dc-4d58-98f7-443fd428634e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8d1ca16f-4fce-4a7d-8b8e-41d89f11599d")
+        @objid ("06a89174-e54e-4f13-9004-1a388c963203")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("12c63495-5ec0-47c3-8fb6-6cebb3416e13")
+        @objid ("fd9e7fd9-1180-4e11-9ea5-1b8490014ae0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("485162ee-5cc6-4edd-9d17-a8cb45cc4cd1")
+        @objid ("d87787b3-4c11-4745-84f5-ccc332bb1c6b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "42bf761a-193d-48f8-b686-2c4b96a56384");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

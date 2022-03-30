@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Text;
  */
 @objid ("9859ccc1-0a19-4638-916e-87f11d0e3c85")
 public class NameComposite extends Composite {
-    @objid ("ca5ad23b-797c-4f5e-83c9-7769f94749e9")
+    @objid ("74daf061-2f98-462e-8601-027a2844ceb0")
     private Text text = null;
 
     /**

@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.instance.SecurityMetricInstance;
 import fr.softeam.cameldesigner.exchange.exporter.metric.MetricInstanceExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("b9d7596f-0998-4d14-80ac-6df1deb5a9a8")
 public class SecurityMetricInstanceExporter<T extends SecurityMetricInstance> extends MetricInstanceExporter<T> {

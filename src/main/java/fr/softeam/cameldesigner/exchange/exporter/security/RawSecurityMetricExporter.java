@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.RawSecurityMetric;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("40783aa2-fcc0-43eb-a85b-9b4e0f576ef7")
 public class RawSecurityMetricExporter<T extends RawSecurityMetric> extends FeatureExporter<T> {
@@ -28,12 +28,6 @@ public class RawSecurityMetricExporter<T extends RawSecurityMetric> extends Feat
         }
     }
 
-    private void setDomain(camel.security.RawSecurityMetric sc) {
-        CDOObject domain = this._process.getElement(this._element.getDomain());
-        if ((domain != null) &&  (domain instanceof camel.security.SecurityDomain))
-            sc.setDomain((camel.security.SecurityDomain) domain);
-    }
-
     @objid ("585923cd-fb07-44a4-8387-3e2b26af111a")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
@@ -42,6 +36,13 @@ public class RawSecurityMetricExporter<T extends RawSecurityMetric> extends Feat
         }else {
             super.attach(elt, context);
         }
+    }
+
+    @objid ("5d82d964-e534-4c38-971c-6cbf4b4b60bd")
+    private void setDomain(camel.security.RawSecurityMetric sc) {
+        CDOObject domain = this._process.getElement(this._element.getDomain());
+        if ((domain != null) &&  (domain instanceof camel.security.SecurityDomain))
+            sc.setDomain((camel.security.SecurityDomain) domain);
     }
 
 }

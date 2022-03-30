@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6e4c7b4b-d381-4e52-a43d-fcb0cea6173f")
 public abstract class DeploymentModel extends SubModel {
-    @objid ("62aabf24-1c5b-4a15-9430-71e92b6a1118")
+    @objid ("a7b93356-7011-4aca-a20d-17acf5fc96d3")
     public static final String STEREOTYPE_NAME = "DeploymentModel";
 
     /**
@@ -48,12 +48,12 @@ public abstract class DeploymentModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("522b30bf-2fd8-4212-8ef5-decc7e775ae4")
+    @objid ("7d920b64-b929-48e2-82b2-94f011b6b7ce")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentModel.STEREOTYPE_NAME));
     }
 
-    @objid ("0b9436b0-02d4-45b1-b4cf-b2b2ea294963")
+    @objid ("58d38552-8dda-427b-a8e6-fa300163771b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -75,7 +75,7 @@ public abstract class DeploymentModel extends SubModel {
      * null
      * 
      */
-    @objid ("17ad2850-f149-40d1-b69f-2dd2a357a30e")
+    @objid ("2f6c3514-fc8f-48f6-9b6d-8135352cf2c6")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -84,13 +84,13 @@ public abstract class DeploymentModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("a09d48f3-3994-4dd2-8b0a-05bf06fc7335")
+    @objid ("b997a52d-07a7-466b-b0e5-0e09afdec7ff")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("23c1157a-c9a0-495f-ba99-df994734724a")
+    @objid ("5d2a3048-e33d-47ab-832f-df668bb49feb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -102,7 +102,7 @@ public abstract class DeploymentModel extends SubModel {
      * null
      * 
      */
-    @objid ("9ca76ba7-562c-4d54-a41d-6f509d040d5e")
+    @objid ("24423319-ed8e-4bd6-a221-351f53d55090")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -115,23 +115,23 @@ public abstract class DeploymentModel extends SubModel {
         return result;
     }
 
-    @objid ("d2340e7f-9bd0-426f-801a-3159d7ac516c")
+    @objid ("ad97ff7d-40db-4308-8522-afa823b2778f")
     protected DeploymentModel(final Package elt) {
         super(elt);
     }
 
     @objid ("bcfd6f5c-46e7-47aa-9a4b-79a22339b9f4")
     public static final class MdaTypes {
-        @objid ("356d5216-f567-4359-b054-72e3091d9d39")
+        @objid ("8ef7e2c6-048d-4989-89f0-9eaeafa089f9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ca88cf15-87e5-4484-8e0a-79577446b2c8")
+        @objid ("2781ebcc-2990-417b-8ab9-e3d74e91a6e7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9d4a401c-fe32-419f-b55a-b26a8efbf2fa")
+        @objid ("7962e2fc-d81f-47b7-bc66-85c422dbe1fc")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("172cd24f-4159-4afc-9b21-630bc3b9a3d6")
+        @objid ("4ac13a9f-025c-45d1-9f08-212f4d9b7f5a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7d620068-3fc6-4fec-8829-0444c0c3186f");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

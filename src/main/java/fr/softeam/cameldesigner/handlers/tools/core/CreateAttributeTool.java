@@ -15,6 +15,7 @@ import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -41,15 +42,17 @@ public class CreateAttributeTool extends DefaultBoxTool {
                 owner = ((AbstractDiagram) owner).getOrigin();
             }
         
-            AttributeAttribute feature = CamelFactory.createCamelAttribute(owner);
+            if (owner instanceof ModelElement) {
+                AttributeAttribute feature = CamelFactory.createCamelAttribute((ModelElement)owner);
         
-            List<IDiagramGraphic> graph = diagramHandle.unmask(feature.getElement(), rect.x, rect.y);
+                List<IDiagramGraphic> graph = diagramHandle.unmask(feature.getElement(), rect.x, rect.y);
         
-            if((graph != null) &&  (graph.size() > 0) && (graph.get(0) instanceof IDiagramNode))
-                ((IDiagramNode)graph.get(0)).setBounds(rect);
+                if((graph != null) &&  (graph.size() > 0) && (graph.get(0) instanceof IDiagramNode))
+                    ((IDiagramNode)graph.get(0)).setBounds(rect);
         
-            diagramHandle.save();
-            diagramHandle.close();
+                diagramHandle.save();
+                diagramHandle.close();
+            }
             transaction.commit();
         }
     }

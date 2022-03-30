@@ -18,10 +18,10 @@ import org.eclipse.swt.widgets.Composite;
  */
 @objid ("fd45c668-d6cf-432b-8388-ab6fb43611fc")
 public class ValidationBoutonComposite extends Composite {
-    @objid ("1da26723-6983-4fb7-9ea4-ab501f33ecdd")
+    @objid ("63c0c7ef-7755-4618-838f-b610580fa956")
     private Button validationButton;
 
-    @objid ("dc7017de-f1c5-435f-87d8-085fb5cfb560")
+    @objid ("9513d7de-4adc-4d32-94fd-9317d19fcaa6")
     private Button cancelButton;
 
     /**

@@ -31,17 +31,17 @@ public class WizardExport extends AbstractSwtWizardWindow {
     @objid ("837f27a3-88b6-4657-be6c-92749ec6fbd7")
     private CamelFormat _format = CamelFormat.XMI;
 
-    @objid ("efba16a2-2069-4522-8ed7-bcdf41302338")
-    private Group _formatGroup = null;
-
-    @objid ("4433cf67-4001-4161-9070-ea1e3e031d7f")
-    private Button _XMIButton = null;
-
-    @objid ("80dafdeb-e57f-4bb4-aa41-2510dc6da96e")
-    private Button _CamelButton = null;
-
     @objid ("134e9f04-061c-4274-adef-38dbd852ff5d")
     private IModule _module = null;
+
+    @objid ("00317c19-4889-45dc-9d8c-edbae7c253dc")
+    private Group _formatGroup = null;
+
+    @objid ("9d3925d9-bdbd-44b1-8357-782dc3d29c21")
+    private Button _XMIButton = null;
+
+    @objid ("f78a9bfc-c9a9-47c7-9a0d-8050a60c4edd")
+    private Button _CamelButton = null;
 
     @objid ("cc230f2b-54a5-4887-933c-312f31002d54")
     @Override

@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.exporter.security;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.security.SecurityFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("289bcbc8-80e2-401d-bae4-3453f85f91cb")
 public class SecurityDomainExporter<T extends SecurityDomain> extends FeatureExporter<T> {
@@ -26,14 +26,6 @@ public class SecurityDomainExporter<T extends SecurityDomain> extends FeatureExp
         if (elt instanceof camel.security.SecurityDomain) {
             setId((camel.security.SecurityDomain) elt);
         }
-
-    }
-
-    private void setId(camel.security.SecurityDomain elt) {
-        String content = this._element.getId();
-        if (content != null) {
-            elt.setId(content);
-        }
     }
 
     @objid ("ddf7df75-85be-44ba-af9c-53c2172fc211")
@@ -45,6 +37,14 @@ public class SecurityDomainExporter<T extends SecurityDomain> extends FeatureExp
                 ((camel.security.SecurityDomain) context).getSubDomains().add((camel.security.SecurityDomain) elt);
         }else {
             super.attach(elt, context);
+        }
+    }
+
+    @objid ("8a10b9da-f11c-460f-8d04-4fad4aee41ea")
+    private void setId(camel.security.SecurityDomain elt) {
+        String content = this._element.getId();
+        if (content != null) {
+            elt.setId(content);
         }
     }
 

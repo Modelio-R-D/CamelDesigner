@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -203,16 +203,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("32a73516-6547-4f5b-b3b1-4018a2466233")
 public class HistoryInfo extends FeatureClass {
-    @objid ("ca4c0ffb-0f13-44e9-b2d7-e4b5a6ee265b")
+    @objid ("3a9aca46-853f-4dd4-8072-71f57bab3053")
     public static final String STEREOTYPE_NAME = "HistoryInfo";
 
-    @objid ("46932f58-13aa-4fa0-a55c-d7cae6ccea70")
+    @objid ("5f819ee6-44df-44ef-b668-43c5231c083a")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("5e94dbe4-44a4-4e3b-8e09-130a91dfe073")
+    @objid ("369d1974-fa05-4372-bde5-9d4711dcc803")
     public static final String OBJECT_TAGTYPE = "object";
 
-    @objid ("103b4cff-8d1c-401e-ada3-2bdb6b49855b")
+    @objid ("e726ef72-32f7-48e9-9ffc-a8b20b251957")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
     /**
@@ -223,7 +223,7 @@ public class HistoryInfo extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ca257d93-d294-4264-adf4-5ce15a113c23")
+    @objid ("afc61662-a547-45ee-922b-951d22bcb94c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HistoryInfo.STEREOTYPE_NAME));
     }
@@ -233,7 +233,7 @@ public class HistoryInfo extends FeatureClass {
      * 
      * @return a {@link HistoryInfo} proxy on the created {@link Class}.
      */
-    @objid ("3e1b05d4-12f7-432f-88e5-b178e3b529a6")
+    @objid ("1a2956db-221a-43b1-ae76-56478609ee10")
     public static HistoryInfo create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HistoryInfo.STEREOTYPE_NAME);
@@ -247,7 +247,7 @@ public class HistoryInfo extends FeatureClass {
      * @param obj a Class
      * @return a {@link HistoryInfo} proxy or <i>null</i>.
      */
-    @objid ("8e292207-ddc6-4449-9d7d-456792ed5bf6")
+    @objid ("6fced58b-e3a3-4f1b-a85d-318c82eb3d24")
     public static HistoryInfo instantiate(final Class obj) {
         return HistoryInfo.canInstantiate(obj) ? new HistoryInfo(obj) : null;
     }
@@ -260,7 +260,7 @@ public class HistoryInfo extends FeatureClass {
      * @return a {@link HistoryInfo} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("780057a4-a0a7-46f6-8469-483b664d767a")
+    @objid ("18dbb1e3-f310-4240-a86b-93a5ef76d58f")
     public static HistoryInfo safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HistoryInfo.canInstantiate(obj))
         	return new HistoryInfo(obj);
@@ -268,7 +268,7 @@ public class HistoryInfo extends FeatureClass {
         	throw new IllegalArgumentException("HistoryInfo: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("cf6cec80-8a96-4a44-b331-1787e1180705")
+    @objid ("2a2f30fc-4835-4ac9-9e0c-53a7942571d0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -290,7 +290,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("823d792d-3a0b-46cc-b2a6-c5fefae2f3b6")
+    @objid ("3da07032-c09c-4ecf-beb4-7f40f0fd0318")
     public MmsObject getAction() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryInfo.MdaTypes.MDAASSOCDEP)
@@ -312,7 +312,7 @@ public class HistoryInfo extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("eff927c0-3825-4306-866a-a69033c747e6")
+    @objid ("141df4f3-bbee-4c2d-ab21-dedc3fc9f992")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -323,7 +323,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6ae94c47-7097-4182-9896-d536aed060a4")
+    @objid ("d9a500f8-d225-44a1-a9a3-a554e1534880")
     public String getEndTime() {
         return this.elt.getTagValue(HistoryInfo.MdaTypes.ENDTIME_TAGTYPE_ELT);
     }
@@ -333,7 +333,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("837da0d4-4d5a-40cf-bd1c-4ed5207feac5")
+    @objid ("97d0218d-75c1-474c-b4b1-45e700bd4662")
     public String getObject() {
         return this.elt.getTagValue(HistoryInfo.MdaTypes.OBJECT_TAGTYPE_ELT);
     }
@@ -344,7 +344,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("b5431d75-5cee-4652-a692-79d7d4b6d303")
+    @objid ("a7366d97-eb53-494c-a5c6-9bc9ad30bb4e")
     public CamelElement getObjectRef() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryInfo.MdaTypes.MDAASSOCDEP)
@@ -389,6 +389,16 @@ public class HistoryInfo extends FeatureClass {
                      return (Data)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Data.MdaTypes.STEREOTYPE_ELT.getName());
                   if (DataSource.canInstantiate(d.getDependsOn()))
                      return (DataSource)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), DataSource.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (Container.canInstantiate(d.getDependsOn()))
+                     return (Container)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Container.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (PaaS.canInstantiate(d.getDependsOn()))
+                     return (PaaS)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaS.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (Sensor.canInstantiate(d.getDependsOn()))
+                     return (Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (SoftwareComponent.canInstantiate(d.getDependsOn()))
+                     return (SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (VM.canInstantiate(d.getDependsOn()))
+                     return (VM)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), VM.MdaTypes.STEREOTYPE_ELT.getName());
                   if (RequirementSet.canInstantiate(d.getDependsOn()))
                      return (RequirementSet)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), RequirementSet.MdaTypes.STEREOTYPE_ELT.getName());
                   if (RuleTrigger.canInstantiate(d.getDependsOn()))
@@ -611,16 +621,6 @@ public class HistoryInfo extends FeatureClass {
                      return (TypeModel)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), TypeModel.MdaTypes.STEREOTYPE_ELT.getName());
                   if (UnitModel.canInstantiate(d.getDependsOn()))
                      return (UnitModel)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), UnitModel.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (Container.canInstantiate(d.getDependsOn()))
-                     return (Container)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Container.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (PaaS.canInstantiate(d.getDependsOn()))
-                     return (PaaS)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaS.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (Sensor.canInstantiate(d.getDependsOn()))
-                     return (Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (SoftwareComponent.canInstantiate(d.getDependsOn()))
-                     return (SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (VM.canInstantiate(d.getDependsOn()))
-                     return (VM)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), VM.MdaTypes.STEREOTYPE_ELT.getName());
                   if (CamelModelDiagram.canInstantiate(d.getDependsOn()))
                      return (CamelModelDiagram)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), CamelModelDiagram.MdaTypes.STEREOTYPE_ELT.getName());
                   if (ConstraintModelDiagram.canInstantiate(d.getDependsOn()))
@@ -695,7 +695,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9e068bec-dfd9-464b-ad8d-667ce728bed1")
+    @objid ("c55d7a46-ac81-40cb-9406-e8f2d7763b12")
     public String getStartTime() {
         return this.elt.getTagValue(HistoryInfo.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
@@ -706,7 +706,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("58860cd4-5df9-44de-86fe-46da1472b9b1")
+    @objid ("33f5ad8e-a7af-48ba-867a-1f4f2e66ea3a")
     public MmsObject getSubject() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryInfo.MdaTypes.MDAASSOCDEP)
@@ -724,7 +724,7 @@ public class HistoryInfo extends FeatureClass {
         return null;
     }
 
-    @objid ("f0c28c8a-f0c8-499e-9d19-f63ac0df0647")
+    @objid ("d8eb65fc-517f-4571-87ef-16182dafbced")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -736,7 +736,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("cb8d1115-6c5a-41ab-ba1b-1584668ba709")
+    @objid ("b789ff30-c167-479e-8b8a-843ec48592c2")
     public void setAction(final MmsObject obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -761,7 +761,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3733106c-c8a7-4acd-9255-4add9b5abeac")
+    @objid ("ab4901e5-232f-4768-80d8-839f20cefc23")
     public void setEndTime(final String value) {
         this.elt.putTagValue(HistoryInfo.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
     }
@@ -771,7 +771,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a89b8340-b00e-44e3-9f8a-ebb6715775f0")
+    @objid ("be285b7e-7317-40d4-86d2-b363afc4e91d")
     public void setObject(final String value) {
         this.elt.putTagValue(HistoryInfo.MdaTypes.OBJECT_TAGTYPE_ELT, value);
     }
@@ -782,7 +782,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("2b3b5622-978f-4efa-b29d-cad87562265b")
+    @objid ("a7d739b7-df53-48e5-a69e-1b4ac8902430")
     public void setObjectRef(final CamelElement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -807,7 +807,7 @@ public class HistoryInfo extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6d8368e1-1c5b-4d05-9c8c-84b5425e8e64")
+    @objid ("c69492b3-1533-4553-982d-e2cab6833a86")
     public void setStartTime(final String value) {
         this.elt.putTagValue(HistoryInfo.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -818,7 +818,7 @@ public class HistoryInfo extends FeatureClass {
      * null
      * 
      */
-    @objid ("43e53e59-82ba-42a5-b2b6-dc85d7fc9447")
+    @objid ("074506a6-9d3e-45c8-86c2-4bb214dbde11")
     public void setSubject(final MmsObject obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -846,32 +846,32 @@ public class HistoryInfo extends FeatureClass {
         return result;
     }
 
-    @objid ("54e3a3a6-aa1d-42f4-a53b-57b1ee371b98")
+    @objid ("3b636b96-50e0-4ae9-b954-0739737ce39d")
     protected HistoryInfo(final Class elt) {
         super(elt);
     }
 
     @objid ("3e1aab74-be0c-48b2-b316-e35870217b33")
     public static final class MdaTypes {
-        @objid ("7e30d367-9239-422f-854c-612e2c41183f")
+        @objid ("916a5580-42c5-4662-a690-5afa1f14ef05")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("811adc93-3366-4f3b-8d25-0da229f53c68")
+        @objid ("4d374ed5-7bfb-455c-8941-eca81873f05b")
         public static TagType OBJECT_TAGTYPE_ELT;
 
-        @objid ("657d28b6-8803-42ec-8c35-898ae6b3893b")
+        @objid ("78fa80ab-98c9-4b66-9ee3-3ff34abc9fb1")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("dd30afa9-df70-40c0-a3e4-868f28759220")
+        @objid ("c6a010ba-5d3c-4f45-a020-2a41de952ea6")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("4a8646ec-2c19-4656-bb1f-c653937f200d")
+        @objid ("279f2635-09dc-499c-b1f8-c17b6a3f68f5")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("931182a2-2e94-42a5-b47f-31dadad03515")
+        @objid ("870869fd-f3de-46ca-a83f-e5b53617624e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("961bf359-5857-4735-afb1-658d9da53b4d")
+        @objid ("c3c0f6d6-a922-432e-8c8c-5fb60e7cfb68")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "acef265d-7979-416d-8e8d-bc2a20331822");
             OBJECT_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "b459f0a0-04c3-4f41-ba76-aca6f5dc6dda");

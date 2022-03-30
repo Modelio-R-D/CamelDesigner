@@ -24,10 +24,10 @@ public class FormatChooserComposite extends Composite {
     @objid ("cea52001-f233-4310-bb98-265c35cdfcab")
     private CamelFormat[] formats = CamelFormat.values();
 
-    @objid ("f11088f7-86b6-468e-8930-76a755adbfdf")
+    @objid ("d297acf9-6d48-41f1-8bf8-16ed444a603e")
     private Label label = null;
 
-    @objid ("1d506c42-e247-44e7-b049-55f9690cceb2")
+    @objid ("d9fa2953-b173-421c-a789-c60c025a6b21")
     private Combo combo = null;
 
     /**

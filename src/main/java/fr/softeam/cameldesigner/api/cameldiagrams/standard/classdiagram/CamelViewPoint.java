@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/17/22 5:18 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -33,13 +33,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a0996f72-f1c0-426f-b6d0-bc09ebb96da4")
 public class CamelViewPoint {
-    @objid ("3e411e6d-8caa-4765-8fa3-03c72339bd1f")
+    @objid ("abbb6fd6-7b20-406a-9c9b-8ad37ef1b4ea")
     public static final String STEREOTYPE_NAME = "CamelViewPoint";
 
     /**
      * The underlying {@link ClassDiagram} represented by this proxy, never null.
      */
-    @objid ("c1698703-841a-459b-a389-a6a0990f3e9b")
+    @objid ("31b2fa58-08ae-48cf-a865-be89f9a8ced6")
     protected final ClassDiagram elt;
 
     /**
@@ -50,7 +50,7 @@ public class CamelViewPoint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("61c9a704-6ecf-447a-8517-047cf141e4c5")
+    @objid ("f7beb731-9aee-4ade-8d49-588c0a696c08")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelViewPoint.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class CamelViewPoint {
      * 
      * @return a {@link CamelViewPoint} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("568b0e85-dd16-4d98-a34f-8f6c30121911")
+    @objid ("f9b28164-2a7c-422b-8354-a9236bf1b309")
     public static CamelViewPoint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CamelViewPoint.STEREOTYPE_NAME);
@@ -74,7 +74,7 @@ public class CamelViewPoint {
      * @param obj a ClassDiagram
      * @return a {@link CamelViewPoint} proxy or <i>null</i>.
      */
-    @objid ("3e4aa3bd-49d0-42ea-87b5-1792f53cbb3c")
+    @objid ("320f5b65-d5ed-4db2-8f52-9a4be3e43c87")
     public static CamelViewPoint instantiate(final ClassDiagram obj) {
         return CamelViewPoint.canInstantiate(obj) ? new CamelViewPoint(obj) : null;
     }
@@ -87,7 +87,7 @@ public class CamelViewPoint {
      * @return a {@link CamelViewPoint} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("bd1453d2-6426-400e-8cb3-d87afb6840bb")
+    @objid ("d63ca0d4-84f6-4485-a5d0-db73fbe76a20")
     public static CamelViewPoint safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (CamelViewPoint.canInstantiate(obj))
         	return new CamelViewPoint(obj);
@@ -95,7 +95,7 @@ public class CamelViewPoint {
         	throw new IllegalArgumentException("CamelViewPoint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3991f54e-5604-4485-8f5f-a86db8de420a")
+    @objid ("12b449e7-d7d4-40ea-8745-188b3c774c24")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,34 +115,34 @@ public class CamelViewPoint {
      * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("6d2ffee6-4b83-42cc-97aa-cc61e672bacb")
+    @objid ("5db2687f-f357-407f-b278-efb68fbb0061")
     public ClassDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("25d60301-6b70-48dc-80e2-fddac8373ea1")
+    @objid ("50f0cf5d-d4b6-40b3-bdd9-5bba5110f7f2")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("be6ee8a5-a154-47e1-9c74-8308a8ac1b2e")
+    @objid ("cc4c3f7c-6e5f-4db7-acc6-88a758b670b5")
     protected CamelViewPoint(final ClassDiagram elt) {
         this.elt = elt;
     }
 
     @objid ("b97bab2c-d812-455d-9d9d-74777baddf53")
     public static final class MdaTypes {
-        @objid ("775a295d-246a-47a6-8106-a3bb2592fe1b")
+        @objid ("b91e2ddf-11dc-4003-ac02-b01663ac6ed5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7d7f0d29-7546-49b8-b0e6-8eaddfbea3f9")
+        @objid ("7b8714c5-75a9-4f3b-9a78-7a596606e92c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("083ce839-f542-4baa-a080-9fe76568d5ae")
+        @objid ("6c749d5a-23d8-431f-a3c4-07670491be80")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("944d494b-14fa-45be-b087-e545abf6f507")
+        @objid ("3ca91ad5-12bc-412e-a419-fe0ab928de18")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e46b07f3-2bf2-48c1-8218-3a31ce9fa75d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

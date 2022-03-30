@@ -1,22 +1,32 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.06
+ * Module: CamelDesigner v1.0.08
 
- * This file was generated on 3/16/22 5:21 PM by Modelio Studio.
+ * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -26,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("95142f12-2b2c-454b-909a-53110f0aaecc")
 public abstract class CamelAttribute extends ExpendableElement {
-    @objid ("dcf0dd98-6079-4f96-914a-856fb874989f")
+    @objid ("80934d99-e271-4010-938b-98dab9b3ea32")
     public static final String STEREOTYPE_NAME = "CamelAttribute";
 
     /**
@@ -37,7 +47,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f90fc5ac-023c-49ee-9521-0b3a29cf2cb8")
+    @objid ("ed998135-bc0d-44ff-93f0-c0bfc19d15e1")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelAttribute.STEREOTYPE_NAME));
     }
@@ -48,7 +58,7 @@ public abstract class CamelAttribute extends ExpendableElement {
             AttributeClass.canInstantiate(obj) ? AttributeClass.instantiate(obj) : null;
     }
 
-    @objid ("51bae2fe-b245-40ae-818f-bbdd114dbf84")
+    @objid ("b88adebf-505b-4439-89fc-e89e81bf5859")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -65,51 +75,56 @@ public abstract class CamelAttribute extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
-     * 
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("495fca07-ee61-452e-b57e-7b67d1320ac5")
+    @objid ("1e126b4e-b62f-47f0-9ad5-03862aded6f1")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("25ca9dac-7a5a-4686-b179-859a13fceb3b")
+    @objid ("ea947edb-7c19-4ad6-b623-ba030c1b6706")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
+    @objid ("ce91264e-0001-44d2-981f-3ee1e7494632")
+    public abstract Unit getUnit();
+
     @objid ("48faeeba-82b2-40f8-9227-3a1bb692c423")
     public abstract String getValue();
+
+    @objid ("bf17342a-96ff-4a4d-9982-96223e013ee4")
+    public abstract ValueType getValueType();
+
+    @objid ("b0fec14f-55aa-434b-9921-fe5a98c03666")
+    public abstract void setUnit(final Unit obj);
 
     @objid ("87ad5a8c-d7ef-4404-8a08-b2e760da4e61")
     public abstract void setValue(String value);
 
-    @objid ("9d38a223-bac8-49a7-89e5-4cc24d097ea8")
+    @objid ("dfa12e10-a0f9-4768-872b-ef51ea1a5db9")
+    public abstract void setValueType(final ValueType obj);
+
+    @objid ("f10f9e3d-aac4-4bc8-860d-3e89634a9ffc")
     protected CamelAttribute(final ModelElement elt) {
         super(elt);
     }
 
-    @objid ("ce41a792-bd80-48c3-b555-cf8e24e07366")
-    public abstract Unit getUnit();
-
-    @objid ("0246df1e-9d3b-4c18-9730-14aa9c2f9ca6")
-    public abstract ValueType getValueType();
-
     @objid ("b2b5f006-86dd-4eba-8d2f-bb3d0fc4f4f7")
     public static final class MdaTypes {
-        @objid ("f8aa6fd6-22ba-40d4-abbe-975dc8ffb41e")
+        @objid ("9ff4900a-b10f-49db-97e0-190ff726c230")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dd4b4847-ac62-42c8-8f15-8241810bdf36")
+        @objid ("b78cd506-7301-4ccd-9b0e-4c744b1a8e51")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4cb6ec7c-8669-47da-805b-4a81a86bca32")
+        @objid ("c48a234f-2665-4cbb-9075-a0777b827965")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("eac8d4a6-bf00-49b4-b72e-94196a3ffbc9")
+        @objid ("e18824ee-e295-42ca-b50a-f3c964cb9382")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "342512a5-ad9b-48b8-a454-5fd44237b8f2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -117,11 +132,11 @@ public abstract class CamelAttribute extends ExpendableElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
