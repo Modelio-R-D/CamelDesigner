@@ -1,12 +1,33 @@
 package fr.softeam.cameldesigner.exchange.exporter;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.metamodel.mda.ModuleComponent;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.Element;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.AttributeLink;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import org.modelio.metamodel.uml.statik.GeneralClass;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
+import org.modelio.metamodel.visitors.IDefaultModelVisitor;
+import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeAttributeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureInstanceExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeaturePortExporter;
+import fr.softeam.cameldesigner.exchange.exporter.core.MeasurableAttributeClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataInstanceExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataInstanceModelExporter;
@@ -124,26 +145,6 @@ import fr.softeam.cameldesigner.exchange.exporter.security.SecurityModelExporter
 import fr.softeam.cameldesigner.exchange.exporter.security.SecuritySLOExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.TypeModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.UnitModelExporter;
-import org.modelio.metamodel.mda.ModuleComponent;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.Element;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Artifact;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.AttributeLink;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.metamodel.uml.statik.Connector;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.metamodel.uml.statik.Enumeration;
-import org.modelio.metamodel.uml.statik.GeneralClass;
-import org.modelio.metamodel.uml.statik.Instance;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
-import org.modelio.metamodel.visitors.IDefaultModelVisitor;
-import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 
 /**
  * Factory that instantiates the right exporter class for a model element stereotyped by a 'CamelDesigner' module stereotype.
@@ -157,7 +158,7 @@ public class ExporterFactory {
      * Instantiates the right proxy class the given element.
      * <br/>The model element must be stereotyped by a 'CamelDesigner' module stereotype.
      * <br/>In the other case the method will return <i>null</i>.
-     * 
+     *
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
@@ -176,7 +177,7 @@ public class ExporterFactory {
      * Instantiates the right proxy class the given element with a stereotype name.
      * The stereotype must be one of the 'CamelDesigner' module stereotypes.
      * In the other case the method will return <i>null</i>.
-     * 
+     *
      * @param e A model element.
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
@@ -255,6 +256,7 @@ public class ExporterFactory {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.STEREOTYPE_NAME: return new AttributeClassExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.instantiate(obj));
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.STEREOTYPE_NAME: return new FeatureClassExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.instantiate(obj));
+            case fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass.STEREOTYPE_NAME: return new MeasurableAttributeClassExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass.instantiate(obj));
             case fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.STEREOTYPE_NAME: return new DataExporter<>(fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.instantiate(obj));
             case fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource.STEREOTYPE_NAME: return new DataSourceExporter<>(fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet.STEREOTYPE_NAME: return new RequirementSetExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet.instantiate(obj));
@@ -466,7 +468,7 @@ public class ExporterFactory {
         /**
          * Get the visitor to delegate to when a {@link IInfrastructureVisitor} is needed.
          * <p>If null is returned the caller will return null.
-         * 
+         *
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
         @objid ("811fd899-8f65-4257-b11f-cffff1d5ef23")

@@ -9,10 +9,16 @@ package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
@@ -36,19 +42,6 @@ import fr.softeam.cameldesigner.api.securitymodel.standard.package_.SecurityMode
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Package} with << Feature_Package >> stereotype.
@@ -64,7 +57,7 @@ public abstract class FeaturePackage extends Feature {
      * Tells whether a {@link FeaturePackage proxy} can be instantiated from a {@link MObject} checking it is a {@link Package} stereotyped << Feature_Package >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -136,7 +129,7 @@ public abstract class FeaturePackage extends Feature {
 
     /**
      * Get the underlying {@link Package}.
-     * 
+     *
      * @return the Package represented by this proxy, never null.
      */
     @objid ("7ab59d08-1a68-48d0-9fe1-562cb5f08bbd")
@@ -198,6 +191,14 @@ public abstract class FeaturePackage extends Feature {
                     results.add((UnitModel)CamelDesignerProxyFactory.instantiate(mObj, UnitModel.STEREOTYPE_NAME));
             }
         return Collections.unmodifiableList(results);
+    }
+
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        result.addAll(getAttributes());
+        return result;
     }
 
     @objid ("032316ff-60a6-4503-b2db-431f420860ea")

@@ -9,9 +9,9 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1e3affd3-a822-46b9-9f98-e4c113b6f02f")
-public class MeasurableAttributeExporter<T extends MeasurableAttributeClass> extends CamelAttributeExporter<T> {
+public class MeasurableAttributeClassExporter<T extends MeasurableAttributeClass> extends CamelAttributeExporter<T> {
     @objid ("f26414ea-1ff1-419c-b922-2d0bdbfea187")
-    public MeasurableAttributeExporter(T elt) {
+    public MeasurableAttributeClassExporter(T elt) {
         super(elt);
     }
 
