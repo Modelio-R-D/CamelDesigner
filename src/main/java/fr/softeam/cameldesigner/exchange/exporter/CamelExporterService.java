@@ -19,7 +19,7 @@ public class CamelExporterService extends AbstractExporterService {
     @objid ("edc811ac-db21-49e1-a86c-128b5e5bef7e")
     public CamelExporterService() {
         super(new HashMap<String, Boolean>() , CAMEL_EXTENSION);
-        this.options.put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
+        this._options.put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
     }
 
     @objid ("8e76981a-0d93-4e9e-b4a2-7741f682cc2f")
@@ -33,7 +33,7 @@ public class CamelExporterService extends AbstractExporterService {
         resource.getContents().add(camelModel);
         
         try {
-            resource.save(this.options);
+            resource.save(this._options);
         } catch (IOException e) {
             e.printStackTrace();
         }

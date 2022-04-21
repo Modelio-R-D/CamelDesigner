@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e9f9cd86-0e87-4d30-8dca-05407bf4faee")
 public class Dimensionless extends Unit {
-    @objid ("7042abb8-6ef1-4b51-a08e-62210fcf6573")
+    @objid ("8085692a-5916-41f5-a8e7-b75debef5a6a")
     public static final String STEREOTYPE_NAME = "Dimensionless";
 
     /**
@@ -46,7 +46,7 @@ public class Dimensionless extends Unit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9696c936-e0ba-43df-b11f-fc6754cf7a00")
+    @objid ("1223dd3e-9fb2-4246-96ce-07ff58c508d6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Dimensionless.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class Dimensionless extends Unit {
      * 
      * @return a {@link Dimensionless} proxy on the created {@link DataType}.
      */
-    @objid ("4f31fd27-36d8-400f-badd-fa78c2998c3d")
+    @objid ("9cfc7c04-b526-4447-acc3-cee5e336ca19")
     public static Dimensionless create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Dimensionless.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class Dimensionless extends Unit {
     }
 
     /**
-     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link Dimensionless} proxy or <i>null</i>.
      */
-    @objid ("65804813-fdfb-460b-b13a-417e96c2be75")
+    @objid ("45333f74-5490-4c41-a360-911aa6b74edf")
     public static Dimensionless instantiate(final DataType obj) {
         return Dimensionless.canInstantiate(obj) ? new Dimensionless(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Dimensionless} proxy from a {@link DataType} stereotyped << Dimensionless >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link Dimensionless} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("057fe45d-61d9-4f0d-8123-d5490ba56885")
+    @objid ("bddc8632-2dac-4021-ae2c-73c325a1d4e7")
     public static Dimensionless safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (Dimensionless.canInstantiate(obj))
-        	return new Dimensionless(obj);
+            return new Dimensionless(obj);
         else
-        	throw new IllegalArgumentException("Dimensionless: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Dimensionless: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("6ca9954d-c1ed-435c-b01e-3dd33eb79abe")
+    @objid ("fdefe15e-bd08-4fb1-871f-bd82d8819f2a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class Dimensionless extends Unit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("5ba1e750-1ae0-4f53-8030-a005448c233f")
+    @objid ("077dc702-cae9-4a92-bc03-69b2f16a040f")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("7d614693-4735-4d7e-9c29-8c42c13d03e7")
+    @objid ("941d554b-8f53-4764-8a6f-bd4e9e84ecbb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class Dimensionless extends Unit {
         return result;
     }
 
-    @objid ("10a4361f-48d8-4a8a-84fe-3ec347d55d40")
+    @objid ("48de22ee-1099-473f-8fc5-bcb4b93ac639")
     protected Dimensionless(final DataType elt) {
         super(elt);
     }
 
     @objid ("1d70db3f-3af3-451e-8f06-2dfdde561927")
     public static final class MdaTypes {
-        @objid ("bea0b8ad-d782-4b62-9318-15948cd68237")
+        @objid ("fda9bd9a-1c45-4128-af1a-83f4ee9ece16")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4a56ca97-2903-4498-98fa-9a1db1a565e9")
+        @objid ("b2cbaaba-0eab-472f-a1ce-b61474c79e91")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("dba3adb3-1297-462c-9ded-639f88da8cbd")
+        @objid ("1d5a3be5-6657-46ba-ab43-3bba8b04b215")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a2ccb635-3420-43c5-8576-9ec3417628a5")
+        @objid ("4870028c-238f-4f19-802e-2d66413557aa")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4d98d5de-9085-4175-b509-30f88171f3ea");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class Dimensionless extends Unit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

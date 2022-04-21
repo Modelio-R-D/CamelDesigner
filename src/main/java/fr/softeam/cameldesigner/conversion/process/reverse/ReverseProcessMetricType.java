@@ -4,7 +4,7 @@ import java.util.Map;
 import camel.deployment.Component;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetric;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext;
@@ -64,7 +64,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         MetricTemplate metricTemplateProxy = MetricTemplate.create();
         
         if(element.getAttribute() != null) {
-            MeasurableAttribute referencedMeasurableAttribute = retrieveReferencedMeasurableAttribute(element.getAttribute());
+            MeasurableAttributeClass referencedMeasurableAttribute = retrieveReferencedMeasurableAttribute(element.getAttribute());
             if(referencedMeasurableAttribute != null) {
                 metricTemplateProxy.setAttribute(referencedMeasurableAttribute);
             }
@@ -214,18 +214,18 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     }
 
     @objid ("d991fbbf-929d-4345-b6bb-1d4f237e3fd1")
-    private MeasurableAttribute reverse(camel.core.MeasurableAttribute element) {
-        fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute measurableAttributeProxy = fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.create();
+    private MeasurableAttributeClass reverse(camel.core.MeasurableAttribute element) {
+        fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass measurableAttributeProxy = fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass.create();
         return measurableAttributeProxy;
     }
 
     @objid ("d728cbb0-fd09-4c5e-a24d-c97691c5903f")
-    private MeasurableAttribute retrieveReferencedMeasurableAttribute(camel.core.MeasurableAttribute measurableAttribute) {
-        MeasurableAttribute referencedMeasurableAttribute = null;
+    private MeasurableAttributeClass retrieveReferencedMeasurableAttribute(camel.core.MeasurableAttribute measurableAttribute) {
+        MeasurableAttributeClass referencedMeasurableAttribute = null;
         if(this.processedCamelElements.containsKey(measurableAttribute)) {
-            referencedMeasurableAttribute = (MeasurableAttribute) this.processedCamelElements.get(measurableAttribute);
+            referencedMeasurableAttribute = (MeasurableAttributeClass) this.processedCamelElements.get(measurableAttribute);
         } else {
-            referencedMeasurableAttribute = (MeasurableAttribute) this.switchReverse(measurableAttribute);
+            referencedMeasurableAttribute = (MeasurableAttributeClass) this.switchReverse(measurableAttribute);
             if(referencedMeasurableAttribute != null) {
                 referencedMeasurableAttribute.getElement().setName(measurableAttribute.getName());
                 this.processedCamelElements.put(measurableAttribute, referencedMeasurableAttribute);

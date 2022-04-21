@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.handlers.propertypages.security;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityAttribute;
-import fr.softeam.cameldesigner.handlers.propertypages.core.QualityAttributePropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.core.QualityAttributeClassPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("62396e2e-2ba7-4d7b-9a63-1385fa6d0401")
-public class SecurityAttributePropertyPage<T extends SecurityAttribute> extends QualityAttributePropertyPage<T> {
+public class SecurityAttributePropertyPage<T extends SecurityAttribute> extends QualityAttributeClassPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

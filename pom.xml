@@ -5,7 +5,7 @@
   <!-- definition -->
   <groupId>fr.softeam</groupId>
   <artifactId>cameldesigner</artifactId>
-  <version>1.0.08</version>
+  <version>1.0.09</version>
   <name>CamelDesigner</name>
   <repositories>
       <repository>

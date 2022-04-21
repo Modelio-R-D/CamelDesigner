@@ -28,7 +28,11 @@ public class SecurityModelExporter<T extends SecurityModel> extends SubModelExpo
     @objid ("37c098b7-b6dc-4b76-a76a-1eae5b79396e")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.security.SecurityModel)) {
+            ((camel.core.CamelModel) context).getSecurityModels().add((camel.security.SecurityModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

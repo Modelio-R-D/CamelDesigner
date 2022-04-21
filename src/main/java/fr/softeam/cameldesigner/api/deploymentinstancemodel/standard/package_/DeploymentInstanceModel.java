@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_;
 
@@ -43,7 +43,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("32850d2a-548f-4680-aa57-5290cf509da5")
 public class DeploymentInstanceModel extends DeploymentModel {
-    @objid ("dc6689d3-421b-4706-8cf0-85d4bc905831")
+    @objid ("08008d17-f6f3-4eed-8cc3-f3b8c475e2be")
     public static final String STEREOTYPE_NAME = "DeploymentInstanceModel";
 
     /**
@@ -54,7 +54,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("df1ebe2b-37f8-4e13-8180-666e32fbe0e0")
+    @objid ("73768c98-0b2c-4e98-bbb0-85997f04ddee")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentInstanceModel.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * 
      * @return a {@link DeploymentInstanceModel} proxy on the created {@link Package}.
      */
-    @objid ("25746496-76c9-4a58-bffa-16696ae5801e")
+    @objid ("3cea515b-841f-472f-aa96-d7053473fcd1")
     public static DeploymentInstanceModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DeploymentInstanceModel.STEREOTYPE_NAME);
@@ -72,40 +72,41 @@ public class DeploymentInstanceModel extends DeploymentModel {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentInstanceModel} proxy from a {@link Package} stereotyped << DeploymentInstanceModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentInstanceModel} proxy from a {@link Package} stereotyped << DeploymentInstanceModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link DeploymentInstanceModel} proxy or <i>null</i>.
      */
-    @objid ("0c43d6eb-6b73-4509-afcc-e300f5561b84")
+    @objid ("b4d0fc8c-184c-48fb-b6cb-8ab9a5626517")
     public static DeploymentInstanceModel instantiate(final Package obj) {
         return DeploymentInstanceModel.canInstantiate(obj) ? new DeploymentInstanceModel(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentInstanceModel} proxy from a {@link Package} stereotyped << DeploymentInstanceModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentInstanceModel} proxy from a {@link Package} stereotyped << DeploymentInstanceModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link DeploymentInstanceModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e0023171-cf2c-4f6e-97c3-522765693f8b")
+    @objid ("92ec0511-073a-45ab-b22b-e75ff130d7bf")
     public static DeploymentInstanceModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (DeploymentInstanceModel.canInstantiate(obj))
-        	return new DeploymentInstanceModel(obj);
+            return new DeploymentInstanceModel(obj);
         else
-        	throw new IllegalArgumentException("DeploymentInstanceModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DeploymentInstanceModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'communicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("fdec3a84-1308-45f0-b127-6f9e70f3286c")
+    @objid ("077811ca-3f89-46a6-97c1-daa0ba11cc39")
     public void addCommunicationInstances(final CommunicationInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -119,9 +120,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Add a value to the 'containerInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("2aed8d93-ada2-4a74-95d1-2562c3d2ca39")
+    @objid ("3d540112-b1dd-4752-87ac-1eed0c8b481a")
     public void addContainerInstances(final ContainerInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -131,9 +131,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Add a value to the 'paasInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("33b0c348-1639-4642-ae24-539438c4fb53")
+    @objid ("fb162ef6-6ac6-4a37-9655-197cd0186cba")
     public void addPaasInstances(final PaaSInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -143,9 +142,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Add a value to the 'softwareComponentInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("bbcf9ef3-1460-4a17-9154-7ca9fbd393fb")
+    @objid ("13812a8b-17a5-47cf-8ab9-2493286c53a8")
     public void addSoftwareComponentInstances(final SoftwareComponentInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -155,15 +153,14 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Add a value to the 'vmInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("382dc8cd-36f1-494a-a733-8e8f3b1f638b")
+    @objid ("4f2495d8-ed61-4918-a774-81ed29b71bc4")
     public void addVmInstances(final VMInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
     }
 
-    @objid ("ec47bc2f-c351-4ebd-89da-09c72cd7a411")
+    @objid ("07f8ef2a-d0da-4438-a556-ae3b645f7d27")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -183,9 +180,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the values of the 'communicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("c80cc985-0f26-4471-9df8-a7b99ca84152")
+    @objid ("3c758235-28a2-4204-ab47-f3d02a9a5d44")
     public List<CommunicationInstance> getCommunicationInstances() {
         List<CommunicationInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -202,23 +198,23 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the values of the 'containerInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e65174aa-ce96-48ba-8e38-aba568fb937a")
+    @objid ("36218586-5a40-419c-ae36-58f77e426941")
     public List<ContainerInstance> getContainerInstances() {
         List<ContainerInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
-        	if (ContainerInstance.canInstantiate(mObj))
-        			results.add((ContainerInstance)CamelDesignerProxyFactory.instantiate(mObj, ContainerInstance.STEREOTYPE_NAME));
-        	}
+            if (ContainerInstance.canInstantiate(mObj))
+                    results.add((ContainerInstance)CamelDesignerProxyFactory.instantiate(mObj, ContainerInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("fe047edc-c0b0-49cc-9391-cf2f14c77738")
+    @objid ("12f0a1ea-0025-4f51-950d-c5614020e7d9")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -228,15 +224,14 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the values of the 'paasInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("cf94635c-e63f-44f3-9919-9a5dfa46003b")
+    @objid ("0c6d1254-4af0-4f8e-b5ce-98fa64140e5c")
     public List<PaaSInstance> getPaasInstances() {
         List<PaaSInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
-        	if (PaaSInstance.canInstantiate(mObj))
-        			results.add((PaaSInstance)CamelDesignerProxyFactory.instantiate(mObj, PaaSInstance.STEREOTYPE_NAME));
-        	}
+            if (PaaSInstance.canInstantiate(mObj))
+                    results.add((PaaSInstance)CamelDesignerProxyFactory.instantiate(mObj, PaaSInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -244,15 +239,14 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the values of the 'softwareComponentInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("a9a1f93b-8d44-4de8-8f5d-f3b242a0831c")
+    @objid ("90268109-17b7-4fd5-9a5c-59e6c5afac76")
     public List<SoftwareComponentInstance> getSoftwareComponentInstances() {
         List<SoftwareComponentInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
-        	if (SoftwareComponentInstance.canInstantiate(mObj))
-        			results.add((SoftwareComponentInstance)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentInstance.STEREOTYPE_NAME));
-        	}
+            if (SoftwareComponentInstance.canInstantiate(mObj))
+                    results.add((SoftwareComponentInstance)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -260,9 +254,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("426023e7-9287-4fee-b5b8-b78504802f5a")
+    @objid ("79063a6c-825a-4840-b3cb-87132f3f09c5")
     public DeploymentTypeModel getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DeploymentInstanceModel.MdaTypes.MDAASSOCDEP)
@@ -278,19 +271,18 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Get the values of the 'vmInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("62961b47-fcfe-402f-ba8c-7136e97ab68f")
+    @objid ("cd3efb88-d29c-4d44-b68e-7f29ceb9bb5a")
     public List<VMInstance> getVmInstances() {
         List<VMInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
-        	if (VMInstance.canInstantiate(mObj))
-        			results.add((VMInstance)CamelDesignerProxyFactory.instantiate(mObj, VMInstance.STEREOTYPE_NAME));
-        	}
+            if (VMInstance.canInstantiate(mObj))
+                    results.add((VMInstance)CamelDesignerProxyFactory.instantiate(mObj, VMInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("6ae4e576-f3bb-4782-921a-f3754245a89e")
+    @objid ("fe6d58bd-a5f4-44dd-91d4-4e2e30e569c9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -300,9 +292,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Remove a value from 'communicationInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("9756a009-6d58-4fee-afb3-df2e0e1cdacc")
+    @objid ("01c588b7-75e9-4272-b284-d36b4f4f6f1e")
     public boolean removeCommunicationInstances(final CommunicationInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -320,9 +311,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Remove a value from the 'containerInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("ed8da136-feeb-4f36-8ce1-2ac09ea486ab")
+    @objid ("f6764696-3349-47cd-b6b0-fd4fe2de7a38")
     public boolean removeContainerInstances(final ContainerInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -331,9 +321,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Remove a value from the 'paasInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e061eeca-3f79-456a-90bd-0f384fd9ce7e")
+    @objid ("d194450f-2b52-4e6b-9f28-ee5ad472f03d")
     public boolean removePaasInstances(final PaaSInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -342,9 +331,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Remove a value from the 'softwareComponentInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("0f8ac4fa-5a79-43dc-9848-e5ecb041920e")
+    @objid ("1bb051d4-1f1c-4bf4-b5a1-36cfedd62bae")
     public boolean removeSoftwareComponentInstances(final SoftwareComponentInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -353,9 +341,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Remove a value from the 'vmInstances' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("1ad0f5bd-a32b-4cdc-a732-9be1ed23955b")
+    @objid ("48afe2ba-ee5a-4a42-925b-d9efeffb83f9")
     public boolean removeVmInstances(final VMInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -364,9 +351,8 @@ public class DeploymentInstanceModel extends DeploymentModel {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("c561190c-e4b5-4659-abf0-6445cb272388")
+    @objid ("60778243-5220-4b73-9f72-da49d773227e")
     public void setType(final DeploymentTypeModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -394,23 +380,23 @@ public class DeploymentInstanceModel extends DeploymentModel {
         return result;
     }
 
-    @objid ("1a24f9a1-84d0-4209-8c86-c5112c71b3e5")
+    @objid ("772c4faa-9654-4e59-b3e4-844280254881")
     protected DeploymentInstanceModel(final Package elt) {
         super(elt);
     }
 
     @objid ("3bc27954-cfa5-4cd5-95f8-63b26f92d695")
     public static final class MdaTypes {
-        @objid ("76610d8b-2865-4957-9ca7-6a9eb56f381f")
+        @objid ("c72a832f-b1f8-43ac-a382-c8ab6320b813")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3a8956cc-3ba3-4e56-a722-c8fc7b6e088f")
+        @objid ("8ce63099-2898-48ca-a83a-f0e58443e681")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a264a8db-d3cd-4c25-9624-d475d192287b")
+        @objid ("37c132ea-f6d8-4beb-9f1e-4d5ebee5bd8b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b12aa1d8-4da0-44b6-898a-c59cb145119d")
+        @objid ("d85aca9b-55d4-40cd-8786-c3c8bfe71442")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b43cbec3-a3d4-4d2b-90c9-eb4a56ed3ca9");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -418,11 +404,11 @@ public class DeploymentInstanceModel extends DeploymentModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -35,19 +35,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fb9d9a88-d4a0-4e3f-a3de-0a99ce0662d5")
 public class CloudProvider extends Organisation {
-    @objid ("e6f8d2b6-33c2-44f7-8300-8ead060e940e")
+    @objid ("2d31e2a8-de49-4a91-a91b-944d2d49e123")
     public static final String STEREOTYPE_NAME = "CloudProvider";
 
-    @objid ("f2c08bc1-2c59-4b57-97fd-5869c0db0def")
+    @objid ("b0f35522-980d-4983-a967-825c865714dc")
     public static final String IAAS_TAGTYPE = "IaaS";
 
-    @objid ("291b0663-623b-4bef-a40f-17b6f9058e67")
+    @objid ("437e4d3d-abd7-410a-b8de-15f0e25b0f7f")
     public static final String PAAS_TAGTYPE = "PaaS";
 
-    @objid ("23601800-f3a3-489e-9c8d-2c8031fd4884")
+    @objid ("ac7b6265-45d0-45b3-b881-934d1cc5d3fa")
     public static final String SAAS_TAGTYPE = "SaaS";
 
-    @objid ("0abf6927-11fa-4684-92d6-2d201035741c")
+    @objid ("45ef464e-c6ee-42d2-a8af-a036f709f66e")
     public static final String PUBLIC_TAGTYPE = "public";
 
     /**
@@ -58,7 +58,7 @@ public class CloudProvider extends Organisation {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a40f3471-b7f9-4f36-a411-79a882f65565")
+    @objid ("57db8315-d142-4dfc-a98b-2be63938ced3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CloudProvider.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class CloudProvider extends Organisation {
      * 
      * @return a {@link CloudProvider} proxy on the created {@link Class}.
      */
-    @objid ("7d668f0b-9846-4bfe-82f7-c23bc449a202")
+    @objid ("e3fa5d48-8042-47d6-857f-1d9301d62d63")
     public static CloudProvider create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CloudProvider.STEREOTYPE_NAME);
@@ -76,34 +76,36 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CloudProvider} proxy or <i>null</i>.
      */
-    @objid ("b564b6c9-e89d-4ccb-ae06-e804b31a0839")
+    @objid ("4a0c2994-4d9d-4a36-b455-0b0f337b2949")
     public static CloudProvider instantiate(final Class obj) {
         return CloudProvider.canInstantiate(obj) ? new CloudProvider(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CloudProvider} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("d724e550-b36e-4768-8a4d-65fdc42f886d")
+    @objid ("09af4418-9b7a-4eb5-9198-0d3d4ae09409")
     public static CloudProvider safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudProvider.canInstantiate(obj))
-        	return new CloudProvider(obj);
+            return new CloudProvider(obj);
         else
-        	throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a05165dd-a081-4344-8676-b990dae28a3a")
+    @objid ("1d45581a-6a13-45f4-9225-8859f2485e91")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,16 +122,17 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("21a964e9-87dc-4a68-a00c-95991f2444b7")
+    @objid ("fac76303-dccc-40f8-bb44-7fb91e786dc8")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("ca5de207-5977-4f8b-aa2f-07a2722dd257")
+    @objid ("a36c9f6f-0f9d-49c2-8743-0662d1891f0e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -140,7 +143,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b559242b-b9d5-4e4a-8a91-b9aaced6da62")
+    @objid ("2eac187a-473b-48d2-bf68-ae299f650c32")
     public boolean isIaaS() {
         return this.elt.isTagged(CloudProvider.MdaTypes.IAAS_TAGTYPE_ELT);
     }
@@ -150,7 +153,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("57042429-07a4-49fa-8540-6f30b976bf60")
+    @objid ("03c99242-217c-4ccc-8810-135c523676b4")
     public boolean isPaaS() {
         return this.elt.isTagged(CloudProvider.MdaTypes.PAAS_TAGTYPE_ELT);
     }
@@ -160,7 +163,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2d6e9918-4dc3-4910-8784-37454799fe87")
+    @objid ("7cad4803-e13d-4533-89ec-e93e2895f93c")
     public boolean isPublic() {
         return this.elt.isTagged(CloudProvider.MdaTypes.PUBLIC_TAGTYPE_ELT);
     }
@@ -170,7 +173,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("02dbc316-956b-41c1-ba72-d02e44a2431a")
+    @objid ("08e7d5ce-3332-4f74-bf01-81d26a8b83ca")
     public boolean isSaaS() {
         return this.elt.isTagged(CloudProvider.MdaTypes.SAAS_TAGTYPE_ELT);
     }
@@ -180,7 +183,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6ed32fea-918e-4194-9985-e437bd9685b6")
+    @objid ("a3edfff1-d04c-4e12-a91f-505b077e400f")
     public void setIaaS(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudProvider.MdaTypes.IAAS_TAGTYPE_ELT, this.elt);
@@ -193,7 +196,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8dfd6d03-6d28-493b-8571-0307262a786c")
+    @objid ("a88dda51-138d-4bfe-ab0a-de500a2bb158")
     public void setPaaS(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudProvider.MdaTypes.PAAS_TAGTYPE_ELT, this.elt);
@@ -206,7 +209,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("94dfb34f-9210-47bc-bd75-4a41a5f01ead")
+    @objid ("b068383c-ce44-481f-9bf4-ab38bf649d32")
     public void setPublic(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudProvider.MdaTypes.PUBLIC_TAGTYPE_ELT, this.elt);
@@ -219,7 +222,7 @@ public class CloudProvider extends Organisation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9c9a1d64-f2dd-409e-bb08-de0ce63b44ca")
+    @objid ("9c4b8955-019c-4292-8992-4346c9e89320")
     public void setSaaS(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudProvider.MdaTypes.SAAS_TAGTYPE_ELT, this.elt);
@@ -235,35 +238,35 @@ public class CloudProvider extends Organisation {
         return result;
     }
 
-    @objid ("d8b81815-517e-4cfc-93a3-25faf4fbbce7")
+    @objid ("8edcc75d-c16b-4a79-9a44-f3261ef22f86")
     protected CloudProvider(final Class elt) {
         super(elt);
     }
 
     @objid ("3a9e1b7d-4edb-4361-aa5d-657d494731fb")
     public static final class MdaTypes {
-        @objid ("f67035ea-789d-48e0-bab5-9c3e93fea63d")
+        @objid ("2b7e0254-2352-4c21-808c-82fd4f719d6a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ae7a6224-b600-4e5a-858e-157fefb91765")
+        @objid ("333fa506-99ff-460b-b0c3-ee9e7cd148e6")
         public static TagType PUBLIC_TAGTYPE_ELT;
 
-        @objid ("8bdf2021-c2df-4d80-81b5-2f0460299181")
+        @objid ("ce43eb26-d51f-4392-ae20-d6b1855b38a4")
         public static TagType SAAS_TAGTYPE_ELT;
 
-        @objid ("23e63e61-5fb7-4edf-b4e0-c87a373cf765")
+        @objid ("49ad6f6f-39af-4f38-9b66-2f05b57ae0a1")
         public static TagType PAAS_TAGTYPE_ELT;
 
-        @objid ("50519a91-3051-4f32-86d8-3a6639fb260d")
+        @objid ("466a8475-5405-4ac8-afaa-99608fec9d55")
         public static TagType IAAS_TAGTYPE_ELT;
 
-        @objid ("3c7e87d5-6b09-4399-8490-534002f48c8c")
+        @objid ("aefb1080-ada6-442f-8649-f31bf8333000")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("801592f3-bb96-464a-b73f-2184bc58e70f")
+        @objid ("a7c0e63e-4e26-48b8-baad-20eac55a359f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8244db4c-35be-4fd2-a71d-72218ca8de5a")
+        @objid ("1428a8f8-dfd9-4a97-98d5-98ca3bbea7ec")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "eb3e5683-72bd-4e46-8bda-1ea07af0c09e");
             PUBLIC_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a7b7a414-a54a-45b1-a53e-3126883211b8");
@@ -275,11 +278,11 @@ public class CloudProvider extends Organisation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

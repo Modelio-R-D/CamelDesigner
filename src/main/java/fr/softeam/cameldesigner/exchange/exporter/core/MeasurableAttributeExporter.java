@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1e3affd3-a822-46b9-9f98-e4c113b6f02f")
-public class MeasurableAttributeExporter<T extends MeasurableAttribute> extends CamelAttributeExporter<T> {
+public class MeasurableAttributeExporter<T extends MeasurableAttributeClass> extends CamelAttributeExporter<T> {
     @objid ("f26414ea-1ff1-419c-b922-2d0bdbfea187")
     public MeasurableAttributeExporter(T elt) {
         super(elt);

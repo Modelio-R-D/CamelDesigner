@@ -1,8 +1,5 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.statik.DataType;
 import camel.core.Attribute;
 import camel.core.CoreFactory;
 import camel.type.BooleanValue;
@@ -11,9 +8,12 @@ import camel.type.FloatValue;
 import camel.type.IntValue;
 import camel.type.StringValue;
 import camel.type.TypeFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.utils.PrimitiveTypeUtils;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.statik.DataType;
 
 @objid ("6063c182-30b1-4068-9c62-e00f2180ae02")
 public class AttributeAttributeExporter<T extends AttributeAttribute> extends CamelAttributeExporter<T> {
@@ -58,9 +58,9 @@ public class AttributeAttributeExporter<T extends AttributeAttribute> extends Ca
     private void setValue(Attribute att) {
         String content = this._element.getValue();
         ValueType type = this._element.getValueType();
-
+        
         if (content != null) {
-
+        
             //get Type Name
             String typeName = null;
             if (type != null) {
@@ -68,10 +68,10 @@ public class AttributeAttributeExporter<T extends AttributeAttribute> extends Ca
             }else {
                 typeName = PrimitiveTypeUtils.getLabel((DataType)this._element.getElement().getType());
             }
-
-
+        
+        
             if (typeName != null) {
-
+        
                 if ( (typeName.equals("StringValueType")) || (typeName.equals("StringType"))) {
                     StringValue value = TypeFactory.eINSTANCE.createStringValue();
                     value.setValue(content);

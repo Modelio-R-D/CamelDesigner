@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.exchange.exporter.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.core.CoreFactory;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("668fff4d-c8db-4b74-a22e-d38735dab8bd")
 public abstract class CamelAttributeExporter<T extends CamelAttribute> extends ExpendableElementExporter<T> {

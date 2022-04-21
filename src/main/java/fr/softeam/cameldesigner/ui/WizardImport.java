@@ -120,7 +120,7 @@ public class WizardImport extends AbstractSwtWizardWindow {
         setDescription("Description");
         setFrametitle("Model import");
         setCancelButton("Cancel");
-        setValidateButton("Export");
+        setValidateButton("Import");
     }
 
     @objid ("c3e57f1b-1562-47e0-8d20-a6e654788799")

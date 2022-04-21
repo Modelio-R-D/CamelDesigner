@@ -15,7 +15,7 @@ public class XMIExporterService extends AbstractExporterService {
     @objid ("b2729d57-cc08-4f8a-9b66-77434f527e8b")
     public XMIExporterService() {
         super(new HashMap<String, Boolean>() , XMI_EXTENSION);
-        this.options.put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
+        this._options.put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
     }
 
     @objid ("52a4ed8e-bd88-4400-89af-1f32e9f77b86")
@@ -24,7 +24,7 @@ public class XMIExporterService extends AbstractExporterService {
         final XMIResourceImpl xmires = new XMIResourceImpl(URI.createFileURI(filePath));
         xmires.getContents().add(camelModel);
         try {
-            xmires.save(this.options);
+            xmires.save(this._options);
         }catch (Exception e) {
             e.printStackTrace();
         }

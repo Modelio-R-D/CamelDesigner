@@ -6,6 +6,9 @@
  */
 package fr.softeam.cameldesigner.handlers.propertypages;
 
+import camel.core.MeasurableAttribute;
+import camel.core.QualityAttribute;
+import camel.type.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency.Annotation;
@@ -14,15 +17,15 @@ import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttrib
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.Application;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ConstraintModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetadataModelDiagram;
@@ -157,7 +160,6 @@ import fr.softeam.cameldesigner.api.typemodel.standard.class_.IntValue;
 import fr.softeam.cameldesigner.api.typemodel.standard.class_.Limit;
 import fr.softeam.cameldesigner.api.typemodel.standard.class_.StringValue;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
-import fr.softeam.cameldesigner.api.typemodel.standard.datatype.CamelList;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;
@@ -174,8 +176,10 @@ import fr.softeam.cameldesigner.handlers.propertypages.core.CamelModelPropertyPa
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeatureClassPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeatureInstancePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePortPropertyPage;
-import fr.softeam.cameldesigner.handlers.propertypages.core.MeasurableAttributePropertyPage;
-import fr.softeam.cameldesigner.handlers.propertypages.core.QualityAttributePropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.core.MeasurableAttributeAttributePropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.core.MeasurableAttributeClassPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.core.QualityAttributeAttributePropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.core.QualityAttributeClassPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.data.DataInstanceModelPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.data.DataInstancePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.data.DataPropertyPage;
@@ -607,8 +611,8 @@ public class CamelDesignerPropertyPageFactory {
         public final Object visitClass(Class obj) {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.STEREOTYPE_NAME: return new AttributeClassPropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.instantiate(obj));
-            case fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute.STEREOTYPE_NAME: return new QualityAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute.instantiate(obj));
-            case fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.STEREOTYPE_NAME: return new MeasurableAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.instantiate(obj));
+            case fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass.STEREOTYPE_NAME: return new QualityAttributeClassPropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass.instantiate(obj));
+            case fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass.STEREOTYPE_NAME: return new MeasurableAttributeClassPropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass.instantiate(obj));
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.Application.STEREOTYPE_NAME: return new ApplicationPropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.Application.instantiate(obj));
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.STEREOTYPE_NAME: return new FeatureClassPropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.instantiate(obj));
             case fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.STEREOTYPE_NAME: return new DataPropertyPage<>(fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.instantiate(obj));
@@ -729,6 +733,8 @@ public class CamelDesignerPropertyPageFactory {
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute.STEREOTYPE_NAME: return new AttributeAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute.instantiate(obj));
+            case fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute.STEREOTYPE_NAME: return new QualityAttributeAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute.instantiate(obj));
+            case fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute.STEREOTYPE_NAME: return new MeasurableAttributeAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute.instantiate(obj));
             case fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty.STEREOTYPE_NAME: return new MmsPropertyPropertyPage<>(fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty.instantiate(obj));
             default:
                 break;

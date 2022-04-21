@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("572cad03-96ad-4628-9ea6-cb55bb5f2e80")
 public class RawMetric extends Metric {
-    @objid ("c316e2df-9fdd-4c5f-9058-7e1be55f78d8")
+    @objid ("f60d5e19-11a0-4036-9cc6-5b0475e99420")
     public static final String STEREOTYPE_NAME = "RawMetric";
 
     /**
@@ -46,7 +46,7 @@ public class RawMetric extends Metric {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("762daf81-4a88-49d6-af74-fb68f535ca5d")
+    @objid ("071b9520-2eeb-4807-98c5-26cf87fe51eb")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RawMetric.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class RawMetric extends Metric {
      * 
      * @return a {@link RawMetric} proxy on the created {@link Class}.
      */
-    @objid ("5ac41ff7-32cd-4a75-bf55-f3dc877d17aa")
+    @objid ("a31403ed-934a-4149-a32a-e3c885ef5e53")
     public static RawMetric create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RawMetric.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class RawMetric extends Metric {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RawMetric} proxy or <i>null</i>.
      */
-    @objid ("f9bc37b1-1a53-4150-a404-d6804d6cc1ed")
+    @objid ("405aed99-a3c0-4af9-8787-f91150dd932a")
     public static RawMetric instantiate(final Class obj) {
         return RawMetric.canInstantiate(obj) ? new RawMetric(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetric} proxy from a {@link Class} stereotyped << RawMetric >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RawMetric} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("34248c6d-3338-4b89-9023-63612e767bdf")
+    @objid ("3382041f-5d2b-48be-9b50-ad550fa2cb26")
     public static RawMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RawMetric.canInstantiate(obj))
-        	return new RawMetric(obj);
+            return new RawMetric(obj);
         else
-        	throw new IllegalArgumentException("RawMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RawMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fcc53fd4-5efa-4417-9d45-5d0c0a15a3e7")
+    @objid ("e7358dd8-4afc-4bd7-9c6a-f18e7f37fbdd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class RawMetric extends Metric {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("c60c65b6-0c6b-4f8d-8684-e942db43d750")
+    @objid ("b6ae41a0-f8b5-478b-b023-a8a0fd5fb35a")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("3d00f7ec-cba5-4f1e-98ec-a8fbb84c1c57")
+    @objid ("f3dcafdb-e90f-48ed-b278-c69fce40c93f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class RawMetric extends Metric {
         return result;
     }
 
-    @objid ("0be40291-da18-4f85-8989-6842d8d1bdb2")
+    @objid ("8d0e5f9e-42f7-4367-a542-a8a51124257a")
     protected RawMetric(final Class elt) {
         super(elt);
     }
 
     @objid ("9403e058-8f41-410e-a153-e595cb37e02b")
     public static final class MdaTypes {
-        @objid ("7776bda7-497d-46d9-afea-3ec734e82f64")
+        @objid ("0dceeff1-d8af-4d59-bd0c-213b14279e83")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5d8d6c34-4f4a-4001-82b8-42ee06126a4f")
+        @objid ("ba922f05-462e-46b8-bcf4-9c90fadd5898")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("dff5a0ab-caee-4c94-aada-96d06681fa33")
+        @objid ("8dcb4b5f-2077-459e-806f-a909c28bda80")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8c27bab7-494a-4db9-b134-f03188c53327")
+        @objid ("b5fe395d-9713-4bfd-b9de-44ddedb8d1fd")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "01e0501b-37c4-4e17-af3c-6a30e6ad9290");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class RawMetric extends Metric {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

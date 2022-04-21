@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("73ef4e61-0be5-40e6-8c65-2c42095a3cd4")
 public class ConstraintModelDiagram extends AbstractCamelDiagram {
-    @objid ("5ff47e46-440d-427c-a78e-bfb440be2883")
+    @objid ("b675dd21-78b2-41c3-a884-09ab1659aaab")
     public static final String STEREOTYPE_NAME = "ConstraintModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e3d59ff0-9aaa-4349-adbd-e79fc1a72569")
+    @objid ("681c220d-a5ec-46b0-9d8d-378bd9ee6577")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ConstraintModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link ConstraintModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("ce9e9ffa-f27b-4eb6-9c18-31e2d7000948")
+    @objid ("64154d9c-0e76-43f7-9d3d-0edc4c060e8c")
     public static ConstraintModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ConstraintModelDiagram.STEREOTYPE_NAME);
@@ -65,34 +65,36 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link ConstraintModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ConstraintModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ConstraintModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ConstraintModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link ConstraintModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("877ccde1-e555-4f03-8eeb-a34dc0ee9806")
+    @objid ("606a6c6b-7804-4c13-988a-25c64fcb6ba5")
     public static ConstraintModelDiagram instantiate(final ClassDiagram obj) {
         return ConstraintModelDiagram.canInstantiate(obj) ? new ConstraintModelDiagram(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ConstraintModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ConstraintModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ConstraintModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ConstraintModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link ConstraintModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f4dbc676-b10d-42e5-ae6f-6e1708562257")
+    @objid ("8dd2e269-8151-44d8-a0bc-544490ece589")
     public static ConstraintModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (ConstraintModelDiagram.canInstantiate(obj))
-        	return new ConstraintModelDiagram(obj);
+            return new ConstraintModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("ConstraintModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ConstraintModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("916eecbe-0b71-4c37-a95c-daa4635409df")
+    @objid ("99826dff-a639-402d-b2e1-12e1c5bd40a6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,16 +111,17 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("2895ec0c-684a-438f-b60f-1828ded7c3aa")
+    @objid ("b633a224-2fb9-4956-865a-11f84d19136e")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("d3607437-2990-479a-8a0c-5c675ee55e88")
+    @objid ("4831ae2d-72fc-474d-8101-18e3b4fd4b28")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("8ac0d7e9-ee0a-47ab-90e5-c3aa4be83a63")
+    @objid ("201fde6f-93c1-43a8-9fb0-3558b4479ca9")
     protected ConstraintModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("f2dc5f5a-e2e0-4d73-94bc-bce60436b972")
     public static final class MdaTypes {
-        @objid ("38dd92ae-82aa-4456-afac-10df471f29ab")
+        @objid ("bead487d-738a-4e00-a1a2-9e44f51117ca")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9ea0a034-db03-4fd2-a73f-08e3b6ff1563")
+        @objid ("92ee7f1e-a345-4e6f-a5bf-92439b9902c5")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("08368303-e3be-43e2-ad58-6a458ecb1182")
+        @objid ("78f863b1-4027-44f3-b5b5-416909d2c67f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("471d8101-d0a3-46ee-8ed4-76bc2a9da70e")
+        @objid ("7380feb8-5849-4da2-a89b-1bb1fe89308b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "62499a4d-4037-4aef-bb40-8b5495465a22");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class ConstraintModelDiagram extends AbstractCamelDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

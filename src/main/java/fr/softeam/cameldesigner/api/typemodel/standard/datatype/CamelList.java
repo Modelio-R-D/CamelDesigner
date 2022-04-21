@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("74dc4c59-0c01-4785-91ec-67fd63d087d4")
 public class CamelList extends ValueType {
-    @objid ("3c043c5d-7710-433e-a2a0-0a22e5f6ee8c")
+    @objid ("88195c94-dcf2-4aaa-a270-ddc89b4087b1")
     public static final String STEREOTYPE_NAME = "CamelList";
 
     /**
@@ -45,7 +45,7 @@ public class CamelList extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8e0c46ae-21dc-489f-9fd2-985e337dc3d8")
+    @objid ("4b60f616-1411-4804-b2dc-622972879217")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelList.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class CamelList extends ValueType {
      * 
      * @return a {@link CamelList} proxy on the created {@link DataType}.
      */
-    @objid ("f1d1e030-8eea-4a8a-aece-1de8cb1e74ad")
+    @objid ("6ee88d68-d230-4134-9571-918e254531ce")
     public static CamelList create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CamelList.STEREOTYPE_NAME);
@@ -63,34 +63,36 @@ public class CamelList extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link CamelList} proxy from a {@link DataType} stereotyped << CamelList >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CamelList} proxy from a {@link DataType} stereotyped << CamelList >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link CamelList} proxy or <i>null</i>.
      */
-    @objid ("da767808-83b3-46b2-97c4-306c5ca8e929")
+    @objid ("2db88fb3-ac23-4289-a0d2-bfb35d518413")
     public static CamelList instantiate(final DataType obj) {
         return CamelList.canInstantiate(obj) ? new CamelList(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CamelList} proxy from a {@link DataType} stereotyped << CamelList >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CamelList} proxy from a {@link DataType} stereotyped << CamelList >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link CamelList} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a18559a2-d83b-4d55-a756-ca03899ad70b")
+    @objid ("08bbf5a5-3445-48ef-93b2-99169a7d478a")
     public static CamelList safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (CamelList.canInstantiate(obj))
-        	return new CamelList(obj);
+            return new CamelList(obj);
         else
-        	throw new IllegalArgumentException("CamelList: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CamelList: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("25a8ac00-dd59-4938-89bb-ac17d0a04cd8")
+    @objid ("8f98b609-6a69-41c3-9247-84b59ca3dc86")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -107,16 +109,17 @@ public class CamelList extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("39237b3f-c6f5-46df-90f1-47a59dfae6fa")
+    @objid ("c88e0dfa-5e64-4b1c-a271-3aba8ea10e05")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("21479161-d44c-437d-a45a-a0635c2a92f0")
+    @objid ("46af15d6-463b-4377-b74d-b0fa2a5ee149")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -130,23 +133,23 @@ public class CamelList extends ValueType {
         return result;
     }
 
-    @objid ("6d3663e0-6084-4175-8142-f35e27a60df3")
+    @objid ("647940b2-86e2-4b6d-814e-444d7ed40fdb")
     protected CamelList(final DataType elt) {
         super(elt);
     }
 
     @objid ("93dc7140-11bf-49e8-a555-177609936c7a")
     public static final class MdaTypes {
-        @objid ("b683fcfe-53b5-4bf4-ae5a-6d0b3b00c1a3")
+        @objid ("8c3b2e46-2a6e-465c-9ad4-98cf6af9450c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("db2932d6-7bb8-4ba2-9a9c-f48e4ab0b7c2")
+        @objid ("294aeef0-3c4e-4cbf-91c4-a96bc3ce3f0a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("15072d7d-ef5d-4973-a20c-91e964907719")
+        @objid ("49f7341e-55c7-43e9-813a-399e957967e3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8e638825-3ba9-43eb-93b7-9aad013ccd76")
+        @objid ("8ec13d5b-e53e-4e74-a22e-6f60caf19412")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "789c3b87-cb58-4659-a04c-7f948aae0e2e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -154,11 +157,11 @@ public class CamelList extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

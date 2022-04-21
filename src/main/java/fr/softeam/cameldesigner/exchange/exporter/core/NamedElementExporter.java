@@ -26,6 +26,11 @@ public abstract class NamedElementExporter<T extends NamedElement> extends Camel
             setName(namedElt);
             setDescription(namedElt);
         }
+        else if (elt instanceof camel.mms.MmsObject) {
+            camel.mms.MmsObject namedElt = (camel.mms.MmsObject) elt;
+            setName(namedElt);
+            setDescription(namedElt);
+        }
     }
 
     @objid ("3985a6ea-ddc1-4e51-9e0e-fcfeb1dd43e9")
@@ -35,13 +40,29 @@ public abstract class NamedElementExporter<T extends NamedElement> extends Camel
 
     @objid ("5bfee16c-5dc4-47fe-8003-f455e306babb")
     private void setDescription(camel.core.NamedElement elt) {
-        elt.setDescription(this._element.getDescription());
+        String content = this._element.getDescription();
+        if ((content != null) && (!(content.equals("")))){
+            elt.setDescription(content);
+        }
     }
 
     @objid ("aaf30836-c352-43b1-820b-e99993b1686a")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("4e056703-1f68-400d-934f-325e897179b4")
+    private void setName(camel.mms.MmsObject elt) {
+        elt.setName(this._element.getName());
+    }
+
+    @objid ("ca186abd-7a22-4139-b07f-9b06648987d3")
+    private void setDescription(camel.mms.MmsObject elt) {
+        String content = this._element.getDescription();
+        if ((content != null) && (!(content.equals("")))){
+            elt.setDescription(content);
+        }
     }
 
 }

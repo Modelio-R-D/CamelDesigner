@@ -2,11 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter.core;
 
 import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("f1fd75a5-d6d1-4c56-96a2-7f2ac229c9a8")
-public class QualityAttributeExporter<T extends QualityAttribute> extends CamelAttributeExporter<T> {
+public class QualityAttributeExporter<T extends QualityAttributeClass> extends CamelAttributeExporter<T> {
     @objid ("db4ba2de-ca4a-4cd0-b6d1-6d933360068c")
     public QualityAttributeExporter(T elt) {
         super(elt);

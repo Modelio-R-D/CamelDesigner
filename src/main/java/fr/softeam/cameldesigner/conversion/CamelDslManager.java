@@ -12,11 +12,11 @@ public class CamelDslManager {
     @objid ("4b3de950-e3b1-471f-97c5-1cbaa0443fee")
     private Injector injector;
 
+    @objid ("4f9596a6-4e35-4efe-bc54-c03a2d52f8fc")
+    private CamelDslStandaloneSetup camelDslStandaloneSetup;
+
     @objid ("c61792a2-ba4e-4df6-9c2d-7c4533c04449")
     private static final CamelDslManager instance = new CamelDslManager();
-
-    @objid ("62623502-1255-4bb0-8573-8f8b769a762f")
-    private CamelDslStandaloneSetup camelDslStandaloneSetup;
 
     @objid ("54017f4c-4137-451f-9824-a53348d0a53c")
     private CamelDslManager() {

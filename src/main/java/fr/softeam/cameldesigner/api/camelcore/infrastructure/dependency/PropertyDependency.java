@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.dependency;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("66e1dd55-fc1a-4daa-b03e-a10778bf9f73")
 public class PropertyDependency extends CamelElement {
-    @objid ("66b61cf1-ff4b-4f32-8aba-65061cd77afe")
+    @objid ("ae9fde68-da7c-4297-adf8-776df1594a62")
     public static final String STEREOTYPE_NAME = "PropertyDependency";
 
     /**
@@ -45,7 +45,7 @@ public class PropertyDependency extends CamelElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0a70b8e0-5353-4e29-8725-4915379b3deb")
+    @objid ("6691d50a-9c47-45a1-9d3c-c208b4852d94")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Dependency) && ((Dependency) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PropertyDependency.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class PropertyDependency extends CamelElement {
      * 
      * @return a {@link PropertyDependency} proxy on the created {@link Dependency}.
      */
-    @objid ("0ac52fe4-c3e0-42c5-8dcb-f29eff324ee8")
+    @objid ("42c2a61d-5ea5-4963-881e-657c77409b02")
     public static PropertyDependency create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Infrastructure.Dependency");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PropertyDependency.STEREOTYPE_NAME);
@@ -63,34 +63,36 @@ public class PropertyDependency extends CamelElement {
     }
 
     /**
-     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Dependency
      * @return a {@link PropertyDependency} proxy or <i>null</i>.
      */
-    @objid ("fc69e911-6985-4aab-ac4a-78129f7950fd")
+    @objid ("5440567b-9e10-4fa0-9d25-0fe6feccdfc1")
     public static PropertyDependency instantiate(final Dependency obj) {
         return PropertyDependency.canInstantiate(obj) ? new PropertyDependency(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PropertyDependency} proxy from a {@link Dependency} stereotyped << PropertyDependency >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Dependency}
      * @return a {@link PropertyDependency} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("13447715-9022-43cf-91fb-2b4a8e96e3fb")
+    @objid ("f203c824-44be-4d8e-9317-c859f9ea5182")
     public static PropertyDependency safeInstantiate(final Dependency obj) throws IllegalArgumentException {
         if (PropertyDependency.canInstantiate(obj))
-        	return new PropertyDependency(obj);
+            return new PropertyDependency(obj);
         else
-        	throw new IllegalArgumentException("PropertyDependency: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PropertyDependency: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("f231e121-260c-4467-8382-dfd95cc9f713")
+    @objid ("7db64d9c-7246-4b1c-924d-a034b32b3c35")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -107,16 +109,17 @@ public class PropertyDependency extends CamelElement {
     }
 
     /**
-     * Get the underlying {@link Dependency}. 
+     * Get the underlying {@link Dependency}.
+     * 
      * @return the Dependency represented by this proxy, never null.
      */
-    @objid ("061c52d3-bee0-4b87-9fac-7861cc5ed1a9")
+    @objid ("712eea4b-3756-4fd5-8207-3a6dce5f2b8f")
     @Override
     public Dependency getElement() {
         return (Dependency)super.getElement();
     }
 
-    @objid ("00692b86-7b72-4c6e-a7df-5f2f069f782c")
+    @objid ("d0fc82b1-e380-446c-857e-3dc52ba10970")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -129,23 +132,23 @@ public class PropertyDependency extends CamelElement {
         return result;
     }
 
-    @objid ("e1c422a9-84a9-4e46-bbaa-cbe6d96d0a90")
+    @objid ("c4f32271-daee-4263-b05f-5520bedeb240")
     protected PropertyDependency(final Dependency elt) {
         super(elt);
     }
 
     @objid ("ee885f54-f4e7-4fbc-9bb2-acd65bf59695")
     public static final class MdaTypes {
-        @objid ("12a2023b-377d-4153-b91f-f511d3421509")
+        @objid ("5a4ea156-1cd7-4e54-8ea3-472b184982e5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1380be16-f998-4d56-b3b7-dd10b21f43f8")
+        @objid ("506f714c-fcd2-4cf4-aa4b-f7d5578ac81c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8863b371-6f56-4a20-b18c-2fa807b8afbf")
+        @objid ("62eb7a39-75a5-4360-a59b-3f24ac9cfb2f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("de9caa5e-8298-43f6-8620-fea78dac0af0")
+        @objid ("dcc1f67d-6ad5-411a-affe-df2be8fff519")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "738c4b6c-0cf3-4276-b6d9-7fe4ec31ff01");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -153,11 +156,11 @@ public class PropertyDependency extends CamelElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.handlers.propertypages.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("039449b2-fc5c-46dc-ad44-84986957f219")
-public class QualityAttributePropertyPage<T extends QualityAttribute> extends CamelAttributePropertyPage<T> {
+public class QualityAttributePropertyPage<T extends QualityAttributeClass> extends CamelAttributePropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.

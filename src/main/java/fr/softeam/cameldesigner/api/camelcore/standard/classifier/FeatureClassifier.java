@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.classifier;
 
@@ -17,6 +17,8 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.artifact.FeatureArtifact;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.Application;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.datatype.FeatureDataType;
@@ -125,7 +127,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2d7f6e37-5b08-4a69-88e8-d8b0a19ca96a")
 public abstract class FeatureClassifier extends Feature {
-    @objid ("1c774812-33c1-4a72-8d22-80bf94386fa4")
+    @objid ("35926a0f-2884-479b-bbc6-592453d71fb6")
     public static final String STEREOTYPE_NAME = "Feature_Classifier";
 
     /**
@@ -136,7 +138,7 @@ public abstract class FeatureClassifier extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b51f00f7-fbfa-4fe8-af7a-0dc815325892")
+    @objid ("c3dbd314-eb65-475f-9bfc-14aaad07ab49")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Classifier) && ((Classifier) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureClassifier.STEREOTYPE_NAME));
     }
@@ -145,9 +147,8 @@ public abstract class FeatureClassifier extends Feature {
      * Add a value to the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e7bba9e3-be49-42b6-a8f8-64b49bc8cdaa")
+    @objid ("93ff7e75-99f8-440a-8e2f-36b61a689b13")
     public void addAttributes(final AttributeAttribute obj) {
         if (obj!=null)
           ((Classifier) this.elt).getOwnedAttribute().add(obj.getElement());
@@ -157,15 +158,14 @@ public abstract class FeatureClassifier extends Feature {
      * Add a value to the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("d3452ad0-6738-4773-9e35-8d9d35e293ce")
+    @objid ("89f1ddf0-8d47-44d6-901d-1c18e9650b74")
     public void addSubFeatures(final FeatureClassifier obj) {
         if (obj!=null)
           ((Classifier) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("044a9c60-8b92-4137-9f24-0b04ce178357")
+    @objid ("f510d58c-9b42-4e92-ad1b-e1f31fcddbbc")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -185,23 +185,27 @@ public abstract class FeatureClassifier extends Feature {
      * Get the values of the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("369fe9af-1810-4a5b-aae4-c408e661ee40")
+    @objid ("86f1ee7b-6786-4b83-a905-0a1bbaa24631")
     public List<AttributeAttribute> getAttributes() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Classifier) this.elt).getOwnedAttribute()){
-        	if (AttributeAttribute.canInstantiate(mObj))
-        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
-        	}
+            if (MeasurableAttributeAttribute.canInstantiate(mObj))
+                    results.add((MeasurableAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeAttribute.STEREOTYPE_NAME));
+            if (QualityAttributeAttribute.canInstantiate(mObj))
+                    results.add((QualityAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeAttribute.STEREOTYPE_NAME));
+            if (AttributeAttribute.canInstantiate(mObj))
+                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Classifier}. 
+     * Get the underlying {@link Classifier}.
+     * 
      * @return the Classifier represented by this proxy, never null.
      */
-    @objid ("79a169bf-0ba3-4c99-bdb2-e9caf3d13511")
+    @objid ("1e6f95a0-8730-44da-a527-f26611da4451")
     @Override
     public Classifier getElement() {
         return (Classifier)super.getElement();
@@ -211,9 +215,8 @@ public abstract class FeatureClassifier extends Feature {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("4ca8f6d1-e3fb-4437-b742-fec0236e6416")
+    @objid ("bc256007-2cae-453b-b751-9fa74a58cd08")
     public FeatureClassifier getParent() {
         return (FeatureClassifier)CamelDesignerProxyFactory.instantiate(((Classifier) this.elt).getOwner(), FeatureClassifier.STEREOTYPE_NAME);
     }
@@ -222,189 +225,188 @@ public abstract class FeatureClassifier extends Feature {
      * Get the values of the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("cb194973-f2a6-41c7-9451-e2d241601d0a")
+    @objid ("29fe786b-0340-42cf-9770-e21045f10804")
     public List<FeatureClassifier> getSubFeatures() {
         List<FeatureClassifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Classifier) this.elt).getOwnedElement()){
-        	if (BuildConfiguration.canInstantiate(mObj))
-        			results.add((BuildConfiguration)CamelDesignerProxyFactory.instantiate(mObj, BuildConfiguration.STEREOTYPE_NAME));
-        	if (ClusterConfiguration.canInstantiate(mObj))
-        			results.add((ClusterConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ClusterConfiguration.STEREOTYPE_NAME));
-        	if (PaaSConfiguration.canInstantiate(mObj))
-        			results.add((PaaSConfiguration)CamelDesignerProxyFactory.instantiate(mObj, PaaSConfiguration.STEREOTYPE_NAME));
-        	if (ScriptConfiguration.canInstantiate(mObj))
-        			results.add((ScriptConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ScriptConfiguration.STEREOTYPE_NAME));
-        	if (ServerlessConfiguration.canInstantiate(mObj))
-        			results.add((ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ServerlessConfiguration.STEREOTYPE_NAME));
-        	if (EventConfiguration.canInstantiate(mObj))
-        			results.add((EventConfiguration)CamelDesignerProxyFactory.instantiate(mObj, EventConfiguration.STEREOTYPE_NAME));
-        	if (FeatureArtifact.canInstantiate(mObj))
-        			results.add((FeatureArtifact)CamelDesignerProxyFactory.instantiate(mObj, FeatureArtifact.STEREOTYPE_NAME));
-        	if (Application.canInstantiate(mObj))
-        			results.add((Application)CamelDesignerProxyFactory.instantiate(mObj, Application.STEREOTYPE_NAME));
-        	if (Data.canInstantiate(mObj))
-        			results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
-        	if (DataSource.canInstantiate(mObj))
-        			results.add((DataSource)CamelDesignerProxyFactory.instantiate(mObj, DataSource.STEREOTYPE_NAME));
-        	if (Container.canInstantiate(mObj))
-        			results.add((Container)CamelDesignerProxyFactory.instantiate(mObj, Container.STEREOTYPE_NAME));
-        	if (PaaS.canInstantiate(mObj))
-        			results.add((PaaS)CamelDesignerProxyFactory.instantiate(mObj, PaaS.STEREOTYPE_NAME));
-        	if (Sensor.canInstantiate(mObj))
-        			results.add((Sensor)CamelDesignerProxyFactory.instantiate(mObj, Sensor.STEREOTYPE_NAME));
-        	if (SoftwareComponent.canInstantiate(mObj))
-        			results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponent.STEREOTYPE_NAME));
-        	if (VM.canInstantiate(mObj))
-        			results.add((VM)CamelDesignerProxyFactory.instantiate(mObj, VM.STEREOTYPE_NAME));
-        	if (RequirementSet.canInstantiate(mObj))
-        			results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(mObj, RequirementSet.STEREOTYPE_NAME));
-        	if (RuleTrigger.canInstantiate(mObj))
-        			results.add((RuleTrigger)CamelDesignerProxyFactory.instantiate(mObj, RuleTrigger.STEREOTYPE_NAME));
-        	if (SLOViolation.canInstantiate(mObj))
-        			results.add((SLOViolation)CamelDesignerProxyFactory.instantiate(mObj, SLOViolation.STEREOTYPE_NAME));
-        	if (Cause.canInstantiate(mObj))
-        			results.add((Cause)CamelDesignerProxyFactory.instantiate(mObj, Cause.STEREOTYPE_NAME));
-        	if (HistoryInfo.canInstantiate(mObj))
-        			results.add((HistoryInfo)CamelDesignerProxyFactory.instantiate(mObj, HistoryInfo.STEREOTYPE_NAME));
-        	if (HistoryRecord.canInstantiate(mObj))
-        			results.add((HistoryRecord)CamelDesignerProxyFactory.instantiate(mObj, HistoryRecord.STEREOTYPE_NAME));
-        	if (ApplicationMeasurement.canInstantiate(mObj))
-        			results.add((ApplicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ApplicationMeasurement.STEREOTYPE_NAME));
-        	if (CommunicationMeasurement.canInstantiate(mObj))
-        			results.add((CommunicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, CommunicationMeasurement.STEREOTYPE_NAME));
-        	if (ContainerMeasurement.canInstantiate(mObj))
-        			results.add((ContainerMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ContainerMeasurement.STEREOTYPE_NAME));
-        	if (DataMeasurement.canInstantiate(mObj))
-        			results.add((DataMeasurement)CamelDesignerProxyFactory.instantiate(mObj, DataMeasurement.STEREOTYPE_NAME));
-        	if (PaaSMeasurement.canInstantiate(mObj))
-        			results.add((PaaSMeasurement)CamelDesignerProxyFactory.instantiate(mObj, PaaSMeasurement.STEREOTYPE_NAME));
-        	if (SoftwareComponentMeasurement.canInstantiate(mObj))
-        			results.add((SoftwareComponentMeasurement)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentMeasurement.STEREOTYPE_NAME));
-        	if (VMMeasurement.canInstantiate(mObj))
-        			results.add((VMMeasurement)CamelDesignerProxyFactory.instantiate(mObj, VMMeasurement.STEREOTYPE_NAME));
-        	if (AttributeContext.canInstantiate(mObj))
-        			results.add((AttributeContext)CamelDesignerProxyFactory.instantiate(mObj, AttributeContext.STEREOTYPE_NAME));
-        	if (Function.canInstantiate(mObj))
-        			results.add((Function)CamelDesignerProxyFactory.instantiate(mObj, Function.STEREOTYPE_NAME));
-        	if (CompositeSecurityMetric.canInstantiate(mObj))
-        			results.add((CompositeSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeSecurityMetric.STEREOTYPE_NAME));
-        	if (CompositeMetric.canInstantiate(mObj))
-        			results.add((CompositeMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeMetric.STEREOTYPE_NAME));
-        	if (MetricVariable.canInstantiate(mObj))
-        			results.add((MetricVariable)CamelDesignerProxyFactory.instantiate(mObj, MetricVariable.STEREOTYPE_NAME));
-        	if (RawSecurityMetric.canInstantiate(mObj))
-        			results.add((RawSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, RawSecurityMetric.STEREOTYPE_NAME));
-        	if (RawMetric.canInstantiate(mObj))
-        			results.add((RawMetric)CamelDesignerProxyFactory.instantiate(mObj, RawMetric.STEREOTYPE_NAME));
-        	if (CompositeMetricContext.canInstantiate(mObj))
-        			results.add((CompositeMetricContext)CamelDesignerProxyFactory.instantiate(mObj, CompositeMetricContext.STEREOTYPE_NAME));
-        	if (RawMetricContext.canInstantiate(mObj))
-        			results.add((RawMetricContext)CamelDesignerProxyFactory.instantiate(mObj, RawMetricContext.STEREOTYPE_NAME));
-        	if (MetricObjectBinding.canInstantiate(mObj))
-        			results.add((MetricObjectBinding)CamelDesignerProxyFactory.instantiate(mObj, MetricObjectBinding.STEREOTYPE_NAME));
-        	if (MetricTemplate.canInstantiate(mObj))
-        			results.add((MetricTemplate)CamelDesignerProxyFactory.instantiate(mObj, MetricTemplate.STEREOTYPE_NAME));
-        	if (ObjectContext.canInstantiate(mObj))
-        			results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(mObj, ObjectContext.STEREOTYPE_NAME));
-        	if (Schedule.canInstantiate(mObj))
-        			results.add((Schedule)CamelDesignerProxyFactory.instantiate(mObj, Schedule.STEREOTYPE_NAME));
-        	if (Window.canInstantiate(mObj))
-        			results.add((Window)CamelDesignerProxyFactory.instantiate(mObj, Window.STEREOTYPE_NAME));
-        	if (CloudCredentials.canInstantiate(mObj))
-        			results.add((CloudCredentials)CamelDesignerProxyFactory.instantiate(mObj, CloudCredentials.STEREOTYPE_NAME));
-        	if (PlatformCredentials.canInstantiate(mObj))
-        			results.add((PlatformCredentials)CamelDesignerProxyFactory.instantiate(mObj, PlatformCredentials.STEREOTYPE_NAME));
-        	if (CloudProvider.canInstantiate(mObj))
-        			results.add((CloudProvider)CamelDesignerProxyFactory.instantiate(mObj, CloudProvider.STEREOTYPE_NAME));
-        	if (Organisation.canInstantiate(mObj))
-        			results.add((Organisation)CamelDesignerProxyFactory.instantiate(mObj, Organisation.STEREOTYPE_NAME));
-        	if (User.canInstantiate(mObj))
-        			results.add((User)CamelDesignerProxyFactory.instantiate(mObj, User.STEREOTYPE_NAME));
-        	if (Entity.canInstantiate(mObj))
-        			results.add((Entity)CamelDesignerProxyFactory.instantiate(mObj, Entity.STEREOTYPE_NAME));
-        	if (ExternalIdentifier.canInstantiate(mObj))
-        			results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
-        	if (Permission.canInstantiate(mObj))
-        			results.add((Permission)CamelDesignerProxyFactory.instantiate(mObj, Permission.STEREOTYPE_NAME));
-        	if (DataResourceFilter.canInstantiate(mObj))
-        			results.add((DataResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, DataResourceFilter.STEREOTYPE_NAME));
-        	if (ModelResourceFilter.canInstantiate(mObj))
-        			results.add((ModelResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ModelResourceFilter.STEREOTYPE_NAME));
-        	if (ServiceResourceFilter.canInstantiate(mObj))
-        			results.add((ServiceResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ServiceResourceFilter.STEREOTYPE_NAME));
-        	if (SoftwareComponentResourceFilter.canInstantiate(mObj))
-        			results.add((SoftwareComponentResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentResourceFilter.STEREOTYPE_NAME));
-        	if (Role.canInstantiate(mObj))
-        			results.add((Role)CamelDesignerProxyFactory.instantiate(mObj, Role.STEREOTYPE_NAME));
-        	if (RoleAssignment.canInstantiate(mObj))
-        			results.add((RoleAssignment)CamelDesignerProxyFactory.instantiate(mObj, RoleAssignment.STEREOTYPE_NAME));
-        	if (UserGroup.canInstantiate(mObj))
-        			results.add((UserGroup)CamelDesignerProxyFactory.instantiate(mObj, UserGroup.STEREOTYPE_NAME));
-        	if (BinaryEventPattern.canInstantiate(mObj))
-        			results.add((BinaryEventPattern)CamelDesignerProxyFactory.instantiate(mObj, BinaryEventPattern.STEREOTYPE_NAME));
-        	if (UnaryEventPattern.canInstantiate(mObj))
-        			results.add((UnaryEventPattern)CamelDesignerProxyFactory.instantiate(mObj, UnaryEventPattern.STEREOTYPE_NAME));
-        	if (FunctionalEvent.canInstantiate(mObj))
-        			results.add((FunctionalEvent)CamelDesignerProxyFactory.instantiate(mObj, FunctionalEvent.STEREOTYPE_NAME));
-        	if (NonFunctionalEvent.canInstantiate(mObj))
-        			results.add((NonFunctionalEvent)CamelDesignerProxyFactory.instantiate(mObj, NonFunctionalEvent.STEREOTYPE_NAME));
-        	if (ScalabilityRule.canInstantiate(mObj))
-        			results.add((ScalabilityRule)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityRule.STEREOTYPE_NAME));
-        	if (Timer.canInstantiate(mObj))
-        			results.add((Timer)CamelDesignerProxyFactory.instantiate(mObj, Timer.STEREOTYPE_NAME));
-        	if (SecurityControl.canInstantiate(mObj))
-        			results.add((SecurityControl)CamelDesignerProxyFactory.instantiate(mObj, SecurityControl.STEREOTYPE_NAME));
-        	if (SecurityDomain.canInstantiate(mObj))
-        			results.add((SecurityDomain)CamelDesignerProxyFactory.instantiate(mObj, SecurityDomain.STEREOTYPE_NAME));
-        	if (FeatureClass.canInstantiate(mObj))
-        			results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
-        	if (SingleUnit.canInstantiate(mObj))
-        			results.add((SingleUnit)CamelDesignerProxyFactory.instantiate(mObj, SingleUnit.STEREOTYPE_NAME));
-        	if (CompositeUnit.canInstantiate(mObj))
-        			results.add((CompositeUnit)CamelDesignerProxyFactory.instantiate(mObj, CompositeUnit.STEREOTYPE_NAME));
-        	if (Dimensionless.canInstantiate(mObj))
-        			results.add((Dimensionless)CamelDesignerProxyFactory.instantiate(mObj, Dimensionless.STEREOTYPE_NAME));
-        	if (UnitDimension.canInstantiate(mObj))
-        			results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
-        	if (FeatureDataType.canInstantiate(mObj))
-        			results.add((FeatureDataType)CamelDesignerProxyFactory.instantiate(mObj, FeatureDataType.STEREOTYPE_NAME));
-        	if (CloudLocation.canInstantiate(mObj))
-        			results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
-        	if (GeographicalRegion.canInstantiate(mObj))
-        			results.add((GeographicalRegion)CamelDesignerProxyFactory.instantiate(mObj, GeographicalRegion.STEREOTYPE_NAME));
-        	if (FeatureEnumeration.canInstantiate(mObj))
-        			results.add((FeatureEnumeration)CamelDesignerProxyFactory.instantiate(mObj, FeatureEnumeration.STEREOTYPE_NAME));
-        	if (ImageRequirement.canInstantiate(mObj))
-        			results.add((ImageRequirement)CamelDesignerProxyFactory.instantiate(mObj, ImageRequirement.STEREOTYPE_NAME));
-        	if (LocationRequirement.canInstantiate(mObj))
-        			results.add((LocationRequirement)CamelDesignerProxyFactory.instantiate(mObj, LocationRequirement.STEREOTYPE_NAME));
-        	if (OSRequirement.canInstantiate(mObj))
-        			results.add((OSRequirement)CamelDesignerProxyFactory.instantiate(mObj, OSRequirement.STEREOTYPE_NAME));
-        	if (PaaSRequirement.canInstantiate(mObj))
-        			results.add((PaaSRequirement)CamelDesignerProxyFactory.instantiate(mObj, PaaSRequirement.STEREOTYPE_NAME));
-        	if (ProviderRequirement.canInstantiate(mObj))
-        			results.add((ProviderRequirement)CamelDesignerProxyFactory.instantiate(mObj, ProviderRequirement.STEREOTYPE_NAME));
-        	if (ResourceRequirement.canInstantiate(mObj))
-        			results.add((ResourceRequirement)CamelDesignerProxyFactory.instantiate(mObj, ResourceRequirement.STEREOTYPE_NAME));
-        	if (HorizontalScaleRequirement.canInstantiate(mObj))
-        			results.add((HorizontalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, HorizontalScaleRequirement.STEREOTYPE_NAME));
-        	if (VerticalScaleRequirement.canInstantiate(mObj))
-        			results.add((VerticalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, VerticalScaleRequirement.STEREOTYPE_NAME));
-        	if (SecurityRequirement.canInstantiate(mObj))
-        			results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
-        	if (SecuritySLO.canInstantiate(mObj))
-        			results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
-        	if (ServiceLevelObjective.canInstantiate(mObj))
-        			results.add((ServiceLevelObjective)CamelDesignerProxyFactory.instantiate(mObj, ServiceLevelObjective.STEREOTYPE_NAME));
-        	if (OptimisationRequirement.canInstantiate(mObj))
-        			results.add((OptimisationRequirement)CamelDesignerProxyFactory.instantiate(mObj, OptimisationRequirement.STEREOTYPE_NAME));
-        	}
+            if (BuildConfiguration.canInstantiate(mObj))
+                    results.add((BuildConfiguration)CamelDesignerProxyFactory.instantiate(mObj, BuildConfiguration.STEREOTYPE_NAME));
+            if (ClusterConfiguration.canInstantiate(mObj))
+                    results.add((ClusterConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ClusterConfiguration.STEREOTYPE_NAME));
+            if (PaaSConfiguration.canInstantiate(mObj))
+                    results.add((PaaSConfiguration)CamelDesignerProxyFactory.instantiate(mObj, PaaSConfiguration.STEREOTYPE_NAME));
+            if (ScriptConfiguration.canInstantiate(mObj))
+                    results.add((ScriptConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ScriptConfiguration.STEREOTYPE_NAME));
+            if (ServerlessConfiguration.canInstantiate(mObj))
+                    results.add((ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ServerlessConfiguration.STEREOTYPE_NAME));
+            if (EventConfiguration.canInstantiate(mObj))
+                    results.add((EventConfiguration)CamelDesignerProxyFactory.instantiate(mObj, EventConfiguration.STEREOTYPE_NAME));
+            if (FeatureArtifact.canInstantiate(mObj))
+                    results.add((FeatureArtifact)CamelDesignerProxyFactory.instantiate(mObj, FeatureArtifact.STEREOTYPE_NAME));
+            if (Application.canInstantiate(mObj))
+                    results.add((Application)CamelDesignerProxyFactory.instantiate(mObj, Application.STEREOTYPE_NAME));
+            if (Data.canInstantiate(mObj))
+                    results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
+            if (DataSource.canInstantiate(mObj))
+                    results.add((DataSource)CamelDesignerProxyFactory.instantiate(mObj, DataSource.STEREOTYPE_NAME));
+            if (Container.canInstantiate(mObj))
+                    results.add((Container)CamelDesignerProxyFactory.instantiate(mObj, Container.STEREOTYPE_NAME));
+            if (PaaS.canInstantiate(mObj))
+                    results.add((PaaS)CamelDesignerProxyFactory.instantiate(mObj, PaaS.STEREOTYPE_NAME));
+            if (Sensor.canInstantiate(mObj))
+                    results.add((Sensor)CamelDesignerProxyFactory.instantiate(mObj, Sensor.STEREOTYPE_NAME));
+            if (SoftwareComponent.canInstantiate(mObj))
+                    results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponent.STEREOTYPE_NAME));
+            if (VM.canInstantiate(mObj))
+                    results.add((VM)CamelDesignerProxyFactory.instantiate(mObj, VM.STEREOTYPE_NAME));
+            if (RequirementSet.canInstantiate(mObj))
+                    results.add((RequirementSet)CamelDesignerProxyFactory.instantiate(mObj, RequirementSet.STEREOTYPE_NAME));
+            if (RuleTrigger.canInstantiate(mObj))
+                    results.add((RuleTrigger)CamelDesignerProxyFactory.instantiate(mObj, RuleTrigger.STEREOTYPE_NAME));
+            if (SLOViolation.canInstantiate(mObj))
+                    results.add((SLOViolation)CamelDesignerProxyFactory.instantiate(mObj, SLOViolation.STEREOTYPE_NAME));
+            if (Cause.canInstantiate(mObj))
+                    results.add((Cause)CamelDesignerProxyFactory.instantiate(mObj, Cause.STEREOTYPE_NAME));
+            if (HistoryInfo.canInstantiate(mObj))
+                    results.add((HistoryInfo)CamelDesignerProxyFactory.instantiate(mObj, HistoryInfo.STEREOTYPE_NAME));
+            if (HistoryRecord.canInstantiate(mObj))
+                    results.add((HistoryRecord)CamelDesignerProxyFactory.instantiate(mObj, HistoryRecord.STEREOTYPE_NAME));
+            if (ApplicationMeasurement.canInstantiate(mObj))
+                    results.add((ApplicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ApplicationMeasurement.STEREOTYPE_NAME));
+            if (CommunicationMeasurement.canInstantiate(mObj))
+                    results.add((CommunicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, CommunicationMeasurement.STEREOTYPE_NAME));
+            if (ContainerMeasurement.canInstantiate(mObj))
+                    results.add((ContainerMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ContainerMeasurement.STEREOTYPE_NAME));
+            if (DataMeasurement.canInstantiate(mObj))
+                    results.add((DataMeasurement)CamelDesignerProxyFactory.instantiate(mObj, DataMeasurement.STEREOTYPE_NAME));
+            if (PaaSMeasurement.canInstantiate(mObj))
+                    results.add((PaaSMeasurement)CamelDesignerProxyFactory.instantiate(mObj, PaaSMeasurement.STEREOTYPE_NAME));
+            if (SoftwareComponentMeasurement.canInstantiate(mObj))
+                    results.add((SoftwareComponentMeasurement)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentMeasurement.STEREOTYPE_NAME));
+            if (VMMeasurement.canInstantiate(mObj))
+                    results.add((VMMeasurement)CamelDesignerProxyFactory.instantiate(mObj, VMMeasurement.STEREOTYPE_NAME));
+            if (AttributeContext.canInstantiate(mObj))
+                    results.add((AttributeContext)CamelDesignerProxyFactory.instantiate(mObj, AttributeContext.STEREOTYPE_NAME));
+            if (Function.canInstantiate(mObj))
+                    results.add((Function)CamelDesignerProxyFactory.instantiate(mObj, Function.STEREOTYPE_NAME));
+            if (CompositeSecurityMetric.canInstantiate(mObj))
+                    results.add((CompositeSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeSecurityMetric.STEREOTYPE_NAME));
+            if (CompositeMetric.canInstantiate(mObj))
+                    results.add((CompositeMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeMetric.STEREOTYPE_NAME));
+            if (MetricVariable.canInstantiate(mObj))
+                    results.add((MetricVariable)CamelDesignerProxyFactory.instantiate(mObj, MetricVariable.STEREOTYPE_NAME));
+            if (RawSecurityMetric.canInstantiate(mObj))
+                    results.add((RawSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, RawSecurityMetric.STEREOTYPE_NAME));
+            if (RawMetric.canInstantiate(mObj))
+                    results.add((RawMetric)CamelDesignerProxyFactory.instantiate(mObj, RawMetric.STEREOTYPE_NAME));
+            if (CompositeMetricContext.canInstantiate(mObj))
+                    results.add((CompositeMetricContext)CamelDesignerProxyFactory.instantiate(mObj, CompositeMetricContext.STEREOTYPE_NAME));
+            if (RawMetricContext.canInstantiate(mObj))
+                    results.add((RawMetricContext)CamelDesignerProxyFactory.instantiate(mObj, RawMetricContext.STEREOTYPE_NAME));
+            if (MetricObjectBinding.canInstantiate(mObj))
+                    results.add((MetricObjectBinding)CamelDesignerProxyFactory.instantiate(mObj, MetricObjectBinding.STEREOTYPE_NAME));
+            if (MetricTemplate.canInstantiate(mObj))
+                    results.add((MetricTemplate)CamelDesignerProxyFactory.instantiate(mObj, MetricTemplate.STEREOTYPE_NAME));
+            if (ObjectContext.canInstantiate(mObj))
+                    results.add((ObjectContext)CamelDesignerProxyFactory.instantiate(mObj, ObjectContext.STEREOTYPE_NAME));
+            if (Schedule.canInstantiate(mObj))
+                    results.add((Schedule)CamelDesignerProxyFactory.instantiate(mObj, Schedule.STEREOTYPE_NAME));
+            if (Window.canInstantiate(mObj))
+                    results.add((Window)CamelDesignerProxyFactory.instantiate(mObj, Window.STEREOTYPE_NAME));
+            if (CloudCredentials.canInstantiate(mObj))
+                    results.add((CloudCredentials)CamelDesignerProxyFactory.instantiate(mObj, CloudCredentials.STEREOTYPE_NAME));
+            if (PlatformCredentials.canInstantiate(mObj))
+                    results.add((PlatformCredentials)CamelDesignerProxyFactory.instantiate(mObj, PlatformCredentials.STEREOTYPE_NAME));
+            if (CloudProvider.canInstantiate(mObj))
+                    results.add((CloudProvider)CamelDesignerProxyFactory.instantiate(mObj, CloudProvider.STEREOTYPE_NAME));
+            if (Organisation.canInstantiate(mObj))
+                    results.add((Organisation)CamelDesignerProxyFactory.instantiate(mObj, Organisation.STEREOTYPE_NAME));
+            if (User.canInstantiate(mObj))
+                    results.add((User)CamelDesignerProxyFactory.instantiate(mObj, User.STEREOTYPE_NAME));
+            if (Entity.canInstantiate(mObj))
+                    results.add((Entity)CamelDesignerProxyFactory.instantiate(mObj, Entity.STEREOTYPE_NAME));
+            if (ExternalIdentifier.canInstantiate(mObj))
+                    results.add((ExternalIdentifier)CamelDesignerProxyFactory.instantiate(mObj, ExternalIdentifier.STEREOTYPE_NAME));
+            if (Permission.canInstantiate(mObj))
+                    results.add((Permission)CamelDesignerProxyFactory.instantiate(mObj, Permission.STEREOTYPE_NAME));
+            if (DataResourceFilter.canInstantiate(mObj))
+                    results.add((DataResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, DataResourceFilter.STEREOTYPE_NAME));
+            if (ModelResourceFilter.canInstantiate(mObj))
+                    results.add((ModelResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ModelResourceFilter.STEREOTYPE_NAME));
+            if (ServiceResourceFilter.canInstantiate(mObj))
+                    results.add((ServiceResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, ServiceResourceFilter.STEREOTYPE_NAME));
+            if (SoftwareComponentResourceFilter.canInstantiate(mObj))
+                    results.add((SoftwareComponentResourceFilter)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentResourceFilter.STEREOTYPE_NAME));
+            if (Role.canInstantiate(mObj))
+                    results.add((Role)CamelDesignerProxyFactory.instantiate(mObj, Role.STEREOTYPE_NAME));
+            if (RoleAssignment.canInstantiate(mObj))
+                    results.add((RoleAssignment)CamelDesignerProxyFactory.instantiate(mObj, RoleAssignment.STEREOTYPE_NAME));
+            if (UserGroup.canInstantiate(mObj))
+                    results.add((UserGroup)CamelDesignerProxyFactory.instantiate(mObj, UserGroup.STEREOTYPE_NAME));
+            if (BinaryEventPattern.canInstantiate(mObj))
+                    results.add((BinaryEventPattern)CamelDesignerProxyFactory.instantiate(mObj, BinaryEventPattern.STEREOTYPE_NAME));
+            if (UnaryEventPattern.canInstantiate(mObj))
+                    results.add((UnaryEventPattern)CamelDesignerProxyFactory.instantiate(mObj, UnaryEventPattern.STEREOTYPE_NAME));
+            if (FunctionalEvent.canInstantiate(mObj))
+                    results.add((FunctionalEvent)CamelDesignerProxyFactory.instantiate(mObj, FunctionalEvent.STEREOTYPE_NAME));
+            if (NonFunctionalEvent.canInstantiate(mObj))
+                    results.add((NonFunctionalEvent)CamelDesignerProxyFactory.instantiate(mObj, NonFunctionalEvent.STEREOTYPE_NAME));
+            if (ScalabilityRule.canInstantiate(mObj))
+                    results.add((ScalabilityRule)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityRule.STEREOTYPE_NAME));
+            if (Timer.canInstantiate(mObj))
+                    results.add((Timer)CamelDesignerProxyFactory.instantiate(mObj, Timer.STEREOTYPE_NAME));
+            if (SecurityControl.canInstantiate(mObj))
+                    results.add((SecurityControl)CamelDesignerProxyFactory.instantiate(mObj, SecurityControl.STEREOTYPE_NAME));
+            if (SecurityDomain.canInstantiate(mObj))
+                    results.add((SecurityDomain)CamelDesignerProxyFactory.instantiate(mObj, SecurityDomain.STEREOTYPE_NAME));
+            if (FeatureClass.canInstantiate(mObj))
+                    results.add((FeatureClass)CamelDesignerProxyFactory.instantiate(mObj, FeatureClass.STEREOTYPE_NAME));
+            if (SingleUnit.canInstantiate(mObj))
+                    results.add((SingleUnit)CamelDesignerProxyFactory.instantiate(mObj, SingleUnit.STEREOTYPE_NAME));
+            if (CompositeUnit.canInstantiate(mObj))
+                    results.add((CompositeUnit)CamelDesignerProxyFactory.instantiate(mObj, CompositeUnit.STEREOTYPE_NAME));
+            if (Dimensionless.canInstantiate(mObj))
+                    results.add((Dimensionless)CamelDesignerProxyFactory.instantiate(mObj, Dimensionless.STEREOTYPE_NAME));
+            if (UnitDimension.canInstantiate(mObj))
+                    results.add((UnitDimension)CamelDesignerProxyFactory.instantiate(mObj, UnitDimension.STEREOTYPE_NAME));
+            if (FeatureDataType.canInstantiate(mObj))
+                    results.add((FeatureDataType)CamelDesignerProxyFactory.instantiate(mObj, FeatureDataType.STEREOTYPE_NAME));
+            if (CloudLocation.canInstantiate(mObj))
+                    results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
+            if (GeographicalRegion.canInstantiate(mObj))
+                    results.add((GeographicalRegion)CamelDesignerProxyFactory.instantiate(mObj, GeographicalRegion.STEREOTYPE_NAME));
+            if (FeatureEnumeration.canInstantiate(mObj))
+                    results.add((FeatureEnumeration)CamelDesignerProxyFactory.instantiate(mObj, FeatureEnumeration.STEREOTYPE_NAME));
+            if (ImageRequirement.canInstantiate(mObj))
+                    results.add((ImageRequirement)CamelDesignerProxyFactory.instantiate(mObj, ImageRequirement.STEREOTYPE_NAME));
+            if (LocationRequirement.canInstantiate(mObj))
+                    results.add((LocationRequirement)CamelDesignerProxyFactory.instantiate(mObj, LocationRequirement.STEREOTYPE_NAME));
+            if (OSRequirement.canInstantiate(mObj))
+                    results.add((OSRequirement)CamelDesignerProxyFactory.instantiate(mObj, OSRequirement.STEREOTYPE_NAME));
+            if (PaaSRequirement.canInstantiate(mObj))
+                    results.add((PaaSRequirement)CamelDesignerProxyFactory.instantiate(mObj, PaaSRequirement.STEREOTYPE_NAME));
+            if (ProviderRequirement.canInstantiate(mObj))
+                    results.add((ProviderRequirement)CamelDesignerProxyFactory.instantiate(mObj, ProviderRequirement.STEREOTYPE_NAME));
+            if (ResourceRequirement.canInstantiate(mObj))
+                    results.add((ResourceRequirement)CamelDesignerProxyFactory.instantiate(mObj, ResourceRequirement.STEREOTYPE_NAME));
+            if (HorizontalScaleRequirement.canInstantiate(mObj))
+                    results.add((HorizontalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, HorizontalScaleRequirement.STEREOTYPE_NAME));
+            if (VerticalScaleRequirement.canInstantiate(mObj))
+                    results.add((VerticalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, VerticalScaleRequirement.STEREOTYPE_NAME));
+            if (SecurityRequirement.canInstantiate(mObj))
+                    results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
+            if (SecuritySLO.canInstantiate(mObj))
+                    results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
+            if (ServiceLevelObjective.canInstantiate(mObj))
+                    results.add((ServiceLevelObjective)CamelDesignerProxyFactory.instantiate(mObj, ServiceLevelObjective.STEREOTYPE_NAME));
+            if (OptimisationRequirement.canInstantiate(mObj))
+                    results.add((OptimisationRequirement)CamelDesignerProxyFactory.instantiate(mObj, OptimisationRequirement.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("d15d50be-512f-41eb-a7ba-21a9a12d9a27")
+    @objid ("273bb874-8a82-4800-b91f-bfae34d230c9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -414,9 +416,8 @@ public abstract class FeatureClassifier extends Feature {
      * Remove a value from the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("2bf47812-b7cc-40af-84b1-8f77bb05a49b")
+    @objid ("4f3d0359-6fcd-4e04-94c5-fc551c2b9ee3")
     public boolean removeAttributes(final AttributeAttribute obj) {
         return (obj!=null)? ((Classifier) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -425,9 +426,8 @@ public abstract class FeatureClassifier extends Feature {
      * Remove a value from the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("3c174ea7-b7b4-42bc-a27b-bbb8cdfc6155")
+    @objid ("7a51c9f2-1d48-4b13-a0f1-d0e596bd4f23")
     public boolean removeSubFeatures(final FeatureClassifier obj) {
         return (obj!=null)? ((Classifier) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -436,9 +436,8 @@ public abstract class FeatureClassifier extends Feature {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("b1bff274-eb61-49c8-8fdd-308ca1d6e039")
+    @objid ("6f354da1-cfa8-41a4-8936-71bbb3e5afc1")
     public void setParent(final FeatureClassifier obj) {
         ((Classifier) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -453,23 +452,23 @@ public abstract class FeatureClassifier extends Feature {
         return result;
     }
 
-    @objid ("b9c8f173-a2f1-44da-a62a-134e4c75d89d")
+    @objid ("baa12588-97a3-4534-b37f-a8c000371158")
     protected FeatureClassifier(final Classifier elt) {
         super(elt);
     }
 
     @objid ("625f1330-cd2e-4a07-af63-465f510059f1")
     public static final class MdaTypes {
-        @objid ("ac7f8b75-aa94-4112-8281-1fb065c661aa")
+        @objid ("5e98a1ef-def8-4109-bd06-f34d935203c2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c12d4cfb-a911-4949-908f-4b1373eb7bd3")
+        @objid ("72671328-32e4-473c-8767-9228b65ec7c7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f91c41e1-25c2-44c9-9554-cbfff1ddae3f")
+        @objid ("d54acea3-0490-40dc-8dae-18cae1406c80")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a9d1977b-a2b5-4e89-a796-f5395a9cbf94")
+        @objid ("67bbabd0-7a0a-4c14-8dfb-816cdd737578")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7c5a3627-4282-427f-93a3-957cdca1adb7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -477,11 +476,11 @@ public abstract class FeatureClassifier extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

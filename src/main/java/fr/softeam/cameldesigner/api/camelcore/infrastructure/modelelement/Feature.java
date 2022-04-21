@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a5eb4aa4-b3c3-4bce-b713-24ce0ac2b84e")
 public abstract class Feature extends ExpendableElement {
-    @objid ("5f9fee66-7292-4a3c-9e81-02acd20ee69e")
+    @objid ("96d48d0e-0438-4652-b0f1-99a84702ed9a")
     public static final String STEREOTYPE_NAME = "Feature";
 
     /**
@@ -46,7 +46,7 @@ public abstract class Feature extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("71a51b32-a29c-4330-975d-596181e18f6b")
+    @objid ("1b3dfb69-a5e7-400c-bc43-d970ed1a7072")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Feature.STEREOTYPE_NAME));
     }
@@ -91,7 +91,7 @@ public abstract class Feature extends ExpendableElement {
         throw new IllegalArgumentException("Feature: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3d7152c8-057d-4132-81a1-d2d864543e89")
+    @objid ("e3841225-6ed1-494a-a264-09f4ceaca9b4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,38 +108,39 @@ public abstract class Feature extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("4ee751e4-a3af-4a0d-ac2d-912f5ee960d2")
+    @objid ("21333d22-160a-4b46-a0d8-a1b079ab5024")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("43b49952-7481-4559-b32d-01d5fdd8d535")
+    @objid ("c10bd901-54cb-46f6-9a8a-a2337311bb2c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("a5781dee-1b54-418a-976f-f56cae487384")
+    @objid ("3432472e-c6c8-4df2-8193-863732bd6e65")
     protected Feature(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("0cb56ef2-b57c-49c0-afb4-c4b5f234e49b")
     public static final class MdaTypes {
-        @objid ("2a533d30-2d49-49a3-9466-ca97a7b4b43f")
+        @objid ("e4f2d3e5-04cc-4a2f-849a-5a43f9e37bca")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e7b19955-4bcc-4ef1-92d7-12a7e18ea234")
+        @objid ("9a53f925-949c-41c1-b6e1-00077f6f46d4")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f2ffc152-1bf3-4cc6-985e-e24802d0d941")
+        @objid ("c8f6a8f4-1fca-401d-b0bf-e7e50d8f4665")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d110f2cd-a02c-4cd5-9606-71563d6c5458")
+        @objid ("6399cee1-ab15-4cf7-ab32-a1993fb052a2")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1ff10997-aa56-4f9b-b413-f32fadcc29bb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -147,11 +148,11 @@ public abstract class Feature extends ExpendableElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

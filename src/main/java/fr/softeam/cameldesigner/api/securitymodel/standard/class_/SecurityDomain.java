@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fddf4bb7-1f25-43d5-818c-d7ac3e4418a7")
 public class SecurityDomain extends FeatureClass {
-    @objid ("c736ee27-66e8-4eec-8cfa-7add80e5e59e")
+    @objid ("90e24743-b3ba-4db5-9e35-028ae2d02aed")
     public static final String STEREOTYPE_NAME = "SecurityDomain";
 
-    @objid ("9aa966a1-df10-4b41-94c2-af139cc68f67")
+    @objid ("1b2eb9f4-34fb-4963-b92e-62d595c4e6fb")
     public static final String ID_TAGTYPE = "id";
 
     /**
@@ -50,7 +50,7 @@ public class SecurityDomain extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c2d212ed-0e68-4946-8cc1-d129f7045fc5")
+    @objid ("42da6099-a574-46d8-b956-8e73b627ef34")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityDomain.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class SecurityDomain extends FeatureClass {
      * 
      * @return a {@link SecurityDomain} proxy on the created {@link Class}.
      */
-    @objid ("36e3b73f-e26e-43c9-be40-f887f6e7320a")
+    @objid ("e6d25a59-1505-423f-90f4-5f767ae3cf8d")
     public static SecurityDomain create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityDomain.STEREOTYPE_NAME);
@@ -68,40 +68,41 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityDomain} proxy or <i>null</i>.
      */
-    @objid ("b0e5fc25-61ce-4693-8e58-27dcc240189c")
+    @objid ("4a57143e-5483-488c-ac39-09e6b1ba8dbc")
     public static SecurityDomain instantiate(final Class obj) {
         return SecurityDomain.canInstantiate(obj) ? new SecurityDomain(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityDomain} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f780d3b9-b013-454d-90ec-c95ba0c44191")
+    @objid ("161a66a7-8714-47d2-b94c-33e387ec3ffe")
     public static SecurityDomain safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityDomain.canInstantiate(obj))
-        	return new SecurityDomain(obj);
+            return new SecurityDomain(obj);
         else
-        	throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("6eaf08b6-0a18-4576-bb86-8c1ad58abd29")
+    @objid ("046b112b-410d-4db3-b76b-d9d8fc05b877")
     public void addSubDomains(final SecurityDomain obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -111,7 +112,7 @@ public class SecurityDomain extends FeatureClass {
         }
     }
 
-    @objid ("0e38953f-ca21-48e4-a38b-d4d5b92f4cdd")
+    @objid ("302dccb2-781f-4cc1-8df4-5f1fc1ebadf4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,10 +129,11 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("5b503394-bf76-469d-9bb2-8fdfe01de8d6")
+    @objid ("cac0df7f-9140-4a8d-afb6-8cbf568a97d0")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -142,7 +144,7 @@ public class SecurityDomain extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b1c002f8-8adc-4bde-82e9-9c0516a61083")
+    @objid ("32e0cf6f-ccf2-48e0-a8fb-9ecd22e644e3")
     public String getId() {
         return this.elt.getTagValue(SecurityDomain.MdaTypes.ID_TAGTYPE_ELT);
     }
@@ -151,9 +153,8 @@ public class SecurityDomain extends FeatureClass {
      * Get the values of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("2b61486b-99e3-4c5c-a860-90e208d968d0")
+    @objid ("f21e54d6-faae-40f3-babb-e0ec408f478f")
     public List<SecurityDomain> getSubDomains() {
         List<SecurityDomain> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -166,7 +167,7 @@ public class SecurityDomain extends FeatureClass {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("4bd1209b-ec23-4158-8dd5-cbb876f3bf07")
+    @objid ("98e229ce-5e2e-4a45-bb1a-6acb8ebc003d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -176,9 +177,8 @@ public class SecurityDomain extends FeatureClass {
      * Remove a value from 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("24323788-4f82-444c-9872-390582d53287")
+    @objid ("f6d335d8-e3d6-4cb5-8edd-a88ef8f3f689")
     public boolean removeSubDomains(final SecurityDomain obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -197,7 +197,7 @@ public class SecurityDomain extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("624cf8c5-4a88-4dc4-96d0-a6735511c48b")
+    @objid ("bd8be840-9d84-44f8-b270-bd6fdb44b8b7")
     public void setId(final String value) {
         this.elt.putTagValue(SecurityDomain.MdaTypes.ID_TAGTYPE_ELT, value);
     }
@@ -210,26 +210,26 @@ public class SecurityDomain extends FeatureClass {
         return result;
     }
 
-    @objid ("56469b9e-0df3-409d-8fa2-b4894b69cd09")
+    @objid ("aa239182-6e6f-4bd9-97b4-bb30a7f2aed7")
     protected SecurityDomain(final Class elt) {
         super(elt);
     }
 
     @objid ("7f4f621d-eb07-4bdf-a3ff-518d7382ce87")
     public static final class MdaTypes {
-        @objid ("257cfc16-057c-4667-8f01-e6f221a5a144")
+        @objid ("9ca40a35-95d0-4f87-9fab-a72cb124be64")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d27b4c60-d793-4055-92cf-3bc6c305402d")
+        @objid ("edb09c83-b2f5-41f0-abaf-a620e6eab7ad")
         public static TagType ID_TAGTYPE_ELT;
 
-        @objid ("bfd7c55b-2b82-4ddf-af75-10957535157a")
+        @objid ("bd6e2083-ecc9-4347-801f-c6b7c6766459")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5a4f6960-081f-48f4-8a8f-2fbc7df4e2fa")
+        @objid ("e810f19f-26de-4cba-8cf2-01e5273c0dbb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("904d75b0-1631-45b6-8729-0435b9a34872")
+        @objid ("4dc058b5-b643-4ce9-a669-d7e684fdf3aa")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1487e8d9-e360-40e9-85a2-46b131aa86ef");
             ID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "c7e2415a-e07a-4b88-8369-3496216f8174");
@@ -238,11 +238,11 @@ public class SecurityDomain extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

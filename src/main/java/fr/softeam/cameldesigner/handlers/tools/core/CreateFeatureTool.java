@@ -16,6 +16,7 @@ import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("f074bdd1-254a-4404-9169-fff405aa7a59")
@@ -23,10 +24,11 @@ public class CreateFeatureTool extends DefaultBoxTool {
     @objid ("bf06a6d2-6b97-441a-a4af-f9a475900ba6")
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
-        return
-                targetNode.getElement() instanceof ModelElement
-                && ((ModelElement) targetNode.getElement())
-                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME,  Feature.STEREOTYPE_NAME);
+        MObject owner = targetNode.getElement();
+        if (owner instanceof AbstractDiagram)
+            owner = ((AbstractDiagram) owner).getOrigin();
+        return (((owner instanceof Class)    || (owner instanceof org.modelio.metamodel.uml.statik.Package))
+                && (((ModelElement)owner).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Feature.STEREOTYPE_NAME)));
     }
 
     @objid ("18c13857-c8e1-4c5d-a28c-c2b369939fdc")

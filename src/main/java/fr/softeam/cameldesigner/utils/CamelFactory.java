@@ -28,12 +28,19 @@
 package fr.softeam.cameldesigner.utils;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Classifier;
 
 /**
@@ -54,9 +61,14 @@ public class CamelFactory {
         try {
         
             Feature feature = null;
+        
             if (owner instanceof ModelTree) {
                 feature = FeatureClass.create();
                 ((ModelTree) owner ).getOwnedElement().add((ModelTree) feature.getElement());
+            }
+        
+            if(feature != null) {
+                feature.setDefaultName("Feature");
             }
         
             return  feature;
@@ -74,16 +86,85 @@ public class CamelFactory {
      * @return the created Feature
      */
     @objid ("2aa292c8-98cc-41ef-b818-d2686b2928a0")
-    public static AttributeAttribute createCamelAttribute(ModelElement owner) {
+    public static CamelAttribute createCamelAttribute(ModelElement owner) {
         try {
         
-            AttributeAttribute attribute = null;
+            CamelAttribute result = null;
             if (owner instanceof Classifier) {
-                attribute = AttributeAttribute.create();
-                ((Classifier) owner ).getOwnedAttribute().add(attribute.getElement());
+                result = AttributeAttribute.create();
+                ((Classifier) owner ).getOwnedAttribute().add((Attribute)result.getElement());
+            }else  if (owner instanceof org.modelio.metamodel.uml.statik.Package) {
+                result = AttributeClass.create();
+                ((org.modelio.metamodel.uml.statik.Package) owner ).getOwnedElement().add((org.modelio.metamodel.uml.statik.Class) result.getElement());
             }
         
-            return  attribute;
+            if (result != null) {
+                result.setDefaultName("Attribute");
+            }
+            return  result;
+        
+        }catch(Exception e){
+            CamelDesignerModule.logService.error(e);
+        }
+        return null;
+    }
+
+    /**
+     * Method createMeasurableAttribute
+     * @author ebrosse
+     * 
+     * @param owner : the owner of the Attribute
+     * @return the created Feature
+     */
+    @objid ("9abe9d2b-a415-4cdf-8fa2-145069c4595b")
+    public static CamelAttribute createMeasurableAttribute(ModelElement owner) {
+        try {
+        
+            CamelAttribute result = null;
+            if (owner instanceof Classifier) {
+                result = MeasurableAttributeAttribute.create();
+                ((Classifier) owner ).getOwnedAttribute().add((Attribute)result.getElement());
+            }else  if (owner instanceof org.modelio.metamodel.uml.statik.Package) {
+                result = MeasurableAttributeClass.create();
+                ((org.modelio.metamodel.uml.statik.Package) owner ).getOwnedElement().add((org.modelio.metamodel.uml.statik.Class) result.getElement());
+            }
+        
+            if (result != null) {
+                result.setDefaultName("MeasurableAttribute");
+            }
+        
+            return  result;
+        
+        }catch(Exception e){
+            CamelDesignerModule.logService.error(e);
+        }
+        return null;
+    }
+
+    /**
+     * Method createQualityAttribute
+     * @author ebrosse
+     * 
+     * @param owner : the owner of the Attribute
+     * @return the created Feature
+     */
+    @objid ("d4ce2fdb-9938-4437-beed-19a763967e8f")
+    public static CamelAttribute createQualityAttribute(ModelElement owner) {
+        try {
+        
+            CamelAttribute result = null;
+            if (owner instanceof Classifier) {
+                result = QualityAttributeAttribute.create();
+                ((Classifier) owner ).getOwnedAttribute().add((Attribute)result.getElement());
+            }else  if (owner instanceof org.modelio.metamodel.uml.statik.Package) {
+                result = QualityAttributeClass.create();
+                ((org.modelio.metamodel.uml.statik.Package) owner ).getOwnedElement().add((org.modelio.metamodel.uml.statik.Class) result.getElement());
+            }
+        
+            if (result != null) {
+                result.setDefaultName("QualityAttribute");
+            }
+            return  result;
         
         }catch(Exception e){
             CamelDesignerModule.logService.error(e);

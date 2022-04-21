@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.08
+ * Module: CamelDesigner v1.0.09
 
- * This file was generated on 3/30/22 3:18 PM by Modelio Studio.
+ * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("91c5901d-2f7a-441c-aea0-ec0a3019dafd")
 public class NonFunctionalEvent extends SingleEvent {
-    @objid ("36355a0d-4bd8-4f24-a4b2-f6605d7b06c3")
+    @objid ("c376d339-619a-49c1-8917-e7e917546d6e")
     public static final String STEREOTYPE_NAME = "NonFunctionalEvent";
 
-    @objid ("0592f427-118a-4427-91cf-ffabd2edbe16")
+    @objid ("57b76f2e-2fc7-4b10-b42c-870537af85e8")
     public static final String ISVIOLATION_TAGTYPE = "isViolation";
 
     /**
@@ -50,7 +50,7 @@ public class NonFunctionalEvent extends SingleEvent {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("db3a5280-6e76-4da4-a35a-476ce9bb4128")
+    @objid ("e36dfcd7-790c-44d3-978b-483d83a7cfea")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, NonFunctionalEvent.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class NonFunctionalEvent extends SingleEvent {
      * 
      * @return a {@link NonFunctionalEvent} proxy on the created {@link Class}.
      */
-    @objid ("97a99270-dff1-4948-b9f9-074ac292f2c5")
+    @objid ("bd184a6d-1fb8-482b-bd8b-2b30d9d8bb49")
     public static NonFunctionalEvent create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, NonFunctionalEvent.STEREOTYPE_NAME);
@@ -68,34 +68,36 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link NonFunctionalEvent} proxy or <i>null</i>.
      */
-    @objid ("391752ae-62ec-4a57-a897-8a63ae72ed13")
+    @objid ("3fd13bb4-7aa8-498e-a7a1-e7afe13512de")
     public static NonFunctionalEvent instantiate(final Class obj) {
         return NonFunctionalEvent.canInstantiate(obj) ? new NonFunctionalEvent(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link NonFunctionalEvent} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2167b00b-c9d7-455a-aed4-c1955d79aadd")
+    @objid ("4ca38420-65e0-4553-8985-78c708dfb41a")
     public static NonFunctionalEvent safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (NonFunctionalEvent.canInstantiate(obj))
-        	return new NonFunctionalEvent(obj);
+            return new NonFunctionalEvent(obj);
         else
-        	throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("697ae96d-3597-40cc-9386-1392c31b1416")
+    @objid ("d1f8d4f6-9be5-4d2e-8af8-0c4b3e14d398")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,10 +114,11 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("fc0a8297-6116-4e52-a63f-ccd3e4262a0b")
+    @objid ("79e88203-1e3f-4de0-a4e1-c9696bb70a5d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -125,9 +128,8 @@ public class NonFunctionalEvent extends SingleEvent {
      * Get the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("17a4fa79-d442-4169-b1ed-c64ba81d040e")
+    @objid ("2c415069-c2df-4504-9f42-8426278261a3")
     public MetricConstraint getMetricConstraint() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(NonFunctionalEvent.MdaTypes.MDAASSOCDEP)
@@ -139,7 +141,7 @@ public class NonFunctionalEvent extends SingleEvent {
         return null;
     }
 
-    @objid ("b6ab0ea5-ce6b-4f54-b232-0719d855d195")
+    @objid ("d05ad61b-b790-4703-bc45-0884056fd494")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -150,7 +152,7 @@ public class NonFunctionalEvent extends SingleEvent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("df340ca9-600b-48a2-ae2c-93099162e4a6")
+    @objid ("0b61febb-f608-4623-8b35-9d5bda3c0728")
     public boolean isIsViolation() {
         return this.elt.isTagged(NonFunctionalEvent.MdaTypes.ISVIOLATION_TAGTYPE_ELT);
     }
@@ -160,7 +162,7 @@ public class NonFunctionalEvent extends SingleEvent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ae3057dc-9305-4002-9f0a-58f347cc9144")
+    @objid ("014763d6-c92a-463e-87f8-46e4ff517ab5")
     public void setIsViolation(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(NonFunctionalEvent.MdaTypes.ISVIOLATION_TAGTYPE_ELT, this.elt);
@@ -172,9 +174,8 @@ public class NonFunctionalEvent extends SingleEvent {
      * Set the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("45c45789-3d19-47c3-9a83-955969b96a12")
+    @objid ("e14627c4-7a1b-4348-999f-f579786c59fb")
     public void setMetricConstraint(final MetricConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -202,26 +203,26 @@ public class NonFunctionalEvent extends SingleEvent {
         return result;
     }
 
-    @objid ("2d4ea0ff-3e54-42ce-9b37-ac613b087b56")
+    @objid ("27ae8f79-c1d5-4bf0-9baf-104f664dccb4")
     protected NonFunctionalEvent(final Class elt) {
         super(elt);
     }
 
     @objid ("49bec042-33dd-4ad1-9b09-4dcfbe3512b3")
     public static final class MdaTypes {
-        @objid ("36b5ffbb-740c-4f9a-8f15-f9865b0875aa")
+        @objid ("0b3ffaa9-a0e6-467a-83b2-fac558c737fc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a9a0a051-c219-4f4b-8ebd-131809c5ceed")
+        @objid ("995385f4-b4da-48f3-a55a-7296723c2e70")
         public static TagType ISVIOLATION_TAGTYPE_ELT;
 
-        @objid ("467b6f35-ccfc-48e8-8986-7d6e0bb3aec9")
+        @objid ("113838b1-c36d-4e8d-b2db-d573cb41ba85")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ed576394-2b14-4436-99d0-5d47a4a06e2b")
+        @objid ("1c7ab9cc-08d6-4b54-83c8-cc180aabccc7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("854b44a6-ddb2-407b-845b-67ff34a08508")
+        @objid ("9de3004c-8256-41b3-9c9c-190834517579")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "af2fc032-7f83-4251-9a0c-8ef45959bb71");
             ISVIOLATION_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "7adb963c-c7f7-4e56-9770-80f01813f2b5");
@@ -230,11 +231,11 @@ public class NonFunctionalEvent extends SingleEvent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

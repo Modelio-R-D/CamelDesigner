@@ -28,7 +28,11 @@ public class LocationModelExporter<T extends LocationModel> extends SubModelExpo
     @objid ("162b0420-33bd-44cb-9de1-816a897c175d")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.location.LocationModel)) {
+            ((camel.core.CamelModel) context).getLocationModels().add((camel.location.LocationModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

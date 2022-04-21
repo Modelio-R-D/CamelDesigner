@@ -7,8 +7,6 @@ import fr.softeam.cameldesigner.exchange.exporter.core.AttributeClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureInstanceExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeaturePortExporter;
-import fr.softeam.cameldesigner.exchange.exporter.core.MeasurableAttributeExporter;
-import fr.softeam.cameldesigner.exchange.exporter.core.QualityAttributeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataInstanceExporter;
 import fr.softeam.cameldesigner.exchange.exporter.data.DataInstanceModelExporter;
@@ -256,8 +254,6 @@ public class ExporterFactory {
         public final Object visitClass(Class obj) {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.STEREOTYPE_NAME: return new AttributeClassExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.instantiate(obj));
-            case fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute.STEREOTYPE_NAME: return new QualityAttributeExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttribute.instantiate(obj));
-            case fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.STEREOTYPE_NAME: return new MeasurableAttributeExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute.instantiate(obj));
             case fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.STEREOTYPE_NAME: return new FeatureClassExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass.instantiate(obj));
             case fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.STEREOTYPE_NAME: return new DataExporter<>(fr.softeam.cameldesigner.api.datamodel.standard.class_.Data.instantiate(obj));
             case fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource.STEREOTYPE_NAME: return new DataSourceExporter<>(fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource.instantiate(obj));

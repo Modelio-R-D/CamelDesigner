@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
-import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttribute;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
@@ -41,9 +41,9 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
         }
         
         else if(this._currentRow == 3){
-            Class elt = (Class) getModelElt(MeasurableAttribute.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if (MeasurableAttribute.canInstantiate(elt)) {
-                this._element.setAttribute(MeasurableAttribute.safeInstantiate(elt));
+            Class elt = (Class) getModelElt(MeasurableAttributeClass.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (MeasurableAttributeClass.canInstantiate(elt)) {
+                this._element.setAttribute(MeasurableAttributeClass.safeInstantiate(elt));
             }
         }
         
@@ -68,7 +68,7 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
         table.addProperty("Unit", getCamelName(this._element.getUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));
         
         //Attribute
-        table.addProperty("Attribute", getCamelName(this._element.getAttribute()), getCamelNames(MeasurableAttribute.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        table.addProperty("Attribute", getCamelName(this._element.getAttribute()), getCamelNames(MeasurableAttributeClass.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
     @objid ("bc48d3fa-ff5c-443f-9f72-489e1f90c599")

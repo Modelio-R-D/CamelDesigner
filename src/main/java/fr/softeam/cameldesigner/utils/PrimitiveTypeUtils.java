@@ -55,7 +55,6 @@ public class PrimitiveTypeUtils {
         return primitiveTypes;
     }
 
-
 //    if (self.oclIsTypeOf(IntValue) and v.oclIsTypeOf(IntValue))
 //        then self.oclAsType(IntValue).value = v.oclAsType(IntValue).value
 //        else if (self.oclIsTypeOf(FloatValue) and v.oclIsTypeOf(FloatValue))
