@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -14,6 +14,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Timer;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -35,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1376376d-c30d-492b-b270-8ae507dd5d21")
 public abstract class EventPattern extends Event {
-    @objid ("1e59106a-8402-4862-ac55-2372e861911b")
+    @objid ("3ff2cdd8-1ef3-43be-bd34-fbab76ef3f1c")
     public static final String STEREOTYPE_NAME = "EventPattern";
 
     /**
@@ -46,12 +47,12 @@ public abstract class EventPattern extends Event {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("efbf8c8f-d74f-453f-9030-8c868fe3ea3f")
+    @objid ("9ab8e12a-c3e4-44d4-b08f-955c4c3f966d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventPattern.STEREOTYPE_NAME));
     }
 
-    @objid ("9712f2d6-0d10-49c0-acb9-4cafa835c09b")
+    @objid ("00e4dacb-c42d-4c7c-9679-7e96e45ec21b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -68,11 +69,10 @@ public abstract class EventPattern extends Event {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d1257097-e533-4953-8a7b-92e29c5df032")
+    @objid ("9631b680-37f3-4b05-8385-15d3b84fe77d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -82,8 +82,9 @@ public abstract class EventPattern extends Event {
      * Get the value of the 'timer' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("0a256353-62a4-48c3-a915-c79cef366a74")
+    @objid ("a5390f06-3ba1-4f66-8b4c-853889c4a23e")
     public Timer getTimer() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(EventPattern.MdaTypes.MDAASSOCDEP)
@@ -95,7 +96,7 @@ public abstract class EventPattern extends Event {
         return null;
     }
 
-    @objid ("50c89978-f368-4282-917e-aad75e0ae7a8")
+    @objid ("930c0534-11c1-4378-abf4-24972e291718")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -105,8 +106,9 @@ public abstract class EventPattern extends Event {
      * Set the value of the 'timer' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("f0bb5c59-18f0-45dd-94d0-a92eaf3ee762")
+    @objid ("88ecc94e-9bcd-4998-a9e2-356807bc2549")
     public void setTimer(final Timer obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -134,23 +136,23 @@ public abstract class EventPattern extends Event {
         return result;
     }
 
-    @objid ("3fabe3d9-d32a-48da-9536-d31bf829e1ac")
+    @objid ("97433570-b859-4b22-8503-4e3200a3a774")
     protected EventPattern(final Class elt) {
         super(elt);
     }
 
     @objid ("dd1011e3-255f-4c6a-a51e-162a33438d4c")
     public static final class MdaTypes {
-        @objid ("e9185d8b-c87c-4964-948f-7b2543b152b7")
+        @objid ("eb806d68-9503-466e-bde4-4097e8ec20bf")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dd532004-4e4c-44fd-905c-0d64c97d06a0")
+        @objid ("a9e0ab7d-27f4-48ba-adc2-81e28ae83d50")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("acb0352a-8243-4f5a-90a6-688e04871d20")
+        @objid ("8f6552dc-5798-4a59-9d08-df7688ff77d7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a6d6f115-a640-47ea-b2d1-52bd7c4be72a")
+        @objid ("22c02866-c8b2-45d9-bd30-80f34aa6985e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "46e221ca-8a8f-458b-8018-009a273cc009");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +160,11 @@ public abstract class EventPattern extends Event {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

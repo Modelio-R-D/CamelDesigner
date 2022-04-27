@@ -1,8 +1,11 @@
 package fr.softeam.cameldesigner.handlers.propertypages.location;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("c4645b49-5a42-4f63-a315-9de67ad4ef1f")
 public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extends LocationPropertyPage<T> {
@@ -18,6 +21,19 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1) {
+            Class elt = (Class) getModelElt(GeographicalRegion.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt!=null) &&(elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, GeographicalRegion.STEREOTYPE_NAME))) {
+                Object mmsObj = CamelDesignerProxyFactory.instantiate(elt);
+                if (value.startsWith(this._add)) {
+                    this._element.addParentRegions((GeographicalRegion) mmsObj);
+                }else {
+                    this._element.removeParentRegions((GeographicalRegion) mmsObj);
+                }
+            }
+        }
+        this._currentRow -= 1;
     }
 
     /**
@@ -30,6 +46,9 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        //Parent Régions
+        table.addProperty("Parent Regions", getCamelValue(this._element.getParentRegions()), getAddRemove(GeographicalRegion.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getParentRegions()));
     }
 
     @objid ("36602fac-8a28-4e02-acb9-3af74ddb4095")

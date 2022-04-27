@@ -1,8 +1,6 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;

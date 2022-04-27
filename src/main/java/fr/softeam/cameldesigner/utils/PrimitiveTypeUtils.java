@@ -26,9 +26,7 @@ public class PrimitiveTypeUtils {
 
     @objid ("79486d68-5c69-4d17-aa80-2b12d4d6936b")
     public static DataType getDataType(String value) {
-        String ID = null;
-        
-        for( CamelPrimitiveType type : CamelPrimitiveType.values()) {
+        for(CamelPrimitiveType type : CamelPrimitiveType.values()) {
             if (type.toString().equals(value)) {
                 return CamelDesignerModule.getInstance().getModuleContext().getModelingSession().findElementById(DataType.class, type.getID());
             }
@@ -55,22 +53,6 @@ public class PrimitiveTypeUtils {
         return primitiveTypes;
     }
 
-//    if (self.oclIsTypeOf(IntValue) and v.oclIsTypeOf(IntValue))
-//        then self.oclAsType(IntValue).value = v.oclAsType(IntValue).value
-//        else if (self.oclIsTypeOf(FloatValue) and v.oclIsTypeOf(FloatValue))
-//            then self.oclAsType(FloatValue).value = v.oclAsType(FloatValue).value
-//            else if (self.oclIsTypeOf(DoubleValue) and v.oclIsTypeOf(DoubleValue))
-//                then self.oclAsType(DoubleValue).value = v.oclAsType(DoubleValue).value
-//                else if (self.oclIsTypeOf(StringValue) and v.oclIsTypeOf(StringValue))
-//                    then self.oclAsType(StringValue).value = v.oclAsType(StringValue).value
-//                    else if (self.oclIsTypeOf(BooleanValue) and v.oclIsTypeOf(BooleanValue))
-//                        then self.oclAsType(BooleanValue).value = v.oclAsType(BooleanValue).value
-//                        else false
-//                        endif
-//                    endif
-//                endif
-//            endif
-//        endif
     @objid ("410c2f57-791f-4c67-94df-da3b911ee4b3")
     enum CamelPrimitiveType {
         IntType ("00000004-0000-0009-0000-000000000000"),

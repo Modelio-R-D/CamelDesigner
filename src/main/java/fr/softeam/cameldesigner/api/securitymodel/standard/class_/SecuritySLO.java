@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("14701eb6-66e6-421f-bc02-e050f9e15799")
 public class SecuritySLO extends ServiceLevelObjective {
-    @objid ("31b58769-116c-475d-9d0d-c8d3e27b40d0")
+    @objid ("e969eea1-6197-4b5f-a54c-efc5eea40450")
     public static final String STEREOTYPE_NAME = "SecuritySLO";
 
     /**
@@ -47,7 +47,7 @@ public class SecuritySLO extends ServiceLevelObjective {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1eb0ebe1-11b9-48f6-8ce8-2cc07adac651")
+    @objid ("602567ee-4fb8-4eb1-88ec-7853c6f16ad2")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecuritySLO.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class SecuritySLO extends ServiceLevelObjective {
      * 
      * @return a {@link SecuritySLO} proxy on the created {@link Class}.
      */
-    @objid ("fbde96de-37aa-4d26-8976-d40f0977688d")
+    @objid ("0c3616b0-434e-4a56-b97f-8d756ab0a892")
     public static SecuritySLO create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecuritySLO.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link SecuritySLO} proxy or <i>null</i>.
      */
-    @objid ("79bb3775-5e2a-4341-8f73-d249ec653649")
+    @objid ("daac1e41-763c-4c47-ad93-b14973b51dfe")
     public static SecuritySLO instantiate(final Class obj) {
         return SecuritySLO.canInstantiate(obj) ? new SecuritySLO(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link SecuritySLO} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e11f8c3f-590a-4312-a0b4-4be23e4e4950")
+    @objid ("a56d8b07-2736-43e3-b7c9-52ff934e2570")
     public static SecuritySLO safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecuritySLO.canInstantiate(obj))
-            return new SecuritySLO(obj);
+        	return new SecuritySLO(obj);
         else
-            throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e52e27b0-ea57-46e0-9f05-711b9ce994bd")
+    @objid ("a83fcd55-e06e-49c0-8a20-8a19f5644db0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +109,16 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("58a651da-efae-4b24-99b9-7c1097c9d1ed")
+    @objid ("3f34b02e-4ae5-467a-aecf-bccec51e3473")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("2271343c-a090-41be-8364-7b44e35552a3")
+    @objid ("bb655cfc-e5fd-4f7f-98b8-77549f95398f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -135,23 +132,23 @@ public class SecuritySLO extends ServiceLevelObjective {
         return result;
     }
 
-    @objid ("b64c6cbb-a5d9-4416-9034-a5d075cdd88a")
+    @objid ("9c35fd9c-5f78-4f9c-a0e0-888e12c85891")
     protected SecuritySLO(final Class elt) {
         super(elt);
     }
 
     @objid ("617e4bcc-2615-4bc6-b9f6-51075bd242b2")
     public static final class MdaTypes {
-        @objid ("becbb700-d17c-4da9-b1be-f18497d61c47")
+        @objid ("3161db5d-0f87-4828-8436-074610d79fc4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("835b4e25-1901-4cd5-b3e0-b7f6539f5da7")
+        @objid ("69e3ed0a-a628-499b-9791-7e63afbce6e0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c73c48e9-d15e-4517-bd23-f19bc1ff08b2")
+        @objid ("93f15487-fcf7-46b3-ac1a-9000892a1f83")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ee28ae54-06f2-4fca-ba9a-91435eabd671")
+        @objid ("4b8ea6fe-b62a-4c0d-badc-92d0e4288721")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8fcb0a39-47f5-4d53-9540-bede515f2431");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -159,11 +156,11 @@ public class SecuritySLO extends ServiceLevelObjective {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

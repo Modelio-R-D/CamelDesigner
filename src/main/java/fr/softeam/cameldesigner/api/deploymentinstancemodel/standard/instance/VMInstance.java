@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
@@ -48,7 +48,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8d75b5a3-1b22-4793-a4d1-8b8d4ec31008")
 public class VMInstance extends ComponentInstance {
-    @objid ("73dfac64-d675-4187-935b-4ff5cae4207f")
+    @objid ("4a04d159-f49e-45b8-b836-730e4eee9298")
     public static final String STEREOTYPE_NAME = "VMInstance";
 
     /**
@@ -59,7 +59,7 @@ public class VMInstance extends ComponentInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2ef667be-b929-4de1-9ca2-779c28d8df04")
+    @objid ("92265ec7-d5e9-444b-b6ab-98742b62018a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VMInstance.STEREOTYPE_NAME));
     }
@@ -69,7 +69,7 @@ public class VMInstance extends ComponentInstance {
      * 
      * @return a {@link VMInstance} proxy on the created {@link Instance}.
      */
-    @objid ("be70d13a-3981-4753-b240-87a9f91d9e92")
+    @objid ("cd99e48d-bc1f-4145-b0d0-6a3807da35a8")
     public static VMInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, VMInstance.STEREOTYPE_NAME);
@@ -77,36 +77,34 @@ public class VMInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link VMInstance} proxy or <i>null</i>.
      */
-    @objid ("f23e6b1e-02cf-4351-b8dd-4e6f7e912565")
+    @objid ("ea15131b-01d8-4c08-959c-02e5b586eb54")
     public static VMInstance instantiate(final Instance obj) {
         return VMInstance.canInstantiate(obj) ? new VMInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link VMInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4c832063-cd32-4a18-8b56-89a4ca387f30")
+    @objid ("6f846810-3b99-4c3d-b9ce-db1393d3c530")
     public static VMInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (VMInstance.canInstantiate(obj))
-            return new VMInstance(obj);
+        	return new VMInstance(obj);
         else
-            throw new IllegalArgumentException("VMInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("VMInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e86afb7d-68f0-4018-a91f-da9af5cb1868")
+    @objid ("7bf26dac-d08d-40ea-8cfc-3f25e4afa88f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -123,11 +121,10 @@ public class VMInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}.
-     * 
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("d924f29f-2aa0-4c89-8934-4576d57056d5")
+    @objid ("e95a1486-1384-4cd2-9b12-e2e7ae3e0733")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -137,8 +134,9 @@ public class VMInstance extends ComponentInstance {
      * Get the value of the 'location' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ac06ac4a-6827-4740-9205-bce81fc1a089")
+    @objid ("55e53fd9-b42a-4b39-862f-dba5bd244d3f")
     public Location getLocation() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(VMInstance.MdaTypes.MDAASSOCDEP)
@@ -156,8 +154,9 @@ public class VMInstance extends ComponentInstance {
      * Get the value of the 'os' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("8138d1c4-8dd3-456b-96f6-237b9d228288")
+    @objid ("98c95723-c6f3-40ad-b3f5-f20ebd2583e4")
     public CamelAttribute getOs() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(VMInstance.MdaTypes.MDAASSOCDEP)
@@ -187,13 +186,14 @@ public class VMInstance extends ComponentInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("3cbcaa0d-e0e2-47c4-a057-0a8c8a38d636")
+    @objid ("79491a3c-9040-42d6-ba74-7e36ffaf4dca")
     public DeploymentInstanceModel getParent() {
         return (DeploymentInstanceModel)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getOwner(), DeploymentInstanceModel.STEREOTYPE_NAME);
     }
 
-    @objid ("d0f0939a-0785-40b1-8b23-bf888ac9001b")
+    @objid ("7c8e2c79-5f17-420e-ade7-92edd7912705")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -203,8 +203,9 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'location' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d4b33e29-dbfb-48e2-bc3f-c47146bfac34")
+    @objid ("f46224a3-2409-40b9-b856-5ca07503895f")
     public void setLocation(final Location obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -228,8 +229,9 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'os' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("b0f97e8b-2a5b-4d2b-b18d-f607e1d128c1")
+    @objid ("dd353f16-4735-42d8-b65f-a4c832276d2b")
     public void setOs(final CamelAttribute obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -253,8 +255,9 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("cd3b0bb1-0a89-41eb-b34d-1b77049a87aa")
+    @objid ("425399d1-5d05-4773-87ec-038e4ba21c21")
     public void setParent(final DeploymentInstanceModel obj) {
         ((Instance) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -267,23 +270,23 @@ public class VMInstance extends ComponentInstance {
         return result;
     }
 
-    @objid ("77fc294c-996e-4e31-bfb9-c5d8a310facd")
+    @objid ("cf1da880-aac3-4924-a2df-4a6a9293c9fc")
     protected VMInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("fe234d2a-6b82-4461-8b1d-47db446666cf")
     public static final class MdaTypes {
-        @objid ("0e0dc26d-33f8-4ae1-91a1-c3e3f83d8e47")
+        @objid ("e2ab9fc6-e3ac-4f56-97f5-2aa6aa4d61b6")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("90331b1c-4f18-4bb4-8f22-c8a1467cdf39")
+        @objid ("8220c112-96f1-413d-8a7c-e809a41efe92")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("bb24b56a-7a5d-4155-a433-3e719943a723")
+        @objid ("db6f50c8-7fb5-41d8-b51a-64148785f808")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("97b48abf-ae9d-48a8-bedb-592a032097cd")
+        @objid ("7281f424-11d3-4f27-ba97-060f5908e359")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a9a4550c-517a-4781-a3c9-5eb56d430f48");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -291,11 +294,11 @@ public class VMInstance extends ComponentInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

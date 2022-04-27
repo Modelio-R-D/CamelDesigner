@@ -39,7 +39,11 @@ public class ExecutionModelExporter<T extends ExecutionModel> extends SubModelEx
     @objid ("34dd56e1-d3cb-48c6-99f2-5054091dcb52")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.execution.ExecutionModel)) {
+            ((camel.core.CamelModel) context).getExecutionModels().add((camel.execution.ExecutionModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
     @objid ("8e07ae07-ced3-484d-b123-cc0286023e6a")

@@ -28,7 +28,11 @@ public class ScalabilityModelExporter<T extends ScalabilityModel> extends SubMod
     @objid ("962c2eb4-d4b0-4198-84ba-cd92785298c0")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.scalability.ScalabilityModel)) {
+            ((camel.core.CamelModel) context).getScalabilityModels().add((camel.scalability.ScalabilityModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

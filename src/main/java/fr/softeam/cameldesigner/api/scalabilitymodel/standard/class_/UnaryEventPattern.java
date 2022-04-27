@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -15,6 +15,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.FunctionalEvent;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.NonFunctionalEvent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -38,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("3d40f3a0-05f1-449c-8c3b-670598c18421")
 public class UnaryEventPattern extends EventPattern {
-    @objid ("0851cfd1-4d3d-436e-b1f2-e827e093646f")
+    @objid ("0e169d2b-d134-4a2a-929d-c289481eac35")
     public static final String STEREOTYPE_NAME = "UnaryEventPattern";
 
-    @objid ("eac4f0db-4511-4f32-a464-d449640fca73")
+    @objid ("ab831239-f178-4dde-9445-37ed95069a8d")
     public static final String OCCURRENCENUM_TAGTYPE = "occurrenceNum";
 
-    @objid ("e8799752-a5b4-48d4-99b4-54e12daac3e5")
+    @objid ("cdf616a6-edcf-4027-a07b-8289355dc6d6")
     public static final String OPERATOR_TAGTYPE = "operator";
 
     /**
@@ -55,7 +56,7 @@ public class UnaryEventPattern extends EventPattern {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c96d9be7-647a-4af4-993e-c2a0f2a28ec5")
+    @objid ("90de1f6c-254a-49d1-90ee-07b271ff0c8f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UnaryEventPattern.STEREOTYPE_NAME));
     }
@@ -65,7 +66,7 @@ public class UnaryEventPattern extends EventPattern {
      * 
      * @return a {@link UnaryEventPattern} proxy on the created {@link Class}.
      */
-    @objid ("f2b33db8-1ce2-4495-bb79-512490721602")
+    @objid ("f965884e-5774-4f69-8dd2-879f1d177bf0")
     public static UnaryEventPattern create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, UnaryEventPattern.STEREOTYPE_NAME);
@@ -73,36 +74,34 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link UnaryEventPattern} proxy or <i>null</i>.
      */
-    @objid ("5e79fc58-87c0-46ae-8bf0-3a02db341795")
+    @objid ("bfeecc3c-dd5b-4914-a182-98f801c6c66c")
     public static UnaryEventPattern instantiate(final Class obj) {
         return UnaryEventPattern.canInstantiate(obj) ? new UnaryEventPattern(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link UnaryEventPattern} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("48bd54de-9879-4e53-9a84-6cbb4fd32ec0")
+    @objid ("12aba1d3-9a79-4a8f-afb4-2063894e9588")
     public static UnaryEventPattern safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UnaryEventPattern.canInstantiate(obj))
-            return new UnaryEventPattern(obj);
+        	return new UnaryEventPattern(obj);
         else
-            throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9aa894ac-e3d2-4119-8b8c-319e690e0a16")
+    @objid ("c1cf348e-38df-4ffa-b29a-bbc327fa0cd5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -119,11 +118,10 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("ed619201-1a63-47e3-95db-d5d665fb939d")
+    @objid ("f8801f21-4ada-48ef-a8a9-2c277359c10c")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -133,8 +131,9 @@ public class UnaryEventPattern extends EventPattern {
      * Get the value of the 'event' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("49cf5e67-acfd-4295-bcee-1a26861a6a07")
+    @objid ("b7d1726f-a2a9-49fe-8dc8-c03cc15236f8")
     public Event getEvent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(UnaryEventPattern.MdaTypes.MDAASSOCDEP)
@@ -157,7 +156,7 @@ public class UnaryEventPattern extends EventPattern {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0b5dead9-faff-4f1f-95f3-d0518d2d5a86")
+    @objid ("728aaa95-7646-463e-914b-ea9bbddf3962")
     public String getOccurrenceNum() {
         return this.elt.getTagValue(UnaryEventPattern.MdaTypes.OCCURRENCENUM_TAGTYPE_ELT);
     }
@@ -167,12 +166,12 @@ public class UnaryEventPattern extends EventPattern {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ece3da1a-4d83-48b0-9ce3-1f87ffca6f65")
+    @objid ("7339a7d6-a9c2-49bf-b34c-ddeae4a4088a")
     public String getOperator() {
         return this.elt.getTagValue(UnaryEventPattern.MdaTypes.OPERATOR_TAGTYPE_ELT);
     }
 
-    @objid ("cd7f1918-23e4-4163-bd4e-85c4eb244e2a")
+    @objid ("d9231e51-30f9-40a2-ad27-7641691f136a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -182,8 +181,9 @@ public class UnaryEventPattern extends EventPattern {
      * Set the value of the 'event' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("020db08a-fefa-43bb-8182-c13f0a2b655d")
+    @objid ("b0b73576-c772-4005-89dc-0c9e526ae5b5")
     public void setEvent(final Event obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -208,7 +208,7 @@ public class UnaryEventPattern extends EventPattern {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5d3a82ae-cb4b-4376-85e0-555c06872fcb")
+    @objid ("e46ef9da-ffe0-4105-9101-7e24ed98e084")
     public void setOccurrenceNum(final String value) {
         this.elt.putTagValue(UnaryEventPattern.MdaTypes.OCCURRENCENUM_TAGTYPE_ELT, value);
     }
@@ -218,7 +218,7 @@ public class UnaryEventPattern extends EventPattern {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("45dffc6a-16db-4aef-8c96-42cc6696d715")
+    @objid ("865f37e4-d508-4754-ba45-df9c7c8ee941")
     public void setOperator(final String value) {
         this.elt.putTagValue(UnaryEventPattern.MdaTypes.OPERATOR_TAGTYPE_ELT, value);
     }
@@ -231,29 +231,29 @@ public class UnaryEventPattern extends EventPattern {
         return result;
     }
 
-    @objid ("b5658fe5-6a22-4d59-b358-b68f5bae44cf")
+    @objid ("ca8543b4-893b-4547-9980-e7e09a9ad846")
     protected UnaryEventPattern(final Class elt) {
         super(elt);
     }
 
     @objid ("a301d6fd-1e9f-4328-a7ee-80b97952f165")
     public static final class MdaTypes {
-        @objid ("11ce464e-7970-4488-ba7d-eb23fd87e52c")
+        @objid ("7fd5c33b-1d62-49a4-916b-0bf03ef36e70")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("981c2b25-7b1a-45e7-bd7e-d465c8926e8a")
+        @objid ("c12b4611-166c-4ac7-8b0f-20069685189c")
         public static TagType OCCURRENCENUM_TAGTYPE_ELT;
 
-        @objid ("d150ed8f-00b6-415a-813d-885dee3bf291")
+        @objid ("2a0e7b59-c2c3-4ced-b6eb-8becd3ca0965")
         public static TagType OPERATOR_TAGTYPE_ELT;
 
-        @objid ("1fd4979e-fa5f-4994-8b82-5c3796960674")
+        @objid ("714d20bc-8728-4612-8684-e5bf702f30d6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0cce86e5-d1f4-4aad-955e-f01ee26c015a")
+        @objid ("75cc492d-1645-446a-b627-baa57ce2e57b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("80cafc8b-9f46-4030-a78f-fc82292dccac")
+        @objid ("5224f9ed-24d6-42a8-8dcb-435d7044ba6b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "3956e53e-cf9e-4b4c-9b9c-16e18a3c53d6");
             OCCURRENCENUM_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "bd5fbe3f-41f7-445c-99e7-d6dc54c00545");
@@ -263,11 +263,11 @@ public class UnaryEventPattern extends EventPattern {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

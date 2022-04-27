@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.instance;
 
@@ -39,7 +39,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7596aa7f-0bb2-4518-8c82-6822a15475d0")
 public class DataSourceInstance extends FeatureInstance {
-    @objid ("4e5892a6-457e-41e8-a717-ea40f1791a8e")
+    @objid ("9e5484cb-0623-4f5d-81bc-3d8be41c2a76")
     public static final String STEREOTYPE_NAME = "DataSourceInstance";
 
     /**
@@ -50,7 +50,7 @@ public class DataSourceInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("70c72f4c-4fb6-4c79-bb0b-219afb6f40b6")
+    @objid ("d8be2349-3063-45de-9b18-fb68140b905e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataSourceInstance.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class DataSourceInstance extends FeatureInstance {
      * 
      * @return a {@link DataSourceInstance} proxy on the created {@link Instance}.
      */
-    @objid ("3a24c68b-92bd-441e-b95d-b7e91b516c20")
+    @objid ("aa18a50e-d195-4008-9d81-8afe49e70054")
     public static DataSourceInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataSourceInstance.STEREOTYPE_NAME);
@@ -68,36 +68,34 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link DataSourceInstance} proxy or <i>null</i>.
      */
-    @objid ("2ed1105f-79d8-40e5-92d4-cce2e35cfc38")
+    @objid ("ea16c76f-df28-4f90-9ce2-681940867dff")
     public static DataSourceInstance instantiate(final Instance obj) {
         return DataSourceInstance.canInstantiate(obj) ? new DataSourceInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link DataSourceInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("30eab7d8-099f-46f8-8ce4-b2dc31a47a1b")
+    @objid ("ba2c445c-6d0d-4cdc-9ac1-87a321512ebd")
     public static DataSourceInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (DataSourceInstance.canInstantiate(obj))
-            return new DataSourceInstance(obj);
+        	return new DataSourceInstance(obj);
         else
-            throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("dbee91f7-4502-4e5a-b5de-fcd2ca463338")
+    @objid ("ad78d1eb-4187-4004-813a-3d44e120dd6a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,11 +112,10 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}.
-     * 
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("f306de12-5711-41de-bcc0-3885c9746b14")
+    @objid ("d327933a-3609-42d1-8ba3-0a5467cc3519")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -128,8 +125,9 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("15d53f7b-5c80-451e-be99-7f1a0bdd250a")
+    @objid ("4c206c26-e43a-4b6d-af91-7ae939349d30")
     public DataInstanceModel getParent() {
         return (DataInstanceModel)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getOwner(), DataInstanceModel.STEREOTYPE_NAME);
     }
@@ -138,8 +136,9 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("751f5fe7-d362-40e7-b409-ff7070b60712")
+    @objid ("63c030c8-4451-4754-a1bd-77abd47dd90a")
     public SoftwareComponentInstance getSoftwareComponentInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataSourceInstance.MdaTypes.MDAASSOCDEP)
@@ -155,13 +154,14 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("501d8184-3f23-4a56-9d89-580d831d2d29")
+    @objid ("63a9bda8-8af0-4be3-805a-29850dcfb63c")
     public DataSource getType() {
         return (DataSource)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), DataSource.STEREOTYPE_NAME);
     }
 
-    @objid ("ac9acd2f-91db-49ec-b04d-f0c8845b9eb6")
+    @objid ("abcca6b8-810e-45e2-a4bd-a9389556a22d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -171,8 +171,9 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("91b7b8b9-2fca-489b-abc6-c55edf59ef66")
+    @objid ("ee295620-f97c-4d64-abce-50912c384153")
     public void setParent(final DataInstanceModel obj) {
         ((Instance) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -181,8 +182,9 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e650096a-84ba-440a-adc6-520ff12e9742")
+    @objid ("a8281977-b2f7-42ef-8817-a963a0cb1118")
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -206,8 +208,9 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("858e9ef3-bea1-45e7-b0aa-655acd423e38")
+    @objid ("dc105a8e-aab5-41b6-8117-db4d0237ad63")
     public void setType(final DataSource obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
     }
@@ -220,23 +223,23 @@ public class DataSourceInstance extends FeatureInstance {
         return result;
     }
 
-    @objid ("eda3f6ae-cb2c-4412-bfcc-42b5d5c70aec")
+    @objid ("6f581270-3781-4119-b0f9-423fe358fb0f")
     protected DataSourceInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("f274074b-7683-49b4-b45f-098faac6eaa7")
     public static final class MdaTypes {
-        @objid ("2dbe0e72-3a47-4469-88ce-5bfa4bbae54f")
+        @objid ("0de7e134-7488-4339-83be-c54107b16f71")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c7273217-9f53-453f-b4eb-be8598b084b0")
+        @objid ("de510bbe-01c9-40fe-8693-66e99bfe0c68")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e9b7a970-9abc-48a2-8132-5d8950177e9e")
+        @objid ("23f5a8d7-de08-4331-8925-9d60d20b9edb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("97a09df0-704b-4114-b29c-d0d4b9a6cf78")
+        @objid ("bb827b5d-cd32-4670-b611-450434efa56c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b72705cc-1db6-46cb-8f6e-de0c711a1997");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -244,11 +247,11 @@ public class DataSourceInstance extends FeatureInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

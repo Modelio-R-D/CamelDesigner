@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ad18d989-4bc1-47c9-9b74-61ab5b5e050f")
 public class AttributeConstraint extends UnaryConstraint {
-    @objid ("e55eee24-f46e-4a89-861b-d22284998773")
+    @objid ("351392ac-2425-4143-b652-059c84eaf68b")
     public static final String STEREOTYPE_NAME = "AttributeConstraint";
 
     /**
@@ -48,7 +48,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6c10288b-195a-4c27-99c6-4aaf4ed78733")
+    @objid ("989bdbd4-a868-46cc-9ca7-53867d295d68")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, AttributeConstraint.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * 
      * @return a {@link AttributeConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("30076312-c72c-4035-a24f-96277b299e4e")
+    @objid ("6cd2ddcd-75f3-4c8d-88ed-f13986ae2923")
     public static AttributeConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, AttributeConstraint.STEREOTYPE_NAME);
@@ -66,36 +66,34 @@ public class AttributeConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Constraint
      * @return a {@link AttributeConstraint} proxy or <i>null</i>.
      */
-    @objid ("f8c675ec-7f8d-4990-a5c7-bc52ad9b0b34")
+    @objid ("aec14f98-99c5-4263-9159-8e29c1dd3ec8")
     public static AttributeConstraint instantiate(final Constraint obj) {
         return AttributeConstraint.canInstantiate(obj) ? new AttributeConstraint(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Constraint}
      * @return a {@link AttributeConstraint} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4b7725a7-fd07-4249-9ea4-ac7310442599")
+    @objid ("387c46a9-b3f2-4dea-a5ed-11a2f28439a6")
     public static AttributeConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (AttributeConstraint.canInstantiate(obj))
-            return new AttributeConstraint(obj);
+        	return new AttributeConstraint(obj);
         else
-            throw new IllegalArgumentException("AttributeConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("AttributeConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("93c9ba9e-9aa5-40f7-9fa6-9f22f9be4440")
+    @objid ("a075a0f2-637d-4cb1-b8f7-3cde103fa61c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,28 +113,28 @@ public class AttributeConstraint extends UnaryConstraint {
      * Get the value to the 'attributeContext' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("cb7edb08-0c0c-488c-a8ae-a3c8c5a48344")
+    @objid ("a6862511-b0f3-4e19-a174-d9d7d417880f")
     public AttributeContext getAttributeContext() {
-        for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
-         if (AttributeContext.canInstantiate(obj))
-           return (AttributeContext)CamelDesignerProxyFactory.instantiate(obj, AttributeContext.STEREOTYPE_NAME);
-        }
-        return null;
+          for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
+           if (AttributeContext.canInstantiate(obj))
+             return (AttributeContext)CamelDesignerProxyFactory.instantiate(obj, AttributeContext.STEREOTYPE_NAME);
+          }
+          return null;
     }
 
     /**
-     * Get the underlying {@link Constraint}.
-     * 
+     * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("54ad1096-abf0-4a69-8af2-094d6adc3785")
+    @objid ("08a72d99-8601-445f-ab50-68fbfe7fa466")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("daf1dced-77fc-4b96-9738-9383a749de72")
+    @objid ("0ea9ca2c-b89d-4ded-90b2-196f739da353")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -146,8 +144,9 @@ public class AttributeConstraint extends UnaryConstraint {
      * Set the value of the 'attributeContext' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("56604416-76d5-4b82-9c32-d2e6837c4e7a")
+    @objid ("74ec3d89-608a-489b-9f28-8710b0ddd02c")
     public void setAttributeContext(final AttributeContext obj) {
         // Remove existing AttributeContexts
         for (Class e : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
@@ -168,23 +167,23 @@ public class AttributeConstraint extends UnaryConstraint {
         return result;
     }
 
-    @objid ("12d0a25c-72b0-4347-91f0-397d8e9d6b3a")
+    @objid ("c093b8df-2cc3-4865-8418-b5c6fa865457")
     protected AttributeConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("d22fc638-bd9d-4514-a93a-6f08c279f3bd")
     public static final class MdaTypes {
-        @objid ("56f77d89-bb17-4dd5-9384-ddba4c4005e3")
+        @objid ("80dfd374-6b18-4dba-ade5-54458b31025d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4a9a6f5c-2331-46ca-b510-fe9ab3dac9bf")
+        @objid ("8293ef1d-6f4b-46fb-82dc-092e6d5443a8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("25a0331c-676c-4bdb-b037-0cd8b09f6f38")
+        @objid ("51183560-f10b-4c10-8feb-597b44c33278")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1791a26b-c406-42b8-880f-7f4e57a29b6c")
+        @objid ("ee6e5265-42fb-48ec-a176-f6f60260e803")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "310d656e-d693-4ec1-b186-66894464b4b3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -192,11 +191,11 @@ public class AttributeConstraint extends UnaryConstraint {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

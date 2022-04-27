@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.component;
 
@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a0dafd4c-3a94-4343-86b0-316952020ebd")
 public class Sensor extends SoftwareComponent {
-    @objid ("d312831e-0cf6-493e-a7e9-fa268dd23028")
+    @objid ("43453058-86d0-4218-9991-ae6477978d6d")
     public static final String STEREOTYPE_NAME = "Sensor";
 
-    @objid ("4cf8de70-4149-4762-b9ce-52a26ab4ec03")
+    @objid ("b2319a0f-945c-440c-b9e2-b1fca090f19a")
     public static final String CONFIGURATION_TAGTYPE = "configuration";
 
-    @objid ("7bf6dec1-241c-469b-8c88-21692fbd3794")
+    @objid ("b1ee1cb0-2335-43ab-8aae-3ed3af8d2098")
     public static final String ISPUSH_TAGTYPE = "isPush";
 
     /**
@@ -53,7 +53,7 @@ public class Sensor extends SoftwareComponent {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2600fa70-892c-45a7-8299-d46dab91dca3")
+    @objid ("c7492944-54bf-4adc-abd8-64d89486c325")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Component) && ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Sensor.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class Sensor extends SoftwareComponent {
      * 
      * @return a {@link Sensor} proxy on the created {@link Component}.
      */
-    @objid ("8cd79fcf-ffec-447a-bd2b-97641e1e05a4")
+    @objid ("62bd2308-f3c1-42b6-98d8-0061caf3b38d")
     public static Sensor create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Component");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Sensor.STEREOTYPE_NAME);
@@ -71,36 +71,34 @@ public class Sensor extends SoftwareComponent {
     }
 
     /**
-     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Component
      * @return a {@link Sensor} proxy or <i>null</i>.
      */
-    @objid ("4b7c6b60-3de7-4a11-a02b-4ae1ae136edc")
+    @objid ("16aad77f-d076-445d-9be6-38b741e834cb")
     public static Sensor instantiate(final Component obj) {
         return Sensor.canInstantiate(obj) ? new Sensor(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Sensor} proxy from a {@link Component} stereotyped << Sensor >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Component}
      * @return a {@link Sensor} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e612869f-8328-475d-be50-c577f9e7400b")
+    @objid ("18403c83-d032-4ed4-8913-ab76231e82c9")
     public static Sensor safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (Sensor.canInstantiate(obj))
-            return new Sensor(obj);
+        	return new Sensor(obj);
         else
-            throw new IllegalArgumentException("Sensor: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("Sensor: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ada1b138-6758-4116-b61f-b3d17964f7f2")
+    @objid ("96fec0a9-e31f-44ed-ae20-e840d5cf9642")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,23 +119,22 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0e75153f-6f25-420a-8dc7-733cfdfa3a21")
+    @objid ("42a1f665-5469-4c17-8d67-759ff8f9a9f2")
     public String getConfiguration() {
         return this.elt.getTagValue(Sensor.MdaTypes.CONFIGURATION_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Component}.
-     * 
+     * Get the underlying {@link Component}. 
      * @return the Component represented by this proxy, never null.
      */
-    @objid ("b242c650-6bc3-4028-8df4-921500084b11")
+    @objid ("b2ae3b11-a69b-4917-94a5-875ab2c5ee99")
     @Override
     public Component getElement() {
         return (Component)super.getElement();
     }
 
-    @objid ("0adae025-9bb3-4f8c-9850-99763b7149dc")
+    @objid ("489cb682-1763-4002-8f3f-8373b697c548")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -148,7 +145,7 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("91b3a11b-dbd5-46c4-b6fb-c7e85303f8c5")
+    @objid ("15f91a36-b096-4e15-a7a5-328d0ad4e28b")
     public boolean isIsPush() {
         return this.elt.isTagged(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT);
     }
@@ -158,7 +155,7 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f914497c-f7fb-4071-98c4-8173728210ae")
+    @objid ("ed09d4db-f1d2-452f-bf25-6a69a961a0db")
     public void setConfiguration(final String value) {
         this.elt.putTagValue(Sensor.MdaTypes.CONFIGURATION_TAGTYPE_ELT, value);
     }
@@ -168,7 +165,7 @@ public class Sensor extends SoftwareComponent {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9eb9e257-ec0e-468c-abd2-372d74134a19")
+    @objid ("9c976f24-9f24-4bae-aff9-b67f2971f397")
     public void setIsPush(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(Sensor.MdaTypes.ISPUSH_TAGTYPE_ELT, this.elt);
@@ -184,29 +181,29 @@ public class Sensor extends SoftwareComponent {
         return result;
     }
 
-    @objid ("c424968f-9583-4b90-86ef-24a0242a674f")
+    @objid ("65960c1f-f9b3-4ad3-b4b6-0101851770da")
     protected Sensor(final Component elt) {
         super(elt);
     }
 
     @objid ("ab2c122d-31c1-421d-919a-92957fbd08bd")
     public static final class MdaTypes {
-        @objid ("eea6a7ee-f414-4888-b8bc-3decdaf254fa")
+        @objid ("4c3bf2a9-c874-428b-a6e4-950e7f2665a1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("37425679-781e-45df-bd6d-6648a4828d33")
+        @objid ("795e95c8-5dbc-4175-8879-7d83ce181e99")
         public static TagType CONFIGURATION_TAGTYPE_ELT;
 
-        @objid ("edbcea37-c873-47a9-9ded-b976b548602a")
+        @objid ("cfa018a9-3856-41f6-9af7-8fb51d1d1020")
         public static TagType ISPUSH_TAGTYPE_ELT;
 
-        @objid ("d03d23b3-6cdc-45f3-8d60-3d9fac499c85")
+        @objid ("f25d1922-20fa-4039-9588-91b673a1ec86")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e383da68-f21f-4949-a43e-654b8e1c7af0")
+        @objid ("1190934d-b114-42ee-b986-c61a30afa242")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9274dc19-b744-470c-927e-bf534a6e2185")
+        @objid ("b5bf86a7-32f2-4376-8f03-7460dfdf2081")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d130006b-ebe5-4a5f-818a-abc63742cf56");
             CONFIGURATION_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "326b1fa3-0a38-48be-aace-c126d5979004");
@@ -216,11 +213,11 @@ public class Sensor extends SoftwareComponent {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

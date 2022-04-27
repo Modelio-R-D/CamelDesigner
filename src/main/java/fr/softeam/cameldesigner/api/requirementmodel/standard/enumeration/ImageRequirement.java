@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c80e5eab-6c61-4c19-bf8f-86c5aa2a419d")
 public class ImageRequirement extends HardRequirement {
-    @objid ("64cac9e8-41e1-4332-8717-99ff5a87e02a")
+    @objid ("5e944ada-5d03-476a-bc40-657817bbc482")
     public static final String STEREOTYPE_NAME = "ImageRequirement";
 
-    @objid ("1f640467-5942-476a-b683-615690efacd8")
+    @objid ("fb6c6ece-d7f0-472e-aa8e-524b740f55e7")
     public static final String IMAGES_TAGTYPE = "images";
 
     /**
@@ -50,7 +50,7 @@ public class ImageRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8d163761-4735-41ec-9084-8cbaa86eff68")
+    @objid ("8ba13730-cdb0-437b-ab1a-b21062969383")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Enumeration) && ((Enumeration) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ImageRequirement.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class ImageRequirement extends HardRequirement {
      * 
      * @return a {@link ImageRequirement} proxy on the created {@link Enumeration}.
      */
-    @objid ("ce187978-0d9b-403d-b49a-b8eeae00f1e7")
+    @objid ("fd0efd45-367c-48d4-9f24-c30c64e8b79c")
     public static ImageRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Enumeration");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ImageRequirement.STEREOTYPE_NAME);
@@ -68,36 +68,34 @@ public class ImageRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ImageRequirement} proxy from a {@link Enumeration} stereotyped << ImageRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ImageRequirement} proxy from a {@link Enumeration} stereotyped << ImageRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Enumeration
      * @return a {@link ImageRequirement} proxy or <i>null</i>.
      */
-    @objid ("c8b6ef61-44b5-459f-b689-eaa6c788d326")
+    @objid ("0e7d0786-63e2-4d45-9005-7aeef0a9ec8f")
     public static ImageRequirement instantiate(final Enumeration obj) {
         return ImageRequirement.canInstantiate(obj) ? new ImageRequirement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ImageRequirement} proxy from a {@link Enumeration} stereotyped << ImageRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ImageRequirement} proxy from a {@link Enumeration} stereotyped << ImageRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Enumeration}
      * @return a {@link ImageRequirement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("96c336be-9eb8-4eef-adb1-399e770dfd55")
+    @objid ("fd9a73c1-38bd-4f18-8bed-065b69fe9015")
     public static ImageRequirement safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (ImageRequirement.canInstantiate(obj))
-            return new ImageRequirement(obj);
+        	return new ImageRequirement(obj);
         else
-            throw new IllegalArgumentException("ImageRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ImageRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("d6c599ac-79fb-49c2-9014-d5828219a909")
+    @objid ("7eef459b-8982-489f-81e6-f91be2ee05d9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,11 +112,10 @@ public class ImageRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Enumeration}.
-     * 
+     * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
-    @objid ("b3ba106b-a4c8-44a3-8212-14e107eafd06")
+    @objid ("fcb99de4-9505-472f-90ce-d92681cb438a")
     @Override
     public Enumeration getElement() {
         return (Enumeration)super.getElement();
@@ -129,12 +126,12 @@ public class ImageRequirement extends HardRequirement {
      * <p>Property description:<br/>
      * <i>null</i></p>
      */
-    @objid ("b2665352-706d-4a51-bd50-3fc6e59e8dee")
+    @objid ("79b5daa5-4963-40f3-afa6-da941f07040d")
     public List<String> getImages() {
         return this.elt.getTagValues(ImageRequirement.MdaTypes.IMAGES_TAGTYPE_ELT);
     }
 
-    @objid ("d423022d-68ba-48d7-af44-f45c500662a6")
+    @objid ("db652953-2c77-4462-9ba1-1bca3ca414c1")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -145,7 +142,7 @@ public class ImageRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b55ac614-4196-4043-8c80-64e510a83779")
+    @objid ("d8e882f8-8802-40e9-83b9-5417dae6d753")
     public void setImages(final List<String> values) {
         this.elt.putTagValues(ImageRequirement.MdaTypes.IMAGES_TAGTYPE_ELT, values);
     }
@@ -158,26 +155,26 @@ public class ImageRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("74725faa-06df-430c-bac9-4dcc37408c7d")
+    @objid ("91c706e7-5aee-43ed-90bc-7776b23b9e9c")
     protected ImageRequirement(final Enumeration elt) {
         super(elt);
     }
 
     @objid ("092ec222-61cf-4d33-995e-dfa1dcd4853f")
     public static final class MdaTypes {
-        @objid ("49ad9072-b08e-4d09-8293-d71f8e57e800")
+        @objid ("efe0c00a-3cab-4320-8264-7a275cc5eff8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("43815984-b0c4-496a-a7ec-a1884444ec02")
+        @objid ("bdf59ab1-a10d-4a02-8300-784931b98062")
         public static TagType IMAGES_TAGTYPE_ELT;
 
-        @objid ("2262cc89-9716-42bf-a175-e83818888420")
+        @objid ("9fd1bba4-8019-4f79-b03d-0882e7a9b9b3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7c013edc-579f-44ab-b86f-732095a0397f")
+        @objid ("60211d7f-c404-4236-8585-632667551e21")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ad905552-57cb-4aa7-97b2-e2b21f4d1b07")
+        @objid ("2506432e-7e54-4da0-9221-b73929a7f763")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "aed9a95b-2f53-42b5-ad97-3a39f0ee4d60");
             IMAGES_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "15d9a370-393a-428c-8331-c15664b99f13");
@@ -186,11 +183,11 @@ public class ImageRequirement extends HardRequirement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

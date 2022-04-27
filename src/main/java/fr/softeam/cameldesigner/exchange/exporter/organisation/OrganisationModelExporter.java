@@ -33,7 +33,11 @@ public class OrganisationModelExporter<T extends OrganisationModel> extends SubM
     @objid ("19743cd6-be73-4790-85fd-e40a9f3d8af5")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.organisation.OrganisationModel)) {
+            ((camel.core.CamelModel) context).getOrganisationModels().add((camel.organisation.OrganisationModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
     @objid ("36f2a71b-3e62-4386-a249-3a24ecfe395b")

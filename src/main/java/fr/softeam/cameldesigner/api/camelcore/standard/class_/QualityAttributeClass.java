@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.class_;
 
@@ -33,7 +33,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("00b4d8d6-dff1-41ad-8764-b639c5cef9a2")
 public class QualityAttributeClass extends AttributeClass {
-    @objid ("7ec69d18-236a-4d89-8715-6d792a3eb576")
+    @objid ("33f1ce0a-0bff-4c2f-8c86-283b610222bc")
     public static final String STEREOTYPE_NAME = "QualityAttribute_Class";
 
     /**
@@ -44,7 +44,7 @@ public class QualityAttributeClass extends AttributeClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("53f97db8-88b0-43ae-99c0-3aa4e03d5b4b")
+    @objid ("129700d7-b155-4b70-a545-c3e49d75e3b8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, QualityAttributeClass.STEREOTYPE_NAME));
     }
@@ -54,7 +54,7 @@ public class QualityAttributeClass extends AttributeClass {
      * 
      * @return a {@link QualityAttributeClass} proxy on the created {@link Class}.
      */
-    @objid ("b286daa2-0ede-48fc-a4f9-602fd3701498")
+    @objid ("1aa4823b-0b57-4c5d-a430-78e88c7b5717")
     public static QualityAttributeClass create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, QualityAttributeClass.STEREOTYPE_NAME);
@@ -62,36 +62,34 @@ public class QualityAttributeClass extends AttributeClass {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link QualityAttributeClass} proxy or <i>null</i>.
      */
-    @objid ("10f99a86-070c-47da-a878-93389a4eefab")
+    @objid ("d8ad3f78-f042-4f1f-a148-32c98e000a6e")
     public static QualityAttributeClass instantiate(final Class obj) {
         return QualityAttributeClass.canInstantiate(obj) ? new QualityAttributeClass(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link QualityAttributeClass} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("58ce570b-9689-4d51-94c8-403299c21f28")
+    @objid ("70068ebf-dc0e-4934-badd-21039f5bcbfc")
     public static QualityAttributeClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (QualityAttributeClass.canInstantiate(obj))
-            return new QualityAttributeClass(obj);
+        	return new QualityAttributeClass(obj);
         else
-            throw new IllegalArgumentException("QualityAttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("QualityAttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("91dae874-e985-44b8-a26b-0d6d9c2b9098")
+    @objid ("bba0f998-7a31-441a-8f25-bba963da5d5d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,39 +106,38 @@ public class QualityAttributeClass extends AttributeClass {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e9d522e1-88c9-42d9-ab11-3af9c9092b4c")
+    @objid ("72e7f24f-e7e0-432d-8b42-8729a5c50116")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("13f3eb34-6df6-42da-9b90-5438e34a12d7")
+    @objid ("124df1a3-dab4-4093-9513-9cde6cd47f97")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("d5d144b7-dd6f-483f-b130-65b2fdffc185")
+    @objid ("de5508f1-5ad5-4e1a-afd6-e5023ab89fe4")
     protected QualityAttributeClass(final Class elt) {
         super(elt);
     }
 
     @objid ("b614d475-a5cc-4fb3-8a5c-4681fb5ee31d")
     public static final class MdaTypes {
-        @objid ("e2bc483c-c4e7-43ef-9158-97f797e91a25")
+        @objid ("2b5d8af8-082e-4d0d-b6a3-1f4eaa2100cd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0f860da5-da47-41ce-9c17-7551b3e61f32")
+        @objid ("dcebb014-2fa8-4797-a4fd-da1dc2071fdc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a6fb2556-268a-40ee-b5ed-45db436bbceb")
+        @objid ("f51427bd-9879-481c-9c94-0dd6993fc35b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e1bd8fe5-770e-490d-98df-2173b9a8e0fd")
+        @objid ("a12290aa-aa0b-425f-bda1-11e185189e5b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ef0c1237-df8a-4bfc-8f0b-d3ad72e39bf4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -148,11 +145,11 @@ public class QualityAttributeClass extends AttributeClass {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

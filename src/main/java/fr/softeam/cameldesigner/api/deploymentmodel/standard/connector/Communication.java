@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.connector;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f5a1e8b4-c495-4efa-a525-7238dae641c0")
 public class Communication extends ComponentRelation {
-    @objid ("e94b43ce-6c5e-4c59-babe-5297b573ae7e")
+    @objid ("ac801f38-36df-4749-93c7-b45370e6ade5")
     public static final String STEREOTYPE_NAME = "Communication";
 
     /**
@@ -51,7 +51,7 @@ public class Communication extends ComponentRelation {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("51921834-d00a-410b-8750-f47e0ff7624c")
+    @objid ("4d8099a0-c155-43e4-b55f-6c67fe0ff756")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Communication.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class Communication extends ComponentRelation {
      * 
      * @return a {@link Communication} proxy on the created {@link Connector}.
      */
-    @objid ("da4d9c85-4c1f-40eb-b909-7d89de114729")
+    @objid ("f0a9e35e-27f9-42aa-954c-c0dda30c0274")
     public static Communication create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Communication.STEREOTYPE_NAME);
@@ -69,36 +69,34 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Connector
      * @return a {@link Communication} proxy or <i>null</i>.
      */
-    @objid ("b2c7e485-cada-4fe6-970b-91efaa171b69")
+    @objid ("0c437f57-9493-4266-ba43-4877979ab2e2")
     public static Communication instantiate(final Connector obj) {
         return Communication.canInstantiate(obj) ? new Communication(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Connector}
      * @return a {@link Communication} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("cb53ec49-c607-4c91-8126-cce4cd4eeba4")
+    @objid ("5262ede5-c0c2-43ad-8b37-083d0562351e")
     public static Communication safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Communication.canInstantiate(obj))
-            return new Communication(obj);
+        	return new Communication(obj);
         else
-            throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("623a53bb-8c96-46e4-a380-21f2e1f35beb")
+    @objid ("b362a526-be58-4e21-9ee8-59142e55bc50")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,11 +113,10 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}.
-     * 
+     * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("88688b03-c813-402b-85c8-2f13c9092935")
+    @objid ("3e20256b-0c9b-4dc6-b7ee-184f2c35492b")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
@@ -129,8 +126,9 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("7d367f32-2f1f-4c34-acd0-de6fea61fd0c")
+    @objid ("968d0590-186f-4a01-9c6a-74f46ec54be5")
     public Configuration getProvidedPortConfiguration() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
@@ -152,8 +150,9 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("66dbf6d8-1d67-4560-ab5a-850f78e8c647")
+    @objid ("20171cdf-b85d-4524-9c6e-ef6a76ffa683")
     public Configuration getRequiredPortConfiguration() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
@@ -171,7 +170,7 @@ public class Communication extends ComponentRelation {
         return null;
     }
 
-    @objid ("276e17ca-e924-4c45-9f2a-901989d27db2")
+    @objid ("fd8eeb52-d419-40ef-83a9-0bb050358b19")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -181,8 +180,9 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("bdb80604-738b-435d-bd2f-5efdfc1b03a5")
+    @objid ("7159c3e2-8ed4-4454-8b7c-91e96235126f")
     public void setProvidedPortConfiguration(final Configuration obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -206,8 +206,9 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("5f746fbe-eac4-4e72-b0f7-e82e475be97a")
+    @objid ("5fc61863-5514-4d4c-9723-14cd9bb3ca2b")
     public void setRequiredPortConfiguration(final Configuration obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -235,23 +236,23 @@ public class Communication extends ComponentRelation {
         return result;
     }
 
-    @objid ("42a623c1-3927-4f52-afd6-3e3ae60ed3fd")
+    @objid ("f165195b-8e30-4614-bb7a-9c440ad5e717")
     protected Communication(final Connector elt) {
         super(elt);
     }
 
     @objid ("32a673a4-c270-4514-b3a4-c875b717ae42")
     public static final class MdaTypes {
-        @objid ("036b53ba-c166-4a50-b351-c05c310af472")
+        @objid ("77309aba-ed8f-41b5-8104-338547dfbda9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dd3261cf-d381-4a1a-a34c-6855ff20f8a6")
+        @objid ("ca264412-d0ae-4068-9ad0-a6f4502c0630")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0724da91-3518-4dd9-8a2b-7b51de2baff5")
+        @objid ("23cb719f-1660-4f2c-b825-b1100e98ac23")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e8bc3f9c-0101-4ed5-902e-e608fe5dc386")
+        @objid ("a55ef655-2d4f-41b3-b591-8d195009a65b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "141875d2-e648-4750-9fff-84c1b21e9b54");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -259,11 +260,11 @@ public class Communication extends ComponentRelation {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

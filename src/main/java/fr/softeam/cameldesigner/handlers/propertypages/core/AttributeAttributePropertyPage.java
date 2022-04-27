@@ -80,6 +80,7 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
         table.addProperty("ValueType", value, getValueType());
         
         //Unit
+        value = "";
         Unit unit = this._element.getUnit();
         if (unit != null) {
             value = getCamelName(unit.getElement());

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.09
+ * Module: CamelDesigner v1.0.10
 
- * This file was generated on 4/20/22 10:37 AM by Modelio Studio.
+ * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6e4c7b4b-d381-4e52-a43d-fcb0cea6173f")
 public abstract class DeploymentModel extends SubModel {
-    @objid ("f172fcef-1eaa-421e-a61e-ee5018df644f")
+    @objid ("5100d826-c093-4f2c-b65a-7796fd11b4ad")
     public static final String STEREOTYPE_NAME = "DeploymentModel";
 
     /**
@@ -48,12 +48,12 @@ public abstract class DeploymentModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1f75b330-fe9c-4532-be74-a67f6657b486")
+    @objid ("57e4dbe0-9709-42e1-b726-83f4aa34122a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentModel.STEREOTYPE_NAME));
     }
 
-    @objid ("42a17049-4034-4560-8fb0-2d5f6a11e47e")
+    @objid ("acb1c502-7bad-453f-acd0-c303b3081003")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -73,24 +73,24 @@ public abstract class DeploymentModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("9596a5b5-2c75-4514-bc7f-8653d206b7d1")
+    @objid ("5464bf0b-1a20-4c3f-a514-acf3199e39a1")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("77d914f1-2dc7-40cf-8313-f0a6964519b1")
+    @objid ("6fd4e672-6336-4cd3-9622-de62d6c68398")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("4daa5eba-20e2-4f78-bf73-5e1a94ca2106")
+    @objid ("6c4cd4e5-1356-40d9-afde-2a4a7154ac9d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -100,8 +100,9 @@ public abstract class DeploymentModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1553903c-4ccd-467e-911f-b39cc0c03f65")
+    @objid ("6b2aeaed-fa3e-408c-944e-5525406b5c5b")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -114,23 +115,23 @@ public abstract class DeploymentModel extends SubModel {
         return result;
     }
 
-    @objid ("c0eb77bf-ede5-4cd0-b0cc-b8a317d99e42")
+    @objid ("a9209205-df9b-4992-afa5-4532e318e96d")
     protected DeploymentModel(final Package elt) {
         super(elt);
     }
 
     @objid ("bcfd6f5c-46e7-47aa-9a4b-79a22339b9f4")
     public static final class MdaTypes {
-        @objid ("f02fb633-5295-490c-9b94-94f4ae5f10da")
+        @objid ("fc0de974-2578-4a5f-b9ae-f83eff2e479b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d902b590-3f61-4cf3-aa54-2aaf4674fa2d")
+        @objid ("65449e60-624e-4735-bf30-1c13731a2bf4")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("98c63b1e-b92d-4fea-858f-9003b470d227")
+        @objid ("25f8dcd7-31b1-4d41-bad5-d8de1844b17f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1910f48b-b921-408b-9ffb-256e0e34df3a")
+        @objid ("75d321aa-afc0-4629-9a20-7598acccfacc")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7d620068-3fc6-4fec-8829-0444c0c3186f");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -138,11 +139,11 @@ public abstract class DeploymentModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
