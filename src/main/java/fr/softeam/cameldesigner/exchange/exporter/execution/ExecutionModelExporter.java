@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.exporter.execution;
 
 import java.sql.Date;
-import camel.execution.ExecutionFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.execution.ExecutionFactory;
 import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.exchange.exporter.core.SubModelExporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("db11059e-f431-4aad-810b-e8fb3c3299a6")
 public class ExecutionModelExporter<T extends ExecutionModel> extends SubModelExporter<T> {
@@ -76,14 +76,18 @@ public class ExecutionModelExporter<T extends ExecutionModel> extends SubModelEx
 
     @objid ("9306a5f6-d01b-4fc3-9e3a-4bbadb53ee87")
     private void setTotalCost(camel.execution.ExecutionModel em) {
-        em.setTotalCost(Double.valueOf(this._element.getTotalCost()));
+        String content = this._element.getTotalCost();
+        if (content != null) {
+            em.setTotalCost(Double.valueOf(content));
+        }
     }
 
     @objid ("213c87a0-c6ed-47b3-93c4-3f890b28f6c7")
     private void setEndTime(camel.execution.ExecutionModel em) {
         String content = this._element.getEndTime();
-        if (content != null)
+        if (content != null) {
             em.setEndTime(Date.valueOf(content));
+        }
     }
 
     @objid ("9ea74efc-aeb9-410f-8730-0b5ea497df66")

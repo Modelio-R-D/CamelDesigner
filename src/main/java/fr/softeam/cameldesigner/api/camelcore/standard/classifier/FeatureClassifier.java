@@ -9,10 +9,17 @@ package fr.softeam.cameldesigner.api.camelcore.standard.classifier;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.Classifier;
+import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.camelcore.standard.artifact.FeatureArtifact;
@@ -20,7 +27,10 @@ import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttrib
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.Application;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
+import fr.softeam.cameldesigner.api.camelcore.standard.class_.QualityAttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.datatype.FeatureDataType;
 import fr.softeam.cameldesigner.api.camelcore.standard.enumeration.FeatureEnumeration;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
@@ -105,20 +115,6 @@ import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.Classifier;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * Proxy class to handle a {@link Classifier} with << Feature_Classifier >> stereotype.
@@ -134,7 +130,7 @@ public abstract class FeatureClassifier extends Feature {
      * Tells whether a {@link FeatureClassifier proxy} can be instantiated from a {@link MObject} checking it is a {@link Classifier} stereotyped << Feature_Classifier >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -147,7 +143,7 @@ public abstract class FeatureClassifier extends Feature {
      * Add a value to the 'attributes' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("a31b6058-3ce2-49bf-8e71-f4f3b0750b6d")
     public void addAttributes(final AttributeAttribute obj) {
@@ -159,7 +155,7 @@ public abstract class FeatureClassifier extends Feature {
      * Add a value to the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("8ed0e17f-e890-481a-a292-db17da038acf")
     public void addSubFeatures(final FeatureClassifier obj) {
@@ -187,12 +183,12 @@ public abstract class FeatureClassifier extends Feature {
      * Get the values of the 'attributes' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("7197c7fa-ec9c-4b62-b621-b71fdee1d02f")
-    public List<AttributeAttribute> getAttributes() {
-        List<AttributeAttribute> results = new ArrayList<>();
-        for (Attribute mObj : ((Classifier) this.elt).getOwnedAttribute()){
+    public List<CamelAttribute> getAttributes() {
+        List<CamelAttribute> results = new ArrayList<>();
+        for (Attribute mObj : getElement().getOwnedAttribute()){
         	if (MeasurableAttributeAttribute.canInstantiate(mObj))
         			results.add((MeasurableAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeAttribute.STEREOTYPE_NAME));
         	if (QualityAttributeAttribute.canInstantiate(mObj))
@@ -200,11 +196,20 @@ public abstract class FeatureClassifier extends Feature {
         	if (AttributeAttribute.canInstantiate(mObj))
         			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
         	}
+
+        for (ModelTree mObj : getElement().getOwnedElement()){
+            if (MeasurableAttributeClass.canInstantiate(mObj))
+                    results.add((MeasurableAttributeClass) CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeClass.STEREOTYPE_NAME));
+            if (QualityAttributeClass.canInstantiate(mObj))
+                    results.add((QualityAttributeClass)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeClass.STEREOTYPE_NAME));
+            if (AttributeClass.canInstantiate(mObj))
+                    results.add((AttributeClass)CamelDesignerProxyFactory.instantiate(mObj, AttributeClass.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Classifier}. 
+     * Get the underlying {@link Classifier}.
      * @return the Classifier represented by this proxy, never null.
      */
     @objid ("4f5ef67d-dcb7-44a8-aa15-cbfbb071466b")
@@ -217,7 +222,7 @@ public abstract class FeatureClassifier extends Feature {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("c7d9c595-2d79-4d2a-b185-7e02f2cf78c2")
     public FeatureClassifier getParent() {
@@ -228,7 +233,7 @@ public abstract class FeatureClassifier extends Feature {
      * Get the values of the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("7329a7c9-b9ef-454d-b918-588a04b7323d")
     public List<FeatureClassifier> getSubFeatures() {
@@ -420,7 +425,7 @@ public abstract class FeatureClassifier extends Feature {
      * Remove a value from the 'attributes' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("96f894b6-d9bc-464b-a0da-3a009daee695")
     public boolean removeAttributes(final AttributeAttribute obj) {
@@ -431,7 +436,7 @@ public abstract class FeatureClassifier extends Feature {
      * Remove a value from the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("0a902189-1932-4827-b0f1-69da308f9b84")
     public boolean removeSubFeatures(final FeatureClassifier obj) {
@@ -442,7 +447,7 @@ public abstract class FeatureClassifier extends Feature {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
+     *
      */
     @objid ("9c4e7b93-7214-4352-b2ce-856269c41cc9")
     public void setParent(final FeatureClassifier obj) {
