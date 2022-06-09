@@ -2,9 +2,9 @@ package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 
 @objid ("18777714-2734-4665-853d-396b1b510d4a")
 public class ReverseProcessMetricInstance extends AbstractReverseProcess {
@@ -17,6 +17,12 @@ public class ReverseProcessMetricInstance extends AbstractReverseProcess {
     @objid ("60c243dc-df0d-4928-bf2d-3073f25bc777")
     @Override
     protected CamelElement switchReverse(CDOObject element) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Object process(Object element, Object context) {
         // TODO Auto-generated method stub
         return null;
     }

@@ -7,6 +7,7 @@ import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
 import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import fr.softeam.cameldesigner.profiler.ProfilerDaemon;
 
 @objid ("8480a3b7-a19c-434e-b676-2cae92031b88")
 public class CamelDesignerModule extends AbstractJavaModule {
@@ -25,12 +26,15 @@ public class CamelDesignerModule extends AbstractJavaModule {
     @objid ("637a5b96-f694-4b69-9e73-fdb2e8297735")
     public static CamelLogService logService;
 
+    public static ProfilerDaemon daemon;
+
     @objid ("58ad7d4c-51e4-476c-b15e-443b4b46efb7")
     public CamelDesignerModule(final IModuleContext moduleContext) {
         super(moduleContext);
-        
+
         CamelDesignerModule.instance = this;
         CamelDesignerModule.logService = new CamelLogService(this.getModuleContext().getLogService(), this);
+        CamelDesignerModule.daemon = new ProfilerDaemon();
         this.lifeCycleHandler  = new CamelDesignerLifeCycleHandler(this);
         this.peerModule = new CamelDesignerPeerModule(this, moduleContext.getPeerConfiguration());
         init();
@@ -87,7 +91,7 @@ public class CamelDesignerModule extends AbstractJavaModule {
 
     /**
      * Generated expert looking for a MDA expert in the generated MDA API.
-     * 
+     *
      * @param st a stereotype owned by the current module.
      * @return a MDA expert belonging to the MDA API or <code>null</code>.
      */

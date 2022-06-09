@@ -7,7 +7,7 @@ import camel.core.CoreFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.walker.IWalker;
-import fr.softeam.cameldesigner.exchange.walker.umlwalker.UmlWalker;
+import fr.softeam.cameldesigner.exchange.walker.UmlWalker;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import fr.softeam.cameldesigner.impl.CamelDesignerPeerModule;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;

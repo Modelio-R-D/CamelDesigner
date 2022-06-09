@@ -1,9 +1,8 @@
-package fr.softeam.cameldesigner.exchange.walker.umlwalker;
+package fr.softeam.cameldesigner.exchange.walker;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.exporter.GenerateProcess;
-import fr.softeam.cameldesigner.exchange.walker.IWalker;
 
 @objid ("c9176bd9-b9e7-47fb-862c-0c982a60e42c")
 public class UmlWalker implements IWalker<CamelElement> {

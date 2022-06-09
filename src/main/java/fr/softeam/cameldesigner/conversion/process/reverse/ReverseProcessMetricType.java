@@ -1,8 +1,10 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
-import camel.deployment.Component;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import camel.deployment.Component;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
@@ -20,8 +22,6 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("5af83dce-bbf9-4b20-8040-9db6d6df2c37")
 public class ReverseProcessMetricType extends AbstractReverseProcess {
@@ -438,6 +438,12 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
             }
         }
         return referencedCamelComponent;
+    }
+
+    @Override
+    public Object process(Object element, Object context) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 

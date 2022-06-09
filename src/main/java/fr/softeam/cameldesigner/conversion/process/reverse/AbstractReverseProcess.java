@@ -1,11 +1,7 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
-import camel.core.NamedElement;
-import camel.mms.MmsObject;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.conversion.process.IElementProcess;
 import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -13,6 +9,10 @@ import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Classifier;
 import org.modelio.metamodel.uml.statik.Port;
+import camel.core.NamedElement;
+import camel.mms.MmsObject;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.conversion.process.IElementProcess;
 
 @objid ("8252e63d-68de-4dd8-8beb-0144ac974cd4")
 public abstract class AbstractReverseProcess implements IElementProcess {
@@ -49,7 +49,6 @@ public abstract class AbstractReverseProcess implements IElementProcess {
     }
 
     @objid ("c316b5d0-3bb1-46c7-aa3a-12227085b1a2")
-    @Override
     public CamelElement process(Object element, fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement context) {
         return process ((CDOObject) element);
     }
@@ -86,34 +85,34 @@ public abstract class AbstractReverseProcess implements IElementProcess {
         //                    System.out.println(sb.toString());
         //                }
         //        System.out.println(map);
-        
+
         CamelElement processedElement = null;
         if(this.processedCamelElements.containsKey(element)) {
             processedElement = this.processedCamelElements.get(element);
         } else {
             processedElement = this.switchReverse (element);
-        
+
             /*
              *  update name and add annotations
              */
             if(processedElement != null) {
-        
+
                 if(element instanceof NamedElement) {
                     NamedElement namedElement = (NamedElement)element;
                     processedElement.getElement().setName(((NamedElement)element).getName());
-        
+
                     EList<MmsObject> annotations = namedElement.getAnnotations();
-        
-        
+
+
                 } else if (element instanceof MmsObject) {
                     processedElement.getElement().setName(((MmsObject)element).getName());
-        
-        
-        
+
+
+
                 }
                 this.processedCamelElements.put(element, processedElement);
             }
-        
+
         }
         if(processedElement != null) {
             this.updateOwner(processedElement.getElement(), element);

@@ -1,16 +1,16 @@
 package fr.softeam.cameldesigner.exchange.exporter;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.IElementProcess;
 import fr.softeam.cameldesigner.exchange.exporter.core.CamelElementExporter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("9d3c43e8-d77f-4de9-89be-8e5ed21b089a")
-public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> {
+public class GenerateProcess implements IElementProcess<CDOObject, CamelElement> {
     @objid ("c38ecb82-ebdb-4e95-8828-9fddc1cc8acf")
     private CamelElement camelElementParent;
 
@@ -24,11 +24,11 @@ public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> 
     public CDOObject process(CamelElement element, CamelElement context) {
         CDOObject processedElement = null;
         GenerateMap genMap = GenerateMap.getInstance();
-        
+
         try {
             CamelElementExporter<CamelElement> exporter = (CamelElementExporter) ExporterFactory.instantiateExporter(element.getElement());
             exporter.setProcess(this);
-        
+
             if(genMap.containsKey(element.getElement())) {
                 processedElement = genMap.get(element.getElement());
             } else {
@@ -40,7 +40,7 @@ public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> 
                 }
             }
             exporter.setProperties(processedElement);
-        
+
         }catch (Exception e) {
             CamelDesignerModule.logService.error(e);
             return null;

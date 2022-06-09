@@ -1,6 +1,13 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.api.modelio.model.IUmlModel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.ConnectorEnd;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.PortOrientation;
 import camel.core.NamedElement;
 import camel.deployment.BuildConfiguration;
 import camel.deployment.ClusterConfiguration;
@@ -23,7 +30,6 @@ import camel.deployment.ServerlessConfiguration;
 import camel.deployment.SoftwareComponent;
 import camel.deployment.VM;
 import camel.requirement.Requirement;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement;
@@ -35,12 +41,6 @@ import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityReq
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.api.modelio.model.IUmlModel;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.ConnectorEnd;
-import org.modelio.metamodel.uml.statik.Instance;
-import org.modelio.metamodel.uml.statik.PortOrientation;
 
 @objid ("5c7d0fea-5720-4505-9709-5bcfaec4af3e")
 public class ReverseProcessDeploymentType extends AbstractReverseProcess {
@@ -52,65 +52,65 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
     @objid ("749ed05e-d253-4563-ab86-1f1a98d1ed50")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet reverse(RequirementSet element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet proxyRequirementSet = fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet.create();
-        
-        
+
+
         if(element.getHorizontalScaleRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getHorizontalScaleRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setHorizontalScaleRequirement((HorizontalScaleRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getImageRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getImageRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setImageRequirement( (ImageRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getLocationRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getLocationRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setLocationRequirement((LocationRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getOsRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getOsRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setOsRequirement((OSRequirement) referencedRequirement);
             }
         }
-        
-        
+
+
         if(element.getPaasRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getPaasRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setPaasRequirement((PaaSRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getProviderRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getProviderRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setProviderRequirement((ProviderRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getResourceRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getResourceRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setResourceRequirement((ResourceRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getSecurityRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getSecurityRequirement());
             if(referencedRequirement != null) {
                 proxyRequirementSet.setSecurityRequirement((SecurityRequirement) referencedRequirement);
             }
         }
-        
+
         if(element.getVerticalScaleRequirement() != null) {
             fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = retrieveReferencedRequirement(element.getVerticalScaleRequirement());
             if(referencedRequirement != null) {
@@ -210,13 +210,13 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
     @objid ("33fe6234-1942-4bfe-92c9-e8baf82a696d")
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent reverse(SoftwareComponent element) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent softwareComponentProxy = fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent.create();
-        
+
         if(element.getRequirementSet() != null) {
             fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet referencedRequirementSet = retrieveReferencedRequirementSet(element.getRequirementSet());
             if(referencedRequirementSet != null) {
                 softwareComponentProxy.setRequirementSet(referencedRequirementSet);
             }
-        
+
         }
         return softwareComponentProxy;
     }
@@ -268,18 +268,18 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
         else if  (element instanceof CommunicationPort){
             if(element instanceof ProvidedCommunication){
                 return reverse ((ProvidedCommunication) element);
-        
+
             } else if  (element instanceof RequiredCommunication){
                 return reverse ((RequiredCommunication) element);
-        
+
             }
         } else if  (element instanceof HostingPort){
             if(element instanceof RequiredHost){
                 return reverse ((RequiredHost) element);
-        
+
             } else if  (element instanceof ProvidedHost){
                 return reverse ((ProvidedHost) element);
-        
+
             }
         }
         return null;
@@ -320,7 +320,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
                 this.processedCamelElements.put(communication.getProvidedCommunication(), proxyProvidedCommunication);
             }
         }
-        
+
         fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort proxyRequiredCommunication = null;
         if(this.processedCamelElements.containsKey(communication.getRequiredCommunication())) {
             proxyRequiredCommunication = (fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort) this.processedCamelElements.get(communication.getRequiredCommunication());
@@ -331,29 +331,29 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
                 this.processedCamelElements.put(communication.getRequiredCommunication(), proxyProvidedCommunication);
             }
         }
-        
+
         fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communication proxyCommunication = fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communication.create();
-        
-        
-        
+
+
+
         IUmlModel umlModel = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel();
-        
+
         ConnectorEnd endSource = umlModel.createConnectorEnd();
         ConnectorEnd endTarget = umlModel.createConnectorEnd();
-        
-        
-        
-        
+
+
+
+
         endSource.setSource((Instance) proxyProvidedCommunication.getElement());
         endSource.setTarget((Instance) proxyRequiredCommunication.getElement());
-        
+
         proxyCommunication.getElement().getLinkEnd().add(endTarget);
-        
+
         proxyCommunication.getElement().getLinkEnd().add(endSource);
-        
+
         endSource.setOpposite(endTarget);
         endTarget.setOpposite(endSource);
-        
+
         endSource.setNavigable(false);
         endTarget.setNavigable(true);
         return proxyCommunication;
@@ -376,7 +376,7 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
                     this.processedCamelElements.put(providedCommunication, umlProvidedCommunication);
                 }
             }
-        
+
             this.setUmlElementParent(umlProvidedCommunication.getElement());
         }
         super.updateOwner(reversedElement, element);
@@ -386,10 +386,10 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
     private fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement retrieveReferencedRequirement(Requirement requirementElement) {
         fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement referencedRequirement = null;
         if(this.processedCamelElements.containsKey(requirementElement)) {
-        
+
             referencedRequirement = (fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement) this.processedCamelElements.get(requirementElement);
         } else {
-        
+
             referencedRequirement = (fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement) (new ReverseProcessRequirement(null, this.processedCamelElements)).switchReverse(requirementElement);
             referencedRequirement.getElement().setName(requirementElement.getName());
             this.processedCamelElements.put(requirementElement, referencedRequirement);
@@ -401,15 +401,21 @@ public class ReverseProcessDeploymentType extends AbstractReverseProcess {
     private fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet retrieveReferencedRequirementSet(RequirementSet requirementSet) {
         fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet referencedRequirementSet = null;
         if(this.processedCamelElements.containsKey(requirementSet)) {
-        
+
             referencedRequirementSet = (fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) this.processedCamelElements.get(requirementSet);
         } else {
-        
+
             referencedRequirementSet = (fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) this.switchReverse(requirementSet);
             referencedRequirementSet.getElement().setName(requirementSet.getName());
             this.processedCamelElements.put(requirementSet, referencedRequirementSet);
         }
         return referencedRequirementSet;
+    }
+
+    @Override
+    public Object process(Object element, Object context) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }
