@@ -15,9 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Role;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.User;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.UserGroup;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -77,9 +74,10 @@ public class RoleAssignment extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RoleAssignment} proxy from a {@link Class} stereotyped << RoleAssignment >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RoleAssignment} proxy from a {@link Class} stereotyped << RoleAssignment >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RoleAssignment} proxy or <i>null</i>.
      */
@@ -89,19 +87,20 @@ public class RoleAssignment extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RoleAssignment} proxy from a {@link Class} stereotyped << RoleAssignment >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RoleAssignment} proxy from a {@link Class} stereotyped << RoleAssignment >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RoleAssignment} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("14c51174-49be-4af7-84f1-3c460c6b9a86")
     public static RoleAssignment safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RoleAssignment.canInstantiate(obj))
-        	return new RoleAssignment(obj);
+            return new RoleAssignment(obj);
         else
-        	throw new IllegalArgumentException("RoleAssignment: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RoleAssignment: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("8d7a7308-c451-4b61-8a31-a0f4ef412902")
@@ -131,7 +130,8 @@ public class RoleAssignment extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e01c7e57-ac37-450f-bed0-60f50b52a9ef")
@@ -154,7 +154,6 @@ public class RoleAssignment extends FeatureClass {
      * Get the value of the 'role' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cea09db5-0f4e-4e81-b3a4-95a8b45080ef")
     public Role getRole() {
@@ -182,7 +181,6 @@ public class RoleAssignment extends FeatureClass {
      * Get the value of the 'user' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b23fe89b-026c-4df8-87cf-6946472d3c45")
     public User getUser() {
@@ -200,7 +198,6 @@ public class RoleAssignment extends FeatureClass {
      * Get the value of the 'userGroup' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("875ce6c5-9a7c-4e0e-9c41-ab71dc699fe5")
     public UserGroup getUserGroup() {
@@ -244,7 +241,6 @@ public class RoleAssignment extends FeatureClass {
      * Set the value of the 'role' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8f28f6fc-8367-464e-92a9-2320626ec492")
     public void setRole(final Role obj) {
@@ -280,7 +276,6 @@ public class RoleAssignment extends FeatureClass {
      * Set the value of the 'user' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4bf6d5ba-b7a6-4b51-85ed-b7cfbd823e80")
     public void setUser(final User obj) {
@@ -306,7 +301,6 @@ public class RoleAssignment extends FeatureClass {
      * Set the value of the 'userGroup' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4613320d-7c7a-4a3e-9783-c423434b2d9a")
     public void setUserGroup(final UserGroup obj) {
@@ -372,11 +366,11 @@ public class RoleAssignment extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

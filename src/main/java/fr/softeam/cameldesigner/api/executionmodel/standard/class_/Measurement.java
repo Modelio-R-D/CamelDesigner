@@ -80,7 +80,8 @@ public abstract class Measurement extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("507c4f08-bf0b-4183-ab06-be2ca010c6b3")
@@ -93,7 +94,6 @@ public abstract class Measurement extends FeatureClass {
      * Get the value of the 'eventInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d8a7b303-691b-4ff2-b957-292734582388")
     public EventInstance getEventInstance() {
@@ -123,7 +123,6 @@ public abstract class Measurement extends FeatureClass {
      * Get the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cb5f7074-ee3a-43b5-9bf2-b8c87b66d0cb")
     public MetricInstance getMetricInstance() {
@@ -159,7 +158,6 @@ public abstract class Measurement extends FeatureClass {
      * Set the value of the 'eventInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4f0f0890-f284-4e24-bd1b-6fa860f24425")
     public void setEventInstance(final EventInstance obj) {
@@ -195,7 +193,6 @@ public abstract class Measurement extends FeatureClass {
      * Set the value of the 'metricInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7050b24c-2bf6-4796-af49-e95e85f958bd")
     public void setMetricInstance(final MetricInstance obj) {
@@ -267,11 +264,11 @@ public abstract class Measurement extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

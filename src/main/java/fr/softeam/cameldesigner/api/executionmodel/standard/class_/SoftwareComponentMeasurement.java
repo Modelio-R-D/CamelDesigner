@@ -67,9 +67,10 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SoftwareComponentMeasurement} proxy or <i>null</i>.
      */
@@ -79,19 +80,20 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SoftwareComponentMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("26113e5a-4f22-4f1c-96e7-6b757d611213")
     public static SoftwareComponentMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentMeasurement.canInstantiate(obj))
-        	return new SoftwareComponentMeasurement(obj);
+            return new SoftwareComponentMeasurement(obj);
         else
-        	throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("a75bf8bd-2c69-400d-94df-4099cd4cba6c")
@@ -111,7 +113,8 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("dba49bc7-1a15-4b74-8c1c-1583fa1d192e")
@@ -124,7 +127,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c6fe253a-ebb0-434a-97d1-90d3c1103a2e")
     public SoftwareComponent getSoftwareComponent() {
@@ -144,7 +146,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("16ce7047-761a-4288-a68e-6dd1b85a2146")
     public SoftwareComponentInstance getSoftwareComponentInstance() {
@@ -168,7 +169,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0586543c-0b3e-4cb1-9f33-c9985ed42dbc")
     public void setSoftwareComponent(final SoftwareComponent obj) {
@@ -194,7 +194,6 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1c36b0f7-9ba9-4438-a838-bf136dd9dcff")
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
@@ -248,11 +247,11 @@ public class SoftwareComponentMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

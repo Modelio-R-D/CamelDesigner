@@ -9,7 +9,14 @@ package fr.softeam.cameldesigner.api.metadatamodel.standard.attribute;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import camel.mms.MmsPropertyType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -18,13 +25,6 @@ import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.vcore.smkernel.mapi.MObject;
-import camel.mms.MmsPropertyType;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Attribute} with << MmsProperty >> stereotype.
@@ -46,7 +46,7 @@ public class MmsProperty extends MmsObject {
      * Tells whether a {@link MmsProperty proxy} can be instantiated from a {@link MObject} checking it is a {@link Attribute} stereotyped << MmsProperty >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     *
+     * 
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -57,7 +57,7 @@ public class MmsProperty extends MmsObject {
 
     /**
      * Create a new {@link Attribute} stereotyped << MmsProperty >> then instantiate a {@link MmsProperty} proxy.
-     *
+     * 
      * @return a {@link MmsProperty} proxy on the created {@link Attribute}.
      */
     @objid ("f9e7e3f2-33f7-453e-ba92-795fb90ef448")
@@ -71,6 +71,7 @@ public class MmsProperty extends MmsObject {
      * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link MmsProperty} proxy or <i>null</i>.
      */
@@ -83,16 +84,17 @@ public class MmsProperty extends MmsObject {
      * Tries to instantiate a {@link MmsProperty} proxy from a {@link Attribute} stereotyped << MmsProperty >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link MmsProperty} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d9ddf52e-d838-4a62-989d-420354740e09")
     public static MmsProperty safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (MmsProperty.canInstantiate(obj))
-        	return new MmsProperty(obj);
+            return new MmsProperty(obj);
         else
-        	throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsProperty: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("61f233b1-6b0b-487d-830f-134c3ae1767a")
@@ -115,7 +117,6 @@ public class MmsProperty extends MmsObject {
      * Get the value to the 'domain' role.<p>
      * Role description:
      * null
-     *
      */
     @objid ("91efefd5-7b9d-4659-9d0f-23e1adcffd2e")
     public MmsConcept getDomain() {
@@ -124,6 +125,7 @@ public class MmsProperty extends MmsObject {
 
     /**
      * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @objid ("52341d85-45e0-4e24-9244-834bb78cfd5c")
@@ -146,7 +148,6 @@ public class MmsProperty extends MmsObject {
      * Get the value of the 'range' role.<p>
      * Role description:
      * null
-     *
      */
     @objid ("6e1c7de2-b4af-47c3-8a5a-bf84f1bdb9b0")
     public MmsConcept getRange() {
@@ -180,7 +181,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     *
      */
     @objid ("4a2fbefb-3496-4ca6-891c-a74208be060d")
     public void setDomain(final MmsConcept obj) {
@@ -201,7 +201,6 @@ public class MmsProperty extends MmsObject {
      * Set the value of the 'range' role.<p>
      * Role description:
      * null
-     *
      */
     @objid ("9f128525-3fde-4129-8975-71612893497e")
     public void setRange(final MmsConcept obj) {
@@ -289,11 +288,11 @@ public class MmsProperty extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

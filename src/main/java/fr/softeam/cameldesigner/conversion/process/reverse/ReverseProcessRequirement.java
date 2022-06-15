@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.Class;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("132a82a4-f75b-47ae-a545-35c15633a632")
 public class ReverseProcessRequirement extends AbstractReverseProcess {
@@ -210,6 +210,7 @@ public class ReverseProcessRequirement extends AbstractReverseProcess {
         return referencedMetricContext;
     }
 
+    @objid ("4f182f26-677c-4b74-9f0a-68c4b840160c")
     @Override
     public Object process(Object element, Object context) {
         // TODO Auto-generated method stub

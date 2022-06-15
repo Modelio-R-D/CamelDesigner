@@ -66,9 +66,10 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CommunicationMeasurement} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationMeasurement} proxy from a {@link Class} stereotyped << CommunicationMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CommunicationMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a5613467-c3e0-4912-9336-1fa5589559ac")
     public static CommunicationMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CommunicationMeasurement.canInstantiate(obj))
-        	return new CommunicationMeasurement(obj);
+            return new CommunicationMeasurement(obj);
         else
-        	throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d6d05eaf-a688-4e54-a8c8-4d763fb00d4b")
@@ -110,7 +112,8 @@ public class CommunicationMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("83253fe3-e688-4d9b-8643-2f589678f703")
@@ -123,7 +126,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("26a32bf3-63ab-42c2-8e93-aa4b3725ee94")
     public VM getSourceVM() {
@@ -141,7 +143,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dd957941-a535-427a-ab2b-c1b48a9a5478")
     public VMInstance getSourceVMInstance() {
@@ -159,7 +160,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e1c10e3-6868-434c-a627-071f1ea512cd")
     public VM getTargetVM() {
@@ -177,7 +177,6 @@ public class CommunicationMeasurement extends Measurement {
      * Get the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f3c9bb72-289d-45d1-92ae-e0a00b480f07")
     public VMInstance getTargetVMInstance() {
@@ -201,7 +200,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8b6243ba-0fc5-4b95-840c-d1eec00da4cb")
     public void setSourceVM(final VM obj) {
@@ -227,7 +225,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'sourceVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9cd5a30a-731b-4aea-80cf-f7daed31f102")
     public void setSourceVMInstance(final VMInstance obj) {
@@ -253,7 +250,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVM' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e1057403-9ab2-4b86-8184-a49615627074")
     public void setTargetVM(final VM obj) {
@@ -279,7 +275,6 @@ public class CommunicationMeasurement extends Measurement {
      * Set the value of the 'targetVMInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("87af96db-da9b-4ed8-9fb5-05f1bcd9b326")
     public void setTargetVMInstance(final VMInstance obj) {
@@ -333,11 +328,11 @@ public class CommunicationMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

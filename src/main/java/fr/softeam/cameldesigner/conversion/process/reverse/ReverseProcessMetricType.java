@@ -1,10 +1,8 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import camel.deployment.Component;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
@@ -22,6 +20,8 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("5af83dce-bbf9-4b20-8040-9db6d6df2c37")
 public class ReverseProcessMetricType extends AbstractReverseProcess {
@@ -62,21 +62,21 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     @objid ("d3257439-0e37-4c2b-9831-ef142241579d")
     private MetricTemplate reverse(camel.metric.MetricTemplate element) {
         MetricTemplate metricTemplateProxy = MetricTemplate.create();
-
+        
         if(element.getAttribute() != null) {
             MeasurableAttributeClass referencedMeasurableAttribute = retrieveReferencedMeasurableAttribute(element.getAttribute());
             if(referencedMeasurableAttribute != null) {
                 metricTemplateProxy.setAttribute(referencedMeasurableAttribute);
             }
         }
-
+        
         if(element.getUnit() != null) {
             Unit referencedUnit = retrieveReferencedUnit(element.getUnit());
             if(referencedUnit != null) {
                 metricTemplateProxy.setUnit(referencedUnit);
             }
         }
-
+        
         if(element.getValueType() != null) {
             ValueType referencedValueType = retrieveReferencedValueType(element.getValueType());
             if(referencedValueType != null) {
@@ -110,15 +110,15 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     @objid ("7a61acd0-83aa-4430-a75d-1cec9d54303e")
     private Window reverse(camel.metric.Window element) {
         Window windowProxy = Window.create();
-
+        
         windowProxy.setMeasurementSize(Long.toString(element.getMeasurementSize()));
-
+        
         if(element.getSizeType() != null) {
             windowProxy.setWindowType(element.getSizeType().toString());
         }
-
+        
         windowProxy.setTimeSize(Long.toString(element.getTimeSize()));
-
+        
         // TODO
         //        if(element.getTimeUnit() != null) {
         //            Unit referencedTimeUnit = retrieveReferencedTimeUnit(element.getTimeUnit());
@@ -126,7 +126,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         //                windowProxy.setTimeUnit(referencedTimeUnit);
         //            }
         //        }
-
+        
         if(element.getWindowType() != null) {
             windowProxy.setWindowType(element.getWindowType().toString());
         }
@@ -139,14 +139,14 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         if(element.getFormula() != null) {
             metricVariable.setFormula(element.getFormula());
         }
-
+        
         if(element.getComponent() != null) {
             CamelComponent referencedComponent = retrieveReferencedComponent(element.getComponent());
             if(referencedComponent != null) {
                 metricVariable.setComponent(referencedComponent);
             }
         }
-
+        
         metricVariable.setCurrentConfiguration(element.isCurrentConfiguration());
         return metricVariable;
     }
@@ -190,7 +190,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     @objid ("f4c1de1f-ba14-4598-8c55-4c5706737ef2")
     private CompositeMetricContext reverse(camel.metric.CompositeMetricContext element) {
         CompositeMetricContext compositeMetricContextProxy = (CompositeMetricContext) reverseMetricContext(element);
-
+        
         for(camel.metric.MetricContext metricContext : element.getComposingMetricContexts()) {
             MetricContext referencedMetricContext = retrievReferencedMetricContext(metricContext);
             if(referencedMetricContext != null) {
@@ -203,7 +203,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     @objid ("6ff3396c-db26-40a5-8699-fd3d1d22fe6a")
     private RawMetricContext reverse(camel.metric.RawMetricContext element) {
         RawMetricContext rawMetricContextProxy = (RawMetricContext) reverseMetricContext(element);
-
+        
         if(element.getSensor() != null) {
             Sensor referencedSensor = retrieveReferencedSensor(element.getSensor());
             if(referencedSensor != null) {
@@ -328,34 +328,34 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
     @objid ("3064203d-9925-416e-8faf-45fa5b97cd97")
     private MetricContext reverseMetricContext(camel.metric.MetricContext element) {
         MetricContext metricContextProxy = null;
-
+        
         if(element instanceof camel.metric.CompositeMetricContext) {
             metricContextProxy = CompositeMetricContext.create();
         } else if(element instanceof camel.metric.RawMetricContext) {
             metricContextProxy = RawMetricContext.create();
         }
-
+        
         if(element.getMetric() != null) {
             Metric referencedMetric = retrieveReferencedMetric(element.getMetric());
             if(referencedMetric != null) {
                 metricContextProxy.setMetric(referencedMetric);
             }
         }
-
+        
         if(element.getWindow() != null) {
             Window referencedWindow = retrieveReferencedWindow(element.getWindow());
             if(referencedWindow != null) {
                 metricContextProxy.setWindow(referencedWindow);
             }
         }
-
+        
         if(element.getSchedule() != null) {
             Schedule referencedSchedule = retrieveReferencedSchedule(element.getSchedule());
             if(referencedSchedule != null) {
                 metricContextProxy.setSchedule(referencedSchedule);
             }
         }
-
+        
         if(element.getObjectContext() != null) {
             ObjectContext referencedObjectContext = retrieveReferencedObjectContext(element.getObjectContext());
             if(referencedObjectContext != null) {
@@ -440,6 +440,7 @@ public class ReverseProcessMetricType extends AbstractReverseProcess {
         return referencedCamelComponent;
     }
 
+    @objid ("6ce3d7f7-77c9-4067-ae94-ef02c19bfa09")
     @Override
     public Object process(Object element, Object context) {
         // TODO Auto-generated method stub

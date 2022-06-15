@@ -66,9 +66,10 @@ public class MetricConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link MetricConstraint} proxy from a {@link Constraint} stereotyped << MetricConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricConstraint} proxy from a {@link Constraint} stereotyped << MetricConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link MetricConstraint} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class MetricConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link MetricConstraint} proxy from a {@link Constraint} stereotyped << MetricConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricConstraint} proxy from a {@link Constraint} stereotyped << MetricConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link MetricConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("9dbc8a7a-ecc9-465b-b652-c5f14ae07205")
     public static MetricConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (MetricConstraint.canInstantiate(obj))
-        	return new MetricConstraint(obj);
+            return new MetricConstraint(obj);
         else
-        	throw new IllegalArgumentException("MetricConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("34768f3d-0ed1-4f66-b071-3321ddb9ab16")
@@ -110,7 +112,8 @@ public class MetricConstraint extends UnaryConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("1768d4a0-312a-4235-b7b2-bb8c6c01c400")
@@ -123,15 +126,14 @@ public class MetricConstraint extends UnaryConstraint {
      * Get the value to the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("30c19fb9-83f8-4ba6-a0d7-257faeaf9cc6")
     public MetricContext getMetricContext() {
-          for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
-           if (MetricContext.canInstantiate(obj))
-             return (MetricContext)CamelDesignerProxyFactory.instantiate(obj, MetricContext.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
+         if (MetricContext.canInstantiate(obj))
+           return (MetricContext)CamelDesignerProxyFactory.instantiate(obj, MetricContext.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     @objid ("b48a7db1-860f-4d78-b358-a5cc36241248")
@@ -144,7 +146,6 @@ public class MetricConstraint extends UnaryConstraint {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("023eb697-7bee-453f-9040-7a526914b656")
     public void setMetricContext(final MetricContext obj) {
@@ -191,11 +192,11 @@ public class MetricConstraint extends UnaryConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -66,9 +66,10 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityRequirement} proxy or <i>null</i>.
      */
@@ -78,26 +79,26 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityRequirement} proxy from a {@link Class} stereotyped << SecurityRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("e62d3a79-7923-4625-98ef-9cfc3d473df7")
     public static SecurityRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityRequirement.canInstantiate(obj))
-        	return new SecurityRequirement(obj);
+            return new SecurityRequirement(obj);
         else
-        	throw new IllegalArgumentException("SecurityRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f1f65e0d-d0c1-4b3d-86fa-2628e6119e11")
     public void addSecurityControls(final SecurityControl obj) {
@@ -126,7 +127,8 @@ public class SecurityRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("c515ce6e-1fd5-45e3-a062-3ab2086d58c9")
@@ -139,7 +141,6 @@ public class SecurityRequirement extends HardRequirement {
      * Get the values of the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cfa95e30-1194-4a4d-91ba-a7d004b57693")
     public List<SecurityControl> getSecurityControls() {
@@ -164,7 +165,6 @@ public class SecurityRequirement extends HardRequirement {
      * Remove a value from the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("973b938b-2180-475e-9285-404b6a2054eb")
     public boolean removeSecurityControls(final SecurityControl obj) {
@@ -212,11 +212,11 @@ public class SecurityRequirement extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

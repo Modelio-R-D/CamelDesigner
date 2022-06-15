@@ -1,12 +1,12 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import camel.mms.MmsConcept;
 import camel.mms.MmsProperty;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("104404a1-1c4c-4de7-9c51-f1739f69052d")
 public class ReverseProcessMetaData extends AbstractReverseProcess {
@@ -54,6 +54,7 @@ public class ReverseProcessMetaData extends AbstractReverseProcess {
         return null;
     }
 
+    @objid ("7193d004-e893-4539-b628-e36e5ec03e40")
     @Override
     public Object process(Object element, Object context) {
         // TODO Auto-generated method stub

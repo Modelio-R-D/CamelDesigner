@@ -76,7 +76,8 @@ public abstract class EventInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("61af20ea-cdee-4a6e-90df-3369fe9c80f1")
@@ -109,7 +110,6 @@ public abstract class EventInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("431f3493-f550-4464-9ed3-0543f75a3219")
     public Event getType() {
@@ -146,7 +146,6 @@ public abstract class EventInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f5b4360a-be50-4435-9a63-75949fd704fb")
     public void setType(final Event obj) {
@@ -193,11 +192,11 @@ public abstract class EventInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -61,7 +61,6 @@ public abstract class Unit extends FeatureDataType {
      * Add a value of the 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b1351911-200b-4a3a-a266-57034a249f6f")
     public void addMultipleOf(final Unit obj) {
@@ -90,7 +89,8 @@ public abstract class Unit extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("beaab2de-ed3c-4e6b-a1e3-c9c81a916660")
@@ -103,7 +103,6 @@ public abstract class Unit extends FeatureDataType {
      * Get the values of the 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ff0777a8-7c02-4247-9a42-23ec6b352476")
     public List<Unit> getMultipleOf() {
@@ -128,7 +127,6 @@ public abstract class Unit extends FeatureDataType {
      * Remove a value from 'multipleOf' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1afce388-d973-4ced-b9b6-0d485d524ae9")
     public boolean removeMultipleOf(final Unit obj) {
@@ -176,11 +174,11 @@ public abstract class Unit extends FeatureDataType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

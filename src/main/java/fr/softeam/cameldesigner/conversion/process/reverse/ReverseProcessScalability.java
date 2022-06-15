@@ -2,9 +2,9 @@ package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 
 @objid ("f0ade7df-406f-4576-94e0-6d2e46019c68")
 public class ReverseProcessScalability extends AbstractReverseProcess {
@@ -21,6 +21,7 @@ public class ReverseProcessScalability extends AbstractReverseProcess {
         return null;
     }
 
+    @objid ("ac55dec9-4d90-4321-9038-282363e890fa")
     @Override
     public Object process(Object element, Object context) {
         // TODO Auto-generated method stub

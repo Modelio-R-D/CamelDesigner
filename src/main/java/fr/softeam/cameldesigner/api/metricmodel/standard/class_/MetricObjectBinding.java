@@ -72,9 +72,10 @@ public class MetricObjectBinding extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricObjectBinding} proxy or <i>null</i>.
      */
@@ -84,19 +85,20 @@ public class MetricObjectBinding extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricObjectBinding} proxy from a {@link Class} stereotyped << MetricObjectBinding >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricObjectBinding} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d73564a0-a81d-4d8f-ac18-98fe311c60d3")
     public static MetricObjectBinding safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricObjectBinding.canInstantiate(obj))
-        	return new MetricObjectBinding(obj);
+            return new MetricObjectBinding(obj);
         else
-        	throw new IllegalArgumentException("MetricObjectBinding: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricObjectBinding: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("ef5a0999-f9f5-444d-831d-dbb1042e3a4b")
@@ -119,7 +121,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Get the value of the 'communicationInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("aea7bf63-15b4-421a-ba5d-712f57a4f2ab")
     public CommunicationInstance getCommunicationInstance() {
@@ -137,7 +138,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Get the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1007808f-0620-4566-ba3b-87f8efa57e0f")
     public ComponentInstance getComponentInstance() {
@@ -158,7 +158,8 @@ public class MetricObjectBinding extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("4dbefc5e-424e-4502-bac1-c71003ab3a09")
@@ -171,7 +172,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Get the value of the 'executionModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f9b20ed2-5cc5-405c-ab9c-9411a95f8deb")
     public ExecutionModel getExecutionModel() {
@@ -195,7 +195,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Set the value of the 'communicationInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("aecc1cba-1101-4c64-b4c3-45e79c7f2f7f")
     public void setCommunicationInstance(final CommunicationInstance obj) {
@@ -221,7 +220,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Set the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1219d3ac-0338-46ad-a6a7-2a99e15e646d")
     public void setComponentInstance(final ComponentInstance obj) {
@@ -247,7 +245,6 @@ public class MetricObjectBinding extends FeatureClass {
      * Set the value of the 'executionModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f898bbbb-1960-4282-91c2-4ddcdba17040")
     public void setExecutionModel(final ExecutionModel obj) {
@@ -301,11 +298,11 @@ public class MetricObjectBinding extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -77,9 +77,10 @@ public class VMInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link VMInstance} proxy or <i>null</i>.
      */
@@ -89,19 +90,20 @@ public class VMInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VMInstance} proxy from a {@link Instance} stereotyped << VMInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link VMInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6f846810-3b99-4c3d-b9ce-db1393d3c530")
     public static VMInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (VMInstance.canInstantiate(obj))
-        	return new VMInstance(obj);
+            return new VMInstance(obj);
         else
-        	throw new IllegalArgumentException("VMInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("VMInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("7bf26dac-d08d-40ea-8cfc-3f25e4afa88f")
@@ -121,7 +123,8 @@ public class VMInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("e95a1486-1384-4cd2-9b12-e2e7ae3e0733")
@@ -134,7 +137,6 @@ public class VMInstance extends ComponentInstance {
      * Get the value of the 'location' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("55e53fd9-b42a-4b39-862f-dba5bd244d3f")
     public Location getLocation() {
@@ -154,7 +156,6 @@ public class VMInstance extends ComponentInstance {
      * Get the value of the 'os' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("98c95723-c6f3-40ad-b3f5-f20ebd2583e4")
     public CamelAttribute getOs() {
@@ -186,7 +187,6 @@ public class VMInstance extends ComponentInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("79491a3c-9040-42d6-ba74-7e36ffaf4dca")
     public DeploymentInstanceModel getParent() {
@@ -203,7 +203,6 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'location' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f46224a3-2409-40b9-b856-5ca07503895f")
     public void setLocation(final Location obj) {
@@ -229,7 +228,6 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'os' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dd353f16-4735-42d8-b65f-a4c832276d2b")
     public void setOs(final CamelAttribute obj) {
@@ -255,7 +253,6 @@ public class VMInstance extends ComponentInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("425399d1-5d05-4773-87ec-038e4ba21c21")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -294,11 +291,11 @@ public class VMInstance extends ComponentInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

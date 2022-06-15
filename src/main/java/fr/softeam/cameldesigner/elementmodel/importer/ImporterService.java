@@ -3,14 +3,6 @@ package fr.softeam.cameldesigner.elementmodel.importer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.google.inject.Injector;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.resource.XtextResourceSet;
-import org.modelio.metamodel.uml.statik.Package;
 import camel.core.CamelModel;
 import camel.core.CorePackage;
 import camel.dsl.math.ExpressionChecker;
@@ -22,11 +14,19 @@ import camel.metric.MetricVariable;
 import camel.unit.CompositeUnit;
 import camel.unit.Unit;
 import camel.unit.UnitModel;
+import com.google.inject.Injector;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.CamelDslManager;
 import fr.softeam.cameldesigner.conversion.process.reverse.ReverseProcess;
 import fr.softeam.cameldesigner.elementmodel.walker.camelwalker.AbstractCamelWalker;
 import fr.softeam.cameldesigner.elementmodel.walker.camelwalker.CamelWalker;
+import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.resource.XtextResourceSet;
+import org.modelio.metamodel.uml.statik.Package;
 
 @objid ("5b349cf1-b0f8-4268-97a3-7db25ebb4143")
 public class ImporterService {
@@ -42,17 +42,17 @@ public class ImporterService {
     @objid ("d852cd56-d3cc-4d76-9094-63c173dd453d")
     public void importModelFromFile(Package packageOwner, String filePath) {
         Injector injector = CamelDslManager.getInstance().getInjector();
-
-
+        
+        
         XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
         resourceSet.getPackageRegistry().put(CorePackage.eNS_URI, CorePackage.eINSTANCE);
         resourceSet.addLoadOption(this.loadOption, Boolean.TRUE);
         Resource resource = resourceSet.getResource(URI.createFileURI(filePath), true);
         CamelModel camelModel = (CamelModel)resource.getContents().get(0);
         //enrichModel(camelModel);
-
+        
         //UpdateCamelModelReferences.updateCamelModel(camelModel);
-
+        
         Map<CDOObject, CamelElement> processedCamelElements = new HashMap<>();
         ReverseProcess reverseProcess = new ReverseProcess(packageOwner, processedCamelElements);
         AbstractCamelWalker camelWalker = new CamelWalker (reverseProcess);

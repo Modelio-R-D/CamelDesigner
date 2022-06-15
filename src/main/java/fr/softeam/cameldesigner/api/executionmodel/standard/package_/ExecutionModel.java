@@ -96,9 +96,10 @@ public class ExecutionModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link ExecutionModel} proxy from a {@link Package} stereotyped << ExecutionModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ExecutionModel} proxy from a {@link Package} stereotyped << ExecutionModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link ExecutionModel} proxy or <i>null</i>.
      */
@@ -108,26 +109,26 @@ public class ExecutionModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link ExecutionModel} proxy from a {@link Package} stereotyped << ExecutionModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ExecutionModel} proxy from a {@link Package} stereotyped << ExecutionModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link ExecutionModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("475490b1-f379-4c96-b36f-4d8313de7d30")
     public static ExecutionModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (ExecutionModel.canInstantiate(obj))
-        	return new ExecutionModel(obj);
+            return new ExecutionModel(obj);
         else
-        	throw new IllegalArgumentException("ExecutionModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ExecutionModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'Diagram' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0ad0f47f-8137-4ea5-8324-df982e1ca8e7")
     public void addDiagram(final ExecutionModelDiagram obj) {
@@ -139,7 +140,6 @@ public class ExecutionModel extends SubModel {
      * Add a value to the 'historyRecords' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3172d2c6-d066-465e-b334-27467a872a8f")
     public void addHistoryRecords(final HistoryRecord obj) {
@@ -151,7 +151,6 @@ public class ExecutionModel extends SubModel {
      * Add a value to the 'measurements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5afeb856-2269-4e65-96ec-6d5b7f9d3392")
     public void addMeasurements(final Measurement obj) {
@@ -163,7 +162,6 @@ public class ExecutionModel extends SubModel {
      * Add a value to the 'ruleTriggers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("46bcb1c8-0ec4-4727-86df-b2e7aecc6e94")
     public void addRuleTriggers(final RuleTrigger obj) {
@@ -175,7 +173,6 @@ public class ExecutionModel extends SubModel {
      * Add a value to the 'sloViolations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cd08dfd0-1931-4f57-af3d-5925b675bb5c")
     public void addSloViolations(final SLOViolation obj) {
@@ -203,7 +200,6 @@ public class ExecutionModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0a42b571-c107-47ce-a092-137baf94069d")
     public CamelModel getCamelModel() {
@@ -214,7 +210,6 @@ public class ExecutionModel extends SubModel {
      * Get the value of the 'costUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6a3aa0ab-b591-4a34-94a6-a9e6502ef086")
     public Unit getCostUnit() {
@@ -236,7 +231,6 @@ public class ExecutionModel extends SubModel {
      * Get the value of the 'dataTypeModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("97f459c3-49df-418a-9dfe-d4574f22f37d")
     public DataTypeModel getDataTypeModel() {
@@ -254,7 +248,6 @@ public class ExecutionModel extends SubModel {
      * Get the value of the 'deploymentTypeModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2db5bc89-03ff-44fd-912f-eb900f9de221")
     public DeploymentTypeModel getDeploymentTypeModel() {
@@ -272,20 +265,20 @@ public class ExecutionModel extends SubModel {
      * Get the values of the 'Diagram' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b5e1ede5-7140-4c40-97c5-bdc202967a33")
     public List<ExecutionModelDiagram> getDiagram() {
         List<ExecutionModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
-        	if (ExecutionModelDiagram.canInstantiate(mObj))
-        			results.add((ExecutionModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModelDiagram.STEREOTYPE_NAME));
-        	}
+            if (ExecutionModelDiagram.canInstantiate(mObj))
+                    results.add((ExecutionModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModelDiagram.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("f7ad9498-6592-41a9-a825-82ea42536848")
@@ -308,15 +301,14 @@ public class ExecutionModel extends SubModel {
      * Get the values of the 'historyRecords' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("61750251-b735-4b82-934c-76bb56a92d19")
     public List<HistoryRecord> getHistoryRecords() {
         List<HistoryRecord> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (HistoryRecord.canInstantiate(mObj))
-        			results.add((HistoryRecord)CamelDesignerProxyFactory.instantiate(mObj, HistoryRecord.STEREOTYPE_NAME));
-        	}
+            if (HistoryRecord.canInstantiate(mObj))
+                    results.add((HistoryRecord)CamelDesignerProxyFactory.instantiate(mObj, HistoryRecord.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -324,27 +316,26 @@ public class ExecutionModel extends SubModel {
      * Get the values of the 'measurements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1b4c1050-473e-4553-940d-fbea84332ea4")
     public List<Measurement> getMeasurements() {
         List<Measurement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (ApplicationMeasurement.canInstantiate(mObj))
-        			results.add((ApplicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ApplicationMeasurement.STEREOTYPE_NAME));
-        	if (CommunicationMeasurement.canInstantiate(mObj))
-        			results.add((CommunicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, CommunicationMeasurement.STEREOTYPE_NAME));
-        	if (ContainerMeasurement.canInstantiate(mObj))
-        			results.add((ContainerMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ContainerMeasurement.STEREOTYPE_NAME));
-        	if (DataMeasurement.canInstantiate(mObj))
-        			results.add((DataMeasurement)CamelDesignerProxyFactory.instantiate(mObj, DataMeasurement.STEREOTYPE_NAME));
-        	if (PaaSMeasurement.canInstantiate(mObj))
-        			results.add((PaaSMeasurement)CamelDesignerProxyFactory.instantiate(mObj, PaaSMeasurement.STEREOTYPE_NAME));
-        	if (SoftwareComponentMeasurement.canInstantiate(mObj))
-        			results.add((SoftwareComponentMeasurement)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentMeasurement.STEREOTYPE_NAME));
-        	if (VMMeasurement.canInstantiate(mObj))
-        			results.add((VMMeasurement)CamelDesignerProxyFactory.instantiate(mObj, VMMeasurement.STEREOTYPE_NAME));
-        	}
+            if (ApplicationMeasurement.canInstantiate(mObj))
+                    results.add((ApplicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ApplicationMeasurement.STEREOTYPE_NAME));
+            if (CommunicationMeasurement.canInstantiate(mObj))
+                    results.add((CommunicationMeasurement)CamelDesignerProxyFactory.instantiate(mObj, CommunicationMeasurement.STEREOTYPE_NAME));
+            if (ContainerMeasurement.canInstantiate(mObj))
+                    results.add((ContainerMeasurement)CamelDesignerProxyFactory.instantiate(mObj, ContainerMeasurement.STEREOTYPE_NAME));
+            if (DataMeasurement.canInstantiate(mObj))
+                    results.add((DataMeasurement)CamelDesignerProxyFactory.instantiate(mObj, DataMeasurement.STEREOTYPE_NAME));
+            if (PaaSMeasurement.canInstantiate(mObj))
+                    results.add((PaaSMeasurement)CamelDesignerProxyFactory.instantiate(mObj, PaaSMeasurement.STEREOTYPE_NAME));
+            if (SoftwareComponentMeasurement.canInstantiate(mObj))
+                    results.add((SoftwareComponentMeasurement)CamelDesignerProxyFactory.instantiate(mObj, SoftwareComponentMeasurement.STEREOTYPE_NAME));
+            if (VMMeasurement.canInstantiate(mObj))
+                    results.add((VMMeasurement)CamelDesignerProxyFactory.instantiate(mObj, VMMeasurement.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -352,7 +343,6 @@ public class ExecutionModel extends SubModel {
      * Get the value of the 'requirementModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("736313e6-ba60-4a6e-8b65-8c8df6a811c9")
     public RequirementModel getRequirementModel() {
@@ -370,15 +360,14 @@ public class ExecutionModel extends SubModel {
      * Get the values of the 'ruleTriggers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4dd4f8bd-cf40-4862-b411-091d565ff8aa")
     public List<RuleTrigger> getRuleTriggers() {
         List<RuleTrigger> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (RuleTrigger.canInstantiate(mObj))
-        			results.add((RuleTrigger)CamelDesignerProxyFactory.instantiate(mObj, RuleTrigger.STEREOTYPE_NAME));
-        	}
+            if (RuleTrigger.canInstantiate(mObj))
+                    results.add((RuleTrigger)CamelDesignerProxyFactory.instantiate(mObj, RuleTrigger.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -386,15 +375,14 @@ public class ExecutionModel extends SubModel {
      * Get the values of the 'sloViolations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("80b1ba92-c9b3-48ab-b695-3f633b845e3f")
     public List<SLOViolation> getSloViolations() {
         List<SLOViolation> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (SLOViolation.canInstantiate(mObj))
-        			results.add((SLOViolation)CamelDesignerProxyFactory.instantiate(mObj, SLOViolation.STEREOTYPE_NAME));
-        	}
+            if (SLOViolation.canInstantiate(mObj))
+                    results.add((SLOViolation)CamelDesignerProxyFactory.instantiate(mObj, SLOViolation.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -428,7 +416,6 @@ public class ExecutionModel extends SubModel {
      * Remove a value from the 'Diagram' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4ad34726-af3e-447a-9975-053758571811")
     public boolean removeDiagram(final ExecutionModelDiagram obj) {
@@ -439,7 +426,6 @@ public class ExecutionModel extends SubModel {
      * Remove a value from the 'historyRecords' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5fcc0896-6128-4b00-a371-6f5d558722e1")
     public boolean removeHistoryRecords(final HistoryRecord obj) {
@@ -450,7 +436,6 @@ public class ExecutionModel extends SubModel {
      * Remove a value from the 'measurements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ea0039d3-1bd9-4f3b-bb4a-e638986257fd")
     public boolean removeMeasurements(final Measurement obj) {
@@ -461,7 +446,6 @@ public class ExecutionModel extends SubModel {
      * Remove a value from the 'ruleTriggers' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e284e010-b941-4422-bbd5-107d4d324894")
     public boolean removeRuleTriggers(final RuleTrigger obj) {
@@ -472,7 +456,6 @@ public class ExecutionModel extends SubModel {
      * Remove a value from the 'sloViolations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c0a993d2-0d55-4ea4-aa5e-0a438a2c42cb")
     public boolean removeSloViolations(final SLOViolation obj) {
@@ -483,7 +466,6 @@ public class ExecutionModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f7e545d5-f718-426f-8a70-a190d1063b79")
     public void setCamelModel(final CamelModel obj) {
@@ -494,7 +476,6 @@ public class ExecutionModel extends SubModel {
      * Set the value of the 'costUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3398a40f-8b27-4f9d-ac11-789e36d6b795")
     public void setCostUnit(final Unit obj) {
@@ -520,7 +501,6 @@ public class ExecutionModel extends SubModel {
      * Set the value of the 'dataTypeModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e6131a7d-619e-462b-8a04-79722695eb0b")
     public void setDataTypeModel(final DataTypeModel obj) {
@@ -546,7 +526,6 @@ public class ExecutionModel extends SubModel {
      * Set the value of the 'deploymentTypeModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d9e4f825-d8f0-4711-bcd2-fa835115fdd0")
     public void setDeploymentTypeModel(final DeploymentTypeModel obj) {
@@ -582,7 +561,6 @@ public class ExecutionModel extends SubModel {
      * Set the value of the 'requirementModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0f435b8a-a3c3-4581-aee6-b9fce6d5a0b6")
     public void setRequirementModel(final RequirementModel obj) {
@@ -668,11 +646,11 @@ public class ExecutionModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

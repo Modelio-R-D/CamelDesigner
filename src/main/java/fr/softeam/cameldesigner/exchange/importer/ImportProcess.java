@@ -1,15 +1,15 @@
 package fr.softeam.cameldesigner.exchange.importer;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.conversion.process.IElementProcess;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("c7582f35-a3a2-413e-a707-e71081547ee3")
-public class ImportProcess implements IElementProcess<CamelElement, CDOObject> {
-    @objid ("a1353cab-d454-45b1-acca-af0d25975791")
+public class ImportProcess implements IElementProcess<CamelElement,CDOObject> {
+    @objid ("f8d68a58-2f78-43a3-b927-8ad76acc7d6f")
     private CDOObject camelElementParent;
 
     @objid ("09776a3a-5b97-4ce8-ad1e-6e9f9ebcadb0")
@@ -22,11 +22,11 @@ public class ImportProcess implements IElementProcess<CamelElement, CDOObject> {
     public CamelElement process(CDOObject element, CDOObject context) {
         CamelElement processedElement = null;
         ImportMap importMap = ImportMap.getInstance();
-
+        
         try {
             CamelElementImporter<CDOObject, CDOObject, CamelElement, CamelElement> importer = ImporterFactory.getImporter(element);
             importer.setProcess(this);
-
+        
             if(importMap.containsKey(element)) {
                 processedElement = importMap.get(element);
             } else {
@@ -38,7 +38,7 @@ public class ImportProcess implements IElementProcess<CamelElement, CDOObject> {
                 }
             }
             importer.setProperties(processedElement);
-
+        
         }catch (Exception e) {
             CamelDesignerModule.logService.error(e);
             return null;

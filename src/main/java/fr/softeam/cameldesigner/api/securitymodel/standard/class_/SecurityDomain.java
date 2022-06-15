@@ -68,9 +68,10 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityDomain} proxy or <i>null</i>.
      */
@@ -80,26 +81,26 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityDomain} proxy from a {@link Class} stereotyped << SecurityDomain >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityDomain} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("97ae9dc9-da26-4934-bffb-13d33d3cb850")
     public static SecurityDomain safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityDomain.canInstantiate(obj))
-        	return new SecurityDomain(obj);
+            return new SecurityDomain(obj);
         else
-        	throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityDomain: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("52b29911-fd65-4918-8e88-42c33925d69a")
     public void addSubDomains(final SecurityDomain obj) {
@@ -128,7 +129,8 @@ public class SecurityDomain extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("cfcc984e-db56-4eed-b21e-31f329e5780a")
@@ -151,7 +153,6 @@ public class SecurityDomain extends FeatureClass {
      * Get the values of the 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("57a4d1eb-e71f-45e6-93a6-e22d851b6e02")
     public List<SecurityDomain> getSubDomains() {
@@ -176,7 +177,6 @@ public class SecurityDomain extends FeatureClass {
      * Remove a value from 'subDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1965b806-1086-44ae-ba72-e6835f6e26f9")
     public boolean removeSubDomains(final SecurityDomain obj) {
@@ -238,11 +238,11 @@ public class SecurityDomain extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

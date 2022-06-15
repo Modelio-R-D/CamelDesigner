@@ -69,9 +69,10 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Cause} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Cause} proxy from a {@link Class} stereotyped << Cause >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Cause} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ac072484-70ac-4a04-9b0b-9c79c1d81e48")
     public static Cause safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Cause.canInstantiate(obj))
-        	return new Cause(obj);
+            return new Cause(obj);
         else
-        	throw new IllegalArgumentException("Cause: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Cause: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d7d9d124-1f8e-48b1-ab51-b5e0a3fefd8a")
     public void addEventInstances(final EventInstance obj) {
@@ -125,7 +126,8 @@ public class Cause extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f48c890a-d46e-4de7-9de3-38fe6aa38cd1")
@@ -138,17 +140,16 @@ public class Cause extends FeatureClass {
      * Get the values of the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("467dfe60-5711-4f91-871d-e3628e8d49fc")
     public List<EventInstance> getEventInstances() {
         List<EventInstance> results = new ArrayList<>();
         for (Instance mObj : ((Class) this.elt).getDeclared()){
-        	if (FunctionalEventInstance.canInstantiate(mObj))
-        			results.add((FunctionalEventInstance)CamelDesignerProxyFactory.instantiate(mObj, FunctionalEventInstance.STEREOTYPE_NAME));
-        	if (NonFunctionalEventInstance.canInstantiate(mObj))
-        			results.add((NonFunctionalEventInstance)CamelDesignerProxyFactory.instantiate(mObj, NonFunctionalEventInstance.STEREOTYPE_NAME));
-        	}
+            if (FunctionalEventInstance.canInstantiate(mObj))
+                    results.add((FunctionalEventInstance)CamelDesignerProxyFactory.instantiate(mObj, FunctionalEventInstance.STEREOTYPE_NAME));
+            if (NonFunctionalEventInstance.canInstantiate(mObj))
+                    results.add((NonFunctionalEventInstance)CamelDesignerProxyFactory.instantiate(mObj, NonFunctionalEventInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -162,7 +163,6 @@ public class Cause extends FeatureClass {
      * Remove a value from the 'eventInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("918dec25-5c5f-4f87-8686-f69e2e32f53e")
     public boolean removeEventInstances(final EventInstance obj) {
@@ -201,11 +201,11 @@ public class Cause extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -68,9 +68,10 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RuleTrigger} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RuleTrigger} proxy from a {@link Class} stereotyped << RuleTrigger >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RuleTrigger} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("63bf73f9-2391-48e1-a66a-77773d938aeb")
     public static RuleTrigger safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RuleTrigger.canInstantiate(obj))
-        	return new RuleTrigger(obj);
+            return new RuleTrigger(obj);
         else
-        	throw new IllegalArgumentException("RuleTrigger: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RuleTrigger: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b7d3ad9b-b268-4acf-be6f-01910a11675b")
@@ -112,7 +114,8 @@ public class RuleTrigger extends Cause {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("be0e5728-b8f5-4bc2-a6ef-1bd9783a57df")
@@ -125,7 +128,6 @@ public class RuleTrigger extends Cause {
      * Get the value of the 'scalabilityRule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3b91b674-e5e2-46dd-bb76-52f438489ac1")
     public ScalabilityRule getScalabilityRule() {
@@ -159,7 +161,6 @@ public class RuleTrigger extends Cause {
      * Set the value of the 'scalabilityRule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("79c2882c-910f-4c7c-ad7c-fe01be1e5734")
     public void setScalabilityRule(final ScalabilityRule obj) {
@@ -227,11 +228,11 @@ public class RuleTrigger extends Cause {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

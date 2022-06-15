@@ -77,9 +77,10 @@ public class SecurityModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityModel} proxy from a {@link Package} stereotyped << SecurityModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityModel} proxy from a {@link Package} stereotyped << SecurityModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link SecurityModel} proxy or <i>null</i>.
      */
@@ -89,26 +90,26 @@ public class SecurityModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityModel} proxy from a {@link Package} stereotyped << SecurityModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityModel} proxy from a {@link Package} stereotyped << SecurityModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link SecurityModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d95f255a-8da0-4e93-a18f-8dcd23d0f985")
     public static SecurityModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (SecurityModel.canInstantiate(obj))
-        	return new SecurityModel(obj);
+            return new SecurityModel(obj);
         else
-        	throw new IllegalArgumentException("SecurityModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'compositeSecurityInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b7ab98ec-7128-4e33-aca2-07b36864d3a9")
     public void addCompositeSecurityInstances(final CompositeSecurityMetric obj) {
@@ -120,7 +121,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("52340c4e-2100-45e1-bb60-a790de733b27")
     public void addRawSecurityMetrics(final RawSecurityMetric obj) {
@@ -132,7 +132,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securityAttributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fa506e2b-950a-48c8-ac87-86d9d525f63e")
     public void addSecurityAttributes(final SecurityAttribute obj) {
@@ -144,7 +143,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1f175996-46c2-4ad0-88d5-55833180f546")
     public void addSecurityControls(final SecurityControl obj) {
@@ -156,7 +154,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securityDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f6f1eb33-df33-419f-92a7-6f7b000c25a9")
     public void addSecurityDomains(final SecurityDomain obj) {
@@ -168,7 +165,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securityMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b801f888-5cf5-4885-be52-eec8102acda4")
     public void addSecurityMetricInstances(final SecurityMetricInstance obj) {
@@ -180,7 +176,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securityRequirements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ee39e700-2a7e-4ae8-b63f-7a976f936efd")
     public void addSecurityRequirements(final SecurityRequirement obj) {
@@ -192,7 +187,6 @@ public class SecurityModel extends SubModel {
      * Add a value to the 'securitySLOs' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("311f1de9-f0bc-415f-8bfe-6b31cefc7586")
     public void addSecuritySLOs(final SecuritySLO obj) {
@@ -220,7 +214,6 @@ public class SecurityModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("58bd0cb3-aa23-4a3c-8f4f-300f28bfb1aa")
     public CamelModel getCamelModel() {
@@ -231,20 +224,20 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'compositeSecurityInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f817356c-b149-49bc-a107-bad23478ab36")
     public List<CompositeSecurityMetric> getCompositeSecurityInstances() {
         List<CompositeSecurityMetric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (CompositeSecurityMetric.canInstantiate(mObj))
-        			results.add((CompositeSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeSecurityMetric.STEREOTYPE_NAME));
-        	}
+            if (CompositeSecurityMetric.canInstantiate(mObj))
+                    results.add((CompositeSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, CompositeSecurityMetric.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("f602ee22-8dfa-4469-91a8-758ea5724533")
@@ -257,15 +250,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("331c5a40-b37d-4bae-ba36-6813766ba39b")
     public List<RawSecurityMetric> getRawSecurityMetrics() {
         List<RawSecurityMetric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (RawSecurityMetric.canInstantiate(mObj))
-        			results.add((RawSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, RawSecurityMetric.STEREOTYPE_NAME));
-        	}
+            if (RawSecurityMetric.canInstantiate(mObj))
+                    results.add((RawSecurityMetric)CamelDesignerProxyFactory.instantiate(mObj, RawSecurityMetric.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -273,17 +265,16 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securityAttributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2ef81252-9755-4f91-8393-a5c62ec161b4")
     public List<SecurityAttribute> getSecurityAttributes() {
         List<SecurityAttribute> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (Certifiable.canInstantiate(mObj))
-        			results.add((Certifiable)CamelDesignerProxyFactory.instantiate(mObj, Certifiable.STEREOTYPE_NAME));
-        	if (SecurityAttribute.canInstantiate(mObj))
-        			results.add((SecurityAttribute)CamelDesignerProxyFactory.instantiate(mObj, SecurityAttribute.STEREOTYPE_NAME));
-        	}
+            if (Certifiable.canInstantiate(mObj))
+                    results.add((Certifiable)CamelDesignerProxyFactory.instantiate(mObj, Certifiable.STEREOTYPE_NAME));
+            if (SecurityAttribute.canInstantiate(mObj))
+                    results.add((SecurityAttribute)CamelDesignerProxyFactory.instantiate(mObj, SecurityAttribute.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -291,15 +282,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("32a27f30-4776-41e2-b632-ce2f4fdd8cc1")
     public List<SecurityControl> getSecurityControls() {
         List<SecurityControl> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (SecurityControl.canInstantiate(mObj))
-        			results.add((SecurityControl)CamelDesignerProxyFactory.instantiate(mObj, SecurityControl.STEREOTYPE_NAME));
-        	}
+            if (SecurityControl.canInstantiate(mObj))
+                    results.add((SecurityControl)CamelDesignerProxyFactory.instantiate(mObj, SecurityControl.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -307,15 +297,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securityDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6e172278-8e83-450c-888d-aea52fa5f998")
     public List<SecurityDomain> getSecurityDomains() {
         List<SecurityDomain> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (SecurityDomain.canInstantiate(mObj))
-        			results.add((SecurityDomain)CamelDesignerProxyFactory.instantiate(mObj, SecurityDomain.STEREOTYPE_NAME));
-        	}
+            if (SecurityDomain.canInstantiate(mObj))
+                    results.add((SecurityDomain)CamelDesignerProxyFactory.instantiate(mObj, SecurityDomain.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -323,15 +312,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securityMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3e51c867-5355-43a3-9b8c-a78bd32e81b9")
     public List<SecurityMetricInstance> getSecurityMetricInstances() {
         List<SecurityMetricInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
-        	if (SecurityMetricInstance.canInstantiate(mObj))
-        			results.add((SecurityMetricInstance)CamelDesignerProxyFactory.instantiate(mObj, SecurityMetricInstance.STEREOTYPE_NAME));
-        	}
+            if (SecurityMetricInstance.canInstantiate(mObj))
+                    results.add((SecurityMetricInstance)CamelDesignerProxyFactory.instantiate(mObj, SecurityMetricInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -339,15 +327,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securityRequirements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("10dce469-be99-4019-8a7b-7624c70a0856")
     public List<SecurityRequirement> getSecurityRequirements() {
         List<SecurityRequirement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (SecurityRequirement.canInstantiate(mObj))
-        			results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
-        	}
+            if (SecurityRequirement.canInstantiate(mObj))
+                    results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -355,15 +342,14 @@ public class SecurityModel extends SubModel {
      * Get the values of the 'securitySLOs' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e75d123d-8294-420d-8391-f37c8bd3c8e6")
     public List<SecuritySLO> getSecuritySLOs() {
         List<SecuritySLO> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (SecuritySLO.canInstantiate(mObj))
-        			results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
-        	}
+            if (SecuritySLO.canInstantiate(mObj))
+                    results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -377,7 +363,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'compositeSecurityInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06c397b7-eb54-4580-8608-2ada324c547d")
     public boolean removeCompositeSecurityInstances(final CompositeSecurityMetric obj) {
@@ -388,7 +373,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("db66802b-dbd3-4764-9d0f-37ae86ff0cc0")
     public boolean removeRawSecurityMetrics(final RawSecurityMetric obj) {
@@ -399,7 +383,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securityAttributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2ac724ec-e868-4467-ac5c-a5882f0f2112")
     public boolean removeSecurityAttributes(final SecurityAttribute obj) {
@@ -410,7 +393,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securityControls' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b01b8eb3-47d4-4b33-96ce-efc4b96a43af")
     public boolean removeSecurityControls(final SecurityControl obj) {
@@ -421,7 +403,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securityDomains' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f9378e76-6f81-4127-99c1-8cc35041c80f")
     public boolean removeSecurityDomains(final SecurityDomain obj) {
@@ -432,7 +413,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securityMetricInstances' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("111e65ce-f8e2-4c4e-b4df-5ae1b16f00f5")
     public boolean removeSecurityMetricInstances(final SecurityMetricInstance obj) {
@@ -443,7 +423,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securityRequirements' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("31db9d60-319f-4ad7-8781-b2d2583b495e")
     public boolean removeSecurityRequirements(final SecurityRequirement obj) {
@@ -454,7 +433,6 @@ public class SecurityModel extends SubModel {
      * Remove a value from the 'securitySLOs' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("363a9a5f-eb04-46a2-928f-184bc3f5f62b")
     public boolean removeSecuritySLOs(final SecuritySLO obj) {
@@ -465,7 +443,6 @@ public class SecurityModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5f682f2e-7895-4fae-a4a6-dadada73637c")
     public void setCamelModel(final CamelModel obj) {
@@ -512,11 +489,11 @@ public class SecurityModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

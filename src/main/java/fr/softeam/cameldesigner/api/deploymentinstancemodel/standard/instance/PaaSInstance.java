@@ -65,9 +65,10 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link PaaSInstance} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link PaaSInstance} proxy from a {@link Instance} stereotyped << PaaSInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link PaaSInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("9c0481ac-d6da-46c7-8c2d-8f14945672b7")
     public static PaaSInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (PaaSInstance.canInstantiate(obj))
-        	return new PaaSInstance(obj);
+            return new PaaSInstance(obj);
         else
-        	throw new IllegalArgumentException("PaaSInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PaaSInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("1bc2f4c2-1545-4ec1-ac6b-a22c7bd88805")
@@ -109,7 +111,8 @@ public class PaaSInstance extends ComponentInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("04edf125-a7f8-46ee-8b3e-fb4508976dd3")
@@ -122,7 +125,6 @@ public class PaaSInstance extends ComponentInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4069f03d-7724-4130-8011-b238133e3764")
     public DeploymentInstanceModel getParent() {
@@ -139,7 +141,6 @@ public class PaaSInstance extends ComponentInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("34a14910-b362-4cea-a7bc-661fa2f67f7d")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -178,11 +179,11 @@ public class PaaSInstance extends ComponentInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

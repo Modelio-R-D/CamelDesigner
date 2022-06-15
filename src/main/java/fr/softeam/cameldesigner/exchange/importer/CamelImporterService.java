@@ -1,15 +1,15 @@
 package fr.softeam.cameldesigner.exchange.importer;
 
 import java.util.HashMap;
+import camel.core.CamelModel;
+import camel.core.CorePackage;
 import com.google.inject.Injector;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.conversion.CamelDslManager;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
-import camel.core.CamelModel;
-import camel.core.CorePackage;
-import fr.softeam.cameldesigner.conversion.CamelDslManager;
 
 @objid ("9b36fd5d-a0af-44b9-adad-7533e3d21178")
 public class CamelImporterService extends AbstractImporterService {
@@ -26,13 +26,12 @@ public class CamelImporterService extends AbstractImporterService {
     @Override
     protected CamelModel importCamel(String filePath) {
         Injector injector = CamelDslManager.getInstance().getInjector();
-
+        
         XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
         resourceSet.getPackageRegistry().put(CorePackage.eNS_URI, CorePackage.eINSTANCE);
         resourceSet.addLoadOption(this.loadOption, Boolean.TRUE);
         Resource resource = resourceSet.getResource(URI.createFileURI(filePath), true);
         return(CamelModel) resource.getContents().get(0);
-
     }
 
 }

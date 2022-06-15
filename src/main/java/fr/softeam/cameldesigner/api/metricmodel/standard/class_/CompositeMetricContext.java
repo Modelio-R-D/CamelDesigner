@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -69,9 +68,10 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CompositeMetricContext} proxy or <i>null</i>.
      */
@@ -81,26 +81,26 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeMetricContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b5845e4e-3b01-4f65-a8f4-b03936b550b2")
     public static CompositeMetricContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeMetricContext.canInstantiate(obj))
-        	return new CompositeMetricContext(obj);
+            return new CompositeMetricContext(obj);
         else
-        	throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e3bc5abd-dc9a-43d8-b0e0-691c61188d3e")
     public void addComposingMetricContexts(final MetricContext obj) {
@@ -132,7 +132,6 @@ public class CompositeMetricContext extends MetricContext {
      * Get the values of the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("70210b21-cc93-4371-8687-beffa77d374f")
     public List<MetricContext> getComposingMetricContexts() {
@@ -150,7 +149,8 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("84bf27c2-6085-403a-b78d-e06c0f9bba05")
@@ -179,7 +179,6 @@ public class CompositeMetricContext extends MetricContext {
      * Remove a value from the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bf6c2481-0a1d-410e-b638-427cc91b3927")
     public boolean removeComposingMetricContexts(final MetricContext obj) {
@@ -241,11 +240,11 @@ public class CompositeMetricContext extends MetricContext {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

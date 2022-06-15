@@ -63,9 +63,10 @@ public class FeatureEnumeration extends FeatureClassifier {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Enumeration
      * @return a {@link FeatureEnumeration} proxy or <i>null</i>.
      */
@@ -75,19 +76,20 @@ public class FeatureEnumeration extends FeatureClassifier {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Enumeration}
      * @return a {@link FeatureEnumeration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("cfb9d1eb-92ee-485e-89ec-6a771ed629dd")
     public static FeatureEnumeration safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (FeatureEnumeration.canInstantiate(obj))
-        	return new FeatureEnumeration(obj);
+            return new FeatureEnumeration(obj);
         else
-        	throw new IllegalArgumentException("FeatureEnumeration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FeatureEnumeration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("3fd673ba-541f-411e-abef-cd68f1f9d9e7")
@@ -107,7 +109,8 @@ public class FeatureEnumeration extends FeatureClassifier {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("bb59d25c-4ba1-4023-96fb-9b1e4103f453")
@@ -146,11 +149,11 @@ public class FeatureEnumeration extends FeatureClassifier {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

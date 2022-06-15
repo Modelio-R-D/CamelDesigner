@@ -69,9 +69,10 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link FunctionalEventInstance} proxy or <i>null</i>.
      */
@@ -81,19 +82,20 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FunctionalEventInstance} proxy from a {@link Instance} stereotyped << FunctionalEventInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link FunctionalEventInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("24866283-859d-42c1-9130-a7b12c7c0351")
     public static FunctionalEventInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (FunctionalEventInstance.canInstantiate(obj))
-        	return new FunctionalEventInstance(obj);
+            return new FunctionalEventInstance(obj);
         else
-        	throw new IllegalArgumentException("FunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f5afed4f-63e8-4065-882f-ac4f996878db")
@@ -116,7 +118,6 @@ public class FunctionalEventInstance extends EventInstance {
      * Get the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("73b4bbc4-b8a3-4562-bf68-a170b598a0ee")
     public ComponentInstance getComponentInstance() {
@@ -137,7 +138,8 @@ public class FunctionalEventInstance extends EventInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("f634ab0c-9e07-483e-a53a-b96404f85cd1")
@@ -156,7 +158,6 @@ public class FunctionalEventInstance extends EventInstance {
      * Set the value of the 'componentInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("343df868-14cf-4531-a70b-6e09c353d7bb")
     public void setComponentInstance(final ComponentInstance obj) {
@@ -210,11 +211,11 @@ public class FunctionalEventInstance extends EventInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

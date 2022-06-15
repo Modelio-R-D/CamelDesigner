@@ -65,9 +65,10 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a BindableInstance
      * @return a {@link DataInstanceBindableInstance} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstanceBindableInstance} proxy from a {@link BindableInstance} stereotyped << DataInstance_BindableInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link BindableInstance}
      * @return a {@link DataInstanceBindableInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("121982b6-230c-478a-8916-3c3643c1fabd")
     public static DataInstanceBindableInstance safeInstantiate(final BindableInstance obj) throws IllegalArgumentException {
         if (DataInstanceBindableInstance.canInstantiate(obj))
-        	return new DataInstanceBindableInstance(obj);
+            return new DataInstanceBindableInstance(obj);
         else
-        	throw new IllegalArgumentException("DataInstanceBindableInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataInstanceBindableInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("160b27d3-74e3-43d4-a62a-6c0c30377e55")
@@ -109,7 +111,8 @@ public class DataInstanceBindableInstance extends DataInstance {
     }
 
     /**
-     * Get the underlying {@link BindableInstance}. 
+     * Get the underlying {@link BindableInstance}.
+     * 
      * @return the BindableInstance represented by this proxy, never null.
      */
     @objid ("65bcc76d-5f52-4675-8a4b-f0aed646798c")
@@ -122,7 +125,6 @@ public class DataInstanceBindableInstance extends DataInstance {
      * Get the value to the 'owner' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cff6d387-28e1-4302-a538-349f86caa729")
     public DataInstance getOwner() {
@@ -139,7 +141,6 @@ public class DataInstanceBindableInstance extends DataInstance {
      * Set the value of the 'owner' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e135029a-1b38-437e-b1f2-94000612358e")
     public void setOwner(final DataInstance obj) {
@@ -178,11 +179,11 @@ public class DataInstanceBindableInstance extends DataInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

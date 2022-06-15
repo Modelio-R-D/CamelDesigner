@@ -1,13 +1,13 @@
 package fr.softeam.cameldesigner.exchange.importer;
 
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.statik.Package;
 import camel.core.CamelModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.exchange.walker.CamelWalker;
 import fr.softeam.cameldesigner.exchange.walker.IWalker;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.statik.Package;
 
 @objid ("acd66265-f660-48ff-a105-5a526a8cf126")
 public abstract class AbstractImporterService {
@@ -20,6 +20,7 @@ public abstract class AbstractImporterService {
     @objid ("3b1d9df4-1bc3-420a-829d-fe3b1e8ee131")
     private final String _rootID = "5fe3c74b-bdb5-411d-a9c9-80e86449b9a5";
 
+    @objid ("f6a56885-cec4-4955-98d9-659ab3b3dc00")
     protected Object loadOption;
 
     @objid ("00e744cb-1a7a-4020-82a3-69cdb4acf049")
@@ -29,45 +30,16 @@ public abstract class AbstractImporterService {
         this._fileExtension = fileExtension;
     }
 
-    @objid ("c193b036-5cad-4b90-b6af-ec22d0ecb154")
-    protected abstract CamelModel importCamel(String filePath);
-
-
-    private fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel createCamelModelRoot(CamelModel rootProxy, Package root) {
-
-        //Creates root Camel Model
-        fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel camelModel = fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.create();
-        camelModel.setName(rootProxy.getName());
-
-        root.getOwnedElement().add(camelModel.getElement());
-
-        //Creates Application
-//        Application application = CoreFactory.eINSTANCE.createApplication();
-//        application.setName(rootProxy.getApplicationName());
-//        application.setVersion(rootProxy.getApplicationVersion());
-//        camelModel.setApplication(application);
-
-        //Adds Library
-//        Package root = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().findElementById(Package.class, this._rootID);
-//        for (ModelTree ownedElt : root.getOwnedElement()) {
-//            if (ownedElt.isStereotyped(CamelDesignerPeerModule.MODULE_NAME, fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.STEREOTYPE_NAME)) {
-//                genMap.put(ownedElt, camelModel);
-//            }
-//        }
-
-//        genMap.put(camelModel ) ;
-        return camelModel;
-    }
-
+    @objid ("ca80b229-66ad-4f42-b548-ae2feea0296c")
     public void importFromFile(Package selectedElt, String absolutePath) {
         ImportMap impMap = ImportMap.getInstance();
         impMap.clear();
-
+        
         CamelModel camelModel = this.importCamel(absolutePath);
-
+        
         fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel impCamelModel = createCamelModelRoot(camelModel, selectedElt);
         impMap.put(camelModel, impCamelModel);
-
+        
         ImportProcess importProcess = new ImportProcess(null);
         try {
             IWalker<CDOObject> camelWalker = new CamelWalker(importProcess);
@@ -75,6 +47,35 @@ public abstract class AbstractImporterService {
         }catch(Exception e) {
             CamelDesignerModule.logService.error(e);
         }
+    }
+
+    @objid ("c193b036-5cad-4b90-b6af-ec22d0ecb154")
+    protected abstract CamelModel importCamel(String filePath);
+
+    @objid ("7c41b8f0-f3f1-4e91-ad62-7516ea5b0816")
+    private fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel createCamelModelRoot(CamelModel rootProxy, Package root) {
+        //Creates root Camel Model
+        fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel camelModel = fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.create();
+        camelModel.setName(rootProxy.getName());
+        
+        root.getOwnedElement().add(camelModel.getElement());
+        
+        //Creates Application
+        //        Application application = CoreFactory.eINSTANCE.createApplication();
+        //        application.setName(rootProxy.getApplicationName());
+        //        application.setVersion(rootProxy.getApplicationVersion());
+        //        camelModel.setApplication(application);
+        
+        //Adds Library
+        //        Package root = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().findElementById(Package.class, this._rootID);
+        //        for (ModelTree ownedElt : root.getOwnedElement()) {
+        //            if (ownedElt.isStereotyped(CamelDesignerPeerModule.MODULE_NAME, fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.STEREOTYPE_NAME)) {
+        //                genMap.put(ownedElt, camelModel);
+        //            }
+        //        }
+        
+        //        genMap.put(camelModel ) ;
+        return camelModel;
     }
 
 }

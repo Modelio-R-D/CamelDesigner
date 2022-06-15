@@ -1,13 +1,13 @@
 package fr.softeam.cameldesigner.impl;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.profiler.ProfilerDaemon;
 import org.modelio.api.module.AbstractJavaModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
 import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import fr.softeam.cameldesigner.profiler.ProfilerDaemon;
 
 @objid ("8480a3b7-a19c-434e-b676-2cae92031b88")
 public class CamelDesignerModule extends AbstractJavaModule {
@@ -26,12 +26,13 @@ public class CamelDesignerModule extends AbstractJavaModule {
     @objid ("637a5b96-f694-4b69-9e73-fdb2e8297735")
     public static CamelLogService logService;
 
+    @objid ("0a9d8ed3-7a82-45a2-ae22-dfa5a1347615")
     public static ProfilerDaemon daemon;
 
     @objid ("58ad7d4c-51e4-476c-b15e-443b4b46efb7")
     public CamelDesignerModule(final IModuleContext moduleContext) {
         super(moduleContext);
-
+        
         CamelDesignerModule.instance = this;
         CamelDesignerModule.logService = new CamelLogService(this.getModuleContext().getLogService(), this);
         CamelDesignerModule.daemon = new ProfilerDaemon();
@@ -91,14 +92,14 @@ public class CamelDesignerModule extends AbstractJavaModule {
 
     /**
      * Generated expert looking for a MDA expert in the generated MDA API.
-     *
+     * 
      * @param st a stereotype owned by the current module.
      * @return a MDA expert belonging to the MDA API or <code>null</code>.
      */
     @objid ("ddbc46ba-b0a2-4b83-a992-693c23594931")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+            default: return null;
         }
     }
 

@@ -62,9 +62,10 @@ public class QualityAttributeClass extends AttributeClass {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link QualityAttributeClass} proxy or <i>null</i>.
      */
@@ -74,19 +75,20 @@ public class QualityAttributeClass extends AttributeClass {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttributeClass} proxy from a {@link Class} stereotyped << QualityAttribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link QualityAttributeClass} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("70068ebf-dc0e-4934-badd-21039f5bcbfc")
     public static QualityAttributeClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (QualityAttributeClass.canInstantiate(obj))
-        	return new QualityAttributeClass(obj);
+            return new QualityAttributeClass(obj);
         else
-        	throw new IllegalArgumentException("QualityAttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("QualityAttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("bba0f998-7a31-441a-8f25-bba963da5d5d")
@@ -106,7 +108,8 @@ public class QualityAttributeClass extends AttributeClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("72e7f24f-e7e0-432d-8b42-8729a5c50116")
@@ -145,11 +148,11 @@ public class QualityAttributeClass extends AttributeClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

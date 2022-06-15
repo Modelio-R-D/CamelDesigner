@@ -66,9 +66,10 @@ public class VMMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link VMMeasurement} proxy from a {@link Class} stereotyped << VMMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VMMeasurement} proxy from a {@link Class} stereotyped << VMMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link VMMeasurement} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class VMMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link VMMeasurement} proxy from a {@link Class} stereotyped << VMMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link VMMeasurement} proxy from a {@link Class} stereotyped << VMMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link VMMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("41c8612b-2dcb-4549-805b-2c0b8bbd9fbe")
     public static VMMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (VMMeasurement.canInstantiate(obj))
-        	return new VMMeasurement(obj);
+            return new VMMeasurement(obj);
         else
-        	throw new IllegalArgumentException("VMMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("VMMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("ddf427dd-0f60-4cb1-a3f4-0d837f81d657")
@@ -110,7 +112,8 @@ public class VMMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("699fbebc-6a27-42b7-80b2-d0446f3583f4")
@@ -123,7 +126,6 @@ public class VMMeasurement extends Measurement {
      * Get the value of the 'vm' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("08a0e25f-95d4-4757-801f-e398606876cf")
     public VM getVm() {
@@ -141,7 +143,6 @@ public class VMMeasurement extends Measurement {
      * Get the value of the 'vmInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fe2d0869-c8e0-4ee7-a4d7-9d8b2de84e19")
     public VMInstance getVmInstance() {
@@ -165,7 +166,6 @@ public class VMMeasurement extends Measurement {
      * Set the value of the 'vm' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1167dd0d-1c77-4200-8eac-ebe5426864d3")
     public void setVm(final VM obj) {
@@ -191,7 +191,6 @@ public class VMMeasurement extends Measurement {
      * Set the value of the 'vmInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e78742cc-ce3f-4ac2-867b-4807cbe5e0cf")
     public void setVmInstance(final VMInstance obj) {
@@ -245,11 +244,11 @@ public class VMMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

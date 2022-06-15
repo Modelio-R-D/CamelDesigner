@@ -81,9 +81,10 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Schedule} proxy or <i>null</i>.
      */
@@ -93,19 +94,20 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Schedule} proxy from a {@link Class} stereotyped << Schedule >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Schedule} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6a75431c-d2d2-45f8-a94e-a44fb8a7ebdd")
     public static Schedule safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Schedule.canInstantiate(obj))
-        	return new Schedule(obj);
+            return new Schedule(obj);
         else
-        	throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Schedule: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f949b157-4d4b-49f3-8110-974f75766f41")
@@ -125,7 +127,8 @@ public class Schedule extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("73f34d25-99e2-4068-8afa-0c7179149e1e")
@@ -178,7 +181,6 @@ public class Schedule extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d35441e4-e274-4b86-a9dd-50ee84bfe9e7")
     public Unit getTimeUnit() {
@@ -246,7 +248,6 @@ public class Schedule extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("70c15678-4607-449d-a0f4-a38dcb4f5f13")
     public void setTimeUnit(final Unit obj) {
@@ -316,11 +317,11 @@ public class Schedule extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

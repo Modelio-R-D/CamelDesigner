@@ -66,9 +66,10 @@ public class AttributeConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link AttributeConstraint} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class AttributeConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeConstraint} proxy from a {@link Constraint} stereotyped << AttributeConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link AttributeConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("387c46a9-b3f2-4dea-a5ed-11a2f28439a6")
     public static AttributeConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (AttributeConstraint.canInstantiate(obj))
-        	return new AttributeConstraint(obj);
+            return new AttributeConstraint(obj);
         else
-        	throw new IllegalArgumentException("AttributeConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("AttributeConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("a075a0f2-637d-4cb1-b8f7-3cde103fa61c")
@@ -113,19 +115,19 @@ public class AttributeConstraint extends UnaryConstraint {
      * Get the value to the 'attributeContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a6862511-b0f3-4e19-a174-d9d7d417880f")
     public AttributeContext getAttributeContext() {
-          for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
-           if (AttributeContext.canInstantiate(obj))
-             return (AttributeContext)CamelDesignerProxyFactory.instantiate(obj, AttributeContext.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
+         if (AttributeContext.canInstantiate(obj))
+           return (AttributeContext)CamelDesignerProxyFactory.instantiate(obj, AttributeContext.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("08a72d99-8601-445f-ab50-68fbfe7fa466")
@@ -144,7 +146,6 @@ public class AttributeConstraint extends UnaryConstraint {
      * Set the value of the 'attributeContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("74ec3d89-608a-489b-9f28-8710b0ddd02c")
     public void setAttributeContext(final AttributeContext obj) {
@@ -191,11 +192,11 @@ public class AttributeConstraint extends UnaryConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

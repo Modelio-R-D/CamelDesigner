@@ -69,9 +69,10 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link Communication} proxy or <i>null</i>.
      */
@@ -81,19 +82,20 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link Communication} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("5262ede5-c0c2-43ad-8b37-083d0562351e")
     public static Communication safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Communication.canInstantiate(obj))
-        	return new Communication(obj);
+            return new Communication(obj);
         else
-        	throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b362a526-be58-4e21-9ee8-59142e55bc50")
@@ -113,7 +115,8 @@ public class Communication extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("3e20256b-0c9b-4dc6-b7ee-184f2c35492b")
@@ -126,7 +129,6 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("968d0590-186f-4a01-9c6a-74f46ec54be5")
     public Configuration getProvidedPortConfiguration() {
@@ -150,7 +152,6 @@ public class Communication extends ComponentRelation {
      * Get the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("20171cdf-b85d-4524-9c6e-ef6a76ffa683")
     public Configuration getRequiredPortConfiguration() {
@@ -180,7 +181,6 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'providedPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7159c3e2-8ed4-4454-8b7c-91e96235126f")
     public void setProvidedPortConfiguration(final Configuration obj) {
@@ -206,7 +206,6 @@ public class Communication extends ComponentRelation {
      * Set the value of the 'requiredPortConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5fc61863-5514-4d4c-9723-14cd9bb3ca2b")
     public void setRequiredPortConfiguration(final Configuration obj) {
@@ -260,11 +259,11 @@ public class Communication extends ComponentRelation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -72,9 +72,10 @@ public class LocationCoupling extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link LocationCoupling} proxy or <i>null</i>.
      */
@@ -84,26 +85,26 @@ public class LocationCoupling extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link LocationCoupling} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a4cdd263-1e69-4a2f-8a4c-6dc82d845833")
     public static LocationCoupling safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (LocationCoupling.canInstantiate(obj))
-        	return new LocationCoupling(obj);
+            return new LocationCoupling(obj);
         else
-        	throw new IllegalArgumentException("LocationCoupling: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LocationCoupling: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07839e60-a481-46fe-86fd-c9106cb959aa")
     public void addSoftwareComponents(final SoftwareComponent obj) {
@@ -142,7 +143,8 @@ public class LocationCoupling extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("5f9ddd08-3ba0-4f49-a74c-3afeab4a2a6a")
@@ -155,7 +157,6 @@ public class LocationCoupling extends ComponentRelation {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9d1117fe-5c96-4a02-8dfb-6feda275e876")
     public List<SoftwareComponent> getSoftwareComponents() {
@@ -192,7 +193,6 @@ public class LocationCoupling extends ComponentRelation {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c417fa67-025e-4159-9090-a8b2abc66c8b")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
@@ -271,11 +271,11 @@ public class LocationCoupling extends ComponentRelation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

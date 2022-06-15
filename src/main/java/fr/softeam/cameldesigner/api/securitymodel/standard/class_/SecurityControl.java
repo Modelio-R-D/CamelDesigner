@@ -16,10 +16,6 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.securitymodel.standard.class_.Certifiable;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.CompositeSecurityMetric;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.RawSecurityMetric;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityAttribute;
-import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -76,9 +72,10 @@ public class SecurityControl extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityControl} proxy from a {@link Class} stereotyped << SecurityControl >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityControl} proxy from a {@link Class} stereotyped << SecurityControl >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SecurityControl} proxy or <i>null</i>.
      */
@@ -88,26 +85,26 @@ public class SecurityControl extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link SecurityControl} proxy from a {@link Class} stereotyped << SecurityControl >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SecurityControl} proxy from a {@link Class} stereotyped << SecurityControl >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SecurityControl} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("2f6cdef6-093a-428d-974c-7439b31a0557")
     public static SecurityControl safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityControl.canInstantiate(obj))
-        	return new SecurityControl(obj);
+            return new SecurityControl(obj);
         else
-        	throw new IllegalArgumentException("SecurityControl: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SecurityControl: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'compositeSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1e1377e9-2c60-4a4c-b74e-a21e9c236d11")
     public void addCompositeSecurityMetrics(final CompositeSecurityMetric obj) {
@@ -123,7 +120,6 @@ public class SecurityControl extends FeatureClass {
      * Add a value to the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4aa97517-031a-4f8f-b1c7-d47cf260a777")
     public void addRawSecurityMetrics(final RawSecurityMetric obj) {
@@ -139,7 +135,6 @@ public class SecurityControl extends FeatureClass {
      * Add a value to the 'securityProperties' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6144f64c-1e9e-4668-a166-2858596471cf")
     public void addSecurityProperties(final SecurityAttribute obj) {
@@ -171,7 +166,6 @@ public class SecurityControl extends FeatureClass {
      * Get the values of the 'compositeSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("681976ea-d9fe-4372-af32-031616a6639e")
     public List<CompositeSecurityMetric> getCompositeSecurityMetrics() {
@@ -190,7 +184,6 @@ public class SecurityControl extends FeatureClass {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ddc717c2-993e-4034-848e-132d02551ee3")
     public SecurityDomain getDomain() {
@@ -205,7 +198,8 @@ public class SecurityControl extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("df88c443-a049-47f1-9816-01036c1370f0")
@@ -228,7 +222,6 @@ public class SecurityControl extends FeatureClass {
      * Get the values of the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b70161b0-89ba-4715-87ae-fce544249280")
     public List<RawSecurityMetric> getRawSecurityMetrics() {
@@ -247,7 +240,6 @@ public class SecurityControl extends FeatureClass {
      * Get the values of the 'securityProperties' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0d6fdbed-1167-41bb-b249-53e1b3f86d2d")
     public List<SecurityAttribute> getSecurityProperties() {
@@ -278,7 +270,6 @@ public class SecurityControl extends FeatureClass {
      * Get the value of the 'subDomain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4c4f40c0-1dc3-4c85-802a-628be382399d")
     public SecurityDomain getSubDomain() {
@@ -302,7 +293,6 @@ public class SecurityControl extends FeatureClass {
      * Remove a value from the 'compositeSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fac6a47e-eea9-4b6b-be8f-d837d1b16a67")
     public boolean removeCompositeSecurityMetrics(final CompositeSecurityMetric obj) {
@@ -322,7 +312,6 @@ public class SecurityControl extends FeatureClass {
      * Remove a value from the 'rawSecurityMetrics' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a3039df4-b0b7-4fc6-bb77-4951de161f18")
     public boolean removeRawSecurityMetrics(final RawSecurityMetric obj) {
@@ -342,7 +331,6 @@ public class SecurityControl extends FeatureClass {
      * Remove a value from the 'securityProperties' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("323e6d6e-9458-46be-a5b9-eca37624d253")
     public boolean removeSecurityProperties(final SecurityAttribute obj) {
@@ -362,7 +350,6 @@ public class SecurityControl extends FeatureClass {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("836d33fc-4af4-40f3-a580-9a40d0998359")
     public void setDomain(final SecurityDomain obj) {
@@ -408,7 +395,6 @@ public class SecurityControl extends FeatureClass {
      * Set the value of the 'subDomain' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("68b45cbd-934a-49d0-b917-42bac24ef91c")
     public void setSubDomain(final SecurityDomain obj) {
@@ -470,11 +456,11 @@ public class SecurityControl extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

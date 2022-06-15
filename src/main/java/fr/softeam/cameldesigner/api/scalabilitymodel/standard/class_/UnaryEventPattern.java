@@ -15,7 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.FunctionalEvent;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.NonFunctionalEvent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -74,9 +73,10 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link UnaryEventPattern} proxy or <i>null</i>.
      */
@@ -86,19 +86,20 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UnaryEventPattern} proxy from a {@link Class} stereotyped << UnaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link UnaryEventPattern} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("12aba1d3-9a79-4a8f-afb4-2063894e9588")
     public static UnaryEventPattern safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UnaryEventPattern.canInstantiate(obj))
-        	return new UnaryEventPattern(obj);
+            return new UnaryEventPattern(obj);
         else
-        	throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UnaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("c1cf348e-38df-4ffa-b29a-bbc327fa0cd5")
@@ -118,7 +119,8 @@ public class UnaryEventPattern extends EventPattern {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f8801f21-4ada-48ef-a8a9-2c277359c10c")
@@ -131,7 +133,6 @@ public class UnaryEventPattern extends EventPattern {
      * Get the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b7d1726f-a2a9-49fe-8dc8-c03cc15236f8")
     public Event getEvent() {
@@ -181,7 +182,6 @@ public class UnaryEventPattern extends EventPattern {
      * Set the value of the 'event' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b0b73576-c772-4005-89dc-0c9e526ae5b5")
     public void setEvent(final Event obj) {
@@ -263,11 +263,11 @@ public class UnaryEventPattern extends EventPattern {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -70,9 +70,10 @@ public class MmsConcept extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MmsConcept} proxy or <i>null</i>.
      */
@@ -82,26 +83,26 @@ public class MmsConcept extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConcept} proxy from a {@link Class} stereotyped << MmsConcept >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MmsConcept} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("0172ac0e-4b6c-4e88-835d-266f77c15930")
     public static MmsConcept safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MmsConcept.canInstantiate(obj))
-        	return new MmsConcept(obj);
+            return new MmsConcept(obj);
         else
-        	throw new IllegalArgumentException("MmsConcept: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsConcept: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("99683534-1e45-49f2-9ae6-31dc5d10b27c")
     public void addConcept(final MmsConcept obj) {
@@ -113,7 +114,6 @@ public class MmsConcept extends MmsObject {
      * Add a value to the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("83a7f631-57fe-43c3-84d2-5e94caaf9f1a")
     public void addInstance(final MmsConceptInstance obj) {
@@ -125,7 +125,6 @@ public class MmsConcept extends MmsObject {
      * Add a value to the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e41b5f83-7210-4fa6-b2ab-48ce8fb17dc9")
     public void addProperty(final MmsProperty obj) {
@@ -153,20 +152,20 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3b986950-d564-4ab4-a11a-d62aeaacef03")
     public List<MmsConcept> getConcept() {
         List<MmsConcept> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
-        	if (MmsConcept.canInstantiate(mObj))
-        			results.add((MmsConcept)CamelDesignerProxyFactory.instantiate(mObj, MmsConcept.STEREOTYPE_NAME));
-        	}
+            if (MmsConcept.canInstantiate(mObj))
+                    results.add((MmsConcept)CamelDesignerProxyFactory.instantiate(mObj, MmsConcept.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("b15678ea-2408-4959-a7fd-3253a9850d83")
@@ -179,15 +178,14 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c1fc2f4f-7f00-4f91-a757-190714e9ea73")
     public List<MmsConceptInstance> getInstance() {
         List<MmsConceptInstance> results = new ArrayList<>();
         for (Instance mObj : ((Class) this.elt).getRepresenting()){
-        	if (MmsConceptInstance.canInstantiate(mObj))
-        			results.add((MmsConceptInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsConceptInstance.STEREOTYPE_NAME));
-        	}
+            if (MmsConceptInstance.canInstantiate(mObj))
+                    results.add((MmsConceptInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsConceptInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -195,7 +193,6 @@ public class MmsConcept extends MmsObject {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ccb7e389-f44c-4b99-b3fe-da004fe9e79a")
     public MmsConcept getParent() {
@@ -206,15 +203,14 @@ public class MmsConcept extends MmsObject {
      * Get the values of the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8efc3602-7d5f-4d55-82ed-898b13e91e2e")
     public List<MmsProperty> getProperty() {
         List<MmsProperty> results = new ArrayList<>();
         for (Attribute mObj : ((Class) this.elt).getOwnedAttribute()){
-        	if (MmsProperty.canInstantiate(mObj))
-        			results.add((MmsProperty)CamelDesignerProxyFactory.instantiate(mObj, MmsProperty.STEREOTYPE_NAME));
-        	}
+            if (MmsProperty.canInstantiate(mObj))
+                    results.add((MmsProperty)CamelDesignerProxyFactory.instantiate(mObj, MmsProperty.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -228,7 +224,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from the 'concept' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cbe7451f-3c7c-4e68-94df-ca0365cb7b4c")
     public boolean removeConcept(final MmsConcept obj) {
@@ -239,7 +234,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from the 'instance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("313bc3b3-7248-4293-8075-c1ab09c940af")
     public boolean removeInstance(final MmsConceptInstance obj) {
@@ -250,7 +244,6 @@ public class MmsConcept extends MmsObject {
      * Remove a value from the 'property' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0934c283-ad4f-4916-a63b-c33b736b5f43")
     public boolean removeProperty(final MmsProperty obj) {
@@ -261,7 +254,6 @@ public class MmsConcept extends MmsObject {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("49a56627-b9f0-4851-9cc4-3ad4598243a2")
     public void setParent(final MmsConcept obj) {
@@ -303,11 +295,11 @@ public class MmsConcept extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

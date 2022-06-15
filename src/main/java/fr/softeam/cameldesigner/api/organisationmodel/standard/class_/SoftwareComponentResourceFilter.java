@@ -70,9 +70,10 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SoftwareComponentResourceFilter} proxy or <i>null</i>.
      */
@@ -82,26 +83,26 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponentResourceFilter} proxy from a {@link Class} stereotyped << SoftwareComponentResourceFilter >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SoftwareComponentResourceFilter} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("903f3fa4-14f2-4aaa-9968-e18ff3ce6a04")
     public static SoftwareComponentResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentResourceFilter.canInstantiate(obj))
-        	return new SoftwareComponentResourceFilter(obj);
+            return new SoftwareComponentResourceFilter(obj);
         else
-        	throw new IllegalArgumentException("SoftwareComponentResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SoftwareComponentResourceFilter: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7cdf5c68-7a27-468b-9bf6-64c04603ca99")
     public void addSoftwareComponents(final SoftwareComponent obj) {
@@ -133,7 +134,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Get the value of the 'application' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6cfdc9aa-fd5d-4542-ad7f-007d54a56ad1")
     public CamelModel getApplication() {
@@ -148,7 +148,8 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e241209d-8d4a-4a92-85d6-9b734a88b863")
@@ -161,7 +162,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("46a2a2a5-9666-4773-9ea4-7739a2af0d60")
     public List<SoftwareComponent> getSoftwareComponents() {
@@ -198,7 +198,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("298fcac0-ee48-412f-8b61-0861166a11ba")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
@@ -218,7 +217,6 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
      * Set the value of the 'application' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9d96aedc-9107-48e2-a287-059d16db6e35")
     public void setApplication(final CamelModel obj) {
@@ -289,11 +287,11 @@ public class SoftwareComponentResourceFilter extends ResourceFilter {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

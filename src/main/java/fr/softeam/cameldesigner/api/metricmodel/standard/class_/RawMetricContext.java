@@ -65,9 +65,10 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RawMetricContext} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RawMetricContext} proxy from a {@link Class} stereotyped << RawMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RawMetricContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("cc14a1b1-b145-48f7-8967-7bfd9d546fdc")
     public static RawMetricContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RawMetricContext.canInstantiate(obj))
-        	return new RawMetricContext(obj);
+            return new RawMetricContext(obj);
         else
-        	throw new IllegalArgumentException("RawMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RawMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("d6675941-21fb-4601-b118-aa08cf523a90")
@@ -109,7 +111,8 @@ public class RawMetricContext extends MetricContext {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("0965f91b-11c7-49bd-811c-a375eb8dc8e6")
@@ -122,7 +125,6 @@ public class RawMetricContext extends MetricContext {
      * Get the value of the 'sensor' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f57ded58-87a8-44a9-8dd3-c78a45f49f62")
     public Sensor getSensor() {
@@ -146,7 +148,6 @@ public class RawMetricContext extends MetricContext {
      * Set the value of the 'sensor' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("73965773-5967-4622-b531-c96e86367bbd")
     public void setSensor(final Sensor obj) {
@@ -200,11 +201,11 @@ public class RawMetricContext extends MetricContext {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

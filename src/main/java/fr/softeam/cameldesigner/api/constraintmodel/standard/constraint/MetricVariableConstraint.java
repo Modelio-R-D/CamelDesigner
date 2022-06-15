@@ -66,9 +66,10 @@ public class MetricVariableConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariableConstraint} proxy from a {@link Constraint} stereotyped << MetricVariableConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariableConstraint} proxy from a {@link Constraint} stereotyped << MetricVariableConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link MetricVariableConstraint} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class MetricVariableConstraint extends UnaryConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link MetricVariableConstraint} proxy from a {@link Constraint} stereotyped << MetricVariableConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricVariableConstraint} proxy from a {@link Constraint} stereotyped << MetricVariableConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link MetricVariableConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6716961b-1996-4fa3-be3b-7fc1a052945b")
     public static MetricVariableConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (MetricVariableConstraint.canInstantiate(obj))
-        	return new MetricVariableConstraint(obj);
+            return new MetricVariableConstraint(obj);
         else
-        	throw new IllegalArgumentException("MetricVariableConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricVariableConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("fbac8a90-46c6-4044-b236-7ac1aa205633")
@@ -110,7 +112,8 @@ public class MetricVariableConstraint extends UnaryConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("a0ea2f82-a22c-4a54-849e-ed380b051b9d")
@@ -123,15 +126,14 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * Get the value to the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b4ccc140-21e6-4385-870e-f6bb3c056605")
     public MetricVariable getMetricVariable() {
-          for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
-           if (MetricVariable.canInstantiate(obj))
-             return (MetricVariable)CamelDesignerProxyFactory.instantiate(obj, MetricVariable.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
+         if (MetricVariable.canInstantiate(obj))
+           return (MetricVariable)CamelDesignerProxyFactory.instantiate(obj, MetricVariable.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     @objid ("ee71c2e4-2d65-4401-b626-a4f8d85be802")
@@ -144,7 +146,6 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * Set the value of the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7e55bbbb-9954-4088-8517-58435d4b69b9")
     public void setMetricVariable(final MetricVariable obj) {
@@ -191,11 +192,11 @@ public class MetricVariableConstraint extends UnaryConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

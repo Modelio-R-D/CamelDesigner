@@ -76,9 +76,10 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ServiceLevelObjective} proxy or <i>null</i>.
      */
@@ -88,19 +89,20 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServiceLevelObjective} proxy from a {@link Class} stereotyped << ServiceLevelObjective >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ServiceLevelObjective} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("7ccb1149-a4d4-49b2-82cf-b6bcc405298a")
     public static ServiceLevelObjective safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ServiceLevelObjective.canInstantiate(obj))
-        	return new ServiceLevelObjective(obj);
+            return new ServiceLevelObjective(obj);
         else
-        	throw new IllegalArgumentException("ServiceLevelObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ServiceLevelObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("849346ef-dd3e-4be9-98fa-e2ef341918d8")
@@ -123,7 +125,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Get the value of the 'constraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e7bad791-3a65-4154-a8ec-40c8fd0772ef")
     public CamelConstraint getConstraint() {
@@ -146,7 +147,8 @@ public class ServiceLevelObjective extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("6eb93bba-d8b7-4a2d-bc22-0fdecf07e002")
@@ -159,7 +161,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Get the value of the 'violationEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("00443517-f30b-4b5e-8bd9-6f91cb3efd05")
     public Event getViolationEvent() {
@@ -189,7 +190,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Set the value of the 'constraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5b1cc775-4990-4755-9e3b-6d7624e2aede")
     public void setConstraint(final CamelConstraint obj) {
@@ -215,7 +215,6 @@ public class ServiceLevelObjective extends HardRequirement {
      * Set the value of the 'violationEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1dfbdcf0-cbb1-412d-b792-43513858f014")
     public void setViolationEvent(final Event obj) {
@@ -269,11 +268,11 @@ public class ServiceLevelObjective extends HardRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

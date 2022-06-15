@@ -17,8 +17,6 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.BuildConfiguration;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.EventConfiguration;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -76,9 +74,10 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link ServerlessConfiguration} proxy or <i>null</i>.
      */
@@ -88,26 +87,26 @@ public class ServerlessConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ServerlessConfiguration} proxy from a {@link Artifact} stereotyped << ServerlessConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link ServerlessConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b0579b31-06fd-4549-a168-9821607f8ccc")
     public static ServerlessConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ServerlessConfiguration.canInstantiate(obj))
-        	return new ServerlessConfiguration(obj);
+            return new ServerlessConfiguration(obj);
         else
-        	throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ServerlessConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("224950c3-655c-4653-9885-66a4438811a1")
     public void addEnvironmentConfigParams(final AttributeAttribute obj) {
@@ -145,19 +144,19 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value to the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("77555be7-940c-4f06-b3aa-91e0cacebeb1")
     public BuildConfiguration getBuildConfiguration() {
-          for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
-           if (BuildConfiguration.canInstantiate(obj))
-             return (BuildConfiguration)CamelDesignerProxyFactory.instantiate(obj, BuildConfiguration.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
+         if (BuildConfiguration.canInstantiate(obj))
+           return (BuildConfiguration)CamelDesignerProxyFactory.instantiate(obj, BuildConfiguration.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("bf720c40-700a-461c-bcb3-c496afbc5cdf")
@@ -170,19 +169,18 @@ public class ServerlessConfiguration extends Configuration {
      * Get the values of the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("248c9b52-7b50-452a-b5bf-c5bf8515e2e5")
     public List<AttributeAttribute> getEnvironmentConfigParams() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Artifact) this.elt).getOwnedAttribute()){
-        	if (MeasurableAttributeAttribute.canInstantiate(mObj))
-        			results.add((MeasurableAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeAttribute.STEREOTYPE_NAME));
-        	if (QualityAttributeAttribute.canInstantiate(mObj))
-        			results.add((QualityAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeAttribute.STEREOTYPE_NAME));
-        	if (AttributeAttribute.canInstantiate(mObj))
-        			results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
-        	}
+            if (MeasurableAttributeAttribute.canInstantiate(mObj))
+                    results.add((MeasurableAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeAttribute.STEREOTYPE_NAME));
+            if (QualityAttributeAttribute.canInstantiate(mObj))
+                    results.add((QualityAttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeAttribute.STEREOTYPE_NAME));
+            if (AttributeAttribute.canInstantiate(mObj))
+                    results.add((AttributeAttribute)CamelDesignerProxyFactory.instantiate(mObj, AttributeAttribute.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -190,15 +188,14 @@ public class ServerlessConfiguration extends Configuration {
      * Get the value to the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7c64076a-f12f-43c6-b1d6-b88b7c111c66")
     public EventConfiguration getEventConfiguration() {
-          for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
-           if (EventConfiguration.canInstantiate(obj))
-             return (EventConfiguration)CamelDesignerProxyFactory.instantiate(obj, EventConfiguration.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
+         if (EventConfiguration.canInstantiate(obj))
+           return (EventConfiguration)CamelDesignerProxyFactory.instantiate(obj, EventConfiguration.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     @objid ("b69b33b0-b62a-4241-b3e0-a0b9410d70b2")
@@ -221,7 +218,6 @@ public class ServerlessConfiguration extends Configuration {
      * Remove a value from the 'environmentConfigParams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6b3c53c5-d4c7-49c6-afbe-b9a852ad5925")
     public boolean removeEnvironmentConfigParams(final AttributeAttribute obj) {
@@ -242,7 +238,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'buildConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("98c83871-49f8-437f-a7e2-816795618565")
     public void setBuildConfiguration(final BuildConfiguration obj) {
@@ -275,7 +270,6 @@ public class ServerlessConfiguration extends Configuration {
      * Set the value of the 'eventConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fc82bf4e-0626-4374-b596-7e0bcbd70d52")
     public void setEventConfiguration(final EventConfiguration obj) {
@@ -331,11 +325,11 @@ public class ServerlessConfiguration extends Configuration {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

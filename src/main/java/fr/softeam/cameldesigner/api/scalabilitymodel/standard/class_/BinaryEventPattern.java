@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.FunctionalEvent;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.NonFunctionalEvent;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.UnaryEventPattern;
@@ -77,9 +76,10 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link BinaryEventPattern} proxy or <i>null</i>.
      */
@@ -89,19 +89,20 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BinaryEventPattern} proxy from a {@link Class} stereotyped << BinaryEventPattern >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link BinaryEventPattern} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("4149d440-5c8b-4391-9b65-fde73f92976a")
     public static BinaryEventPattern safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (BinaryEventPattern.canInstantiate(obj))
-        	return new BinaryEventPattern(obj);
+            return new BinaryEventPattern(obj);
         else
-        	throw new IllegalArgumentException("BinaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("BinaryEventPattern: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("8142d492-a757-4428-b21b-7914c54928d0")
@@ -121,7 +122,8 @@ public class BinaryEventPattern extends EventPattern {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("2be7c7cc-565d-455d-a080-e6bb102d495b")
@@ -134,7 +136,6 @@ public class BinaryEventPattern extends EventPattern {
      * Get the value of the 'leftEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1ced70c0-047b-471e-adab-af61272db93a")
     public Event getLeftEvent() {
@@ -178,7 +179,6 @@ public class BinaryEventPattern extends EventPattern {
      * Get the value of the 'rightEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b815a9cc-6bb2-48e5-8ba5-c3f19e420a40")
     public Event getRightEvent() {
@@ -218,7 +218,6 @@ public class BinaryEventPattern extends EventPattern {
      * Set the value of the 'leftEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e336336b-e1ba-46eb-8b67-ef2fee77655d")
     public void setLeftEvent(final Event obj) {
@@ -264,7 +263,6 @@ public class BinaryEventPattern extends EventPattern {
      * Set the value of the 'rightEvent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d2c73bb2-82b0-4a70-9b84-caf407b8d129")
     public void setRightEvent(final Event obj) {
@@ -340,11 +338,11 @@ public class BinaryEventPattern extends EventPattern {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

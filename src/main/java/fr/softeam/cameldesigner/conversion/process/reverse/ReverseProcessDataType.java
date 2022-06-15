@@ -1,13 +1,13 @@
 package fr.softeam.cameldesigner.conversion.process.reverse;
 
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import camel.data.Data;
 import camel.data.DataSource;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("55fbdd24-7cd9-4ac6-94f2-52970c5c2f46")
 public class ReverseProcessDataType extends AbstractReverseProcess {
@@ -38,7 +38,7 @@ public class ReverseProcessDataType extends AbstractReverseProcess {
                 proxyDataSource = (fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource) (new ReverseProcessDeploymentType(null, this.processedCamelElements)).switchReverse(element.getDataSource());
                 proxyDataSource.getElement().setName(element.getDataSource().getName());
                 this.processedCamelElements.put(element.getDataSource(), proxyDataSource);
-
+        
             }
             proxyData.setDataSource(proxyDataSource);
         }
@@ -56,13 +56,14 @@ public class ReverseProcessDataType extends AbstractReverseProcess {
                 umlSoftwareComponent = (SoftwareComponent) (new ReverseProcessDeploymentType(null, this.processedCamelElements)).switchReverse(element.getComponent());
                 umlSoftwareComponent.getElement().setName(element.getComponent().getName());
                 this.processedCamelElements.put(element.getComponent(), umlSoftwareComponent);
-
+        
             }
             proxyDataSource.setSoftwareComponent(umlSoftwareComponent);
         }
         return proxyDataSource;
     }
 
+    @objid ("85fd3b77-555d-45ba-b0b4-4c5a8e1c8176")
     @Override
     public Object process(Object element, Object context) {
         // TODO Auto-generated method stub

@@ -243,9 +243,10 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link HistoryInfo} proxy or <i>null</i>.
      */
@@ -255,19 +256,20 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HistoryInfo} proxy from a {@link Class} stereotyped << HistoryInfo >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link HistoryInfo} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("733e1e93-24b0-43e5-9eb0-d4aa5d01c765")
     public static HistoryInfo safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HistoryInfo.canInstantiate(obj))
-        	return new HistoryInfo(obj);
+            return new HistoryInfo(obj);
         else
-        	throw new IllegalArgumentException("HistoryInfo: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HistoryInfo: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e467ba14-0693-4ae6-956e-eeeffa171110")
@@ -290,7 +292,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'action' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("04c24647-b27e-4408-8e89-fb2d1d545e7f")
     public MmsObject getAction() {
@@ -311,7 +312,8 @@ public class HistoryInfo extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("bcb87729-8402-4806-a198-c45655131023")
@@ -344,7 +346,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'objectRef' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("df8fd165-5ff4-4a29-ab52-7c1c84dcbcf1")
     public CamelElement getObjectRef() {
@@ -710,7 +711,6 @@ public class HistoryInfo extends FeatureClass {
      * Get the value of the 'subject' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a9dccf60-37f8-4281-b31c-dbc2d2b73569")
     public MmsObject getSubject() {
@@ -740,7 +740,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'action' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5ce2e370-618c-4ce0-a5ad-91e80b508ca1")
     public void setAction(final MmsObject obj) {
@@ -786,7 +785,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'objectRef' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("383300e3-dc35-4e0e-86d1-63d97a837041")
     public void setObjectRef(final CamelElement obj) {
@@ -822,7 +820,6 @@ public class HistoryInfo extends FeatureClass {
      * Set the value of the 'subject' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b112b3e7-78e3-434d-88d2-817a8780fd68")
     public void setSubject(final MmsObject obj) {
@@ -888,11 +885,11 @@ public class HistoryInfo extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

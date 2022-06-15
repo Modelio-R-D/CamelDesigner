@@ -15,7 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.AttributeConstraint;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.IfThenConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint;
@@ -72,9 +71,10 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link LogicalConstraint} proxy or <i>null</i>.
      */
@@ -84,26 +84,26 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link LogicalConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("63245031-177b-430e-94f6-cbbdfc92687c")
     public static LogicalConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (LogicalConstraint.canInstantiate(obj))
-        	return new LogicalConstraint(obj);
+            return new LogicalConstraint(obj);
         else
-        	throw new IllegalArgumentException("LogicalConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LogicalConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f8ada423-546f-4caa-9336-c464a659baa7")
     public void addConstraints(final CamelConstraint obj) {
@@ -135,7 +135,6 @@ public class LogicalConstraint extends CompositeConstraint {
      * Get the values of the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7ebdb135-4f71-43b3-86ab-a5280e07f02a")
     public List<CamelConstraint> getConstraints() {
@@ -159,7 +158,8 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
     @objid ("ad69157e-c72b-4bce-b70c-96466ffb0a2e")
@@ -188,7 +188,6 @@ public class LogicalConstraint extends CompositeConstraint {
      * Remove a value from the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2e4cc435-9241-48f9-9e4e-8cdbdb68a7c2")
     public boolean removeConstraints(final CamelConstraint obj) {
@@ -249,11 +248,11 @@ public class LogicalConstraint extends CompositeConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

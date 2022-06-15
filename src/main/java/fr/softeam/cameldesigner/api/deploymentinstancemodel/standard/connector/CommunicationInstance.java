@@ -66,9 +66,10 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link CommunicationInstance} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationInstance} proxy from a {@link Connector} stereotyped << CommunicationInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link CommunicationInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("670af9e5-9354-471a-97ff-4f91c2a9817c")
     public static CommunicationInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (CommunicationInstance.canInstantiate(obj))
-        	return new CommunicationInstance(obj);
+            return new CommunicationInstance(obj);
         else
-        	throw new IllegalArgumentException("CommunicationInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("3424a97d-246c-403e-9a18-e1fbd0167f34")
@@ -110,7 +112,8 @@ public class CommunicationInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("74d3c1c4-3571-4b04-85ff-f7afe123857e")
@@ -123,7 +126,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Get the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("cf487452-ae04-4f95-9aeb-c56a66be56c7")
     public DeploymentInstanceModel getParent() {
@@ -141,7 +143,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("aaeeecb9-d204-4028-a1be-d5bb76ba5feb")
     public Communication getType() {
@@ -165,7 +166,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("08e04a5f-fae1-4d3a-a5bb-f1dd65607d81")
     public void setParent(final DeploymentInstanceModel obj) {
@@ -191,7 +191,6 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("85aa02e7-d71c-424b-942f-477b971674d0")
     public void setType(final Communication obj) {
@@ -245,11 +244,11 @@ public class CommunicationInstance extends ComponentRelationInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

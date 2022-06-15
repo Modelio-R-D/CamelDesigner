@@ -66,9 +66,10 @@ public class ContainerMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerMeasurement} proxy from a {@link Class} stereotyped << ContainerMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerMeasurement} proxy from a {@link Class} stereotyped << ContainerMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ContainerMeasurement} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class ContainerMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link ContainerMeasurement} proxy from a {@link Class} stereotyped << ContainerMeasurement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ContainerMeasurement} proxy from a {@link Class} stereotyped << ContainerMeasurement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ContainerMeasurement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("3c75afc4-2224-4797-9e18-ef5579a4af1f")
     public static ContainerMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ContainerMeasurement.canInstantiate(obj))
-        	return new ContainerMeasurement(obj);
+            return new ContainerMeasurement(obj);
         else
-        	throw new IllegalArgumentException("ContainerMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ContainerMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("ac6d1c31-441a-4cc6-8078-0f21213b5b65")
@@ -113,7 +115,6 @@ public class ContainerMeasurement extends Measurement {
      * Get the value of the 'container' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5ffa6f9e-310e-482b-91a9-8bc41554f240")
     public Container getContainer() {
@@ -131,7 +132,6 @@ public class ContainerMeasurement extends Measurement {
      * Get the value of the 'containerInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b7ded167-1a4b-403a-ac0b-c1a1e6cb7e05")
     public ContainerInstance getContainerInstance() {
@@ -146,7 +146,8 @@ public class ContainerMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("c168e8d2-f061-4303-8f95-eda4e7675cc6")
@@ -165,7 +166,6 @@ public class ContainerMeasurement extends Measurement {
      * Set the value of the 'container' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e88ef893-21ae-4d18-9518-fba0cd9530ee")
     public void setContainer(final Container obj) {
@@ -191,7 +191,6 @@ public class ContainerMeasurement extends Measurement {
      * Set the value of the 'containerInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fa8b09b1-abb9-4517-84b6-db98e4b319c1")
     public void setContainerInstance(final ContainerInstance obj) {
@@ -245,11 +244,11 @@ public class ContainerMeasurement extends Measurement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

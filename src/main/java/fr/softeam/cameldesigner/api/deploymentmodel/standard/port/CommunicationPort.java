@@ -74,9 +74,10 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Port
      * @return a {@link CommunicationPort} proxy or <i>null</i>.
      */
@@ -86,19 +87,20 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Port}
      * @return a {@link CommunicationPort} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("2131f3b7-d0d9-4b24-9b4d-787c3ee8d174")
     public static CommunicationPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPort.canInstantiate(obj))
-        	return new CommunicationPort(obj);
+            return new CommunicationPort(obj);
         else
-        	throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("9c023824-c41d-4264-a56e-68296a2e5b9a")
@@ -118,7 +120,8 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}. 
+     * Get the underlying {@link Port}.
+     * 
      * @return the Port represented by this proxy, never null.
      */
     @objid ("9dcb6240-3993-4a0d-9db0-f6a0488fa2df")
@@ -240,11 +243,11 @@ public class CommunicationPort extends FeaturePort {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

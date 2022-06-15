@@ -80,9 +80,10 @@ public class AttributeClass extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link AttributeClass} proxy or <i>null</i>.
      */
@@ -92,19 +93,20 @@ public class AttributeClass extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeClass} proxy from a {@link Class} stereotyped << Attribute_Class >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link AttributeClass} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("34842a44-dafd-4f09-a152-e0b5aca70b0b")
     public static AttributeClass safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (AttributeClass.canInstantiate(obj))
-        	return new AttributeClass(obj);
+            return new AttributeClass(obj);
         else
-        	throw new IllegalArgumentException("AttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("AttributeClass: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f6f70581-1b88-4392-a70f-f90e3a7eed69")
@@ -124,7 +126,8 @@ public class AttributeClass extends CamelAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9bcef4ab-c7c8-4c39-a12a-9b01be43a4b7")
@@ -137,7 +140,6 @@ public class AttributeClass extends CamelAttribute {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fcb908ac-e18c-4268-982c-99d54f1d3044")
     public FeaturePackage getParent() {
@@ -148,7 +150,6 @@ public class AttributeClass extends CamelAttribute {
      * Get the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8e73f9e5-abbd-45b5-8f35-c33203cde311")
     public Unit getUnit() {
@@ -180,7 +181,6 @@ public class AttributeClass extends CamelAttribute {
      * Get the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d52aad47-d66b-4af3-9173-e4ab2c907caa")
     public ValueType getValueType() {
@@ -212,7 +212,6 @@ public class AttributeClass extends CamelAttribute {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1db10af8-144c-456d-8396-4750913a3251")
     public void setParent(final FeaturePackage obj) {
@@ -223,7 +222,6 @@ public class AttributeClass extends CamelAttribute {
      * Set the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3e4887e5-7cc9-46b5-8093-a0bc8ebe6775")
     public void setUnit(final Unit obj) {
@@ -259,7 +257,6 @@ public class AttributeClass extends CamelAttribute {
      * Set the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0e57e240-af8d-4fcd-8562-0946f76ef297")
     public void setValueType(final ValueType obj) {
@@ -351,11 +348,11 @@ public class AttributeClass extends CamelAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

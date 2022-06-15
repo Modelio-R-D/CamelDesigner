@@ -67,9 +67,10 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MmsConceptInstance} proxy or <i>null</i>.
      */
@@ -79,26 +80,26 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MmsConceptInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1644b234-de6e-4604-8613-5ef5f7d41ba1")
     public static MmsConceptInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MmsConceptInstance.canInstantiate(obj))
-        	return new MmsConceptInstance(obj);
+            return new MmsConceptInstance(obj);
         else
-        	throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2de7091c-cbf3-4857-ac89-ad4b6cc0e262")
     public void addPropertyInstance(final MmsPropertyInstance obj) {
@@ -123,7 +124,8 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("b9f8b96d-3b0f-4464-920e-9019de9835da")
@@ -136,15 +138,14 @@ public class MmsConceptInstance extends MmsObject {
      * Get the values of the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b85edaea-d686-4894-9f0d-9503e7122485")
     public List<MmsPropertyInstance> getPropertyInstance() {
         List<MmsPropertyInstance> results = new ArrayList<>();
         for (AttributeLink mObj : ((Instance) this.elt).getSlot()){
-        	if (MmsPropertyInstance.canInstantiate(mObj))
-        			results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
-        	}
+            if (MmsPropertyInstance.canInstantiate(mObj))
+                    results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -158,7 +159,6 @@ public class MmsConceptInstance extends MmsObject {
      * Remove a value from the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("795ca5db-7ea7-4c03-b1bf-0a61a7e62625")
     public boolean removePropertyInstance(final MmsPropertyInstance obj) {
@@ -197,11 +197,11 @@ public class MmsConceptInstance extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

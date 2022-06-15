@@ -70,7 +70,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Add a value to the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5868afa6-cf04-4213-9281-eec5a2aa1e34")
     public void addConfigurations(final Configuration obj) {
@@ -82,7 +81,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Add a value to the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a7f6bd61-528f-456c-8de9-0010f6ef72cd")
     public void addProvidedCommunications(final CommunicationPort obj) {
@@ -94,7 +92,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Add a value to the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d7e3515f-9070-4234-80b3-9cd0f0e85dcb")
     public void addProvidedHosts(final HostingPort obj) {
@@ -122,26 +119,26 @@ public abstract class CamelComponent extends FeatureClass {
      * Get the values of the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4e2ce322-5bfe-4b14-b63c-7a6ded887140")
     public List<Configuration> getConfigurations() {
         List<Configuration> results = new ArrayList<>();
         for (ModelTree mObj : ((Component) this.elt).getOwnedElement()){
-        	if (ClusterConfiguration.canInstantiate(mObj))
-        			results.add((ClusterConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ClusterConfiguration.STEREOTYPE_NAME));
-        	if (PaaSConfiguration.canInstantiate(mObj))
-        			results.add((PaaSConfiguration)CamelDesignerProxyFactory.instantiate(mObj, PaaSConfiguration.STEREOTYPE_NAME));
-        	if (ScriptConfiguration.canInstantiate(mObj))
-        			results.add((ScriptConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ScriptConfiguration.STEREOTYPE_NAME));
-        	if (ServerlessConfiguration.canInstantiate(mObj))
-        			results.add((ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ServerlessConfiguration.STEREOTYPE_NAME));
-        	}
+            if (ClusterConfiguration.canInstantiate(mObj))
+                    results.add((ClusterConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ClusterConfiguration.STEREOTYPE_NAME));
+            if (PaaSConfiguration.canInstantiate(mObj))
+                    results.add((PaaSConfiguration)CamelDesignerProxyFactory.instantiate(mObj, PaaSConfiguration.STEREOTYPE_NAME));
+            if (ScriptConfiguration.canInstantiate(mObj))
+                    results.add((ScriptConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ScriptConfiguration.STEREOTYPE_NAME));
+            if (ServerlessConfiguration.canInstantiate(mObj))
+                    results.add((ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(mObj, ServerlessConfiguration.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("12cb8d4b-3342-4bfc-bc7e-fc8c576e6c19")
@@ -154,15 +151,14 @@ public abstract class CamelComponent extends FeatureClass {
      * Get the values of the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d331dcee-68a3-42c8-9c9f-559b9ffe5ca3")
     public List<CommunicationPort> getProvidedCommunications() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Component) this.elt).getInternalStructure()){
-        	if (CommunicationPort.canInstantiate(mObj))
-        			results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
-        	}
+            if (CommunicationPort.canInstantiate(mObj))
+                    results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -170,15 +166,14 @@ public abstract class CamelComponent extends FeatureClass {
      * Get the values of the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("92272b82-5dc7-4418-95b9-14be79f68aef")
     public List<HostingPort> getProvidedHosts() {
         List<HostingPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Component) this.elt).getInternalStructure()){
-        	if (HostingPort.canInstantiate(mObj))
-        			results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
-        	}
+            if (HostingPort.canInstantiate(mObj))
+                    results.add((HostingPort)CamelDesignerProxyFactory.instantiate(mObj, HostingPort.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -192,7 +187,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Remove a value from the 'configurations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6389fa03-43d0-4a01-b248-39f052005c5d")
     public boolean removeConfigurations(final Configuration obj) {
@@ -203,7 +197,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Remove a value from the 'providedCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("058a259f-09ab-4639-a423-8228ce07747d")
     public boolean removeProvidedCommunications(final CommunicationPort obj) {
@@ -214,7 +207,6 @@ public abstract class CamelComponent extends FeatureClass {
      * Remove a value from the 'providedHosts' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d0eb5811-c24f-4f36-b5a7-48af5530c7fe")
     public boolean removeProvidedHosts(final HostingPort obj) {
@@ -254,11 +246,11 @@ public abstract class CamelComponent extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

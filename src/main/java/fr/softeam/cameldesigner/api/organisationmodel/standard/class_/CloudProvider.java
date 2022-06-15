@@ -76,9 +76,10 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CloudProvider} proxy or <i>null</i>.
      */
@@ -88,19 +89,20 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CloudProvider} proxy from a {@link Class} stereotyped << CloudProvider >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CloudProvider} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("d18a7fae-b434-43fa-87ae-8551291bf2b0")
     public static CloudProvider safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CloudProvider.canInstantiate(obj))
-        	return new CloudProvider(obj);
+            return new CloudProvider(obj);
         else
-        	throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CloudProvider: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("1bd4118e-235f-4345-9928-331ed958b9ad")
@@ -120,7 +122,8 @@ public class CloudProvider extends Organisation {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("de890f52-79db-475a-a48b-e557b43b406a")
@@ -275,11 +278,11 @@ public class CloudProvider extends Organisation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

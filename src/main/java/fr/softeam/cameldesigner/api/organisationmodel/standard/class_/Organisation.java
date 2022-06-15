@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.CloudCredentials;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -75,9 +74,10 @@ public class Organisation extends Entity {
     }
 
     /**
-     * Tries to instantiate a {@link Organisation} proxy from a {@link Class} stereotyped << Organisation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Organisation} proxy from a {@link Class} stereotyped << Organisation >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Organisation} proxy or <i>null</i>.
      */
@@ -87,26 +87,26 @@ public class Organisation extends Entity {
     }
 
     /**
-     * Tries to instantiate a {@link Organisation} proxy from a {@link Class} stereotyped << Organisation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Organisation} proxy from a {@link Class} stereotyped << Organisation >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Organisation} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("1a78fa18-2180-40ff-8646-9fab6592a26b")
     public static Organisation safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Organisation.canInstantiate(obj))
-        	return new Organisation(obj);
+            return new Organisation(obj);
         else
-        	throw new IllegalArgumentException("Organisation: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Organisation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'cloudCredentials' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("05d8fc13-a79b-425c-a785-92c587754436")
     public void addCloudCredentials(final CloudCredentials obj) {
@@ -134,20 +134,20 @@ public class Organisation extends Entity {
      * Get the values of the 'cloudCredentials' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7f4bca89-accc-456f-9731-7ef5862494e0")
     public List<CloudCredentials> getCloudCredentials() {
         List<CloudCredentials> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
-        	if (CloudCredentials.canInstantiate(mObj))
-        			results.add((CloudCredentials)CamelDesignerProxyFactory.instantiate(mObj, CloudCredentials.STEREOTYPE_NAME));
-        	}
+            if (CloudCredentials.canInstantiate(mObj))
+                    results.add((CloudCredentials)CamelDesignerProxyFactory.instantiate(mObj, CloudCredentials.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("f192cec7-c7ed-4bf6-aca7-92d4b27090c9")
@@ -196,7 +196,6 @@ public class Organisation extends Entity {
      * Remove a value from the 'cloudCredentials' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4ddd0101-62a9-46e9-aba2-3844a3ed8099")
     public boolean removeCloudCredentials(final CloudCredentials obj) {
@@ -277,11 +276,11 @@ public class Organisation extends Entity {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

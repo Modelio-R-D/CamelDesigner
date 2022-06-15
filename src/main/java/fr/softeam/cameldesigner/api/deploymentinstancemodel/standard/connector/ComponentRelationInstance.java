@@ -69,7 +69,8 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("0b9d429f-3f2c-45e1-a2a8-aa0851e725e1")
@@ -116,11 +117,11 @@ public abstract class ComponentRelationInstance extends FeatureConnector {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

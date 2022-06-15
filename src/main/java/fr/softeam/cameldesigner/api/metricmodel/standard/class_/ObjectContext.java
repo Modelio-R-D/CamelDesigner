@@ -73,9 +73,10 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link ObjectContext} proxy or <i>null</i>.
      */
@@ -85,19 +86,20 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ObjectContext} proxy from a {@link Class} stereotyped << ObjectContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link ObjectContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("45d5acec-0156-4bb7-aef8-b635428840ac")
     public static ObjectContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ObjectContext.canInstantiate(obj))
-        	return new ObjectContext(obj);
+            return new ObjectContext(obj);
         else
-        	throw new IllegalArgumentException("ObjectContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ObjectContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("a5344e23-8631-4e70-8837-82b886a96f60")
@@ -120,7 +122,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'communication' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("99dbdf14-3fc5-48f3-8a73-94de13152a3f")
     public Communication getCommunication() {
@@ -138,7 +139,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("938145ea-96ad-4f23-8b54-3727e9840fe5")
     public CamelComponent getComponent() {
@@ -164,7 +164,6 @@ public class ObjectContext extends FeatureClass {
      * Get the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d2284069-60a7-410c-be31-8b9bb82812d0")
     public Data getData() {
@@ -179,7 +178,8 @@ public class ObjectContext extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("1d248e99-2365-4d0a-b539-1f3f9ae5477f")
@@ -198,7 +198,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'communication' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f1d38417-2b24-436f-899b-9443b01b6f6b")
     public void setCommunication(final Communication obj) {
@@ -224,7 +223,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'component' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3b5e376a-20cc-4738-a5cd-7f437187b067")
     public void setComponent(final CamelComponent obj) {
@@ -250,7 +248,6 @@ public class ObjectContext extends FeatureClass {
      * Set the value of the 'data' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("89253c10-7e1b-4b63-a4d1-b9029e330d46")
     public void setData(final Data obj) {
@@ -304,11 +301,11 @@ public class ObjectContext extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

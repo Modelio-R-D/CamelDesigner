@@ -17,7 +17,6 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.datamodel.standard.bindableinstance.DataInstanceBindableInstance;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
-import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataSourceInstance;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -70,9 +69,10 @@ public class DataInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link DataInstance} proxy or <i>null</i>.
      */
@@ -82,26 +82,26 @@ public class DataInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DataInstance} proxy from a {@link Instance} stereotyped << DataInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link DataInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ada7cf46-546f-42f9-850e-34cd3733dd38")
     public static DataInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (DataInstance.canInstantiate(obj))
-        	return new DataInstance(obj);
+            return new DataInstance(obj);
         else
-        	throw new IllegalArgumentException("DataInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DataInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'includesDataInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("11c67f05-038d-4a34-9c7f-ecf3eb69ce50")
     public void addIncludesDataInstance(final DataInstanceBindableInstance obj) {
@@ -129,7 +129,6 @@ public class DataInstance extends FeatureInstance {
      * Get the value of the 'dataSourceInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9ce8d8d7-751b-4d44-9ef6-64ce58519cf3")
     public DataSourceInstance getDataSourceInstance() {
@@ -144,7 +143,8 @@ public class DataInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
     @objid ("2d9a8283-c9fc-40c3-95bd-f63ca27b2262")
@@ -157,15 +157,14 @@ public class DataInstance extends FeatureInstance {
      * Get the values of the 'includesDataInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3ba30bac-16ce-4a56-bfe7-21719191001e")
     public List<DataInstanceBindableInstance> getIncludesDataInstance() {
         List<DataInstanceBindableInstance> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart()){
-        	if (DataInstanceBindableInstance.canInstantiate(mObj))
-        			results.add((DataInstanceBindableInstance)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceBindableInstance.STEREOTYPE_NAME));
-        	}
+            if (DataInstanceBindableInstance.canInstantiate(mObj))
+                    results.add((DataInstanceBindableInstance)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceBindableInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -173,7 +172,6 @@ public class DataInstance extends FeatureInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8713ec89-3dce-4fd9-a224-c713437f96a4")
     public DataInstanceModel getParent() {
@@ -184,7 +182,6 @@ public class DataInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("71ef2ab7-5ac7-4e1b-84fc-081fc637ae05")
     public Data getType() {
@@ -201,7 +198,6 @@ public class DataInstance extends FeatureInstance {
      * Remove a value from the 'includesDataInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("386576a7-b9bb-4b5f-aead-799221c4f87c")
     public boolean removeIncludesDataInstance(final DataInstanceBindableInstance obj) {
@@ -212,7 +208,6 @@ public class DataInstance extends FeatureInstance {
      * Set the value of the 'dataSourceInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b884d028-00ba-4245-bb9a-150d53a275dc")
     public void setDataSourceInstance(final DataSourceInstance obj) {
@@ -238,7 +233,6 @@ public class DataInstance extends FeatureInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("84f6ccad-9c15-4405-a59f-d8fb22bf3189")
     public void setParent(final DataInstanceModel obj) {
@@ -249,7 +243,6 @@ public class DataInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7613ea2e-9238-4841-8843-9945fe417941")
     public void setType(final Data obj) {
@@ -288,11 +281,11 @@ public class DataInstance extends FeatureInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -69,9 +69,10 @@ public class LocationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link LocationModel} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class LocationModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LocationModel} proxy from a {@link Package} stereotyped << LocationModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link LocationModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("64303e94-9f5a-4319-be23-730c3fe8e80b")
     public static LocationModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (LocationModel.canInstantiate(obj))
-        	return new LocationModel(obj);
+            return new LocationModel(obj);
         else
-        	throw new IllegalArgumentException("LocationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LocationModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'cloudLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f9797bda-eeb7-4234-ae56-a6eb620de349")
     public void addCloudLocations(final CloudLocation obj) {
@@ -112,7 +113,6 @@ public class LocationModel extends SubModel {
      * Add a value to the 'regions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9ef41bb6-cb18-4487-bfae-e01ca2b9bb66")
     public void addRegions(final GeographicalRegion obj) {
@@ -140,7 +140,6 @@ public class LocationModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("05a815b3-878e-490f-9d9d-480a60ac9021")
     public CamelModel getCamelModel() {
@@ -151,20 +150,20 @@ public class LocationModel extends SubModel {
      * Get the values of the 'cloudLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("43a033e4-7d93-48ff-9988-79bcea512dae")
     public List<CloudLocation> getCloudLocations() {
         List<CloudLocation> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (CloudLocation.canInstantiate(mObj))
-        			results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
-        	}
+            if (CloudLocation.canInstantiate(mObj))
+                    results.add((CloudLocation)CamelDesignerProxyFactory.instantiate(mObj, CloudLocation.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("a23ff23b-593c-4584-9aae-a186a61f32a4")
@@ -177,15 +176,14 @@ public class LocationModel extends SubModel {
      * Get the values of the 'regions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("12dc756c-aed7-43d8-a9b8-299b6e89d156")
     public List<GeographicalRegion> getRegions() {
         List<GeographicalRegion> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (GeographicalRegion.canInstantiate(mObj))
-        			results.add((GeographicalRegion)CamelDesignerProxyFactory.instantiate(mObj, GeographicalRegion.STEREOTYPE_NAME));
-        	}
+            if (GeographicalRegion.canInstantiate(mObj))
+                    results.add((GeographicalRegion)CamelDesignerProxyFactory.instantiate(mObj, GeographicalRegion.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -199,7 +197,6 @@ public class LocationModel extends SubModel {
      * Remove a value from the 'cloudLocations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6c7f8e1d-2e19-4ba1-bab2-1f37f3a246ac")
     public boolean removeCloudLocations(final CloudLocation obj) {
@@ -210,7 +207,6 @@ public class LocationModel extends SubModel {
      * Remove a value from the 'regions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a2b3575d-6a1e-471b-882f-4cef32e6af42")
     public boolean removeRegions(final GeographicalRegion obj) {
@@ -221,7 +217,6 @@ public class LocationModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("30ee7c4f-d033-43ed-990d-0bf26d2468f4")
     public void setCamelModel(final CamelModel obj) {
@@ -262,11 +257,11 @@ public class LocationModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

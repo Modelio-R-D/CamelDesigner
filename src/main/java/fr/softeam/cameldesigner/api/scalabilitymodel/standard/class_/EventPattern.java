@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Timer;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -69,7 +68,8 @@ public abstract class EventPattern extends Event {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9631b680-37f3-4b05-8385-15d3b84fe77d")
@@ -82,7 +82,6 @@ public abstract class EventPattern extends Event {
      * Get the value of the 'timer' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a5390f06-3ba1-4f66-8b4c-853889c4a23e")
     public Timer getTimer() {
@@ -106,7 +105,6 @@ public abstract class EventPattern extends Event {
      * Set the value of the 'timer' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("88ecc94e-9bcd-4998-a9e2-356807bc2549")
     public void setTimer(final Timer obj) {
@@ -160,11 +158,11 @@ public abstract class EventPattern extends Event {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

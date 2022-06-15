@@ -70,9 +70,10 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a AttributeLink
      * @return a {@link MmsPropertyInstance} proxy or <i>null</i>.
      */
@@ -82,19 +83,20 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsPropertyInstance} proxy from a {@link AttributeLink} stereotyped << MmsPropertyInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link AttributeLink}
      * @return a {@link MmsPropertyInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("fd916ced-3e9e-4df0-88f2-1b98712f0a40")
     public static MmsPropertyInstance safeInstantiate(final AttributeLink obj) throws IllegalArgumentException {
         if (MmsPropertyInstance.canInstantiate(obj))
-        	return new MmsPropertyInstance(obj);
+            return new MmsPropertyInstance(obj);
         else
-        	throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsPropertyInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("72073487-8ba1-4608-bbdd-a8b908bd1544")
@@ -117,7 +119,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Get the value to the 'conceptInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2d431b11-aeee-43c8-b4a8-8a20e513b6c2")
     public MmsConceptInstance getConceptInstance() {
@@ -125,7 +126,8 @@ public class MmsPropertyInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link AttributeLink}. 
+     * Get the underlying {@link AttributeLink}.
+     * 
      * @return the AttributeLink represented by this proxy, never null.
      */
     @objid ("27de1336-f515-48d9-91c1-bff822b349e5")
@@ -138,7 +140,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Get the value to the 'isA' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("23532be1-504b-4ef0-aede-789a92a8e750")
     public MmsProperty getIsA() {
@@ -165,7 +166,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Set the value of the 'conceptInstance' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0a617c5a-8f95-4bde-8d4d-b8c1bc24249c")
     public void setConceptInstance(final MmsConceptInstance obj) {
@@ -176,7 +176,6 @@ public class MmsPropertyInstance extends MmsObject {
      * Set the value of the 'isA' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c6a56234-f83c-44de-8a08-cae335312c9e")
     public void setIsA(final MmsProperty obj) {
@@ -229,11 +228,11 @@ public class MmsPropertyInstance extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

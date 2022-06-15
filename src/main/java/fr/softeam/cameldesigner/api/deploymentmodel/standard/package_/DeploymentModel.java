@@ -73,7 +73,6 @@ public abstract class DeploymentModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5464bf0b-1a20-4c3f-a514-acf3199e39a1")
     public CamelModel getCamelModel() {
@@ -81,7 +80,8 @@ public abstract class DeploymentModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("6fd4e672-6336-4cd3-9622-de62d6c68398")
@@ -100,7 +100,6 @@ public abstract class DeploymentModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6b2aeaed-fa3e-408c-944e-5525406b5c5b")
     public void setCamelModel(final CamelModel obj) {
@@ -139,11 +138,11 @@ public abstract class DeploymentModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

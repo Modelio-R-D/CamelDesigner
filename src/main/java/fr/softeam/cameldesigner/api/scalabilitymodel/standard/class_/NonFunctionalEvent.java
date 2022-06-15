@@ -68,9 +68,10 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link NonFunctionalEvent} proxy or <i>null</i>.
      */
@@ -80,19 +81,20 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link NonFunctionalEvent} proxy from a {@link Class} stereotyped << NonFunctionalEvent >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link NonFunctionalEvent} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("a7a11ae0-71cf-4d75-a544-70f2a82271bd")
     public static NonFunctionalEvent safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (NonFunctionalEvent.canInstantiate(obj))
-        	return new NonFunctionalEvent(obj);
+            return new NonFunctionalEvent(obj);
         else
-        	throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("NonFunctionalEvent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("10770085-b021-4095-887b-413b38f12396")
@@ -112,7 +114,8 @@ public class NonFunctionalEvent extends SingleEvent {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("ec3a6e45-6e62-4ef2-ac65-618f02391f75")
@@ -125,7 +128,6 @@ public class NonFunctionalEvent extends SingleEvent {
      * Get the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8475b6cb-7642-4e3b-973f-f6ffb1459813")
     public MetricConstraint getMetricConstraint() {
@@ -172,7 +174,6 @@ public class NonFunctionalEvent extends SingleEvent {
      * Set the value of the 'metricConstraint' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07105cd1-acf5-43ea-af48-f1a8e06bade0")
     public void setMetricConstraint(final MetricConstraint obj) {
@@ -230,11 +231,11 @@ public class NonFunctionalEvent extends SingleEvent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

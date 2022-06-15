@@ -66,9 +66,10 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Port
      * @return a {@link CommunicationPortInstance} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CommunicationPortInstance} proxy from a {@link Port} stereotyped << CommunicationPortInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Port}
      * @return a {@link CommunicationPortInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("e3cff112-28cc-4373-9021-3638bf050c7c")
     public static CommunicationPortInstance safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPortInstance.canInstantiate(obj))
-        	return new CommunicationPortInstance(obj);
+            return new CommunicationPortInstance(obj);
         else
-        	throw new IllegalArgumentException("CommunicationPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CommunicationPortInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b26a5508-573a-4361-9704-3172898b49e2")
@@ -110,7 +112,8 @@ public class CommunicationPortInstance extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}. 
+     * Get the underlying {@link Port}.
+     * 
      * @return the Port represented by this proxy, never null.
      */
     @objid ("5ef45f79-598e-4e8a-b3e8-4b68446983bd")
@@ -123,7 +126,6 @@ public class CommunicationPortInstance extends FeaturePort {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("36e1f25b-b9c7-485a-bc9a-9291121af363")
     public CommunicationPort getType() {
@@ -140,7 +142,6 @@ public class CommunicationPortInstance extends FeaturePort {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("86eac4ac-2120-4f1d-961b-6c564c32e2fa")
     public void setType(final CommunicationPort obj) {
@@ -179,11 +180,11 @@ public class CommunicationPortInstance extends FeaturePort {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

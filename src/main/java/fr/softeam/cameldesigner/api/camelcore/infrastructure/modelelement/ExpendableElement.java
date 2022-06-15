@@ -58,7 +58,6 @@ public abstract class ExpendableElement extends NamedElement {
      * Add a value to the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ebedd58c-4784-451d-ba35-0572d76bf606")
     public void addAnnotations(final MmsObject obj) {
@@ -90,7 +89,6 @@ public abstract class ExpendableElement extends NamedElement {
      * Get the values of the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("893d38be-6aa1-4cbb-9c25-3ec46ae8a483")
     public List<MmsObject> getAnnotations() {
@@ -112,7 +110,8 @@ public abstract class ExpendableElement extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
+     * 
      * @return the ModelElement represented by this proxy, never null.
      */
     @objid ("fdcc72e5-dc75-427d-a62a-f0600094e153")
@@ -131,7 +130,6 @@ public abstract class ExpendableElement extends NamedElement {
      * Remove a value from the 'annotations' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("480711a9-5558-4c25-86b6-bf7f21a948a6")
     public boolean removeAnnotations(final MmsObject obj) {
@@ -171,11 +169,11 @@ public abstract class ExpendableElement extends NamedElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

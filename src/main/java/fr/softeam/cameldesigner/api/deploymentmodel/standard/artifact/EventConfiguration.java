@@ -73,9 +73,10 @@ public class EventConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Artifact
      * @return a {@link EventConfiguration} proxy or <i>null</i>.
      */
@@ -85,19 +86,20 @@ public class EventConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Artifact}
      * @return a {@link EventConfiguration} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c8d26b06-5900-49a5-a1e6-910f6c687832")
     public static EventConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (EventConfiguration.canInstantiate(obj))
-        	return new EventConfiguration(obj);
+            return new EventConfiguration(obj);
         else
-        	throw new IllegalArgumentException("EventConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("EventConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("71f01cbe-1b04-425d-9e5c-cd53e1cf2e58")
@@ -117,7 +119,8 @@ public class EventConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
     @objid ("b7ce3ab2-c3de-4e1e-89ef-633ee3dc9928")
@@ -130,7 +133,6 @@ public class EventConfiguration extends FeatureArtifact {
      * Get the value of the 'executionSchedule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f95e50db-cc29-4e37-b340-cdd2d4c461e7")
     public Schedule getExecutionSchedule() {
@@ -168,7 +170,6 @@ public class EventConfiguration extends FeatureArtifact {
      * Get the value to the 'scheduledExecutionConfig' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("67da4052-000b-4aee-8bc9-c2fb89e37fd1")
     public FeatureClass getScheduledExecutionConfig() {
@@ -185,7 +186,6 @@ public class EventConfiguration extends FeatureArtifact {
      * Set the value of the 'executionSchedule' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("06475154-dce1-4161-9177-f867631e9ddf")
     public void setExecutionSchedule(final Schedule obj) {
@@ -231,7 +231,6 @@ public class EventConfiguration extends FeatureArtifact {
      * Set the value of the 'scheduledExecutionConfig' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("2bf84c5e-54d7-49f7-aecf-0d0a95731fc8")
     public void setScheduledExecutionConfig(final FeatureClass obj) {
@@ -278,11 +277,11 @@ public class EventConfiguration extends FeatureArtifact {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

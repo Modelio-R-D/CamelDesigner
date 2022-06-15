@@ -17,8 +17,6 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.DataResourceFilter;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ModelResourceFilter;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Role;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ServiceResourceFilter;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.SoftwareComponentResourceFilter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -80,9 +78,10 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Permission} proxy or <i>null</i>.
      */
@@ -92,19 +91,20 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Permission} proxy from a {@link Class} stereotyped << Permission >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Permission} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("366f3634-0a27-413a-9e60-25d3506d0e6f")
     public static Permission safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Permission.canInstantiate(obj))
-        	return new Permission(obj);
+            return new Permission(obj);
         else
-        	throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Permission: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("e7b83414-b9e0-4fa7-8156-11a54ed80d05")
@@ -134,7 +134,8 @@ public class Permission extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("e5dae3f6-759a-4311-8186-807dd99b5257")
@@ -157,7 +158,6 @@ public class Permission extends FeatureClass {
      * Get the value of the 'resourceFilter' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5535e20a-ca56-4958-b753-a06341ad958d")
     public ResourceFilter getResourceFilter() {
@@ -181,7 +181,6 @@ public class Permission extends FeatureClass {
      * Get the value of the 'role' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1aed6b0b-1541-42d5-a8f1-2e25fb9f73f7")
     public Role getRole() {
@@ -235,7 +234,6 @@ public class Permission extends FeatureClass {
      * Set the value of the 'resourceFilter' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a4c9b180-a8bf-406a-b601-28190fdf3277")
     public void setResourceFilter(final ResourceFilter obj) {
@@ -261,7 +259,6 @@ public class Permission extends FeatureClass {
      * Set the value of the 'role' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ac38888e-976e-45e3-ac5b-a368d19a8b9d")
     public void setRole(final Role obj) {
@@ -337,11 +334,11 @@ public class Permission extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

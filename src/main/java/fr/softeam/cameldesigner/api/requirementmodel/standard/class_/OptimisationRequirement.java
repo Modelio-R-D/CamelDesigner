@@ -72,9 +72,10 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link OptimisationRequirement} proxy or <i>null</i>.
      */
@@ -84,19 +85,20 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link OptimisationRequirement} proxy from a {@link Class} stereotyped << OptimisationRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link OptimisationRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6f75422f-fd0d-4d2b-a7ea-0982847acd5f")
     public static OptimisationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (OptimisationRequirement.canInstantiate(obj))
-        	return new OptimisationRequirement(obj);
+            return new OptimisationRequirement(obj);
         else
-        	throw new IllegalArgumentException("OptimisationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("OptimisationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("51945e9e-9f87-419b-8e6c-6f49be96e110")
@@ -116,7 +118,8 @@ public class OptimisationRequirement extends SoftRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("ec74b14f-04a1-4dd7-a3be-144f82ef0598")
@@ -129,7 +132,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Get the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0d3ef2a4-22e9-481c-8cff-a0a99f3e8835")
     public MetricContext getMetricContext() {
@@ -149,7 +151,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Get the value of the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f2028fc8-8cc7-4490-9bb1-75f0810541dc")
     public MetricVariable getMetricVariable() {
@@ -183,7 +184,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Set the value of the 'metricContext' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("eb734306-0fa1-4d39-bf50-54975b63056c")
     public void setMetricContext(final MetricContext obj) {
@@ -209,7 +209,6 @@ public class OptimisationRequirement extends SoftRequirement {
      * Set the value of the 'metricVariable' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("41d27050-236c-4804-9267-2ba7dcbc3200")
     public void setMetricVariable(final MetricVariable obj) {
@@ -280,11 +279,11 @@ public class OptimisationRequirement extends SoftRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

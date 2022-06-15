@@ -77,7 +77,6 @@ public abstract class FeaturePackage extends Feature {
      * Add a value to the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1156b729-fe02-4c83-94ee-58215d982775")
     public void addAttributes(final AttributeClass obj) {
@@ -89,7 +88,6 @@ public abstract class FeaturePackage extends Feature {
      * Add a value to the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("de19bfd5-6c4c-420b-9cc6-265d780b7389")
     public void addSubFeatures(final FeaturePackage obj) {
@@ -117,28 +115,28 @@ public abstract class FeaturePackage extends Feature {
      * Get the values of the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6c63b35c-a586-4a7d-a04c-943ae464de18")
     public List<AttributeClass> getAttributes() {
         List<AttributeClass> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (MeasurableAttributeClass.canInstantiate(mObj))
-        			results.add((MeasurableAttributeClass)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeClass.STEREOTYPE_NAME));
-        	if (Certifiable.canInstantiate(mObj))
-        			results.add((Certifiable)CamelDesignerProxyFactory.instantiate(mObj, Certifiable.STEREOTYPE_NAME));
-        	if (SecurityAttribute.canInstantiate(mObj))
-        			results.add((SecurityAttribute)CamelDesignerProxyFactory.instantiate(mObj, SecurityAttribute.STEREOTYPE_NAME));
-        	if (QualityAttributeClass.canInstantiate(mObj))
-        			results.add((QualityAttributeClass)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeClass.STEREOTYPE_NAME));
-        	if (AttributeClass.canInstantiate(mObj))
-        			results.add((AttributeClass)CamelDesignerProxyFactory.instantiate(mObj, AttributeClass.STEREOTYPE_NAME));
-        	}
+            if (MeasurableAttributeClass.canInstantiate(mObj))
+                    results.add((MeasurableAttributeClass)CamelDesignerProxyFactory.instantiate(mObj, MeasurableAttributeClass.STEREOTYPE_NAME));
+            if (Certifiable.canInstantiate(mObj))
+                    results.add((Certifiable)CamelDesignerProxyFactory.instantiate(mObj, Certifiable.STEREOTYPE_NAME));
+            if (SecurityAttribute.canInstantiate(mObj))
+                    results.add((SecurityAttribute)CamelDesignerProxyFactory.instantiate(mObj, SecurityAttribute.STEREOTYPE_NAME));
+            if (QualityAttributeClass.canInstantiate(mObj))
+                    results.add((QualityAttributeClass)CamelDesignerProxyFactory.instantiate(mObj, QualityAttributeClass.STEREOTYPE_NAME));
+            if (AttributeClass.canInstantiate(mObj))
+                    results.add((AttributeClass)CamelDesignerProxyFactory.instantiate(mObj, AttributeClass.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("0b81f507-37b5-46fa-b2e5-a9d803ce88c5")
@@ -151,7 +149,6 @@ public abstract class FeaturePackage extends Feature {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("fe9df3d1-85f1-4bf6-aa1e-6e8f9443db48")
     public FeaturePackage getParent() {
@@ -162,45 +159,44 @@ public abstract class FeaturePackage extends Feature {
      * Get the values of the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ac8eb06d-383d-43b0-82c9-d0d669a6faf5")
     public List<FeaturePackage> getSubFeatures() {
         List<FeaturePackage> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (ConstraintModel.canInstantiate(mObj))
-        			results.add((ConstraintModel)CamelDesignerProxyFactory.instantiate(mObj, ConstraintModel.STEREOTYPE_NAME));
-        	if (DataTypeModel.canInstantiate(mObj))
-        			results.add((DataTypeModel)CamelDesignerProxyFactory.instantiate(mObj, DataTypeModel.STEREOTYPE_NAME));
-        	if (DataInstanceModel.canInstantiate(mObj))
-        			results.add((DataInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceModel.STEREOTYPE_NAME));
-        	if (DeploymentInstanceModel.canInstantiate(mObj))
-        			results.add((DeploymentInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentInstanceModel.STEREOTYPE_NAME));
-        	if (DeploymentTypeModel.canInstantiate(mObj))
-        			results.add((DeploymentTypeModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentTypeModel.STEREOTYPE_NAME));
-        	if (ExecutionModel.canInstantiate(mObj))
-        			results.add((ExecutionModel)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModel.STEREOTYPE_NAME));
-        	if (LocationModel.canInstantiate(mObj))
-        			results.add((LocationModel)CamelDesignerProxyFactory.instantiate(mObj, LocationModel.STEREOTYPE_NAME));
-        	if (MetaDataModel.canInstantiate(mObj))
-        			results.add((MetaDataModel)CamelDesignerProxyFactory.instantiate(mObj, MetaDataModel.STEREOTYPE_NAME));
-        	if (MetricInstanceModel.canInstantiate(mObj))
-        			results.add((MetricInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, MetricInstanceModel.STEREOTYPE_NAME));
-        	if (MetricTypeModel.canInstantiate(mObj))
-        			results.add((MetricTypeModel)CamelDesignerProxyFactory.instantiate(mObj, MetricTypeModel.STEREOTYPE_NAME));
-        	if (OrganisationModel.canInstantiate(mObj))
-        			results.add((OrganisationModel)CamelDesignerProxyFactory.instantiate(mObj, OrganisationModel.STEREOTYPE_NAME));
-        	if (RequirementModel.canInstantiate(mObj))
-        			results.add((RequirementModel)CamelDesignerProxyFactory.instantiate(mObj, RequirementModel.STEREOTYPE_NAME));
-        	if (ScalabilityModel.canInstantiate(mObj))
-        			results.add((ScalabilityModel)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityModel.STEREOTYPE_NAME));
-        	if (SecurityModel.canInstantiate(mObj))
-        			results.add((SecurityModel)CamelDesignerProxyFactory.instantiate(mObj, SecurityModel.STEREOTYPE_NAME));
-        	if (TypeModel.canInstantiate(mObj))
-        			results.add((TypeModel)CamelDesignerProxyFactory.instantiate(mObj, TypeModel.STEREOTYPE_NAME));
-        	if (UnitModel.canInstantiate(mObj))
-        			results.add((UnitModel)CamelDesignerProxyFactory.instantiate(mObj, UnitModel.STEREOTYPE_NAME));
-        	}
+            if (ConstraintModel.canInstantiate(mObj))
+                    results.add((ConstraintModel)CamelDesignerProxyFactory.instantiate(mObj, ConstraintModel.STEREOTYPE_NAME));
+            if (DataTypeModel.canInstantiate(mObj))
+                    results.add((DataTypeModel)CamelDesignerProxyFactory.instantiate(mObj, DataTypeModel.STEREOTYPE_NAME));
+            if (DataInstanceModel.canInstantiate(mObj))
+                    results.add((DataInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DataInstanceModel.STEREOTYPE_NAME));
+            if (DeploymentInstanceModel.canInstantiate(mObj))
+                    results.add((DeploymentInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentInstanceModel.STEREOTYPE_NAME));
+            if (DeploymentTypeModel.canInstantiate(mObj))
+                    results.add((DeploymentTypeModel)CamelDesignerProxyFactory.instantiate(mObj, DeploymentTypeModel.STEREOTYPE_NAME));
+            if (ExecutionModel.canInstantiate(mObj))
+                    results.add((ExecutionModel)CamelDesignerProxyFactory.instantiate(mObj, ExecutionModel.STEREOTYPE_NAME));
+            if (LocationModel.canInstantiate(mObj))
+                    results.add((LocationModel)CamelDesignerProxyFactory.instantiate(mObj, LocationModel.STEREOTYPE_NAME));
+            if (MetaDataModel.canInstantiate(mObj))
+                    results.add((MetaDataModel)CamelDesignerProxyFactory.instantiate(mObj, MetaDataModel.STEREOTYPE_NAME));
+            if (MetricInstanceModel.canInstantiate(mObj))
+                    results.add((MetricInstanceModel)CamelDesignerProxyFactory.instantiate(mObj, MetricInstanceModel.STEREOTYPE_NAME));
+            if (MetricTypeModel.canInstantiate(mObj))
+                    results.add((MetricTypeModel)CamelDesignerProxyFactory.instantiate(mObj, MetricTypeModel.STEREOTYPE_NAME));
+            if (OrganisationModel.canInstantiate(mObj))
+                    results.add((OrganisationModel)CamelDesignerProxyFactory.instantiate(mObj, OrganisationModel.STEREOTYPE_NAME));
+            if (RequirementModel.canInstantiate(mObj))
+                    results.add((RequirementModel)CamelDesignerProxyFactory.instantiate(mObj, RequirementModel.STEREOTYPE_NAME));
+            if (ScalabilityModel.canInstantiate(mObj))
+                    results.add((ScalabilityModel)CamelDesignerProxyFactory.instantiate(mObj, ScalabilityModel.STEREOTYPE_NAME));
+            if (SecurityModel.canInstantiate(mObj))
+                    results.add((SecurityModel)CamelDesignerProxyFactory.instantiate(mObj, SecurityModel.STEREOTYPE_NAME));
+            if (TypeModel.canInstantiate(mObj))
+                    results.add((TypeModel)CamelDesignerProxyFactory.instantiate(mObj, TypeModel.STEREOTYPE_NAME));
+            if (UnitModel.canInstantiate(mObj))
+                    results.add((UnitModel)CamelDesignerProxyFactory.instantiate(mObj, UnitModel.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -214,7 +210,6 @@ public abstract class FeaturePackage extends Feature {
      * Remove a value from the 'attributes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e4cac05b-bdc0-4054-918d-6c387e566a47")
     public boolean removeAttributes(final AttributeClass obj) {
@@ -225,7 +220,6 @@ public abstract class FeaturePackage extends Feature {
      * Remove a value from the 'subFeatures' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d9a3638a-5942-47a7-b8da-aadb41c22b7a")
     public boolean removeSubFeatures(final FeaturePackage obj) {
@@ -236,7 +230,6 @@ public abstract class FeaturePackage extends Feature {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9a2be274-afc9-429a-b70c-c5c9e2f7fe3e")
     public void setParent(final FeaturePackage obj) {
@@ -267,11 +260,11 @@ public abstract class FeaturePackage extends Feature {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

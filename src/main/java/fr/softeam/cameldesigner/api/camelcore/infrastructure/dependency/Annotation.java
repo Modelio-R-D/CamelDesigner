@@ -63,9 +63,10 @@ public class Annotation extends CamelElement {
     }
 
     /**
-     * Tries to instantiate a {@link Annotation} proxy from a {@link Dependency} stereotyped << Annotation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Annotation} proxy from a {@link Dependency} stereotyped << Annotation >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Dependency
      * @return a {@link Annotation} proxy or <i>null</i>.
      */
@@ -75,19 +76,20 @@ public class Annotation extends CamelElement {
     }
 
     /**
-     * Tries to instantiate a {@link Annotation} proxy from a {@link Dependency} stereotyped << Annotation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Annotation} proxy from a {@link Dependency} stereotyped << Annotation >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Dependency}
      * @return a {@link Annotation} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("daed0cb2-8cc9-47f8-8287-142c6e0631da")
     public static Annotation safeInstantiate(final Dependency obj) throws IllegalArgumentException {
         if (Annotation.canInstantiate(obj))
-        	return new Annotation(obj);
+            return new Annotation(obj);
         else
-        	throw new IllegalArgumentException("Annotation: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Annotation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("643eaa87-3286-4140-b323-5d3afa9c3326")
@@ -107,7 +109,8 @@ public class Annotation extends CamelElement {
     }
 
     /**
-     * Get the underlying {@link Dependency}. 
+     * Get the underlying {@link Dependency}.
+     * 
      * @return the Dependency represented by this proxy, never null.
      */
     @objid ("f1cc67dd-10e7-4f6b-90a3-246d08281d66")
@@ -153,11 +156,11 @@ public class Annotation extends CamelElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

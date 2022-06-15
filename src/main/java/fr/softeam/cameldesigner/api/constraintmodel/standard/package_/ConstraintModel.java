@@ -65,9 +65,10 @@ public class ConstraintModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link ConstraintModel} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class ConstraintModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link ConstraintModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("65be398d-4ad1-4eb9-92c0-2fc7a58b5a29")
     public static ConstraintModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (ConstraintModel.canInstantiate(obj))
-        	return new ConstraintModel(obj);
+            return new ConstraintModel(obj);
         else
-        	throw new IllegalArgumentException("ConstraintModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ConstraintModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("b1fd0d57-d55e-4d0d-a9bb-2c2d318b6e02")
@@ -109,7 +111,8 @@ public class ConstraintModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("7ad26398-11a6-42e4-ad8a-350b1a9bba02")
@@ -155,11 +158,11 @@ public class ConstraintModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

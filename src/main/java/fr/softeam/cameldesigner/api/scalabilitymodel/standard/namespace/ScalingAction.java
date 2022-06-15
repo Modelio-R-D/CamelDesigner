@@ -71,7 +71,8 @@ public abstract class ScalingAction extends Action {
     }
 
     /**
-     * Get the underlying {@link NameSpace}. 
+     * Get the underlying {@link NameSpace}.
+     * 
      * @return the NameSpace represented by this proxy, never null.
      */
     @objid ("9c4848f0-4776-4eec-91c6-f46130e6f2bd")
@@ -84,7 +85,6 @@ public abstract class ScalingAction extends Action {
      * Get the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0f6fcc6c-0549-49d8-b10b-bb983d47406f")
     public SoftwareComponent getSoftwareComponent() {
@@ -110,7 +110,6 @@ public abstract class ScalingAction extends Action {
      * Set the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a0cf0009-c534-4525-927d-8ef1205b365f")
     public void setSoftwareComponent(final SoftwareComponent obj) {
@@ -164,11 +163,11 @@ public abstract class ScalingAction extends Action {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

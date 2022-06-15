@@ -74,9 +74,10 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link RequirementSet} proxy or <i>null</i>.
      */
@@ -86,19 +87,20 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RequirementSet} proxy from a {@link Class} stereotyped << RequirementSet >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link RequirementSet} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("f21d9a46-4109-4d12-b24b-4c984846cb9a")
     public static RequirementSet safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RequirementSet.canInstantiate(obj))
-        	return new RequirementSet(obj);
+            return new RequirementSet(obj);
         else
-        	throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2d720d69-19f0-44c3-80c3-358ba10b4558")
@@ -118,7 +120,8 @@ public class RequirementSet extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9ac8bd96-0841-4947-9d11-4493e76a0287")
@@ -131,7 +134,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("47328c53-0a62-4a31-a058-7cd9be486393")
     public HorizontalScaleRequirement getHorizontalScaleRequirement() {
@@ -149,7 +151,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("65ceb2cd-0504-4f6a-b769-12b95d557d94")
     public ImageRequirement getImageRequirement() {
@@ -167,7 +168,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d7e1a073-386d-4920-bdba-633e314089c4")
     public LocationRequirement getLocationRequirement() {
@@ -185,7 +185,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'osRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6c87a157-2b14-46e0-a7f9-e56a19aef5e1")
     public OSRequirement getOsRequirement() {
@@ -203,7 +202,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("7e27ff7b-40c5-407a-9b22-d53ea73544b1")
     public PaaSRequirement getPaasRequirement() {
@@ -221,7 +219,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("c6d7ae54-d5f1-4b84-8396-fdec1b452d5f")
     public ProviderRequirement getProviderRequirement() {
@@ -239,7 +236,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("54da01a1-b908-4f4c-a72c-8a62b65e2e7d")
     public ResourceRequirement getResourceRequirement() {
@@ -257,7 +253,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ba2cd9f9-0ba7-40d9-b88b-d0962ef95f70")
     public SecurityRequirement getSecurityRequirement() {
@@ -275,7 +270,6 @@ public class RequirementSet extends FeatureClass {
      * Get the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("147c925a-5f66-4a5b-90cc-dd154989ae19")
     public VerticalScaleRequirement getVerticalScaleRequirement() {
@@ -299,7 +293,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'horizontalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("502c59a2-8047-42f7-99b1-57e75990757d")
     public void setHorizontalScaleRequirement(final HorizontalScaleRequirement obj) {
@@ -325,7 +318,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'imageRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("36060776-2def-4425-bd6c-c20e0b274466")
     public void setImageRequirement(final ImageRequirement obj) {
@@ -351,7 +343,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'locationRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("675a35fe-9b26-4dc8-9e96-3f6a76ba1f9f")
     public void setLocationRequirement(final LocationRequirement obj) {
@@ -377,7 +368,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'osRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("145a58c1-1f8e-4bce-9908-3f255b1fa980")
     public void setOsRequirement(final OSRequirement obj) {
@@ -403,7 +393,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'paasRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e338bef4-c9f1-4411-9686-596d5ff61b9d")
     public void setPaasRequirement(final PaaSRequirement obj) {
@@ -429,7 +418,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'providerRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("93d026fc-4eb2-463f-b03d-227e7f699d42")
     public void setProviderRequirement(final ProviderRequirement obj) {
@@ -455,7 +443,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'resourceRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("362d2a33-d51d-43a0-a9e2-2f141d9d40c1")
     public void setResourceRequirement(final ResourceRequirement obj) {
@@ -481,7 +468,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'securityRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0d20b8f9-9bef-4856-90d2-1bd16e1f8af8")
     public void setSecurityRequirement(final SecurityRequirement obj) {
@@ -507,7 +493,6 @@ public class RequirementSet extends FeatureClass {
      * Set the value of the 'verticalScaleRequirement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b4b6e2d2-c4af-4fd3-8936-4b6f56502c1b")
     public void setVerticalScaleRequirement(final VerticalScaleRequirement obj) {
@@ -561,11 +546,11 @@ public class RequirementSet extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

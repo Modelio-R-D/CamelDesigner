@@ -81,9 +81,10 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Window} proxy or <i>null</i>.
      */
@@ -93,19 +94,20 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Window} proxy from a {@link Class} stereotyped << Window >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Window} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("087df638-32be-4c63-ae8d-c1ded284756f")
     public static Window safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Window.canInstantiate(obj))
-        	return new Window(obj);
+            return new Window(obj);
         else
-        	throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Window: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("dc8b208a-f929-4754-80cd-bf9510ea00c2")
@@ -125,7 +127,8 @@ public class Window extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("8b38993e-aa9d-4dba-ab76-81c0cbda37c4")
@@ -168,7 +171,6 @@ public class Window extends FeatureClass {
      * Get the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("08eba475-7efa-4f71-ae3f-7ff491afa4ad")
     public Unit getTimeUnit() {
@@ -236,7 +238,6 @@ public class Window extends FeatureClass {
      * Set the value of the 'timeUnit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1e8a4445-473e-4c05-a23c-7e1b8d262aa8")
     public void setTimeUnit(final Unit obj) {
@@ -316,11 +317,11 @@ public class Window extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

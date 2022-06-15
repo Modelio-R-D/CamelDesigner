@@ -77,9 +77,10 @@ public class SoftwareComponent extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponent} proxy from a {@link Component} stereotyped << SoftwareComponent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponent} proxy from a {@link Component} stereotyped << SoftwareComponent >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Component
      * @return a {@link SoftwareComponent} proxy or <i>null</i>.
      */
@@ -89,26 +90,26 @@ public class SoftwareComponent extends CamelComponent {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponent} proxy from a {@link Component} stereotyped << SoftwareComponent >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SoftwareComponent} proxy from a {@link Component} stereotyped << SoftwareComponent >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Component}
      * @return a {@link SoftwareComponent} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("74a9a214-4d51-4031-b388-a8bcea439155")
     public static SoftwareComponent safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (SoftwareComponent.canInstantiate(obj))
-        	return new SoftwareComponent(obj);
+            return new SoftwareComponent(obj);
         else
-        	throw new IllegalArgumentException("SoftwareComponent: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SoftwareComponent: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'consumesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("49712573-e947-4a58-a66c-048fa4db503a")
     public void addConsumesData(final Data obj) {
@@ -124,7 +125,6 @@ public class SoftwareComponent extends CamelComponent {
      * Add a value to the 'generatesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07441328-0724-4b5b-bd50-eecad86e324a")
     public void addGeneratesData(final Data obj) {
@@ -140,7 +140,6 @@ public class SoftwareComponent extends CamelComponent {
      * Add a value to the 'managesDataSource' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("dc692fd5-7800-4925-b01f-f7ef135d0bfb")
     public void addManagesDataSource(final DataSource obj) {
@@ -156,7 +155,6 @@ public class SoftwareComponent extends CamelComponent {
      * Add a value to the 'requiredCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1a11b49e-d53a-43ad-a9bd-82f15c3250c2")
     public void addRequiredCommunications(final CommunicationPort obj) {
@@ -184,7 +182,6 @@ public class SoftwareComponent extends CamelComponent {
      * Get the values of the 'consumesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("135a1493-f5ee-4999-96cb-10d73d72e7bd")
     public List<Data> getConsumesData() {
@@ -200,7 +197,8 @@ public class SoftwareComponent extends CamelComponent {
     }
 
     /**
-     * Get the underlying {@link Component}. 
+     * Get the underlying {@link Component}.
+     * 
      * @return the Component represented by this proxy, never null.
      */
     @objid ("a3018b63-2c71-4284-b195-4acbf75c0007")
@@ -213,7 +211,6 @@ public class SoftwareComponent extends CamelComponent {
      * Get the values of the 'generatesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d6d39530-352c-4861-917c-0a5450b1bd37")
     public List<Data> getGeneratesData() {
@@ -232,7 +229,6 @@ public class SoftwareComponent extends CamelComponent {
      * Get the values of the 'managesDataSource' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4afb5000-7c3e-4950-abfd-752a587d41cb")
     public List<DataSource> getManagesDataSource() {
@@ -251,15 +247,14 @@ public class SoftwareComponent extends CamelComponent {
      * Get the values of the 'requiredCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e2627b93-5195-45dc-b380-60d4476e4538")
     public List<CommunicationPort> getRequiredCommunications() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Component) this.elt).getInternalStructure()){
-        	if (CommunicationPort.canInstantiate(mObj))
-        			results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
-        	}
+            if (CommunicationPort.canInstantiate(mObj))
+                    results.add((CommunicationPort)CamelDesignerProxyFactory.instantiate(mObj, CommunicationPort.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -267,22 +262,20 @@ public class SoftwareComponent extends CamelComponent {
      * Get the value to the 'requiredHost' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("57a76c9a-d062-4cb2-875e-3c6eafe3841b")
     public HostingPort getRequiredHost() {
-          for (Port obj : ((Component) this.elt).getInternalStructure(Port.class)) {
-           if (HostingPort.canInstantiate(obj))
-             return (HostingPort)CamelDesignerProxyFactory.instantiate(obj, HostingPort.STEREOTYPE_NAME);
-          }
-          return null;
+        for (Port obj : ((Component) this.elt).getInternalStructure(Port.class)) {
+         if (HostingPort.canInstantiate(obj))
+           return (HostingPort)CamelDesignerProxyFactory.instantiate(obj, HostingPort.STEREOTYPE_NAME);
+        }
+        return null;
     }
 
     /**
      * Get the value of the 'requirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("38351228-0003-46ea-8595-fdc60420ce3a")
     public RequirementSet getRequirementSet() {
@@ -326,7 +319,6 @@ public class SoftwareComponent extends CamelComponent {
      * Remove a value from the 'consumesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("36199e9b-22e4-465c-b919-099e5812a1e6")
     public boolean removeConsumesData(final Data obj) {
@@ -346,7 +338,6 @@ public class SoftwareComponent extends CamelComponent {
      * Remove a value from the 'generatesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("8352370a-eaaa-44f4-9df4-b85cff6bbf09")
     public boolean removeGeneratesData(final Data obj) {
@@ -366,7 +357,6 @@ public class SoftwareComponent extends CamelComponent {
      * Remove a value from the 'managesDataSource' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bfeeec64-da34-45f0-82c1-5710f0e1dad0")
     public boolean removeManagesDataSource(final DataSource obj) {
@@ -386,7 +376,6 @@ public class SoftwareComponent extends CamelComponent {
      * Remove a value from the 'requiredCommunications' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("837fd99a-55bf-4571-a6e3-883324a6392f")
     public boolean removeRequiredCommunications(final CommunicationPort obj) {
@@ -423,7 +412,6 @@ public class SoftwareComponent extends CamelComponent {
      * Set the value of the 'requiredHost' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4f43dae6-2b20-4b18-97ab-400fc454faa4")
     public void setRequiredHost(final HostingPort obj) {
@@ -443,7 +431,6 @@ public class SoftwareComponent extends CamelComponent {
      * Set the value of the 'requirementSet' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a367ef59-97a0-40dc-a815-8fcdbdc0784f")
     public void setRequirementSet(final RequirementSet obj) {
@@ -505,11 +492,11 @@ public class SoftwareComponent extends CamelComponent {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

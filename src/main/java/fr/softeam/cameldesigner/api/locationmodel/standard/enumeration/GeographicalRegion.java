@@ -65,9 +65,10 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Enumeration
      * @return a {@link GeographicalRegion} proxy or <i>null</i>.
      */
@@ -77,26 +78,26 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Enumeration}
      * @return a {@link GeographicalRegion} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("aa9a206a-56b7-4aab-a296-c3e2a27d3fd0")
     public static GeographicalRegion safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (GeographicalRegion.canInstantiate(obj))
-        	return new GeographicalRegion(obj);
+            return new GeographicalRegion(obj);
         else
-        	throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("GeographicalRegion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("686b6469-ead1-44ec-90c4-e5f5c6b874b3")
     public void addParentRegions(final GeographicalRegion obj) {
@@ -125,7 +126,8 @@ public class GeographicalRegion extends Location {
     }
 
     /**
-     * Get the underlying {@link Enumeration}. 
+     * Get the underlying {@link Enumeration}.
+     * 
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("a6341596-de38-41cd-97a7-a071766f99b0")
@@ -138,7 +140,6 @@ public class GeographicalRegion extends Location {
      * Get the values of the 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d3a7366d-8d21-4613-9a7e-4b514f6f8e16")
     public List<GeographicalRegion> getParentRegions() {
@@ -163,7 +164,6 @@ public class GeographicalRegion extends Location {
      * Remove a value from 'parentRegions' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("d4eed3cb-65bd-4f4e-9df2-97121927c2e5")
     public boolean removeParentRegions(final GeographicalRegion obj) {
@@ -242,11 +242,11 @@ public class GeographicalRegion extends Location {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

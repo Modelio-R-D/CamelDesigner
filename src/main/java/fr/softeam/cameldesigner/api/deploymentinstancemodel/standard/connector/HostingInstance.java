@@ -65,9 +65,10 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link HostingInstance} proxy or <i>null</i>.
      */
@@ -77,19 +78,20 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link HostingInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("282c7c3e-58fb-4092-a266-1f3f7faae5c2")
     public static HostingInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (HostingInstance.canInstantiate(obj))
-        	return new HostingInstance(obj);
+            return new HostingInstance(obj);
         else
-        	throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("bc2d6cd5-a2e9-4098-83b3-ea5a11a14096")
@@ -109,7 +111,8 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("0463058a-b123-4c9c-a32a-0fc44c1e462f")
@@ -122,7 +125,6 @@ public class HostingInstance extends ComponentRelationInstance {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("078bdca0-a591-402e-876a-4e3fe7c1215d")
     public Hosting getType() {
@@ -146,7 +148,6 @@ public class HostingInstance extends ComponentRelationInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("61284b1c-1559-40e8-ae27-92d1a8e7e621")
     public void setType(final Hosting obj) {
@@ -200,11 +201,11 @@ public class HostingInstance extends ComponentRelationInstance {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -2,16 +2,15 @@ package fr.softeam.cameldesigner.handlers.commands;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.ui.WizardExport;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.DefaultModuleCommandHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.ui.WizardExport;
 
 @objid ("330edc55-1a9c-496d-9ac1-caa6787c7cb7")
 public class ExportModelCommand extends DefaultModuleCommandHandler {
-
     @objid ("7bd24768-2ef2-4f62-ac28-94559e720ca1")
     public ExportModelCommand() {
         super();

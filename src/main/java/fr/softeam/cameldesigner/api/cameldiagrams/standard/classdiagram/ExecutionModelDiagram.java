@@ -66,9 +66,10 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link ExecutionModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ExecutionModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ExecutionModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ExecutionModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link ExecutionModelDiagram} proxy or <i>null</i>.
      */
@@ -78,19 +79,20 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link ExecutionModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ExecutionModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ExecutionModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ExecutionModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link ExecutionModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("b450f0c0-e148-4d53-a53a-c2468fd4943c")
     public static ExecutionModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (ExecutionModelDiagram.canInstantiate(obj))
-        	return new ExecutionModelDiagram(obj);
+            return new ExecutionModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("ExecutionModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ExecutionModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("8ee75272-8b1d-4fff-9679-78a02ad2142a")
@@ -110,7 +112,8 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
     @objid ("8979a025-5a4d-4da9-9204-bfbe050bbaeb")
@@ -123,7 +126,6 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
      * Get the value to the 'Origin' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b311784e-7fc0-41b0-8404-f19dcc86b50b")
     public ExecutionModel getOrigin() {
@@ -140,7 +142,6 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
      * Set the value of the 'Origin' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1c740b3f-3c54-4cfd-a58b-ff6fd16c9f7d")
     public void setOrigin(final ExecutionModel obj) {
@@ -178,11 +179,11 @@ public class ExecutionModelDiagram extends AbstractCamelDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -18,7 +18,6 @@ import fr.softeam.cameldesigner.api.executionmodel.standard.class_.ApplicationMe
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.CommunicationMeasurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.ContainerMeasurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.DataMeasurement;
-import fr.softeam.cameldesigner.api.executionmodel.standard.class_.Measurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.PaaSMeasurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.SoftwareComponentMeasurement;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.VMMeasurement;
@@ -77,9 +76,10 @@ public class SLOViolation extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link SLOViolation} proxy or <i>null</i>.
      */
@@ -89,19 +89,20 @@ public class SLOViolation extends Cause {
     }
 
     /**
-     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SLOViolation} proxy from a {@link Class} stereotyped << SLOViolation >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link SLOViolation} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ff50697c-f16a-4fa3-a413-b6e7b0c9de34")
     public static SLOViolation safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SLOViolation.canInstantiate(obj))
-        	return new SLOViolation(obj);
+            return new SLOViolation(obj);
         else
-        	throw new IllegalArgumentException("SLOViolation: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SLOViolation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("875b35ab-b207-43a3-b345-8e901cb8a6b3")
@@ -131,7 +132,8 @@ public class SLOViolation extends Cause {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("a0929432-90c9-4342-ba58-613a0823ad87")
@@ -144,7 +146,6 @@ public class SLOViolation extends Cause {
      * Get the value of the 'measurement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1cd850a2-8ff6-4f03-96bd-1850f5411a81")
     public Measurement getMeasurement() {
@@ -174,7 +175,6 @@ public class SLOViolation extends Cause {
      * Get the value of the 'slo' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b2663d10-dc4c-453e-bb5c-36c7de70901b")
     public ServiceLevelObjective getSlo() {
@@ -210,7 +210,6 @@ public class SLOViolation extends Cause {
      * Set the value of the 'measurement' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("de20abe8-b216-4c4d-bac9-053d93a65dd9")
     public void setMeasurement(final Measurement obj) {
@@ -236,7 +235,6 @@ public class SLOViolation extends Cause {
      * Set the value of the 'slo' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9b218bb6-138a-49e5-9472-6c4655745b03")
     public void setSlo(final ServiceLevelObjective obj) {
@@ -294,11 +292,11 @@ public class SLOViolation extends Cause {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

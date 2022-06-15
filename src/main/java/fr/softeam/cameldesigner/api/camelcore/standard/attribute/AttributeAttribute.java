@@ -71,9 +71,10 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link AttributeAttribute} proxy or <i>null</i>.
      */
@@ -83,19 +84,20 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link AttributeAttribute} proxy from a {@link Attribute} stereotyped << Attribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link AttributeAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("23d1a1de-0f78-44b3-b933-ed89031810ba")
     public static AttributeAttribute safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (AttributeAttribute.canInstantiate(obj))
-        	return new AttributeAttribute(obj);
+            return new AttributeAttribute(obj);
         else
-        	throw new IllegalArgumentException("AttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("AttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("37495426-2558-4117-af5e-0aa9990c5722")
@@ -115,7 +117,8 @@ public class AttributeAttribute extends CamelAttribute {
     }
 
     /**
-     * Get the underlying {@link Attribute}. 
+     * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @objid ("b59f3a2f-9f93-4a08-8ce7-c1af0c430489")
@@ -128,7 +131,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("0025f78f-e5cc-476f-a817-cfb9475670cd")
     public FeatureClassifier getParent() {
@@ -139,7 +141,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Get the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("706a5d61-cc82-4140-af58-0b5559147cef")
     public Unit getUnit() {
@@ -161,7 +162,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Get the value to the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("07077616-ed50-4935-b509-f5c382abd6e3")
     public ValueType getValueType() {
@@ -178,7 +178,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6281e48f-4c2a-4bc0-b247-23d123166a3b")
     public void setParent(final FeatureClassifier obj) {
@@ -189,7 +188,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Set the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("5018a8df-0937-45f9-b656-6b539efd0803")
     public void setUnit(final Unit obj) {
@@ -215,7 +213,6 @@ public class AttributeAttribute extends CamelAttribute {
      * Set the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("10356fc0-54a0-4c74-9fed-217fc772193f")
     public void setValueType(final ValueType obj) {
@@ -265,11 +262,11 @@ public class AttributeAttribute extends CamelAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

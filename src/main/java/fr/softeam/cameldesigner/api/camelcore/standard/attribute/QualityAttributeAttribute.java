@@ -62,9 +62,10 @@ public class QualityAttributeAttribute extends AttributeAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeAttribute} proxy from a {@link Attribute} stereotyped << QualityAttribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttributeAttribute} proxy from a {@link Attribute} stereotyped << QualityAttribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Attribute
      * @return a {@link QualityAttributeAttribute} proxy or <i>null</i>.
      */
@@ -74,19 +75,20 @@ public class QualityAttributeAttribute extends AttributeAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link QualityAttributeAttribute} proxy from a {@link Attribute} stereotyped << QualityAttribute_Attribute >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link QualityAttributeAttribute} proxy from a {@link Attribute} stereotyped << QualityAttribute_Attribute >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Attribute}
      * @return a {@link QualityAttributeAttribute} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("f4f63d05-695b-4533-a636-502aee0ae50e")
     public static QualityAttributeAttribute safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (QualityAttributeAttribute.canInstantiate(obj))
-        	return new QualityAttributeAttribute(obj);
+            return new QualityAttributeAttribute(obj);
         else
-        	throw new IllegalArgumentException("QualityAttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("QualityAttributeAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("f6dcd382-cb14-446a-8a02-629f10f167f1")
@@ -106,7 +108,8 @@ public class QualityAttributeAttribute extends AttributeAttribute {
     }
 
     /**
-     * Get the underlying {@link Attribute}. 
+     * Get the underlying {@link Attribute}.
+     * 
      * @return the Attribute represented by this proxy, never null.
      */
     @objid ("f648f9eb-282c-429d-b94f-9aeeaad41416")
@@ -145,11 +148,11 @@ public class QualityAttributeAttribute extends AttributeAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

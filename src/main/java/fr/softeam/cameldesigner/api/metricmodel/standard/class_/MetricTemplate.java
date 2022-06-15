@@ -79,9 +79,10 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link MetricTemplate} proxy or <i>null</i>.
      */
@@ -91,19 +92,20 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MetricTemplate} proxy from a {@link Class} stereotyped << MetricTemplate >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link MetricTemplate} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("499aaba2-a9d0-4a53-a96c-e5314017244d")
     public static MetricTemplate safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MetricTemplate.canInstantiate(obj))
-        	return new MetricTemplate(obj);
+            return new MetricTemplate(obj);
         else
-        	throw new IllegalArgumentException("MetricTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MetricTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("99cb1dde-cbde-43e6-a3a0-ec1f77f09062")
@@ -126,7 +128,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("34c415cb-0fa6-4903-bdd5-145904ee5225")
     public MeasurableAttributeClass getAttribute() {
@@ -141,7 +142,8 @@ public class MetricTemplate extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("1277724e-600e-4b6d-b3ab-c9f8e05e434b")
@@ -154,7 +156,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ab3f33b5-627d-4e7c-9f5f-555a11ddf801")
     public Unit getUnit() {
@@ -186,7 +187,6 @@ public class MetricTemplate extends FeatureClass {
      * Get the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1f001063-84d8-4728-b1e6-8b2467ee8000")
     public ValueType getValueType() {
@@ -218,7 +218,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'attribute' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f559310b-26ac-4fe1-980b-ae024f05abc9")
     public void setAttribute(final MeasurableAttributeClass obj) {
@@ -244,7 +243,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'unit' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b5e3383b-5508-4b60-bf3b-4080d1077f26")
     public void setUnit(final Unit obj) {
@@ -280,7 +278,6 @@ public class MetricTemplate extends FeatureClass {
      * Set the value of the 'valueType' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4ba793d1-ebc8-41a1-bc73-196bc87df6b3")
     public void setValueType(final ValueType obj) {
@@ -338,11 +335,11 @@ public class MetricTemplate extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

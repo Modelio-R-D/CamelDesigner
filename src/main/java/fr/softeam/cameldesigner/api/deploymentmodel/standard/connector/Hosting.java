@@ -69,9 +69,10 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Connector
      * @return a {@link Hosting} proxy or <i>null</i>.
      */
@@ -81,26 +82,26 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Connector}
      * @return a {@link Hosting} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("7c343ff2-c9ee-4605-b138-597053fd1f81")
     public static Hosting safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (Hosting.canInstantiate(obj))
-        	return new Hosting(obj);
+            return new Hosting(obj);
         else
-        	throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("618c7f53-0356-42bd-b2d8-fd45f792d345")
     public void addRequiredHostsConfiguration(final Configuration obj) {
@@ -129,7 +130,8 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
-     * Get the underlying {@link Connector}. 
+     * Get the underlying {@link Connector}.
+     * 
      * @return the Connector represented by this proxy, never null.
      */
     @objid ("4b80d345-7a59-40d8-ad3f-34b8b13a4fd3")
@@ -142,7 +144,6 @@ public class Hosting extends ComponentRelation {
      * Get the value of the 'providedHostConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("80d2b990-ed32-45a5-9658-d9d38621a58d")
     public Configuration getProvidedHostConfiguration() {
@@ -166,7 +167,6 @@ public class Hosting extends ComponentRelation {
      * Get the values of the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f0b8968b-64e0-4f29-9914-53e9988736e1")
     public List<Configuration> getRequiredHostsConfiguration() {
@@ -197,7 +197,6 @@ public class Hosting extends ComponentRelation {
      * Remove a value from the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("1d82e6df-a9e9-4353-ab6a-96685d832b26")
     public boolean removeRequiredHostsConfiguration(final Configuration obj) {
@@ -217,7 +216,6 @@ public class Hosting extends ComponentRelation {
      * Set the value of the 'providedHostConfiguration' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("04217f71-26df-4648-9213-42d1b20bc600")
     public void setProvidedHostConfiguration(final Configuration obj) {
@@ -271,11 +269,11 @@ public class Hosting extends ComponentRelation {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

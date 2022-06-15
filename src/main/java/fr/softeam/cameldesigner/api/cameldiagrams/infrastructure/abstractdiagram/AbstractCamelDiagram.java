@@ -67,7 +67,8 @@ public abstract class AbstractCamelDiagram extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link AbstractDiagram}. 
+     * Get the underlying {@link AbstractDiagram}.
+     * 
      * @return the AbstractDiagram represented by this proxy, never null.
      */
     @objid ("c7433740-76b7-4e0a-ba9e-22f607f7f025")
@@ -106,11 +107,11 @@ public abstract class AbstractCamelDiagram extends ExpendableElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

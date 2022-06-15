@@ -15,7 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.User;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -66,9 +65,10 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link UserGroup} proxy or <i>null</i>.
      */
@@ -78,26 +78,26 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link UserGroup} proxy from a {@link Class} stereotyped << UserGroup >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link UserGroup} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c04e999d-e3a6-4d67-9c3c-b16caa31fa45")
     public static UserGroup safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (UserGroup.canInstantiate(obj))
-        	return new UserGroup(obj);
+            return new UserGroup(obj);
         else
-        	throw new IllegalArgumentException("UserGroup: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("UserGroup: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("52c27f10-0a15-4979-a122-9454b88eaf9f")
     public void addUsers(final User obj) {
@@ -126,7 +126,8 @@ public class UserGroup extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("9349e71b-d948-493c-a115-9f036eb2626a")
@@ -139,7 +140,6 @@ public class UserGroup extends FeatureClass {
      * Get the values of the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("4c96966b-ba74-4a48-80aa-1f7a762559a5")
     public List<User> getUsers() {
@@ -164,7 +164,6 @@ public class UserGroup extends FeatureClass {
      * Remove a value from the 'users' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("b82ea76f-b05f-45a0-b902-feebf40989b0")
     public boolean removeUsers(final User obj) {
@@ -212,11 +211,11 @@ public class UserGroup extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -5,17 +5,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 
 @objid ("4970b2e0-5c04-4d3c-af4a-58f127b37f49")
 public class ImportMap {
-    @objid ("7ff8b324-7688-435d-bfdb-36c517a53f4a")
-    private Map<CDOObject, CamelElement> modelMap;
-
     @objid ("034701e6-8591-4a22-a63e-ef35db05bfaf")
     private static ImportMap theSingleInstance;
+
+    @objid ("afb95b99-d474-4012-8696-203a38976d19")
+    private Map<CDOObject, CamelElement> modelMap;
 
     @objid ("b844a873-fc30-42b1-9986-64d8385e3fc3")
     public void clear() {

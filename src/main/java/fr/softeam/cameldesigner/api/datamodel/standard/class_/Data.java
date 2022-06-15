@@ -15,7 +15,6 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
-import fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -67,9 +66,10 @@ public class Data extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Data} proxy from a {@link Class} stereotyped << Data >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Data} proxy from a {@link Class} stereotyped << Data >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Data} proxy or <i>null</i>.
      */
@@ -79,26 +79,26 @@ public class Data extends FeatureClass {
     }
 
     /**
-     * Tries to instantiate a {@link Data} proxy from a {@link Class} stereotyped << Data >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Data} proxy from a {@link Class} stereotyped << Data >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Data} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("cc81b75f-0a46-46b0-acec-bbf8816c09fa")
     public static Data safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Data.canInstantiate(obj))
-        	return new Data(obj);
+            return new Data(obj);
         else
-        	throw new IllegalArgumentException("Data: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Data: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'includesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("86704b10-6d28-4072-8b4c-4da15d7fe4d1")
     public void addIncludesData(final Data obj) {
@@ -126,7 +126,6 @@ public class Data extends FeatureClass {
      * Get the value of the 'dataSource' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("6ac5d879-cbc3-4421-8608-cc7f6539243e")
     public DataSource getDataSource() {
@@ -141,7 +140,8 @@ public class Data extends FeatureClass {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("75a970aa-79a0-4e3f-a08b-eba2e616e726")
@@ -154,15 +154,14 @@ public class Data extends FeatureClass {
      * Get the values of the 'includesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("18950354-c2d2-4823-8713-270c6e84457d")
     public List<Data> getIncludesData() {
         List<Data> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
-        	if (Data.canInstantiate(mObj))
-        			results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
-        	}
+            if (Data.canInstantiate(mObj))
+                    results.add((Data)CamelDesignerProxyFactory.instantiate(mObj, Data.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -170,7 +169,6 @@ public class Data extends FeatureClass {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("49b8e507-ab50-4095-bad7-707eff7af0a7")
     public Data getParent() {
@@ -187,7 +185,6 @@ public class Data extends FeatureClass {
      * Remove a value from the 'includesData' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("ad3612a0-135d-4358-b2bf-cb23e435d873")
     public boolean removeIncludesData(final Data obj) {
@@ -198,7 +195,6 @@ public class Data extends FeatureClass {
      * Set the value of the 'dataSource' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("a60e3938-e9a9-405b-9bea-1554ee25108c")
     public void setDataSource(final DataSource obj) {
@@ -224,7 +220,6 @@ public class Data extends FeatureClass {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("3d08ce8b-2f94-40bb-8565-6d4fde4da9de")
     public void setParent(final Data obj) {
@@ -263,11 +258,11 @@ public class Data extends FeatureClass {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }
