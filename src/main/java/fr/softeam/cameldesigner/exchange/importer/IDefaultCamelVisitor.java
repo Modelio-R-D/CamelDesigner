@@ -18,7 +18,7 @@ import fr.softeam.cameldesigner.exchange.importer.metadata.MetaDataModelImporter
 import fr.softeam.cameldesigner.exchange.importer.metadata.MmsConceptImporter;
 import fr.softeam.cameldesigner.exchange.importer.metadata.MmsObjectImporter;
 
-public interface IDefaultCamelVisitor extends ICamelVisitor{
+public interface IDefaultCamelVisitor extends ICamelImporterVisitor{
 
     @Override
     default Object visitFeature(FeatureImporter<? extends Feature, ? extends Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature> feature) {

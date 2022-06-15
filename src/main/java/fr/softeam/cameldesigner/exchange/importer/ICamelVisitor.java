@@ -8,34 +8,25 @@ import camel.core.NamedElement;
 import camel.mms.MetaDataModel;
 import camel.mms.MmsConcept;
 import camel.mms.MmsObject;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
-import fr.softeam.cameldesigner.exchange.importer.core.CamelModelImporter;
-import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
-import fr.softeam.cameldesigner.exchange.importer.core.NamedElementImporter;
-import fr.softeam.cameldesigner.exchange.importer.core.SubModelImporter;
-import fr.softeam.cameldesigner.exchange.importer.metadata.MetaDataModelImporter;
-import fr.softeam.cameldesigner.exchange.importer.metadata.MmsConceptImporter;
-import fr.softeam.cameldesigner.exchange.importer.metadata.MmsObjectImporter;
 
 public interface ICamelVisitor {
 
 
-    Object visitFeature(FeatureImporter<? extends Feature, ? extends Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature> feature);
+    Object visitFeature(Feature feature);
 
-    Object visitCamelElement(CamelElementImporter<? extends CDOObject, ? extends CDOObject, ? extends CamelElement, ? extends CamelElement> camelElt);
+    Object visitCDOObject(CDOObject object);
 
-    Object visitCamelModel(CamelModelImporter<? extends CamelModel, ? extends Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature> camelModel);
+    Object visitCamelModel(CamelModel camelModel);
 
-    Object visitMetaDataModel(MetaDataModelImporter<? extends MetaDataModel, ? extends CamelModel, ? extends fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel, ? extends fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel> metaDataModel);
+    Object visitMetaDataModel(MetaDataModel metaDataModel);
 
-    Object visitMmsConcept(MmsConceptImporter<? extends MmsConcept, ? extends MetaDataModel, ? extends fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept, ? extends fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel> mmsConcept);
+    Object visitMmsConcept(MmsConcept mmsConcept);
 
-    Object visitMmsObject(MmsObjectImporter<? extends MmsObject, ? extends MetaDataModel, ? extends fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject, ? extends fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel> model);
+    Object visitMmsObject(MmsObject mmsObject);
 
-    Object visitModel(SubModelImporter<? extends Model, ? extends Feature, ? extends CamelElement, ? extends CamelElement> model);
+    Object visitModel(Model model);
 
-    Object visitNamedElement(NamedElementImporter<? extends NamedElement, ? extends Feature, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement, ? extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement> namedElement);
+    Object visitNamedElement(NamedElement namedElement);
 
 
 

@@ -21,19 +21,27 @@ public class CamelWalker implements IWalker<CDOObject> {
 
     @Override
     public void walk(CDOObject element) {
+
         if(element != null) {
-            CamelElementImporter<? extends CDOObject, ? extends CDOObject, ? extends CamelElement, ? extends CamelElement> importer = ImporterFactory.getImporter(element);
-            if (importer != null) {
-                Object childs = CamelContainment.getChilds(importer);
-                if (childs != null) {
-                    for (CDOObject child : (Collection<? extends CDOObject>) childs) {
-                        this.importProcess.process(child, element);
-                        walk(child);
+            CamelElementImporter<? extends CDOObject, ? extends CDOObject, ? extends CamelElement, ? extends CamelElement> importer;
+            try {
+                importer = ImporterFactory.getImporter(element);
+
+                if (importer != null) {
+                    Object childs = CamelContainment.getChilds(importer);
+                    if (childs != null) {
+                        for (CDOObject child : (Collection<? extends CDOObject>) childs) {
+                            this.importProcess.process(child, element);
+                            walk(child);
+                        }
                     }
                 }
+
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
         }
     }
-
 
 }

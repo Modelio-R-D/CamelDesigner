@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.exchange.importer.core;
 
 import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.exchange.importer.ICamelVisitor;
+import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.IImporter;
 import fr.softeam.cameldesigner.exchange.importer.ImportProcess;
 
@@ -12,6 +12,8 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObj
 
     protected ImportProcess _process;
 
+    public CamelElementImporter() {
+    }
 
     public CamelElementImporter(T elt) {
         this._element = elt;
@@ -21,6 +23,9 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObj
         return this._element;
     }
 
+    public void setElement(T element) {
+        this._element = element;
+    }
 
     public void setProcess(ImportProcess process) {
         this._process = process;
@@ -28,7 +33,7 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObj
 
 
 
-    public abstract Object accept(ICamelVisitor v);
+    public abstract Object accept(ICamelImporterVisitor v);
 
     @Override
     public abstract CamelElement createCamelElt(V owner) ;
@@ -39,5 +44,6 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObj
 
     @Override
     public abstract void attach(W elt, Z context);
+
 
 }

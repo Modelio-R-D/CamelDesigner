@@ -5,17 +5,21 @@ import camel.mms.MmsObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
-import fr.softeam.cameldesigner.exchange.importer.ICamelVisitor;
+import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
 
 public abstract class MmsObjectImporter<T extends MmsObject, V extends MetaDataModel, W extends fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject, Z extends fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel> extends CamelElementImporter<T,V,W,Z> {
+
+
+    public MmsObjectImporter() {
+    }
 
     public MmsObjectImporter(T elt) {
         super(elt);
     }
 
     @Override
-    public Object accept(ICamelVisitor v) {
+    public Object accept(ICamelImporterVisitor v) {
         return v.visitMmsObject(this);
     }
 

@@ -104,8 +104,8 @@ public class WizardImport extends AbstractSwtWizardWindow {
                     importerService = new CamelImporterService();
                 }
 
-                fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel rootProxy = fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel.instantiate(this.selectedElt);
-                importerService.importFromFile(rootProxy, theFile.getAbsolutePath());
+
+                importerService.importFromFile(this.selectedElt, theFile.getAbsolutePath());
 
                 t.commit();
                 completeBox();

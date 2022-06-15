@@ -4,16 +4,19 @@ import camel.core.Feature;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.classifier.FeatureClassifier;
-import fr.softeam.cameldesigner.exchange.importer.ICamelVisitor;
+import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 
 public class FeatureImporter<T extends Feature, V extends Feature, W extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature, Z extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature> extends NamedElementImporter<T, V, W, Z> {
+
+    public FeatureImporter() {
+    }
 
     public FeatureImporter(T elt) {
         super(elt);
     }
 
     @Override
-    public Object accept(ICamelVisitor v) {
+    public Object accept(ICamelImporterVisitor v) {
         return v.visitFeature(this);
     }
 

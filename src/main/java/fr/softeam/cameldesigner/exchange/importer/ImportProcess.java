@@ -24,14 +24,14 @@ public class ImportProcess implements IElementProcess<CamelElement, CDOObject> {
         ImportMap importMap = ImportMap.getInstance();
 
         try {
-            CamelElementImporter importer = ImporterFactory.getImporter(element);
+            CamelElementImporter<CDOObject, CDOObject, CamelElement, CamelElement> importer = ImporterFactory.getImporter(element);
             importer.setProcess(this);
 
             if(importMap.containsKey(element)) {
                 processedElement = importMap.get(element);
             } else {
-
-                CamelElement owner = importer.createCamelElt(context);
+                CamelElement owner = getElement(context);
+                processedElement = importer.createCamelElt(context);
                 importer.attach(processedElement, owner);
                 if(processedElement != null) {
                     importMap.put(element, processedElement);
