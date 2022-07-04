@@ -7,9 +7,9 @@
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
+import camel.core.LayerType;
+import camel.scalability.StatusType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -17,16 +17,9 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -37,14 +30,14 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("73801d4a-bc99-45e4-9e2d-04f8cfc021bf")
 public abstract class EventInstance extends FeatureInstance {
-    @objid ("8b38ec54-fdbe-40a2-9281-b8cb9acb7d47")
-    public static final String STEREOTYPE_NAME = "EventInstance";
-
     @objid ("84515c6c-773d-4074-8c60-a5804669dc17")
     public static final String LAYER_TAGTYPE = "layer";
 
     @objid ("b0f2e57b-b3ff-49dd-82f9-ffceba2318b4")
     public static final String STATUS_TAGTYPE = "status";
+
+    @objid ("8b38ec54-fdbe-40a2-9281-b8cb9acb7d47")
+    public static final String STEREOTYPE_NAME = "EventInstance";
 
     /**
      * Tells whether a {@link EventInstance proxy} can be instantiated from a {@link MObject} checking it is a {@link Instance} stereotyped << EventInstance >>.
@@ -75,6 +68,14 @@ public abstract class EventInstance extends FeatureInstance {
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
+    @objid ("866e61d4-468c-4a22-9aa6-a61c360dd6f5")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     /**
      * Get the underlying {@link Instance}.
      * 
@@ -97,6 +98,24 @@ public abstract class EventInstance extends FeatureInstance {
     }
 
     /**
+     * Getter for string property 'layer'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("0a5bd02a-0ed8-40b6-bf57-3a2d12428cdf")
+    public LayerType getLayerType() {
+        String value =  this.elt.getTagValue(EventInstance.MdaTypes.LAYER_TAGTYPE_ELT);
+        if ((value != null) && (!(value.equals("")))) {
+            try {
+                return LayerType.valueOf(value);
+            }catch (Exception e) {
+                CamelDesignerModule.logService.error(e);
+            }
+        }
+        return LayerType.SAA_S;
+    }
+
+    /**
      * Getter for string property 'status'
      * <p>Property description:
      * <br/><i>null</i></p>
@@ -104,6 +123,24 @@ public abstract class EventInstance extends FeatureInstance {
     @objid ("360e15f1-cff4-46dd-b263-a21463d983da")
     public String getStatus() {
         return this.elt.getTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT);
+    }
+
+    /**
+     * Getter for string property 'status'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("9356765e-52d0-46dc-99d1-86683efe3e92")
+    public StatusType getStatusType() {
+        String value =  this.elt.getTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT);
+        if ((value != null) && (!(value.equals("")))) {
+            try {
+                return StatusType.valueOf(value);
+            }catch (Exception e) {
+                CamelDesignerModule.logService.error(e);
+            }
+        }
+        return StatusType.CRITICAL;
     }
 
     /**
@@ -133,6 +170,16 @@ public abstract class EventInstance extends FeatureInstance {
     }
 
     /**
+     * Setter for string property 'layer'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("050ef954-0861-4cee-bc9a-e72f9d97cafd")
+    public void setLayer(final LayerType value) {
+        this.elt.putTagValue(EventInstance.MdaTypes.LAYER_TAGTYPE_ELT, value.toString());
+    }
+
+    /**
      * Setter for string property 'status'
      * <p>Property description:
      * <br/><i>null</i></p>
@@ -143,6 +190,16 @@ public abstract class EventInstance extends FeatureInstance {
     }
 
     /**
+     * Setter for string property 'status'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("2290af3b-1b6e-47cf-b17f-6d0df457b4b7")
+    public void setStatus(final StatusType value) {
+        this.elt.putTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT, value.toString());
+    }
+
+    /**
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
@@ -150,14 +207,6 @@ public abstract class EventInstance extends FeatureInstance {
     @objid ("f5b4360a-be50-4435-9a63-75949fd704fb")
     public void setType(final Event obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
-    }
-
-    @objid ("866e61d4-468c-4a22-9aa6-a61c360dd6f5")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(super.getChilds());
-        return result;
     }
 
     @objid ("69bb9ce9-c768-4a80-bd01-ffcec061f76a")
@@ -193,10 +242,10 @@ public abstract class EventInstance extends FeatureInstance {
 
 
 static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
-    }
     }
 
 }

@@ -18,6 +18,13 @@ public class PlatformCredentialsPropertyPage<T extends PlatformCredentials> exte
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow==1) {
+        
+            this._element.setPassword(value);
+        }
+        
+        this._currentRow -= 1;
     }
 
     /**
@@ -30,6 +37,8 @@ public class PlatformCredentialsPropertyPage<T extends PlatformCredentials> exte
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Password", getNotNull(this._element.getPassword()));
     }
 
     @objid ("107167a7-61fc-4455-a4b3-e1f62d957204")

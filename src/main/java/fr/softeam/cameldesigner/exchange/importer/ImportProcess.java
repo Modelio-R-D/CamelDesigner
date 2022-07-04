@@ -24,7 +24,7 @@ public class ImportProcess implements IElementProcess<CamelElement,CDOObject> {
         ImportMap importMap = ImportMap.getInstance();
         
         try {
-            CamelElementImporter<CDOObject, CDOObject, CamelElement, CamelElement> importer = ImporterFactory.getImporter(element);
+            CamelElementImporter<CDOObject, CamelElement> importer = ImporterFactory.getImporter(element);
             importer.setProcess(this);
         
             if(importMap.containsKey(element)) {

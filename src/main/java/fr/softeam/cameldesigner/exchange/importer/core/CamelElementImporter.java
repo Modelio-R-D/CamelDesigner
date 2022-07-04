@@ -8,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.importer.ImportProcess;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("a380bcee-5614-4bbb-ae51-4fce0eb8f1fe")
-public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObject, W extends CamelElement, Z extends CamelElement> implements IImporter<V,W,Z> {
+public abstract class CamelElementImporter<T extends CDOObject, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement> implements IImporter<T,V> {
     @objid ("72ac129b-865a-47ac-9440-b567172e96f0")
     protected T _element;
 
@@ -34,15 +34,15 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends CDOObj
 
     @objid ("a2d8bacc-c359-4ec0-8d85-bae706a6edd6")
     @Override
-    public abstract CamelElement createCamelElt(V owner);
+    public abstract CamelElement createCamelElt(CDOObject owner);
 
     @objid ("80d2f453-7ccc-4c8d-bd48-9d8362a8f29f")
     @Override
-    public abstract void setProperties(W elt);
+    public abstract void setProperties(V elt);
 
     @objid ("90b03904-5f6e-4eb7-a22c-f79a49b88847")
     @Override
-    public abstract void attach(W elt, Z context);
+    public abstract void attach(V elt, CamelElement context);
 
     @objid ("9a437226-becf-4f01-b153-a319f1fc2956")
     public CamelElementImporter(T elt) {

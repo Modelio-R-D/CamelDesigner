@@ -19,6 +19,14 @@ public class ResourceFilterPropertyPage<T extends ResourceFilter> extends Featur
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            
+           this._element.setResourcePattern(value);
+                 
+        }
+        
+        this._currentRow -= 1;
     }
 
     /**
@@ -31,6 +39,8 @@ public class ResourceFilterPropertyPage<T extends ResourceFilter> extends Featur
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Resource Pattern", getNotNull(this._element.getResourcePattern()));
     }
 
     @objid ("903dc9d5-69c9-43d7-8ba0-24060c40f0f3")

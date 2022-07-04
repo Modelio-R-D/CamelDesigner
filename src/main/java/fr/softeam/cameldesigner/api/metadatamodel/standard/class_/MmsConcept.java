@@ -9,7 +9,6 @@ package fr.softeam.cameldesigner.api.metadatamodel.standard.class_;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -18,17 +17,11 @@ import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.Mm
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.instance.MmsConceptInstance;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Instance;
@@ -118,7 +111,7 @@ public class MmsConcept extends MmsObject {
     @objid ("83a7f631-57fe-43c3-84d2-5e94caaf9f1a")
     public void addInstance(final MmsConceptInstance obj) {
         if (obj!=null)
-          ((Class) this.elt).getRepresenting().add(obj.getElement());
+          ((Class) this.elt).getDeclared().add(obj.getElement());
     }
 
     /**

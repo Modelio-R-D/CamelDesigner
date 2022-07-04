@@ -19,18 +19,19 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configurat
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.LinkEnd;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.uml.statik.PortOrientation;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -42,6 +43,21 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 public class Hosting extends ComponentRelation {
     @objid ("324e67a1-e51a-41cc-b4d6-242671a56a36")
     public static final String STEREOTYPE_NAME = "Hosting";
+
+    /**
+     * Add a value to the 'requiredHostsConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("618c7f53-0356-42bd-b2d8-fd45f792d345")
+    public void addRequiredHostsConfiguration(final Configuration obj) {
+        if (obj != null) {
+            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), Hosting.MdaTypes.MDAASSOCDEP);
+            d.setName("requiredHostsConfiguration");
+            d.putTagValue(Hosting.MdaTypes.MDAASSOCDEP_ROLE, "requiredHostsConfiguration");
+        }
+    }
 
     /**
      * Tells whether a {@link Hosting proxy} can be instantiated from a {@link MObject} checking it is a {@link Connector} stereotyped << Hosting >>.
@@ -68,51 +84,6 @@ public class Hosting extends ComponentRelation {
         return Hosting.instantiate((Connector)e);
     }
 
-    /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
-     * <p>
-     * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
-     * @param obj a Connector
-     * @return a {@link Hosting} proxy or <i>null</i>.
-     */
-    @objid ("1c8fbfa2-b985-49f4-a7e3-04f59f65e863")
-    public static Hosting instantiate(final Connector obj) {
-        return Hosting.canInstantiate(obj) ? new Hosting(obj) : null;
-    }
-
-    /**
-     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
-     * <p>
-     * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
-     * @param obj a {@link Connector}
-     * @return a {@link Hosting} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
-     */
-    @objid ("7c343ff2-c9ee-4605-b138-597053fd1f81")
-    public static Hosting safeInstantiate(final Connector obj) throws IllegalArgumentException {
-        if (Hosting.canInstantiate(obj))
-            return new Hosting(obj);
-        else
-            throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
-    }
-
-    /**
-     * Add a value to the 'requiredHostsConfiguration' role.<p>
-     * Role description:
-     * null
-     */
-    @objid ("618c7f53-0356-42bd-b2d8-fd45f792d345")
-    public void addRequiredHostsConfiguration(final Configuration obj) {
-        if (obj != null) {
-            IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-            Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), Hosting.MdaTypes.MDAASSOCDEP);
-            d.setName("requiredHostsConfiguration");
-            d.putTagValue(Hosting.MdaTypes.MDAASSOCDEP_ROLE, "requiredHostsConfiguration");
-        }
-    }
-
     @objid ("6c8d7bc3-93fc-4952-9c1b-14919dded4e2")
     @Override
     public boolean equals(final Object obj) {
@@ -129,6 +100,14 @@ public class Hosting extends ComponentRelation {
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
+    @objid ("fbdcd9f9-3090-49bf-8eaa-c6093e196a95")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
     /**
      * Get the underlying {@link Connector}.
      * 
@@ -138,6 +117,24 @@ public class Hosting extends ComponentRelation {
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
+    }
+
+    /**
+     * Get the value of the 'providedPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("90564198-4a93-42f4-b3cb-b7c24143ba8c")
+    public HostingPort getProvidedHost() {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            Instance portSource = end.getSource();
+            if ((portSource instanceof Port)
+                && (portSource.isStereotyped(HostingPort.MdaTypes.STEREOTYPE_ELT)
+                        &&  (((Port) portSource)).getDirection().equals(PortOrientation.OUT))){
+                    return (HostingPort) CamelDesignerProxyFactory.instantiate(portSource, HostingPort.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
     }
 
     /**
@@ -159,6 +156,24 @@ public class Hosting extends ComponentRelation {
                   if (ServerlessConfiguration.canInstantiate(d.getDependsOn()))
                      return (ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ServerlessConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
               }
+        }
+        return null;
+    }
+
+    /**
+     * Get the value of the 'requiredPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("bb8b26d5-21c7-4be7-a6e2-ac0031ab3f71")
+    public HostingPort getRequiredHosts() {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            Instance portSource = end.getTarget();
+            if ((portSource instanceof Port)
+                && (portSource.isStereotyped(HostingPort.MdaTypes.STEREOTYPE_ELT)
+                        &&  (((Port) portSource)).getDirection().equals(PortOrientation.IN))){
+                    return (HostingPort) CamelDesignerProxyFactory.instantiate(portSource, HostingPort.MdaTypes.STEREOTYPE_ELT.getName());
+            }
         }
         return null;
     }
@@ -194,6 +209,19 @@ public class Hosting extends ComponentRelation {
     }
 
     /**
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
+     * <p>
+     * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
+     * @param obj a Connector
+     * @return a {@link Hosting} proxy or <i>null</i>.
+     */
+    @objid ("1c8fbfa2-b985-49f4-a7e3-04f59f65e863")
+    public static Hosting instantiate(final Connector obj) {
+        return Hosting.canInstantiate(obj) ? new Hosting(obj) : null;
+    }
+
+    /**
      * Remove a value from the 'requiredHostsConfiguration' role.<p>
      * Role description:
      * null
@@ -202,7 +230,7 @@ public class Hosting extends ComponentRelation {
     public boolean removeRequiredHostsConfiguration(final Configuration obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(Hosting.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Hosting.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostsConfiguration")) 
+            if (d.isStereotyped(Hosting.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Hosting.MdaTypes.MDAASSOCDEP_ROLE), "requiredHostsConfiguration"))
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -210,6 +238,37 @@ public class Hosting extends ComponentRelation {
           }
         }
         return false;
+    }
+
+    /**
+     * Tries to instantiate a {@link Hosting} proxy from a {@link Connector} stereotyped << Hosting >> checking its metaclass and its stereotype.
+     * <p>
+     * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
+     * @param obj a {@link Connector}
+     * @return a {@link Hosting} proxy.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     */
+    @objid ("7c343ff2-c9ee-4605-b138-597053fd1f81")
+    public static Hosting safeInstantiate(final Connector obj) throws IllegalArgumentException {
+        if (Hosting.canInstantiate(obj))
+            return new Hosting(obj);
+        else
+            throw new IllegalArgumentException("Hosting: Cannot instantiate "+obj+": wrong element type or stereotype");
+    }
+
+    /**
+     * Set the value of the 'providedPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("98c92b2e-c2ee-4714-bbb0-a5e8e74bb07b")
+    public void setProvidedHost(final HostingPort obj) {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            if (end.getSource() != null) {
+                end.setSource(obj.getElement());
+            }
+        }
     }
 
     /**
@@ -237,12 +296,18 @@ public class Hosting extends ComponentRelation {
         }
     }
 
-    @objid ("fbdcd9f9-3090-49bf-8eaa-c6093e196a95")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(super.getChilds());
-        return result;
+    /**
+     * Set the value of the 'requiredPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("c002f452-d90d-437f-96d5-d33061188dc1")
+    public void setRequiredHosts(final HostingPort obj) {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            if (end.getTarget() != null) {
+                end.setTarget(obj.getElement());
+            }
+        }
     }
 
     @objid ("123bff72-0bd1-4cb8-bfda-45199290ad4e")

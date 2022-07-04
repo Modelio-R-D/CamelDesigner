@@ -18,6 +18,8 @@ public class ApplicationPropertyPage<T extends Application> extends FeaturePrope
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        this._element.setVersion(value);
     }
 
     /**
@@ -30,6 +32,8 @@ public class ApplicationPropertyPage<T extends Application> extends FeaturePrope
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Version", getNotNull(this._element.getVersion()));
     }
 
     @objid ("9fce774e-de2b-4cab-aa57-32c4df0a3f52")

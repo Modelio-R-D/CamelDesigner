@@ -19,6 +19,31 @@ public class BuildConfigurationPropertyPage<T extends BuildConfiguration> extend
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+        
+        case 1 :
+            this._element.setArtifactId(value);
+            break;
+        
+        case 2 :
+            this._element.setBuildFramework(value);
+            break;
+        
+        case 3 :
+            this._element.setSourceCodeURL(value);
+            break;
+            
+        case 4 :
+            this._element.setInclude(value);
+            break;
+            
+        case 5 :
+            this._element.setExclude(value);
+            break;
+        }
+            
+            this._currentRow -=5;
     }
 
     /**
@@ -31,6 +56,12 @@ public class BuildConfigurationPropertyPage<T extends BuildConfiguration> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Artifact ID", getNotNull(this._element.getArtifactId()));
+        table.addProperty("Build Framework", getNotNull(this._element.getBuildFramework()));
+        table.addProperty("Source code URL", getNotNull(this._element.getSourceCodeURL()));
+        table.addProperty("Include", getNotNull(this._element.getInclude()));
+        table.addProperty("Exclude", getNotNull(this._element.getExclude()));
     }
 
     @objid ("9fa8bee3-1bef-499b-a9ce-57c7f8efe23f")

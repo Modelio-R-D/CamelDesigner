@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.handlers.propertypages.requirement;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
@@ -20,8 +21,13 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
+        
+           this._element.setProviderNames(Arrays.asList(value.split(",")));
+        
+        }
+        else if(this._currentRow == 2){
+            
             this._element.setCloudType(value);
-        }else if(this._currentRow == 2){
         
         }
         
@@ -45,7 +51,7 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
         //Provider Names
         String providerNames = "";
         for(  String providerName: this._element.getProviderNames()) {
-            providerNames +=    providerName  + " ";
+            providerNames +=    providerName  + ",";
         }
         
         table.addProperty("Provider Names", providerNames);

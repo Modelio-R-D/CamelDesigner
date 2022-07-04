@@ -18,6 +18,27 @@ public class PaaSConfigurationPropertyPage<T extends PaaSConfiguration> extends 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+        
+        case 1 :
+            this._element.setApi(value);
+            break;
+        
+        case 2 :
+            this._element.setVersion(value);
+            break;
+        
+        case 3 :
+            this._element.setEndpoint(value);
+            break;
+            
+        case 4 :
+            this._element.setDownloadURL(value);
+            break;
+        }
+        
+        this._currentRow -= 4;
     }
 
     /**
@@ -30,6 +51,11 @@ public class PaaSConfigurationPropertyPage<T extends PaaSConfiguration> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Api", getNotNull(this._element.getApi()));
+        table.addProperty("Version", getNotNull(this._element.getVersion()));
+        table.addProperty("Endpoint", getNotNull(this._element.getEndpoint()));
+        table.addProperty("Download URL", getNotNull(this._element.getDownloadURL()));
     }
 
     @objid ("b2278e20-a328-47f5-bbfe-a08629ce65c6")

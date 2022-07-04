@@ -1,12 +1,12 @@
 package fr.softeam.cameldesigner.exchange.importer.core;
 
-import camel.core.Feature;
 import camel.core.NamedElement;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 
 @objid ("1841f351-6417-46a7-aa5e-a351bae5ee5c")
-public abstract class NamedElementImporter<T extends NamedElement, V extends Feature, W extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement, Z extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement> extends CamelElementImporter<T,V,W,Z> {
+public abstract class NamedElementImporter<T extends NamedElement, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement> extends CamelElementImporter<T,V> {
     @objid ("0bc330fe-2803-44c9-972d-9415258cddd7")
     public NamedElementImporter() {
     }
@@ -19,14 +19,14 @@ public abstract class NamedElementImporter<T extends NamedElement, V extends Fea
 
     @objid ("63917946-0a1e-43c2-b762-845b284b915a")
     @Override
-    public void setProperties(W elt) {
+    public void setProperties(V elt) {
         setName(elt);
         setDescription(elt);
     }
 
     @objid ("762fc7e2-08d2-4286-9ebd-939a94707389")
     @Override
-    public void attach(W elt, Z context) {
+    public void attach(V elt, CamelElement context) {
         // TODO Auto-generated method stub
     }
 
@@ -36,7 +36,7 @@ public abstract class NamedElementImporter<T extends NamedElement, V extends Fea
     }
 
     @objid ("d8dd550c-d1f5-4535-934a-fc30ef216352")
-    private void setDescription(W elt) {
+    private void setDescription(V elt) {
         String descrip = this._element.getDescription();
         if (descrip != null) {
             elt.setDescription(descrip);
@@ -44,7 +44,7 @@ public abstract class NamedElementImporter<T extends NamedElement, V extends Fea
     }
 
     @objid ("9f165a77-3d4b-4b2f-b059-851e8adf7833")
-    private void setName(W elt) {
+    private void setName(V elt) {
         String name = this._element.getName();
         if (name != null) {
             elt.setName(name);

@@ -26,6 +26,7 @@ public class CommunicationPortPropertyPage<T extends CommunicationPort> extends 
         super.changeProperty(row, value);
         
         switch (this._currentRow) {
+                  
         case 1 :
             this._element.setLowPortNumber(value);
             break;
@@ -47,6 +48,7 @@ public class CommunicationPortPropertyPage<T extends CommunicationPort> extends 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
         
         table.addProperty("Low Port Number", getNotNull(this._element.getLowPortNumber()));
         

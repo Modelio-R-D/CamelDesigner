@@ -1,11 +1,18 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricInstanceModel;
+import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("6d55ece7-b9c8-47ab-9f9b-c767bc8cc891")
 public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> extends MetricModelPropertyPage<T> {
+    @objid ("e91b3094-108e-4397-8d4b-c8dba78ede44")
+    private List<ModelElement> _type = null;
+
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -18,6 +25,14 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            ModelElement elt = getModelElt(this._type, value);
+            if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricTypeModel.STEREOTYPE_NAME)) {
+                this._element.setType((MetricTypeModel) elt);
+            }
+        }
+        this._currentRow -= 1;
     }
 
     /**
@@ -30,6 +45,9 @@ public class MetricInstanceModelPropertyPage<T extends MetricInstanceModel> exte
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        this._type = MetricTypeModel.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+        table.addProperty("Type", getCamelName(this._element.getType()), getCamelNames(this._type));
     }
 
     @objid ("90c1bbf6-9deb-4fb5-b0dd-cdc695ca3068")

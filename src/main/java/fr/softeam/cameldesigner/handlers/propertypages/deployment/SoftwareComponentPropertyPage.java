@@ -28,6 +28,7 @@ public class SoftwareComponentPropertyPage<T extends SoftwareComponent> extends 
             }
         }else if (this._currentRow == 2){
             this._element.setLongLived(Boolean.valueOf(value));
+            
         }else if (this._currentRow == 3){
             this._element.setCoInstanceHosting(Boolean.valueOf(value));
         }

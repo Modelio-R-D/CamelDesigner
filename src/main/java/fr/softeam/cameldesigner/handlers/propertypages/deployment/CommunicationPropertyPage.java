@@ -1,11 +1,21 @@
 package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communication;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("997dc0f2-cc54-46d2-9a22-b6fc22929b80")
 public class CommunicationPropertyPage<T extends Communication> extends ComponentRelationPropertyPage<T> {
+    @objid ("ddf7294b-12f8-4928-9695-bc04020b2f62")
+    private List<ModelElement> _providedPortConfiguration = null;
+
+    @objid ("b76bb119-e73e-455a-9ebb-456e6b4f83cf")
+    private List<ModelElement> _requiredPortConfiguration = null;
+
     @objid ("5729f1e4-ad7f-4cad-8cb6-29ba0aab5c2e")
     public CommunicationPropertyPage(T elt) {
         super(elt);
@@ -23,6 +33,21 @@ public class CommunicationPropertyPage<T extends Communication> extends Componen
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            ModelElement elt = getModelElt(this._providedPortConfiguration, value);
+            if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Configuration.STEREOTYPE_NAME)) {
+            this._element.setProvidedPortConfiguration((Configuration)elt);
+            }
+        }
+        
+        else if(this._currentRow == 2){
+            ModelElement elt = getModelElt(this._requiredPortConfiguration, value);
+            if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Configuration.STEREOTYPE_NAME)) {
+            this._element.setRequiredPortConfiguration((Configuration) elt);
+            }
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -35,6 +60,15 @@ public class CommunicationPropertyPage<T extends Communication> extends Componen
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        
+        //provided Port Configuration
+        this._providedPortConfiguration = Configuration.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+        table.addProperty("Provided Port Configuration", getCamelName(this._element.getProvidedPortConfiguration()), getCamelNames(this._providedPortConfiguration));
+        
+        //Required Port Configuration
+        this._requiredPortConfiguration = Configuration.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+        table.addProperty("Required Port Configuration", getCamelName(this._element.getRequiredPortConfiguration()), getCamelNames(this._requiredPortConfiguration));
     }
 
 }

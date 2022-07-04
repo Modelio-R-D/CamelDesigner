@@ -2,7 +2,9 @@ package fr.softeam.cameldesigner.handlers.propertypages.metadata;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
+import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("1ccba304-5c60-4898-b98a-19a8261c420f")
 public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPropertyPage<T> {
@@ -18,6 +20,30 @@ public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPro
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            Class elt = (Class) getModelElt(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (MmsConcept.canInstantiate(elt)) {
+                this._element.setDomain(MmsConcept.safeInstantiate(elt));
+            }
+        }
+        
+        else if(this._currentRow == 2){
+                this._element.setPropertyType(value);
+        }
+        
+        
+        else if(this._currentRow == 3){
+            Class elt = (Class) getModelElt(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (MmsConcept.canInstantiate(elt)) {
+                this._element.setRange(MmsConcept.safeInstantiate(elt));
+            }
+        }
+        
+        
+        else if(this._currentRow == 4){
+            this._element.setRangeUri(value);
+        }
     }
 
     /**
@@ -30,6 +56,18 @@ public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPro
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+               //Domain
+        table.addProperty("Domain", getCamelName(this._element.getDomain()), getCamelNames(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        
+        //PropertyType
+        table.addProperty("Property Type", getNotNull(this._element.getPropertyType()));
+        
+        //Range
+        table.addProperty("Range", getCamelName(this._element.getRange()), getCamelNames(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        
+        //RangeUri
+        table.addProperty("Range Uri", getNotNull(this._element.getRangeUri()));
     }
 
     @objid ("28140af8-d3db-4ceb-9e0e-bb5ff3c85788")

@@ -1,8 +1,13 @@
 package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.standard.namespace.Action;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("fc07e1d9-c99c-4c2d-a2a3-1fbc1d256c03")
 public class LocationCouplingPropertyPage<T extends LocationCoupling> extends ComponentRelationPropertyPage<T> {
@@ -18,6 +23,29 @@ public class LocationCouplingPropertyPage<T extends LocationCoupling> extends Co
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1) {
+            Class elt = (Class) getModelElt(Action.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt != null) && (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponent.STEREOTYPE_NAME))) {
+                Object sofObj = CamelDesignerProxyFactory.instantiate(elt);
+                if (value.startsWith(this._add)) {
+                    this._element.addSoftwareComponents((SoftwareComponent) sofObj);
+                }else {
+                    this._element.removeSoftwareComponents((SoftwareComponent) sofObj);
+                }
+            }
+        }
+        
+        else  if(this._currentRow == 2) {
+            this._element.setCouplingType(value);
+        }
+        
+        else  if(this._currentRow == 3) {
+            this._element.setRelaxed(Boolean.valueOf(value));
+        
+        }
+        
+        this._currentRow -= 3;
     }
 
     /**
@@ -30,6 +58,12 @@ public class LocationCouplingPropertyPage<T extends LocationCoupling> extends Co
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        
+        table.addProperty("Software Components", getCamelValue(this._element.getSoftwareComponents()), getAddRemove(SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getSoftwareComponents()));
+        
+        table.addProperty("Coupling Type", getNotNull(this._element.getCouplingType()));
+        table.addProperty("Relaxed", getNotNull(String.valueOf(this._element.isRelaxed())));
     }
 
     @objid ("64bb2fd0-7519-4e63-a366-38b21422385c")

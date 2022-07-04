@@ -18,6 +18,19 @@ public class ServiceResourceFilterPropertyPage<T extends ServiceResourceFilter> 
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+        
+        case 1 :
+            this._element.setServiceURL(value);
+            break;
+        
+        case 2 :
+            this._element.setEveryService(Boolean.valueOf(value));
+            break;
+        
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -30,6 +43,9 @@ public class ServiceResourceFilterPropertyPage<T extends ServiceResourceFilter> 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Service URL", getNotNull(this._element.getServiceURL()));
+        table.addProperty("Every Service",this._element.isEveryService());
     }
 
     @objid ("c21e8635-1b43-4403-92f5-ec4312eed08f")

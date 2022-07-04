@@ -5,11 +5,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.SoftwareComponentMeasurement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Instance;
 
@@ -67,7 +64,7 @@ public class SoftwareComponentMeasurementPropertyPage<T extends SoftwareComponen
         this._software_component_instance = SoftwareComponentInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Software Component Instance", getCamelName(this._element.getSoftwareComponentInstance()), getCamelNames(this._software_component_instance));
         
-        //Software Component 
+        //Software Component
         this._software_component = SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Software Component ", getCamelName(this._element.getSoftwareComponent()), getCamelNames(this._software_component));
     }

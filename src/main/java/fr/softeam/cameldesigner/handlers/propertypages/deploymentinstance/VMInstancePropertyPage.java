@@ -1,8 +1,12 @@
 package fr.softeam.cameldesigner.handlers.propertypages.deploymentinstance;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance;
+import fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Enumeration;
 
 @objid ("a7810819-6ed5-4074-8300-5e5d0843623d")
 public class VMInstancePropertyPage<T extends VMInstance> extends ComponentInstancePropertyPage<T> {
@@ -18,6 +22,21 @@ public class VMInstancePropertyPage<T extends VMInstance> extends ComponentInsta
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            Enumeration elt = (Enumeration) getModelElt(Location.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (Location.canInstantiate(elt)) {
+                this._element.setLocation(Location.safeInstantiate(elt));
+            }
+        }
+        else if(this._currentRow == 2){
+            ModelElement elt = getModelElt(CamelAttribute.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (CamelAttribute.canInstantiate(elt)) {
+                this._element.setOs(CamelAttribute.instantiate(elt));
+            }
+        }
+        
+        this._currentRow -= 2;
     }
 
     /**
@@ -30,6 +49,12 @@ public class VMInstancePropertyPage<T extends VMInstance> extends ComponentInsta
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        //Location
+        table.addProperty("Location", getCamelName(this._element.getLocation()), getCamelNames(Location.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        
+        //OS
+        table.addProperty("OS ", getCamelName(this._element.getOs()), getCamelNames(CamelAttribute.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
     @objid ("4398030a-7a4d-4308-be89-d103d8c3526e")

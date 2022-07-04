@@ -5,10 +5,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.PaaSInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.PaaSMeasurement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.Instance;
 

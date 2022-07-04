@@ -33,21 +33,27 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
             }
         }
         
-        else if(this._currentRow == 2){
+        if(this._currentRow == 2){
+            
+            this._element.setValueDirection(value);
+            
+        }
+        
+        else if(this._currentRow == 3){
             DataType elt = (DataType) getModelElt(CamelDesignerAbstractProxy.getUnits(), value);
             if (Unit.canInstantiate(elt)) {
                 this._element.setUnit(Unit.instantiate(elt));
             }
         }
         
-        else if(this._currentRow == 3){
+        else if(this._currentRow == 4){
             Class elt = (Class) getModelElt(MeasurableAttributeClass.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if (MeasurableAttributeClass.canInstantiate(elt)) {
                 this._element.setAttribute(MeasurableAttributeClass.safeInstantiate(elt));
             }
         }
         
-        this._currentRow -= 3;
+        this._currentRow -= 4;
     }
 
     /**
@@ -63,6 +69,9 @@ public class MetricTemplatePropertyPage<T extends MetricTemplate> extends Featur
         
         //Value Type
         table.addProperty("Value Type", getCamelName(this._element.getValueType()), getCamelNames(CamelDesignerAbstractProxy.getValueTypes()));
+        
+        //Value Direction
+        table.addProperty("Value Direction", getNotNull(this._element.getValueDirection()));
         
         //Unit
         table.addProperty("Unit", getCamelName(this._element.getUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));

@@ -1,11 +1,17 @@
 package fr.softeam.cameldesigner.handlers.propertypages.core;
 
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.NamedElement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("29c56672-2a16-4ff6-b7ee-09886fd75952")
 public abstract class NamedElementPropertyPage<T extends NamedElement> extends CamelElementPropertyPage<T> {
+    @objid ("c38c8590-2da0-469b-a4e2-fbd68af2a8db")
+    private List<ModelElement> _annotations = CamelDesignerAbstractProxy.getMMSObject();
+
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
@@ -41,7 +47,9 @@ public abstract class NamedElementPropertyPage<T extends NamedElement> extends C
         
         table.addProperty("Name",   getNotNull(this._element.getName()));
         
-        table.addProperty("Description",   getNotNull(this._element.getDescription()));
+        table.addProperty("Description",  getNotNull(this._element.getDescription()));
+        
+               // table.addProperty("Annotations", getCamelValue(this._element.getAnnotations()), getAddRemove(this._annotations, this._element.getAnnotations()));
     }
 
     @objid ("703eb3be-3c0b-45dc-8667-0e2e6f3bbd23")

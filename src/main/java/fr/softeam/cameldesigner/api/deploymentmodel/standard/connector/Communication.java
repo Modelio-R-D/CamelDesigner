@@ -7,7 +7,6 @@
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.connector;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
@@ -19,18 +18,19 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configurat
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.LinkEnd;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.uml.statik.PortOrientation;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
@@ -68,6 +68,129 @@ public class Communication extends ComponentRelation {
         return Communication.instantiate((Connector)e);
     }
 
+    @objid ("b362a526-be58-4e21-9ee8-59142e55bc50")
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Communication other = (Communication) obj;
+        return java.util.Objects.equals(getElement(), other.getElement());
+    }
+
+    @objid ("852ff246-9250-4bd5-8d5f-3fdcfaa4c53e")
+    @Override
+    public List<CamelElement> getChilds() {
+        List<CamelElement> result = new ArrayList<>();
+        result.addAll(super.getChilds());
+        return result;
+    }
+
+    /**
+     * Get the underlying {@link Connector}.
+     * 
+     * @return the Connector represented by this proxy, never null.
+     */
+    @objid ("3e20256b-0c9b-4dc6-b7ee-184f2c35492b")
+    @Override
+    public Connector getElement() {
+        return (Connector)super.getElement();
+    }
+
+    /**
+     * Get the value of the 'providedPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("7cdb8fcd-26be-42a1-a36a-dd237bea3385")
+    public CommunicationPort getProvidedCommunication() {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            Instance portSource = end.getSource();
+            if ((portSource instanceof Port)
+                && (portSource.isStereotyped(CommunicationPort.MdaTypes.STEREOTYPE_ELT)
+                        &&  (((Port)portSource)).getDirection().equals(PortOrientation.OUT))){
+                    return (CommunicationPort) CamelDesignerProxyFactory.instantiate(portSource, CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the value of the 'providedPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("968d0590-186f-4a01-9c6a-74f46ec54be5")
+    public Configuration getProvidedPortConfiguration() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+            if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "providedPortConfiguration")){
+                if (ClusterConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ClusterConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ClusterConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (PaaSConfiguration.canInstantiate(d.getDependsOn()))
+                    return (PaaSConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaSConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (ScriptConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ScriptConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ScriptConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (ServerlessConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ServerlessConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the value of the 'requiredPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("c94ae147-9be9-4d6b-8eab-51fb9afda599")
+    public CommunicationPort getRequiredCommunication() {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            Instance portSource = end.getTarget();
+            if ((portSource instanceof Port)
+                && (portSource.isStereotyped(CommunicationPort.MdaTypes.STEREOTYPE_ELT)
+                        &&  (((Port)portSource)).getDirection().equals(PortOrientation.IN))){
+                    return (CommunicationPort) CamelDesignerProxyFactory.instantiate(portSource, CommunicationPort.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the value of the 'requiredPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("20171cdf-b85d-4524-9c6e-ef6a76ffa683")
+    public Configuration getRequiredPortConfiguration() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+            if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
+                    && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "requiredPortConfiguration")){
+                if (ClusterConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ClusterConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ClusterConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (PaaSConfiguration.canInstantiate(d.getDependsOn()))
+                    return (PaaSConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaSConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (ScriptConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ScriptConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ScriptConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+                if (ServerlessConfiguration.canInstantiate(d.getDependsOn()))
+                    return (ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ServerlessConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
+            }
+        }
+        return null;
+    }
+
+    @objid ("fd8eeb52-d419-40ef-83a9-0bb050358b19")
+    @Override
+    public int hashCode() {
+        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+    }
+
     /**
      * Tries to instantiate a {@link Communication} proxy from a {@link Connector} stereotyped << Communication >> checking its metaclass and its stereotype.
      * <p>
@@ -98,85 +221,6 @@ public class Communication extends ComponentRelation {
             throw new IllegalArgumentException("Communication: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b362a526-be58-4e21-9ee8-59142e55bc50")
-    @Override
-    public boolean equals(final Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Communication other = (Communication) obj;
-        return java.util.Objects.equals(getElement(), other.getElement());
-    }
-
-    /**
-     * Get the underlying {@link Connector}.
-     * 
-     * @return the Connector represented by this proxy, never null.
-     */
-    @objid ("3e20256b-0c9b-4dc6-b7ee-184f2c35492b")
-    @Override
-    public Connector getElement() {
-        return (Connector)super.getElement();
-    }
-
-    /**
-     * Get the value of the 'providedPortConfiguration' role.<p>
-     * Role description:
-     * null
-     */
-    @objid ("968d0590-186f-4a01-9c6a-74f46ec54be5")
-    public Configuration getProvidedPortConfiguration() {
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-              if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
-                  && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "providedPortConfiguration")){
-                  if (ClusterConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ClusterConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ClusterConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (PaaSConfiguration.canInstantiate(d.getDependsOn()))
-                     return (PaaSConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaSConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (ScriptConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ScriptConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ScriptConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (ServerlessConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ServerlessConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-              }
-        }
-        return null;
-    }
-
-    /**
-     * Get the value of the 'requiredPortConfiguration' role.<p>
-     * Role description:
-     * null
-     */
-    @objid ("20171cdf-b85d-4524-9c6e-ef6a76ffa683")
-    public Configuration getRequiredPortConfiguration() {
-        for (Dependency d : this.elt.getDependsOnDependency()) {
-              if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP)
-                  && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "requiredPortConfiguration")){
-                  if (ClusterConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ClusterConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ClusterConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (PaaSConfiguration.canInstantiate(d.getDependsOn()))
-                     return (PaaSConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), PaaSConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (ScriptConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ScriptConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ScriptConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-                  if (ServerlessConfiguration.canInstantiate(d.getDependsOn()))
-                     return (ServerlessConfiguration)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ServerlessConfiguration.MdaTypes.STEREOTYPE_ELT.getName());
-              }
-        }
-        return null;
-    }
-
-    @objid ("fd8eeb52-d419-40ef-83a9-0bb050358b19")
-    @Override
-    public int hashCode() {
-        return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-    }
-
     /**
      * Set the value of the 'providedPortConfiguration' role.<p>
      * Role description:
@@ -186,19 +230,47 @@ public class Communication extends ComponentRelation {
     public void setProvidedPortConfiguration(final Configuration obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
-          if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "providedPortConfiguration")) {
-             dep = d;
-             break;
-          }
+            if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "providedPortConfiguration")) {
+                dep = d;
+                break;
+            }
         if (obj == null) {
-           if(dep != null) dep.delete();
+            if(dep != null) dep.delete();
         } else {
-          if (dep == null) {
-              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-              dep = session.getModel().createDependency(this.elt, obj.getElement(), Communication.MdaTypes.MDAASSOCDEP);
-              dep.setName("providedPortConfiguration");      dep.putTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE, "providedPortConfiguration");
-          }
-          dep.setDependsOn(obj.getElement());
+            if (dep == null) {
+                IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+                dep = session.getModel().createDependency(this.elt, obj.getElement(), Communication.MdaTypes.MDAASSOCDEP);
+                dep.setName("providedPortConfiguration");      dep.putTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE, "providedPortConfiguration");
+            }
+            dep.setDependsOn(obj.getElement());
+        }
+    }
+
+    /**
+     * Set the value of the 'providedPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("230154a6-6b6c-4495-b354-b1f65ed6687e")
+    public void setProvidedCommunication(final CommunicationPort obj) {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            if (end.getSource() != null) {
+                end.setSource(obj.getElement());
+            }
+        }
+    }
+
+    /**
+     * Set the value of the 'requiredPortConfiguration' role.<p>
+     * Role description:
+     * null
+     */
+    @objid ("12a3ce2d-e7e8-4a6b-b3cf-9b8c37b75697")
+    public void setRequiredCommunication(final CommunicationPort obj) {
+        for (LinkEnd end : getElement().getLinkEnd()) {
+            if (end.getTarget() != null) {
+                end.setTarget(obj.getElement());
+            }
         }
     }
 
@@ -211,28 +283,20 @@ public class Communication extends ComponentRelation {
     public void setRequiredPortConfiguration(final Configuration obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
-          if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "requiredPortConfiguration")) {
-             dep = d;
-             break;
-          }
+            if (d.isStereotyped(Communication.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE), "requiredPortConfiguration")) {
+                dep = d;
+                break;
+            }
         if (obj == null) {
-           if(dep != null) dep.delete();
+            if(dep != null) dep.delete();
         } else {
-          if (dep == null) {
-              IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-              dep = session.getModel().createDependency(this.elt, obj.getElement(), Communication.MdaTypes.MDAASSOCDEP);
-              dep.setName("requiredPortConfiguration");      dep.putTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE, "requiredPortConfiguration");
-          }
-          dep.setDependsOn(obj.getElement());
+            if (dep == null) {
+                IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
+                dep = session.getModel().createDependency(this.elt, obj.getElement(), Communication.MdaTypes.MDAASSOCDEP);
+                dep.setName("requiredPortConfiguration");      dep.putTagValue(Communication.MdaTypes.MDAASSOCDEP_ROLE, "requiredPortConfiguration");
+            }
+            dep.setDependsOn(obj.getElement());
         }
-    }
-
-    @objid ("852ff246-9250-4bd5-8d5f-3fdcfaa4c53e")
-    @Override
-    public List<CamelElement> getChilds() {
-        List<CamelElement> result = new ArrayList<>();
-        result.addAll(super.getChilds());
-        return result;
     }
 
     @objid ("f165195b-8e30-4614-bb7a-9c440ad5e717")
@@ -260,10 +324,10 @@ public class Communication extends ComponentRelation {
 
 
 static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
+            if(CamelDesignerModule.getInstance() != null) {
+                init(CamelDesignerModule.getInstance().getModuleContext());
+            }
         }
-    }
     }
 
 }

@@ -18,6 +18,18 @@ public class ServerlessConfigurationPropertyPage<T extends ServerlessConfigurati
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+        
+        case 1 :
+            this._element.setBinaryCodeURL(value);
+            break;
+        
+        case 2 :
+            this._element.setContinuousDeployment(Boolean.valueOf(value));
+            break;
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -30,6 +42,9 @@ public class ServerlessConfigurationPropertyPage<T extends ServerlessConfigurati
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Binary Code URL", getNotNull(this._element.getBinaryCodeURL()));
+        table.addProperty("Continuous Deployment", getNotNull(String.valueOf(this._element.isContinuousDeployment())));
     }
 
     @objid ("2e54ebef-e902-408b-82ed-895f068435e2")

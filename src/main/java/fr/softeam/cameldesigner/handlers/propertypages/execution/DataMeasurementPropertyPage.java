@@ -5,8 +5,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.datamodel.standard.instance.DataInstance;
 import fr.softeam.cameldesigner.api.executionmodel.standard.class_.DataMeasurement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement;
-import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;

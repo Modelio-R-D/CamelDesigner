@@ -18,6 +18,12 @@ public class ClusterConfigurationPropertyPage<T extends ClusterConfiguration> ex
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            this._element.setDownloadURL(value);
+        
+        }
+        this._currentRow -= 1;
     }
 
     /**
@@ -30,6 +36,8 @@ public class ClusterConfigurationPropertyPage<T extends ClusterConfiguration> ex
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Download URL", getNotNull(this._element.getDownloadURL()));
     }
 
     @objid ("8e1b9c7e-722e-4b70-8053-151c22c6576e")

@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Function;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
@@ -19,6 +20,20 @@ public class FunctionPropertyPage<T extends Function> extends FeaturePropertyPag
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        switch (this._currentRow) {
+        
+        case 1 :
+            this._element.setExpression(value);
+            break;
+        
+        case 2 :
+        
+            this._element.setArguments(Arrays.asList(value.split(",")));
+        
+            break;
+            }
+        this._currentRow -= 2;
     }
 
     /**
@@ -31,6 +46,15 @@ public class FunctionPropertyPage<T extends Function> extends FeaturePropertyPag
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        table.addProperty("Expression", getNotNull(this._element.getExpression()));
+        
+        //Arguments
+        String arguments = "";
+        for(  String argument: this._element.getArguments()) {
+            arguments +=    argument  + ",";
+        }
+        table.addProperty("Provider Names", arguments);
     }
 
     @objid ("379aebb8-0fa5-4022-85b7-18bd29150752")

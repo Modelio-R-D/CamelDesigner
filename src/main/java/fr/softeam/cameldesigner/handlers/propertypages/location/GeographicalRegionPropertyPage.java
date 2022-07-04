@@ -33,7 +33,20 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
                 }
             }
         }
-        this._currentRow -= 1;
+        
+        else if(this._currentRow == 2) {
+            for (String v: value.split(",")){
+        
+            if (value.startsWith(this._add)) {
+                this._element.addAlternativeName(value);
+            }else {
+                this._element.removeAlternativeName(value);
+            }
+            }
+        
+        
+        }
+        this._currentRow -= 2;
     }
 
     /**
@@ -47,8 +60,17 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        //Parent Régions
+        //Parent Regions
         table.addProperty("Parent Regions", getCamelValue(this._element.getParentRegions()), getAddRemove(GeographicalRegion.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getParentRegions()));
+        
+        //Alternative Names
+        String alternativeNames = "";
+        for(  String alternativeName: this._element.getAlternativeNames()) {
+            alternativeNames +=    alternativeName  + ",";
+        }
+        table.addProperty("Alternative Names", alternativeNames);
+        
+        this._currentRow -= 2;
     }
 
     @objid ("36602fac-8a28-4e02-acb9-3af74ddb4095")
