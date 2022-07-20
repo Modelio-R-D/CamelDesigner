@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ad5e8f7b-b3a0-4678-bcf5-5ad638242927")
 public abstract class Unit extends FeatureDataType {
-    @objid ("85fc0524-1c12-43ef-9a57-2fe18bedbcd2")
+    @objid ("ced252ac-ff40-4e25-bb8b-d0f99886ac9a")
     public static final String STEREOTYPE_NAME = "Unit";
 
     /**
@@ -47,7 +47,7 @@ public abstract class Unit extends FeatureDataType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("aa88ab8b-70d6-4501-b40e-c0843ff5b80e")
+    @objid ("ce265ff0-3ac8-44d1-96ae-a64b08ba92f3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Unit.STEREOTYPE_NAME));
     }
@@ -61,8 +61,9 @@ public abstract class Unit extends FeatureDataType {
      * Add a value of the 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("b1351911-200b-4a3a-a266-57034a249f6f")
+    @objid ("cae45a36-f12f-4067-8954-aa1a74de7de1")
     public void addMultipleOf(final Unit obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -72,7 +73,7 @@ public abstract class Unit extends FeatureDataType {
         }
     }
 
-    @objid ("55c6e898-2de3-4705-8335-e755f2c515ac")
+    @objid ("504aee4b-7564-4ee2-874d-2a8c04b5b570")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -89,11 +90,10 @@ public abstract class Unit extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}.
-     * 
+     * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("beaab2de-ed3c-4e6b-a1e3-c9c81a916660")
+    @objid ("1600e1d2-31e6-4358-bdaf-e30abe781006")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
@@ -103,8 +103,9 @@ public abstract class Unit extends FeatureDataType {
      * Get the values of the 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ff0777a8-7c02-4247-9a42-23ec6b352476")
+    @objid ("f547c190-da43-4e98-9d09-5717eaa167ef")
     public List<Unit> getMultipleOf() {
         List<Unit> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -117,7 +118,7 @@ public abstract class Unit extends FeatureDataType {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("676e034e-9949-491e-901d-d0cdf134fc51")
+    @objid ("bc454e9b-128c-46d2-9108-0a9159054174")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -127,8 +128,9 @@ public abstract class Unit extends FeatureDataType {
      * Remove a value from 'multipleOf' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1afce388-d973-4ced-b9b6-0d485d524ae9")
+    @objid ("e1b9845a-5df7-40f9-8249-1296df450301")
     public boolean removeMultipleOf(final Unit obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -150,23 +152,23 @@ public abstract class Unit extends FeatureDataType {
         return result;
     }
 
-    @objid ("ecb684b2-015b-4de2-a235-80b5617927f2")
+    @objid ("aa8dc4f7-0833-4816-ac58-1343c04a6f38")
     protected Unit(final DataType elt) {
         super(elt);
     }
 
     @objid ("6a12e779-f186-4ba1-ab98-47ecdcdb6ad2")
     public static final class MdaTypes {
-        @objid ("de0fd11e-6b08-46f1-881a-0dc2196eb44a")
+        @objid ("7d438b32-5184-4331-bec3-b321b4a399ff")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("fadb6e62-2488-4d05-84a3-2843fa4fd843")
+        @objid ("9c45c7f4-06b9-49f7-813d-a03258e57257")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7fcc9631-b205-40d1-878d-0a079dc9ff8e")
+        @objid ("9349a6c8-774c-4c9d-984d-13ec453f09b5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("eb1b558f-82f9-44e5-a74a-fe0b4f1c729c")
+        @objid ("3a95d7e0-e327-4820-8e1f-1cdcbab2c7cf")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "56c9f56b-274d-4816-80c8-72536d1d7295");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -174,11 +176,11 @@ public abstract class Unit extends FeatureDataType {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -32,17 +31,13 @@ public class CreateDataTypeModelTool extends CreateSubModelTool {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
-            subModel.setDefaultName("Data Type Model");
-            diagram.setDefaultName("Data Type Diagram");
         
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            subModel.setDefaultName("Data Type Model");
+            diagram.setDefaultName(subModel.getName() + " diagram");
+        
+            this.openDiagram(diagram);
         
             transaction.commit();
-        
-        
-        
-        
-        
         }
     }
 

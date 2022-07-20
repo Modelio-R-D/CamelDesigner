@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.TypeModelDiagram;
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -32,10 +31,11 @@ public class CreateTypeModelTool extends CreateSubModelTool {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
+        
             subModel.setDefaultName("Type Model");
-            diagram.setDefaultName("Type Diagram");
-            
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            diagram.setDefaultName(subModel.getName() + " diagram");
+        
+            this.openDiagram(diagram);
         
             transaction.commit();
         }

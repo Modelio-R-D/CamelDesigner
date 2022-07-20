@@ -5,7 +5,7 @@ import camel.core.CamelModel;
 import camel.core.CorePackage;
 import com.google.inject.Injector;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.conversion.CamelDslManager;
+import fr.softeam.cameldesigner.exchange.CamelDslManager;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;

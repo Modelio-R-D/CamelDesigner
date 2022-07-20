@@ -2,7 +2,6 @@ package fr.softeam.cameldesigner.handlers.commands.createsubmodel;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram;
 import fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -30,8 +29,8 @@ public class CreateLocationModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Location Model");
-            diagram.setDefaultName("Location diagram");
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            diagram.setDefaultName(subModel.getName() + " diagram");
+            this.openDiagram(diagram.getElement());
         
             transaction.commit();
         }

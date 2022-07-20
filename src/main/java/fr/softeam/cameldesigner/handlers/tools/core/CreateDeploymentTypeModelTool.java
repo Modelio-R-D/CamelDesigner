@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentTypeModelDiagram;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -36,9 +35,9 @@ public class CreateDeploymentTypeModelTool extends CreateSubModelTool {
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName("Deployment Type Model");
-            diagram.setDefaultName("Deployment Type Diagram");
+            diagram.setDefaultName(subModel.getName() + " diagram");
         
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            this.openDiagram(diagram);
         
             transaction.commit();
         }

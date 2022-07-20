@@ -1,7 +1,9 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.infrastructure.abstractdiagram.AbstractCamelDiagram;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.IModelioServices;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
@@ -22,7 +24,8 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
     }
 
     @objid ("c416efa7-7d50-45ed-b447-b2fb0ef61619")
-    protected void openDiagram(AbstractCamelDiagram diag, IModelioServices modelioServices, final String styleName) {
+    protected void openDiagram(AbstractCamelDiagram diag) {
+        IModelioServices modelioServices = CamelDesignerModule.getInstance().getModuleContext().getModelioServices();
         AbstractDiagram diagram = diag.getElement();
         IDiagramService ds = modelioServices.getDiagramService();
         
@@ -30,7 +33,7 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
             IDiagramDG dg = handler.getDiagramNode();
         
             for (IStyleHandle style : ds.listStyles()){
-                if (style.getName().equals(styleName)){
+                if (style.getName().equals(ICamelDesignerPeerModule.CAMEL_STYLE)){
                     dg.setStyle(style);
                     break;
                 }

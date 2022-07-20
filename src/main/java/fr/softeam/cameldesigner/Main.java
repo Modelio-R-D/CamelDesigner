@@ -23,8 +23,8 @@ public class Main {
         info.setRepository("https://github.com/Supervisor/supervisor");
         pushAnalyse(info);
         
-        //        String code = "value";
-        //        getResponseAnalyse(code);
+        String code = "value";
+        getResponseAnalyse(code);
     }
 
     @objid ("4b02b658-c672-42c8-a7e5-b71d5e33e816")
@@ -33,27 +33,27 @@ public class Main {
         try {
             url = new URL(_URL + "analyse?");
         
-        HttpURLConnection http = (HttpURLConnection)url.openConnection();
-        http.setRequestMethod("POST");
-        http.setDoOutput(true);
-        http.setRequestProperty("Accept", "application/json");
-        http.setRequestProperty("Content-Type", "application/json");
+            HttpURLConnection http = (HttpURLConnection)url.openConnection();
+            http.setRequestMethod("POST");
+            http.setDoOutput(true);
+            http.setRequestProperty("Accept", "application/json");
+            http.setRequestProperty("Content-Type", "application/json");
         
-        String data = "components=[{\"component_name\": \"" + info.getComponentName() +
-                        "\", \"categories\":[\""+ info.getCategories().get(0).toString().toLowerCase() +
-                        "\"], \"language\":\""+ info.getLanguage() +
-                        "\", \"repository\":\""+ info.getRepository() + "\"}]";
+            String data = "components=[{\"component_name\": \"" + info.getComponentName() +
+                    "\", \"categories\":[\""+ info.getCategories().get(0).toString().toLowerCase() +
+                    "\"], \"language\":\""+ info.getLanguage() +
+                    "\", \"repository\":\""+ info.getRepository() + "\"}]";
         
         
-        byte[] out = data.getBytes(StandardCharsets.UTF_8);
+            byte[] out = data.getBytes(StandardCharsets.UTF_8);
         
-        OutputStream stream = http.getOutputStream();
-        stream.write(out);
+            OutputStream stream = http.getOutputStream();
+            stream.write(out);
         
-        System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+            System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
         
-        stream.close();
-        http.disconnect();
+            stream.close();
+            http.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -143,27 +143,27 @@ public class Main {
                 //Close the scanner
                 scanner.close();
         
-        //                //Using the JSON simple library parse the string into a json object
-        //                JSONParser parse = new JSONParser();
-        //                JSONObject data_obj = (JSONObject) parse.parse(inline);
-        //
-        //                //Get the required object from the above created object
-        //                JSONObject obj = (JSONObject) data_obj.get("Global");
-        //
-        //                //Get the required data using its key
-        //                System.out.println(obj.get("TotalRecovered"));
-        //
-        //                JSONArray arr = (JSONArray) data_obj.get("Countries");
-        //
-        //                for (int i = 0; i < arr.size(); i++) {
-        //
-        //                    JSONObject new_obj = (JSONObject) arr.get(i);
-        //
-        //                    if (new_obj.get("Slug").equals("albania")) {
-        //                        System.out.println("Total Recovered: " + new_obj.get("TotalRecovered"));
-        //                        break;
-        //                    }
-        //                }
+                //                //Using the JSON simple library parse the string into a json object
+                //                JSONParser parse = new JSONParser();
+                //                JSONObject data_obj = (JSONObject) parse.parse(inline);
+                //
+                //                //Get the required object from the above created object
+                //                JSONObject obj = (JSONObject) data_obj.get("Global");
+                //
+                //                //Get the required data using its key
+                //                System.out.println(obj.get("TotalRecovered"));
+                //
+                //                JSONArray arr = (JSONArray) data_obj.get("Countries");
+                //
+                //                for (int i = 0; i < arr.size(); i++) {
+                //
+                //                    JSONObject new_obj = (JSONObject) arr.get(i);
+                //
+                //                    if (new_obj.get("Slug").equals("albania")) {
+                //                        System.out.println("Total Recovered: " + new_obj.get("TotalRecovered"));
+                //                        break;
+                //                    }
+                //                }
             }
         
         } catch (Exception e) {

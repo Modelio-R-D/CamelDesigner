@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -15,6 +15,7 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetric;
+import fr.softeam.cameldesigner.api.securitymodel.standard.class_.SecurityDomain;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -36,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1f0a6163-1b92-4d1e-9b82-465f58ed0d66")
 public class CompositeSecurityMetric extends CompositeMetric {
-    @objid ("ca6ababd-b763-45ad-9a6d-54715b5c5824")
+    @objid ("53fb2a52-21e3-4ae8-8b88-8a4794e41f9c")
     public static final String STEREOTYPE_NAME = "CompositeSecurityMetric";
 
     /**
@@ -47,7 +48,7 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("32e75014-b11e-4407-8f6c-1684f818c197")
+    @objid ("a93045e8-b398-46b6-8806-3ec1e835e819")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeSecurityMetric.STEREOTYPE_NAME));
     }
@@ -57,7 +58,7 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * 
      * @return a {@link CompositeSecurityMetric} proxy on the created {@link Class}.
      */
-    @objid ("aa88957a-e517-4707-9e6a-466de0b31d59")
+    @objid ("f3a94065-fd5c-4563-aed2-731d32257f08")
     public static CompositeSecurityMetric create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CompositeSecurityMetric.STEREOTYPE_NAME);
@@ -65,36 +66,34 @@ public class CompositeSecurityMetric extends CompositeMetric {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link CompositeSecurityMetric} proxy or <i>null</i>.
      */
-    @objid ("2fa9689e-0660-4d42-b9a2-3633232c7686")
+    @objid ("d9c8c996-5a6a-4e14-8eda-e8920d7e2138")
     public static CompositeSecurityMetric instantiate(final Class obj) {
         return CompositeSecurityMetric.canInstantiate(obj) ? new CompositeSecurityMetric(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CompositeSecurityMetric} proxy from a {@link Class} stereotyped << CompositeSecurityMetric >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeSecurityMetric} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2398d6f4-b33c-48c7-a576-abda5d1e70a2")
+    @objid ("5599a601-935c-480e-9b79-60400831a813")
     public static CompositeSecurityMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeSecurityMetric.canInstantiate(obj))
-            return new CompositeSecurityMetric(obj);
+        	return new CompositeSecurityMetric(obj);
         else
-            throw new IllegalArgumentException("CompositeSecurityMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CompositeSecurityMetric: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0cf5f6fa-ffa6-490b-aae9-29855a5c5736")
+    @objid ("d691cbeb-5be9-445a-a2b4-73a8721054c5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,8 +113,9 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * Get the value of the 'domain' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e3a9b619-df16-4cf1-a66e-86de666b49da")
+    @objid ("e779bc42-8228-48b0-90a9-9e3e2ccff7d3")
     public SecurityDomain getDomain() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CompositeSecurityMetric.MdaTypes.MDAASSOCDEP)
@@ -128,17 +128,16 @@ public class CompositeSecurityMetric extends CompositeMetric {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("757331d8-cf9c-4c31-8155-0910f84a163f")
+    @objid ("80bac919-251a-4975-9287-561e46fb1375")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("fbbef080-6060-47d2-a3a4-98c0a76d0fa1")
+    @objid ("a121f0f6-0efe-40da-b41a-2b58cc7a33a8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -148,8 +147,9 @@ public class CompositeSecurityMetric extends CompositeMetric {
      * Set the value of the 'domain' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("cf33eccd-d7ca-463c-b8b3-82e969883bba")
+    @objid ("28f85115-ddce-4f18-b0e8-ca8745e50f59")
     public void setDomain(final SecurityDomain obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -177,23 +177,23 @@ public class CompositeSecurityMetric extends CompositeMetric {
         return result;
     }
 
-    @objid ("4c993fad-1c5e-459d-8568-84082a8f745e")
+    @objid ("1cd8fa0e-3162-41ac-9688-f3323b6a6574")
     protected CompositeSecurityMetric(final Class elt) {
         super(elt);
     }
 
     @objid ("fe4cd5da-e95c-488c-a4aa-bd4e00428eda")
     public static final class MdaTypes {
-        @objid ("3dda5b22-ebf2-42ab-96ab-8d7fad1b4519")
+        @objid ("5a92273b-13be-44a9-a7ad-97238afb83e0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6e6044e8-05cc-47e7-9db4-fb85478ce790")
+        @objid ("313c4b1d-7e2b-4b60-a65a-506af173df23")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2d7f9151-08eb-4814-903f-9e59cd5fe6bc")
+        @objid ("94477be8-3f94-402b-ab58-b19157a5c5cb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e5e08d60-89d9-47c9-8732-005034d57d03")
+        @objid ("55bee891-ea38-4008-988f-0d2a6768e891")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "49dfe43f-0fa8-476b-a6ba-03b62463e361");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -201,11 +201,11 @@ public class CompositeSecurityMetric extends CompositeMetric {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

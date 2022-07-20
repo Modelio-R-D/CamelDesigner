@@ -4,6 +4,7 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
@@ -26,8 +27,10 @@ public class CreateProvidedCommunication extends DefaultBoxTool {
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
         return
                 targetNode.getElement() instanceof org.modelio.metamodel.uml.statik.Class
-                && ((org.modelio.metamodel.uml.statik.Class) targetNode.getElement())
-                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponent.STEREOTYPE_NAME);
+                && (((org.modelio.metamodel.uml.statik.Class) targetNode.getElement())
+                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponent.STEREOTYPE_NAME) 
+                || ((org.modelio.metamodel.uml.statik.Class) targetNode.getElement())
+                .isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VM.STEREOTYPE_NAME));
     }
 
     @objid ("c44750a4-e601-4021-89a3-cb2bd125cfe4")

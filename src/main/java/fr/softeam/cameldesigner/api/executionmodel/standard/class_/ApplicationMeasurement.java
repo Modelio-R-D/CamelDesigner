@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("164b2229-0807-45e3-bcba-6b09194928b2")
 public class ApplicationMeasurement extends Measurement {
-    @objid ("f29e9a73-c99d-4a05-bfad-1be9eb86a857")
+    @objid ("ee5b1465-3b7a-45ff-8645-0c2817c4e385")
     public static final String STEREOTYPE_NAME = "ApplicationMeasurement";
 
     /**
@@ -46,7 +46,7 @@ public class ApplicationMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2da278d8-8222-49b6-8862-40d4e2b1f961")
+    @objid ("7b696ba6-a1d1-4118-b808-cbb354e93212")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ApplicationMeasurement.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class ApplicationMeasurement extends Measurement {
      * 
      * @return a {@link ApplicationMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("9852f6e4-2007-497d-bdbc-bf3438922801")
+    @objid ("1800ba8d-840d-4004-bbb3-108c19a3ace5")
     public static ApplicationMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ApplicationMeasurement.STEREOTYPE_NAME);
@@ -64,36 +64,34 @@ public class ApplicationMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link ApplicationMeasurement} proxy from a {@link Class} stereotyped << ApplicationMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ApplicationMeasurement} proxy from a {@link Class} stereotyped << ApplicationMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link ApplicationMeasurement} proxy or <i>null</i>.
      */
-    @objid ("95e60beb-332a-4812-8568-b0e90cf1947c")
+    @objid ("9c6249ba-dd78-4775-853d-4cadac428438")
     public static ApplicationMeasurement instantiate(final Class obj) {
         return ApplicationMeasurement.canInstantiate(obj) ? new ApplicationMeasurement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ApplicationMeasurement} proxy from a {@link Class} stereotyped << ApplicationMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ApplicationMeasurement} proxy from a {@link Class} stereotyped << ApplicationMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link ApplicationMeasurement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c9bad8e7-f1ae-4174-9d34-de71d30d3d9f")
+    @objid ("f74b1afe-84cf-4898-a89c-e3801bf78f15")
     public static ApplicationMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ApplicationMeasurement.canInstantiate(obj))
-            return new ApplicationMeasurement(obj);
+        	return new ApplicationMeasurement(obj);
         else
-            throw new IllegalArgumentException("ApplicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ApplicationMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c6dde293-9e6a-46c6-84c3-325187271242")
+    @objid ("212f199a-575a-4977-b347-d18b327812e2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,17 +108,16 @@ public class ApplicationMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("0b140f54-9a46-4a5b-95ed-a037c3c2227f")
+    @objid ("1a936caa-ce46-4616-a3f9-959f74ac4519")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("47fcf530-b76e-4509-8e9b-501cf94fee97")
+    @objid ("846eb2f9-5b98-4097-a27f-11b06e027d46")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -134,23 +131,23 @@ public class ApplicationMeasurement extends Measurement {
         return result;
     }
 
-    @objid ("9a9e0985-53fc-4b25-a0fe-2bad8604cf61")
+    @objid ("d2db33ab-6d7f-43d5-8cb9-4741b1fb8768")
     protected ApplicationMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("c03973d2-687e-4c2b-b6af-b5fe5dfcf3e3")
     public static final class MdaTypes {
-        @objid ("18030117-cdcd-41e2-bd2b-050b502c7241")
+        @objid ("88a4e079-58cd-4fd0-adab-f01fb4089063")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("17950d17-7d7d-4cd5-8450-40a9a01b789c")
+        @objid ("8dd53586-2ac4-47fb-ab4c-9c8974046a0e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6c9c77f6-3333-47f7-933d-c1f3f53427a3")
+        @objid ("9583e923-8a0f-4e5d-9dcf-3f60daa5605e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("387f9222-9e5d-42a4-a1d3-6983cea5c4d8")
+        @objid ("d4e42090-bb1b-477a-a909-a6c3df84381b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8962d6e6-e540-41c6-bf79-3df6530aae2e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +155,11 @@ public class ApplicationMeasurement extends Measurement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

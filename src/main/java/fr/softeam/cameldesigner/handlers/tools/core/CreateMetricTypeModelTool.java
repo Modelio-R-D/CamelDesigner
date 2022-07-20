@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetricTypeModelDiagram;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -32,10 +31,11 @@ public class CreateMetricTypeModelTool extends CreateSubModelTool {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
-            subModel.setDefaultName("Metric Type Model");
-            diagram.setDefaultName("Metric Type Diagram");
         
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            subModel.setDefaultName("Metric Type Model");
+            diagram.setDefaultName(subModel.getName() + " diagram");
+        
+            this.openDiagram(diagram);
         
             transaction.commit();
         }

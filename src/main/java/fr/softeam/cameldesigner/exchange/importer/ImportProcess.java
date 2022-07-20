@@ -2,7 +2,7 @@ package fr.softeam.cameldesigner.exchange.importer;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.conversion.process.IElementProcess;
+import fr.softeam.cameldesigner.exchange.IElementProcess;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.emf.cdo.CDOObject;
@@ -67,6 +67,31 @@ public class ImportProcess implements IElementProcess<CamelElement,CDOObject> {
             }
         }
         return null;
+    }
+
+    @objid ("84e6bd59-6103-42d9-bcb1-24f046a49450")
+    @Override
+    public CamelElement create(CDOObject element, CDOObject context) {
+        CamelElement processedElement = null;
+        ImportMap importMap = ImportMap.getInstance();
+        
+        try {
+            CamelElementImporter<CDOObject, CamelElement> importer = ImporterFactory.getImporter(element);
+            importer.setProcess(this);
+        
+            CamelElement owner = getElement(context);
+            processedElement = importer.createCamelElt(context);
+            if(processedElement != null) {
+                importer.attach(processedElement, owner);
+        
+                importMap.put(element, processedElement);
+            }
+        
+        }catch (Exception e) {
+            CamelDesignerModule.logService.error(e);
+            return null;
+        }
+        return processedElement;
     }
 
 }

@@ -2,7 +2,6 @@ package fr.softeam.cameldesigner.handlers.commands.createsubmodel;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
 import fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -30,8 +29,8 @@ public class CreateDataTypeModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Data Type Model");
-            diagram.setDefaultName("Data Type diagram");
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            diagram.setDefaultName(subModel.getName() + " diagram");
+            this.openDiagram(diagram.getElement());
         
             transaction.commit();
         }

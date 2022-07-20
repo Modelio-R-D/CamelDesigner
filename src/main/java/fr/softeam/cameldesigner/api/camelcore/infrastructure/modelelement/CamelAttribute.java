@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("95142f12-2b2c-454b-909a-53110f0aaecc")
 public abstract class CamelAttribute extends ExpendableElement {
-    @objid ("cd009895-4036-42b3-93b0-98129dc3b10f")
+    @objid ("a144a931-b6bb-4e22-968f-1a26ba127977")
     public static final String STEREOTYPE_NAME = "CamelAttribute";
 
     /**
@@ -47,7 +47,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ca15981b-429f-4cf8-b9be-6915e3369b88")
+    @objid ("717b87d6-96c1-497e-aa17-485c92d47aad")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelAttribute.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public abstract class CamelAttribute extends ExpendableElement {
             AttributeClass.canInstantiate(obj) ? AttributeClass.instantiate(obj) : null;
     }
 
-    @objid ("a727cc49-4817-45f5-a76a-1fc62ca63dc9")
+    @objid ("7fb44b03-56ea-4b6b-9140-3e30e653280c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -75,17 +75,16 @@ public abstract class CamelAttribute extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
-     * 
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("0410a071-8416-4516-a0f1-ca603789e35a")
+    @objid ("1f71f1a7-c9b9-4fea-a510-e11896ea2de1")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("30b0bae6-3cdd-4792-aaed-8453c8c4c17a")
+    @objid ("6b186609-c757-4332-9a83-b3d1a5655596")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -109,23 +108,23 @@ public abstract class CamelAttribute extends ExpendableElement {
     @objid ("dfa12e10-a0f9-4768-872b-ef51ea1a5db9")
     public abstract void setValueType(final ValueType obj);
 
-    @objid ("9a84c540-8568-4cf2-8e47-4c443aa54a39")
+    @objid ("7fe5a8a9-dc7a-42f7-8cc6-5b3177d1348d")
     protected CamelAttribute(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("b2b5f006-86dd-4eba-8d2f-bb3d0fc4f4f7")
     public static final class MdaTypes {
-        @objid ("a06b842d-6117-4581-9c6b-7525f8a5aac6")
+        @objid ("b7f0d8a8-147e-40dd-a93d-e63731436261")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0c546b1b-8192-4533-800b-c1bffa0ce614")
+        @objid ("5f9bc75b-5c2c-4ac6-a3ad-4e63b013085c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("54828a45-81a4-4783-8f86-85e50fef2a7b")
+        @objid ("7d22b38f-051f-454f-8344-f9cb5fc8d4bf")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e2e457f2-1451-4ffe-b871-8df2121c320d")
+        @objid ("184971b2-d142-4fd7-8156-f507d89a6399")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "342512a5-ad9b-48b8-a454-5fd44237b8f2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -133,11 +132,11 @@ public abstract class CamelAttribute extends ExpendableElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

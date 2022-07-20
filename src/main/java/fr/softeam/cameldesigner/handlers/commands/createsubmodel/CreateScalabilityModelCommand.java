@@ -2,7 +2,6 @@ package fr.softeam.cameldesigner.handlers.commands.createsubmodel;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ScalabilityModelDiagram;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_.ScalabilityModel;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -33,8 +32,8 @@ public class CreateScalabilityModelCommand extends CreateSubModelCommand {
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Scalability Model");
-            diagram.setDefaultName("Scalability diagram");
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            diagram.setDefaultName(subModel.getName() + " diagram");
+            this.openDiagram(diagram.getElement());
         
             transaction.commit();
         }

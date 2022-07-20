@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("05f54bfd-dbfd-4864-835a-f9d72e6569b8")
 public class DataTypeModelDiagram extends AbstractCamelDiagram {
-    @objid ("bd6c154a-df9d-4c6e-b543-ee045618b8f3")
+    @objid ("32864c8b-1e36-49bc-a1b8-5776f99c1b90")
     public static final String STEREOTYPE_NAME = "DataTypeModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6bb67f79-c719-45a6-a58a-c81fe34cd9a5")
+    @objid ("36bd2501-1571-44c5-a1a7-163abf8f4370")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataTypeModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link DataTypeModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("75bb2c36-f22f-4197-9b4f-68fbe8710e28")
+    @objid ("51304f8b-ab7f-4021-8895-2a26fad5a104")
     public static DataTypeModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataTypeModelDiagram.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataTypeModelDiagram >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataTypeModelDiagram >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a ClassDiagram
      * @return a {@link DataTypeModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("065d4dae-867b-46b2-93ef-eabc46fe492b")
+    @objid ("e2488409-645c-4cad-b477-0c4edfff9bfa")
     public static DataTypeModelDiagram instantiate(final ClassDiagram obj) {
         return DataTypeModelDiagram.canInstantiate(obj) ? new DataTypeModelDiagram(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataTypeModelDiagram >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DataTypeModelDiagram >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link DataTypeModelDiagram} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a3277080-35dd-43eb-b680-b695e6c217bc")
+    @objid ("eb89e16f-f7ad-4977-814f-c0dd6a1ed2cc")
     public static DataTypeModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (DataTypeModelDiagram.canInstantiate(obj))
-            return new DataTypeModelDiagram(obj);
+        	return new DataTypeModelDiagram(obj);
         else
-            throw new IllegalArgumentException("DataTypeModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DataTypeModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("1561faea-6a93-4dcc-a85d-ce1799fc42ce")
+    @objid ("87ba1765-1e47-48bd-8760-2c98c238f814")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +109,16 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}.
-     * 
+     * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("ddcfdefc-f9a0-4619-9387-b40643ada889")
+    @objid ("404448f6-0e4b-49cf-bc1c-f4cc5dcb6d82")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("79364f64-77b9-4b10-a341-65ebf37a613a")
+    @objid ("46a2bea6-6cd3-4d46-8aff-4dc4c7f4ac2e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -134,23 +131,23 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("5dd88b0d-6c1e-481a-a5d3-39852e4511d9")
+    @objid ("3ffa4751-4e13-4640-95db-95d565471566")
     protected DataTypeModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("2da9cb4c-8a06-4c65-8a65-2240141641c4")
     public static final class MdaTypes {
-        @objid ("c55cacf3-9c7f-48c7-ba97-b1cdb1c1dfab")
+        @objid ("6b13a846-ad9e-49fe-aa43-45eaf989fe9e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("113a33bc-4fe8-4879-8069-1870e2ebaae6")
+        @objid ("1c63c859-e89c-4b1c-9fc3-09513bb0bf2a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7523ed35-6ba0-4d56-ba8e-d9a1ad7ca440")
+        @objid ("96c5904e-453b-4791-a3ae-db4d4076a847")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f7b4da01-5ac8-4876-9fa0-a22a3d5ae8b2")
+        @objid ("15efc800-7b38-4ddb-ac30-f5ce128b6fb8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fc779080-0243-43b7-a1e1-9ddf71de93d7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +155,11 @@ public class DataTypeModelDiagram extends AbstractCamelDiagram {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

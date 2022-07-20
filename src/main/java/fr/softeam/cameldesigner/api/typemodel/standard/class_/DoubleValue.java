@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,10 +33,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("cc20daad-6f47-4d3a-babd-121eb172a4cb")
 public class DoubleValue extends NumericValue {
-    @objid ("42092378-2c01-4567-aa3e-45d814c8ddeb")
+    @objid ("79f8133c-751e-452f-9e3d-72b0d42e3b63")
     public static final String STEREOTYPE_NAME = "DoubleValue";
 
-    @objid ("a68ffb57-9fe9-4af3-b5d9-93a884b357bf")
+    @objid ("1bfac028-1861-489b-b9fa-460611405228")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
@@ -47,7 +47,7 @@ public class DoubleValue extends NumericValue {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("aa8b51e3-e3a7-412c-8754-72a36ff6c2a6")
+    @objid ("2f0caed2-69e6-4bce-8242-0b2f71647fc6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DoubleValue.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class DoubleValue extends NumericValue {
      * 
      * @return a {@link DoubleValue} proxy on the created {@link Class}.
      */
-    @objid ("80db1fe2-4758-48f9-8278-5c30fffe2066")
+    @objid ("1a173848-ea7f-48ef-a8cb-f41ef5f07d26")
     public static DoubleValue create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DoubleValue.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class DoubleValue extends NumericValue {
     }
 
     /**
-     * Tries to instantiate a {@link DoubleValue} proxy from a {@link Class} stereotyped << DoubleValue >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DoubleValue} proxy from a {@link Class} stereotyped << DoubleValue >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link DoubleValue} proxy or <i>null</i>.
      */
-    @objid ("a4db0978-2162-46a0-b8a4-1157788df767")
+    @objid ("0581a977-d159-41ab-9921-ea855d42bf8b")
     public static DoubleValue instantiate(final Class obj) {
         return DoubleValue.canInstantiate(obj) ? new DoubleValue(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DoubleValue} proxy from a {@link Class} stereotyped << DoubleValue >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DoubleValue} proxy from a {@link Class} stereotyped << DoubleValue >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link DoubleValue} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("28300f9b-5b6b-4e54-b458-6d82f56015d3")
+    @objid ("83a1d6e4-a0f4-4e5b-882e-355c48444a8b")
     public static DoubleValue safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DoubleValue.canInstantiate(obj))
-            return new DoubleValue(obj);
+        	return new DoubleValue(obj);
         else
-            throw new IllegalArgumentException("DoubleValue: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DoubleValue: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8175ef82-94ce-4c00-bb0b-e73e471d6801")
+    @objid ("70c3dcb4-80a1-4630-917c-305da0800c55")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,11 +109,10 @@ public class DoubleValue extends NumericValue {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("450e60b7-bd6c-4888-b547-daa38197175b")
+    @objid ("23011348-11d1-4e86-a216-9eaf90dc6929")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -126,12 +123,12 @@ public class DoubleValue extends NumericValue {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6e2a07f2-1391-4512-954d-1d11eb3aa0fd")
+    @objid ("8d5b2338-2ca4-4117-bb92-51b4ac35ac59")
     public String getValue() {
         return this.elt.getTagValue(DoubleValue.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("8bdd89ec-f200-47d6-933f-8b2efd8d23fd")
+    @objid ("70eb7ee0-7cd4-4ac4-9e3c-36e14c254fdf")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,31 +139,31 @@ public class DoubleValue extends NumericValue {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("eebf8e3f-7d52-4e31-a5bb-d7511cbdde83")
+    @objid ("9dd140dc-22a8-4b8c-bfba-ed9cadb5ee1b")
     public void setValue(final String value) {
         this.elt.putTagValue(DoubleValue.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("ff1e4c73-99eb-4dce-8229-558e87f80312")
+    @objid ("2ad2d736-49fd-47be-b556-a3e448c7e552")
     protected DoubleValue(final Class elt) {
         super(elt);
     }
 
     @objid ("0478aee9-2727-4d68-be3a-307572bc0a9f")
     public static final class MdaTypes {
-        @objid ("56c83fc5-d727-4eae-9d28-e856ac93ec4b")
+        @objid ("5e71c54d-d5a1-4277-b19b-3cec6216481f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9bdd335f-bf27-4bab-8db0-da5ad7594e3f")
+        @objid ("e0649057-cb99-48ff-bfc3-e373b705256e")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("ac96a09f-4ca1-49d4-8205-6a4610a694bb")
+        @objid ("7b55bd3f-93c0-48d1-a740-4dbe5ded9c5e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fdd5ea4f-37cf-4c55-a765-be00cd57a998")
+        @objid ("208bb368-0da7-4b40-99df-580a5289d92f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6384e0e7-3342-467d-8de3-3dab71aaa512")
+        @objid ("7713da57-b8e3-499f-a37f-6330974d4acf")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6f7f3c3b-3812-4284-9665-7696d52500f2");
             VALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "8e0fd000-262b-4aa6-9b35-fea753d10683");
@@ -175,11 +172,11 @@ public class DoubleValue extends NumericValue {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

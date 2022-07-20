@@ -2,7 +2,6 @@ package fr.softeam.cameldesigner.handlers.commands.createsubmodel;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -30,8 +29,8 @@ public class CreateDeploymentInstanceModelCommand extends CreateSubModelCommand 
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Deployment Instance Model");
-            diagram.setDefaultName("Deployment Instance diagram");
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            diagram.setDefaultName(subModel.getName() + " diagram");
+            this.openDiagram(diagram.getElement());
         
             transaction.commit();
         }

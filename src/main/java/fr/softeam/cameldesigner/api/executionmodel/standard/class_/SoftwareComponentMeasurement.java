@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("89078e63-2e23-49e3-a485-89531a4dcc4c")
 public class SoftwareComponentMeasurement extends Measurement {
-    @objid ("29f2faa4-257e-49c4-8130-8b2d0f1c24ec")
+    @objid ("08435d96-a59c-401a-9e60-9f14e8256ccf")
     public static final String STEREOTYPE_NAME = "SoftwareComponentMeasurement";
 
     /**
@@ -49,7 +49,7 @@ public class SoftwareComponentMeasurement extends Measurement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("19967907-286b-4428-a3a8-4dcf1d78156a")
+    @objid ("53deb5b4-6ff8-42ab-9691-f110bc723d09")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentMeasurement.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public class SoftwareComponentMeasurement extends Measurement {
      * 
      * @return a {@link SoftwareComponentMeasurement} proxy on the created {@link Class}.
      */
-    @objid ("8e5d31f9-3dc8-479c-8550-0525fa8ca7b9")
+    @objid ("055cd3c3-ce53-4e82-bb03-71911b7f2554")
     public static SoftwareComponentMeasurement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SoftwareComponentMeasurement.STEREOTYPE_NAME);
@@ -67,36 +67,34 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link SoftwareComponentMeasurement} proxy or <i>null</i>.
      */
-    @objid ("a4cc215d-7158-4da1-a803-bc6b58ef0e16")
+    @objid ("b9c925ae-0137-40aa-9ea4-f5f4e979fce4")
     public static SoftwareComponentMeasurement instantiate(final Class obj) {
         return SoftwareComponentMeasurement.canInstantiate(obj) ? new SoftwareComponentMeasurement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SoftwareComponentMeasurement} proxy from a {@link Class} stereotyped << SoftwareComponentMeasurement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link SoftwareComponentMeasurement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("26113e5a-4f22-4f1c-96e7-6b757d611213")
+    @objid ("f6e7b8f4-17cc-4d1f-a6e0-7cdd44bc7f3e")
     public static SoftwareComponentMeasurement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SoftwareComponentMeasurement.canInstantiate(obj))
-            return new SoftwareComponentMeasurement(obj);
+        	return new SoftwareComponentMeasurement(obj);
         else
-            throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SoftwareComponentMeasurement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a75bf8bd-2c69-400d-94df-4099cd4cba6c")
+    @objid ("2d23f39e-9669-4c62-a8ff-26d0343ad708")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,11 +111,10 @@ public class SoftwareComponentMeasurement extends Measurement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("dba49bc7-1a15-4b74-8c1c-1583fa1d192e")
+    @objid ("aacc02bc-ca3a-403b-ac4b-a6d84e020b4d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -127,8 +124,9 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("c6fe253a-ebb0-434a-97d1-90d3c1103a2e")
+    @objid ("81a793d9-b612-4189-b740-1d1e2e180635")
     public SoftwareComponent getSoftwareComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SoftwareComponentMeasurement.MdaTypes.MDAASSOCDEP)
@@ -146,8 +144,9 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("16ce7047-761a-4288-a68e-6dd1b85a2146")
+    @objid ("b5c84bae-1982-4fa6-8f26-cde11d1e77a9")
     public SoftwareComponentInstance getSoftwareComponentInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(SoftwareComponentMeasurement.MdaTypes.MDAASSOCDEP)
@@ -159,7 +158,7 @@ public class SoftwareComponentMeasurement extends Measurement {
         return null;
     }
 
-    @objid ("c57f8362-5dab-42c0-8484-05f3abeab0f4")
+    @objid ("06c4d2be-c917-4c35-bf9b-b8d695473772")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -169,8 +168,9 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("0586543c-0b3e-4cb1-9f33-c9985ed42dbc")
+    @objid ("f80a5739-1da8-4221-ab0f-b838ae8f2da0")
     public void setSoftwareComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -194,8 +194,9 @@ public class SoftwareComponentMeasurement extends Measurement {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1c36b0f7-9ba9-4438-a838-bf136dd9dcff")
+    @objid ("73d3428b-c84f-469d-8b22-233dfa982d91")
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -223,23 +224,23 @@ public class SoftwareComponentMeasurement extends Measurement {
         return result;
     }
 
-    @objid ("2fd1832d-6079-4721-b751-e3eebd428235")
+    @objid ("78d65e78-86ad-46cf-8f2d-0f3086222d52")
     protected SoftwareComponentMeasurement(final Class elt) {
         super(elt);
     }
 
     @objid ("6678fa3a-6261-42c4-945e-36481919263d")
     public static final class MdaTypes {
-        @objid ("0043d664-a6b7-4e2c-b22d-cd816f9757f3")
+        @objid ("8df73aea-2caf-4abd-a7f8-1d0eb1b5b995")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("122a9984-4da8-4845-969c-ef4b8cf1b02e")
+        @objid ("39b58bfa-341d-4532-88e4-b7fc22b5287c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fe5b3a46-45f2-4845-9a07-7d405ee3dfea")
+        @objid ("9219968a-35b0-41e6-8141-168b96f915d6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f7da81be-a6c8-45e3-902d-ca3806091543")
+        @objid ("23c4f1c0-125e-4acb-859b-cf332d0c0d2c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "cef53d47-e830-42d6-9834-bfc960dc6abe");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -247,11 +248,11 @@ public class SoftwareComponentMeasurement extends Measurement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

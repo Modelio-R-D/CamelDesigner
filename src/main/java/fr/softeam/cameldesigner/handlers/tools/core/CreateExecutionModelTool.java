@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
 import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -33,9 +32,9 @@ public class CreateExecutionModelTool extends CreateSubModelTool {
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
             subModel.setDefaultName("Execution Model");
-            diagram.setDefaultName("Execution Diagram");
+            diagram.setDefaultName(subModel.getName() + " diagram");
         
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            this.openDiagram(diagram);
         
             transaction.commit();
         }

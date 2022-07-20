@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("82acfd5d-6977-4081-8c3d-eddebe8238e8")
 public class ProviderRequirement extends HardRequirement {
-    @objid ("5acb0029-41e7-4b07-afce-8ddaff467d93")
+    @objid ("1dcb6e10-2083-45b8-a4a8-9bb23e171a0d")
     public static final String STEREOTYPE_NAME = "ProviderRequirement";
 
-    @objid ("6ae6bdb1-ea3d-4dae-8859-c54b9030f8cb")
+    @objid ("ab72f498-8a69-457e-ab3b-52dc7dc8bc6e")
     public static final String CLOUDTYPE_TAGTYPE = "cloudType";
 
-    @objid ("c9ffd5ef-bdf2-4802-ae7f-17bfda1ed863")
+    @objid ("af29fa13-1b40-43d8-9af0-f425b9c8a0f5")
     public static final String PROVIDERNAMES_TAGTYPE = "providerNames";
 
     /**
@@ -53,7 +53,7 @@ public class ProviderRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f5ccfaee-053c-449f-82a6-9c45a131f36c")
+    @objid ("bd72e90e-a160-4dc1-9a3c-bc3c806ee41a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ProviderRequirement.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class ProviderRequirement extends HardRequirement {
      * 
      * @return a {@link ProviderRequirement} proxy on the created {@link Class}.
      */
-    @objid ("a6a6a50d-389e-420c-a5cb-7b530ede6cd5")
+    @objid ("f2750159-1d51-4c6c-8d3a-82482a0af7bd")
     public static ProviderRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ProviderRequirement.STEREOTYPE_NAME);
@@ -71,36 +71,34 @@ public class ProviderRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link ProviderRequirement} proxy or <i>null</i>.
      */
-    @objid ("9d9fa96f-4781-476c-acdf-b647398e9771")
+    @objid ("3bcfdc63-ee83-4964-8f27-8370512f3b9e")
     public static ProviderRequirement instantiate(final Class obj) {
         return ProviderRequirement.canInstantiate(obj) ? new ProviderRequirement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link ProviderRequirement} proxy from a {@link Class} stereotyped << ProviderRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link ProviderRequirement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("92ca397c-d27d-4503-b439-4530100e29b8")
+    @objid ("4c120225-8f8f-4cfc-ad1c-3406461eae1f")
     public static ProviderRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ProviderRequirement.canInstantiate(obj))
-            return new ProviderRequirement(obj);
+        	return new ProviderRequirement(obj);
         else
-            throw new IllegalArgumentException("ProviderRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ProviderRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("5e2ba2be-1d70-42bc-84fd-2e568d83d85a")
+    @objid ("6e9381c2-e68e-481c-9242-0b0d65d61f9c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,17 +119,16 @@ public class ProviderRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("caf52541-d338-4812-b2a3-5aacf5ebb7b0")
+    @objid ("74c2dd36-669f-4f5f-99ef-c2129f4119e3")
     public String getCloudType() {
         return this.elt.getTagValue(ProviderRequirement.MdaTypes.CLOUDTYPE_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e2579083-f86b-4377-a42a-17b1378859b5")
+    @objid ("1ed25b6f-05f7-45a4-a0ea-e548229d75da")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -142,12 +139,12 @@ public class ProviderRequirement extends HardRequirement {
      * <p>Property description:<br/>
      * <i>null</i></p>
      */
-    @objid ("1c2f9720-ebe0-4c9f-8e13-0a6ff8ad4884")
+    @objid ("af649817-5e82-4f9f-8f90-2967f2d5036f")
     public List<String> getProviderNames() {
         return this.elt.getTagValues(ProviderRequirement.MdaTypes.PROVIDERNAMES_TAGTYPE_ELT);
     }
 
-    @objid ("760438e6-62e3-4fc5-bf67-9d42033747f7")
+    @objid ("d5b04bb7-50a3-40eb-9dab-cc34c024b3d1")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -158,7 +155,7 @@ public class ProviderRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("09247926-38f9-477c-84a3-478e7ce12af1")
+    @objid ("0c16c63b-11ac-436c-b410-3a8bc4c5e3c6")
     public void setCloudType(final String value) {
         this.elt.putTagValue(ProviderRequirement.MdaTypes.CLOUDTYPE_TAGTYPE_ELT, value);
     }
@@ -168,7 +165,7 @@ public class ProviderRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f03114ec-af9c-46cc-94de-7fa16dca033e")
+    @objid ("74decd76-e068-4e32-b3fe-1d323708f8bd")
     public void setProviderNames(final List<String> values) {
         this.elt.putTagValues(ProviderRequirement.MdaTypes.PROVIDERNAMES_TAGTYPE_ELT, values);
     }
@@ -181,29 +178,29 @@ public class ProviderRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("9b4d21b8-6d73-4461-b587-9e7dfbe12338")
+    @objid ("51b5960f-bc68-46cd-aefd-2fa5b00e61af")
     protected ProviderRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("562f3532-fd37-4432-a9ac-219453fb6332")
     public static final class MdaTypes {
-        @objid ("3186fde5-fe9d-4bfc-a9d4-822505862361")
+        @objid ("3aaff62f-e483-4e84-9ede-64673b1866a5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dbbf211f-5042-471f-89ca-5e858a3718ac")
+        @objid ("adfb5bbb-f193-43e4-96dc-d71bdf90b786")
         public static TagType PROVIDERNAMES_TAGTYPE_ELT;
 
-        @objid ("9f833171-75e0-4fc9-8530-d524332f3ed3")
+        @objid ("846d7419-7fe6-402c-88f4-e3411d412c7d")
         public static TagType CLOUDTYPE_TAGTYPE_ELT;
 
-        @objid ("a1148766-7dd5-45cc-90f3-e02a5135b32e")
+        @objid ("789c2542-f325-426c-8fba-1008014bea45")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e5577366-6863-4bd5-bd7a-f143741d2308")
+        @objid ("1be939da-9544-4e53-a59b-177b480f21b2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ca52527b-c5bb-4621-8053-b3213880e173")
+        @objid ("81b23add-3d94-471e-b385-f7314340b2ce")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "3889bd5f-decc-4b65-b4f4-e9f2db4b8446");
             PROVIDERNAMES_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "3ba7ca0d-40ed-45d4-b49f-4c7abf286fd0");
@@ -213,11 +210,11 @@ public class ProviderRequirement extends HardRequirement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

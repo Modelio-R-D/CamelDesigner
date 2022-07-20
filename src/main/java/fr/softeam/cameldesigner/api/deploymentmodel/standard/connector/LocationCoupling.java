@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.connector;
 
@@ -37,13 +37,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("16e16d1c-b0c0-4b95-94f1-b4ff8c2929e6")
 public class LocationCoupling extends ComponentRelation {
-    @objid ("d30e15e7-e4d8-4b13-86be-0ca40ee27917")
+    @objid ("5abef444-4995-47f4-8b8a-14745a77f590")
     public static final String STEREOTYPE_NAME = "LocationCoupling";
 
-    @objid ("774e96b0-4df3-40be-8c93-1da8675317b3")
+    @objid ("3bb8a9ae-9760-45c5-a2f1-8a53352932d0")
     public static final String COUPLINGTYPE_TAGTYPE = "couplingType";
 
-    @objid ("ff0e59f6-1fb2-426e-8536-74a168017838")
+    @objid ("dc53c104-9abf-4396-92a4-9141da8dfd99")
     public static final String RELAXED_TAGTYPE = "relaxed";
 
     /**
@@ -54,7 +54,7 @@ public class LocationCoupling extends ComponentRelation {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("920c6281-e7c6-4f55-9e34-6e170da56391")
+    @objid ("5c96e3c2-f266-4664-aa90-be07b4402a30")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LocationCoupling.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class LocationCoupling extends ComponentRelation {
      * 
      * @return a {@link LocationCoupling} proxy on the created {@link Connector}.
      */
-    @objid ("072ccc4c-85c4-4949-b411-9bcfd343826c")
+    @objid ("fa491274-4d71-4e92-af15-a63bde129262")
     public static LocationCoupling create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, LocationCoupling.STEREOTYPE_NAME);
@@ -72,41 +72,40 @@ public class LocationCoupling extends ComponentRelation {
     }
 
     /**
-     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Connector
      * @return a {@link LocationCoupling} proxy or <i>null</i>.
      */
-    @objid ("44764cde-e8e1-4891-b6c6-99ef9418359d")
+    @objid ("aafb4019-7641-471b-8ed3-50101a3abf1b")
     public static LocationCoupling instantiate(final Connector obj) {
         return LocationCoupling.canInstantiate(obj) ? new LocationCoupling(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link LocationCoupling} proxy from a {@link Connector} stereotyped << LocationCoupling >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Connector}
      * @return a {@link LocationCoupling} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a4cdd263-1e69-4a2f-8a4c-6dc82d845833")
+    @objid ("835c829d-ea2d-4c63-99ad-032079b42aa6")
     public static LocationCoupling safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (LocationCoupling.canInstantiate(obj))
-            return new LocationCoupling(obj);
+        	return new LocationCoupling(obj);
         else
-            throw new IllegalArgumentException("LocationCoupling: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("LocationCoupling: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'softwareComponents' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("07839e60-a481-46fe-86fd-c9106cb959aa")
+    @objid ("5d514efd-220e-4fed-8e58-64ce3ff4011f")
     public void addSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -116,7 +115,7 @@ public class LocationCoupling extends ComponentRelation {
         }
     }
 
-    @objid ("ee4dc5d4-cf06-47ca-a880-528e4030bb46")
+    @objid ("482707f9-c1ab-4e19-a44b-d980cae5bde9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -137,17 +136,16 @@ public class LocationCoupling extends ComponentRelation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0211f7e3-0aeb-4386-b6fd-c9a233d25b79")
+    @objid ("e4963204-c57f-4486-861d-03cdec9e7504")
     public String getCouplingType() {
         return this.elt.getTagValue(LocationCoupling.MdaTypes.COUPLINGTYPE_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Connector}.
-     * 
+     * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("5f9ddd08-3ba0-4f49-a74c-3afeab4a2a6a")
+    @objid ("63c3ddf5-e3d1-4cb3-8336-dcb6274103c5")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
@@ -157,8 +155,9 @@ public class LocationCoupling extends ComponentRelation {
      * Get the values of the 'softwareComponents' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("9d1117fe-5c96-4a02-8dfb-6feda275e876")
+    @objid ("27241d72-7ab3-4bbf-a184-d9cb325e9b77")
     public List<SoftwareComponent> getSoftwareComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -173,7 +172,7 @@ public class LocationCoupling extends ComponentRelation {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("fcefcc56-7ee9-423a-9468-9d3d15e21fba")
+    @objid ("962e8390-ba12-474c-994b-6a83be113ee7")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -184,7 +183,7 @@ public class LocationCoupling extends ComponentRelation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("778b5647-5227-43f7-aed1-b1258fb1a497")
+    @objid ("6f36139e-1f79-47e4-97c0-14c3dd1270f0")
     public boolean isRelaxed() {
         return this.elt.isTagged(LocationCoupling.MdaTypes.RELAXED_TAGTYPE_ELT);
     }
@@ -193,8 +192,9 @@ public class LocationCoupling extends ComponentRelation {
      * Remove a value from the 'softwareComponents' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("c417fa67-025e-4159-9090-a8b2abc66c8b")
+    @objid ("ed288747-d294-4760-ae26-7b3b8842dc60")
     public boolean removeSoftwareComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -213,7 +213,7 @@ public class LocationCoupling extends ComponentRelation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9b574356-db9a-4801-b4ef-88e8e117f6e4")
+    @objid ("5c3e0e5e-0093-4ffc-80b1-d52b7ca3acd3")
     public void setCouplingType(final String value) {
         this.elt.putTagValue(LocationCoupling.MdaTypes.COUPLINGTYPE_TAGTYPE_ELT, value);
     }
@@ -223,7 +223,7 @@ public class LocationCoupling extends ComponentRelation {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("dbd16d03-cc09-4cc3-b841-6c161b8c8ecf")
+    @objid ("8b5f8e5f-0f4c-4da6-9fcd-a2499f0710c3")
     public void setRelaxed(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(LocationCoupling.MdaTypes.RELAXED_TAGTYPE_ELT, this.elt);
@@ -239,29 +239,29 @@ public class LocationCoupling extends ComponentRelation {
         return result;
     }
 
-    @objid ("f24b798f-bc5d-44ef-abf4-95142a76f330")
+    @objid ("0bac836d-6a2c-46a1-9672-375547ac5180")
     protected LocationCoupling(final Connector elt) {
         super(elt);
     }
 
     @objid ("45955ff0-8335-4b65-a93f-e6357f827e77")
     public static final class MdaTypes {
-        @objid ("cf60ce84-a15b-454f-9d03-d02042eccb4c")
+        @objid ("9a2a2253-5899-435a-a819-d27e56e5262b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9d8d6209-fe0e-4bda-906d-d05a226ae055")
+        @objid ("79a0e48a-7ba1-4f73-9683-b44abf6f2465")
         public static TagType COUPLINGTYPE_TAGTYPE_ELT;
 
-        @objid ("7548ff77-ebd8-40af-9af2-8e45ccef64cb")
+        @objid ("54c22572-f2d7-4744-9a97-2748f4b4c2d7")
         public static TagType RELAXED_TAGTYPE_ELT;
 
-        @objid ("56e79449-c35b-421c-bc4b-b9eb655724a8")
+        @objid ("588b2e5a-07f2-44f7-bb08-f04460dc475a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6354583e-89db-4062-a088-cc20ecb36741")
+        @objid ("fd84dd8d-d0e7-44de-8802-c26f5aa0b7b2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d8f3a459-bbe1-480d-a989-937f680c6e70")
+        @objid ("82bcf86f-c0f5-416f-b9ae-99b7b4c7a22d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "09dbc4af-5728-4b42-9d70-83e64d7205dd");
             COUPLINGTYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "e8ff5d38-9710-482d-84f1-69e389fdd673");
@@ -271,11 +271,11 @@ public class LocationCoupling extends ComponentRelation {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

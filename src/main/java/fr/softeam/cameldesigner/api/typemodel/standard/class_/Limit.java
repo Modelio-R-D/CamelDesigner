@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,19 +33,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2a6827af-e370-4823-ae3a-3c11ff9acb3c")
 public class Limit {
-    @objid ("f53c5436-7575-44fe-9a1d-1e825a09211c")
+    @objid ("dce24611-0375-44a9-ad3d-5d20b83f7740")
     public static final String STEREOTYPE_NAME = "Limit";
 
-    @objid ("7ac9dfca-90d7-4bf0-9003-31683410274a")
+    @objid ("3c03d883-9b8d-459c-8b7a-a2d46179e8d1")
     public static final String INCLUDED_TAGTYPE = "included";
 
-    @objid ("f02844aa-5b80-4216-85d8-c944da152e59")
+    @objid ("183ae5e7-3e5d-41ac-8a79-9160f7963324")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("2c524cb9-83c6-4126-87c2-54aea600f060")
+    @objid ("19bff75b-fbd9-414b-8969-616435391c32")
     protected final Class elt;
 
     /**
@@ -56,7 +56,7 @@ public class Limit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e2ed28b7-3876-4c90-ab7f-3a6f17488cb3")
+    @objid ("efd1c65b-2a4f-4d00-a12b-6161d7216e02")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Limit.STEREOTYPE_NAME));
     }
@@ -66,7 +66,7 @@ public class Limit {
      * 
      * @return a {@link Limit} proxy on the created {@link Class}.
      */
-    @objid ("2b7cfc2c-8724-44ed-8dd7-28164fcd4bce")
+    @objid ("a018f444-f0d0-4fcd-811f-803d627a1fed")
     public static Limit create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Limit.STEREOTYPE_NAME);
@@ -74,36 +74,34 @@ public class Limit {
     }
 
     /**
-     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link Limit} proxy or <i>null</i>.
      */
-    @objid ("8c0c7f21-475e-47b9-be42-bdd4ec3d9a20")
+    @objid ("bddb4edd-0d4f-4829-b154-87acd9e92dbb")
     public static Limit instantiate(final Class obj) {
         return Limit.canInstantiate(obj) ? new Limit(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link Limit} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("373f49bb-4cb6-469a-b978-2f9dea1548f5")
+    @objid ("a9dfae46-f4f3-4554-a614-88888b142462")
     public static Limit safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Limit.canInstantiate(obj))
-            return new Limit(obj);
+        	return new Limit(obj);
         else
-            throw new IllegalArgumentException("Limit: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("Limit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("67891e87-8cf6-45d0-9802-0e2e6dc3e6a4")
+    @objid ("3684c25f-7ac4-464f-8d22-ce14953903ac")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,11 +118,10 @@ public class Limit {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("4a6b9b83-7b3b-47fe-99c7-0352be0fe695")
+    @objid ("38af4c29-7894-48d4-b614-38d4e7dc08fc")
     public Class getElement() {
         return this.elt;
     }
@@ -134,12 +131,12 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("efebee84-3177-44b3-b6fc-c7dc6103310c")
+    @objid ("b72caa24-a2ee-4a07-af12-794e86bcaf62")
     public String getValue() {
         return this.elt.getTagValue(Limit.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("cc0c1808-7623-4589-8883-c6172e26b7b5")
+    @objid ("940d5570-93f5-4f46-853f-efdc0195af58")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -150,7 +147,7 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("165aa4ff-62f3-40a1-9221-37d4ea3c7267")
+    @objid ("848a8807-9616-4e45-8bd5-4186d110a4f0")
     public boolean isIncluded() {
         return this.elt.isTagged(Limit.MdaTypes.INCLUDED_TAGTYPE_ELT);
     }
@@ -160,7 +157,7 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7fd90bd8-2144-4efa-a2fa-3ce532769a1a")
+    @objid ("d227861a-6060-470c-88c8-9886d9990553")
     public void setIncluded(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(Limit.MdaTypes.INCLUDED_TAGTYPE_ELT, this.elt);
@@ -173,34 +170,34 @@ public class Limit {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b42683df-a449-4dee-b043-9131a8e5c5df")
+    @objid ("7fe83dcf-2c52-41f0-92df-93909f53d602")
     public void setValue(final String value) {
         this.elt.putTagValue(Limit.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("e954f365-fa00-48d7-b63a-da4b81c1c3cf")
+    @objid ("54c4eef7-3c41-4309-aba6-53fe87aca345")
     protected Limit(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("c9d6905c-c70f-42d9-b241-d1855860ebde")
     public static final class MdaTypes {
-        @objid ("31a37824-467d-4620-a8c1-3f7a4cc1229f")
+        @objid ("487dc240-42a6-4f59-98e4-2922a1ae0a03")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8926c83e-c786-4f84-9be3-63088d3725c0")
+        @objid ("e44bbf66-f30d-4dbe-949f-c502f9c12210")
         public static TagType INCLUDED_TAGTYPE_ELT;
 
-        @objid ("ce1add2d-be2c-4fab-8a19-884b33cf39ca")
+        @objid ("6644a6e6-aa68-4df8-93ea-fdee23b54cd2")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("744519f5-be9a-4a1f-88dd-d5eeb1b825ba")
+        @objid ("11b3ca45-7f59-46e4-b0c3-b91e3d3f5fe3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("557f70ad-2f6a-42d6-bc85-d7c2bfd80d48")
+        @objid ("c6d01989-3a0e-47bf-a156-d55e16fcef26")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7cb9c452-272e-4976-9900-b6ef792f0d07")
+        @objid ("1754feb4-3f7b-4d95-aa19-da9a1042787b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "bf1d744a-e1f0-4ace-be02-64e9edfbbba2");
             INCLUDED_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "74608d88-801b-4173-8a41-35e922bd8144");
@@ -210,11 +207,11 @@ public class Limit {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -35,19 +35,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ce90fefb-5b15-4e21-9681-cb6da152b51c")
 public class PaaSConfiguration extends Configuration {
-    @objid ("97904975-1aab-494e-b164-b23edd820eaa")
+    @objid ("0a25a26d-1ddf-4940-a1e9-ac179b2625b1")
     public static final String STEREOTYPE_NAME = "PaaSConfiguration";
 
-    @objid ("c2ca69d9-d155-444d-ad82-0c14cad23526")
+    @objid ("eb343f2f-3e93-44e3-bf91-b7dacde0e470")
     public static final String API_TAGTYPE = "api";
 
-    @objid ("7324ac30-1c2f-4ff6-97ea-b0e1c9470030")
+    @objid ("29a3d053-b6c5-4a76-8763-f9151875e16b")
     public static final String DOWNLOADURL_TAGTYPE = "downloadURL";
 
-    @objid ("f36afd06-4b51-476f-953c-d5977696dccf")
+    @objid ("7efefb7a-8075-4750-a1a1-2e7a7764cf50")
     public static final String ENDPOINT_TAGTYPE = "endpoint";
 
-    @objid ("333a922e-ce21-4474-bab8-eccf651e19dc")
+    @objid ("75d141fb-92e9-4466-b498-82bb7a073d40")
     public static final String VERSION_TAGTYPE = "version";
 
     /**
@@ -58,7 +58,7 @@ public class PaaSConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("500e9651-6724-47ae-91dc-60ed8ea61820")
+    @objid ("7adf8c21-6875-41b8-b382-4f22712f18c8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PaaSConfiguration.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class PaaSConfiguration extends Configuration {
      * 
      * @return a {@link PaaSConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("47a9a9d7-94b4-453b-b3d8-df2d6e677d2a")
+    @objid ("47439ab5-7e14-415f-938f-fc41b412e988")
     public static PaaSConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PaaSConfiguration.STEREOTYPE_NAME);
@@ -76,36 +76,34 @@ public class PaaSConfiguration extends Configuration {
     }
 
     /**
-     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Artifact
      * @return a {@link PaaSConfiguration} proxy or <i>null</i>.
      */
-    @objid ("e470b6bb-1608-474d-b536-c45d4944ee43")
+    @objid ("593d2740-f733-410a-9a8a-8bb3e1cc5dfe")
     public static PaaSConfiguration instantiate(final Artifact obj) {
         return PaaSConfiguration.canInstantiate(obj) ? new PaaSConfiguration(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link PaaSConfiguration} proxy from a {@link Artifact} stereotyped << PaaSConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Artifact}
      * @return a {@link PaaSConfiguration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f10c3582-16c9-46a1-973c-f8d54b326960")
+    @objid ("516d0877-815d-42d5-a9f9-97127e445757")
     public static PaaSConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (PaaSConfiguration.canInstantiate(obj))
-            return new PaaSConfiguration(obj);
+        	return new PaaSConfiguration(obj);
         else
-            throw new IllegalArgumentException("PaaSConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("PaaSConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b2bf66f9-d3b4-4996-a478-6d0ebcab9fb5")
+    @objid ("0d241f9f-d752-482e-8398-2599634e097f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +124,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e1a14905-2c19-4b03-89db-0eae245a850e")
+    @objid ("5b78e99e-6a81-4413-852c-0af8ccdf0a17")
     public String getApi() {
         return this.elt.getTagValue(PaaSConfiguration.MdaTypes.API_TAGTYPE_ELT);
     }
@@ -136,17 +134,16 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5693255f-9bb1-45af-aac9-675cd4bcd919")
+    @objid ("9c49d8f6-18ad-4008-ae37-55517fe67f9b")
     public String getDownloadURL() {
         return this.elt.getTagValue(PaaSConfiguration.MdaTypes.DOWNLOADURL_TAGTYPE_ELT);
     }
 
     /**
-     * Get the underlying {@link Artifact}.
-     * 
+     * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("4ba34097-30d1-4332-bba7-90fb91a81adb")
+    @objid ("0f61ecfa-85b9-4d27-b639-3a17e42c407b")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -157,7 +154,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2795f706-20f5-4893-aebe-88133d372722")
+    @objid ("2f53eeb0-1276-4db7-b8a8-68a524f4b3b5")
     public String getEndpoint() {
         return this.elt.getTagValue(PaaSConfiguration.MdaTypes.ENDPOINT_TAGTYPE_ELT);
     }
@@ -167,12 +164,12 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c0265cdb-ef69-4f16-b11c-d2025991e3f3")
+    @objid ("fcffa6de-8b17-4be2-a2fc-6f3ca0a24374")
     public String getVersion() {
         return this.elt.getTagValue(PaaSConfiguration.MdaTypes.VERSION_TAGTYPE_ELT);
     }
 
-    @objid ("1cad0616-7ca9-432d-8841-79cb26a57c6d")
+    @objid ("cce5b1ec-7992-49ee-8ef5-c19774c8fc9c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -183,7 +180,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cb716167-fc53-4bef-b613-f3ef1f6f5d31")
+    @objid ("81be0444-660f-4bba-8625-b614b5c51ba5")
     public void setApi(final String value) {
         this.elt.putTagValue(PaaSConfiguration.MdaTypes.API_TAGTYPE_ELT, value);
     }
@@ -193,7 +190,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7b23cf4b-cf93-4ce0-9339-c5a78a1381db")
+    @objid ("99df1977-ee9b-4b07-b44e-2638845aba93")
     public void setDownloadURL(final String value) {
         this.elt.putTagValue(PaaSConfiguration.MdaTypes.DOWNLOADURL_TAGTYPE_ELT, value);
     }
@@ -203,7 +200,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f0f36e0a-3795-4069-853b-7219ba80f7d2")
+    @objid ("cfe98195-20b4-4a12-b430-55cf192bd630")
     public void setEndpoint(final String value) {
         this.elt.putTagValue(PaaSConfiguration.MdaTypes.ENDPOINT_TAGTYPE_ELT, value);
     }
@@ -213,7 +210,7 @@ public class PaaSConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a77431cb-12b9-47e2-b5e4-22945fe1838d")
+    @objid ("53db258e-c03f-477d-b8fc-f99c537e427f")
     public void setVersion(final String value) {
         this.elt.putTagValue(PaaSConfiguration.MdaTypes.VERSION_TAGTYPE_ELT, value);
     }
@@ -226,35 +223,35 @@ public class PaaSConfiguration extends Configuration {
         return result;
     }
 
-    @objid ("602ec4be-9d7f-415d-84a8-08b37a2815fa")
+    @objid ("a83dc49c-1a6b-467a-a976-9cdb51b15c66")
     protected PaaSConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("7782d259-fea0-4b7d-98db-5a791c033e34")
     public static final class MdaTypes {
-        @objid ("473adf77-b95a-4fde-82f2-3e1ca8ed81e5")
+        @objid ("76476013-e2b9-422f-8af4-e35b81fc9454")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5ab5dd46-a687-4993-90c3-e0a3ca6d0f91")
+        @objid ("7b854865-d382-4fb7-8e04-108fdd7b51e3")
         public static TagType API_TAGTYPE_ELT;
 
-        @objid ("b2924008-b808-4afc-8a61-b8d3b14f7ae0")
+        @objid ("c72dc2ef-a6c8-4525-994a-45d65f2e9546")
         public static TagType VERSION_TAGTYPE_ELT;
 
-        @objid ("31f0f2ed-ea35-436d-b5e2-f2825c977225")
+        @objid ("9012fda5-49d9-443e-b403-7cea66e9fe82")
         public static TagType ENDPOINT_TAGTYPE_ELT;
 
-        @objid ("bca34708-e7bf-4fa1-84a3-96b10908adb0")
+        @objid ("61fe25a8-967a-4664-bac2-801b87673b6b")
         public static TagType DOWNLOADURL_TAGTYPE_ELT;
 
-        @objid ("237404d2-7d19-46e3-9e9f-391313e1a96c")
+        @objid ("53e554b2-ab8c-445a-810e-9c08ff8a11f6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e7d854ed-68f4-414d-bb61-713abad8f9c1")
+        @objid ("f32dc3d2-00f8-4fff-a600-44aaae6d4312")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1b07e95d-063f-4bdf-b67a-e4b6ec83a047")
+        @objid ("5a599dba-a604-4022-b337-f7f7ff256f94")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "708a5ac1-972a-428b-8eb9-2caa4bc35dbd");
             API_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "f030f8ad-63ae-42c6-8eaf-af3bd34ffc29");
@@ -266,11 +263,11 @@ public class PaaSConfiguration extends Configuration {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

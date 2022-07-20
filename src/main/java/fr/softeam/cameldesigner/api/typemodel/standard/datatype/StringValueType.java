@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("d4a116b7-cd26-400c-b04d-1c342f5d5ece")
 public class StringValueType extends ValueType {
-    @objid ("1bae2fdc-7422-49ce-8f61-d2f76a42102f")
+    @objid ("7266368b-d7d1-4a65-aa87-22c2a1afe77b")
     public static final String STEREOTYPE_NAME = "StringValueType";
 
     /**
@@ -46,7 +46,7 @@ public class StringValueType extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("37bb07a9-8284-4f14-b933-8cf563ca429e")
+    @objid ("a4aea1f4-024c-4f8b-aaeb-5c6d7ef15fdd")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, StringValueType.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class StringValueType extends ValueType {
      * 
      * @return a {@link StringValueType} proxy on the created {@link DataType}.
      */
-    @objid ("007e26c7-63b6-49e0-a237-5076e0d57298")
+    @objid ("635d6870-ad5e-43e2-bcd4-9fc5781d708e")
     public static StringValueType create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, StringValueType.STEREOTYPE_NAME);
@@ -64,36 +64,34 @@ public class StringValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a DataType
      * @return a {@link StringValueType} proxy or <i>null</i>.
      */
-    @objid ("8885edae-84aa-4908-a39c-932b6590558a")
+    @objid ("236aaf2a-81a7-4c7e-b2cb-646d4ee54022")
     public static StringValueType instantiate(final DataType obj) {
         return StringValueType.canInstantiate(obj) ? new StringValueType(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link StringValueType} proxy from a {@link DataType} stereotyped << StringValueType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link DataType}
      * @return a {@link StringValueType} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9d6a6fad-7229-4508-8849-bf54a0bbcc1d")
+    @objid ("38d8fa15-3d15-4629-bbbd-2c7f1a2cc186")
     public static StringValueType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (StringValueType.canInstantiate(obj))
-            return new StringValueType(obj);
+        	return new StringValueType(obj);
         else
-            throw new IllegalArgumentException("StringValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("StringValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c7eea196-0f64-4aba-81ab-6e907c682ff3")
+    @objid ("e6c46b03-7f82-4389-80fb-3f86e0f48ffe")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,17 +108,16 @@ public class StringValueType extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}.
-     * 
+     * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("e273056d-d8d8-4dcc-9d66-de92fb5c2f00")
+    @objid ("cb7a2f40-6cf5-46c3-af12-baf7c12a7e1d")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("d0c33fe9-f718-4ef9-a80f-fa5e96261abc")
+    @objid ("bcc752d6-9d13-4527-8641-d41fd6173f38")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -134,23 +131,23 @@ public class StringValueType extends ValueType {
         return result;
     }
 
-    @objid ("cf5c6e6b-7aac-4b81-a414-bd372bdfa019")
+    @objid ("e9054422-e79c-4ad8-8d2b-ee8e8b8e4242")
     protected StringValueType(final DataType elt) {
         super(elt);
     }
 
     @objid ("a89d3bdc-f18a-481f-8114-f08ae25840a6")
     public static final class MdaTypes {
-        @objid ("20d99d5d-f3fc-4f5c-b53d-fa60f729da3a")
+        @objid ("f453f589-329b-4c02-99ba-0d7f9e4d7390")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("700670f4-6175-4093-9fd5-3f6b74191356")
+        @objid ("067ab722-046f-42c2-ab99-606ece81d72b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("83ea022d-35e2-41b5-a34e-7d1334891411")
+        @objid ("2ef347d3-aa5b-4fa8-8ce7-15540e55be58")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("33db6fa4-338b-4de0-b2f6-039d055cb3ee")
+        @objid ("30e58ca6-786a-4b48-8fca-81846cb40c8a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "c8a2299c-93cc-47ca-82f3-53c1866d2c5b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +155,11 @@ public class StringValueType extends ValueType {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -3,11 +3,12 @@ package fr.softeam.cameldesigner.exchange.exporter;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.conversion.process.IElementProcess;
+import fr.softeam.cameldesigner.exchange.IElementProcess;
 import fr.softeam.cameldesigner.exchange.exporter.core.CamelElementExporter;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.emf.cdo.CDOObject;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("9d3c43e8-d77f-4de9-89be-8e5ed21b089a")
 public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> {
@@ -61,14 +62,51 @@ public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> 
     @objid ("df632725-e74c-469b-a67d-08864b9aaec8")
     public CDOObject getElement(CamelElement element) {
         if (element != null) {
+        
             GenerateMap genMap = GenerateMap.getInstance();
-            if(genMap.containsKey(element.getElement())) {
-                return genMap.get(element.getElement());
+            ModelElement modelioElt = element.getElement();
+        
+            if(genMap.containsKey(modelioElt)) {
+                return genMap.get(modelioElt);
             }else {
-                return process(element, (CamelElement) CamelDesignerProxyFactory.instantiate((ModelElement) element.getElement().getCompositionOwner()));
+        
+                MObject compositionOwner = modelioElt.getCompositionOwner();
+                if (compositionOwner instanceof ModelElement) {
+                    ModelElement modelioOwner = (ModelElement) compositionOwner;
+                    Object instantiated = CamelDesignerProxyFactory.instantiate(modelioOwner);
+                    if (compositionOwner instanceof CamelElement) {
+                        return process(element, (CamelElement) instantiated);
+                    }
+                }
             }
         }
         return null;
+    }
+
+    @objid ("2e7a27d9-a01e-4ff4-8863-bcec0ac8ac8c")
+    @Override
+    public CDOObject create(CamelElement element, CamelElement context) {
+        CDOObject processedElement = null;
+        GenerateMap genMap = GenerateMap.getInstance();
+        
+        try {
+            CamelElementExporter<CamelElement> exporter = (CamelElementExporter) ExporterFactory.instantiateExporter(element.getElement());
+            exporter.setProcess(this);
+        
+            CDOObject owner = getElement(context);
+            processedElement = exporter.createCamelElt(owner);
+        
+            if(processedElement != null) {
+                exporter.attach(processedElement, owner);
+                genMap.put(element.getElement(), processedElement);
+            }
+        
+        
+        }catch (Exception e) {
+            CamelDesignerModule.logService.error(e);
+            return null;
+        }
+        return processedElement;
     }
 
 }

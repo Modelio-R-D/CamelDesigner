@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.handlers.tools.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.RequirementModelDiagram;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -32,10 +31,11 @@ public class CreateRequirementModelTool extends CreateSubModelTool {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             diagramHandle.unmask(subModel.getElement(), rect.x, rect.y);
-            subModel.setDefaultName("Requirement Model");
-            diagram.setDefaultName("Requirement Diagram");
         
-            this.openDiagram(diagram, moduleContext.getModelioServices(), ICamelDesignerPeerModule.CAMEL_STYLE);
+            subModel.setDefaultName("Requirement Model");
+            diagram.setDefaultName(subModel.getName() + " diagram");
+        
+            this.openDiagram(diagram);
         
             transaction.commit();
         }

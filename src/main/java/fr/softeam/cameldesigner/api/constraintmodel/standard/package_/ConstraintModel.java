@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.10
+ * Module: CamelDesigner v1.0.12
 
- * This file was generated on 4/27/22 11:51 AM by Modelio Studio.
+ * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.package_;
 
@@ -35,8 +35,8 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <br/><i>null</i></p>
  */
 @objid ("86cc342f-3138-45c5-9f57-831a1ef207ca")
-public class ConstraintModel extends SubModel {
-    @objid ("1ef92b92-0b43-4d8f-93fa-ac98b0fa547b")
+public abstract class ConstraintModel extends SubModel {
+    @objid ("d15d5b7d-4e00-491b-976f-e0d7bc43a60f")
     public static final String STEREOTYPE_NAME = "ConstraintModel";
 
     /**
@@ -47,54 +47,12 @@ public class ConstraintModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("fb1e499e-2e4d-454f-8179-4c9eee2acd49")
+    @objid ("85fe8dd5-edd3-4b70-b550-f8677978dae8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ConstraintModel.STEREOTYPE_NAME));
     }
 
-    /**
-     * Create a new {@link Package} stereotyped << ConstraintModel >> then instantiate a {@link ConstraintModel} proxy.
-     * 
-     * @return a {@link ConstraintModel} proxy on the created {@link Package}.
-     */
-    @objid ("fb578f85-01cd-45dd-8a31-7614fd3ee191")
-    public static ConstraintModel create() {
-        ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
-        e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ConstraintModel.STEREOTYPE_NAME);
-        return ConstraintModel.instantiate((Package)e);
-    }
-
-    /**
-     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype.
-     * <p>
-     * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
-     * @param obj a Package
-     * @return a {@link ConstraintModel} proxy or <i>null</i>.
-     */
-    @objid ("076a8d57-5423-479e-af97-9f22d9181dbe")
-    public static ConstraintModel instantiate(final Package obj) {
-        return ConstraintModel.canInstantiate(obj) ? new ConstraintModel(obj) : null;
-    }
-
-    /**
-     * Tries to instantiate a {@link ConstraintModel} proxy from a {@link Package} stereotyped << ConstraintModel >> checking its metaclass and its stereotype.
-     * <p>
-     * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
-     * @param obj a {@link Package}
-     * @return a {@link ConstraintModel} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
-     */
-    @objid ("65be398d-4ad1-4eb9-92c0-2fc7a58b5a29")
-    public static ConstraintModel safeInstantiate(final Package obj) throws IllegalArgumentException {
-        if (ConstraintModel.canInstantiate(obj))
-            return new ConstraintModel(obj);
-        else
-            throw new IllegalArgumentException("ConstraintModel: Cannot instantiate "+obj+": wrong element type or stereotype");
-    }
-
-    @objid ("b1fd0d57-d55e-4d0d-a9bb-2c2d318b6e02")
+    @objid ("39858fc5-d602-422a-8523-394771941592")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +69,16 @@ public class ConstraintModel extends SubModel {
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("7ad26398-11a6-42e4-ad8a-350b1a9bba02")
+    @objid ("10354c8e-9b28-4462-8e0a-85f00bee8e43")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("6fc75e22-4ee4-4f94-b635-f00c9a528214")
+    @objid ("e9dc5676-8a22-477b-b679-cd43571364f5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -134,23 +91,23 @@ public class ConstraintModel extends SubModel {
         return result;
     }
 
-    @objid ("f2fa0855-a249-40c7-8886-bf73b6320190")
+    @objid ("2c5b034c-8066-427b-88a5-26183c2ee6eb")
     protected ConstraintModel(final Package elt) {
         super(elt);
     }
 
     @objid ("ebe267b3-9ebc-4287-8f57-7be02738f119")
     public static final class MdaTypes {
-        @objid ("4e291b98-a2c8-4744-ad89-fcf8c214c6e4")
+        @objid ("0dd6a0e2-70b9-4a60-8571-43e9e5e10290")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("334becfa-dec2-4e8b-b36a-10c9cd845917")
+        @objid ("fc392a2a-fe28-4174-a042-4dbfe7a5a56d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9e7e889a-4dba-4b47-b85e-a439ba376ef9")
+        @objid ("7f612710-fca5-4d90-a6e5-97e3e62e4c74")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6c3f1306-a514-403c-b4d0-c2310f4bb009")
+        @objid ("2275c96e-a550-4927-9254-721fcb79b2fb")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0a13db20-02d0-45a2-954a-db10f14d206b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -158,11 +115,11 @@ public class ConstraintModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
