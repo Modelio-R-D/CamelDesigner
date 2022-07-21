@@ -248,7 +248,7 @@
                 <Icon path="res/icon/gui/constraintModel_24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="UnaryConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UnaryConstraint.label" uid="e8928d56-f64c-4a1f-90b0-929dc78cd231" is-abstract="true">
+            <Stereotype name="UnaryConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.UnaryConstraint.label" uid="e8928d56-f64c-4a1f-90b0-929dc78cd231" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
@@ -261,11 +261,11 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="AttributeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {e8928d56-f64c-4a1f-90b0-929dc78cd231} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.AttributeConstraint.label" uid="310d656e-d693-4ec1-b186-66894464b4b3" is-abstract="false">
+            <Stereotype name="AttributeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {e8928d56-f64c-4a1f-90b0-929dc78cd231} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.AttributeConstraint.label" uid="310d656e-d693-4ec1-b186-66894464b4b3" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="CompositeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CompositeConstraint.label" uid="95f69da8-e7d7-494b-90a7-db1618fa56fc" is-abstract="true">
+            <Stereotype name="CompositeConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {4afa0df7-c748-4db8-b9a7-a082a8419c00} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.CompositeConstraint.label" uid="95f69da8-e7d7-494b-90a7-db1618fa56fc" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -284,7 +284,7 @@
                     <TagType name="logicalOperator" uid="eb2e6178-406b-46d5-80d2-5453be9fce45" label="%tagtype.logicalOperator.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype name="CamelConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.CamelConstraint.label" uid="4afa0df7-c748-4db8-b9a7-a082a8419c00" is-abstract="true">
+            <Stereotype name="CamelConstraint" metaclass="Standard.Constraint" owner-stereotype="mref#'' {f81fdaa1-17e1-49a4-bf1f-60c18563c100} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.CamelConstraint.label" uid="4afa0df7-c748-4db8-b9a7-a082a8419c00" is-abstract="true">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
@@ -812,12 +812,12 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="Entity" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Entity.label" uid="8edda027-b2f3-43bb-b101-0058aaa1550f" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/Entity24.png"/>
+                <Image path="res/icon/gui/Entity48.png"/>
             </Stereotype>
             <Stereotype name="ExternalIdentifier" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ExternalIdentifier.label" uid="9e9641f0-08c0-4453-a828-314b9d3e7682" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/ExternalIdentifier24.png"/>
+                <Image path="res/icon/gui/ExternalIdentifier48.png"/>
                 <TagTypes>
                     <TagType name="identifier" uid="79f66d2e-b870-4d06-81b9-8851077fb522" label="%tagtype.identifier.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
@@ -831,8 +831,8 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="Organisation" metaclass="Standard.Class" owner-stereotype="mref#'' {8edda027-b2f3-43bb-b101-0058aaa1550f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Organisation.label" uid="fa6ac57f-ab05-4b55-81ec-f129e360b94d" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/Organization24.png"/>
+                <Image path="res/icon/gui/Organization48.png"/>
                 <TagTypes>
                     <TagType name="www" uid="79c63438-ac0f-42ea-aead-1ff7c9210f58" label="%tagtype.www.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="postalAddress" uid="cfbc93ca-abc2-46b7-954e-feedaadfd214" label="%tagtype.postalAddress.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -841,7 +841,7 @@
             </Stereotype>
             <Stereotype name="OrganisationModel" metaclass="Standard.Package" owner-stereotype="mref#'' {577c153e-42b8-4f36-9686-1a6109ffdc16} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.OrganisationModel.label" uid="e44c4759-0924-40bc-95d9-3cf51944eccf" is-abstract="false">
                 <Icon path="res/icon/gui/organisationModel_24.png"/>
-                <Image path=""/>
+                <Image path="res/icon/gui/organisationModel_48.png"/>
                 <TagTypes>
                     <TagType name="organisationName" uid="f8f457b3-49af-40e8-8af6-d2a7c8a961ae" label="%tagtype.organisationName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="organisationEmail" uid="9449c6de-b56a-409f-ad60-bb01d80d128e" label="%tagtype.organisationEmail.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -850,8 +850,8 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="Permission" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Permission.label" uid="6ae08256-a803-41d5-b777-25c632563818" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/Permission24.png"/>
+                <Image path="res/icon/gui/Permission48.png"/>
                 <TagTypes>
                     <TagType name="startTime" uid="1cd5d4cb-89a8-4de9-bb2b-b8c6c32eb886" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="endTime" uid="915d1bbf-4329-4bc3-808f-6a5c16adb930" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -859,8 +859,8 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="PlatformCredentials" metaclass="Standard.Class" owner-stereotype="mref#'' {ff07e549-20c1-4871-863d-c00d48790863} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.PlatformCredentials.label" uid="18028ade-34c8-4575-802c-163035bf0bb0" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/PlatformCredentials24.png"/>
+                <Image path="res/icon/gui/PlatformCredentials48.png"/>
                 <TagTypes>
                     <TagType name="password" uid="82175de9-34de-4e30-ba3e-d13cdf0653d1" label="%tagtype.password.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
@@ -877,8 +877,8 @@
                 <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
             </Stereotype>
             <Stereotype name="RoleAssignment" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RoleAssignment.label" uid="25d04405-c94a-44a0-848d-8563ca51ba23" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/RoleAssignment24.png"/>
+                <Image path="res/icon/gui/RoleAssignment48.png"/>
                 <TagTypes>
                     <TagType name="startTime" uid="18d4111c-a2ed-4810-84d3-509d97db6890" label="%tagtype.startTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="endTime" uid="a5dd39e5-3525-409a-86ca-821144af3aab" label="%tagtype.endTime.label" parameter-card="1" is-hidden="false" is-signed="false"/>
@@ -886,16 +886,16 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="ServiceResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.ServiceResourceFilter.label" uid="0012ff53-c300-4f0c-bdce-8583f97e3236" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/ServiceResourceFilter24.png"/>
+                <Image path="res/icon/gui/ServiceResourceFilter48.png"/>
                 <TagTypes>
                     <TagType name="serviceURL" uid="1b4c10c8-5621-4bb6-aa2e-3f00deea0d5e" label="%tagtype.serviceURL.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                     <TagType name="everyService" uid="a2aaca30-b509-469a-b65c-99a30cd09e16" label="%tagtype.everyService.label" parameter-card="0" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
             <Stereotype name="SoftwareComponentResourceFilter" metaclass="Standard.Class" owner-stereotype="mref#'' {ce775666-60ae-48ab-94dd-b9a12b9edf2f} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SoftwareComponentResourceFilter.label" uid="d2a3f527-691b-4b04-a5c2-63f39b55c173" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/SoftwareComponentResourceFilter24.png"/>
+                <Image path="res/icon/gui/SoftwareComponentResourceFilter48.png"/>
                 <TagTypes>
                     <TagType name="everyComponent" uid="726ba30c-05cc-4f4b-b31a-4c9238661a62" label="%tagtype.everyComponent.label" parameter-card="0" is-hidden="false" is-signed="false"/>
                 </TagTypes>
@@ -913,8 +913,8 @@
                 </TagTypes>
             </Stereotype>
             <Stereotype name="UserGroup" metaclass="Standard.Class" owner-stereotype="mref#'' {babf8276-c4d4-4d86-b02b-d20c6636d937} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.UserGroup.label" uid="a69e85bc-a398-4ffb-a9d6-267bdf5cf5b2" is-abstract="false">
-                <Icon path="res/icon/gui/organisationModelEmpty_24.png"/>
-                <Image path="res/icon/gui/organisationModelEmpty_48.png"/>
+                <Icon path="res/icon/gui/UserGroup24.png"/>
+                <Image path="res/icon/gui/UserGroup48.png"/>
             </Stereotype>
         </Profile>
         <Profile uid="002a1553-9258-4f57-a0b9-fdcebc63a8ae" id="RequirementModel">
@@ -1276,7 +1276,7 @@
             </Command>
             <Command id="Camel_Model_diagram" label="%command.Camel_Model_diagram.label" tooltip="%command.Camel_Model_diagram.tooltip" image="res/icon/gui/CamelModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#CamelModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1297,7 +1297,7 @@
             </Command>
             <Command id="Data_Instance_Model_diagram" label="%command.Data_Instance_Model_diagram.label" tooltip="%command.Data_Instance_Model_diagram.tooltip" image="res/icon/gui/dataInstanceModelDiagram_24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DataInstanceModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="Data Instance Model diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DataInstanceModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1310,7 +1310,7 @@
             </Command>
             <Command id="Data_Type_Model_diagram" label="%command.Data_Type_Model_diagram.label" tooltip="%command.Data_Type_Model_diagram.tooltip" image="res/icon/gui/dataModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DataTypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="DataTypeModelDiagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DataTypeModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1323,7 +1323,7 @@
             </Command>
             <Command id="Deployment_Instance_Model_diagram" label="%command.Deployment_Instance_Model_diagram.label" tooltip="%command.Deployment_Instance_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentInstanceModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1336,7 +1336,7 @@
             </Command>
             <Command id="Deployment_Type_Model_diagram" label="%command.Deployment_Type_Model_diagram.label" tooltip="%command.Deployment_Type_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#DeploymentTypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="Diagram"/>
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
@@ -1349,8 +1349,11 @@
             </Command>
             <Command id="Execution_Model_diagram" label="%command.Execution_Model_diagram.label" tooltip="%command.Execution_Model_diagram.tooltip" image="res/icon/gui/executionModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#ExecutionModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#ExecutionModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/exportCamel_24.png" modify-model="false">
@@ -1367,8 +1370,11 @@
             </Command>
             <Command id="Location_Model_diagram" label="%command.Location_Model_diagram.label" tooltip="%command.Location_Model_diagram.tooltip" image="res/icon/gui/locationModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#LocationModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#LocationModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Metadata_Model" label="%command.Metadata_Model.label" tooltip="%command.Metadata_Model.tooltip" image="res/icon/gui/metadataModel_24.png" modify-model="true">
@@ -1377,8 +1383,11 @@
             </Command>
             <Command id="Metadata_Model_diagram" label="%command.Metadata_Model_diagram.label" tooltip="%command.Metadata_Model_diagram.tooltip" image="res/icon/gui/metadataModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#MetaDataModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#MetadataModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Metric_Instance_Model" label="%command.Metric_Instance_Model.label" tooltip="%command.Metric_Instance_Model.tooltip" image="res/icon/gui/MetricInstanceModel_24.png" modify-model="true">
@@ -1387,8 +1396,11 @@
             </Command>
             <Command id="Metric_Instance_Model_diagram" label="%command.Metric_Instance_Model_diagram.label" tooltip="%command.Metric_Instance_Model_diagram.tooltip" image="res/icon/gui/MetricInstanceModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#MetricInstanceModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#MetricInstanceModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Metric_Type_Model" label="%command.Metric_Type_Model.label" tooltip="%command.Metric_Type_Model.tooltip" image="res/icon/gui/metricModel_24.png" modify-model="true">
@@ -1397,8 +1409,11 @@
             </Command>
             <Command id="Metric_Type_Model_diagram" label="%command.Metric_Type_Model_diagram.label" tooltip="%command.Metric_Type_Model_diagram.tooltip" image="res/icon/gui/MetricTypeModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#MetricTypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#MetricTypeModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Organisation_Model" label="%command.Organisation_Model.label" tooltip="%command.Organisation_Model.tooltip" image="res/icon/gui/organisationModel_24.png" modify-model="true">
@@ -1407,8 +1422,11 @@
             </Command>
             <Command id="Organisation_Model_diagram" label="%command.Organisation_Model_diagram.label" tooltip="%command.Organisation_Model_diagram.tooltip" image="res/icon/gui/organisationModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#OrganisationModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Requirement_Model" label="%command.Requirement_Model.label" tooltip="%command.Requirement_Model.tooltip" image="res/icon/gui/requirementModel_24.png" modify-model="true">
@@ -1417,8 +1435,11 @@
             </Command>
             <Command id="Requirement_Model_diagram" label="%command.Requirement_Model_diagram.label" tooltip="%command.Requirement_Model_diagram.tooltip" image="res/icon/gui/requirementModelDiagram_48.ICON.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#RequirementModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#RequirementModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Scalability_Model" label="%command.Scalability_Model.label" tooltip="%command.Scalability_Model.tooltip" image="res/icon/gui/scalabilityModel_24.png" modify-model="true">
@@ -1427,8 +1448,11 @@
             </Command>
             <Command id="Scalability_Model_diagram" label="%command.Scalability_Model_diagram.label" tooltip="%command.Scalability_Model_diagram.tooltip" image="res/icon/gui/scalabilityModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#ScalabilityModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#ScalabilityModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Security_Model" label="%command.Security_Model.label" tooltip="%command.Security_Model.tooltip" image="res/icon/gui/securityModel_24.png" modify-model="true">
@@ -1437,8 +1461,11 @@
             </Command>
             <Command id="Security_Model_diagram" label="%command.Security_Model_diagram.label" tooltip="%command.Security_Model_diagram.tooltip" image="res/icon/gui/securityModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#SecurityModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#SecurityModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Type_Model" label="%command.Type_Model.label" tooltip="%command.Type_Model.tooltip" image="res/icon/gui/typeModel_24.png" modify-model="true">
@@ -1447,8 +1474,11 @@
             </Command>
             <Command id="Type_Model_diagram" label="%command.Type_Model_diagram.label" tooltip="%command.Type_Model_diagram.tooltip" image="res/icon/gui/typeModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#TypeModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#TypeModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
             <Command id="Unit_Model" label="%command.Unit_Model.label" tooltip="%command.Unit_Model.tooltip" image="res/icon/gui/unitModel_24.png" modify-model="true">
@@ -1457,8 +1487,11 @@
             </Command>
             <Command id="Unit_Model_diagram" label="%command.Unit_Model_diagram.label" tooltip="%command.Unit_Model_diagram.tooltip" image="res/icon/gui/unitModelDiagram_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
-                <Handler class="fr.softeam.cameldesigner.handlers.commands.creatediagram.CreateCamelModelDiagramCommand">
-                    <HParameter name="name" value=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.CreateDiagramCommand">
+                    <HParameter name="name" value="Diagram"/>
+                    <HParameter name="stereotype" value="CamelDesigner#UnitModelDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                    <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
         </Commands>
@@ -1711,14 +1744,6 @@
                     <HParameter name="name" value="Deployment Type Model"/>
                 </Handler>
             </Tool>
-            <Tool id="Dimensioned_Unit" label="%tool.Dimensioned_Unit.label" tooltip="%tool.Dimensioned_Unit.tooltip" image="res/icon/gui/unitModelEmpty_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#DimensionedUnit"/>
-                    <HParameter name="metaclass" value="Standard.DataType"/>
-                    <HParameter name="name" value="Dimensioned Unit"/>
-                </Handler>
-            </Tool>
             <Tool id="Dimensionless" label="%tool.Dimensionless.label" tooltip="%tool.Dimensionless.tooltip" image="res/icon/gui/unitModelEmpty_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
                 <Handler class="Box">
@@ -1727,7 +1752,7 @@
                     <HParameter name="name" value="Dimension less"/>
                 </Handler>
             </Tool>
-            <Tool id="Entity" label="%tool.Entity.label" tooltip="%tool.Entity.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Entity" label="%tool.Entity.label" tooltip="%tool.Entity.tooltip" image="res/icon/gui/Entity24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Entity"/>
@@ -1775,7 +1800,7 @@
                     <HParameter name="name" value="ExecutionModel"/>
                 </Handler>
             </Tool>
-            <Tool id="External_Identifier" label="%tool.External_Identifier.label" tooltip="%tool.External_Identifier.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="External_Identifier" label="%tool.External_Identifier.label" tooltip="%tool.External_Identifier.tooltip" image="res/icon/gui/ExternalIdentifier24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ExternalIdentifier"/>
@@ -2070,7 +2095,7 @@
                     <HParameter name="name" value="OptimisationRequirement"/>
                 </Handler>
             </Tool>
-            <Tool id="Organisation" label="%tool.Organisation.label" tooltip="%tool.Organisation.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Organisation" label="%tool.Organisation.label" tooltip="%tool.Organisation.tooltip" image="res/icon/gui/Organization24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Organisation"/>
@@ -2118,7 +2143,7 @@
                     <HParameter name="name" value="PaaSMeasurement"/>
                 </Handler>
             </Tool>
-            <Tool id="Permission" label="%tool.Permission.label" tooltip="%tool.Permission.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Permission" label="%tool.Permission.label" tooltip="%tool.Permission.tooltip" image="res/icon/gui/Permission24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#Permission"/>
@@ -2126,7 +2151,7 @@
                     <HParameter name="name" value="Permission"/>
                 </Handler>
             </Tool>
-            <Tool id="Platform_Credentials" label="%tool.Platform_Credentials.label" tooltip="%tool.Platform_Credentials.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Platform_Credentials" label="%tool.Platform_Credentials.label" tooltip="%tool.Platform_Credentials.tooltip" image="res/icon/gui/PlatformCredentials24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#PlatformCredentials"/>
@@ -2241,7 +2266,7 @@
                     <HParameter name="name" value="Resource Requirement"/>
                 </Handler>
             </Tool>
-            <Tool id="Role_Assignment" label="%tool.Role_Assignment.label" tooltip="%tool.Role_Assignment.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Role_Assignment" label="%tool.Role_Assignment.label" tooltip="%tool.Role_Assignment.tooltip" image="res/icon/gui/RoleAssignment24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#RoleAssignment"/>
@@ -2385,7 +2410,7 @@
                     <HParameter name="name" value="ServiceLevelObjective"/>
                 </Handler>
             </Tool>
-            <Tool id="Service_Resource_Filter" label="%tool.Service_Resource_Filter.label" tooltip="%tool.Service_Resource_Filter.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Service_Resource_Filter" label="%tool.Service_Resource_Filter.label" tooltip="%tool.Service_Resource_Filter.tooltip" image="res/icon/gui/ServiceResourceFilter24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#ServiceResourceFilter"/>
@@ -2425,7 +2450,7 @@
                     <HParameter name="name" value="Software Component"/>
                 </Handler>
             </Tool>
-            <Tool id="Software_Component_Resource_Filter" label="%tool.Software_Component_Resource_Filter.label" tooltip="%tool.Software_Component_Resource_Filter.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="Software_Component_Resource_Filter" label="%tool.Software_Component_Resource_Filter.label" tooltip="%tool.Software_Component_Resource_Filter.tooltip" image="res/icon/gui/SoftwareComponentResourceFilter24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#SoftwareComponentResourceFilter"/>
@@ -2464,14 +2489,6 @@
                     <HParameter name="name" value="Unary Event Pattern"/>
                 </Handler>
             </Tool>
-            <Tool id="Unit" label="%tool.Unit.label" tooltip="%tool.Unit.tooltip" image="res/icon/gui/unitModelEmpty_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#UnitModel"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="CamelDesigner#Unit"/>
-                    <HParameter name="metaclass" value="Standard.DataType"/>
-                    <HParameter name="name" value="Unit"/>
-                </Handler>
-            </Tool>
             <Tool id="Unit_Model" label="%tool.UnitModel.label" tooltip="%tool.UnitModel.tooltip" image="res/icon/gui/unitModel_24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateUnitModelTool">
@@ -2496,7 +2513,7 @@
                     <HParameter name="name" value="User"/>
                 </Handler>
             </Tool>
-            <Tool id="UserGroup" label="%tool.UserGroup.label" tooltip="%tool.UserGroup.tooltip" image="res/icon/gui/organisationModelEmpty_24.png">
+            <Tool id="UserGroup" label="%tool.UserGroup.label" tooltip="%tool.UserGroup.tooltip" image="res/icon/gui/UserGroup24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#OrganisationModel"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#UserGroup"/>
@@ -2971,7 +2988,6 @@
             </DiagramType>
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#TypeModelDiagram">
                 <Palette keepBasePalette="false">
-                    <ToolRef refid="Type_Model" group="%group.Type.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Camel_Attribute" group="%group.Common.label"/>
                     <ToolRef refid="Measurable_Attribute" group="%group.Common.label"/>
@@ -2990,6 +3006,9 @@
             <DiagramType base-diagram="Standard.ClassDiagram" stereotype="CamelDesigner#UnitModelDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Unit_Dimension" group="%group.Unit.label"/>
+                    <ToolRef refid="Composite_Unit" group="%group.Unit.label"/>
+                    <ToolRef refid="Dimensionless" group="%group.Unit.label"/>
+                    <ToolRef refid="Single_Unit" group="%group.Unit.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
                     <ToolRef refid="Camel_Attribute" group="%group.Common.label"/>
                     <ToolRef refid="Measurable_Attribute" group="%group.Common.label"/>

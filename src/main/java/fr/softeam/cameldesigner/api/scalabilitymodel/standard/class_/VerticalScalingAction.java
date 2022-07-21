@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("4b6ca116-e08c-4a63-a9f4-e79ab6d83774")
 public class VerticalScalingAction extends ScalingAction {
-    @objid ("da4841cc-ac7b-4fcd-8228-c13fb96b4988")
+    @objid ("552c3854-f870-4e5a-8288-ac2601c7cc91")
     public static final String STEREOTYPE_NAME = "VerticalScalingAction";
 
     /**
@@ -47,7 +47,7 @@ public class VerticalScalingAction extends ScalingAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5311b751-33ca-4fbb-9ae8-1201711ea06d")
+    @objid ("d0070543-9430-443b-943d-2ccbaaebec42")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VerticalScalingAction.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class VerticalScalingAction extends ScalingAction {
      * 
      * @return a {@link VerticalScalingAction} proxy on the created {@link Class}.
      */
-    @objid ("46a868ba-a273-44bd-bb8c-3f96013a777b")
+    @objid ("fbf35415-bfa3-4c0f-9dfa-b4b6acd7fd48")
     public static VerticalScalingAction create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, VerticalScalingAction.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class VerticalScalingAction extends ScalingAction {
      * @param obj a Class
      * @return a {@link VerticalScalingAction} proxy or <i>null</i>.
      */
-    @objid ("86e25d0f-dabc-4c40-829f-7204e506cb2d")
+    @objid ("1da25cf0-7d0f-4430-9366-92194febf585")
     public static VerticalScalingAction instantiate(final Class obj) {
         return VerticalScalingAction.canInstantiate(obj) ? new VerticalScalingAction(obj) : null;
     }
@@ -84,7 +84,7 @@ public class VerticalScalingAction extends ScalingAction {
      * @return a {@link VerticalScalingAction} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ba918456-59d1-4a54-850e-0ee2c3976f8e")
+    @objid ("cffd1f65-7d4c-44cf-9936-1e55cc1e6fd0")
     public static VerticalScalingAction safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (VerticalScalingAction.canInstantiate(obj))
         	return new VerticalScalingAction(obj);
@@ -92,7 +92,7 @@ public class VerticalScalingAction extends ScalingAction {
         	throw new IllegalArgumentException("VerticalScalingAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("2e89663a-5e16-42e2-aa2b-8ac2647986f2")
+    @objid ("a01fa081-6e0c-4005-999f-1137edafb576")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class VerticalScalingAction extends ScalingAction {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("21e0d9bf-66b4-453b-8cb9-c00c0989b9c0")
+    @objid ("ab4ff5ff-51dd-4035-9cd0-7890c761caa9")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("ee00944c-ace3-46a9-bbb8-a75cfb8df2ba")
+    @objid ("ed365258-0537-48fa-be2f-8a49b71f45e9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class VerticalScalingAction extends ScalingAction {
         return result;
     }
 
-    @objid ("eaefb43b-ac7c-42bc-b457-5dd890a72562")
+    @objid ("c5e4aa26-0a4a-42e7-b418-db98b008a641")
     protected VerticalScalingAction(final Class elt) {
         super(elt);
     }
 
     @objid ("9d977d3c-b012-4964-81d8-a352196858d6")
     public static final class MdaTypes {
-        @objid ("de086fa7-6b45-4b53-be19-de7747672997")
+        @objid ("7d80fe49-e388-47af-a237-f8f29e2a2eef")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2d358482-b467-4838-b864-39cb756a0fc8")
+        @objid ("09e010f5-7702-43d9-907d-d937ab6ba87f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("845f8cb1-b996-41c6-8eac-411f978ddb75")
+        @objid ("40bf3125-4a4b-4fdb-acad-e6e99ab14b6e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c3094134-3c42-4d07-9151-efc310c8c41d")
+        @objid ("08a60aa7-d9be-4e29-81b1-3e8f4f6da858")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "725de5f4-a090-41c9-b326-f573c1d3b15d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

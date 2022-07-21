@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.standard.class_;
 
@@ -41,7 +41,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("87827b52-a413-4f8b-ac16-cf56568d032b")
 public class MmsConcept extends MmsObject {
-    @objid ("6f972074-a625-4678-ac6d-021a8ee3cf92")
+    @objid ("fb7746fa-1a9f-4793-b8d7-dcbb1c3575cc")
     public static final String STEREOTYPE_NAME = "MmsConcept";
 
     /**
@@ -52,7 +52,7 @@ public class MmsConcept extends MmsObject {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b43ae986-c117-418e-a646-158de3296a77")
+    @objid ("5e37acc1-3bcf-42b1-914b-e2f6d8663af3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConcept.STEREOTYPE_NAME));
     }
@@ -62,7 +62,7 @@ public class MmsConcept extends MmsObject {
      * 
      * @return a {@link MmsConcept} proxy on the created {@link Class}.
      */
-    @objid ("352d76b1-2c72-45fd-869a-ac8fd1f74d28")
+    @objid ("5596ccd7-173d-4d4e-945c-54206ff5a19f")
     public static MmsConcept create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MmsConcept.STEREOTYPE_NAME);
@@ -76,7 +76,7 @@ public class MmsConcept extends MmsObject {
      * @param obj a Class
      * @return a {@link MmsConcept} proxy or <i>null</i>.
      */
-    @objid ("5217d953-319f-46bb-a168-7668bc9258d4")
+    @objid ("59d6e2da-839b-4193-9b4a-53ca52338f3a")
     public static MmsConcept instantiate(final Class obj) {
         return MmsConcept.canInstantiate(obj) ? new MmsConcept(obj) : null;
     }
@@ -89,7 +89,7 @@ public class MmsConcept extends MmsObject {
      * @return a {@link MmsConcept} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c7d882db-50b9-45f6-a501-0e4b06f76fdc")
+    @objid ("63d33d30-6845-4309-bc31-e03c5f39dae7")
     public static MmsConcept safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (MmsConcept.canInstantiate(obj))
         	return new MmsConcept(obj);
@@ -103,7 +103,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("655396fe-0adf-4c3c-88fb-9e72e93e0f0f")
+    @objid ("31a881b5-d44c-4ae3-8ea1-2c0f0b02e5f5")
     public void addConcept(final MmsConcept obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
@@ -115,7 +115,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("cb385480-5779-4f0e-bdd3-932653871fe1")
+    @objid ("ade17870-b716-4656-87dc-a677310da065")
     public void addInstance(final MmsConceptInstance obj) {
         if (obj!=null)
           ((Class) this.elt).getDeclared().add(obj.getElement());
@@ -127,13 +127,13 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("b8a63416-af1d-40f7-a094-b8eee24df5f5")
+    @objid ("4ae652c3-1d0a-4a57-abba-d6aa299a1e55")
     public void addProperty(final MmsProperty obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedAttribute().add(obj.getElement());
     }
 
-    @objid ("7fc47fca-eb12-48b3-8fdc-5c925d17fa51")
+    @objid ("a7bd17ef-6988-44a4-9226-035cd6477466")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -155,7 +155,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("31d38c3e-1c7d-4943-93ea-f19301264d14")
+    @objid ("8d502852-cd91-4109-86b5-bd4d08a861f2")
     public List<MmsConcept> getConcept() {
         List<MmsConcept> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
@@ -169,7 +169,7 @@ public class MmsConcept extends MmsObject {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("7f17c401-a238-41ad-abf0-32aa524a3008")
+    @objid ("0bdfd51c-8bdc-4873-877b-4fdb9f37ce7a")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -181,7 +181,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("e9c87ca8-db6b-4e77-a165-8a988fcb3679")
+    @objid ("1094ad2b-5085-48ea-b353-f0ef9be109f5")
     public List<MmsConceptInstance> getInstance() {
         List<MmsConceptInstance> results = new ArrayList<>();
         for (Instance mObj : ((Class) this.elt).getDeclared()){
@@ -197,7 +197,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("0e37e968-c61c-452d-aadc-75330202b8df")
+    @objid ("981605ff-002a-4988-9f1d-a3f8a26c50e2")
     public MmsConcept getParent() {
         return (MmsConcept)CamelDesignerProxyFactory.instantiate(((Class) this.elt).getOwner(), MmsConcept.STEREOTYPE_NAME);
     }
@@ -208,7 +208,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("713807da-0b14-4fe6-a4b5-c1061301b9d3")
+    @objid ("df3c166b-f592-4ae2-aa32-262675b2a7a2")
     public List<MmsProperty> getProperty() {
         List<MmsProperty> results = new ArrayList<>();
         for (Attribute mObj : ((Class) this.elt).getOwnedAttribute()){
@@ -218,7 +218,7 @@ public class MmsConcept extends MmsObject {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("8438b819-8706-4998-8551-49b4786f821e")
+    @objid ("e1966b25-b399-40f0-8b66-592bd2bf7617")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -230,7 +230,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("1a4cf734-52d3-4bf8-b56b-248ad1e33f96")
+    @objid ("67eb74d0-d8fd-4312-aa81-8d84fc16921b")
     public boolean removeConcept(final MmsConcept obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -241,7 +241,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("0e88140a-1b49-485d-8998-e17032dda6f5")
+    @objid ("1a70615b-bc39-47a1-bdb2-932db87e49c4")
     public boolean removeInstance(final MmsConceptInstance obj) {
         return (obj!=null)? ((Class) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -252,7 +252,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("408808fc-8a46-45bd-bf9a-1383e23bb319")
+    @objid ("0ea72a9d-4ef1-47fd-9640-69b051e3c90d")
     public boolean removeProperty(final MmsProperty obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -263,7 +263,7 @@ public class MmsConcept extends MmsObject {
      * null
      * 
      */
-    @objid ("9c781584-e421-44cb-b96e-729334f2f837")
+    @objid ("8f6b7699-5ed3-466a-a32a-ce3362ea1d7a")
     public void setParent(final MmsConcept obj) {
         ((Class) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -279,23 +279,23 @@ public class MmsConcept extends MmsObject {
         return result;
     }
 
-    @objid ("cba910cb-d8c3-4e4f-a30b-f1751fc8239d")
+    @objid ("39a0324e-7aca-41d3-9777-8be4e2735684")
     protected MmsConcept(final Class elt) {
         super(elt);
     }
 
     @objid ("acc006aa-96cd-4009-abc5-630b360acd1a")
     public static final class MdaTypes {
-        @objid ("587e2468-dcd8-4fb6-9690-34cd52d28d2e")
+        @objid ("c5a67d71-e053-4aae-9e73-f4579a8aedd1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e35bfefd-859d-4fc5-bb4a-4b2ae8a61ebe")
+        @objid ("d351e6d9-a265-4aca-ab24-9a1d2cc996c3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1c92bf63-316a-4ab5-8501-3eb3ed893deb")
+        @objid ("8ac883f5-0824-4dd2-8297-49672faf6c0d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ff43dc9f-d940-44d1-987a-919c29d3aa71")
+        @objid ("c4b41a54-f252-450a-8884-d9e5d280e475")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6f3091ee-3a3b-4157-8b89-872f99b970f9");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

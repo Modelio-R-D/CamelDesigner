@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,10 +33,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("189044d4-f590-4d4b-94d6-f2503fd76c82")
 public class BooleanValue extends Value {
-    @objid ("8a5d247a-2301-48f3-b27c-a1bba250fff6")
+    @objid ("b4e7f9f6-2fa5-4caf-8947-4f0b5a334682")
     public static final String STEREOTYPE_NAME = "BooleanValue";
 
-    @objid ("e185aff1-d171-4ccf-bb4e-7c4be4c12009")
+    @objid ("cee2347d-82a0-4480-8c91-7a3618a940f6")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
@@ -47,7 +47,7 @@ public class BooleanValue extends Value {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d3c3bbc6-87df-4be3-8aea-a5e0b0b9cde8")
+    @objid ("20c7122e-e7d5-4c31-8687-d39ed0c1f3a6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, BooleanValue.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class BooleanValue extends Value {
      * 
      * @return a {@link BooleanValue} proxy on the created {@link Class}.
      */
-    @objid ("1e42f81f-8ba5-4443-b719-97df1fed7cd1")
+    @objid ("eb0c8c74-9725-4378-bed9-85e7024f9164")
     public static BooleanValue create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, BooleanValue.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class BooleanValue extends Value {
      * @param obj a Class
      * @return a {@link BooleanValue} proxy or <i>null</i>.
      */
-    @objid ("018e4b7e-28f0-4a58-9f37-fd7161f42e6a")
+    @objid ("80713401-c208-4e7f-9508-2d2850e12f9b")
     public static BooleanValue instantiate(final Class obj) {
         return BooleanValue.canInstantiate(obj) ? new BooleanValue(obj) : null;
     }
@@ -84,7 +84,7 @@ public class BooleanValue extends Value {
      * @return a {@link BooleanValue} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("cfe3b087-8ffc-4bd3-b468-d4e1815ff848")
+    @objid ("5b8fc3da-82fb-41b5-a32b-9b070c20cd82")
     public static BooleanValue safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (BooleanValue.canInstantiate(obj))
         	return new BooleanValue(obj);
@@ -92,7 +92,7 @@ public class BooleanValue extends Value {
         	throw new IllegalArgumentException("BooleanValue: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e4056730-789a-4e60-b37e-9233c9d87229")
+    @objid ("364ce6d1-cade-4c44-8a05-c77c566c5b5f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class BooleanValue extends Value {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e095dc4a-6bd8-421e-835c-556c9136bc18")
+    @objid ("d2e5f5c7-d71f-4ca1-a92b-ddbedbec755d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("87ba9a77-ed12-4711-a5c1-a25ab3159ca2")
+    @objid ("51226481-b377-44a5-86db-0da1316f8b77")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -129,7 +129,7 @@ public class BooleanValue extends Value {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7983f20d-9c43-411c-ab9a-43f65b377c8b")
+    @objid ("5cccd9ff-cd85-4912-a638-3ab29a4ff28d")
     public boolean isValue() {
         return this.elt.isTagged(BooleanValue.MdaTypes.VALUE_TAGTYPE_ELT);
     }
@@ -139,7 +139,7 @@ public class BooleanValue extends Value {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4928d268-faf2-4469-b515-50d3bfa587f7")
+    @objid ("56f3064d-8212-4c08-b2a8-b3c3c6c90acd")
     public void setValue(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(BooleanValue.MdaTypes.VALUE_TAGTYPE_ELT, this.elt);
@@ -147,26 +147,26 @@ public class BooleanValue extends Value {
           this.elt.removeTags(BooleanValue.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("99b07cf0-b333-44e2-9b80-2b5eb73799cb")
+    @objid ("fc47b684-562a-4d60-9fd0-13ddfc6eb386")
     protected BooleanValue(final Class elt) {
         super(elt);
     }
 
     @objid ("2d228821-481c-49eb-a387-abae42f72daf")
     public static final class MdaTypes {
-        @objid ("dd642e5e-dc38-4541-861e-390e11ae8c84")
+        @objid ("42e7e5ac-97aa-4062-bbdf-919c88fd2208")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("12d46d02-0347-4918-b703-276578c9b55e")
+        @objid ("31c1b3ec-ca2e-4a26-bb07-8dbe06f7df8e")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("1194d5c3-ba31-4467-80d6-44af096fca67")
+        @objid ("fc980cca-e76e-491a-ac9b-a61a119d7297")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5a19651d-8099-4ddd-a8d3-6ca3f53fc4f5")
+        @objid ("f0aa9dbd-b873-4bb9-ae56-9b7b6cb6960b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("dcc76e1d-b35d-4be0-b9b8-bba72ed52214")
+        @objid ("336b0ef7-4da7-4a3d-997f-8cdba424f7a5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b4355a7e-9eca-4a9e-8c4c-d49344a0c9a5");
             VALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "2fabd851-ad25-472c-927a-770ef9217dd9");

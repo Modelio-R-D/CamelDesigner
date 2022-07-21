@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypages.diagram;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("97afe988-3db2-4443-ada7-987f5f60cb36")
 public class DeploymentInstanceModelDiagramPropertyPage<T extends DeploymentInstanceModelDiagram> extends NamedElementPropertyPage<T> {
@@ -11,7 +11,7 @@ public class DeploymentInstanceModelDiagramPropertyPage<T extends DeploymentInst
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
      * @param MObject : the selected element
-     *
+     * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
@@ -24,7 +24,7 @@ public class DeploymentInstanceModelDiagramPropertyPage<T extends DeploymentInst
     /**
      * This method handles the construction of the property table of a selected element
      * @param MObject : the selected element
-     *
+     * 
      * @param table : the property table to fulfill
      */
     @objid ("b12a19dd-d1e8-482b-a01f-0a34b450c2a1")

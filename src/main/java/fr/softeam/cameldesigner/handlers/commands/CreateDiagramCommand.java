@@ -1,4 +1,4 @@
-package fr.softeam.cameldesigner.handlers.commands.creatediagram;
+package fr.softeam.cameldesigner.handlers.commands;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IModule;
@@ -8,7 +8,7 @@ import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("fe97c0c4-f5c2-4d0f-a091-6aa0134de816")
-public class CreateCamelModelDiagramCommand extends DiagramCreationStandardHandler {
+public class CreateDiagramCommand extends DiagramCreationStandardHandler {
     @objid ("250651f6-75cb-4e73-9fb9-13dc5fdb3741")
     @Override
     protected void postConfigureElement(final MObject newElement, final IModule module) {

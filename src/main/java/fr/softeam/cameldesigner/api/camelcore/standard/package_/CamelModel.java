@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
@@ -56,13 +56,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("67058037-b681-4ff5-91f4-e5aa09469cd2")
 public class CamelModel extends FeaturePackage {
-    @objid ("1fe03a91-fdcd-409d-a2ef-0c742c006405")
+    @objid ("61bab86b-acc5-4306-92a8-a1b942ebeb74")
     public static final String STEREOTYPE_NAME = "CamelModel";
 
-    @objid ("6da54a77-6a4a-4494-8aab-e31ba92a8f10")
+    @objid ("bd6a5d15-56a2-46fe-ab5d-8c9fdb5bc9fb")
     public static final String APPLICATIONNAME_TAGTYPE = "applicationName";
 
-    @objid ("ad2f8c12-f943-47fd-815e-457e37ce4f57")
+    @objid ("f33f9222-8d3f-4f9e-8c0f-e0646924b63c")
     public static final String APPLICATIONVERSION_TAGTYPE = "applicationVersion";
 
     /**
@@ -73,7 +73,7 @@ public class CamelModel extends FeaturePackage {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("be2f2536-8c70-4f26-be16-07694de9d5de")
+    @objid ("f2ac836d-22dd-433c-9b27-25e70fa2c774")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME));
     }
@@ -83,7 +83,7 @@ public class CamelModel extends FeaturePackage {
      * 
      * @return a {@link CamelModel} proxy on the created {@link Package}.
      */
-    @objid ("4bd8f84d-c6c7-4fd2-99ad-b6650579dc15")
+    @objid ("5daa30a3-6946-4204-887d-92da18b862f0")
     public static CamelModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME);
@@ -97,7 +97,7 @@ public class CamelModel extends FeaturePackage {
      * @param obj a Package
      * @return a {@link CamelModel} proxy or <i>null</i>.
      */
-    @objid ("5ec41c83-d375-4eaa-8c27-34022abddef7")
+    @objid ("9787cb01-0d6f-4673-a8b5-38c72794e570")
     public static CamelModel instantiate(final Package obj) {
         return CamelModel.canInstantiate(obj) ? new CamelModel(obj) : null;
     }
@@ -110,7 +110,7 @@ public class CamelModel extends FeaturePackage {
      * @return a {@link CamelModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3e16ba99-9930-42d7-b9aa-ffef47f51c84")
+    @objid ("5c991987-7a5b-4410-b791-64399c0ed712")
     public static CamelModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (CamelModel.canInstantiate(obj))
         	return new CamelModel(obj);
@@ -124,7 +124,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("3a197846-bd55-4e99-b7be-3668c4ba0e5b")
+    @objid ("b8b39fe1-6b57-4e8f-909d-b32f4e22e323")
     public void addDataModels(final DataModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -136,7 +136,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("8097ed7a-c6fd-4338-8063-8c5e588074a9")
+    @objid ("c63903a1-82c2-460a-803d-ed94363f6bc8")
     public void addDeploymentModels(final DeploymentModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -148,7 +148,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("07ad651c-7e4f-4a7e-9982-2d50e2db2e74")
+    @objid ("96d093e9-c65e-4a77-96f3-3db06177dced")
     public void addDiagrams(final CamelModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -160,7 +160,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("94d2d8bc-29dc-4063-bfb7-1ff68d352cc7")
+    @objid ("21850d3f-50fe-4480-88c6-e522b79b66a4")
     public void addExecutionModels(final ExecutionModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -172,7 +172,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("f7bb8b59-e56d-4d01-89f0-edc23bfc9bb7")
+    @objid ("8364b99a-a28b-4b94-a812-8aba2ce93798")
     public void addLocationModels(final LocationModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -184,7 +184,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("23fd76d8-5544-461e-9821-a772a124bce0")
+    @objid ("05001d1f-cade-4b92-92f9-c99e718da560")
     public void addMetaDataModels(final MetaDataModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -196,7 +196,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("15c118af-7a98-4f57-bddf-35575f4ae125")
+    @objid ("82cc3ca4-9bcc-490b-a12e-8d5fa150387f")
     public void addMetricModels(final MetricModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -208,7 +208,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("8123cb04-f3a2-4658-88c2-0658716cbe1c")
+    @objid ("00439015-f465-4d77-8bdd-5060c964d876")
     public void addOrganisationModels(final OrganisationModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -220,7 +220,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("7bb1bb97-2217-4fb1-a1fd-292b67080bc0")
+    @objid ("a832751e-c300-4241-94b6-a26309b257f3")
     public void addRequirementModels(final RequirementModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -232,7 +232,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("3ec82da8-b58e-4463-9d2f-234470f473dc")
+    @objid ("39e78215-0352-4de5-b8d3-d91983af8e16")
     public void addScalabilityModels(final ScalabilityModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -244,7 +244,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("690b2331-47d9-4051-8c00-cd9b02a1c7f5")
+    @objid ("e34ea5ce-5a89-4db5-9a02-fefd4aa1075d")
     public void addSecurityModels(final SecurityModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -256,7 +256,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("7d80c5c9-f716-497b-8325-502789f905bf")
+    @objid ("f85542e3-4d05-4c20-9190-97e811bd7ffb")
     public void addTypeModels(final TypeModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -268,13 +268,13 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("bc617605-ad6f-4f97-9e54-7defc8f26429")
+    @objid ("7fcd5154-6e44-411a-933c-a3e6c9771ed9")
     public void addUnitModels(final UnitModel obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("7066c7b5-ec0a-4ea4-a851-51f98070a652")
+    @objid ("31117cb1-61ab-4b83-91ca-8dbde0dee816")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -295,7 +295,7 @@ public class CamelModel extends FeaturePackage {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3a1220a2-eb08-42c1-a03c-66fcde0de437")
+    @objid ("3ab27645-0905-427b-ba18-32d10e1d0e1d")
     public String getApplicationName() {
         return this.elt.getTagValue(CamelModel.MdaTypes.APPLICATIONNAME_TAGTYPE_ELT);
     }
@@ -305,7 +305,7 @@ public class CamelModel extends FeaturePackage {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("65f51905-6784-4130-a88c-abdc9f958d11")
+    @objid ("ea365694-c4c5-4885-9ae5-f1cec887b772")
     public String getApplicationVersion() {
         return this.elt.getTagValue(CamelModel.MdaTypes.APPLICATIONVERSION_TAGTYPE_ELT);
     }
@@ -316,7 +316,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("3d0defea-85a2-464d-ba50-7a0e6ab4ecbe")
+    @objid ("770a51c2-44cf-4d7b-b762-0c2354ab5b53")
     public List<DataModel> getDataModels() {
         List<DataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -334,7 +334,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("74c7e3e0-2d03-4b1a-b3a6-37a26dfc9dab")
+    @objid ("c9b3cdfa-f93e-40c4-b1d2-2d4fd6d9b466")
     public List<DeploymentModel> getDeploymentModels() {
         List<DeploymentModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -352,7 +352,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("77907e64-df65-4ea4-be5a-6f8f187b9520")
+    @objid ("6b8ea27f-6996-4608-91fa-a01a94dd8433")
     public List<CamelModelDiagram> getDiagrams() {
         List<CamelModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
@@ -366,7 +366,7 @@ public class CamelModel extends FeaturePackage {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("be6aee11-6475-427d-b130-4366d309d68d")
+    @objid ("05552b9d-fc9a-4677-a3e1-288ab7909ac6")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -378,7 +378,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("9f609a48-21aa-4346-af20-abfa8b78e977")
+    @objid ("a227cae3-ead4-4b8e-9cad-ff62b3647f9b")
     public List<ExecutionModel> getExecutionModels() {
         List<ExecutionModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -394,7 +394,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("7c25ad9b-b559-4a08-8cc4-31055a429355")
+    @objid ("33ec6fd9-d36e-4591-b5e5-13ba8161b48c")
     public List<LocationModel> getLocationModels() {
         List<LocationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -410,7 +410,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("c9ade760-e76b-4dcc-9406-020a09739439")
+    @objid ("e25ea205-657f-4b54-a0ad-b6003865b001")
     public List<MetaDataModel> getMetaDataModels() {
         List<MetaDataModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -426,7 +426,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("672f0c2b-d9a1-4c89-b1f2-5d2dda08818a")
+    @objid ("401c89cb-d885-405b-88ba-ebd88d2c0d01")
     public List<MetricModel> getMetricModels() {
         List<MetricModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -444,7 +444,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("e220ec56-6674-40bc-ab0b-b337da9c06ca")
+    @objid ("ecfd0d48-9dcc-4ea5-a09a-396244129e4c")
     public List<OrganisationModel> getOrganisationModels() {
         List<OrganisationModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -460,7 +460,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("9892d95c-a6d9-44ff-bd23-0eb6dfd97761")
+    @objid ("43644046-473f-44db-b546-b6380e9568f3")
     public List<RequirementModel> getRequirementModels() {
         List<RequirementModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -476,7 +476,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("a2288bdd-b771-462d-b5b0-76f07b5294ad")
+    @objid ("3eeb5c46-75db-4319-9a7a-5c63f26182f4")
     public List<ScalabilityModel> getScalabilityModels() {
         List<ScalabilityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -492,7 +492,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("5566a996-5e2c-46bf-bcea-e0c493ddd4e3")
+    @objid ("81009632-e5b6-45da-b05e-05cc0ac12141")
     public List<SecurityModel> getSecurityModels() {
         List<SecurityModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -508,7 +508,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("52bca836-0eb6-4a8f-be10-c7cd1bac7715")
+    @objid ("3266f22e-c585-479c-a329-636a4fe081b4")
     public List<TypeModel> getTypeModels() {
         List<TypeModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -524,7 +524,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("91baa84f-59b7-43aa-bd32-bfb06201dd2d")
+    @objid ("7cc3102e-5393-4dc6-b381-3293060b6f94")
     public List<UnitModel> getUnitModels() {
         List<UnitModel> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -534,7 +534,7 @@ public class CamelModel extends FeaturePackage {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("bd68eb52-574f-467a-855f-e2feae04204e")
+    @objid ("6c243879-c78e-45a0-8a97-1fe13148e5ff")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -546,7 +546,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("3af38725-0848-411f-9746-a3ef699c75c5")
+    @objid ("5eb42709-f3c3-452f-86f3-2c210fb3b82a")
     public boolean removeDataModels(final DataModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -557,7 +557,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("461533c0-97b7-4266-bf66-4de51c6ce3ff")
+    @objid ("c8e1f78e-3f1a-4b2f-9f45-bfbe8e06d96b")
     public boolean removeDeploymentModels(final DeploymentModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -568,7 +568,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("583e277e-8e92-4099-9358-357021186e25")
+    @objid ("2ae99c0f-61ea-4f60-9a1f-f29073187670")
     public boolean removeDiagrams(final CamelModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -579,7 +579,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("fe9012fb-f3a7-4914-8f54-959f28526a93")
+    @objid ("f9ad7b2a-2899-455f-aef5-e1910216c930")
     public boolean removeExecutionModels(final ExecutionModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -590,7 +590,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("fc899dd7-92f4-426c-a867-59c52dabf6f3")
+    @objid ("b95f4e42-92bb-4be9-b79b-4d5126f2bce7")
     public boolean removeLocationModels(final LocationModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -601,7 +601,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("448466a1-3f5f-411c-8d24-ead19c3f8403")
+    @objid ("3c3a9504-41aa-492a-9263-bac7fe7f8003")
     public boolean removeMetaDataModels(final MetaDataModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -612,7 +612,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("de4254ff-8813-4d0f-bf58-e52a6fa14aa5")
+    @objid ("1b606ae3-afc2-4300-beb3-81977d022f32")
     public boolean removeMetricModels(final MetricModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -623,7 +623,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("95bdb159-6673-4447-8c8b-a98dc961fd97")
+    @objid ("4b88e20d-067d-448e-918b-ed97b7f85c58")
     public boolean removeOrganisationModels(final OrganisationModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -634,7 +634,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("369c5732-bdb9-46c6-b8f8-06167c4c5060")
+    @objid ("42978896-3662-4966-b0eb-a41606ebfc6f")
     public boolean removeRequirementModels(final RequirementModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -645,7 +645,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("8daa5f79-728d-4f77-9a97-7ea6278ae584")
+    @objid ("0b772560-0f7f-4b5b-aaa3-0aff90c5e167")
     public boolean removeScalabilityModels(final ScalabilityModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -656,7 +656,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("9c4044ef-b74a-4b8e-8009-655cbd8af7fd")
+    @objid ("0a44752c-5e9a-4cc0-a595-3a2f4cb274d4")
     public boolean removeSecurityModels(final SecurityModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -667,7 +667,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("ec88479d-669a-43b3-9dbd-ef80fcb44217")
+    @objid ("fa702f54-996a-4891-9c9e-3d96958d53b5")
     public boolean removeTypeModels(final TypeModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -678,7 +678,7 @@ public class CamelModel extends FeaturePackage {
      * null
      * 
      */
-    @objid ("a98fab32-d31d-497a-a0e0-417086b32f08")
+    @objid ("a751bb06-4e0f-4187-b6ba-4b3dfeb576f1")
     public boolean removeUnitModels(final UnitModel obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -688,7 +688,7 @@ public class CamelModel extends FeaturePackage {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("855ff71b-e519-47fd-bbe1-4217ccd9f1db")
+    @objid ("bd1aee70-08d7-4d7f-8edf-4bfbc345abc3")
     public void setApplicationName(final String value) {
         this.elt.putTagValue(CamelModel.MdaTypes.APPLICATIONNAME_TAGTYPE_ELT, value);
     }
@@ -698,7 +698,7 @@ public class CamelModel extends FeaturePackage {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4251190d-7d02-4088-ae46-9e9eeda69d8f")
+    @objid ("614502e3-886a-47e0-8e12-260e0131f8be")
     public void setApplicationVersion(final String value) {
         this.elt.putTagValue(CamelModel.MdaTypes.APPLICATIONVERSION_TAGTYPE_ELT, value);
     }
@@ -722,29 +722,29 @@ public class CamelModel extends FeaturePackage {
         return result;
     }
 
-    @objid ("49531706-19db-4bf8-9d2a-9a1939d02320")
+    @objid ("98bbde34-6be7-4473-b2ce-7b256a4d0996")
     protected CamelModel(final Package elt) {
         super(elt);
     }
 
     @objid ("18704a21-5db9-4f8d-9058-4c21969dcd9d")
     public static final class MdaTypes {
-        @objid ("63e53b8e-56e0-44b4-8256-ce224a492a96")
+        @objid ("92917224-ab57-4c64-998c-aa38a3e6fac1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("93eb410d-0e80-40d2-940a-01e0db8fedba")
+        @objid ("926fc76f-1490-45e6-ac55-361b90937c50")
         public static TagType APPLICATIONNAME_TAGTYPE_ELT;
 
-        @objid ("d31a8bbc-5d9e-43e8-bb4c-0669452aa1fa")
+        @objid ("693f494c-0727-437b-b9e8-d6b31f8be7be")
         public static TagType APPLICATIONVERSION_TAGTYPE_ELT;
 
-        @objid ("612ac44a-3109-40b0-90a5-90d3a631fea8")
+        @objid ("50163dbd-17ad-4d93-be29-743278065147")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("27be79be-daf8-41ef-ae9b-a89713c7a697")
+        @objid ("6a54c60c-0a04-4276-a878-cda8e16712e0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f326cab6-311b-40dc-8f07-1afcbc6dfcca")
+        @objid ("46bfa92c-5f54-43ad-a7aa-d68831146c6a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e33cb0ef-7003-4579-8739-638c171ab891");
             APPLICATIONNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1e31728e-d8b4-4498-9d67-219b020ee5ff");

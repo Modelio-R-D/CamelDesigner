@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,10 +33,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("108ceff7-c9cf-4dcb-8e30-e9a6e0322996")
 public class StringValue extends Value {
-    @objid ("3c34eb8b-2c82-4fd1-9610-c579a3d97231")
+    @objid ("8d7f5935-3006-4e3d-9277-bbbf4c9e2a9a")
     public static final String STEREOTYPE_NAME = "StringValue";
 
-    @objid ("ed04fce0-05f2-4f86-9c1e-012b3ff1a211")
+    @objid ("e7087aa4-2785-4fe2-b589-211203b7a81b")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
@@ -47,7 +47,7 @@ public class StringValue extends Value {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3f481bfe-52c4-4dfe-bcfe-b77a8ee50489")
+    @objid ("0fc00735-039a-45f7-8d63-0a634d6dfa15")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, StringValue.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class StringValue extends Value {
      * 
      * @return a {@link StringValue} proxy on the created {@link Class}.
      */
-    @objid ("349d6d85-8ba3-46cd-9839-2f196c9d2de4")
+    @objid ("2eef9e8c-b5b0-4487-8b76-53874e99fe7e")
     public static StringValue create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, StringValue.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class StringValue extends Value {
      * @param obj a Class
      * @return a {@link StringValue} proxy or <i>null</i>.
      */
-    @objid ("0826bea6-7e63-4bfe-a6ac-2b2867cba526")
+    @objid ("cad462b4-eb28-4fe8-b498-5d70b5ed9048")
     public static StringValue instantiate(final Class obj) {
         return StringValue.canInstantiate(obj) ? new StringValue(obj) : null;
     }
@@ -84,7 +84,7 @@ public class StringValue extends Value {
      * @return a {@link StringValue} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ae6fc7c1-e4bb-41e6-9dbb-5bcdec3bc084")
+    @objid ("afee6797-e2cd-4ba3-b0d8-d994e45ef62b")
     public static StringValue safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (StringValue.canInstantiate(obj))
         	return new StringValue(obj);
@@ -92,7 +92,7 @@ public class StringValue extends Value {
         	throw new IllegalArgumentException("StringValue: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("f7278454-53bf-4199-aa4a-e730813684a7")
+    @objid ("a5aa0ea9-7663-4d2e-8001-33ca14b74f4c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,7 +112,7 @@ public class StringValue extends Value {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("afcc45e2-b3ed-4a82-97fd-119aa6f1e75d")
+    @objid ("1fdeaf0b-11ab-403e-9468-11cf9fbf3bf6")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -123,12 +123,12 @@ public class StringValue extends Value {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("04ac9e99-222f-4ba4-b456-df351b9cc560")
+    @objid ("c2a2753d-fe41-42b0-9fb9-e42888af4993")
     public String getValue() {
         return this.elt.getTagValue(StringValue.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("46d15b3b-9707-4854-ab74-e81b1ac9ae52")
+    @objid ("bccf13e7-b844-4927-ac96-97508ffaa4d5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -139,31 +139,31 @@ public class StringValue extends Value {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ec17fefe-e07c-4030-8f38-3562fb238114")
+    @objid ("f144b988-9be3-408c-a3a8-73d9e6373ac6")
     public void setValue(final String value) {
         this.elt.putTagValue(StringValue.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("1709277f-88f6-401f-a2d5-b9b3f98815c9")
+    @objid ("840038ad-8abe-4a47-a9c4-f0c5de41a369")
     protected StringValue(final Class elt) {
         super(elt);
     }
 
     @objid ("9399a459-61a5-4415-942d-4d13e631e29a")
     public static final class MdaTypes {
-        @objid ("2613d7b4-b85d-4488-9de8-2abc832f7d36")
+        @objid ("988eb7e1-664d-4164-99c5-424ddb2d957a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f290ddbe-46fe-4042-ac31-da58474de604")
+        @objid ("411e741d-a26f-4b58-bf42-26af9fc79f5b")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("81366301-77e4-49a1-8989-d18549c78602")
+        @objid ("47eefe44-39ae-489c-81b0-1aa55e018384")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c24d2e0a-0f9e-4e67-8ddb-3e27ca684875")
+        @objid ("f1de3b88-37a3-4edf-81a0-f9737bf04ef8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8ac4dea4-6120-44e0-9b94-9684fa73d4f2")
+        @objid ("149d80db-737b-4cc7-9c02-d5c8bc1578f2")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "6150e77e-8a8a-40f6-9270-79aa182fc926");
             VALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "dc99a44c-debc-43d9-a8f2-cf3b62a7138f");

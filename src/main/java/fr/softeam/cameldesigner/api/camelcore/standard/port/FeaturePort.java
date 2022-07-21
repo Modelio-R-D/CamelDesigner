@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.port;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("df72df64-fde5-4c17-ad49-37e1bb0285a0")
 public class FeaturePort extends FeatureInstance {
-    @objid ("0e12d775-79c6-48c2-88ec-44ce450615dc")
+    @objid ("1d66159c-5003-4abf-80c5-0d2ec8a130a6")
     public static final String STEREOTYPE_NAME = "Feature_Port";
 
     /**
@@ -45,7 +45,7 @@ public class FeaturePort extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d367aa6d-7924-4c6e-904d-863562b17009")
+    @objid ("f12a891c-7e32-43ed-8980-10b206c72962")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeaturePort.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class FeaturePort extends FeatureInstance {
      * 
      * @return a {@link FeaturePort} proxy on the created {@link Port}.
      */
-    @objid ("4f629db4-5205-4a34-8885-ec4bbda7d157")
+    @objid ("6b822251-d9f2-4800-9375-19793917f1b9")
     public static FeaturePort create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeaturePort.STEREOTYPE_NAME);
@@ -69,7 +69,7 @@ public class FeaturePort extends FeatureInstance {
      * @param obj a Port
      * @return a {@link FeaturePort} proxy or <i>null</i>.
      */
-    @objid ("6e7e5ac4-8d9e-44de-848c-f11bddfe8608")
+    @objid ("8b8ec17a-42f6-4e28-987e-e6914064f99e")
     public static FeaturePort instantiate(final Port obj) {
         return FeaturePort.canInstantiate(obj) ? new FeaturePort(obj) : null;
     }
@@ -82,7 +82,7 @@ public class FeaturePort extends FeatureInstance {
      * @return a {@link FeaturePort} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("daf1b7ca-4d5d-4b20-a068-6420c9a68ca9")
+    @objid ("7ff2a76d-c2d4-4da9-be5b-2c3e9645403a")
     public static FeaturePort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (FeaturePort.canInstantiate(obj))
         	return new FeaturePort(obj);
@@ -90,7 +90,7 @@ public class FeaturePort extends FeatureInstance {
         	throw new IllegalArgumentException("FeaturePort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("b1738427-3a4c-4a5a-8dcd-f354d2f030b3")
+    @objid ("5e691b74-1208-4f0c-a140-32dfabdec488")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,35 +110,35 @@ public class FeaturePort extends FeatureInstance {
      * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("88a7b31d-b9ab-48ed-8a9c-8e3e23695ca3")
+    @objid ("59c85d2e-85b4-4459-89b6-7fda644d4d74")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
     }
 
-    @objid ("c35d0fe6-2ae8-4bb7-aba3-8770577da1c3")
+    @objid ("b24b7cf0-1341-4cd4-bc73-6a4f97c1c531")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("64a76279-cdf8-43bf-a1e3-549a792d8de6")
+    @objid ("a8d5edae-a881-4558-af05-bb88b0abab8f")
     protected FeaturePort(final Port elt) {
         super(elt);
     }
 
     @objid ("a8d9e562-ebce-4b04-a8f8-b81512ba3fd4")
     public static final class MdaTypes {
-        @objid ("1c31fe5a-1042-4e86-93ed-d8010f7d4458")
+        @objid ("27424f2f-af60-4371-8383-e0c87b71fc39")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("37d53ec3-e910-4941-bd13-7d1b1dad724f")
+        @objid ("609320f2-b067-4a0e-915a-52e4442b930b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1058c756-c26e-4eae-9b8b-4c8007b86f4e")
+        @objid ("c82e7684-ba3b-4026-a401-4352cdb48a63")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0e2cbe8c-8583-40be-8a23-682dcdd0875e")
+        @objid ("6720715d-cb16-4602-822e-29aa3c89d060")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "18d0504c-73e0-4c7c-8341-53038298af2c");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

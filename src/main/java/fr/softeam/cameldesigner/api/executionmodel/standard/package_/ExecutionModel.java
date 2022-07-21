@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.package_;
 
@@ -58,16 +58,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c96f7eac-9b70-45a9-8082-1890dc328f78")
 public class ExecutionModel extends SubModel {
-    @objid ("2e3bb4de-0f1d-44da-b595-f5ee032ecb8e")
+    @objid ("7f0fd787-e433-4586-91fa-59c7f389ac82")
     public static final String STEREOTYPE_NAME = "ExecutionModel";
 
-    @objid ("55fe83f0-2686-4ed0-946d-3599ad4fc1b3")
+    @objid ("1155059b-ae80-4e6d-9ad9-e43f9febd8dd")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("4f05fca7-0575-4eb1-88e7-1a26edc3d25a")
+    @objid ("be47f3b2-af6e-489f-92a7-be3dbf766527")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
-    @objid ("a3685c18-bfab-486b-a6f4-8a5a45815388")
+    @objid ("bcdedd4d-a40d-455d-b089-1a96501e30ef")
     public static final String TOTALCOST_TAGTYPE = "totalCost";
 
     /**
@@ -78,7 +78,7 @@ public class ExecutionModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9c19210c-3a6b-4bc9-8915-a908d9c2c086")
+    @objid ("498a1507-f4c8-4cd2-8869-d2ed23fb1679")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ExecutionModel.STEREOTYPE_NAME));
     }
@@ -88,7 +88,7 @@ public class ExecutionModel extends SubModel {
      * 
      * @return a {@link ExecutionModel} proxy on the created {@link Package}.
      */
-    @objid ("4022ecf1-5d3c-4667-95e1-eaaecd47c7c7")
+    @objid ("24c1d7b6-b573-4981-8693-483e94ce8920")
     public static ExecutionModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ExecutionModel.STEREOTYPE_NAME);
@@ -102,7 +102,7 @@ public class ExecutionModel extends SubModel {
      * @param obj a Package
      * @return a {@link ExecutionModel} proxy or <i>null</i>.
      */
-    @objid ("d4f2771a-f4e8-40c8-8bfa-70d210f9a1ae")
+    @objid ("15f81aeb-1cb8-49db-9243-5b389941d5cd")
     public static ExecutionModel instantiate(final Package obj) {
         return ExecutionModel.canInstantiate(obj) ? new ExecutionModel(obj) : null;
     }
@@ -115,7 +115,7 @@ public class ExecutionModel extends SubModel {
      * @return a {@link ExecutionModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ae7bcbe6-f5f9-4711-8983-02f66f2a2259")
+    @objid ("ae80bf46-6c82-4b92-8f3b-df716a45b880")
     public static ExecutionModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (ExecutionModel.canInstantiate(obj))
         	return new ExecutionModel(obj);
@@ -129,7 +129,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("96123663-d23d-412f-a98b-09ab2cef98e1")
+    @objid ("06760a57-5b70-407a-8a1c-7580ce4f1738")
     public void addDiagrams(final ExecutionModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -141,7 +141,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("70583f75-064b-4656-82ca-0b056c6c2c22")
+    @objid ("f02f5664-a235-4a47-9e07-a0bf3a13ef00")
     public void addHistoryRecords(final HistoryRecord obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -153,7 +153,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("673c506f-a4e0-495d-86c5-08fcb1755745")
+    @objid ("b98976d2-fe5a-4edf-a0d3-1bc4f66d88e8")
     public void addMeasurements(final Measurement obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -165,7 +165,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("510ab478-f4a7-49b1-bcf2-98bfa3bb4487")
+    @objid ("cadf8941-4895-4a32-afb7-cfefd8815f3a")
     public void addRuleTriggers(final RuleTrigger obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -177,13 +177,13 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("9e807b2e-8b4c-49d6-a489-c81e66c5fd83")
+    @objid ("4b6a94f8-37d2-4389-a644-3a07b93840f0")
     public void addSloViolations(final SLOViolation obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("5c3c783f-edeb-4aab-8022-bfc95a2c0086")
+    @objid ("b51de1a3-940c-45d8-9582-2d27af91dce5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -205,7 +205,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("baba1f5f-822b-4c69-8958-ab31fa88b6db")
+    @objid ("8b1ff53b-7c67-4a84-b6a6-b71cc6a7afac")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -216,7 +216,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("850e9c15-482c-45c8-acde-037cc009b044")
+    @objid ("4c05cad5-368f-4e40-8f77-76875a4b62b3")
     public Unit getCostUnit() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ExecutionModel.MdaTypes.MDAASSOCDEP)
@@ -238,7 +238,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("2a0160da-5b19-40b1-ab4b-8a7b8b6b4d85")
+    @objid ("bdef2e04-3f6e-4c02-98c7-e87a8b1b8466")
     public DataTypeModel getDataTypeModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ExecutionModel.MdaTypes.MDAASSOCDEP)
@@ -256,7 +256,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("8bce2c6b-ee56-4796-b3ec-aaf76b18658d")
+    @objid ("55245b2f-ad32-42f6-985d-372d4a57b2bd")
     public DeploymentTypeModel getDeploymentTypeModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ExecutionModel.MdaTypes.MDAASSOCDEP)
@@ -274,7 +274,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("decd019b-b097-418a-b0db-2ad4c79d8285")
+    @objid ("5e01cd1a-7e7e-41e0-9c36-1068b054fb33")
     public List<ExecutionModelDiagram> getDiagrams() {
         List<ExecutionModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
@@ -288,7 +288,7 @@ public class ExecutionModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("49fe5abd-8e6a-4f41-b263-4456212949bb")
+    @objid ("a06f34eb-3755-4c5a-b52e-cfc47a192892")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -299,7 +299,7 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9655bd6d-8897-4c51-8bfc-c87250bad83d")
+    @objid ("d760759a-4b61-4178-a50f-2334bcf1c233")
     public String getEndTime() {
         return this.elt.getTagValue(ExecutionModel.MdaTypes.ENDTIME_TAGTYPE_ELT);
     }
@@ -310,7 +310,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("6850c685-2f43-4e08-98e5-0bd335f235e9")
+    @objid ("1ca22de8-1190-4b18-a61f-975a99eee946")
     public List<HistoryRecord> getHistoryRecords() {
         List<HistoryRecord> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -326,7 +326,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("36dc8c63-8046-4dc0-ae54-6237629be501")
+    @objid ("c2d1104e-32f0-4e4e-9075-2c8a28cb1cbc")
     public List<Measurement> getMeasurements() {
         List<Measurement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -354,7 +354,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("859aaa29-559d-4f2e-874e-eb430baf209a")
+    @objid ("ce51a07b-8634-4633-87d7-76e0e6e0d3ab")
     public RequirementModel getRequirementModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ExecutionModel.MdaTypes.MDAASSOCDEP)
@@ -372,7 +372,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("05ca9630-d9a6-4f82-bee4-8db9f6fe1740")
+    @objid ("d2ab922d-acaf-4b73-bd89-3916fa6adecc")
     public List<RuleTrigger> getRuleTriggers() {
         List<RuleTrigger> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -388,7 +388,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("d83008b8-911d-4d7a-9604-93745afb0fa0")
+    @objid ("40ab2d98-7147-45e2-b1ea-02e47e807ba1")
     public List<SLOViolation> getSloViolations() {
         List<SLOViolation> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -403,7 +403,7 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("382716c8-15af-4c68-b869-021b33d0d292")
+    @objid ("81a7273f-45d9-41c3-b71e-611305f99cd8")
     public String getStartTime() {
         return this.elt.getTagValue(ExecutionModel.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
@@ -413,12 +413,12 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("58ba8fa4-1f87-4567-965b-fc47ff482216")
+    @objid ("f1b68cc7-7534-4641-898c-24857e05c616")
     public String getTotalCost() {
         return this.elt.getTagValue(ExecutionModel.MdaTypes.TOTALCOST_TAGTYPE_ELT);
     }
 
-    @objid ("1a13820c-9b05-45b0-bed0-42195a632217")
+    @objid ("73b9aeae-10ae-4424-912a-3b4b514d747f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -430,7 +430,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("795aeefa-63d5-4d6b-ab72-669c59fe1be7")
+    @objid ("a6e6464c-1e9c-45f9-8bc6-4377b812e359")
     public boolean removeDiagrams(final ExecutionModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -441,7 +441,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("b96621f6-88e8-43f6-945b-918b6b6815c5")
+    @objid ("1e9ce5a6-bd27-4d3c-94a8-b1ffe1930317")
     public boolean removeHistoryRecords(final HistoryRecord obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -452,7 +452,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("cf09c6b4-d9fa-481b-9951-3bf56906ce43")
+    @objid ("25df2ff2-2c0d-4888-aa27-cb6479b13f7e")
     public boolean removeMeasurements(final Measurement obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -463,7 +463,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("a923fd58-d944-4dc2-98e7-de673c68c1ee")
+    @objid ("be2ce64f-6e9f-41d5-9132-dc70247c1502")
     public boolean removeRuleTriggers(final RuleTrigger obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -474,7 +474,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("6da9a535-f711-48eb-aea4-b5bfe24d6766")
+    @objid ("b47f3c1f-8432-410b-bb97-e2638a5c7433")
     public boolean removeSloViolations(final SLOViolation obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -485,7 +485,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("f6247c63-1437-4606-b979-5c375e9806fa")
+    @objid ("d72d2ab9-ca03-454c-8aae-cf8b3ccf52e5")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -496,7 +496,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("d96f2530-3341-41d4-b8e2-958f7bd9f4f3")
+    @objid ("26a7b526-dd48-4ddb-8ab1-95d698efeb71")
     public void setCostUnit(final Unit obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -522,7 +522,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("2f0cf796-0644-4827-9fc3-a0fa14975365")
+    @objid ("7762b6ac-5578-4852-9266-3d1ba40c2689")
     public void setDataTypeModel(final DataTypeModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -548,7 +548,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("e78906c1-ddba-40c9-8f7d-2489f7ac983f")
+    @objid ("442c7a08-c1fc-4976-a216-af676c5b7573")
     public void setDeploymentTypeModel(final DeploymentTypeModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -573,7 +573,7 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3855cf71-3493-4c2e-afb1-db4d90dcd3d4")
+    @objid ("837b4c4f-fc59-43e5-8172-adbd783a1bfc")
     public void setEndTime(final String value) {
         this.elt.putTagValue(ExecutionModel.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
     }
@@ -584,7 +584,7 @@ public class ExecutionModel extends SubModel {
      * null
      * 
      */
-    @objid ("a9405ab0-99b6-43bd-bab1-955a7632ad9a")
+    @objid ("d0862b91-ec76-4b4d-8b5d-6f8299f9148f")
     public void setRequirementModel(final RequirementModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -609,7 +609,7 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("07c66d51-9b6f-4a1b-86b2-971afc839007")
+    @objid ("c8129bb4-2a7d-48f3-aab3-56beaf738da0")
     public void setStartTime(final String value) {
         this.elt.putTagValue(ExecutionModel.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -619,7 +619,7 @@ public class ExecutionModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("443d451b-3753-4d08-b4fc-685582759831")
+    @objid ("e4c934f9-2b39-4f57-9faa-4892db9ed54c")
     public void setTotalCost(final String value) {
         this.elt.putTagValue(ExecutionModel.MdaTypes.TOTALCOST_TAGTYPE_ELT, value);
     }
@@ -632,32 +632,32 @@ public class ExecutionModel extends SubModel {
         return result;
     }
 
-    @objid ("7176d530-6851-4dd1-8f0c-6c732cc459fd")
+    @objid ("19627b25-98dd-48d3-87a5-f280638c0344")
     protected ExecutionModel(final Package elt) {
         super(elt);
     }
 
     @objid ("717cbe7b-f67e-4b04-8825-65ff42b77f09")
     public static final class MdaTypes {
-        @objid ("8d26b890-3e80-4d58-94f0-1cea7b549263")
+        @objid ("811fc168-f2dc-4996-80c5-b7e88cf530c4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0989f84d-45be-4ffa-bcc9-dc5a853f7ce5")
+        @objid ("5b128fd3-4919-4a90-bfd1-839e19d90a67")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("60626261-6d02-4d74-a369-16d7a6becb12")
+        @objid ("3a33635b-d78e-46d6-bcff-3ddfd9c3c264")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("3043e9ec-cf91-43fb-babe-75ba6aa593dc")
+        @objid ("6c891e43-0747-4918-aaec-b4dbb34a7aaf")
         public static TagType TOTALCOST_TAGTYPE_ELT;
 
-        @objid ("5113dd36-fc3a-420f-b9ed-7441f8a24077")
+        @objid ("d4b8c296-702b-47f7-9831-aa63fd7819ec")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d789cb6b-1d20-437e-a22d-7bae8167864c")
+        @objid ("44fdae25-cc97-4fd0-b528-aa55724f9684")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1e7af9e1-431d-49a8-abe1-944a865b8325")
+        @objid ("511eb22c-208f-4a06-bd16-084140b40e66")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e68f7e04-ff66-47dd-af65-5c017645cb8d");
             STARTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "8a1a55fb-6fdd-41a1-8b7f-0402a36c1c5a");

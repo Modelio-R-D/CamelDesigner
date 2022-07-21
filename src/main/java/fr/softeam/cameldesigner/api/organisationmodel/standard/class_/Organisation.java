@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -37,16 +37,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("eccd47db-19f1-4992-946f-1f943f3667d6")
 public class Organisation extends Entity {
-    @objid ("70497c1e-ede5-4805-b81d-2a0c2d140d67")
+    @objid ("b35d1aac-9ed3-438d-86cc-d69b7a8a70ac")
     public static final String STEREOTYPE_NAME = "Organisation";
 
-    @objid ("fd60727e-4899-4ed8-9412-68f50598cdd7")
+    @objid ("45997003-6e0f-4185-b571-d512e6f6caab")
     public static final String EMAIL_TAGTYPE = "email";
 
-    @objid ("a40aacfb-ed4f-4cc0-b92b-91ebde204179")
+    @objid ("a0516977-16a8-4d8c-adea-62893eecf4e0")
     public static final String POSTALADDRESS_TAGTYPE = "postalAddress";
 
-    @objid ("b7fbb581-d154-46c0-a12e-f38776d72ee8")
+    @objid ("a0f680f7-1517-4064-8555-6511fa06453d")
     public static final String WWW_TAGTYPE = "www";
 
     /**
@@ -57,7 +57,7 @@ public class Organisation extends Entity {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d7d8e288-2917-465a-a086-58dcf1bc5950")
+    @objid ("fe4ced62-61c7-4c1b-af28-34e8bbc0ed3a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Organisation.STEREOTYPE_NAME));
     }
@@ -67,7 +67,7 @@ public class Organisation extends Entity {
      * 
      * @return a {@link Organisation} proxy on the created {@link Class}.
      */
-    @objid ("9b697919-3f5b-48c7-9ac4-fe03c6990ab7")
+    @objid ("ec577370-76ee-4fa7-8dbb-5f79ac3e17be")
     public static Organisation create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Organisation.STEREOTYPE_NAME);
@@ -81,7 +81,7 @@ public class Organisation extends Entity {
      * @param obj a Class
      * @return a {@link Organisation} proxy or <i>null</i>.
      */
-    @objid ("c3011fcd-173f-4039-a035-b527dd63ed76")
+    @objid ("f9a6493e-c2a6-4cde-99b9-3db77c05e5b8")
     public static Organisation instantiate(final Class obj) {
         return Organisation.canInstantiate(obj) ? new Organisation(obj) : null;
     }
@@ -94,7 +94,7 @@ public class Organisation extends Entity {
      * @return a {@link Organisation} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("d3482fae-1cfd-4369-bb9e-7e27f0c67c18")
+    @objid ("43e64f0d-1065-4154-ba5c-018c7e403497")
     public static Organisation safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Organisation.canInstantiate(obj))
         	return new Organisation(obj);
@@ -108,13 +108,13 @@ public class Organisation extends Entity {
      * null
      * 
      */
-    @objid ("1984a25e-7063-4a68-a269-c072b940ff88")
+    @objid ("9ca3be5f-2685-41ed-9ad2-4a01747d7c68")
     public void addCloudCredentials(final CloudCredentials obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("26c4c75f-3c5a-4d39-a605-0784c363a1e8")
+    @objid ("f71617c5-deb7-4f3a-9f78-159ea56f0053")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class Organisation extends Entity {
      * null
      * 
      */
-    @objid ("6d52a1e5-3eb2-46b9-9bce-2971b230c999")
+    @objid ("0d75406b-9b2e-48ee-aac2-ae52652ed2b1")
     public List<CloudCredentials> getCloudCredentials() {
         List<CloudCredentials> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
@@ -150,7 +150,7 @@ public class Organisation extends Entity {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("a27a2d78-5ab6-4fb3-aa69-2bb547b9a16d")
+    @objid ("670c2ed5-cd29-44e7-ac3e-d11ef41a5cb0")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -161,7 +161,7 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("394b7576-7eca-49e6-b1e5-8e6cb6d230d2")
+    @objid ("2a883b76-9d45-4fea-9422-445c75f898e9")
     public String getEmail() {
         return this.elt.getTagValue(Organisation.MdaTypes.EMAIL_TAGTYPE_ELT);
     }
@@ -171,7 +171,7 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e650f246-3616-4be9-9268-1856e24fbf6c")
+    @objid ("572b7ce0-4d9a-4077-b47d-50949c1ebd05")
     public String getPostalAddress() {
         return this.elt.getTagValue(Organisation.MdaTypes.POSTALADDRESS_TAGTYPE_ELT);
     }
@@ -181,12 +181,12 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d845fa37-f781-448c-9a18-945f1bb90286")
+    @objid ("f33e9c5a-ac69-4fb4-b918-e76b466f8871")
     public String getWww() {
         return this.elt.getTagValue(Organisation.MdaTypes.WWW_TAGTYPE_ELT);
     }
 
-    @objid ("bc06b8dc-9ebf-4c52-9c5d-e6e712ae0054")
+    @objid ("563d953d-fbd5-4fd5-9568-7dc1efaf6fd5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -198,7 +198,7 @@ public class Organisation extends Entity {
      * null
      * 
      */
-    @objid ("8e25c43f-b62c-4ac4-8662-1a5dc5a0a67e")
+    @objid ("c1dae25f-8b12-48c1-8f77-28d279dabfab")
     public boolean removeCloudCredentials(final CloudCredentials obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -208,7 +208,7 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c49e2e27-f85b-4c9d-937f-2e48de7f111d")
+    @objid ("0590d178-3c12-41a4-a2e0-d2c64f6f1938")
     public void setEmail(final String value) {
         this.elt.putTagValue(Organisation.MdaTypes.EMAIL_TAGTYPE_ELT, value);
     }
@@ -218,7 +218,7 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f0e6fb96-32d5-4ff7-b75c-4067afa3fc93")
+    @objid ("dc21ab0c-c066-45a4-a417-8170f216026f")
     public void setPostalAddress(final String value) {
         this.elt.putTagValue(Organisation.MdaTypes.POSTALADDRESS_TAGTYPE_ELT, value);
     }
@@ -228,7 +228,7 @@ public class Organisation extends Entity {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fffee2d0-15be-422e-82ef-976a865ed421")
+    @objid ("e621ba0d-d285-411c-ab92-dcc19c01dc12")
     public void setWww(final String value) {
         this.elt.putTagValue(Organisation.MdaTypes.WWW_TAGTYPE_ELT, value);
     }
@@ -241,32 +241,32 @@ public class Organisation extends Entity {
         return result;
     }
 
-    @objid ("68605fe5-ed60-4e7c-b346-371e9fed6eb1")
+    @objid ("ed4f9ecb-ebd6-4a22-9a90-28dc14f2e1d0")
     protected Organisation(final Class elt) {
         super(elt);
     }
 
     @objid ("09128454-19e1-48ce-821e-ed57aa740679")
     public static final class MdaTypes {
-        @objid ("a2216972-ae47-4ba9-a073-4d6476b92c63")
+        @objid ("8ebd1eda-1891-4891-a7ad-7115bbc4987c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c29b40fb-2292-4324-b866-45f13364b7eb")
+        @objid ("2073d69a-d05e-4d57-ae5c-e830638cb827")
         public static TagType WWW_TAGTYPE_ELT;
 
-        @objid ("abee9087-2656-4365-909f-4c3c98c4afc8")
+        @objid ("e01dca15-7902-47fe-9a37-8744dd2ff134")
         public static TagType POSTALADDRESS_TAGTYPE_ELT;
 
-        @objid ("16fda4c7-3201-4c3a-a21c-136224eac4a1")
+        @objid ("2d66cc7e-606f-4389-a39b-6811c5a5eda1")
         public static TagType EMAIL_TAGTYPE_ELT;
 
-        @objid ("eba84f8e-c4fa-420d-be39-4e7c1c9c0945")
+        @objid ("006eefd0-13d1-4cff-8462-60476fea9f11")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a8bf76a6-eae0-45f7-8609-a580c5fefdae")
+        @objid ("8d08640d-2aef-4ed5-8d71-67300c789471")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("57401e55-1be4-443d-a3ea-449f9762ce4b")
+        @objid ("a5b8db75-6d66-43f0-94c3-a9c02ca2bedd")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fa6ac57f-ab05-4b55-81ec-f129e360b94d");
             WWW_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "79c63438-ac0f-42ea-aead-1ff7c9210f58");

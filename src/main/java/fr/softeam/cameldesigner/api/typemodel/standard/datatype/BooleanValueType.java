@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a2b62642-fe21-4f7c-a8c8-129bb3a99fab")
 public class BooleanValueType extends ValueType {
-    @objid ("c4689b9a-2c17-464d-9b9a-aa05c6f0c6e3")
+    @objid ("a0359591-cb65-4afb-bba5-1a40b7a0529e")
     public static final String STEREOTYPE_NAME = "BooleanValueType";
 
     /**
@@ -46,7 +46,7 @@ public class BooleanValueType extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f522be80-8622-4736-82a0-8cbde5c28b2f")
+    @objid ("57722640-dbc8-4baa-b128-4d6f1daae97c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, BooleanValueType.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class BooleanValueType extends ValueType {
      * 
      * @return a {@link BooleanValueType} proxy on the created {@link DataType}.
      */
-    @objid ("ee149e89-4a90-4301-8e3e-e2a1569f1702")
+    @objid ("2b2bdc6f-b4e8-4868-8f62-34e37efa014f")
     public static BooleanValueType create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, BooleanValueType.STEREOTYPE_NAME);
@@ -70,7 +70,7 @@ public class BooleanValueType extends ValueType {
      * @param obj a DataType
      * @return a {@link BooleanValueType} proxy or <i>null</i>.
      */
-    @objid ("4fbae4ce-88a1-487d-9022-635ccfce090c")
+    @objid ("6b6a8806-fa91-49a3-82b8-9d2c841b0cf6")
     public static BooleanValueType instantiate(final DataType obj) {
         return BooleanValueType.canInstantiate(obj) ? new BooleanValueType(obj) : null;
     }
@@ -83,7 +83,7 @@ public class BooleanValueType extends ValueType {
      * @return a {@link BooleanValueType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("eb5fd884-ba09-4cf4-8509-41f6a07d029f")
+    @objid ("7f77e5ac-14d2-4d0b-9eef-02a2dc776b3d")
     public static BooleanValueType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (BooleanValueType.canInstantiate(obj))
         	return new BooleanValueType(obj);
@@ -91,7 +91,7 @@ public class BooleanValueType extends ValueType {
         	throw new IllegalArgumentException("BooleanValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("56ae3073-6e21-43b6-9cbf-e05c1a77c40a")
+    @objid ("01796845-e12c-434a-96bb-3165b90aa2b8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,13 +111,13 @@ public class BooleanValueType extends ValueType {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("36dcfce4-9b83-4ff5-b00a-cb6f05f404f1")
+    @objid ("90836c16-1a0a-4c01-a090-2ce980b7406e")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("f94380ba-9116-4aee-9227-c179f7332d48")
+    @objid ("3efc0451-6f1e-4d9c-b5fe-d2530c3e55c1")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class BooleanValueType extends ValueType {
         return result;
     }
 
-    @objid ("c4570abe-a49e-4fe8-b27d-eba7026ad551")
+    @objid ("fdb13fb3-684f-4427-9a2d-c4250f98c8c2")
     protected BooleanValueType(final DataType elt) {
         super(elt);
     }
 
     @objid ("df669cbd-dad5-4a9c-8f92-4f6b6714af23")
     public static final class MdaTypes {
-        @objid ("e33da68a-7b08-4af8-8761-f2695865268b")
+        @objid ("f2fd054d-5860-4ba8-aed1-00b98059dea8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c6b1317e-30fe-4658-9a8b-3805d3b28a46")
+        @objid ("10c87bd0-51e3-42d5-8078-e635bb1bf362")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("19ce6fec-5671-47a8-b0bf-25a2b428431e")
+        @objid ("69fba89c-a2d5-46cb-a415-eb15577a87a0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("835de7aa-d403-4079-87d1-29327ddc7827")
+        @objid ("48c1d5c8-e8f3-449c-b398-1ed749995bf5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "34356c14-6f57-4377-8b6d-5f7e5d8b4929");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("cb340abc-2e6f-40f5-b96e-5f3764d6d408")
 public class NonFunctionalEventInstance extends EventInstance {
-    @objid ("8c0825c1-4bbe-445d-831a-2cacb074e98d")
+    @objid ("7f98a9df-03a1-444b-a4b9-5c4022975be1")
     public static final String STEREOTYPE_NAME = "NonFunctionalEventInstance";
 
     /**
@@ -48,7 +48,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c63ee290-4269-450f-b84b-4592748247ae")
+    @objid ("cd7ef8f6-7d33-4518-900c-efcf02ba0a97")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, NonFunctionalEventInstance.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * 
      * @return a {@link NonFunctionalEventInstance} proxy on the created {@link Instance}.
      */
-    @objid ("eef1ccb4-ab69-4888-a9df-1d3c9b576200")
+    @objid ("e1b078fb-068c-4aff-b492-46561724531c")
     public static NonFunctionalEventInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, NonFunctionalEventInstance.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * @param obj a Instance
      * @return a {@link NonFunctionalEventInstance} proxy or <i>null</i>.
      */
-    @objid ("15f03901-617a-464b-8d18-ce0c2f8cad3b")
+    @objid ("cdaebcbb-a8d7-4d84-86cb-80831799eaa0")
     public static NonFunctionalEventInstance instantiate(final Instance obj) {
         return NonFunctionalEventInstance.canInstantiate(obj) ? new NonFunctionalEventInstance(obj) : null;
     }
@@ -85,7 +85,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * @return a {@link NonFunctionalEventInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6efc9112-d2c0-4a0a-889d-39fb0b841164")
+    @objid ("48bad5a0-d07d-4473-80f8-c139e19fdf7a")
     public static NonFunctionalEventInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (NonFunctionalEventInstance.canInstantiate(obj))
         	return new NonFunctionalEventInstance(obj);
@@ -93,7 +93,7 @@ public class NonFunctionalEventInstance extends EventInstance {
         	throw new IllegalArgumentException("NonFunctionalEventInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("37493a6e-528c-44f0-9772-602a23387a10")
+    @objid ("9dde1ea1-0513-4631-a3be-1f561da58925")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("d7902e8d-815c-4eba-99d9-3fc84525bc4c")
+    @objid ("bb31029e-2b93-4a1d-bf5e-bc775787584f")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -125,7 +125,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * null
      * 
      */
-    @objid ("314f6564-9890-424f-8aca-1561aaec45de")
+    @objid ("f94638a3-7656-4fc3-9197-e3423fcd8039")
     public MetricInstance getMetricInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(NonFunctionalEventInstance.MdaTypes.MDAASSOCDEP)
@@ -139,7 +139,7 @@ public class NonFunctionalEventInstance extends EventInstance {
         return null;
     }
 
-    @objid ("9016d9ad-0fc1-498f-b03e-898b60aeabb3")
+    @objid ("d0e8bd0a-455a-4fac-96e3-231ee913a363")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -151,7 +151,7 @@ public class NonFunctionalEventInstance extends EventInstance {
      * null
      * 
      */
-    @objid ("b207b2f2-8fcb-429b-9e49-dc21c30c45e7")
+    @objid ("24273da2-f3c0-4b5d-ae7c-679ea257ef3f")
     public void setMetricInstance(final MetricInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -179,23 +179,23 @@ public class NonFunctionalEventInstance extends EventInstance {
         return result;
     }
 
-    @objid ("d5ebdaa1-f855-4bad-bb17-42762d616734")
+    @objid ("31b655fd-027d-4e78-9167-889c56594f2b")
     protected NonFunctionalEventInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("115de52d-fac8-49f5-8245-053320b852b9")
     public static final class MdaTypes {
-        @objid ("df6a8287-e439-43d7-b2f0-ae335fe3330a")
+        @objid ("cab6cadc-d625-461f-b20e-305df215acde")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b9681c3f-2061-4447-9e99-0a7cef12b166")
+        @objid ("4eb0a45a-6d76-4cbc-aff8-6a251a5b1f72")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e8599098-9266-47c0-a81e-9aba1358ab9e")
+        @objid ("65b7c7ff-81b4-48f2-8b90-841d3e9eb357")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("553c32ab-b82e-477a-8d41-a88a515da442")
+        @objid ("36eaaa74-aeb6-4156-b58a-f88e095ed80f")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d6b986dc-6dc7-40b3-b2a3-c0fe9f6add0e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

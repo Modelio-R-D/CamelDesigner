@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.class_;
 
@@ -33,10 +33,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("55226fdb-80c7-4d63-9159-946742bab14b")
 public class IntValue extends NumericValue {
-    @objid ("16897a1c-56a4-4bb5-8673-b3570c12f271")
+    @objid ("2ab07480-f836-45d2-a117-97e80421642b")
     public static final String STEREOTYPE_NAME = "IntValue";
 
-    @objid ("5f970a83-2094-4e78-98ee-b34e5b04b156")
+    @objid ("ac8e832e-5523-45be-88ab-90b68fa98f8c")
     public static final String VALUE_TAGTYPE = "value";
 
     /**
@@ -47,7 +47,7 @@ public class IntValue extends NumericValue {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e8cc158d-7498-4ab5-ab2e-40c8df631926")
+    @objid ("a5b0e069-63b5-4462-acd7-706fc88753af")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, IntValue.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class IntValue extends NumericValue {
      * 
      * @return a {@link IntValue} proxy on the created {@link Class}.
      */
-    @objid ("45775227-d334-4d3b-9c23-8038cf1aaf2f")
+    @objid ("ada16a62-14e6-4f6a-b7a7-0ff7477aee4f")
     public static IntValue create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, IntValue.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class IntValue extends NumericValue {
      * @param obj a Class
      * @return a {@link IntValue} proxy or <i>null</i>.
      */
-    @objid ("fdb5ce91-73a4-456d-a0c1-74dbfeb3f777")
+    @objid ("ce48f4c7-a7c9-45d5-874b-0fdd319c35e7")
     public static IntValue instantiate(final Class obj) {
         return IntValue.canInstantiate(obj) ? new IntValue(obj) : null;
     }
@@ -84,7 +84,7 @@ public class IntValue extends NumericValue {
      * @return a {@link IntValue} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6c137528-60d4-4d8a-9708-4c2e634d2413")
+    @objid ("0bc01d8a-0447-4cfe-9705-fa3cd8d77ec7")
     public static IntValue safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (IntValue.canInstantiate(obj))
         	return new IntValue(obj);
@@ -92,7 +92,7 @@ public class IntValue extends NumericValue {
         	throw new IllegalArgumentException("IntValue: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("4e881c4f-35ce-4dcd-827c-90e2cd072188")
+    @objid ("6144edb7-2321-4814-ac63-cee6461adc0b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,7 +112,7 @@ public class IntValue extends NumericValue {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("b9034840-85a6-4cc1-ad84-71e3175612e5")
+    @objid ("e53dee5f-b652-4585-95c1-91a0322e79a0")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -123,12 +123,12 @@ public class IntValue extends NumericValue {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a71641b4-dbcd-4570-98fe-67600d106cbc")
+    @objid ("e3de299e-117a-43c5-b396-54782eb4b3f2")
     public String getValue() {
         return this.elt.getTagValue(IntValue.MdaTypes.VALUE_TAGTYPE_ELT);
     }
 
-    @objid ("0b561259-f9d3-4e67-8f67-a003c946e401")
+    @objid ("e1fb1762-d34b-436b-a005-06efb28468e3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -139,31 +139,31 @@ public class IntValue extends NumericValue {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f33fa78-68c3-4850-8beb-c44e615bf276")
+    @objid ("fb592522-051a-4574-bebd-fdd978ad5297")
     public void setValue(final String value) {
         this.elt.putTagValue(IntValue.MdaTypes.VALUE_TAGTYPE_ELT, value);
     }
 
-    @objid ("0dc2dffb-eacc-447c-90ff-812b9a3d7a58")
+    @objid ("1931c416-c23b-45cf-891d-391c3545037c")
     protected IntValue(final Class elt) {
         super(elt);
     }
 
     @objid ("86784b93-598c-48c0-99d5-5e6867c51898")
     public static final class MdaTypes {
-        @objid ("26bd0f59-5b1b-4d39-b699-e2dc0f787cfe")
+        @objid ("f3b55078-cb18-4cfb-bbf7-2810c96b3a74")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bc1ea27c-434a-426f-96a7-9cbacaf22ce2")
+        @objid ("b4614dca-1cc9-43c5-a3f7-f353e9299471")
         public static TagType VALUE_TAGTYPE_ELT;
 
-        @objid ("167e966e-1e8e-4ae0-bf22-e07a2d09d98c")
+        @objid ("4641dd21-efc2-4998-bb64-3f2b9ffaa2f0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("74a4476d-2c97-48d0-bc42-a6e546791eaf")
+        @objid ("3712498c-9dde-464b-9320-acb0f777bb7f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5863e640-c75d-4d9b-bd00-de5f978cc26e")
+        @objid ("d1e50f2b-19eb-40fa-86fd-794f404ea72c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "84b646d6-4b3e-4375-b9e3-8e6d650114b3");
             VALUE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "8c63edd5-c470-41cc-a9bf-8eb948e832ba");

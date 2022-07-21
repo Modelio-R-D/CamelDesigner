@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.12
 
- * This file was generated on 7/20/22 3:44 PM by Modelio Studio.
+ * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.namespace;
 
@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8486585a-5685-4f6e-9bb4-9334f5924b9f")
 public abstract class ScalingAction extends Action {
-    @objid ("f7910c3e-8885-4ef2-9c0e-5fa77a6ab325")
+    @objid ("2029550d-ef8f-4813-9f33-a1439253d95d")
     public static final String STEREOTYPE_NAME = "ScalingAction";
 
     /**
@@ -49,12 +49,12 @@ public abstract class ScalingAction extends Action {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("210c24ee-4b28-4342-abfb-0dc9f947d4a4")
+    @objid ("6afd22f0-a45d-4ea7-82a9-926767d199ae")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof NameSpace) && ((NameSpace) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScalingAction.STEREOTYPE_NAME));
     }
 
-    @objid ("ff4c2af3-1859-4f5c-82c0-570c74414060")
+    @objid ("880467ce-6a63-4c1b-9b51-080115bf20e9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -74,7 +74,7 @@ public abstract class ScalingAction extends Action {
      * Get the underlying {@link NameSpace}. 
      * @return the NameSpace represented by this proxy, never null.
      */
-    @objid ("120e951c-2e5d-4e6f-97f3-0d9730184573")
+    @objid ("6cbeccd8-1dfd-4031-8d7e-072aba17cdf9")
     @Override
     public NameSpace getElement() {
         return (NameSpace)super.getElement();
@@ -86,7 +86,7 @@ public abstract class ScalingAction extends Action {
      * null
      * 
      */
-    @objid ("1f54bc3b-d074-4cea-81fd-667cef2ec90a")
+    @objid ("0f8023ba-915b-42ca-a6fe-743c1cfdb27c")
     public SoftwareComponent getSoftwareComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ScalingAction.MdaTypes.MDAASSOCDEP)
@@ -100,7 +100,7 @@ public abstract class ScalingAction extends Action {
         return null;
     }
 
-    @objid ("a9b831c5-a6a5-44b9-b901-1febc42e2793")
+    @objid ("e091e5cf-f1ab-41da-b8dc-6a2bd9febf2a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -112,7 +112,7 @@ public abstract class ScalingAction extends Action {
      * null
      * 
      */
-    @objid ("ff07ffb2-23f6-4d00-9127-debf681f81e8")
+    @objid ("e8742f8d-11c6-47fb-9ed2-76ec58dc1f14")
     public void setSoftwareComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -140,23 +140,23 @@ public abstract class ScalingAction extends Action {
         return result;
     }
 
-    @objid ("60e733fe-4888-4553-96f2-8a4d3dca68d3")
+    @objid ("c228d222-913d-48cf-af99-272cdc7bbfb1")
     protected ScalingAction(final NameSpace elt) {
         super(elt);
     }
 
     @objid ("8b410711-e57b-4938-903b-9dc7cc45b117")
     public static final class MdaTypes {
-        @objid ("5eb015af-4bdf-457b-821d-87d55f55112d")
+        @objid ("6b9277f7-1e7e-4aac-80b9-84a76f7607de")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("635ee28f-0f7c-4eee-af9d-98e60200d993")
+        @objid ("7b1541bf-920e-4731-9c4e-06437ddea897")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9d2c0028-4fe7-486c-b23c-831fc490b4f3")
+        @objid ("6c1d0d2f-3b29-4ad8-a12c-74811c9ac942")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f6fcfd5f-3ae2-44a9-a160-d9648e993a85")
+        @objid ("1f50b7bd-3ff4-4f8d-9710-74791b87b534")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "25bf81ac-b13e-4716-b766-42a9b7e05150");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
