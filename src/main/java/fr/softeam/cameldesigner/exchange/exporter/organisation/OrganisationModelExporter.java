@@ -43,8 +43,15 @@ public class OrganisationModelExporter<T extends OrganisationModel> extends SubM
     @objid ("36f2a71b-3e62-4386-a249-3a24ecfe395b")
     private void setSecurityLevel(camel.organisation.OrganisationModel context) {
         String content = this._element.getSecurityLevel();
-        if (content != null)
-            context.setSecurityLevel(SecurityLevel.valueOf(content));
+        if (content != null) {
+            if (!content.equals(""))
+            try {
+                context.setSecurityLevel(SecurityLevel.valueOf(content));
+            }
+            catch (Exception e) {
+                System.out.println("Error : Empty Security Level");
+            }
+        }
     }
 
 }

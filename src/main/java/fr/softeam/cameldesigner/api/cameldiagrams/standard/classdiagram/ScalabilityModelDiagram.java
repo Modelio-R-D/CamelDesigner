@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1aefa3bd-afe8-4cd0-8d7f-d240cb6f7cff")
 public class ScalabilityModelDiagram extends AbstractCamelDiagram {
-    @objid ("32f0d4e4-3f06-46ef-ac9a-9636e28e527a")
+    @objid ("9b3f4652-433b-48f0-9f96-21f452a68bbc")
     public static final String STEREOTYPE_NAME = "ScalabilityModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("887a8323-de23-4a21-b785-fdc192def51f")
+    @objid ("ce04c3f5-96d8-47ad-aad0-f7b2db10e8d6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link ScalabilityModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("4f332d0d-8715-4ab9-a5fc-6bd4a3bc242e")
+    @objid ("25aa86e1-da16-46f3-894c-859dd307c9bb")
     public static ScalabilityModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ScalabilityModelDiagram.STEREOTYPE_NAME);
@@ -65,34 +65,36 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link ScalabilityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ScalabilityModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScalabilityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ScalabilityModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link ScalabilityModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("016797a3-4024-419a-ba99-93162a931aed")
+    @objid ("3501ccc1-5cfa-4a0e-9afb-5654e17b6c29")
     public static ScalabilityModelDiagram instantiate(final ClassDiagram obj) {
         return ScalabilityModelDiagram.canInstantiate(obj) ? new ScalabilityModelDiagram(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link ScalabilityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ScalabilityModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link ScalabilityModelDiagram} proxy from a {@link ClassDiagram} stereotyped << ScalabilityModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link ScalabilityModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("44ba7cb1-5241-49b5-b651-21426f2785fc")
+    @objid ("5cbf9a6f-c273-44d5-aed2-d8706fa26b9c")
     public static ScalabilityModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (ScalabilityModelDiagram.canInstantiate(obj))
-        	return new ScalabilityModelDiagram(obj);
+            return new ScalabilityModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("ScalabilityModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ScalabilityModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("89339f3a-68b1-4911-88ef-d4ed00087fac")
+    @objid ("ada00d9b-78eb-4db9-a851-e787bf62ecc1")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,16 +111,17 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("7caaa7c2-60a7-48c6-9ab7-b080394df533")
+    @objid ("74368d58-a973-4480-a7f6-0a8d6d7416c9")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("b28b68a5-2c7a-468c-8d77-42f5a2d84f8f")
+    @objid ("91c654b3-ba04-4126-a0d9-87c8dae03759")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("dd8d3959-8583-4be6-a0ac-2d22b19ec37d")
+    @objid ("ddb9e738-2980-4905-83c0-2391570ea7de")
     protected ScalabilityModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("60219e4b-13d2-4abf-8e42-424d1c32a3ca")
     public static final class MdaTypes {
-        @objid ("7628f97c-c1dd-4976-a97f-f508d9c91648")
+        @objid ("646ecba4-4441-40ef-a7a3-c5ab33138760")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("82494154-505d-4c27-aa3c-263563512ce8")
+        @objid ("002f5a8a-d0a4-4faf-8f7f-08ad79e457bf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("45f61bf7-81cb-4730-950f-13455e0713a2")
+        @objid ("b2012884-3cd0-431d-a895-529fc2bacb2e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("99b7696c-52ba-4fc1-be04-41369cebd3d9")
+        @objid ("9b2ab1be-d71e-4886-aedb-e6c7ecba9802")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7f111587-b577-4533-9e55-41832442bd71");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class ScalabilityModelDiagram extends AbstractCamelDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

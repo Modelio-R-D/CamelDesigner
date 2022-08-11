@@ -1,6 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.core.LayerType;
+import camel.scalability.StatusType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
@@ -57,8 +60,19 @@ public class EventInstancePropertyPage<T extends EventInstance> extends FeatureP
     public void update(IModulePropertyTable table) {
         super.update(table);
         
+        //status type
+        String[] values = Arrays.stream(StatusType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Status Type", this._element.getStatus(), values);
         
-              //Type
+        //Layer Type
+        values = Arrays.stream(LayerType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Layer Type", this._element.getLayer(), values);
+        
+        //Type
         this._type = SingleEvent.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Type", getCamelName(this._element.getType()), getCamelNames(this._type));
     }

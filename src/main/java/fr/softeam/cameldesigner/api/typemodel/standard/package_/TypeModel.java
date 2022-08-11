@@ -39,7 +39,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("68c913aa-accf-4c20-a47c-7141fc4f3f7b")
 public class TypeModel extends SubModel {
-    @objid ("1e660e46-70c6-4957-bc00-f8931e52e8ff")
+    @objid ("58f57104-64ba-4561-bdc9-47cca8f20453")
     public static final String STEREOTYPE_NAME = "TypeModel";
 
     /**
@@ -50,7 +50,7 @@ public class TypeModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("30a61986-5ae5-45a9-be05-f30bbfe396d4")
+    @objid ("bd5d0c61-cde0-446a-ae68-723ab120a756")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, TypeModel.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class TypeModel extends SubModel {
      * 
      * @return a {@link TypeModel} proxy on the created {@link Package}.
      */
-    @objid ("0da18000-bdf2-47ee-98df-cba2f550cfa5")
+    @objid ("5335554c-7ae2-406c-a986-a6ad2159aa8a")
     public static TypeModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, TypeModel.STEREOTYPE_NAME);
@@ -68,46 +68,47 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link TypeModel} proxy or <i>null</i>.
      */
-    @objid ("0e48aa53-d092-4175-9d54-109cef688541")
+    @objid ("69ef169a-2d82-46e0-a8ef-4260bff38669")
     public static TypeModel instantiate(final Package obj) {
         return TypeModel.canInstantiate(obj) ? new TypeModel(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link TypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9fb35318-b732-4317-9fb8-0fb1e9c5f8d7")
+    @objid ("20f6b077-cded-4926-a64f-8148e6b4c702")
     public static TypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TypeModel.canInstantiate(obj))
-        	return new TypeModel(obj);
+            return new TypeModel(obj);
         else
-        	throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("784c5a2a-12b6-408a-929c-2885387a9c0b")
+    @objid ("75100f33-3363-44c8-a9ab-7081944fb74f")
     public void addDiagrams(final TypeModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
     }
 
-    @objid ("167a7071-6663-4855-b670-43a37643131f")
+    @objid ("33c029cf-c6cd-4f6b-bd87-7371ce6cf4a1")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -127,9 +128,8 @@ public class TypeModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e7423177-867d-4efb-a238-812c7d4e5672")
+    @objid ("bd9243a5-a0f8-4b20-b027-60bcfad6a469")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -138,29 +138,29 @@ public class TypeModel extends SubModel {
      * Get the values of the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("d077be1d-3107-4f2f-a0bf-d7db43fe4f68")
+    @objid ("629cc7d0-b69e-4263-81fa-9b118dd99892")
     public List<TypeModelDiagram> getDiagrams() {
         List<TypeModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
-        	if (TypeModelDiagram.canInstantiate(mObj))
-        			results.add((TypeModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, TypeModelDiagram.STEREOTYPE_NAME));
-        	}
+            if (TypeModelDiagram.canInstantiate(mObj))
+                    results.add((TypeModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, TypeModelDiagram.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("b01fefe5-4d71-4f33-8d33-ac98793a271c")
+    @objid ("bbc6ddca-9cdc-4dff-93ab-33a85f869eae")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("e1b4d23b-75eb-4fa0-b8e3-add052e11b0f")
+    @objid ("4f7f9607-bba0-48e3-9c96-eb063ccd31fb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -170,9 +170,8 @@ public class TypeModel extends SubModel {
      * Remove a value from the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("c7db98e0-f371-405f-a34e-b8a389d02159")
+    @objid ("6e97cb51-c776-4e47-86cd-2294feba1d02")
     public boolean removeDiagrams(final TypeModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -181,9 +180,8 @@ public class TypeModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("0ea74246-5890-42ee-9178-60464f9f664a")
+    @objid ("84266d77-818b-4913-9da0-528f3fbf4830")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -196,23 +194,23 @@ public class TypeModel extends SubModel {
         return result;
     }
 
-    @objid ("b6b961cd-1f2c-4d92-83e5-0314d278e3c4")
+    @objid ("f7981a53-4783-4124-ae93-f74a01f9709d")
     protected TypeModel(final Package elt) {
         super(elt);
     }
 
     @objid ("96a7120e-6c34-4aa2-95d8-e1eaa1ca16de")
     public static final class MdaTypes {
-        @objid ("034c211b-6e0e-48c3-be63-ccc80384549e")
+        @objid ("73867491-c2dc-42c0-b7c0-fd404906c3a4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("33fa64f6-6fd5-49c7-9f8d-addc991007b9")
+        @objid ("7e30025b-0a14-4436-8af9-11e86a0ddec0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8a4fd31d-fc1d-4973-a68f-ecc9eae1d854")
+        @objid ("28ae102a-d2a8-46fa-9253-6d90d152bf75")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8cdac0dc-8025-4be2-934e-dd4a816b0819")
+        @objid ("6b638f17-ad17-4644-9fa3-58230e3a912b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "429103ee-a14c-4a9a-b791-6d9441fe5cf6");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -220,11 +218,11 @@ public class TypeModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

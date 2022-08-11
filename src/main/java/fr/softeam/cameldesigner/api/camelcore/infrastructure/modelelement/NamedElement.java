@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("d32a3675-6e63-4a88-8cb1-f425a1273f04")
 public abstract class NamedElement extends CamelElement {
-    @objid ("5c7505e9-1898-4894-8480-02aab47f6901")
+    @objid ("b001211e-2555-42f9-9a81-3922c6db4264")
     public static final String STEREOTYPE_NAME = "NamedElement";
 
     /**
@@ -45,12 +45,12 @@ public abstract class NamedElement extends CamelElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("14a6caea-ec5d-4bf6-8d00-1a2cbfd79d2a")
+    @objid ("d9c7e499-ff18-4b6e-af66-0c78bc56875c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, NamedElement.STEREOTYPE_NAME));
     }
 
-    @objid ("dc3cbdc4-8749-48f4-9124-1fd2e0d1c2fb")
+    @objid ("ad8e83bc-3c2f-41be-91ba-a8b3f6b89123")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -71,41 +71,36 @@ public abstract class NamedElement extends CamelElement {
      * 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("f22fc6d5-d80d-453f-8f39-aad267b9b1ba")
+    @objid ("037ab8d3-6aab-41ef-ac44-d74d6fc2757e")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("a413e4d7-adc6-472e-8470-aa72eab8cf28")
+    @objid ("4b4088f8-835c-41b1-ba7a-39fcda9a30b0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("cd8953cd-a7f2-4f1b-a2de-5fa58c0c93e3")
-    protected NamedElement(final ModelElement elt) {
-        super(elt);
-    }
-
-    @objid ("7cae54ab-9637-4998-b119-ace4c20006c1")
+    @objid ("4b270d67-3335-486d-ab07-7cd127a451c6")
     public String getDescription() {
         IModelingSession modelingSession = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
         NoteType type = modelingSession.getMetamodelExtensions().getNoteType("ModelerModule", "description", this.elt.getMClass());
         return this.elt.getNoteContent(type);
     }
 
-    @objid ("d61ba963-fee9-484c-95ec-3dc6faebdbae")
+    @objid ("d5284a74-65a4-460a-a604-4bd58ffa2de8")
     public String getName() {
         return this.elt.getName();
     }
 
-    @objid ("a4e624e5-db68-47e1-a3b2-2b451c7dcf6f")
+    @objid ("085a4c3a-4de4-4b28-9de1-78311cf27bae")
     public void setDefaultName(String name) {
         CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().getDefaultNameService().setDefaultName(this.elt, name);
     }
 
-    @objid ("5576cf6b-3e08-4406-a1bd-a55972352073")
+    @objid ("6705931b-967e-43e7-aa01-4c9d8c5f1bdc")
     public void setDescription(String description) {
         IModelingSession modelingSession = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
         NoteType type = modelingSession.getMetamodelExtensions().getNoteType("ModelerModule", "description", this.elt.getMClass());
@@ -117,23 +112,28 @@ public abstract class NamedElement extends CamelElement {
         }
     }
 
-    @objid ("3a93d5d9-2750-4c15-bf50-ec3f8cdce41e")
+    @objid ("c752b649-afb2-40cf-af1a-3c669786c2b6")
     public void setName(String name) {
         this.elt.setName(name);
     }
 
+    @objid ("ce2e52f0-d0b0-429e-b23b-63ed5f9b4ca0")
+    protected NamedElement(final ModelElement elt) {
+        super(elt);
+    }
+
     @objid ("490342a7-e413-4d5b-a428-220d5a2d09ea")
     public static final class MdaTypes {
-        @objid ("f98699d9-f106-43b1-ba4a-cfd3102b6aff")
+        @objid ("3d61b31f-ac31-4462-9289-a5dc18ea3394")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("622ca227-9833-41de-8ceb-3e6e059fe1dd")
+        @objid ("243990c0-3d1a-4f24-a222-b606d8c86c69")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8b6529ad-6108-4a08-8399-93eebb8acfdc")
+        @objid ("6fb24c54-29b9-44ff-aeae-42735b289f18")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6195a189-7f1a-41a7-896e-f83e02e9d5b9")
+        @objid ("8b70d3ce-49c6-432e-be7d-4d8e941c58be")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0fcc7434-c82f-4c57-a814-8a9233fdc9b0");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

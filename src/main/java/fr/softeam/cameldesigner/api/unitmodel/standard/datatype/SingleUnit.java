@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7dfc6119-7128-437f-995f-47f0c2960c89")
 public class SingleUnit extends DimensionedUnit {
-    @objid ("91154dc4-1ca3-44c9-97b4-1758b58d23d2")
+    @objid ("0549cf15-db7d-4bef-b08a-1f15e9ba98ca")
     public static final String STEREOTYPE_NAME = "SingleUnit";
 
     /**
@@ -46,7 +46,7 @@ public class SingleUnit extends DimensionedUnit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d4cff9eb-d49e-4ca3-80f5-c34eed5b3ce3")
+    @objid ("f95d433b-7ac4-487a-8d9e-113c8e4875ab")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SingleUnit.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class SingleUnit extends DimensionedUnit {
      * 
      * @return a {@link SingleUnit} proxy on the created {@link DataType}.
      */
-    @objid ("795ace2e-2c27-44f2-8cfc-a90e439bc942")
+    @objid ("f3b79e28-bae4-4305-82c0-436363b9b332")
     public static SingleUnit create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SingleUnit.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class SingleUnit extends DimensionedUnit {
     }
 
     /**
-     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link SingleUnit} proxy or <i>null</i>.
      */
-    @objid ("296b3577-3a4b-4014-ac2c-894127e7f6eb")
+    @objid ("8953e8ab-6c14-4aa3-88c9-7b480d4d1ee1")
     public static SingleUnit instantiate(final DataType obj) {
         return SingleUnit.canInstantiate(obj) ? new SingleUnit(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link SingleUnit} proxy from a {@link DataType} stereotyped << SingleUnit >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link SingleUnit} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f2eea5c0-5041-49a8-8d75-d719ca342fc5")
+    @objid ("a40b45db-3d34-44cd-b45e-8054b2c1ec9d")
     public static SingleUnit safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (SingleUnit.canInstantiate(obj))
-        	return new SingleUnit(obj);
+            return new SingleUnit(obj);
         else
-        	throw new IllegalArgumentException("SingleUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("SingleUnit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("51448664-d056-4e08-8158-7c5fbf207015")
+    @objid ("03bb0a74-cf23-4836-bac3-121e35025518")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class SingleUnit extends DimensionedUnit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("9f7ddba8-1b6b-4da8-8cd5-f589364280bd")
+    @objid ("bed67d1a-7979-41ab-968c-8a4d8754e49b")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("8b6c8930-8324-4f80-a64c-ccedce81ddbc")
+    @objid ("27c62f1e-e49a-4bf6-85d4-6ef103c33705")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class SingleUnit extends DimensionedUnit {
         return result;
     }
 
-    @objid ("ef12b4a7-ecd8-486e-a284-457e5c64ade9")
+    @objid ("44d953f6-2bae-49b4-aafe-19bcb563344d")
     protected SingleUnit(final DataType elt) {
         super(elt);
     }
 
     @objid ("41eab5b5-d30f-43d2-9da2-943d64381732")
     public static final class MdaTypes {
-        @objid ("0bb5dac7-7600-47c6-99a2-a306b8771a69")
+        @objid ("bac62234-544c-4c86-9069-c1d7ae7526da")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("642bcf26-aeb8-425c-8ac0-9c7b2366960a")
+        @objid ("ab91cb01-b2e0-4bfd-a75a-0ced141cef6e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("063b9755-c865-45d5-9d6d-bc9e74a2d33a")
+        @objid ("22da12aa-34f9-47ad-a084-aed33a551ab5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d4d491a5-f33f-46de-a7bb-a131295edca6")
+        @objid ("c97259ac-35d2-49fd-aae5-a71395869ac2")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5f6c0584-c6dd-44e5-a1ad-cd4785dccb03");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class SingleUnit extends DimensionedUnit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

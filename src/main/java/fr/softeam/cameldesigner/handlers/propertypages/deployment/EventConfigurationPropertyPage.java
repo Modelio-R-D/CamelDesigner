@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.deployment.HTTPMethodType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -76,7 +78,10 @@ public class EventConfigurationPropertyPage<T extends EventConfiguration> extend
         table.addProperty("Http Methode Name", getNotNull(this._element.getHttpMethodName()));
         
         //Http Methode Type
-        table.addProperty("Http Methode Type", getNotNull(this._element.getHttpMethodType()));
+        String[] values = Arrays.stream(HTTPMethodType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Http Methode Type", getNotNull(this._element.getHttpMethodType()), values);
         
         // Execution Schedule
         this._executionSchedule = CamelDesignerAbstractProxy.getMMSObject();

@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("85540842-c7cb-455a-a265-21e99c9177ad")
 public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
-    @objid ("c33ea0c6-0b6c-4ee3-9cb4-9da2a1ff4604")
+    @objid ("42ad22c1-4f9d-4d41-bce6-cb9b5d321cd8")
     public static final String STEREOTYPE_NAME = "DeploymentTypeModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b61e5af9-34e0-4290-a0a4-2b11a3010399")
+    @objid ("f87cdb6e-a40b-409b-9e32-6d4f9e9456b4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentTypeModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link DeploymentTypeModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("74b84b84-7b94-4571-a33b-7b1029a02041")
+    @objid ("e7f0290d-4864-4b26-93a5-4d42e7de7721")
     public static DeploymentTypeModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DeploymentTypeModelDiagram.STEREOTYPE_NAME);
@@ -65,34 +65,36 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentTypeModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentTypeModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a ClassDiagram
      * @return a {@link DeploymentTypeModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("28db74b1-ae8a-4e14-b773-2e19c12a2d84")
+    @objid ("60fe0f57-da4c-4928-a39d-c3de7683d9be")
     public static DeploymentTypeModelDiagram instantiate(final ClassDiagram obj) {
         return DeploymentTypeModelDiagram.canInstantiate(obj) ? new DeploymentTypeModelDiagram(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DeploymentTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentTypeModelDiagram >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link DeploymentTypeModelDiagram} proxy from a {@link ClassDiagram} stereotyped << DeploymentTypeModelDiagram >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link ClassDiagram}
      * @return a {@link DeploymentTypeModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8c8116ea-c992-47c5-a7ef-c755f8536c65")
+    @objid ("261ca87a-2d96-4f23-b9a8-fe94fc40b94e")
     public static DeploymentTypeModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (DeploymentTypeModelDiagram.canInstantiate(obj))
-        	return new DeploymentTypeModelDiagram(obj);
+            return new DeploymentTypeModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("DeploymentTypeModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("DeploymentTypeModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e815cfbd-5015-44c9-8898-c965ff4fe70b")
+    @objid ("a1905f16-be34-4963-9472-939ff5741fb6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,16 +111,17 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}. 
+     * Get the underlying {@link ClassDiagram}.
+     * 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("ee5dea03-c785-47cb-9489-413cfbbc0f3d")
+    @objid ("b82ade6f-aeb1-4980-90cd-a3e31183710b")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("3832fa69-45d0-43be-9890-988ffe3393c8")
+    @objid ("ff7f8b22-04fa-4154-bf88-c66159fad5e0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +135,23 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("138ec3b3-b331-4e77-85c0-5cb9ca2049b9")
+    @objid ("9a02cf28-208b-47e1-a535-70c5d9b59387")
     protected DeploymentTypeModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("e60b30af-a064-499b-bd68-785456b8cd45")
     public static final class MdaTypes {
-        @objid ("88f1630d-f8f8-488d-9c70-ccd899d1f812")
+        @objid ("bd4900f9-9041-4449-ae56-24805cc9445f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("417b6715-7d33-483b-b9ad-eb845868620c")
+        @objid ("d8479658-73ae-4980-8602-eadf979447de")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("71aae89b-f0ad-43ef-98ba-9d370e829b17")
+        @objid ("e0c969c5-3890-459a-bb6d-1ddb67aff6ec")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("80b228d3-98f0-483e-a18e-7e34d348003b")
+        @objid ("758ddfba-ac67-4f84-90aa-321e1eabb7a0")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b78ff0fe-e31c-4034-ba6a-7a3d0626819e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -156,11 +159,11 @@ public class DeploymentTypeModelDiagram extends AbstractCamelDiagram {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

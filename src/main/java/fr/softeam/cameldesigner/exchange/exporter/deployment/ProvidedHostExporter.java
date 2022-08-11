@@ -27,7 +27,11 @@ public class ProvidedHostExporter<T extends HostingPort> extends HostingPortExpo
     @objid ("c97c1e7e-c0a4-4672-bc9e-b7a214eb6764")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.Component) && (elt instanceof camel.deployment.ProvidedHost)) {
+             ((camel.deployment.Component) context).getProvidedHosts().add((camel.deployment.ProvidedHost) elt);
+         }else {
+             super.attach(elt, context);
+         }
     }
 
 }

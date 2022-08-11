@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a2b62642-fe21-4f7c-a8c8-129bb3a99fab")
 public class BooleanValueType extends ValueType {
-    @objid ("a0359591-cb65-4afb-bba5-1a40b7a0529e")
+    @objid ("e488aaa6-8a84-453f-9136-33edf4e16122")
     public static final String STEREOTYPE_NAME = "BooleanValueType";
 
     /**
@@ -46,7 +46,7 @@ public class BooleanValueType extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("57722640-dbc8-4baa-b128-4d6f1daae97c")
+    @objid ("0a5f3532-bde0-418f-aa9f-e48b2e03acba")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, BooleanValueType.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class BooleanValueType extends ValueType {
      * 
      * @return a {@link BooleanValueType} proxy on the created {@link DataType}.
      */
-    @objid ("2b2bdc6f-b4e8-4868-8f62-34e37efa014f")
+    @objid ("b1527c5b-b52f-4318-aa3e-92b4525bde7f")
     public static BooleanValueType create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, BooleanValueType.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class BooleanValueType extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link BooleanValueType} proxy or <i>null</i>.
      */
-    @objid ("6b6a8806-fa91-49a3-82b8-9d2c841b0cf6")
+    @objid ("e28e5844-f248-43c6-a2f5-4ea8dba60fca")
     public static BooleanValueType instantiate(final DataType obj) {
         return BooleanValueType.canInstantiate(obj) ? new BooleanValueType(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link BooleanValueType} proxy from a {@link DataType} stereotyped << BooleanValueType >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link BooleanValueType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("7f77e5ac-14d2-4d0b-9eef-02a2dc776b3d")
+    @objid ("b2ceccb4-3578-4e22-97e9-cd601a7920b3")
     public static BooleanValueType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (BooleanValueType.canInstantiate(obj))
-        	return new BooleanValueType(obj);
+            return new BooleanValueType(obj);
         else
-        	throw new IllegalArgumentException("BooleanValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("BooleanValueType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("01796845-e12c-434a-96bb-3165b90aa2b8")
+    @objid ("7fca6eab-a7dc-4256-9e9a-0634218c4954")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class BooleanValueType extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("90836c16-1a0a-4c01-a090-2ce980b7406e")
+    @objid ("2cc36b38-9cd1-465c-8e26-9e3749f0aa7c")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("3efc0451-6f1e-4d9c-b5fe-d2530c3e55c1")
+    @objid ("6c74325e-fc6d-446b-99ed-24136f414485")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class BooleanValueType extends ValueType {
         return result;
     }
 
-    @objid ("fdb13fb3-684f-4427-9a2d-c4250f98c8c2")
+    @objid ("4aef64ed-c760-4fe0-b907-aadae48c1cba")
     protected BooleanValueType(final DataType elt) {
         super(elt);
     }
 
     @objid ("df669cbd-dad5-4a9c-8f92-4f6b6714af23")
     public static final class MdaTypes {
-        @objid ("f2fd054d-5860-4ba8-aed1-00b98059dea8")
+        @objid ("ef1a598a-979f-4c2e-b424-2cdb24ae727e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("10c87bd0-51e3-42d5-8078-e635bb1bf362")
+        @objid ("c64470f0-ed58-41ca-b7df-7f893d02d988")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("69fba89c-a2d5-46cb-a415-eb15577a87a0")
+        @objid ("88eba26f-2b62-418b-a9ec-2eaf84049b3d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("48c1d5c8-e8f3-449c-b398-1ed749995bf5")
+        @objid ("741edcc1-df26-4c08-9592-8b5970709578")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "34356c14-6f57-4377-8b6d-5f7e5d8b4929");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class BooleanValueType extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

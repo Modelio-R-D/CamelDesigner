@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("4afad244-096e-4660-b995-b2061cfa5947")
 public abstract class ValueType extends ExpendableElement {
-    @objid ("667c3e78-1563-4155-83ea-8475468fd6dc")
+    @objid ("25c21830-c268-479d-821e-14bb01d42960")
     public static final String STEREOTYPE_NAME = "ValueType";
 
-    @objid ("9cba2196-d58a-43ef-9ad7-5e15a8e5c811")
+    @objid ("9a694f62-5ff8-49d8-bfac-41bd9e646e8f")
     public static final String PRIMITIVETYPE_TAGTYPE = "primitiveType";
 
     /**
@@ -50,7 +50,7 @@ public abstract class ValueType extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d21de960-332e-4961-b67a-2d995a66fd61")
+    @objid ("fe9f41c6-f842-4d6b-922a-86d3cda4f0e7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ValueType.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public abstract class ValueType extends ExpendableElement {
                             RangeUnion.canInstantiate(obj) ? new RangeUnion(obj) : null;
     }
 
-    @objid ("5be446bf-46bf-4a00-98fb-e072ac168c0c")
+    @objid ("7ca1ada7-88c5-4083-8c3b-076d4b755ec4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -82,10 +82,11 @@ public abstract class ValueType extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("2e7a99b4-7884-424a-a51f-a869589fff11")
+    @objid ("6c3fec31-85f6-43f2-93d7-f2e0d896554d")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
@@ -96,12 +97,12 @@ public abstract class ValueType extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ffd3a120-e7c8-43c4-bdf4-90345a636403")
+    @objid ("11e2a9cf-a953-42f5-afb6-70df527e60ae")
     public String getPrimitiveType() {
         return this.elt.getTagValue(ValueType.MdaTypes.PRIMITIVETYPE_TAGTYPE_ELT);
     }
 
-    @objid ("a897011e-f192-4dee-9aa5-53daeeb3826b")
+    @objid ("03e33ca3-b6a8-4153-a914-62afd01d9797")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -112,7 +113,7 @@ public abstract class ValueType extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9e397e5e-e367-4b24-8579-da524265c5f2")
+    @objid ("48507078-12fe-430f-aa5b-b891010629be")
     public void setPrimitiveType(final String value) {
         this.elt.putTagValue(ValueType.MdaTypes.PRIMITIVETYPE_TAGTYPE_ELT, value);
     }
@@ -125,26 +126,26 @@ public abstract class ValueType extends ExpendableElement {
         return result;
     }
 
-    @objid ("fdf44bdd-f1c0-486c-b87a-8b69bd9f6a34")
+    @objid ("0e6a7a13-dcf7-457a-8185-8ff0663d132a")
     protected ValueType(final DataType elt) {
         super(elt);
     }
 
     @objid ("efcfe0b2-71a4-471e-afbf-52a17a61448e")
     public static final class MdaTypes {
-        @objid ("998e106f-f039-4f83-a101-0cc239bd141f")
+        @objid ("db2c594a-0438-41ad-a6f5-78d7b667b7d1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ea7d92a3-9166-44cf-9a1d-09e3e1f59512")
+        @objid ("c4336de5-f8d4-4396-9914-cabe63d39ee8")
         public static TagType PRIMITIVETYPE_TAGTYPE_ELT;
 
-        @objid ("84dab0ac-33da-46c0-96de-0ff402d358ed")
+        @objid ("99bb06ef-cad9-4070-8df4-c292e4f1627d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("15678285-6f4a-48a3-942a-c2d32cc2d4d3")
+        @objid ("d0a2ad8b-e9b5-4e36-a93b-66e69ba12731")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f0f338fb-1fd1-4fb4-b9f0-60e189aa51d7")
+        @objid ("21ec8a75-ff20-4313-92dc-1c1284500966")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4fa7ea19-f563-4658-8d2a-755724d85061");
             PRIMITIVETYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "23bfa9f4-034d-4dcf-9837-9cdd4bd55ba2");
@@ -153,11 +154,11 @@ public abstract class ValueType extends ExpendableElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

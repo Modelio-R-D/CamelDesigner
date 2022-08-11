@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fb49805b-f839-4291-96a7-e27350a2a19b")
 public class FeatureDataType extends FeatureClassifier {
-    @objid ("c123433a-e275-4b07-90cf-bf8c84280837")
+    @objid ("427b36f0-688a-47ab-b0ff-08559bf10594")
     public static final String STEREOTYPE_NAME = "Feature_DataType";
 
     /**
@@ -47,7 +47,7 @@ public class FeatureDataType extends FeatureClassifier {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("41830f89-4fa2-4ffa-9a34-2bcf46bfc1a1")
+    @objid ("1beed202-d951-477c-957a-1c7650306f02")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureDataType.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class FeatureDataType extends FeatureClassifier {
      * 
      * @return a {@link FeatureDataType} proxy on the created {@link DataType}.
      */
-    @objid ("afdf348a-b3f2-4d32-8bf9-b7e48731107d")
+    @objid ("3155c43b-b359-411a-aa9b-2b16ce71c950")
     public static FeatureDataType create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeatureDataType.STEREOTYPE_NAME);
@@ -65,34 +65,36 @@ public class FeatureDataType extends FeatureClassifier {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureDataType} proxy from a {@link DataType} stereotyped << Feature_DataType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureDataType} proxy from a {@link DataType} stereotyped << Feature_DataType >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link FeatureDataType} proxy or <i>null</i>.
      */
-    @objid ("522edd17-0395-46ab-bb30-fbcb6990d2b0")
+    @objid ("f62beb4c-a752-42a7-b597-43d8a3cfece2")
     public static FeatureDataType instantiate(final DataType obj) {
         return FeatureDataType.canInstantiate(obj) ? new FeatureDataType(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link FeatureDataType} proxy from a {@link DataType} stereotyped << Feature_DataType >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link FeatureDataType} proxy from a {@link DataType} stereotyped << Feature_DataType >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link FeatureDataType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5e1ae2b6-bf69-4d60-bd9c-b5c1445bdecf")
+    @objid ("bee828aa-7635-4f3a-a2c6-3958bcbc1e18")
     public static FeatureDataType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (FeatureDataType.canInstantiate(obj))
-        	return new FeatureDataType(obj);
+            return new FeatureDataType(obj);
         else
-        	throw new IllegalArgumentException("FeatureDataType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("FeatureDataType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("4a7f508d-b1ca-4f3e-819c-e17a9685b84d")
+    @objid ("352ff0f9-0e77-4711-b812-d923d57da8f7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,16 +111,17 @@ public class FeatureDataType extends FeatureClassifier {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("071f113f-ed46-4f01-893f-0a6b36a2f5f3")
+    @objid ("3ee525b1-d2f9-44c7-8cf5-3fda67620a71")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("1095dcaa-a084-403f-866c-472d28c00157")
+    @objid ("c764d66b-0602-48aa-b079-6232418fe4c4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +135,23 @@ public class FeatureDataType extends FeatureClassifier {
         return result;
     }
 
-    @objid ("e28d28c9-6cb9-426c-98f3-e5140b1a68f9")
+    @objid ("51628291-13e3-40e2-a684-dde130936508")
     protected FeatureDataType(final DataType elt) {
         super(elt);
     }
 
     @objid ("70c8de77-0287-43e4-850d-c6ebd3c36717")
     public static final class MdaTypes {
-        @objid ("df0c3122-4e89-4752-88c8-dde3d9dc086e")
+        @objid ("b8738ae1-25dd-4cd4-a564-d0e0af06dc00")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c519885a-c283-4a6b-9105-7f7d025b1cdc")
+        @objid ("8abd528b-da42-4f16-b24f-5b4d71329b9a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e4fdae95-dee0-4161-9e70-e73c9637d9dc")
+        @objid ("680763b3-7129-4f3c-b16c-ac5205f9fb05")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f08732a5-2908-419a-a0c8-79cc125e836a")
+        @objid ("e8e2d0d8-8da7-45e6-ab8c-e01f1d27f4db")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "eaf56346-fbac-4409-ad4f-4e1a6c4183d1");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -156,11 +159,11 @@ public class FeatureDataType extends FeatureClassifier {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

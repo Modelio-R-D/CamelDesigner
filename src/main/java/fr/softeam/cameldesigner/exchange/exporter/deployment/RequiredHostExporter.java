@@ -27,7 +27,11 @@ public class RequiredHostExporter<T extends HostingPort> extends HostingPortExpo
     @objid ("07c12753-2e90-4af6-8022-06665b394769")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.SoftwareComponent) && (elt instanceof camel.deployment.RequiredHost)) {
+            ((camel.deployment.SoftwareComponent) context).setRequiredHost((camel.deployment.RequiredHost) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

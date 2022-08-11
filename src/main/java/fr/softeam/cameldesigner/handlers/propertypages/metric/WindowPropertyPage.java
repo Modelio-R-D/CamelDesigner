@@ -1,5 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
+import java.util.Arrays;
+import camel.metric.WindowSizeType;
+import camel.metric.WindowType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
@@ -65,10 +68,16 @@ public class WindowPropertyPage<T extends Window> extends FeaturePropertyPage<T>
         table.addProperty("Time Unit", getCamelName(this._element.getTimeUnit()), getCamelNames(CamelDesignerAbstractProxy.getUnits()));
         
         //Window Type
-        table.addProperty("Window Type", getNotNull(this._element.getWindowType()));
+        String[] values = Arrays.stream(WindowType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Window Type", getNotNull(this._element.getWindowType()), values);
         
         //Size Type
-        table.addProperty("Size Type", getNotNull(this._element.getSizeType()));
+        values = Arrays.stream(WindowSizeType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Size Type", getNotNull(this._element.getSizeType()), values);
         
         //Measurement Size
         table.addProperty("Start", getNotNull(this._element.getMeasurementSize()));

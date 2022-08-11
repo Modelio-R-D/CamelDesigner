@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -36,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2e234a26-ab74-44b2-9156-be36441cff03")
 public abstract class DimensionedUnit extends Unit {
-    @objid ("1612541b-b8f6-4c02-9f52-b844a3402fe8")
+    @objid ("e69c8f26-ee73-4c6d-be68-fd52c3e9e2d3")
     public static final String STEREOTYPE_NAME = "DimensionedUnit";
 
     /**
@@ -47,7 +46,7 @@ public abstract class DimensionedUnit extends Unit {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("83e1316d-cd41-4efb-ac05-95b48dafae7c")
+    @objid ("7b323d59-1bf4-4c7c-b544-3cd4a118ee51")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DimensionedUnit.STEREOTYPE_NAME));
     }
@@ -57,7 +56,7 @@ public abstract class DimensionedUnit extends Unit {
         return SingleUnit.canInstantiate(obj) ?  new SingleUnit(obj) : CompositeUnit.canInstantiate(obj) ? new CompositeUnit(obj) : null;
     }
 
-    @objid ("811226a6-ea2b-41e6-b998-ba025a6fc043")
+    @objid ("f8d30815-70f7-45fc-bada-4541d2139f8e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -77,9 +76,8 @@ public abstract class DimensionedUnit extends Unit {
      * Get the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("170df9a8-b4ab-4080-9e37-475eda5d8ab7")
+    @objid ("bc539f7e-4671-4354-8528-e0c81fc24d9f")
     public UnitDimension getDimension() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DimensionedUnit.MdaTypes.MDAASSOCDEP)
@@ -92,16 +90,17 @@ public abstract class DimensionedUnit extends Unit {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("a3b790f4-c679-4089-8d72-4fb0a558ba3e")
+    @objid ("1ecdf95c-14dc-4ac2-ab9f-625e5c94aaed")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("99431471-4920-41f1-860d-491077780f9b")
+    @objid ("c21c1223-0640-4718-acb2-7567123b3ea6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -111,9 +110,8 @@ public abstract class DimensionedUnit extends Unit {
      * Set the value of the 'dimension' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("afea5409-c43e-47ca-abac-86f580b9e470")
+    @objid ("ba1ff5cd-049e-4072-b7d4-493db7e09e24")
     public void setDimension(final UnitDimension obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -141,23 +139,23 @@ public abstract class DimensionedUnit extends Unit {
         return result;
     }
 
-    @objid ("52c7d693-6acf-4aca-8b13-4f9648d7ddc8")
+    @objid ("89db97af-71d0-4e3f-a17b-24a1f81eabca")
     protected DimensionedUnit(final DataType elt) {
         super(elt);
     }
 
     @objid ("7020bdc9-61ca-45e7-b8b0-e04dd997a97d")
     public static final class MdaTypes {
-        @objid ("0673b1dd-e544-49a4-83a9-607310f6398f")
+        @objid ("3e767189-8b94-4e3c-b96e-83ea8604ae1f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("55488425-f32a-4c2f-8b8d-44205f24fbff")
+        @objid ("6ceb8a4a-ed9e-474d-9e20-4a80c653390d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5cef9c1d-f774-4851-8823-e482b8e3c149")
+        @objid ("d2c9b361-7765-46ad-8bda-13b0796afa21")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f91524e8-8519-4e90-9b1c-95852ab90b03")
+        @objid ("e774fa0c-bbad-45c4-8adf-fbd53b1a6051")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7e307b11-f18c-4c69-8c76-7b57b8d1bb8e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -165,11 +163,11 @@ public abstract class DimensionedUnit extends Unit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

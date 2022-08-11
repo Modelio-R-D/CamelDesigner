@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("28cc79c1-8e23-4dd7-b100-83242c265aac")
 public class MmsConceptInstance extends MmsObject {
-    @objid ("cdcc198e-d09f-4264-b463-075ec7c4995e")
+    @objid ("1e1e569e-440f-4b39-884a-d6601b211510")
     public static final String STEREOTYPE_NAME = "MmsConceptInstance";
 
     /**
@@ -49,7 +49,7 @@ public class MmsConceptInstance extends MmsObject {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5de0bfed-7925-4548-a542-4897f3a84cc3")
+    @objid ("00e73600-7c17-4be9-8bb7-ecf6e4dc0f26")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsConceptInstance.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public class MmsConceptInstance extends MmsObject {
      * 
      * @return a {@link MmsConceptInstance} proxy on the created {@link Instance}.
      */
-    @objid ("73ee2bcf-09e7-483d-b5fc-44989e627690")
+    @objid ("41344f1b-2684-410b-8d0b-9b7c9d72c42c")
     public static MmsConceptInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MmsConceptInstance.STEREOTYPE_NAME);
@@ -67,46 +67,47 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Instance
      * @return a {@link MmsConceptInstance} proxy or <i>null</i>.
      */
-    @objid ("15bf058f-cee0-434b-8ae3-20c1fee3d6bb")
+    @objid ("ae7aa5d2-dae4-4b73-8ea9-74c7463f258b")
     public static MmsConceptInstance instantiate(final Instance obj) {
         return MmsConceptInstance.canInstantiate(obj) ? new MmsConceptInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link MmsConceptInstance} proxy from a {@link Instance} stereotyped << MmsConceptInstance >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Instance}
      * @return a {@link MmsConceptInstance} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("16fd7d76-347c-471c-bad5-89ae86adf247")
+    @objid ("ef4c725e-5668-430c-8089-791fe72ebd68")
     public static MmsConceptInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (MmsConceptInstance.canInstantiate(obj))
-        	return new MmsConceptInstance(obj);
+            return new MmsConceptInstance(obj);
         else
-        	throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MmsConceptInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("a55de2e9-6d41-4805-b5f5-8cad56314cec")
+    @objid ("9f56a6d2-31f4-4be2-ab20-0d4d897f4937")
     public void addPropertyInstance(final MmsPropertyInstance obj) {
         if (obj!=null)
           ((Instance) this.elt).getSlot().add(obj.getElement());
     }
 
-    @objid ("822ed2a4-5979-4444-a2e4-e433b97e01f2")
+    @objid ("0b9ed40d-d50a-404d-9a4f-c059f36ac212")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -123,10 +124,11 @@ public class MmsConceptInstance extends MmsObject {
     }
 
     /**
-     * Get the underlying {@link Instance}. 
+     * Get the underlying {@link Instance}.
+     * 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("c5d0d6a9-fc7f-43b6-8b45-3637ced2e16a")
+    @objid ("42caa4c7-bebc-4bf0-9209-5f8052b2a8d8")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -136,19 +138,18 @@ public class MmsConceptInstance extends MmsObject {
      * Get the values of the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("8a972de1-cd2a-4f82-91f0-099af2d3d1e4")
+    @objid ("5f4a66b4-8332-470e-8478-3a43208f67ee")
     public List<MmsPropertyInstance> getPropertyInstance() {
         List<MmsPropertyInstance> results = new ArrayList<>();
         for (AttributeLink mObj : ((Instance) this.elt).getSlot()){
-        	if (MmsPropertyInstance.canInstantiate(mObj))
-        			results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
-        	}
+            if (MmsPropertyInstance.canInstantiate(mObj))
+                    results.add((MmsPropertyInstance)CamelDesignerProxyFactory.instantiate(mObj, MmsPropertyInstance.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("170090c3-f15a-4047-897b-d2096fcaf085")
+    @objid ("0870435c-f909-4df3-ab8a-13ca8ad47fb9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -158,9 +159,8 @@ public class MmsConceptInstance extends MmsObject {
      * Remove a value from the 'propertyInstance' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("714cb699-0d44-406f-a5fc-4b76548b8390")
+    @objid ("337fdbf4-ec6b-4dd0-9cb3-a37c07df06ff")
     public boolean removePropertyInstance(final MmsPropertyInstance obj) {
         return (obj!=null)? ((Instance) this.elt).getSlot().remove(obj.getElement()) : false;
     }
@@ -173,23 +173,23 @@ public class MmsConceptInstance extends MmsObject {
         return result;
     }
 
-    @objid ("fe987a1c-5554-4fa7-bc5b-4bb4f056e04e")
+    @objid ("b6bd977c-f0e6-4dbb-a558-6ea2a5483f77")
     protected MmsConceptInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("862d75e0-5992-4012-8c83-7a0ec8b66ab5")
     public static final class MdaTypes {
-        @objid ("090ff2b1-4934-4863-90ab-3cad3d4780ac")
+        @objid ("4ee8b42b-55f2-4550-820f-2cc5c34e8c3f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9b0c8f12-080f-4ad0-b8df-0abf91f101a1")
+        @objid ("e49172ad-821b-4848-a844-abcf59c84913")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("03a7f893-8466-48b8-b30f-225e47631956")
+        @objid ("7a64994f-44cd-4bfe-b937-ed4c31357b11")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("84b17a9d-2689-46ff-9e4b-14d0b3566814")
+        @objid ("7a7fd7ad-ddc8-4c56-b05c-099bc2dcaa8b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "81bc1a2f-1255-41fb-b517-5ca503ccc73e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -197,11 +197,11 @@ public class MmsConceptInstance extends MmsObject {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

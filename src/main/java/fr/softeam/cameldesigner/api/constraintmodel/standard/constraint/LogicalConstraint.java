@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.IfThenConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint;
@@ -39,10 +38,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("53b9a5c1-0a76-403f-aa18-f79a25ba62a5")
 public class LogicalConstraint extends CompositeConstraint {
-    @objid ("6d51c541-4681-4e19-9484-b8c9fe0e2ca1")
+    @objid ("ba11caa8-148d-454f-88bf-80f6e252800a")
     public static final String STEREOTYPE_NAME = "LogicalConstraint";
 
-    @objid ("66655f50-d567-49b2-acb7-64b4d027da0a")
+    @objid ("f3ac9e66-734c-4e03-8239-b64f5e0f5641")
     public static final String LOGICALOPERATOR_TAGTYPE = "logicalOperator";
 
     /**
@@ -53,7 +52,7 @@ public class LogicalConstraint extends CompositeConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("94a2f45a-d090-4fd7-862f-432a48e98907")
+    @objid ("b4f0940d-7cf0-45e4-8867-5f66be1523f1")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LogicalConstraint.STEREOTYPE_NAME));
     }
@@ -63,7 +62,7 @@ public class LogicalConstraint extends CompositeConstraint {
      * 
      * @return a {@link LogicalConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("e0c5d828-ef06-4868-8d85-5dda67b9f27c")
+    @objid ("4b4c315b-06a5-4098-8342-cfa288b6afb2")
     public static LogicalConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, LogicalConstraint.STEREOTYPE_NAME);
@@ -71,40 +70,41 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Constraint
      * @return a {@link LogicalConstraint} proxy or <i>null</i>.
      */
-    @objid ("cf3ba0f5-dda0-4e27-a8d7-86df3bab3b92")
+    @objid ("c0442ad1-d023-4cb4-81d8-edef60cc4937")
     public static LogicalConstraint instantiate(final Constraint obj) {
         return LogicalConstraint.canInstantiate(obj) ? new LogicalConstraint(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link LogicalConstraint} proxy from a {@link Constraint} stereotyped << LogicalConstraint >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Constraint}
      * @return a {@link LogicalConstraint} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1af7f059-05c4-43ef-aa43-2134eaf4c3b8")
+    @objid ("c8949490-bae2-4bdf-a6c1-20e47c0e91a0")
     public static LogicalConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (LogicalConstraint.canInstantiate(obj))
-        	return new LogicalConstraint(obj);
+            return new LogicalConstraint(obj);
         else
-        	throw new IllegalArgumentException("LogicalConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("LogicalConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("84e3a515-aa90-422c-b83c-48269d7eff65")
+    @objid ("fed59591-328e-44bf-aab5-cba1e4dec253")
     public void addConstraints(final CamelConstraint obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -114,7 +114,7 @@ public class LogicalConstraint extends CompositeConstraint {
         }
     }
 
-    @objid ("c3241e77-f7e6-4e04-ae0b-b91f6dc9e6ca")
+    @objid ("d93c164b-e9ab-4714-b604-c7886145d845")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -134,9 +134,8 @@ public class LogicalConstraint extends CompositeConstraint {
      * Get the values of the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("724bfe83-e9c9-4718-994f-53ffe2860ed4")
+    @objid ("cab3dd51-d34c-4f95-94f1-679e08cf57e0")
     public List<CamelConstraint> getConstraints() {
         List<CamelConstraint> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -156,10 +155,11 @@ public class LogicalConstraint extends CompositeConstraint {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("e124b2f6-ade3-4a90-a91c-73cf08cb8f74")
+    @objid ("e079a1a9-6740-4c9e-9be8-c34da2c9cf23")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -170,12 +170,12 @@ public class LogicalConstraint extends CompositeConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fb6e4e75-4290-4312-8c89-0d4edbd047a1")
+    @objid ("27fd1846-ecff-4511-b22e-4aac8ef051a7")
     public String getLogicalOperator() {
         return this.elt.getTagValue(LogicalConstraint.MdaTypes.LOGICALOPERATOR_TAGTYPE_ELT);
     }
 
-    @objid ("fc99d2ce-6d72-4754-9fc9-ed6f7a04441c")
+    @objid ("d15f7eac-b0c5-447d-8db2-e19010642f05")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -185,9 +185,8 @@ public class LogicalConstraint extends CompositeConstraint {
      * Remove a value from the 'constraints' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("1cb53372-d871-4fb1-be84-16ccae432a70")
+    @objid ("c16a9c01-f6c0-49cd-9734-655e53bef47f")
     public boolean removeConstraints(final CamelConstraint obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -206,7 +205,7 @@ public class LogicalConstraint extends CompositeConstraint {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3b0731f3-599e-46b2-b078-7ddce8e70a07")
+    @objid ("c68e4166-9a46-43a1-8cb0-23db08da4fc6")
     public void setLogicalOperator(final String value) {
         this.elt.putTagValue(LogicalConstraint.MdaTypes.LOGICALOPERATOR_TAGTYPE_ELT, value);
     }
@@ -218,26 +217,26 @@ public class LogicalConstraint extends CompositeConstraint {
         return result;
     }
 
-    @objid ("ffdc2d65-6ef9-486e-8105-d3d4803ae3c7")
+    @objid ("139eca2a-bb35-4189-8afd-87848b933df5")
     protected LogicalConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("f5630e18-22a2-424e-9cbf-865d8acd7362")
     public static final class MdaTypes {
-        @objid ("25a8e2fd-e0d6-401d-8d09-e3d3a6b149e4")
+        @objid ("8a03963e-831e-4456-97e5-9cbacf2318f4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("97c94c5a-3bc4-436d-a3ea-44025d0d3d7c")
+        @objid ("d9244b81-320c-4641-b59a-97136c9372da")
         public static TagType LOGICALOPERATOR_TAGTYPE_ELT;
 
-        @objid ("2a185d61-9c81-46c2-bbec-2ab45e2710d1")
+        @objid ("86ffbd33-7ec7-4f07-85ba-754934e00cac")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d5732ed5-6ffb-4b05-8059-1154bf9838d3")
+        @objid ("dd7cb60c-62a1-4f82-9ba2-50ce62b7e07c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5c23496b-c8e3-409c-a4bd-12e056920bc9")
+        @objid ("747f5547-33bd-46c0-abd4-5f1d5070208e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a266bdba-acc2-4ce2-81a0-4b2f404f7db7");
             LOGICALOPERATOR_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "eb2e6178-406b-46d5-80d2-5453be9fce45");
@@ -246,11 +245,11 @@ public class LogicalConstraint extends CompositeConstraint {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

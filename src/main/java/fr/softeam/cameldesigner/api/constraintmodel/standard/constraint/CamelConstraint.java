@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fee51019-906e-4485-9a50-f01a00d74979")
 public abstract class CamelConstraint extends ExpendableElement {
-    @objid ("e225f399-952c-4c26-9bac-520adecbfba1")
+    @objid ("49c34ee4-43c9-4eb2-a917-18bf5f5e96e4")
     public static final String STEREOTYPE_NAME = "CamelConstraint";
 
     /**
@@ -45,18 +45,12 @@ public abstract class CamelConstraint extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("850ad4ec-f8e0-4093-9d13-17077c9ff6d2")
+    @objid ("f568febe-2d68-456c-bb98-a79360a09036")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelConstraint.STEREOTYPE_NAME));
     }
 
-    @objid ("ef8959b5-9ea2-40f7-9175-ba14fdf708fc")
-    public static CamelConstraint instantiate(final Constraint obj) {
-        return UnaryConstraint.canInstantiate(obj) ? UnaryConstraint.instantiate(obj) :
-            CompositeConstraint.canInstantiate(obj) ? CompositeConstraint.instantiate(obj) : null;
-    }
-
-    @objid ("7ad0a0a6-ddbd-4ee8-920f-015e4078cb3f")
+    @objid ("781fb983-e1dd-4454-ba58-347ebb5db00d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -73,38 +67,45 @@ public abstract class CamelConstraint extends ExpendableElement {
     }
 
     /**
-     * Get the underlying {@link Constraint}. 
+     * Get the underlying {@link Constraint}.
+     * 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("fb3189ff-4332-43bc-a86e-7d3a6f7ef13d")
+    @objid ("55c2872d-d39d-427a-9f00-2fa5a87e83ae")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("80fa8ad6-566c-4717-807c-0181127d0eea")
+    @objid ("a2516f48-f25b-4f08-ae63-f115ac036888")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("de768f6c-e03a-4f14-b982-f548cd8d1b44")
+    @objid ("01b297a0-4d96-4237-93e9-1e087cebd348")
     protected CamelConstraint(final Constraint elt) {
         super(elt);
     }
 
+    @objid ("395afa24-a150-43ea-934e-0ca230c1dbec")
+    public static CamelConstraint instantiate(final Constraint obj) {
+        return UnaryConstraint.canInstantiate(obj) ? UnaryConstraint.instantiate(obj) :
+            CompositeConstraint.canInstantiate(obj) ? CompositeConstraint.instantiate(obj) : null;
+    }
+
     @objid ("c2b5b585-3d59-484d-8c6a-ed96326a9e5e")
     public static final class MdaTypes {
-        @objid ("a9aef7b1-d428-4b6d-849c-f7e64b53e166")
+        @objid ("5412b46c-375f-4343-953c-70fee9221ac3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e0beb9d6-6035-446e-b468-7b6a460c0fc4")
+        @objid ("077159e3-afc7-461d-adbb-bdf4651de75c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("48d8f601-592d-4361-b169-8969558b61b9")
+        @objid ("978ad703-72ac-4645-b624-d1e535a6421a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b696bab3-efcc-452b-b191-9e8954f029e7")
+        @objid ("9b454b3c-3894-4f94-8e12-0e1b270a9ade")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4afa0df7-c748-4db8-b9a7-a082a8419c00");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -112,11 +113,11 @@ public abstract class CamelConstraint extends ExpendableElement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }
