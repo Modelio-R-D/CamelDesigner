@@ -29,11 +29,7 @@ public class RequiredHostExporter<T extends HostingPort> extends HostingPortExpo
     public void attach(CDOObject elt, CDOObject context) {
         if ((context instanceof camel.deployment.SoftwareComponent) && (elt instanceof camel.deployment.RequiredHost)) {
             ((camel.deployment.SoftwareComponent) context).setRequiredHost((camel.deployment.RequiredHost) elt);
-            
-        }else if   ((context instanceof camel.deployment.Container) && (elt instanceof camel.deployment.RequiredHost)) {
-            ((camel.deployment.Container) context).setRequiredHost((camel.deployment.RequiredHost) elt);
-            
-        }else  {
+        }else {
             super.attach(elt, context);
         }
     }

@@ -19,6 +19,23 @@ public abstract class HostingPortExporter<T extends HostingPort> extends Feature
     @objid ("5e2d5a6f-e740-4cae-928c-f02f2e3d5c1c")
     @Override
     public CDOObject createCamelElt(CDOObject context) {
+        int orientation = this._element.getElement().getDirection().getValue();
+        
+        if (this._element.getElement().isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationPort.STEREOTYPE_NAME)) {
+            
+            if (orientation==PortOrientation.IN_VALUE)
+                return DeploymentFactory.eINSTANCE.createRequiredCommunication();
+            else
+                return DeploymentFactory.eINSTANCE.createProvidedCommunication();
+        }
+        
+        else if(this._element.getElement().isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HostingPort.STEREOTYPE_NAME)) {
+            
+            if (orientation==PortOrientation.IN_VALUE)
+                return DeploymentFactory.eINSTANCE.createRequiredHost();
+            else
+                return DeploymentFactory.eINSTANCE.createProvidedHost();
+        }
         return super.createCamelElt(context);
     }
 
