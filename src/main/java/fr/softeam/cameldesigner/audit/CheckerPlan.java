@@ -8,7 +8,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.audit.rule.IRule;
 import fr.softeam.cameldesigner.audit.rule.core.Rule0101;
-import fr.softeam.cameldesigner.audit.rule.deployment.Rule0201;
+import fr.softeam.cameldesigner.audit.rule.deployment.Rule0301;
+import fr.softeam.cameldesigner.audit.rule.mms.Rule0201;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 
@@ -21,7 +22,7 @@ public class CheckerPlan {
     public CheckerPlan() {
         new Rule0101<>().registerRule(this);
         new Rule0201<>().registerRule(this);
-        //        new Rule0000<>().registerRule(this); // test
+        new Rule0301<>().registerRule(this);
     }
 
     @objid ("1436be35-7866-4bd2-9f0c-1923493700b7")

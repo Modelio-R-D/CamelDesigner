@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7499c817-68b2-4e38-ad40-e52b9b627761")
 public class HorizontalScaleRequirement extends ScaleRequirement {
-    @objid ("c7b9fb1d-8a62-4dd3-b0a7-5fd0a144876d")
+    @objid ("0fcb4db9-75ff-4b6e-9602-dc73a5c7eeec")
     public static final String STEREOTYPE_NAME = "HorizontalScaleRequirement";
 
-    @objid ("813d2247-4d0e-49fc-aa3a-d49cba69c426")
+    @objid ("d8ff6cb3-1cde-4cc8-aa97-7ef31fb9ab96")
     public static final String MAXINSTANCES_TAGTYPE = "maxInstances";
 
-    @objid ("cae945ed-4ddf-4c8d-9389-5427b3ef1ae3")
+    @objid ("56e28a98-f32e-4daa-94d1-94b833273847")
     public static final String MININSTANCES_TAGTYPE = "minInstances";
 
     /**
@@ -53,7 +53,7 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("090c0e61-7087-4fcb-a20e-8c06c7ddfac2")
+    @objid ("3234526d-eda6-4329-a8e1-91a980a0113a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScaleRequirement.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * 
      * @return a {@link HorizontalScaleRequirement} proxy on the created {@link Class}.
      */
-    @objid ("612dd968-d578-4308-b2a3-59d0519e6aff")
+    @objid ("687d92ff-7c2e-4ebe-a997-e02af6914cc1")
     public static HorizontalScaleRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HorizontalScaleRequirement.STEREOTYPE_NAME);
@@ -71,34 +71,36 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link HorizontalScaleRequirement} proxy or <i>null</i>.
      */
-    @objid ("e32f2074-e6a1-46fd-8ea0-357f1f9da208")
+    @objid ("7c5009f0-5676-4a1b-b6af-97acf557f902")
     public static HorizontalScaleRequirement instantiate(final Class obj) {
         return HorizontalScaleRequirement.canInstantiate(obj) ? new HorizontalScaleRequirement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link HorizontalScaleRequirement} proxy from a {@link Class} stereotyped << HorizontalScaleRequirement >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link HorizontalScaleRequirement} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2dbc4ce4-559e-4631-b103-795a2dc06017")
+    @objid ("f2a762be-768a-4926-973f-c7005e677e73")
     public static HorizontalScaleRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HorizontalScaleRequirement.canInstantiate(obj))
-        	return new HorizontalScaleRequirement(obj);
+            return new HorizontalScaleRequirement(obj);
         else
-        	throw new IllegalArgumentException("HorizontalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("HorizontalScaleRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c4f0bf36-76d4-42fb-8960-55e3f5ffd498")
+    @objid ("0f2070a2-e3ab-4533-a190-9dfc8dc36e07")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,10 +117,11 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("29b5ff5f-80fa-432f-9123-8ec948ae66b7")
+    @objid ("3a11a4b8-3cc1-4e67-98de-84a33ac56e3d")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -129,7 +132,7 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ec07bc47-d790-4005-9a46-256d9d053a40")
+    @objid ("c5d3810e-9184-4b6a-a707-7a6645573aec")
     public String getMaxInstances() {
         return this.elt.getTagValue(HorizontalScaleRequirement.MdaTypes.MAXINSTANCES_TAGTYPE_ELT);
     }
@@ -139,12 +142,12 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bd72108a-3e1e-42ec-9745-9935aba22d91")
+    @objid ("1a1d00f9-939c-4556-88fa-3c582c64d71e")
     public String getMinInstances() {
         return this.elt.getTagValue(HorizontalScaleRequirement.MdaTypes.MININSTANCES_TAGTYPE_ELT);
     }
 
-    @objid ("5bbf0e69-73be-45b6-9d62-2e2f1b06d79e")
+    @objid ("772ae226-5e73-4579-ab6f-36ee8cc247a4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -155,7 +158,7 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c0692563-ae4d-4c0e-8a6d-a552689da13c")
+    @objid ("5b45fc4f-5c53-4939-822f-ce6e6fd52e89")
     public void setMaxInstances(final String value) {
         this.elt.putTagValue(HorizontalScaleRequirement.MdaTypes.MAXINSTANCES_TAGTYPE_ELT, value);
     }
@@ -165,7 +168,7 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a3962541-5a7f-4126-b95b-d00bb67fc1f2")
+    @objid ("81091c43-31c6-4d05-8d73-3e6289911fac")
     public void setMinInstances(final String value) {
         this.elt.putTagValue(HorizontalScaleRequirement.MdaTypes.MININSTANCES_TAGTYPE_ELT, value);
     }
@@ -178,29 +181,29 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
         return result;
     }
 
-    @objid ("4d579de2-91d9-401c-8d21-9f13854c7dbb")
+    @objid ("ca76386f-7e39-4588-ba6f-f6ff8538328e")
     protected HorizontalScaleRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("d63fbe87-50ec-448d-8e36-aae6e8f56a3f")
     public static final class MdaTypes {
-        @objid ("c88fe437-3ff8-4fd2-99bb-1a7d8db0d1b8")
+        @objid ("257ced68-560d-46ea-8eeb-9c597ceb59b7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("469b0169-5f5a-476a-b472-417994a48ebe")
+        @objid ("b896b91d-20a4-4f67-adf6-ef9217114052")
         public static TagType MININSTANCES_TAGTYPE_ELT;
 
-        @objid ("118c4a46-b489-4474-a236-0670782b3788")
+        @objid ("9a3b5a05-4826-479c-97a2-9e17326976f7")
         public static TagType MAXINSTANCES_TAGTYPE_ELT;
 
-        @objid ("4adc4453-c637-4893-a9c9-49f5c4861015")
+        @objid ("5bd3f32c-7780-45d2-9dd8-f8ed2039be15")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("bd8e7064-e592-41f4-9c25-abf3dcdac755")
+        @objid ("1d1db64e-04b1-450e-b496-04f95b80d900")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("2e06e0f2-c5a7-456f-ab3e-efa84cb29b6a")
+        @objid ("ce3214fd-1826-4f8d-ba8d-4379d2bfeb7a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "3f58cfed-b308-4059-99be-85d0b3e87e12");
             MININSTANCES_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "c43f3c46-ad2f-4776-809a-94ad9affc593");
@@ -210,11 +213,11 @@ public class HorizontalScaleRequirement extends ScaleRequirement {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

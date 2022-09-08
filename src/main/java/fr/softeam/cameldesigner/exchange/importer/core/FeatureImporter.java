@@ -20,12 +20,6 @@ public class FeatureImporter<T extends Feature, V extends fr.softeam.cameldesign
         return v.visitFeature(this);
     }
 
-    @objid ("4aed461c-c348-4706-b1dc-affaad85e682")
-    @Override
-    public CamelElement createCamelElt(CDOObject owner) {
-        return FeatureClass.create();
-    }
-
     @objid ("1ef3d0b7-9c94-4c05-9e4c-2f501597611d")
     @Override
     public void setProperties(V elt) {
@@ -42,6 +36,12 @@ public class FeatureImporter<T extends Feature, V extends fr.softeam.cameldesign
     @objid ("26dbd316-0ffe-469f-94ac-abf7ec73cedb")
     public FeatureImporter(T elt) {
         super(elt);
+    }
+
+    @objid ("5c4dca8b-eddd-41c9-becf-15d26e9ff20d")
+    @Override
+    public CamelElement createCamelElt(CDOObject owner) {
+        return FeatureClass.create();
     }
 
 }

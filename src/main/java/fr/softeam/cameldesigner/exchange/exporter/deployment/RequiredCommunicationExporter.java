@@ -31,7 +31,11 @@ public class RequiredCommunicationExporter<T extends CommunicationPort> extends 
     @objid ("88cb71fd-4c3f-4274-aaaf-c6bc0c3f83a7")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.SoftwareComponent) && (elt instanceof camel.deployment.RequiredCommunication)) {
+            ((camel.deployment.SoftwareComponent) context).getRequiredCommunications().add((camel.deployment.RequiredCommunication) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
     @objid ("757796c5-55e4-4f6e-99fc-034c3ef2b62d")

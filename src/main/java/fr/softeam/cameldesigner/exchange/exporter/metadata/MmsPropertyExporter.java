@@ -57,6 +57,7 @@ public class MmsPropertyExporter<T extends MmsProperty> extends NamedElementExpo
 
     @objid ("9472781e-7282-459c-a161-91d93db385a7")
     private void setPropertyType(camel.mms.MmsProperty mp) {
+        // test 
         mp.setPropertyType(this._element.getMmsPropertyType());
     }
 

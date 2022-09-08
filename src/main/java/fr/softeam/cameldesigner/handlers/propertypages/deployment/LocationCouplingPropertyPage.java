@@ -1,5 +1,7 @@
 package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
+import java.util.Arrays;
+import camel.deployment.LocationCouplingType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
@@ -59,10 +61,16 @@ public class LocationCouplingPropertyPage<T extends LocationCoupling> extends Co
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        
+        //Software Component
         table.addProperty("Software Components", getCamelValue(this._element.getSoftwareComponents()), getAddRemove(SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getSoftwareComponents()));
         
-        table.addProperty("Coupling Type", getNotNull(this._element.getCouplingType()));
+        //Coupling type
+        String[] values = Arrays.stream(LocationCouplingType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Coupling Type", getNotNull(this._element.getCouplingType()), values);
+        
+        //relaxed
         table.addProperty("Relaxed", getNotNull(String.valueOf(this._element.isRelaxed())));
     }
 

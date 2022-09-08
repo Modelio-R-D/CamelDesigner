@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.scalability.TimerType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Timer;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit;
@@ -61,8 +63,17 @@ public class TimerPropertyPage<T extends Timer> extends FeaturePropertyPage<T> {
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Type",getNotNull(this._element.getType()));
+        
+        //Type
+        String[] values = Arrays.stream(TimerType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Type", getNotNull(this._element.getType()), values);
+        
+        //TimeValues
         table.addProperty("Time Value",getNotNull(this._element.getTimeValue()));
+        
+        //MaxOccurenceNum
         table.addProperty("Max Occurence Num",getNotNull(this._element.getMaxOccurrenceNum()));
         
         //Unit

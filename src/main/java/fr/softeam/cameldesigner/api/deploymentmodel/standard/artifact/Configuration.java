@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ff4bc201-76db-4377-a971-521d2953d0c0")
 public abstract class Configuration extends FeatureArtifact {
-    @objid ("12fcc3df-9d31-4a1f-86d7-45d7d88dc4ad")
+    @objid ("090d5282-fa19-4c3c-b2a7-3e724db8465c")
     public static final String STEREOTYPE_NAME = "Configuration";
 
     /**
@@ -47,12 +47,12 @@ public abstract class Configuration extends FeatureArtifact {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7c39e02d-ea85-42a0-9629-0d0ec655f415")
+    @objid ("a4498849-860b-4087-a5d6-10a1815128f4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Configuration.STEREOTYPE_NAME));
     }
 
-    @objid ("c5aaf8ea-d1ac-463a-ba4e-b755120c2c73")
+    @objid ("a3dc2974-1b3f-4a8f-a276-9ad83da0dbcc")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -69,16 +69,17 @@ public abstract class Configuration extends FeatureArtifact {
     }
 
     /**
-     * Get the underlying {@link Artifact}. 
+     * Get the underlying {@link Artifact}.
+     * 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("54ae1432-fb4a-4ba8-887b-5155b2b4bd8d")
+    @objid ("9ba0796a-5f33-4ba0-968b-3568336a5df6")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
     }
 
-    @objid ("84820d7d-6782-451a-b70c-e3c259478cf8")
+    @objid ("eff7ba69-9494-4d82-833c-0483a379521e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +93,23 @@ public abstract class Configuration extends FeatureArtifact {
         return result;
     }
 
-    @objid ("b6eaef5b-2554-4859-a514-6bc8fd692bc4")
+    @objid ("17b2e994-e70d-4c6d-b6bc-51cf1514968c")
     protected Configuration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("58dae9c3-74db-4b4e-9dad-cd23280e68db")
     public static final class MdaTypes {
-        @objid ("2f2f63f6-7e16-489e-bb25-88308d5a8656")
+        @objid ("5b53569d-9fc2-4da9-a7fa-a4bce452a88f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1fef1170-ac6c-4277-87a1-fd0e71286a01")
+        @objid ("7971b7b1-27ec-43d3-b339-10fe6017ae2f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5f5b1f69-7003-40fe-8c4f-3c9c11aa2086")
+        @objid ("a493d9c0-fd55-4e52-a897-a5c206f731f3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a0d01ab0-45a9-42a2-a651-53c6eb628641")
+        @objid ("b60754fc-596d-4f4f-b7ab-beae3465a712")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "24d6edfb-e2bf-4e67-8c56-b051b479f16d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -116,11 +117,11 @@ public abstract class Configuration extends FeatureArtifact {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

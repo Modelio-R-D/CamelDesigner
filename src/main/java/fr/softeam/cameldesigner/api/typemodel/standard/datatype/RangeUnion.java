@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("418feac3-a018-487d-af79-66ed2a10b317")
 public class RangeUnion extends ValueType {
-    @objid ("79daefa4-d4eb-4a96-97f3-180e88dff371")
+    @objid ("96333858-30ec-4283-8600-8013409cade8")
     public static final String STEREOTYPE_NAME = "RangeUnion";
 
     /**
@@ -46,7 +46,7 @@ public class RangeUnion extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1ad4abc9-cfa0-409c-8b0a-b3495c22b7ef")
+    @objid ("236f8606-e743-4e57-98b7-034cb9e3a155")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RangeUnion.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class RangeUnion extends ValueType {
      * 
      * @return a {@link RangeUnion} proxy on the created {@link DataType}.
      */
-    @objid ("ede62ab5-b474-44b2-9d41-53cb2b5c88bd")
+    @objid ("f65408b4-ff52-49e2-92f3-3a9393b13dab")
     public static RangeUnion create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RangeUnion.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class RangeUnion extends ValueType {
     }
 
     /**
-     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a DataType
      * @return a {@link RangeUnion} proxy or <i>null</i>.
      */
-    @objid ("5e80f3ab-bdea-4fcb-8f07-9a2f5a4e5dc2")
+    @objid ("900f264a-45e9-46ea-a3a1-d283022371b0")
     public static RangeUnion instantiate(final DataType obj) {
         return RangeUnion.canInstantiate(obj) ? new RangeUnion(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link RangeUnion} proxy from a {@link DataType} stereotyped << RangeUnion >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link DataType}
      * @return a {@link RangeUnion} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f11102ed-c3eb-4238-bf2e-5b7041f9c7b4")
+    @objid ("4000b442-d833-45a0-8a04-cb2b272d31fa")
     public static RangeUnion safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (RangeUnion.canInstantiate(obj))
-        	return new RangeUnion(obj);
+            return new RangeUnion(obj);
         else
-        	throw new IllegalArgumentException("RangeUnion: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RangeUnion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3b35fc20-e3b2-4936-8ee3-a55728b4532d")
+    @objid ("9509978e-befe-4198-9395-f219a2c90c8d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class RangeUnion extends ValueType {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
+     * 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("4f7257c0-0b35-469e-8b40-f6ecff15fb4e")
+    @objid ("0f00b5b3-4ed6-4859-a564-f953104ebdf0")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("51ef6448-af73-4194-b039-802fa8085bf9")
+    @objid ("cc9037e1-d525-4515-bbbe-7a843ef2873e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class RangeUnion extends ValueType {
         return result;
     }
 
-    @objid ("5d73b79d-79f2-4bec-83ba-d1cf94abcc61")
+    @objid ("996d979c-75ac-4d69-a6c7-9998a2bf8ab7")
     protected RangeUnion(final DataType elt) {
         super(elt);
     }
 
     @objid ("a86c3c8e-3fec-4d3f-8ea5-0137b2bd07d5")
     public static final class MdaTypes {
-        @objid ("507c5f1a-8ebf-462b-beba-db7808451448")
+        @objid ("38caa930-d867-4775-9b8d-f1b24dfdab80")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ca5f4636-23a5-4e73-bab3-d94c32f7449c")
+        @objid ("1e98b396-bf2a-4477-a223-1bc94c6d5c1a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1b0d4f19-e9d2-457d-b242-2b265f6002b1")
+        @objid ("b010a964-ef4a-4a5c-a968-1785d18c3f13")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ab63d409-5920-4342-9c67-94eb896264ae")
+        @objid ("4835a707-78e0-4bb3-a1e4-5d790deb4b24")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "aeb307d4-49c6-4201-b285-a8ba93b291fb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class RangeUnion extends ValueType {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

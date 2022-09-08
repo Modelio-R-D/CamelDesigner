@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.scalability.UnaryPatternOperatorType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.UnaryEventPattern;
@@ -63,7 +65,11 @@ public class UnaryEventPatternPropertyPage<T extends UnaryEventPattern> extends 
         table.addProperty("Event ", getCamelName(this._element.getEvent()), getCamelNames(this._event));
         
         table.addProperty("Occurence Num",getNotNull(this._element.getOccurrenceNum()));
-        table.addProperty("Operator",getNotNull(this._element.getOperator()));
+        
+        String[] values = Arrays.stream(UnaryPatternOperatorType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Operator", getNotNull(this._element.getOperator()), values);
     }
 
     @objid ("b877cba3-e639-47de-9aad-eb2fe8838e2e")

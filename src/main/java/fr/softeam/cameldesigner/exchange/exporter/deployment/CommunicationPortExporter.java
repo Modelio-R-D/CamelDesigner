@@ -7,7 +7,7 @@ import fr.softeam.cameldesigner.exchange.exporter.core.NamedElementExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("ae7712c9-2db1-497a-ad30-e26c687271d4")
-public class CommunicationPortExporter<T extends CommunicationPort> extends NamedElementExporter<T> {
+public abstract class CommunicationPortExporter<T extends CommunicationPort> extends NamedElementExporter<T> {
     @objid ("7a2570f7-b173-4f9b-8d7f-cb70fcfce716")
     public CommunicationPortExporter(T elt) {
         super(elt);

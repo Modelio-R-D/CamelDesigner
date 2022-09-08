@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.scalability;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.scalability.BinaryPatternOperatorType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.BinaryEventPattern;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
@@ -46,11 +48,11 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
             break;
         
         case 3 :
-            this._element.setLowerOccurrenceBound(value);;
+            this._element.setLowerOccurrenceBound(value);
             break;
         
         case 4:
-            this._element.setUpperOccurrenceBound(value);;
+            this._element.setUpperOccurrenceBound(value);
             break;
         
         case 5 :
@@ -81,7 +83,11 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
         
         table.addProperty("Lower Occurrence Bound",getNotNull(this._element.getLowerOccurrenceBound()));
         table.addProperty("Upper Occurence Bound",getNotNull(this._element.getUpperOccurrenceBound()));
-        table.addProperty("Operator",getNotNull(this._element.getOperator()));
+        
+        String[] values = Arrays.stream(BinaryPatternOperatorType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Operator", getNotNull(this._element.getOperator()), values);
     }
 
     @objid ("f2c35708-5543-49fa-9960-65e30459d059")

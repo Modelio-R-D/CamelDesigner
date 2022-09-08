@@ -1,12 +1,16 @@
 package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
+import camel.deployment.DeploymentFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureExporter;
 import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.statik.PortOrientation;
 
 @objid ("e2e409b4-2bfa-485b-a6c6-727bb1a9505d")
-public class HostingPortExporter<T extends HostingPort> extends FeatureExporter<T> {
+public abstract class HostingPortExporter<T extends HostingPort> extends FeatureExporter<T> {
     @objid ("d26ca4ce-2de0-4f30-a990-d1f9d5fb7527")
     public HostingPortExporter(T elt) {
         super(elt);

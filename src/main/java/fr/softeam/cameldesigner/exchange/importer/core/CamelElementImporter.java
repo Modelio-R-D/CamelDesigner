@@ -8,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.importer.ImportProcess;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("a380bcee-5614-4bbb-ae51-4fce0eb8f1fe")
-public abstract class CamelElementImporter<T extends CDOObject, V extends CamelElement> implements IImporter<T,V> {
+public abstract class CamelElementImporter<T extends CDOObject, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement> implements IImporter<T,V> {
     @objid ("72ac129b-865a-47ac-9440-b567172e96f0")
     protected T _element;
 

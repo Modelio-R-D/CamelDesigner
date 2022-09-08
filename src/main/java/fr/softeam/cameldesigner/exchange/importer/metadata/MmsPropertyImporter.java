@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.importer.metadata;
 
+import camel.mms.MmsConcept;
 import camel.mms.MmsProperty;
 import camel.mms.MmsPropertyType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
@@ -31,6 +32,7 @@ public class MmsPropertyImporter<T extends MmsProperty, V extends fr.softeam.cam
         super.setProperties(elt);
         setRangeUri(elt);
         setPropertyType(elt);
+               // setRange(elt);
     }
 
     @objid ("6b36a532-ed48-4d49-9e38-cc6518dd4687")
@@ -62,6 +64,18 @@ public class MmsPropertyImporter<T extends MmsProperty, V extends fr.softeam.cam
         String value = this._element.getRangeUri();
         if (value != null) {
             elt.setRangeUri(value);
+        }
+    }
+
+    @objid ("2b325988-b5b1-4be1-8c73-2a199d2bc95e")
+    private void setRange(V elt) {
+        MmsConcept value = this._element.getRange();
+        if (value != null) {
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept) {
+                elt.setRange((fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept) valueElt);
+        
+            }
         }
     }
 

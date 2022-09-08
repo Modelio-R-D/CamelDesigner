@@ -2,10 +2,13 @@ package fr.softeam.cameldesigner.exchange.exporter.deployment;
 
 import java.util.ArrayList;
 import java.util.List;
+import camel.deployment.ProvidedCommunication;
+import camel.deployment.RequiredCommunication;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("601fa0b7-9bab-4d86-9d21-78c962ea7c6a")
@@ -33,6 +36,7 @@ public class SoftwareComponentExporter<T extends SoftwareComponent> extends Came
             setManagesDataSource(sc);
             setLongLived(sc);
             setCoinstanceHosting(sc);
+        
         }
     }
 

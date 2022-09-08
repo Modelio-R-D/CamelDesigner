@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("5a184b7e-9e85-4c9f-a879-89cb31cbcc76")
 public class Certifiable extends SecurityAttribute {
-    @objid ("35155adb-d54a-46e2-a686-0cbda37dac64")
+    @objid ("aa582097-08d0-4bb1-86d3-cc2186f525b1")
     public static final String STEREOTYPE_NAME = "Certifiable";
 
     /**
@@ -46,7 +46,7 @@ public class Certifiable extends SecurityAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b6aca01e-c832-402c-bb95-4d0425d07f73")
+    @objid ("7503c13f-13ae-48db-9028-df7b1fae169c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Certifiable.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class Certifiable extends SecurityAttribute {
      * 
      * @return a {@link Certifiable} proxy on the created {@link Class}.
      */
-    @objid ("aca0b7dd-bcc2-4739-8e1a-68018e2f6601")
+    @objid ("3b74ef7f-98b0-44c1-aa49-d5e6d3ad17ae")
     public static Certifiable create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Certifiable.STEREOTYPE_NAME);
@@ -64,34 +64,36 @@ public class Certifiable extends SecurityAttribute {
     }
 
     /**
-     * Tries to instantiate a {@link Certifiable} proxy from a {@link Class} stereotyped << Certifiable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Certifiable} proxy from a {@link Class} stereotyped << Certifiable >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Certifiable} proxy or <i>null</i>.
      */
-    @objid ("84384a93-4130-4dbf-9536-c3be09a06a88")
+    @objid ("19f4f1de-3b66-41f3-be56-10753a3e7ab4")
     public static Certifiable instantiate(final Class obj) {
         return Certifiable.canInstantiate(obj) ? new Certifiable(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link Certifiable} proxy from a {@link Class} stereotyped << Certifiable >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Certifiable} proxy from a {@link Class} stereotyped << Certifiable >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Certifiable} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b810e52b-5d3d-4ff2-85a5-75508a3a64a8")
+    @objid ("05575291-0eb5-4dc1-9d62-601f65c984f6")
     public static Certifiable safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Certifiable.canInstantiate(obj))
-        	return new Certifiable(obj);
+            return new Certifiable(obj);
         else
-        	throw new IllegalArgumentException("Certifiable: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Certifiable: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ef32a71c-23e1-489f-8367-2e4907e4f91d")
+    @objid ("a9b40575-97a8-4ee7-bc97-67d4efb85571")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -108,16 +110,17 @@ public class Certifiable extends SecurityAttribute {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("9fb3fb83-7afb-453b-a63b-a6aa7217abec")
+    @objid ("71f01938-ace9-413a-979a-0beef30bedd1")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("f5d60286-15d8-4071-9cf7-f70e60f9a329")
+    @objid ("b2abd6e0-bf41-42fa-b7e6-4ad0e8a1254f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +134,23 @@ public class Certifiable extends SecurityAttribute {
         return result;
     }
 
-    @objid ("e786dc36-186a-4ef3-9044-70dcb802d066")
+    @objid ("01bda1d6-4874-4f18-9a14-451edb74a383")
     protected Certifiable(final Class elt) {
         super(elt);
     }
 
     @objid ("aee63aa1-1b38-46c1-b417-2240fa886307")
     public static final class MdaTypes {
-        @objid ("a1f895ad-f2ed-454d-99da-80d82536f27c")
+        @objid ("7c5d1c71-7be2-48ff-a906-741c8b98cf96")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e9d687fd-2388-4c97-ac99-911f206ee092")
+        @objid ("386f3386-5778-4c7a-9c25-b2cc8eea4d10")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b441852e-8b58-4688-8036-660b1baedc8c")
+        @objid ("63b82059-1e37-4921-9b0c-6a8a5c2d7e6a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("03b01fb0-a93f-4393-a22e-864decf1c3e6")
+        @objid ("4280661a-f25c-4a0c-93af-f8be8c87a940")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "2ded821f-dd6d-4a25-82d8-46091a835fa0");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -155,11 +158,11 @@ public class Certifiable extends SecurityAttribute {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

@@ -1,5 +1,7 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metadata;
 
+import java.util.Arrays;
+import camel.mms.MmsPropertyType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty;
 import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
@@ -22,25 +24,20 @@ public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPro
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            Class elt = (Class) getModelElt(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if (MmsConcept.canInstantiate(elt)) {
-                this._element.setDomain(MmsConcept.safeInstantiate(elt));
-            }
-        }
-        
-        else if(this._currentRow == 2){
+        //            Class elt = (Class) getModelElt(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+        //            if (MmsConcept.canInstantiate(elt)) {
+        //                this._element.setDomain(MmsConcept.safeInstantiate(elt));
+        //            }
+        //        }
+        //        else if(this._currentRow == 2){
                 this._element.setPropertyType(value);
         }
-        
-        
         else if(this._currentRow == 3){
             Class elt = (Class) getModelElt(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if (MmsConcept.canInstantiate(elt)) {
                 this._element.setRange(MmsConcept.safeInstantiate(elt));
             }
         }
-        
-        
         else if(this._currentRow == 4){
             this._element.setRangeUri(value);
         }
@@ -57,11 +54,14 @@ public class MmsPropertyPropertyPage<T extends MmsProperty> extends MmsObjectPro
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-               //Domain
-        table.addProperty("Domain", getCamelName(this._element.getDomain()), getCamelNames(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
+        //         //Domain
+        //        table.addProperty("Domain", getCamelName(this._element.getDomain()), getCamelNames(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
         
         //PropertyType
-        table.addProperty("Property Type", getNotNull(this._element.getPropertyType()));
+        String[] values = Arrays.stream(MmsPropertyType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Property Type", getNotNull(this._element.getPropertyType()), values);
         
         //Range
         table.addProperty("Range", getCamelName(this._element.getRange()), getCamelNames(MmsConcept.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));

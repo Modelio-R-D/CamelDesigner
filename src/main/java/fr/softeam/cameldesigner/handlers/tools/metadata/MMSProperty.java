@@ -44,6 +44,7 @@ public class MMSProperty extends DefaultBoxTool {
             if (MmsConcept.canInstantiate(owner)) {
                 MmsProperty prop = MmsProperty.create();
                 prop.setMmsPropertyType(MmsPropertyType.DATA_PROPERTY);
+                prop.setDefaultName("Property");
         
                 MmsConcept concept = MmsConcept.instantiate((org.modelio.metamodel.uml.statik.Class) owner);
                 concept.addProperty(prop);

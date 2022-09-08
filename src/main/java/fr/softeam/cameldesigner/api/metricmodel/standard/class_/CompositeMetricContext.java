@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -37,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("448daa47-c892-46fc-8cf2-94d1153ff985")
 public class CompositeMetricContext extends MetricContext {
-    @objid ("93e1e6c1-31e6-4ef8-9c90-4f29eeffedbb")
+    @objid ("8976000c-a78d-46f3-8116-fe1af7e44463")
     public static final String STEREOTYPE_NAME = "CompositeMetricContext";
 
-    @objid ("e3e61d29-fdce-45e6-b328-7f67bc86a450")
+    @objid ("9a40be6b-2588-46b4-9f6b-5754a8b021a5")
     public static final String GROUPINGTYPE_TAGTYPE = "groupingType";
 
     /**
@@ -51,7 +50,7 @@ public class CompositeMetricContext extends MetricContext {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e9fc6363-0331-44a8-b0fe-36f558f480a7")
+    @objid ("2b1f4bdf-5934-4d5d-a96a-fb41c974b804")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeMetricContext.STEREOTYPE_NAME));
     }
@@ -61,7 +60,7 @@ public class CompositeMetricContext extends MetricContext {
      * 
      * @return a {@link CompositeMetricContext} proxy on the created {@link Class}.
      */
-    @objid ("e28ff857-1017-4d49-b484-2288298bf874")
+    @objid ("6b07df67-44e2-4d72-9314-e40b0e4842ee")
     public static CompositeMetricContext create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CompositeMetricContext.STEREOTYPE_NAME);
@@ -69,40 +68,41 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link CompositeMetricContext} proxy or <i>null</i>.
      */
-    @objid ("1a66c485-c4fc-4138-90ae-cfab83418c33")
+    @objid ("3d0b363a-c591-4e71-971b-9d2cd7e0756b")
     public static CompositeMetricContext instantiate(final Class obj) {
         return CompositeMetricContext.canInstantiate(obj) ? new CompositeMetricContext(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link CompositeMetricContext} proxy from a {@link Class} stereotyped << CompositeMetricContext >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link CompositeMetricContext} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c12af409-5870-4c15-87fb-1248bc6b7826")
+    @objid ("cf808b55-24c1-4383-a367-6510bc30a848")
     public static CompositeMetricContext safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeMetricContext.canInstantiate(obj))
-        	return new CompositeMetricContext(obj);
+            return new CompositeMetricContext(obj);
         else
-        	throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CompositeMetricContext: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("2ec14f05-4495-46fd-8a3d-9bc31f4b278f")
+    @objid ("7981eac8-9fb9-4587-8a0c-339b6de1eb7d")
     public void addComposingMetricContexts(final MetricContext obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -112,7 +112,7 @@ public class CompositeMetricContext extends MetricContext {
         }
     }
 
-    @objid ("340416e0-dbeb-4e8b-9bac-5a12f131f816")
+    @objid ("57dc83fb-af9f-4025-a59f-80b5c784f401")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,9 +132,8 @@ public class CompositeMetricContext extends MetricContext {
      * Get the values of the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("eaf64bd4-be25-4ff3-b058-bd98edb75997")
+    @objid ("28d71d22-095c-48f4-9b7e-5ff2db00022b")
     public List<MetricContext> getComposingMetricContexts() {
         List<MetricContext> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -150,10 +149,11 @@ public class CompositeMetricContext extends MetricContext {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("892b47f7-9206-4de9-8b84-f6636cc29db6")
+    @objid ("41df561f-aae7-40a2-b5de-52711f9336af")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -164,12 +164,12 @@ public class CompositeMetricContext extends MetricContext {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3f2717ab-c852-4251-a821-369f0ad6f588")
+    @objid ("96cf1967-16f2-4832-a385-edfbf3c4fa42")
     public String getGroupingType() {
         return this.elt.getTagValue(CompositeMetricContext.MdaTypes.GROUPINGTYPE_TAGTYPE_ELT);
     }
 
-    @objid ("6f4adddc-2ca5-4dc3-a306-3d07013399b4")
+    @objid ("3d9d1e46-3750-46f5-b6df-6809b59acdf9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -179,9 +179,8 @@ public class CompositeMetricContext extends MetricContext {
      * Remove a value from the 'composingMetricContexts' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("798967e3-0a3d-460c-9d5c-60f477714da1")
+    @objid ("4d5ae222-e3c3-40a5-95b7-c50c0cdb1073")
     public boolean removeComposingMetricContexts(final MetricContext obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -200,7 +199,7 @@ public class CompositeMetricContext extends MetricContext {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b9135256-65af-4503-82ec-7e2182113027")
+    @objid ("a2377526-d2d1-4e39-a683-260c639a55ab")
     public void setGroupingType(final String value) {
         this.elt.putTagValue(CompositeMetricContext.MdaTypes.GROUPINGTYPE_TAGTYPE_ELT, value);
     }
@@ -213,26 +212,26 @@ public class CompositeMetricContext extends MetricContext {
         return result;
     }
 
-    @objid ("21d34eec-ec19-4a92-8dd3-1945d852b734")
+    @objid ("6c6a61a7-9aa5-49fb-b4aa-269585e1b046")
     protected CompositeMetricContext(final Class elt) {
         super(elt);
     }
 
     @objid ("9ffb0326-f714-4556-995b-da9eb6055bfe")
     public static final class MdaTypes {
-        @objid ("3f3fc71b-be81-46f9-92e8-ae7931596d48")
+        @objid ("0a4a3890-e394-457c-bc5e-15d37ee4b1f7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1eadb4f3-c0bd-45ec-8d8d-033a418f473f")
+        @objid ("e5b4685a-7622-4275-9709-666319474a47")
         public static TagType GROUPINGTYPE_TAGTYPE_ELT;
 
-        @objid ("bc5830e0-6ed5-4e34-84a2-3c28abaadf7a")
+        @objid ("14f55f8d-2d52-4591-a912-ee5927fb113a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("feb43857-97e8-4eee-baa2-1e73dad21478")
+        @objid ("613205db-2fe5-48cd-a90b-e8725aaeb4c0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("577c394f-db54-4af9-9321-7f604cdc0509")
+        @objid ("1e957ad9-b0ec-44c8-b3cb-53c4285483b8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5967b9ec-f47f-4506-8f58-e308c56214d4");
             GROUPINGTYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "7147fecd-832f-4c13-ad68-032239f5c0f3");
@@ -241,11 +240,11 @@ public class CompositeMetricContext extends MetricContext {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

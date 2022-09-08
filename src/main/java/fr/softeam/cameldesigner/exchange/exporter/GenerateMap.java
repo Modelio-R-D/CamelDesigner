@@ -11,7 +11,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 @objid ("4f8da10e-3712-4da0-a73c-880faa47c543")
 public class GenerateMap {
     @objid ("7a0757e8-ddd7-4deb-8760-e5ba6f815101")
-    private Map<ModelElement , CDOObject> modelMap;
+    private Map<ModelElement, CDOObject> modelMap;
 
     @objid ("0a0c521c-e57e-4261-82e8-4e40d0f4939f")
     private static GenerateMap theSingleInstance;

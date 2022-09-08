@@ -78,7 +78,7 @@ public class Rule0101<T extends CamelAttribute> extends AbstractRule<T> {
     @objid ("f07f63c8-b88f-49a1-9b25-a7b30f71a0d5")
     @Override
     public void registerRule(CheckerPlan plan) {
-        plan.registerRule(CamelAttribute.STEREOTYPE_NAME, this);
+        plan.registerRule(T.STEREOTYPE_NAME, this);
     }
 
 }

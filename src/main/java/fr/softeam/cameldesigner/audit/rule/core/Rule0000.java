@@ -31,7 +31,7 @@ public class Rule0000<T extends CamelElement> extends AbstractRule<T> {
     @objid ("c17ed5f9-c504-4443-91f0-f031e7c52639")
     @Override
     public void registerRule(CheckerPlan plan) {
-        plan.registerRule(CamelElement.STEREOTYPE_NAME, this);
+        plan.registerRule(T.STEREOTYPE_NAME, this);
     }
 
 }

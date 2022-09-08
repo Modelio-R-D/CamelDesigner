@@ -27,7 +27,11 @@ public class ProvidedCommunicationExporter<T extends CommunicationPort> extends 
     @objid ("5591d4f0-7e19-474c-9f4e-d2f8e2e742d9")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.deployment.Component) && (elt instanceof camel.deployment.ProvidedCommunication)) {
+            ((camel.deployment.Component) context).getProvidedCommunications().add((camel.deployment.ProvidedCommunication) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

@@ -26,6 +26,10 @@ import fr.softeam.cameldesigner.exchange.exporter.deployment.HostingPortExporter
 import fr.softeam.cameldesigner.exchange.exporter.deployment.LocationCouplingExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.PaaSConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.PaaSExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.ProvidedCommunicationExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.ProvidedHostExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.RequiredCommunicationExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.RequiredHostExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.RequirementSetExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.ScriptConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.ServerlessConfigurationExporter;
@@ -142,6 +146,7 @@ import org.modelio.metamodel.uml.statik.GeneralClass;
 import org.modelio.metamodel.uml.statik.Instance;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.uml.statik.PortOrientation;
 import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
 import org.modelio.metamodel.visitors.IDefaultModelVisitor;
 import org.modelio.metamodel.visitors.IInfrastructureVisitor;
@@ -457,8 +462,16 @@ public class ExporterFactory {
         public final Object visitPort(Port obj) {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort.STEREOTYPE_NAME: return new FeaturePortExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort.instantiate(obj));
-            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.STEREOTYPE_NAME: return new CommunicationPortExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.instantiate(obj));
-            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.STEREOTYPE_NAME: return new HostingPortExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.STEREOTYPE_NAME:
+                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE) 
+                    return new RequiredCommunicationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.instantiate(obj));
+                else
+                    return new ProvidedCommunicationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.STEREOTYPE_NAME: 
+                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE) 
+                    return new RequiredHostExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.instantiate(obj));
+                else
+                    return new ProvidedHostExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.instantiate(obj));
             default:
                 break;
             }
