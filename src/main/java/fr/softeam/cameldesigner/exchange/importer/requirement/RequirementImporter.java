@@ -3,6 +3,8 @@ package fr.softeam.cameldesigner.exchange.importer.requirement;
 import camel.requirement.Requirement;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.camelcore.standard.classifier.FeatureClassifier;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -28,6 +30,12 @@ public abstract class RequirementImporter<T extends Requirement, V extends fr.so
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
         return super.createCamelElt(owner);
+    }
+
+    @objid ("e63afe20-bd99-4733-a0ce-cf973f1c7bc1")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
     }
 
 }

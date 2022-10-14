@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.IImporter;
 import fr.softeam.cameldesigner.exchange.importer.ImportProcess;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("a380bcee-5614-4bbb-ae51-4fce0eb8f1fe")
 public abstract class CamelElementImporter<T extends CDOObject, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement> implements IImporter<T,V> {
@@ -23,6 +23,7 @@ public abstract class CamelElementImporter<T extends CDOObject, V extends fr.sof
     public T getElement() {
         return this._element;
     }
+
 
     @objid ("2c5f32c3-07a3-46e4-934d-da8a21604749")
     public void setProcess(ImportProcess process) {

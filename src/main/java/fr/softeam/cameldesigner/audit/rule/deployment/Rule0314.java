@@ -1,14 +1,14 @@
 package fr.softeam.cameldesigner.audit.rule.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
+import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance;
 import fr.softeam.cameldesigner.audit.CheckerPlan;
 import fr.softeam.cameldesigner.audit.rule.AbstractRule;
 
 @objid ("b21ce8b3-9c4d-4be8-8a03-6da991fa0dde")
-public class Rule0314<T extends DeploymentInstanceModel> extends AbstractRule<T> {
+public class Rule0314<T extends HostingPortInstance> extends AbstractRule<T> {
     @objid ("6a2434e0-d854-4649-9e67-a16ee71bf26c")
-    private static final String RULEID = "R0301";
+    private static final String RULEID = "R0314";
 
     @objid ("709a380c-6150-45fe-8e02-daf36a5aa8bd")
     @Override

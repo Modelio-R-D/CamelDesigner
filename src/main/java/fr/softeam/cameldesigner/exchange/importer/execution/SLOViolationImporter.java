@@ -1,14 +1,13 @@
 package fr.softeam.cameldesigner.exchange.importer.execution;
 
-import camel.execution.SLOViolation;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.execution.SLOViolation;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
-import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("36da3370-7025-4299-8b01-655abf9ae8b0")
-public class SLOViolationImporter<T extends SLOViolation, V extends fr.softeam.cameldesigner.api.executionmodel.standard.class_.SLOViolation> extends FeatureImporter<T,V> {
+public class SLOViolationImporter<T extends SLOViolation, V extends fr.softeam.cameldesigner.api.executionmodel.standard.class_.SLOViolation> extends CauseImporter<T,V> {
     @objid ("7e472269-4b73-4567-885f-050ed8298dce")
     public SLOViolationImporter() {
         super();

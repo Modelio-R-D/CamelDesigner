@@ -1,16 +1,16 @@
 package fr.softeam.cameldesigner.exchange.importer.metric;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
 import camel.core.MeasurableAttribute;
 import camel.metric.MetricTemplate;
 import camel.type.ValueType;
 import camel.unit.Unit;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("91223ee2-8b6b-4c6e-86ac-099ca1c074b8")
 public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate> extends FeatureImporter<T,V> {
@@ -54,10 +54,12 @@ public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softe
 
     @objid ("36eaa60c-9b33-49f0-a8c6-81d512cc0b8b")
     private void setValueType(V elt) {
-        // TODO Auto-generated method stub
+
         ValueType value = this._element.getValueType();
         if (value != null) {
-            elt.setValueType((fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType))
+                elt.setValueType((fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType)camValue);
         }
     }
 

@@ -32,7 +32,6 @@ public class MmsPropertyImporter<T extends MmsProperty, V extends fr.softeam.cam
         super.setProperties(elt);
         setRangeUri(elt);
         setPropertyType(elt);
-               // setRange(elt);
     }
 
     @objid ("6b36a532-ed48-4d49-9e38-cc6518dd4687")

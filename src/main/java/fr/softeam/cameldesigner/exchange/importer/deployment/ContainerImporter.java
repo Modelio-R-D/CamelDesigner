@@ -8,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("22031973-9f19-44dc-9d55-cbe2cc996a06")
-public class ContainerImporter<T extends Container, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container> extends CamelComponentImporter<T,V> {
+public class ContainerImporter<T extends Container, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container> extends ComponentImporter<T,V> {
     @objid ("63d3c9c6-b68b-446e-81ad-03a32d12662e")
     public ContainerImporter() {
         super();

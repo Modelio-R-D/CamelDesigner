@@ -7,6 +7,7 @@ import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.User;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.package_.OrganisationModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 @objid ("9646e977-6420-4d58-84d2-79106b83cdfe")
 public class PlatformCredentialsImporter<T extends PlatformCredentials, V extends fr.softeam.cameldesigner.api.organisationmodel.standard.class_.PlatformCredentials> extends CredentialsImporter<T,V> {
@@ -38,6 +39,22 @@ public class PlatformCredentialsImporter<T extends PlatformCredentials, V extend
             ((User)context).setPlatformCredentials(elt);
         else
             super.attach(elt, context);
+    }
+
+    @objid ("cd913f8e-ba8e-46de-ae58-9b39ae307a3c")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setPassword(elt);
+    }
+
+    @objid ("df7cb5d3-bb3b-485f-b336-602de6a1d398")
+    private void setPassword(V elt) {
+        // TODO Auto-generated method stub
+        String value = this._element.getPassword();
+        if (value != null) {
+            elt.setPassword(value);        
+            }
     }
 
 }

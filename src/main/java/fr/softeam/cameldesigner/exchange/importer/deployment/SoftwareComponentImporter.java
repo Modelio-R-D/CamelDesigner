@@ -1,15 +1,14 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import camel.deployment.SoftwareComponent;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.deployment.SoftwareComponent;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1f54af6e-e4b6-40f7-9e3d-f18ac70811eb")
-public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent> extends CamelComponentImporter<T,V> {
+public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent> extends ComponentImporter<T,V> {
     @objid ("6eaceb6b-0a75-4ef0-84d8-1e6bd3fdfa49")
     public SoftwareComponentImporter() {
         super();
@@ -50,7 +49,6 @@ public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr
 
     @objid ("0f29c5d2-cf7b-43eb-9d90-69eee8e91d6f")
     private void setCoInstanceHosting(V elt) {
-        // TODO Auto-generated method stub
         Boolean value = this._element.isCoInstanceHosting();
         if (value != null) {
             elt.setCoInstanceHosting(value);
@@ -59,8 +57,6 @@ public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr
 
     @objid ("415b86e2-ce11-4be5-a85c-68f4224c7b7e")
     private void setLongLived(V elt) {
-        // TODO Auto-generated method stub
-        
         Boolean value = this._element.isLongLived();
          if (value != null) {
              elt.setLongLived(value);
@@ -69,13 +65,12 @@ public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr
 
     @objid ("be2a1ea4-e6b4-4041-8928-c775184e5bdf")
     private void setRequirementSet(V elt) {
-        // TODO Auto-generated method stub
         camel.deployment.RequirementSet value = this._element.getRequirementSet();
         if (value != null) {
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) {
                 elt.setRequirementSet((fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) valueElt);
-        
+
             }
         }
     }

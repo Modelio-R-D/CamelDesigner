@@ -6,6 +6,7 @@ import camel.scalability.Event;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -56,6 +57,15 @@ public class ServiceLevelObjectiveImporter<T extends ServiceLevelObjective, V ex
         if (value != null) {
             elt.setViolationEvent((fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event) value);
         }
+    }
+
+    @objid ("887d8458-7f68-4cfd-affa-5f83a907f3d5")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        if (context instanceof RequirementModel)
+            ((RequirementModel)context).addRequirements(elt);
+        else
+            super.attach(elt, context);
     }
 
 }

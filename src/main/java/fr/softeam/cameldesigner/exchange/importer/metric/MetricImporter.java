@@ -5,6 +5,7 @@ import camel.metric.MetricObjectBinding;
 import camel.metric.MetricTemplate;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -35,7 +36,8 @@ public class MetricImporter<T extends Metric, V extends fr.softeam.cameldesigner
     @objid ("0694c937-5ce5-4b3b-a036-75362bd43afb")
     @Override
     public void attach(V elt, CamelElement context) {
-        super.attach(elt, context);
+        if (context instanceof MetricTypeModel)
+        ((MetricTypeModel) context).addMetrics(elt);
     }
 
     @objid ("0110e4f7-46a2-41d0-a80d-07e9dc3f40e9")

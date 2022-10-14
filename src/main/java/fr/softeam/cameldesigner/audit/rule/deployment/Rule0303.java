@@ -1,25 +1,26 @@
 package fr.softeam.cameldesigner.audit.rule.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import fr.softeam.cameldesigner.audit.CheckerPlan;
 import fr.softeam.cameldesigner.audit.rule.AbstractRule;
+import fr.softeam.cameldesigner.utils.StringUtils;
 
 @objid ("25911e10-feb6-4c2d-9a83-a6349751af85")
-public class Rule0303<T extends DeploymentInstanceModel> extends AbstractRule<T> {
+public class Rule0303<T extends CommunicationPort> extends AbstractRule<T> {
     @objid ("8f0a0798-bafa-44f3-b225-981926cd802e")
     private static final String RULEID = "R0303";
 
     @objid ("36d1753d-b2a3-4675-bb72-60f3b28dc58b")
     @Override
     public boolean isViolated(T context) {
-        return (context.getType() == null);
+        return StringUtils.isInteger(context.getName());
     }
 
     @objid ("218c6d64-8895-4c98-bb1b-3bcc7f83f2d9")
     @Override
     public String getDescription(T elt) {
-        return "Type of " + elt.getName() + " has not been defined.";
+        return elt.getName() + " CommunicationPort must have a valid port number";
     }
 
     @objid ("1b8524b4-2c6d-46b4-a40d-8d86b1a11104")

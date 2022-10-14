@@ -29,4 +29,10 @@ public class LogicalConstraintImporter<T extends LogicalConstraint, V extends fr
         return  fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint.create();
     }
 
+    @objid ("f0b65241-e5b0-4b4b-9ce3-86305a11d065")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        // TODO Auto-generated method stub
+    }
+
 }

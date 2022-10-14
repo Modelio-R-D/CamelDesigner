@@ -1,16 +1,16 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.api.modelio.model.IUmlModel;
+import org.modelio.metamodel.uml.statik.ConnectorEnd;
 import camel.deployment.Hosting;
 import camel.deployment.ProvidedHost;
 import camel.deployment.RequiredHost;
-import camel.deployment.SoftwareComponent;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
-import org.eclipse.emf.cdo.CDOObject;
-import org.eclipse.emf.common.util.EList;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 @objid ("a5c688fd-bca0-4912-840f-27cd30663e90")
 public class HostingImporter<T extends Hosting, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Hosting> extends ComponentRelationImporter<T,V> {
@@ -45,35 +45,40 @@ public class HostingImporter<T extends Hosting, V extends fr.softeam.cameldesign
     @Override
     public void setProperties(V elt) {
         super.setProperties(elt);
-        setProvidedHost(elt);
-        setRequiredHosts(elt);
+        setProvidedRequiredHost(elt);
     }
 
-    @objid ("8765c4e6-f9e6-43f0-a9ca-b1a0a3e7f0d7")
-    private void setProvidedHost(V elt) {
-        // TODO Auto-generated method stub
-        ProvidedHost value = this._element.getProvidedHost();
-        if (value != null) {
-            CamelElement valueElt = this._process.getElement(value);
-            if (valueElt instanceof HostingPort) {
-                elt.setProvidedHost((HostingPort) valueElt);
-        
+    @objid ("afa18471-ea5a-4fc8-a77d-e45af326cd01")
+    private void setProvidedRequiredHost(V elt) {
+        ProvidedHost source = this._element.getProvidedHost();
+        RequiredHost target = this._element.getRequiredHosts().get(0);
+
+        if ((source != null) && (target != null)) {
+
+            CamelElement sourceElt = this._process.getElement(source);
+            CamelElement targetElt = this._process.getElement(target);
+
+            if ((sourceElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort)
+                     && (targetElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort)){
+
+                fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort sourcePort = (fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort) sourceElt;
+                fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort targetPort = (fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort) targetElt;
+
+                IUmlModel model = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel();
+                ConnectorEnd sourceEnd = (ConnectorEnd) model.createElement("Standard.ConnectorEnd");
+                ConnectorEnd targetEnd = (ConnectorEnd) model.createElement("Standard.ConnectorEnd");
+
+                sourceEnd.setSource(sourcePort.getElement());
+                sourceEnd.setTarget(targetPort.getElement());
+                sourceEnd.setOppositeOwner(targetEnd);
+                sourceEnd.setOpposite(targetEnd);
+                sourceEnd.setLink(elt.getElement());
+
+                targetEnd.setLink(elt.getElement());
+                targetEnd.setOppositeOwner(sourceEnd);
+                targetEnd.setOpposite(sourceEnd);
             }
         }
-    }
-
-    @objid ("28a60ce3-74b5-4233-bbd8-c397e8577e0b")
-    private void setRequiredHosts(V elt) {
-        // TODO Auto-generated method stub
-        EList<RequiredHost> value = this._element.getRequiredHosts();      
-        if (value != null) {
-            for(RequiredHost obj : value) {
-                CamelElement valueElt = this._process.getElement(obj);
-                if (valueElt instanceof HostingPort) {
-                    elt.setRequiredHosts((HostingPort) valueElt);
-                }
-            }
-            }
     }
 
 }

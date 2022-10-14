@@ -4,6 +4,8 @@ import camel.location.Location;
 import camel.requirement.ImageRequirement;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.Requirement;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.package_.RequirementModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
@@ -44,6 +46,14 @@ public class ImageRequirementImporter<T extends ImageRequirement, V extends fr.s
         EList<String> value = this._element.getImages();
         if (value != null) {
             elt.setImages(value);
+        }
+    }
+
+    @objid ("5fbb9577-9e13-4f73-b7f2-79e4591a7b0d")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        if (context instanceof RequirementModel) {
+            ((RequirementModel)context).addRequirements(elt);
         }
     }
 

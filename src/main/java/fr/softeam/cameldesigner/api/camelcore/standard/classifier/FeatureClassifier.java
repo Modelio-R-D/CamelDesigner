@@ -403,7 +403,7 @@ public abstract class FeatureClassifier extends Feature {
             if (OptimisationRequirement.canInstantiate(mObj))
                     results.add((OptimisationRequirement)CamelDesignerProxyFactory.instantiate(mObj, OptimisationRequirement.STEREOTYPE_NAME));
             }
-        return Collections.unmodifiableList(results);
+        return (results);
     }
 
     @objid ("9a96fc7d-4040-4ea0-8b72-c6e6e3e7fea2")

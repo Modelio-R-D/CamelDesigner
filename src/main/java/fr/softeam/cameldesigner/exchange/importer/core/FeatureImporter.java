@@ -30,7 +30,7 @@ public class FeatureImporter<T extends Feature, V extends fr.softeam.cameldesign
     @Override
     public void attach(V elt, CamelElement context) {
         if ((elt instanceof FeatureClassifier)  && (context instanceof FeatureClassifier))
-            ((FeatureClassifier) elt).getSubFeatures().add((FeatureClassifier)context);
+           ((FeatureClassifier) context).addSubFeatures((FeatureClassifier)elt);
     }
 
     @objid ("26dbd316-0ffe-469f-94ac-abf7ec73cedb")

@@ -1,9 +1,12 @@
 package fr.softeam.cameldesigner.exchange.importer.organisation;
 
+import camel.deployment.ProvidedHost;
 import camel.organisation.OrganisationModel;
+import camel.organisation.SecurityLevel;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.SubModelImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -36,6 +39,23 @@ public class OrganisationModelImporter<T extends OrganisationModel, V extends fr
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
         return fr.softeam.cameldesigner.api.organisationmodel.standard.package_.OrganisationModel.create();
+    }
+
+    @objid ("95d42943-d900-4e43-a94e-7a342d5e3e7a")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setSecurityLevel(elt);
+    }
+
+    @objid ("837d06d5-494c-4416-b9aa-3236e2fbc806")
+    private void setSecurityLevel(V elt) {
+        // TODO Auto-generated method stub
+        SecurityLevel value = this._element.getSecurityLevel();
+        if (value != null) {
+            elt.setSecurityLevel( value.getLiteral());
+        
+            }
     }
 
 }

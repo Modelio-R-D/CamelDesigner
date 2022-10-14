@@ -8,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("d4809bac-6c0f-42e4-ab2d-7eabc1aa69b2")
-public class HardRequirementImporter<T extends HardRequirement, V extends fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.HardRequirement> extends RequirementImporter<T,V> {
+public abstract class HardRequirementImporter<T extends HardRequirement, V extends fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass.HardRequirement> extends RequirementImporter<T,V> {
     @objid ("3e665e4e-ffda-424e-86dc-b8230bf38906")
     public HardRequirementImporter() {
     }

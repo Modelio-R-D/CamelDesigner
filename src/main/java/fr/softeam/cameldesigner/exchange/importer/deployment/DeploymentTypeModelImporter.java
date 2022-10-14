@@ -1,11 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import camel.deployment.DeploymentTypeModel;
-import camel.deployment.RequirementSet;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.deployment.DeploymentTypeModel;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8e8f482f-c03f-4554-81df-09a2d5390037")
 public class DeploymentTypeModelImporter<T extends DeploymentTypeModel, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel> extends DeploymentModelImporter<T,V> {
@@ -35,7 +34,6 @@ public class DeploymentTypeModelImporter<T extends DeploymentTypeModel, V extend
 
     @objid ("3ec97307-e2e6-42ef-ae05-e535359c72cc")
     private void setGlobalRequirementSet(V elt) {
-        // TODO Auto-generated method stub
         fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet value = (fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) this._element.getGlobalRequirementSet();
         if (value != null) {
             elt.setGlobalRequirementSet(value);

@@ -39,12 +39,13 @@ public abstract class MmsObjectImporter<T extends MmsObject, V extends fr.softea
     @Override
     public void attach(V elt, CamelElement context) {
         if (context instanceof MetaDataModel) {
-            MetaDataModel owner = (MetaDataModel) context;
             if (elt instanceof MmsConcept) {
-                owner.addConcept((MmsConcept) elt);
+                ((MetaDataModel) context).addConcept((MmsConcept) elt);
+        
             }else if (elt instanceof MmsConceptInstance) {
-                owner.addConceptInstance((MmsConceptInstance)elt);
+                ((MetaDataModel) context).addConceptInstance((MmsConceptInstance)elt);
             }
+        
         }
     }
 
@@ -82,6 +83,7 @@ public abstract class MmsObjectImporter<T extends MmsObject, V extends fr.softea
         String value = this._element.getDescription();
         if (value != null) {
             elt.setDescription(value);
+            
         }
     }
 

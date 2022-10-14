@@ -8,6 +8,7 @@ import camel.unit.Unit;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
+import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -38,7 +39,8 @@ public class MetricContextImporter<T extends MetricContext, V extends fr.softeam
     @objid ("9bbc6ea0-5641-4b61-b2eb-fe402d93a129")
     @Override
     public void attach(V elt, CamelElement context) {
-        super.attach(elt, context);
+        if (context instanceof MetricTypeModel)
+        ((MetricTypeModel) context).addMetricContexts(elt);
     }
 
     @objid ("5ee5a595-5807-4e93-a616-e99dc72f1d84")

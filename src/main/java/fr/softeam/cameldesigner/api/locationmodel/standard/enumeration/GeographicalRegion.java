@@ -11,23 +11,19 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.metamodel.uml.statik.Enumeration;
 import org.modelio.metamodel.uml.statik.EnumerationLiteral;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
+import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 /**
  * Proxy class to handle a {@link Enumeration} with << GeographicalRegion >> stereotype.
@@ -43,7 +39,7 @@ public class GeographicalRegion extends Location {
      * Tells whether a {@link GeographicalRegion proxy} can be instantiated from a {@link MObject} checking it is a {@link Enumeration} stereotyped << GeographicalRegion >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
-     * 
+     *
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
@@ -54,7 +50,7 @@ public class GeographicalRegion extends Location {
 
     /**
      * Create a new {@link Enumeration} stereotyped << GeographicalRegion >> then instantiate a {@link GeographicalRegion} proxy.
-     * 
+     *
      * @return a {@link GeographicalRegion} proxy on the created {@link Enumeration}.
      */
     @objid ("35865ac2-47bd-40b3-8f8a-16ba3b74f46d")
@@ -68,7 +64,7 @@ public class GeographicalRegion extends Location {
      * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a Enumeration
      * @return a {@link GeographicalRegion} proxy or <i>null</i>.
      */
@@ -81,7 +77,7 @@ public class GeographicalRegion extends Location {
      * Tries to instantiate a {@link GeographicalRegion} proxy from a {@link Enumeration} stereotyped << GeographicalRegion >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
+     *
      * @param obj a {@link Enumeration}
      * @return a {@link GeographicalRegion} proxy.
      * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
@@ -127,7 +123,7 @@ public class GeographicalRegion extends Location {
 
     /**
      * Get the underlying {@link Enumeration}.
-     * 
+     *
      * @return the Enumeration represented by this proxy, never null.
      */
     @objid ("a423e5ed-fdb7-41d0-906c-c0782f9a3052")

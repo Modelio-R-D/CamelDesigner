@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.handlers.propertypages.IPropertyContent;
 
 @objid ("d51e7b87-847f-4c69-9032-576d613031b3")
 public class CamelElementPropertyPage<T extends CamelElement> implements IPropertyContent {
@@ -21,7 +21,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
     private final String _ownerSeparator = ".";
 
     @objid ("43e9c34e-77a8-4d44-b0c8-e257d61e5c46")
-    private final String _eltSeparator = ";";
+    protected final String _eltSeparator = "; ";
 
     @objid ("34f24e8e-bae0-4a85-bcb7-cf094ac3e86a")
     protected final String _add = "Add ";
@@ -35,7 +35,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * 
+     *
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
@@ -46,7 +46,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
 
     /**
      * This method handles the construction of the property table of a selected element
-     * 
+     *
      * @param table : the property table to fulfill
      */
     @objid ("ba1a4d37-3f84-42a7-a42e-adf57260b2c8")
@@ -61,7 +61,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
 
     /**
      * Compute the name of the Camel Element
-     * 
+     *
      * @param elt : the Camel Element
      * @return the computed name
      */
@@ -76,7 +76,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
 
     /**
      * Compute the name of the Model Element
-     * 
+     *
      * @param elt : the model Element
      * @return the computed name
      */
@@ -88,7 +88,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
     /**
      * REturn the array of Camel name
      * @param elt : the list of Camel Element
-     * 
+     *
      * @return the array of Camel name
      */
     @objid ("af1c3c3f-3d4d-42be-b79b-40c1eb82fb07")
@@ -104,7 +104,7 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
     @objid ("7e9b0167-8353-43df-b788-b62f9fb9fef9")
     protected ModelElement getModelElt(List<? extends ModelElement> elts, String camelName) {
         String name = camelName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
-        
+
         for (ModelElement elt : elts) {
             if (getCamelName(elt).equals(name)) {
                 return elt;
@@ -128,13 +128,13 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
         List<String> result = new ArrayList<>();
         result.add("");
         result.add(this._removeAll);
-        
+
         //List of already added Elt
         List<ModelElement> addElt = new ArrayList<>();
         for (CamelElement elt : added) {
             addElt.add(elt.getElement());
         }
-        
+
         //Compute the list of Added and Removed Elements
         for (ModelElement elt : allElt) {
             if (addElt.contains(elt)) {
@@ -150,21 +150,22 @@ public class CamelElementPropertyPage<T extends CamelElement> implements IProper
     protected String getCamelValue(List<? extends CamelElement> elts) {
         String result = "";
         Iterator<? extends CamelElement> it = elts.iterator();
-        
+
         if (it.hasNext()) {
             result += getCamelName(it.next());
         }
-        
+
         while (it.hasNext()) {
             result +=  this._eltSeparator + getCamelName(it.next());
         }
+
         return result;
     }
 
     @objid ("478cb49a-be51-4d1c-9a7a-a9ed4e2f37ae")
     protected CamelElement getCamelElt(List<? extends CamelElement> elts, String camelName) {
         String name = camelName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
-        
+
         for (CamelElement elt : elts) {
             if (getCamelName(elt).equals(name)) {
                 return elt;

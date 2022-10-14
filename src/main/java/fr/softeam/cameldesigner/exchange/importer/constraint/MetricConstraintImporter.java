@@ -29,4 +29,10 @@ public class MetricConstraintImporter<T extends MetricConstraint, V extends fr.s
         return fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint.create();
     }
 
+    @objid ("66493fbf-0f14-4383-902b-667a952d956d")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        // TODO Auto-generated method stub
+    }
+
 }

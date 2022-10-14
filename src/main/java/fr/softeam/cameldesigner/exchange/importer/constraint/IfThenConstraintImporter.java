@@ -29,4 +29,10 @@ public class IfThenConstraintImporter<T extends IfThenConstraint, V extends fr.s
         return fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.IfThenConstraint.create();
     }
 
+    @objid ("9d9e8e57-267c-46ff-a1e8-dd37311c1d57")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        // TODO Auto-generated method stub
+    }
+
 }

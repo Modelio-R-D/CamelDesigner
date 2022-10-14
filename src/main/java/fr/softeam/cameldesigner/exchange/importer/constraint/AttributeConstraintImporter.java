@@ -32,7 +32,6 @@ public abstract class AttributeConstraintImporter<T extends AttributeConstraint,
     @objid ("a1e4941d-9f7c-45a7-815e-e9e95a97c3d5")
     @Override
     public void attach(V elt, CamelElement context) {
-        super.attach(elt, context);
     }
 
 }

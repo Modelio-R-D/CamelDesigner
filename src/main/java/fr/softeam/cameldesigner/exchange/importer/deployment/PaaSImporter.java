@@ -8,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("9fe4fd87-f3ec-43ea-90d6-48e5def5ea68")
-public class PaaSImporter<T extends PaaS, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS> extends CamelComponentImporter<T,V> {
+public class PaaSImporter<T extends PaaS, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS> extends ComponentImporter<T,V> {
     @objid ("d0ecc2b5-88b3-4280-a1b4-8dbcc9d87371")
     public PaaSImporter() {
         super();

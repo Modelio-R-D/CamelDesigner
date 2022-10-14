@@ -35,8 +35,6 @@ public class ResourceRequirementImporter<T extends ResourceRequirement, V extend
     public void attach(V elt, CamelElement context) {
         if (context instanceof RequirementModel)
             ((RequirementModel)context).addRequirements(elt);
-        else
-            super.attach(elt, context);
     }
 
 }

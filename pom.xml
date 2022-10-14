@@ -35,14 +35,14 @@
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
-
+<!--
         <dependency>
             <groupId>com.google</groupId>
             <artifactId>inject</artifactId>
             <version>3.0.0</version>
             <type>jar</type>
         </dependency>
-
+-->
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>registry</artifactId>
@@ -63,14 +63,14 @@
             <version>1.0.0</version>
             <type>jar</type>
         </dependency>
-
+<!--
         <dependency>
             <groupId>org.eclipse.orbit.bundles</groupId>
             <artifactId>com.google.guava</artifactId>
             <version>21.0.0-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
-
+-->
         <dependency>
             <groupId>org.eclipse.ocl.xtext</groupId>
             <artifactId>oclstdlib</artifactId>
@@ -151,14 +151,14 @@
             <artifactId>net4j</artifactId>
             <version>4.1.500</version>
         </dependency>
-
+<!--
         <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>multibindings</artifactId>
             <version>3.0.0</version>
             <type>jar</type>
         </dependency>
-
+-->
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>app</artifactId>
@@ -538,4 +538,13 @@
             </pluginManagement>
         </build>
     <description>Modelio Module for designing the Cloud Application Modelling and Execution Language (CAMEL). For more information about CAMEL see http://camel-dsl.org/</description>
-    </project>
+    <dependencyManagement>
+    	<dependencies>
+    		<dependency>
+    			<groupId>com.google</groupId>
+    			<artifactId>inject</artifactId>
+    			<version>3.0.0</version>
+    		</dependency>
+    	</dependencies>
+    </dependencyManagement>
+</project>

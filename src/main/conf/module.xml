@@ -7,11 +7,258 @@
         <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
         <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/inject-3.0.0.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/multibindings-3.0.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
         <PathEntry path="lib/inject-1.0.0.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
         <PathEntry path="lib/state-1.1.0.jar"/>
         <PathEntry path="lib/java-2.0.17.jar"/>
@@ -24,7 +271,6 @@
         <PathEntry path="lib/runtime-3.13.0.jar"/>
         <PathEntry path="lib/edit-2.12.0.jar"/>
         <PathEntry path="lib/net4j-4.1.500.jar"/>
-        <PathEntry path="lib/multibindings-3.0.0.jar"/>
         <PathEntry path="lib/app-1.3.400.jar"/>
         <PathEntry path="lib/pivot-1.3.0.jar"/>
         <PathEntry path="lib/jobs-3.9.3.jar"/>
@@ -1288,7 +1534,7 @@
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
             </Command>
-            <Command id="Checker" label="%command.Checker.label" tooltip="%command.Checker.tooltip" image="" modify-model="false">
+            <Command id="Checker" label="%command.Checker.label" tooltip="%command.Checker.tooltip" image="res/icon/gui/checkmodel.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.CheckerCommand"/>
             </Command>
@@ -1365,6 +1611,10 @@
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.ExportModelCommand"/>
             </Command>
+            <Command id="IfThenConstraint" label="%command.IfThenConstraint.label" tooltip="%command.IfThenConstraint.tooltip" image="res/icon/gui/IfThenConstraint_24.png" modify-model="true">
+                <Scope metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.constraints.IfThenConstraintCommand"/>
+            </Command>
             <Command id="Import" label="%command.Import.label" tooltip="%command.Import.tooltip" image="res/icon/gui/importCamel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype=""/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.ImportModelCommand"/>
@@ -1381,6 +1631,10 @@
                     <HParameter name="metaclass" value="Standard.ClassDiagram"/>
                     <HParameter name="style" value="CamelStyle"/>
                 </Handler>
+            </Command>
+            <Command id="LogicalConstraint" label="%command.LogicalConstraint.label" tooltip="%command.LogicalConstraint.tooltip" image="res/icon/gui/LogicalConstraint_24.png" modify-model="true">
+                <Scope metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="fr.softeam.cameldesigner.handlers.commands.constraints.LogicalConstraintCommand"/>
             </Command>
             <Command id="Metadata_Model" label="%command.Metadata_Model.label" tooltip="%command.Metadata_Model.tooltip" image="res/icon/gui/metadataModel_24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
@@ -1885,7 +2139,7 @@
                 </Handler>
             </Tool>
             <Tool id="IfThenConstraint" label="%tool.IfThenConstraint.label" tooltip="%tool.IfThenConstraint.tooltip" image="res/icon/gui/IfThenConstraint.png">
-                <Scope-source metaclass="Standard.Constraint" stereotype=""/>
+                <Scope-source metaclass="Standard.Constraint" stereotype="CamelDesigner#CamelConstraint"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.constraint.IfThenConstraintTool">
                     <HParameter name="stereotype" value="CamelDesigner#IfThenConstraint"/>
                     <HParameter name="metaclass" value="Standard.Constraint"/>
@@ -1926,7 +2180,7 @@
                 </Handler>
             </Tool>
             <Tool id="LogicalConstraint" label="%tool.LogicalConstraint.label" tooltip="%tool.LogicalConstraint.tooltip" image="res/icon/gui/LogicalConstraint.png">
-                <Scope-source metaclass="Standard.Constraint" stereotype=""/>
+                <Scope-source metaclass="Standard.Constraint" stereotype="CamelDesigner#CamelConstraint"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.constraint.LogicalConstraintTool">
                     <HParameter name="stereotype" value="CamelDesigner#LogicalConstraint"/>
                     <HParameter name="metaclass" value="Standard.Constraint"/>
@@ -2858,8 +3112,6 @@
                     <ToolRef refid="Schedule" group="%group.Metric.label"/>
                     <ToolRef refid="Sensor" group="%group.Metric.label"/>
                     <ToolRef refid="Window" group="%group.Metric.label"/>
-                    <ToolRef refid="IfThenConstraint" group="%group.Constraint.label"/>
-                    <ToolRef refid="LogicalConstraint" group="%group.Constraint.label"/>
                     <ToolRef refid="MetricConstraint" group="%group.Constraint.label"/>
                     <ToolRef refid="MetricVariableConstraint" group="%group.Constraint.label"/>
                     <ToolRef refid="Feature" group="%group.Common.label"/>
@@ -3031,7 +3283,10 @@
             </DiagramType>
         </Diagrams>
         <Views>
-            <PropertyPage id="Camel" class="fr.softeam.cameldesigner.handlers.propertypages.CamelPropertyPageHandler" label="%propertypage.Camel.label" image="res/icon/gui/camel_only_24.png"/>
+            <PropertyPage id="Camel" class="fr.softeam.cameldesigner.handlers.propertypages.CamelPropertyPageHandler" label="%propertypage.Camel.label" image="res/icon/gui/camel_only_24.png">
+                <CommandRef refid="IfThenConstraint" group="" group-image=""/>
+                <CommandRef refid="LogicalConstraint" group="" group-image=""/>
+            </PropertyPage>
         </Views>
     </Gui>
     <Resources>

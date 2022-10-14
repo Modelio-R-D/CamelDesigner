@@ -29,4 +29,10 @@ public class MetricVariableConstraintImporter<T extends MetricVariableConstraint
         return fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint.create();
     }
 
+    @objid ("4e28e761-59a2-4dfc-bf97-5b8a07f80537")
+    @Override
+    public void attach(V elt, CamelElement context) {
+        // TODO Auto-generated method stub
+    }
+
 }

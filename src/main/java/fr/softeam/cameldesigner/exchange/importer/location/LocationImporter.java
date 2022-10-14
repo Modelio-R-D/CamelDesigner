@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.location;
 
-import camel.location.Location;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
+import camel.location.Location;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("d17f1f8a-50fd-408d-8700-48345c2101ad")
 public class LocationImporter<T extends Location, V extends fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.Location> extends FeatureImporter<T,V> {
@@ -23,6 +23,19 @@ public class LocationImporter<T extends Location, V extends fr.softeam.cameldesi
     @objid ("ca011f90-dba7-424f-a203-09736389a59c")
     @Override
     public void attach(V elt, CamelElement context) {
+    }
+
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setId(elt);
+    }
+
+    private void setId(V elt) {
+        String id = this._element.getId();
+        if (id != null) {
+            elt.setId(id);
+        }
     }
 
     @objid ("1bbed77b-d7fd-4d75-9bfe-b0c61103aee3")

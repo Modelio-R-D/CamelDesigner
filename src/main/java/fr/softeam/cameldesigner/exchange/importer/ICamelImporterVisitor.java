@@ -1,8 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.emf.cdo.CDOObject;
 import camel.constraint.AttributeConstraint;
 import camel.constraint.CompositeConstraint;
 import camel.constraint.Constraint;
+import camel.constraint.ConstraintModel;
 import camel.constraint.IfThenConstraint;
 import camel.constraint.LogicalConstraint;
 import camel.constraint.MetricConstraint;
@@ -26,28 +29,43 @@ import camel.data.DataTypeModel;
 import camel.deployment.BuildConfiguration;
 import camel.deployment.ClusterConfiguration;
 import camel.deployment.Communication;
+import camel.deployment.CommunicationInstance;
 import camel.deployment.CommunicationPort;
+import camel.deployment.CommunicationPortInstance;
 import camel.deployment.Component;
+import camel.deployment.ComponentInstance;
 import camel.deployment.ComponentRelation;
+import camel.deployment.ComponentRelationInstance;
 import camel.deployment.Configuration;
 import camel.deployment.Container;
+import camel.deployment.ContainerInstance;
+import camel.deployment.DeploymentInstanceModel;
 import camel.deployment.DeploymentModel;
 import camel.deployment.DeploymentTypeModel;
 import camel.deployment.EventConfiguration;
 import camel.deployment.Hosting;
+import camel.deployment.HostingInstance;
 import camel.deployment.HostingPort;
+import camel.deployment.HostingPortInstance;
 import camel.deployment.LocationCoupling;
 import camel.deployment.PaaS;
 import camel.deployment.PaaSConfiguration;
+import camel.deployment.PaaSInstance;
 import camel.deployment.ProvidedCommunication;
+import camel.deployment.ProvidedCommunicationInstance;
 import camel.deployment.ProvidedHost;
+import camel.deployment.ProvidedHostInstance;
 import camel.deployment.RequiredCommunication;
+import camel.deployment.RequiredCommunicationInstance;
 import camel.deployment.RequiredHost;
+import camel.deployment.RequiredHostInstance;
 import camel.deployment.RequirementSet;
 import camel.deployment.ScriptConfiguration;
 import camel.deployment.ServerlessConfiguration;
 import camel.deployment.SoftwareComponent;
+import camel.deployment.SoftwareComponentInstance;
 import camel.deployment.VM;
+import camel.deployment.VMInstance;
 import camel.execution.ActionInstance;
 import camel.execution.ApplicationMeasurement;
 import camel.execution.Cause;
@@ -158,7 +176,6 @@ import camel.unit.SingleUnit;
 import camel.unit.Unit;
 import camel.unit.UnitDimension;
 import camel.unit.UnitModel;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
@@ -166,6 +183,7 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComp
 import fr.softeam.cameldesigner.exchange.importer.constraint.AttributeConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.CamelConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.CompositeConstraintImporter;
+import fr.softeam.cameldesigner.exchange.importer.constraint.ConstraintModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.IfThenConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.LogicalConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.MetricConstraintImporter;
@@ -188,10 +206,10 @@ import fr.softeam.cameldesigner.exchange.importer.data.DataSourceImporter;
 import fr.softeam.cameldesigner.exchange.importer.data.DataSourceInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.data.DataTypeModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.BuildConfigurationImporter;
-import fr.softeam.cameldesigner.exchange.importer.deployment.CamelComponentImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ClusterConfigurationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.CommunicationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.CommunicationPortImporter;
+import fr.softeam.cameldesigner.exchange.importer.deployment.ComponentImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ComponentRelationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ConfigurationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ContainerImporter;
@@ -207,11 +225,26 @@ import fr.softeam.cameldesigner.exchange.importer.deployment.ProvidedCommunicati
 import fr.softeam.cameldesigner.exchange.importer.deployment.ProvidedHostImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.RequiredCommunicationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.RequiredHostImporter;
-import fr.softeam.cameldesigner.exchange.importer.deployment.RequiredSetImporter;
+import fr.softeam.cameldesigner.exchange.importer.deployment.RequirementSetImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ScriptConfiguationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.ServerlessConfigurationImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.SoftwareComponentImporter;
 import fr.softeam.cameldesigner.exchange.importer.deployment.VMImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.CommunicationInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.CommunicationPortInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.ComponentInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.ComponentRelationInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.ContainerInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.DeploymentInstanceModelImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.HostingInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.HostingPortInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.PaaSInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.ProvidedCommunicationInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.ProvidedHostInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.RequiredCommunicationInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.RequiredHostInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.SoftwareComponentInstanceImporter;
+import fr.softeam.cameldesigner.exchange.importer.deploymentinstance.VMInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.execution.ActionInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.execution.ApplicationMeasurementImporter;
 import fr.softeam.cameldesigner.exchange.importer.execution.CauseImporter;
@@ -322,7 +355,6 @@ import fr.softeam.cameldesigner.exchange.importer.unit.SingleUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitDimensionImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitModelImporter;
-import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("40dfef3a-d77a-41ba-9c83-39058a242b09")
 public interface ICamelImporterVisitor {
@@ -489,7 +521,7 @@ public interface ICamelImporterVisitor {
     Object visitPaaS(PaaSImporter<? extends PaaS,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS> paaSImporter);
 
     @objid ("4aab6751-6e87-4d25-b67b-2f7d62273f3f")
-    Object visitRequiredSet(RequiredSetImporter<? extends RequirementSet,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet> requiredSetImporter);
+    Object visitRequirementSet(RequirementSetImporter<? extends RequirementSet, ? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet> requiredSetImporter);
 
     @objid ("bd305f9b-5b70-4323-ba1e-bf404c770b9b")
     Object visitScriptConfiguration(ScriptConfiguationImporter<? extends ScriptConfiguration,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration> scriptConfiguationImporter);
@@ -801,6 +833,43 @@ public interface ICamelImporterVisitor {
     Object visitUnitModel(UnitModelImporter<? extends UnitModel,? extends fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel> unitModelImporter);
 
     @objid ("c2198aa2-5cd9-400b-a4d4-2c30d86ec2e3")
-    Object visitCamelComponent(CamelComponentImporter<? extends Component,? extends CamelComponent> camelComponent);
+    Object visitCamelComponent(ComponentImporter<? extends Component,? extends CamelComponent> camelComponent);
+
+    Object visitDeploymentInstanceModel(DeploymentInstanceModelImporter<? extends DeploymentInstanceModel, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel> deploymentInstanceModelImporter);
+
+    Object visitComponent(ComponentImporter<? extends Component, ? extends CamelComponent> component);
+
+    Object visitComponentInstance(ComponentInstanceImporter<? extends ComponentInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance> componentInstance);
+
+    Object visitSoftwareComponentInstance(SoftwareComponentInstanceImporter<? extends SoftwareComponentInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance> softwareComponentInstance);
+
+    Object visitVMInstance(VMInstanceImporter<? extends VMInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance> vmInstance);
+
+    Object visitComponentRelationInstance(ComponentRelationInstanceImporter<? extends ComponentRelationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.ComponentRelationInstance> componentRelationInstance);
+
+    Object visitCommunicationInstance(CommunicationInstanceImporter<? extends CommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.CommunicationInstance> communicationInstance);
+
+    Object visitCommunicationPortInstance(CommunicationPortInstanceImporter<? extends CommunicationPortInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> communicationPortInstance);
+
+    Object visitProvidedCommunicationInstance(
+            ProvidedCommunicationInstanceImporter<? extends ProvidedCommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> providedCommunicationInstanceImporter);
+
+    Object visitRequiredCommunicationInstance(
+            RequiredCommunicationInstanceImporter<? extends RequiredCommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> requiredCommunicationInstanceImporter);
+
+    Object visitHostingInstance(HostingInstanceImporter<? extends HostingInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.HostingInstance> hostingInstance);
+
+    Object visitHostingPortInstance(HostingPortInstanceImporter<? extends HostingPortInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> hostingPortInstance);
+
+    Object visitProvidedHostInstance(ProvidedHostInstanceImporter<? extends ProvidedHostInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> providedHostInstanceImporter);
+
+    Object visitRequiredHostInstance(RequiredHostInstanceImporter<? extends RequiredHostInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> requiredHostInstanceImporter);
+
+    Object visitContainerInstance(ContainerInstanceImporter<? extends ContainerInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ContainerInstance> containerInstance);
+
+    Object visitPaaSInstance(PaaSInstanceImporter<? extends PaaSInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.PaaSInstance> paaSInstance);
+
+    Object visitConstraintModel(ConstraintModelImporter<? extends ConstraintModel, ? extends fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel> constraintModelImporter);
+
 
 }
