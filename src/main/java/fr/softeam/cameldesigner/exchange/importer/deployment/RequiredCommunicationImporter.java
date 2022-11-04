@@ -1,12 +1,12 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.RequiredCommunication;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.Container;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1fd17f2f-c4f5-4ed4-89dc-7aeff282a5d5")
 public class RequiredCommunicationImporter<T extends RequiredCommunication, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort> extends CommunicationPortImporter<T,V> {
@@ -46,7 +46,6 @@ public class RequiredCommunicationImporter<T extends RequiredCommunication, V ex
 
     @objid ("d51ff8cb-e908-427c-bff9-96cb58c9b534")
     private void setIsMandatory(V elt) {
-
         Boolean value = ( this._element).isIsMandatory();
         if (value != null) {
             elt.setIsMandatory(value);

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("cfd6a586-d35c-49a8-9f96-d97400dd7a8d")
 public class OSRequirement extends HardRequirement {
-    @objid ("7c29fd97-722e-4040-9441-24782047a4bb")
+    @objid ("e4ecc466-d160-48da-8cc7-ff19999fe5ee")
     public static final String STEREOTYPE_NAME = "OSRequirement";
 
-    @objid ("357c2275-aaaf-4c70-a92a-0faaf88be501")
+    @objid ("c7f7eabb-414b-42fa-8975-50fd1f40f8e9")
     public static final String IS64OS_TAGTYPE = "is64os";
 
-    @objid ("58ed1a09-6a0c-45b1-b17b-6a1ad82c10c1")
+    @objid ("c8e728e0-dd0b-4663-969a-24260dc9ccae")
     public static final String OS_TAGTYPE = "os";
 
     /**
@@ -53,7 +53,7 @@ public class OSRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("bfdd09d6-ebaa-486a-aed1-272b85cf09a5")
+    @objid ("f6323231-855a-45ea-8d4e-32b534953ac9")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OSRequirement.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class OSRequirement extends HardRequirement {
      * 
      * @return a {@link OSRequirement} proxy on the created {@link Class}.
      */
-    @objid ("8db5f17f-4f77-4be4-be54-b19c4d3e1bf8")
+    @objid ("0e1a42c1-a02b-459b-824f-03db908ce804")
     public static OSRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, OSRequirement.STEREOTYPE_NAME);
@@ -71,36 +71,34 @@ public class OSRequirement extends HardRequirement {
     }
 
     /**
-     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link OSRequirement} proxy or <i>null</i>.
      */
-    @objid ("1f56f495-bf16-4349-a377-e20391b1bd0b")
+    @objid ("4b542401-a5bf-45d1-84bc-b5d44e75ca17")
     public static OSRequirement instantiate(final Class obj) {
         return OSRequirement.canInstantiate(obj) ? new OSRequirement(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link OSRequirement} proxy from a {@link Class} stereotyped << OSRequirement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link OSRequirement} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b5170083-5580-4a07-9b41-fe17dfe4dac6")
+    @objid ("67ab1aab-841e-4a21-8106-ee9719f0853a")
     public static OSRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (OSRequirement.canInstantiate(obj))
-            return new OSRequirement(obj);
+        	return new OSRequirement(obj);
         else
-            throw new IllegalArgumentException("OSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("OSRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("1b8b67cd-4c5d-4983-8537-be4b6facccc8")
+    @objid ("8dabdb16-cdde-4917-a4a0-537bd9eb60a7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,11 +115,10 @@ public class OSRequirement extends HardRequirement {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("6ee01a84-fc2c-4587-a04c-af12b75a1f75")
+    @objid ("d1883519-111d-4056-acc9-d1d65ee830a4")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -132,12 +129,12 @@ public class OSRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("efa51e24-6502-4436-8207-0a970b315290")
+    @objid ("00351d11-e33a-4813-8cf2-dd0100b27160")
     public String getOs() {
         return this.elt.getTagValue(OSRequirement.MdaTypes.OS_TAGTYPE_ELT);
     }
 
-    @objid ("61104084-83db-49a9-8644-f17f4da7753d")
+    @objid ("fc8b9bcc-350e-4b55-a91a-96f354ae746c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -148,7 +145,7 @@ public class OSRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8ac179d9-a6b2-4c8a-80d7-4b7e50a0f5d3")
+    @objid ("a0d9527c-cb38-45e4-853f-7f7da78b5575")
     public boolean isIs64os() {
         return this.elt.isTagged(OSRequirement.MdaTypes.IS64OS_TAGTYPE_ELT);
     }
@@ -158,7 +155,7 @@ public class OSRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("796f8daa-a247-48e3-822d-b73ad2a52313")
+    @objid ("ec3c5146-b664-42ee-af6d-ea72e12bfacb")
     public void setIs64os(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(OSRequirement.MdaTypes.IS64OS_TAGTYPE_ELT, this.elt);
@@ -171,7 +168,7 @@ public class OSRequirement extends HardRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5afd3521-8b18-4b1d-8f50-0f4011053ea7")
+    @objid ("ecad436b-34d9-4cad-b19a-56ccfbf1092a")
     public void setOs(final String value) {
         this.elt.putTagValue(OSRequirement.MdaTypes.OS_TAGTYPE_ELT, value);
     }
@@ -184,29 +181,29 @@ public class OSRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("9c34fd08-fcb7-4627-bfcf-9be9007d69aa")
+    @objid ("1500c730-a31b-4ef8-a5a9-1495df93194a")
     protected OSRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("77ca2415-0693-4930-9e87-96b53b1278f7")
     public static final class MdaTypes {
-        @objid ("05dc37f1-24e0-46d4-a66b-685dbf4b701d")
+        @objid ("1f235c51-6ebd-4135-9abe-5ae6a4dd2eae")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("07e6663f-9bf5-491e-a931-29e8793c2c3b")
+        @objid ("755a8c7a-442c-489c-bc6a-56a70d8d6a8e")
         public static TagType OS_TAGTYPE_ELT;
 
-        @objid ("13052f94-76e2-444f-af50-fdb63a819e0b")
+        @objid ("5c0933a5-dee5-48a5-9383-f2671ac71059")
         public static TagType IS64OS_TAGTYPE_ELT;
 
-        @objid ("8b8dd15a-c3ef-44e3-9122-b517e3ba2a40")
+        @objid ("a004dad5-87dc-4fd5-968a-fb8f79008373")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f04f98a7-d9e3-4900-b884-6594e08cde18")
+        @objid ("a3238d34-d2cc-4261-a112-5a97a1fdc2b5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("52e6d929-30af-4976-a579-073538fdcb70")
+        @objid ("b872610b-c94c-4e1f-85e1-271f75867f88")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "64f95ec3-043c-4955-bfcb-9aabe91d54fe");
             OS_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "49d0562e-ffa2-4b4a-868d-9912389113a8");
@@ -216,11 +213,11 @@ public class OSRequirement extends HardRequirement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

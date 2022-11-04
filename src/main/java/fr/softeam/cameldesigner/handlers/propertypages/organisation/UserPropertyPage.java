@@ -24,7 +24,6 @@ public class UserPropertyPage<T extends User> extends EntityPropertyPage<T> {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -47,14 +46,14 @@ public class UserPropertyPage<T extends User> extends EntityPropertyPage<T> {
         case 3 :
             this._element.setLastName(value);
             break;
-            
+        
         case 4 :
             this._element.setWww(value);
             break;
         }
         
         if(this._currentRow == 5){
-            ModelElement elt = (ModelElement) getModelElt(this._platformCredentials, value);
+            ModelElement elt = getModelElt(this._platformCredentials, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PlatformCredentials.STEREOTYPE_NAME)) {
                 this._element.setPlatformCredentials( (PlatformCredentials) elt);
             }
@@ -121,19 +120,32 @@ public class UserPropertyPage<T extends User> extends EntityPropertyPage<T> {
     public void update(IModulePropertyTable table) {
         super.update(table);
         
+        //Email
         table.addProperty("Email", getNotNull(this._element.getEmail()));
+        
+        //first name
         table.addProperty("First Name", getNotNull(this._element.getFirstName()));
+        
+        //last name
         table.addProperty("Last Name", getNotNull(this._element.getLastName()));
+        
+        //www
         table.addProperty("Www", getNotNull(this._element.getWww()));
         
-              //Platform Credentials
+        //Platform Credentials
         this._platformCredentials = CamelDesignerAbstractProxy.getMMSObject();
         table.addProperty("Platform Credentials", getCamelName(this._element.getPlatformCredentials()), getCamelNames(this._platformCredentials));
         
-        
+        //requirement models
         table.addProperty("Requirement Models", getCamelValue(this._element.getRequirementModels()), getAddRemove(Action.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getRequirementModels()));
+        
+        //deployment models
         table.addProperty("Deployment Models", getCamelValue(this._element.getDeploymentModels()), getAddRemove(Action.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getDeploymentModels()));
+        
+        //metric models
         table.addProperty("Metric Models", getCamelValue(this._element.getMetricModels()), getAddRemove(Action.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getMetricModels()));
+        
+        //scalability models
         table.addProperty("Scalability Models", getCamelValue(this._element.getScalabilityModels()), getAddRemove(Action.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), this._element.getScalabilityModels()));
     }
 

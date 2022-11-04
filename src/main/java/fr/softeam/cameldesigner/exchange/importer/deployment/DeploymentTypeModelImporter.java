@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.DeploymentTypeModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8e8f482f-c03f-4554-81df-09a2d5390037")
 public class DeploymentTypeModelImporter<T extends DeploymentTypeModel, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel> extends DeploymentModelImporter<T,V> {

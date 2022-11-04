@@ -1,9 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metadata;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.handlers.propertypages.core.NamedElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("36423306-f950-4d13-ae37-2dc7c8cd2e25")
 public abstract class MmsObjectPropertyPage<T extends MmsObject> extends NamedElementPropertyPage<T> {
@@ -11,7 +11,7 @@ public abstract class MmsObjectPropertyPage<T extends MmsObject> extends NamedEl
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
      * @param MObject : the selected element
-     *
+     * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
@@ -19,32 +19,32 @@ public abstract class MmsObjectPropertyPage<T extends MmsObject> extends NamedEl
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
-
+        
         if(this._currentRow == 1){
             this._element.setId(value);
         }
-
+        
         else if(this._currentRow == 2){
             this._element.setUri(value);
         }
-
+        
         this._currentRow -= 2;
     }
 
     /**
      * This method handles the construction of the property table of a selected element
      * @param MObject : the selected element
-     *
+     * 
      * @param table : the property table to fulfill
      */
     @objid ("398c4a93-4893-45ba-a0e3-23cd1a295bc0")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-
+        
         //Id
         table.addProperty("Id", this._element.getId());
-
+        
         //Uri
         table.addProperty("Uri", this._element.getUri());
     }

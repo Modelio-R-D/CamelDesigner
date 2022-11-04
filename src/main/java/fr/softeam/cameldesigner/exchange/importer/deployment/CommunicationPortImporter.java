@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.CommunicationPort;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1e999137-4eb2-4263-b173-49bab0707b6c")
 public class CommunicationPortImporter<T extends CommunicationPort, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort> extends FeatureImporter<T,V> {
@@ -62,7 +62,6 @@ public class CommunicationPortImporter<T extends CommunicationPort, V extends fr
     @objid ("7278f294-fa86-4d92-b7e2-6f3b01c3a342")
     @Override
     public void attach(V elt, CamelElement context) {
-
     }
 
 }

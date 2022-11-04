@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.RequiredHost;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8a2ae908-8870-4d42-980a-f7c72d0912d4")
 public class RequiredHostImporter<T extends RequiredHost, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort> extends HostingPortImporter<T,V> {
@@ -30,8 +30,8 @@ public class RequiredHostImporter<T extends RequiredHost, V extends fr.softeam.c
         }
     }
 
-    @Override
     @objid ("00cdcef7-1bf3-4b86-968f-1153639136f3")
+    @Override
     public Object accept(ICamelImporterVisitor v) {
         return v.visitRequiredHost(this);
     }

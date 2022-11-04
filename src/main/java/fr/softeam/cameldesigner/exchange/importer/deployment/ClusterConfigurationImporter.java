@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.ClusterConfiguration;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("bf2fffa3-9a4c-46a0-afbc-dfa294627756")
 public class ClusterConfigurationImporter<T extends ClusterConfiguration, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ClusterConfiguration> extends ConfigurationImporter<T,V> {
@@ -31,8 +31,8 @@ public class ClusterConfigurationImporter<T extends ClusterConfiguration, V exte
         return v.visitClusterConfiguration(this);
     }
 
-    @Override
     @objid ("efde7803-3f3e-4b3c-afe6-09df39c7ffa7")
+    @Override
     public void setProperties(V elt) {
         super.setProperties(elt);
         setDownloadURL(elt);

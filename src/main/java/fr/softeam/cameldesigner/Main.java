@@ -8,7 +8,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.profiler.data.Category;
 import fr.softeam.cameldesigner.profiler.data.ProvidingInfo;
 
 @objid ("d64ecd5a-d540-43fa-86ec-a3f3fb2afaa4")
@@ -21,72 +20,62 @@ public class Main {
 
     @objid ("d72fc10f-4888-49a1-be53-a504d109a8c2")
     public static void main(String[] args) {
-        ProvidingInfo info = new ProvidingInfo();
-        info.setComponentName("component-1");
-        info.getCategories().add(Category.GPU);
-        info.setLanguage("Java");
-        info.setRepository("https://github.com/Supervisor/supervisor");
-        pushAnalyse(info);
-        
-        getResponseAnalyse();
+        //        ProvidingInfo info = new ProvidingInfo();
+        //        info.setComponentName("component-1");
+        //        info.getCategories().add(Category.GPU);
+        //        info.setLanguage("Java");
+        //        info.setRepository("https://github.com/Supervisor/supervisor");
+        //        pushAnalyse(info);
+        //        
+        //        getResponseAnalyse();
     }
 
     @objid ("4b02b658-c672-42c8-a7e5-b71d5e33e816")
     public static void pushAnalyse(ProvidingInfo info) {
-        //        HttpClient httpclient = new DefaultHttpClient();
-        //        HttpPost httppost = new HttpPost("http://my.server:8080/android/service.php");
-        //
-        //
-        //        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-        //        nameValuePairs.add(new BasicNameValuePair("action", "getjson"));
-        //        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-        //
-        //        HttpResponse response = httpclient.execute(httppost);
+        URL url;
+        try {
+            url = new URL(_URL + "/analyse");
         
-                URL url;
-                try {
-                    url = new URL(_URL + "/analyse");
+            HttpURLConnection http = (HttpURLConnection)url.openConnection();
+            http.setRequestMethod("POST");
+            http.setDoOutput(true);
+            http.setRequestProperty("Accept", "application/json");
+            http.setRequestProperty("Content-Type", "application/json");
         
-                    HttpURLConnection http = (HttpURLConnection)url.openConnection();
-                    http.setRequestMethod("POST");
-                    http.setDoOutput(true);
-                    http.setRequestProperty("Accept", "application/json");
-                    http.setRequestProperty("Content-Type", "application/json");
-        
-                    String data = "[{\"component_name\": \"" + info.getComponentName() +
-                            "\", \"categories\": [\""+ info.getCategories().get(0).toString().toLowerCase() +
-                            "\"], \"repository\": \""+ info.getRepository()  +
-                            "\", \"language\": \""+ info.getLanguage() + "\"}]";
+            String data = "[{\"component_name\": \"" + info.getComponentName() +
+                    "\", \"categories\": [\""+ info.getCategories().get(0).toString().toLowerCase() +
+                    "\"], \"repository\": \""+ info.getRepository()  +
+                    "\", \"language\": \""+ info.getLanguage() + "\"}]";
         
         
-                    byte[] out = data.getBytes(StandardCharsets.UTF_8);
+            byte[] out = data.getBytes(StandardCharsets.UTF_8);
         
-                    OutputStream stream = http.getOutputStream();
-                    stream.write(out);
+            OutputStream stream = http.getOutputStream();
+            stream.write(out);
         
-                    System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+            System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
         
-                    int status = http.getResponseCode();
+            int status = http.getResponseCode();
         
-                    switch (status) {
-                        case 200:
-                        case 201:
-                            BufferedReader br = new BufferedReader(new InputStreamReader(http.getInputStream()));
-                            StringBuilder sb = new StringBuilder();
-                            String line;
-                            while ((line = br.readLine()) != null) {
-                                sb.append(line+"\n");
-                            }
-                            br.close();
-                            System.out.println(sb.toString());
-                    }
-        
-        
-                    stream.close();
-                    http.disconnect();
-                } catch (Exception e) {
-                    e.printStackTrace();
+            switch (status) {
+            case 200:
+            case 201:
+                BufferedReader br = new BufferedReader(new InputStreamReader(http.getInputStream()));
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line+"\n");
                 }
+                br.close();
+                System.out.println(sb.toString());
+            }
+        
+        
+            stream.close();
+            http.disconnect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 //    HttpURLConnection c = null;

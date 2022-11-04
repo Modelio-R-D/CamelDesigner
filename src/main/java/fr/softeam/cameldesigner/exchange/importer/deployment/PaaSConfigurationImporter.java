@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.PaaSConfiguration;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("32cb9057-4659-4987-b9f2-0fea2b969f72")
 public class PaaSConfigurationImporter<T extends PaaSConfiguration, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration> extends ConfigurationImporter<T,V> {

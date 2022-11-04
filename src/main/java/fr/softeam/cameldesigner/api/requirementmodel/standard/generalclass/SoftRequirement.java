@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
@@ -35,10 +35,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("539e2a12-8c48-42f5-9783-5248ca11085c")
 public abstract class SoftRequirement extends Requirement {
-    @objid ("64ed149a-c66d-4c65-9b3b-1846928f642e")
+    @objid ("f14d31f1-88dd-49a6-ad4f-6087025780be")
     public static final String STEREOTYPE_NAME = "SoftRequirement";
 
-    @objid ("e87bba45-68f7-4512-a3d7-7d9b46f0f168")
+    @objid ("9d544797-e3b7-4478-ab4c-a15373da611e")
     public static final String PRIORITY_TAGTYPE = "priority";
 
     /**
@@ -49,12 +49,12 @@ public abstract class SoftRequirement extends Requirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("86778380-3291-429f-b3cd-78161ab2dd9e")
+    @objid ("19cf8106-5c54-41d1-953b-68e3ce784d34")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof GeneralClass) && ((GeneralClass) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SoftRequirement.STEREOTYPE_NAME));
     }
 
-    @objid ("c8133752-c8c0-4835-bc07-7cc30debbb9d")
+    @objid ("beaf49ef-e598-4997-9402-56e0a56f73b4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -71,11 +71,10 @@ public abstract class SoftRequirement extends Requirement {
     }
 
     /**
-     * Get the underlying {@link GeneralClass}.
-     * 
+     * Get the underlying {@link GeneralClass}. 
      * @return the GeneralClass represented by this proxy, never null.
      */
-    @objid ("8078f895-1547-4a95-ac6a-16d7b669752a")
+    @objid ("5b5e4afb-1274-4a1f-990c-f67d391d8fd4")
     @Override
     public GeneralClass getElement() {
         return (GeneralClass)super.getElement();
@@ -86,12 +85,12 @@ public abstract class SoftRequirement extends Requirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a589c5ad-5fd3-4e6a-a5d8-1cd847130feb")
+    @objid ("43c760a6-20d3-4ae0-b717-b120773e317a")
     public String getPriority() {
         return this.elt.getTagValue(SoftRequirement.MdaTypes.PRIORITY_TAGTYPE_ELT);
     }
 
-    @objid ("b6b3b1c3-3fda-40e5-a821-3b2d03669fdc")
+    @objid ("7ef6ecda-0315-4655-a951-59b773c9e6a8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -102,7 +101,7 @@ public abstract class SoftRequirement extends Requirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a747ca62-d168-4f3e-9cd8-bb9ddc8c08b7")
+    @objid ("28cd0972-efd3-4e4e-a288-a4be7e8f5a22")
     public void setPriority(final String value) {
         this.elt.putTagValue(SoftRequirement.MdaTypes.PRIORITY_TAGTYPE_ELT, value);
     }
@@ -115,26 +114,26 @@ public abstract class SoftRequirement extends Requirement {
         return result;
     }
 
-    @objid ("c0746fa8-3ba8-4b3c-ab6f-dcf8d24cf2bb")
+    @objid ("67aa1111-6269-4af2-be01-5eb0869d6b7f")
     protected SoftRequirement(final GeneralClass elt) {
         super(elt);
     }
 
     @objid ("e11f1b31-a2cb-4b0a-a55c-c134d2473491")
     public static final class MdaTypes {
-        @objid ("08f982ea-7674-425b-b8c2-f43775554572")
+        @objid ("a6459c0a-a269-4f7b-a926-44b2bea4bf41")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eab656dd-8e52-46c6-8c9f-51480623e0f8")
+        @objid ("054a1bc1-45c9-4756-80e6-9c862db9b173")
         public static TagType PRIORITY_TAGTYPE_ELT;
 
-        @objid ("93c5876b-1bd6-453a-b3c7-b3185e3ce08e")
+        @objid ("b6a4b733-0a21-41fc-91f3-00ab9566795b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0d75a2e6-fc66-4e98-ae0f-37ce6ec60485")
+        @objid ("3ac47225-7d78-444b-8aff-4b42e013c362")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1be573f6-6c07-45bb-a815-f02faaa906ec")
+        @objid ("7dc951b3-7cb6-49a8-a33f-616d77aa6636")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fc1abdeb-e2fa-4a04-9253-4e15a223bce2");
             PRIORITY_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1f38e006-1584-4036-8ddc-f39a5b607306");
@@ -143,11 +142,11 @@ public abstract class SoftRequirement extends Requirement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

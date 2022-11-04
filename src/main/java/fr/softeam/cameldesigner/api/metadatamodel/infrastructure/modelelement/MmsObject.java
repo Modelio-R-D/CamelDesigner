@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement;
 
@@ -43,13 +43,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("5b8e0066-83d4-4b26-bada-7dcae35d5e7d")
 public abstract class MmsObject extends NamedElement {
-    @objid ("f626a173-a22d-4dec-9a89-94c9c493d465")
+    @objid ("8693b530-473e-4613-8c4b-3d57e1f9c487")
     public static final String STEREOTYPE_NAME = "MmsObject";
 
-    @objid ("37cac8fb-60fd-4e81-9c40-abe3fd93db7a")
+    @objid ("a8e2def4-37a9-445f-8e14-b37cc8263cc4")
     public static final String ID_TAGTYPE = "id";
 
-    @objid ("0d34fe36-3e27-4961-8efd-763063acfacd")
+    @objid ("dd5b231f-965a-4310-8fc6-68dfa14fb774")
     public static final String URI_TAGTYPE = "uri";
 
     /**
@@ -60,7 +60,7 @@ public abstract class MmsObject extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e32d0f50-c32b-4b05-990d-b805ba568a9b")
+    @objid ("5c24f9c2-02dc-40e7-9e71-db16a10236c6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsObject.STEREOTYPE_NAME));
     }
@@ -73,7 +73,7 @@ public abstract class MmsObject extends NamedElement {
                     MmsPropertyInstance.canInstantiate(obj) ?  MmsPropertyInstance.instantiate((AttributeLink)obj) : null;
     }
 
-    @objid ("626130a0-b0da-42d8-9128-6b3ebeccdbed")
+    @objid ("0281858c-4e88-4999-9e73-8aa5dc89f14c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -90,11 +90,10 @@ public abstract class MmsObject extends NamedElement {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
-     * 
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("71a7a97d-f924-477a-9327-4624b38f984e")
+    @objid ("130f47a8-fef4-4c20-9c77-9c12a4694761")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -105,7 +104,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4af9d4da-633f-47b9-9017-f5bc15cf0a1e")
+    @objid ("d4d9adc6-e4f3-4caf-8bc8-89bfb24b5490")
     public String getId() {
         return this.elt.getTagValue(MmsObject.MdaTypes.ID_TAGTYPE_ELT);
     }
@@ -115,12 +114,12 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("68b62a63-80fd-47d0-b1f3-2a3aca467b2f")
+    @objid ("e7197a96-80d4-4688-adc8-82868068a2df")
     public String getUri() {
         return this.elt.getTagValue(MmsObject.MdaTypes.URI_TAGTYPE_ELT);
     }
 
-    @objid ("2f068d42-408b-4262-8535-0ce4e25ed073")
+    @objid ("ac866ecb-9aee-4d48-a492-a563159403a2")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,7 +130,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("90486556-6c82-4a6e-b780-67d79c30b67c")
+    @objid ("e6fa3828-e7c2-4883-b5e7-80078516eaa6")
     public void setId(final String value) {
         this.elt.putTagValue(MmsObject.MdaTypes.ID_TAGTYPE_ELT, value);
     }
@@ -141,7 +140,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d12874f4-c3e9-4049-8a95-82abee3fb072")
+    @objid ("3876b0a1-d870-44ee-84d0-87af060d5124")
     public void setUri(final String value) {
         this.elt.putTagValue(MmsObject.MdaTypes.URI_TAGTYPE_ELT, value);
     }
@@ -154,29 +153,29 @@ public abstract class MmsObject extends NamedElement {
         return result;
     }
 
-    @objid ("db62f5c5-c0c8-4cd9-a672-3e2134eb7d2e")
+    @objid ("8b491a18-cc85-42f4-aece-24ce78de028d")
     protected MmsObject(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("2f90ab01-c906-4902-9288-e931e22fb14d")
     public static final class MdaTypes {
-        @objid ("cf97b6d6-cbb3-4b3e-94da-963097dadda0")
+        @objid ("28a3d284-44c8-4ab6-845f-371e22bc96ec")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b3798c3a-4c26-462e-81ec-5268c4173335")
+        @objid ("d347224d-1f0d-42f6-9d4c-8ca4f271dae9")
         public static TagType ID_TAGTYPE_ELT;
 
-        @objid ("2b24f591-eb2c-45bc-9312-2ddfee17ca3a")
+        @objid ("ea7285cb-747b-401a-8a71-64a7a5f81fe9")
         public static TagType URI_TAGTYPE_ELT;
 
-        @objid ("c8b62745-8a3f-4ebe-85f6-c0ea358a4c63")
+        @objid ("91df1073-3ebf-4ef4-8b1d-c99b0000736c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c9b24b02-eaeb-497a-9454-67f69dc78422")
+        @objid ("dc8088e1-5556-406a-9469-763142c94a98")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a949af07-8dcd-477b-95de-a099b97b47a4")
+        @objid ("143640a3-fc19-413f-b745-2f0dc32e0df9")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "907f72a5-eb52-4908-953e-7f9a66b9939d");
             ID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a139c9cf-4b74-454a-b4cd-b0363a008c40");
@@ -186,11 +185,11 @@ public abstract class MmsObject extends NamedElement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

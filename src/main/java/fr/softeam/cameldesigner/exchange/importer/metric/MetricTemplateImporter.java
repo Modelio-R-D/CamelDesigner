@@ -1,16 +1,16 @@
 package fr.softeam.cameldesigner.exchange.importer.metric;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.core.MeasurableAttribute;
 import camel.metric.MetricTemplate;
 import camel.type.ValueType;
 import camel.unit.Unit;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("91223ee2-8b6b-4c6e-86ac-099ca1c074b8")
 public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate> extends FeatureImporter<T,V> {
@@ -54,7 +54,6 @@ public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softe
 
     @objid ("36eaa60c-9b33-49f0-a8c6-81d512cc0b8b")
     private void setValueType(V elt) {
-
         ValueType value = this._element.getValueType();
         if (value != null) {
             CamelElement camValue = this._process.getElement(value);
@@ -65,7 +64,6 @@ public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softe
 
     @objid ("dedea5fc-0190-47fa-8ca8-a9dc855e83b1")
     private void setValueDirection(V elt) {
-        // TODO Auto-generated method stub
         Integer value = (int) this._element.getValueDirection();
         if (value != null) {
             elt.setValueDirection(String.valueOf(value));
@@ -74,19 +72,21 @@ public class MetricTemplateImporter<T extends MetricTemplate, V extends fr.softe
 
     @objid ("8fde9832-8724-41bf-a333-f10f07a20d56")
     private void setUnit(V elt) {
-        // TODO Auto-generated method stub
         Unit value =  this._element.getUnit();
         if (value != null) {
-            elt.setUnit((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit))
+                elt.setUnit((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit) camValue);
         }
     }
 
     @objid ("45120a38-10bd-4a1f-95a4-fcebb44680dd")
     private void setAttribute(V elt) {
-        // TODO Auto-generated method stub
         MeasurableAttribute value =  this._element.getAttribute();
         if (value != null) {
-            elt.setAttribute( (MeasurableAttributeClass) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof MeasurableAttributeClass))
+                elt.setAttribute( (MeasurableAttributeClass) camValue);
         }
     }
 

@@ -20,7 +20,6 @@ public class SoftwareComponentResourceFilterPropertyPage<T extends SoftwareCompo
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -33,12 +32,10 @@ public class SoftwareComponentResourceFilterPropertyPage<T extends SoftwareCompo
         
         if(this._currentRow == 1){
             this._element.setEveryComponent(Boolean.valueOf(value));
-            
+        
         }
-        
-        
         else if(this._currentRow == 2) {
-            ModelElement elt = (ModelElement) getModelElt(this._application, value);
+            ModelElement elt = getModelElt(this._application, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelModel.STEREOTYPE_NAME)) {
                 this._element.setApplication((CamelModel) elt);
             }
@@ -60,7 +57,6 @@ public class SoftwareComponentResourceFilterPropertyPage<T extends SoftwareCompo
 
     /**
      * This method handles the construction of the property table of a selected element
-     * @param MObject : the selected element
      * 
      * @param table : the property table to fulfill
      */
@@ -69,6 +65,7 @@ public class SoftwareComponentResourceFilterPropertyPage<T extends SoftwareCompo
     public void update(IModulePropertyTable table) {
         super.update(table);
         
+        //Every component
         table.addProperty("Every Component", this._element.isEveryComponent());
         
         //Application

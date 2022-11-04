@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.port;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("df72df64-fde5-4c17-ad49-37e1bb0285a0")
 public class FeaturePort extends FeatureInstance {
-    @objid ("3aede4e2-ccd3-4bc1-b5cd-d99770775b51")
+    @objid ("ae58b272-c6d5-41cf-a396-6506f1049367")
     public static final String STEREOTYPE_NAME = "Feature_Port";
 
     /**
@@ -45,7 +45,7 @@ public class FeaturePort extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4d55db21-b1c7-4192-a8ef-adde5b1e6d14")
+    @objid ("eecfa634-27f6-4de8-88a5-88a273b2e75b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeaturePort.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class FeaturePort extends FeatureInstance {
      * 
      * @return a {@link FeaturePort} proxy on the created {@link Port}.
      */
-    @objid ("25c4ce70-7782-4b3d-823e-3ad8608da0c4")
+    @objid ("76f2c0c8-f73e-4686-9ea0-b430a565354a")
     public static FeaturePort create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeaturePort.STEREOTYPE_NAME);
@@ -63,36 +63,34 @@ public class FeaturePort extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link FeaturePort} proxy from a {@link Port} stereotyped << Feature_Port >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeaturePort} proxy from a {@link Port} stereotyped << Feature_Port >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Port
      * @return a {@link FeaturePort} proxy or <i>null</i>.
      */
-    @objid ("56178d6e-0b59-47da-a0e4-717ac100e096")
+    @objid ("0ad7873d-8cdb-4771-bd7c-b52d5de4824c")
     public static FeaturePort instantiate(final Port obj) {
         return FeaturePort.canInstantiate(obj) ? new FeaturePort(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link FeaturePort} proxy from a {@link Port} stereotyped << Feature_Port >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeaturePort} proxy from a {@link Port} stereotyped << Feature_Port >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Port}
      * @return a {@link FeaturePort} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("72af05de-62dd-41d6-bd87-725b33139fcf")
+    @objid ("a5362d6b-ddfc-446f-9860-9118cd4ee30f")
     public static FeaturePort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (FeaturePort.canInstantiate(obj))
-            return new FeaturePort(obj);
+        	return new FeaturePort(obj);
         else
-            throw new IllegalArgumentException("FeaturePort: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("FeaturePort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("5bdb6463-f7d0-4c96-a884-22ec92f097c2")
+    @objid ("15e63215-46b3-4c38-9aae-df6e4d0d419a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,39 +107,38 @@ public class FeaturePort extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Port}.
-     * 
+     * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("0e89e311-bbbf-434b-84e6-aabebd45a158")
+    @objid ("a6d609cd-a160-4223-9908-ca5e57c4e5e0")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
     }
 
-    @objid ("091504fb-4915-4135-9ed9-4b1005d7e659")
+    @objid ("3134e53a-e583-4f13-b927-4e72a200b0aa")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("036c2859-78d4-479d-99fb-74a660ed33e4")
+    @objid ("c8733ce6-5ee7-4453-a66f-a5cfedb3c91c")
     protected FeaturePort(final Port elt) {
         super(elt);
     }
 
     @objid ("a8d9e562-ebce-4b04-a8f8-b81512ba3fd4")
     public static final class MdaTypes {
-        @objid ("00d274f8-3d0d-45dd-a09e-7c9ec9f46865")
+        @objid ("d0760cc8-16fe-4adf-820b-6fc5214b452f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6668c942-ca2f-4222-a409-0c891238050f")
+        @objid ("610db1bf-e892-493f-9b05-98c7747a026b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d4b98fd6-5852-4287-b777-44027c65c64e")
+        @objid ("b4cc4c5a-72fc-4e04-a367-b4511cc68cfb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("40fcfffb-b9fe-465c-be26-85ec517984d8")
+        @objid ("0a70dfda-9b18-404c-a8fa-992b95a67ef1")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "18d0504c-73e0-4c7c-8341-53038298af2c");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -149,11 +146,11 @@ public class FeaturePort extends FeatureInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

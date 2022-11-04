@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.exchange.importer.metric;
 
 import camel.metric.Metric;
-import camel.metric.MetricObjectBinding;
 import camel.metric.MetricTemplate;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
@@ -37,7 +36,7 @@ public class MetricImporter<T extends Metric, V extends fr.softeam.cameldesigner
     @Override
     public void attach(V elt, CamelElement context) {
         if (context instanceof MetricTypeModel)
-        ((MetricTypeModel) context).addMetrics(elt);
+            ((MetricTypeModel) context).addMetrics(elt);
     }
 
     @objid ("0110e4f7-46a2-41d0-a80d-07e9dc3f40e9")
@@ -49,10 +48,12 @@ public class MetricImporter<T extends Metric, V extends fr.softeam.cameldesigner
 
     @objid ("8a7e8cda-5a1a-4c62-af01-176ab7ce5cd0")
     private void setMetricTemplate(V elt) {
-        // TODO Auto-generated method stub
         MetricTemplate value = this._element.getMetricTemplate();
         if (value != null) {
-            elt.setMetricTemplate((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate) {
+                elt.setMetricTemplate((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricTemplate) valueElt);
+            }
         }
     }
 

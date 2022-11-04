@@ -1,14 +1,14 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.eclipse.emf.common.util.EList;
 import camel.deployment.LocationCoupling;
 import camel.deployment.LocationCouplingType;
 import camel.deployment.SoftwareComponent;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 @objid ("d8d8c87e-09f4-4575-bfda-f92f94ba9a57")
 public class LocationCouplingImporter<T extends LocationCoupling, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.LocationCoupling> extends ComponentRelationImporter<T,V> {
@@ -66,7 +66,7 @@ public class LocationCouplingImporter<T extends LocationCoupling, V extends fr.s
     @objid ("f5ed8b3a-0c5e-490e-b199-9dd84381925c")
     private void setSoftwareComponent(V elt) {
         EList<SoftwareComponent> sof = this._element.getSoftwareComponents();
-
+        
         if (sof != null) {
             for(SoftwareComponent obj : sof) {
                 if (obj != null) {

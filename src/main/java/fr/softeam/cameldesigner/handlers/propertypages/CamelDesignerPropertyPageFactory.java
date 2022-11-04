@@ -21,9 +21,11 @@ import fr.softeam.cameldesigner.api.camelcore.standard.instance.FeatureInstance;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.CamelViewPoint;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ConstraintModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DataTypeModelDiagram;
+import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.DeploymentInstanceModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.ExecutionModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.LocationModelDiagram;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.MetadataModelDiagram;
@@ -309,7 +311,12 @@ import fr.softeam.cameldesigner.handlers.propertypages.security.SecurityDomainPr
 import fr.softeam.cameldesigner.handlers.propertypages.security.SecurityMetricInstancePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.security.SecurityModelPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.security.SecuritySLOPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.type.RangePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.type.TypeModelPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.unit.CompositeUnitPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.unit.DimensionlessPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.unit.SingleUnitPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.unit.UnitDimensionPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.unit.UnitModelPropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
@@ -826,11 +833,11 @@ public class CamelDesignerPropertyPageFactory {
             //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.instantiate(obj);
             //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.instantiate(obj);
             //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.STEREOTYPE_NAME: return new SecurityMetricInstancePropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.instantiate(obj);
+            case fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.STEREOTYPE_NAME: return new RangePropertyPage<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.instantiate(obj));
+            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.STEREOTYPE_NAME: return new UnitDimensionPropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.instantiate(obj));
+            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.STEREOTYPE_NAME: return new DimensionlessPropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.instantiate(obj));
+            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.STEREOTYPE_NAME: return new SingleUnitPropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.instantiate(obj));
+            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.STEREOTYPE_NAME: return new CompositeUnitPropertyPage<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.instantiate(obj));
             default:
                 break;
             }

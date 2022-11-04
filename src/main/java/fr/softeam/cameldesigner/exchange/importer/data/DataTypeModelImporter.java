@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.data;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.data.DataTypeModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("6829a6c7-60a4-432d-b2ff-a33b5ce4375c")
 public class DataTypeModelImporter<T extends DataTypeModel, V extends fr.softeam.cameldesigner.api.datamodel.standard.package_.DataTypeModel> extends DataModelImporter<T,V> {

@@ -1,12 +1,9 @@
 package fr.softeam.cameldesigner.handlers.propertypages.organisation;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ExternalIdentifier;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("8b8e4f54-cf98-467d-bb0d-5ea9806bd162")
 public class ExternalIdentifierPropertyPage<T extends ExternalIdentifier> extends FeaturePropertyPage<T> {
@@ -24,7 +21,7 @@ public class ExternalIdentifierPropertyPage<T extends ExternalIdentifier> extend
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            
+        
             this._element.setIdentifier(value);
                }
         

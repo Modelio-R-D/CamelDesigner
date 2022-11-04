@@ -2,6 +2,12 @@ package fr.softeam.cameldesigner.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import camel.type.BooleanValue;
+import camel.type.DoubleValue;
+import camel.type.FloatValue;
+import camel.type.IntValue;
+import camel.type.StringValue;
+import camel.type.Value;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.metamodel.uml.statik.DataType;
@@ -51,6 +57,21 @@ public class PrimitiveTypeUtils {
             primitiveTypes.add(type.name());
         }
         return primitiveTypes;
+    }
+
+    @objid ("670967ce-2d69-4ddb-9db4-41130eafb784")
+    public static String getValue(Value value) {
+        if( value instanceof StringValue)
+            return ((StringValue) value).getValue();
+        else if( value instanceof IntValue)
+            return  String.valueOf(((IntValue) value).getValue());
+        else if( value instanceof BooleanValue)
+            return  String.valueOf(((BooleanValue)value).isValue());
+        else if( value instanceof FloatValue)
+            return  String.valueOf(((FloatValue)value).getValue());
+        else if( value instanceof DoubleValue)
+            return  String.valueOf(((DoubleValue) value).getValue());
+        return null;
     }
 
     @objid ("410c2f57-791f-4c67-94df-da3b911ee4b3")

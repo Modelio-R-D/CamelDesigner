@@ -17,7 +17,6 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -28,7 +27,7 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            ModelElement elt = (ModelElement) getModelElt(this._metricInstance, value);
+            ModelElement elt = getModelElt(this._metricInstance, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricInstance.STEREOTYPE_NAME)) {
                 this._element.setMetricInstance( (MetricInstance) elt);
             }
@@ -37,7 +36,6 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
 
     /**
      * This method handles the construction of the property table of a selected element
-     * @param MObject : the selected element
      * 
      * @param table : the property table to fulfill
      */
@@ -46,6 +44,7 @@ public class NonFunctionalEventInstancePropertyPage<T extends NonFunctionalEvent
     public void update(IModulePropertyTable table) {
         super.update(table);
         
+        //Metric instance
         this._metricInstance = MetricInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Metric Instance", getCamelName(this._element.getMetricInstance()), getCamelNames(this._metricInstance));
     }

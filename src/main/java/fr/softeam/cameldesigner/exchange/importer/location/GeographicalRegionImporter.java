@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.location;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.location.GeographicalRegion;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("c54f1432-d418-40b0-8add-0dabc029717f")
 public class GeographicalRegionImporter<T extends GeographicalRegion, V extends fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion> extends LocationImporter<T,V> {
@@ -33,6 +33,7 @@ public class GeographicalRegionImporter<T extends GeographicalRegion, V extends 
         return v.visitGeographicalRegion(this);
     }
 
+    @objid ("a4265dd4-e65c-453c-a573-356a95652e22")
     @Override
     public void setProperties(V elt) {
         super.setProperties(elt);
@@ -40,19 +41,21 @@ public class GeographicalRegionImporter<T extends GeographicalRegion, V extends 
         setAlternativeNames(elt);
     }
 
+    @objid ("3cb3b669-a525-4d46-a376-6ac378443d98")
     private void setAlternativeNames(V elt) {
         for (String name : this._element.getAlternativeNames()) {
             elt.addAlternativeName(name);
         }
     }
 
+    @objid ("0814e4cb-fe1d-414a-9212-0ecf8d818ff3")
     private void setParentRegions(V elt) {
-      for (GeographicalRegion region : this._element.getParentRegions()) {
-         CamelElement modelioRegion = this._process.getElement(region);
-         if ((modelioRegion != null) && (modelioRegion instanceof fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion)) {
-             elt.addParentRegions((fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion) modelioRegion);
-         }
-      }
+        for (GeographicalRegion region : this._element.getParentRegions()) {
+           CamelElement modelioRegion = this._process.getElement(region);
+           if ((modelioRegion != null) && (modelioRegion instanceof fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion)) {
+               elt.addParentRegions((fr.softeam.cameldesigner.api.locationmodel.standard.enumeration.GeographicalRegion) modelioRegion);
+           }
+        }
     }
 
 }

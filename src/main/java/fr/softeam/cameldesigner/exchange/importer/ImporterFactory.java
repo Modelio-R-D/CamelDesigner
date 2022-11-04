@@ -2,8 +2,6 @@ package fr.softeam.cameldesigner.exchange.importer;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.core.impl.AttributeImpl;
 import camel.core.impl.CamelModelImpl;
 import camel.core.impl.FeatureImpl;
@@ -91,7 +89,16 @@ import camel.requirement.impl.ResourceRequirementImpl;
 import camel.requirement.impl.SecurityRequirementImpl;
 import camel.requirement.impl.ServiceLevelObjectiveImpl;
 import camel.requirement.impl.VerticalScaleRequirementImpl;
+import camel.type.impl.RangeImpl;
+import camel.type.impl.TypeModelImpl;
 import camel.type.impl.ValueImpl;
+import camel.unit.impl.CompositeUnitImpl;
+import camel.unit.impl.DimensionedUnitImpl;
+import camel.unit.impl.DimensionlessImpl;
+import camel.unit.impl.SingleUnitImpl;
+import camel.unit.impl.UnitDimensionImpl;
+import camel.unit.impl.UnitModelImpl;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.exchange.importer.core.AttributeImporter;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelModelImporter;
@@ -180,7 +187,16 @@ import fr.softeam.cameldesigner.exchange.importer.requirement.ResourceRequiremen
 import fr.softeam.cameldesigner.exchange.importer.requirement.SecurityRequirementImporter;
 import fr.softeam.cameldesigner.exchange.importer.requirement.ServiceLevelObjectiveImporter;
 import fr.softeam.cameldesigner.exchange.importer.requirement.VerticalScaleRequirementImporter;
+import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
+import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.ValueImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.DimensionedUnitImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.DimensionlessImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.SingleUnitImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.UnitDimensionImporter;
+import fr.softeam.cameldesigner.exchange.importer.unit.UnitModelImporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * Factory that instantiates the right importer class for a model element stereotyped by a 'CamelDesigner' module stereotype.
@@ -195,7 +211,7 @@ public class ImporterFactory {
         if (!_factory.containsKey(elt.getClass())) {
             throw new IllegalArgumentException("Missing Element Factory for Type " + elt.getClass());
         }
-
+        
         Object obj =  _factory.get(elt.getClass()).newInstance();
         if (obj instanceof CamelElementImporter) {
             CamelElementImporter importer = (CamelElementImporter) obj;
@@ -216,7 +232,7 @@ static {
         _factory.put(MeasurableAttributeImpl.class, MeasurableAttributeImporter.class);
 
         // TYPE
-         _factory.put(ValueImpl.class, ValueImporter.class);
+        _factory.put(ValueImpl.class, ValueImporter.class);
 
         // METADATA
 
@@ -261,7 +277,7 @@ static {
         _factory.put(LocationRequirementImpl.class, LocationRequirementImporter.class);
         _factory.put(ImageRequirementImpl.class, ImageRequirementImporter.class);
         _factory.put(HorizontalScaleRequirementImpl.class, HorizontalScaleRequirementImporter.class);
-         _factory.put(VerticalScaleRequirementImpl.class, VerticalScaleRequirementImporter.class);
+        _factory.put(VerticalScaleRequirementImpl.class, VerticalScaleRequirementImporter.class);
         _factory.put(OptimisationRequirementImpl.class, OptimisationRequirementImporter.class);
         _factory.put(ResourceRequirementImpl.class, ResourceRequirementImporter.class);
         _factory.put(PaaSRequirementImpl.class, PaaSRequirementImporter.class);
@@ -324,7 +340,17 @@ static {
         // SCALABILITY
         // SECURITY
 
+        //TYPE
+        _factory.put(TypeModelImpl.class, TypeModelImporter.class);
+        _factory.put(RangeImpl.class, RangeImporter.class);
 
+        //UNIT
+        _factory.put(CompositeUnitImpl.class, CompositeUnitImporter.class);
+        _factory.put(DimensionedUnitImpl.class, DimensionedUnitImporter.class);
+        _factory.put(DimensionlessImpl.class, DimensionlessImporter.class);
+        _factory.put(SingleUnitImpl.class, SingleUnitImporter.class);
+        _factory.put(UnitDimensionImpl.class, UnitDimensionImporter.class);
+        _factory.put(UnitModelImpl.class, UnitModelImporter.class);
 
-}
+    }
 }

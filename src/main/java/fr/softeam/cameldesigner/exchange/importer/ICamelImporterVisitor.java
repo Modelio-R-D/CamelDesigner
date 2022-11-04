@@ -1,7 +1,5 @@
 package fr.softeam.cameldesigner.exchange.importer;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.constraint.AttributeConstraint;
 import camel.constraint.CompositeConstraint;
 import camel.constraint.Constraint;
@@ -169,6 +167,9 @@ import camel.security.SecurityDomain;
 import camel.security.SecurityMetricInstance;
 import camel.security.SecurityModel;
 import camel.security.SecuritySLO;
+import camel.type.Range;
+import camel.type.TypeModel;
+import camel.type.ValueType;
 import camel.unit.CompositeUnit;
 import camel.unit.DimensionedUnit;
 import camel.unit.Dimensionless;
@@ -176,6 +177,7 @@ import camel.unit.SingleUnit;
 import camel.unit.Unit;
 import camel.unit.UnitDimension;
 import camel.unit.UnitModel;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
@@ -348,6 +350,9 @@ import fr.softeam.cameldesigner.exchange.importer.security.SecurityDomainImporte
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityMetricInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecuritySLOImporter;
+import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
+import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
+import fr.softeam.cameldesigner.exchange.importer.type.ValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.DimensionedUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.DimensionlessImporter;
@@ -355,6 +360,7 @@ import fr.softeam.cameldesigner.exchange.importer.unit.SingleUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitDimensionImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.UnitModelImporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("40dfef3a-d77a-41ba-9c83-39058a242b09")
 public interface ICamelImporterVisitor {
@@ -521,7 +527,7 @@ public interface ICamelImporterVisitor {
     Object visitPaaS(PaaSImporter<? extends PaaS,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.PaaS> paaSImporter);
 
     @objid ("4aab6751-6e87-4d25-b67b-2f7d62273f3f")
-    Object visitRequirementSet(RequirementSetImporter<? extends RequirementSet, ? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet> requiredSetImporter);
+    Object visitRequirementSet(RequirementSetImporter<? extends RequirementSet,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet> requiredSetImporter);
 
     @objid ("bd305f9b-5b70-4323-ba1e-bf404c770b9b")
     Object visitScriptConfiguration(ScriptConfiguationImporter<? extends ScriptConfiguration,? extends fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration> scriptConfiguationImporter);
@@ -835,41 +841,64 @@ public interface ICamelImporterVisitor {
     @objid ("c2198aa2-5cd9-400b-a4d4-2c30d86ec2e3")
     Object visitCamelComponent(ComponentImporter<? extends Component,? extends CamelComponent> camelComponent);
 
-    Object visitDeploymentInstanceModel(DeploymentInstanceModelImporter<? extends DeploymentInstanceModel, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel> deploymentInstanceModelImporter);
+    @objid ("25efb877-3de4-4d31-bf9c-7a1557fcdf21")
+    Object visitDeploymentInstanceModel(DeploymentInstanceModelImporter<? extends DeploymentInstanceModel,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel> deploymentInstanceModelImporter);
 
-    Object visitComponent(ComponentImporter<? extends Component, ? extends CamelComponent> component);
+    @objid ("29c6c09a-e6ba-41a6-a7d4-349d06ec4ebd")
+    Object visitComponent(ComponentImporter<? extends Component,? extends CamelComponent> component);
 
-    Object visitComponentInstance(ComponentInstanceImporter<? extends ComponentInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance> componentInstance);
+    @objid ("2e4d7331-1114-48b7-9a65-22a169e08f7e")
+    Object visitComponentInstance(ComponentInstanceImporter<? extends ComponentInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance> componentInstance);
 
-    Object visitSoftwareComponentInstance(SoftwareComponentInstanceImporter<? extends SoftwareComponentInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance> softwareComponentInstance);
+    @objid ("4f773a24-938c-49ed-8640-b35b1458f883")
+    Object visitSoftwareComponentInstance(SoftwareComponentInstanceImporter<? extends SoftwareComponentInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance> softwareComponentInstance);
 
-    Object visitVMInstance(VMInstanceImporter<? extends VMInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance> vmInstance);
+    @objid ("aab48cc5-d75b-4f4b-a107-0ae1c30d4474")
+    Object visitVMInstance(VMInstanceImporter<? extends VMInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.VMInstance> vmInstance);
 
-    Object visitComponentRelationInstance(ComponentRelationInstanceImporter<? extends ComponentRelationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.ComponentRelationInstance> componentRelationInstance);
+    @objid ("dcf6abce-d754-4ac3-a754-6c9b3c79a8e6")
+    Object visitComponentRelationInstance(ComponentRelationInstanceImporter<? extends ComponentRelationInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.ComponentRelationInstance> componentRelationInstance);
 
-    Object visitCommunicationInstance(CommunicationInstanceImporter<? extends CommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.CommunicationInstance> communicationInstance);
+    @objid ("feb5933f-411a-4515-9113-edc1da12d9ae")
+    Object visitCommunicationInstance(CommunicationInstanceImporter<? extends CommunicationInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.CommunicationInstance> communicationInstance);
 
-    Object visitCommunicationPortInstance(CommunicationPortInstanceImporter<? extends CommunicationPortInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> communicationPortInstance);
+    @objid ("51f864d9-138d-4075-8f26-62eb88ff4332")
+    Object visitCommunicationPortInstance(CommunicationPortInstanceImporter<? extends CommunicationPortInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> communicationPortInstance);
 
-    Object visitProvidedCommunicationInstance(
-            ProvidedCommunicationInstanceImporter<? extends ProvidedCommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> providedCommunicationInstanceImporter);
+    @objid ("d5c02e8c-6d57-41ce-bdd2-a91912154164")
+    Object visitProvidedCommunicationInstance(ProvidedCommunicationInstanceImporter<? extends ProvidedCommunicationInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> providedCommunicationInstanceImporter);
 
-    Object visitRequiredCommunicationInstance(
-            RequiredCommunicationInstanceImporter<? extends RequiredCommunicationInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> requiredCommunicationInstanceImporter);
+    @objid ("5f69fb72-ced9-4189-a437-25ff78c151da")
+    Object visitRequiredCommunicationInstance(RequiredCommunicationInstanceImporter<? extends RequiredCommunicationInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.CommunicationPortInstance> requiredCommunicationInstanceImporter);
 
-    Object visitHostingInstance(HostingInstanceImporter<? extends HostingInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.HostingInstance> hostingInstance);
+    @objid ("cf80b798-9cda-4f44-9b1d-e12cbc58f523")
+    Object visitHostingInstance(HostingInstanceImporter<? extends HostingInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.HostingInstance> hostingInstance);
 
-    Object visitHostingPortInstance(HostingPortInstanceImporter<? extends HostingPortInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> hostingPortInstance);
+    @objid ("4340479f-ceea-4586-8af1-16e3ed7b9f14")
+    Object visitHostingPortInstance(HostingPortInstanceImporter<? extends HostingPortInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> hostingPortInstance);
 
-    Object visitProvidedHostInstance(ProvidedHostInstanceImporter<? extends ProvidedHostInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> providedHostInstanceImporter);
+    @objid ("cce65274-cd78-4532-b5ed-4c06ebe31d79")
+    Object visitProvidedHostInstance(ProvidedHostInstanceImporter<? extends ProvidedHostInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> providedHostInstanceImporter);
 
-    Object visitRequiredHostInstance(RequiredHostInstanceImporter<? extends RequiredHostInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> requiredHostInstanceImporter);
+    @objid ("0fd1378a-a149-46c1-b68f-3d81bb64d99e")
+    Object visitRequiredHostInstance(RequiredHostInstanceImporter<? extends RequiredHostInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.port.HostingPortInstance> requiredHostInstanceImporter);
 
-    Object visitContainerInstance(ContainerInstanceImporter<? extends ContainerInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ContainerInstance> containerInstance);
+    @objid ("557ba0d6-441d-4633-a404-8f85f5372be4")
+    Object visitContainerInstance(ContainerInstanceImporter<? extends ContainerInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ContainerInstance> containerInstance);
 
-    Object visitPaaSInstance(PaaSInstanceImporter<? extends PaaSInstance, ? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.PaaSInstance> paaSInstance);
+    @objid ("ff026f3a-9d73-47c1-8b5b-b769f7b93984")
+    Object visitPaaSInstance(PaaSInstanceImporter<? extends PaaSInstance,? extends fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.PaaSInstance> paaSInstance);
 
-    Object visitConstraintModel(ConstraintModelImporter<? extends ConstraintModel, ? extends fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel> constraintModelImporter);
+    @objid ("0adac4a5-2f3b-43ad-904c-0a102730ff29")
+    Object visitConstraintModel(ConstraintModelImporter<? extends ConstraintModel,? extends fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel> constraintModelImporter);
 
+    @objid ("17371f58-7f57-44f7-bf0b-d1fb3268bc67")
+    Object visitRange(RangeImporter<? extends Range,? extends fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range> rangeImporter);
+
+    @objid ("5092a16b-0084-49eb-8cb6-1129a0d7e6d3")
+    Object visitValueType(ValueTypeImporter<? extends ValueType,? extends fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType> valueTypeImporter);
+
+    @objid ("e95b3728-4ec2-4791-96f1-a58fd4fbec39")
+    Object visitTypeModel(TypeModelImporter<? extends TypeModel,? extends fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel> typeModelImporter);
 
 }

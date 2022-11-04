@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -38,13 +38,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f7162d5d-ed91-4ada-8780-ceae18efea97")
 public class EventConfiguration extends FeatureArtifact {
-    @objid ("6db572e9-d26e-417d-87ec-0f7580c8abdd")
+    @objid ("fff7b480-acc1-4bec-be3a-2268bf671f66")
     public static final String STEREOTYPE_NAME = "EventConfiguration";
 
-    @objid ("6d8201c2-812c-42b0-a6a0-20f5cbadc216")
+    @objid ("c9fb8a24-03da-4bd2-b6b6-aedbcea4a409")
     public static final String HTTPMETHODNAME_TAGTYPE = "httpMethodName";
 
-    @objid ("db4f7880-8613-4388-bfd5-2ee7d95110fb")
+    @objid ("92a72263-b1b5-4d13-bb29-7e72067abb45")
     public static final String HTTPMETHODTYPE_TAGTYPE = "httpMethodType";
 
     /**
@@ -55,7 +55,7 @@ public class EventConfiguration extends FeatureArtifact {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0afd83f3-3854-4f7e-a981-d25ff23e70b6")
+    @objid ("5936d5bc-0a05-46c6-b5c2-28d27ce188ae")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventConfiguration.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public class EventConfiguration extends FeatureArtifact {
      * 
      * @return a {@link EventConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("6428d3a0-4e2a-4e5a-a1e3-b2533eeebd3f")
+    @objid ("e4881a96-80e3-4ae4-83aa-ef4942b94e26")
     public static EventConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, EventConfiguration.STEREOTYPE_NAME);
@@ -73,36 +73,34 @@ public class EventConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Artifact
      * @return a {@link EventConfiguration} proxy or <i>null</i>.
      */
-    @objid ("19561ff2-51af-46e5-b4d0-8d8583639975")
+    @objid ("3113633a-1b74-4d08-9927-e235ddba7f0d")
     public static EventConfiguration instantiate(final Artifact obj) {
         return EventConfiguration.canInstantiate(obj) ? new EventConfiguration(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link EventConfiguration} proxy from a {@link Artifact} stereotyped << EventConfiguration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Artifact}
      * @return a {@link EventConfiguration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e5587d81-42b6-4042-9a36-df1c35a001a0")
+    @objid ("fb0d2f4e-ca55-4a02-8718-5d2d0cfac1d3")
     public static EventConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (EventConfiguration.canInstantiate(obj))
-            return new EventConfiguration(obj);
+        	return new EventConfiguration(obj);
         else
-            throw new IllegalArgumentException("EventConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("EventConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("72962308-d953-466d-b95b-2585754692ac")
+    @objid ("9315cac2-992f-4694-9614-8b192d2f8bd4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -119,11 +117,10 @@ public class EventConfiguration extends FeatureArtifact {
     }
 
     /**
-     * Get the underlying {@link Artifact}.
-     * 
+     * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("8695266b-4d80-4867-8a95-b3799efa8f11")
+    @objid ("e644f4d6-1c91-4804-bc45-63716d8ba0b2")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -133,8 +130,9 @@ public class EventConfiguration extends FeatureArtifact {
      * Get the value of the 'executionSchedule' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("09755750-102f-44e6-b3d6-f894ddb51e72")
+    @objid ("eb96a120-8980-411d-ad12-a436523d50a0")
     public Schedule getExecutionSchedule() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(EventConfiguration.MdaTypes.MDAASSOCDEP)
@@ -151,7 +149,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1c43be9e-7ed0-4a93-a1d5-4b56cb4713f9")
+    @objid ("2ec42ac4-650e-4889-a276-1ed53640f43a")
     public String getHttpMethodName() {
         return this.elt.getTagValue(EventConfiguration.MdaTypes.HTTPMETHODNAME_TAGTYPE_ELT);
     }
@@ -161,7 +159,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("081d7c19-eb7c-49ce-b632-0ebc526e6fbc")
+    @objid ("c37bfa6a-21a3-4ffc-902d-c504553c5ed5")
     public String getHttpMethodType() {
         return this.elt.getTagValue(EventConfiguration.MdaTypes.HTTPMETHODTYPE_TAGTYPE_ELT);
     }
@@ -170,13 +168,14 @@ public class EventConfiguration extends FeatureArtifact {
      * Get the value to the 'scheduledExecutionConfig' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("60a67b4d-2e8b-4842-aaaa-233922a01c31")
+    @objid ("67a2c088-1a3d-4d5f-8471-e6a40e953699")
     public FeatureClass getScheduledExecutionConfig() {
         return (FeatureClass)CamelDesignerProxyFactory.instantiate(((Artifact) this.elt).getOwner(), FeatureClass.STEREOTYPE_NAME);
     }
 
-    @objid ("e207e560-f0ae-4510-bb50-c679d0a8845d")
+    @objid ("0bce43cf-3ed7-4245-a07c-1d8866cc5ef0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -186,8 +185,9 @@ public class EventConfiguration extends FeatureArtifact {
      * Set the value of the 'executionSchedule' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("9228a88b-c68f-4a25-9a5f-150c82fe6635")
+    @objid ("bdbbde20-4731-4360-a9d3-3841eba7d016")
     public void setExecutionSchedule(final Schedule obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -212,7 +212,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fe552393-3ad3-4433-9cbf-589c487be441")
+    @objid ("ab3401a8-01aa-41d4-8506-e27152bfbbde")
     public void setHttpMethodName(final String value) {
         this.elt.putTagValue(EventConfiguration.MdaTypes.HTTPMETHODNAME_TAGTYPE_ELT, value);
     }
@@ -222,7 +222,7 @@ public class EventConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3dee59f5-aef2-4c30-8433-3aaf9abb2f1e")
+    @objid ("37949617-3d2e-4a1e-9e38-9ddcce758458")
     public void setHttpMethodType(final String value) {
         this.elt.putTagValue(EventConfiguration.MdaTypes.HTTPMETHODTYPE_TAGTYPE_ELT, value);
     }
@@ -231,8 +231,9 @@ public class EventConfiguration extends FeatureArtifact {
      * Set the value of the 'scheduledExecutionConfig' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e5348902-7269-48f9-8031-6af1681bbaa9")
+    @objid ("3ed4407f-e5d4-4e66-b116-10cd411757b2")
     public void setScheduledExecutionConfig(final FeatureClass obj) {
         ((Artifact) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -245,29 +246,29 @@ public class EventConfiguration extends FeatureArtifact {
         return result;
     }
 
-    @objid ("91f7c597-8e13-4e8c-8e89-bfe50393b729")
+    @objid ("3507db46-9f5b-412f-8a7c-5075e183750e")
     protected EventConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("daa7f0bf-b9d3-467f-a096-f7cf1f5b5ad2")
     public static final class MdaTypes {
-        @objid ("8c4dbfb1-4f0c-4892-b166-eb87ed4b2bf8")
+        @objid ("dfb6c830-25a2-4f01-80ae-1374ff94ac1a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("97c19f89-e0b3-410c-b13a-7c557dbc8b8c")
+        @objid ("0e006265-c72c-406d-a20e-a4a8d47282f5")
         public static TagType HTTPMETHODNAME_TAGTYPE_ELT;
 
-        @objid ("d8c4ac8a-03f7-44ec-b6db-9fcbe9943d89")
+        @objid ("af20a31c-e491-4553-9424-d1ed08ae4401")
         public static TagType HTTPMETHODTYPE_TAGTYPE_ELT;
 
-        @objid ("56894b63-d01c-4042-b66a-58c6ba9b2d49")
+        @objid ("284c576b-e81d-4953-95f1-9d46da31f5fa")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("66e18f47-e250-4cef-b78a-cbe9a842cbee")
+        @objid ("fb58233f-8bab-4d17-9003-541ba2f331b1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("03ea2103-aa98-41fd-973c-cbc4465a4b24")
+        @objid ("39565a61-a262-4fe0-ab03-d69fe48c7ae7")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5138fe5c-0bae-4c49-9442-c6ac48dd09d8");
             HTTPMETHODNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "06feb07e-1378-4f53-8ae2-7ba21ca97283");
@@ -277,11 +278,11 @@ public class EventConfiguration extends FeatureArtifact {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

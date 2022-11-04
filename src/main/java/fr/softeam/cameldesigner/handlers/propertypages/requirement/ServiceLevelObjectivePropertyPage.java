@@ -4,14 +4,11 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ServiceLevelObjective;
 import fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Instance;
 
 @objid ("2bd0133b-cd47-4d99-a488-72aadda3b0f8")
 public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> extends HardRequirementPropertyPage<T> {
@@ -39,7 +36,7 @@ public class ServiceLevelObjectivePropertyPage<T extends ServiceLevelObjective> 
                 constraint.setName(value);
             }
             break;
-         
+        
         case 2 :
             ModelElement elt =  getModelElt(CamelDesignerAbstractProxy.getEvents(), value);
             if ((elt!=null) &&(elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Event.STEREOTYPE_NAME))) {

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.package_;
 
@@ -56,7 +56,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("12da9c0b-7f68-4c3c-abc2-84b8c9b97aaa")
 public class RequirementModel extends SubModel {
-    @objid ("ac0ca2a1-3571-4808-a166-dc82b6fe711c")
+    @objid ("f994fef9-098e-48f8-b2d2-f75aa37acff4")
     public static final String STEREOTYPE_NAME = "RequirementModel";
 
     /**
@@ -67,7 +67,7 @@ public class RequirementModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5a9f8403-daa9-4a78-a34e-b10848db77c7")
+    @objid ("f65b24e3-5303-4db8-8868-9c3c20a035e8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RequirementModel.STEREOTYPE_NAME));
     }
@@ -77,7 +77,7 @@ public class RequirementModel extends SubModel {
      * 
      * @return a {@link RequirementModel} proxy on the created {@link Package}.
      */
-    @objid ("ead0bdda-409e-4a45-b661-dfa098982b5c")
+    @objid ("8a8ee92a-506f-4951-9df1-c16930feb296")
     public static RequirementModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RequirementModel.STEREOTYPE_NAME);
@@ -85,41 +85,40 @@ public class RequirementModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link RequirementModel} proxy from a {@link Package} stereotyped << RequirementModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link RequirementModel} proxy from a {@link Package} stereotyped << RequirementModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Package
      * @return a {@link RequirementModel} proxy or <i>null</i>.
      */
-    @objid ("600215fe-c899-42c5-87e7-02bdeec0f29f")
+    @objid ("f176e51a-2668-4994-8656-a02dd438c886")
     public static RequirementModel instantiate(final Package obj) {
         return RequirementModel.canInstantiate(obj) ? new RequirementModel(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link RequirementModel} proxy from a {@link Package} stereotyped << RequirementModel >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link RequirementModel} proxy from a {@link Package} stereotyped << RequirementModel >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Package}
      * @return a {@link RequirementModel} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3ba0433c-5abe-4a31-83ac-2404f70ae201")
+    @objid ("505063f8-d4ed-48df-9824-516bfb26ac11")
     public static RequirementModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (RequirementModel.canInstantiate(obj))
-            return new RequirementModel(obj);
+        	return new RequirementModel(obj);
         else
-            throw new IllegalArgumentException("RequirementModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("RequirementModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'Diagrams' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e1d0c99f-795f-4222-92d5-67dc2bdc2756")
+    @objid ("75e1a4a2-23bc-4b02-b660-1c3df5658bde")
     public void addDiagrams(final RequirementModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -129,14 +128,15 @@ public class RequirementModel extends SubModel {
      * Add a value to the 'requirements' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("d1f5a7bb-1ad7-46fa-bafa-0f0e0f9b801c")
+    @objid ("b1309c49-af9a-4e55-84df-538529d13e3e")
     public void addRequirements(final Requirement obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("aeb7ab2a-fec0-4602-a0c7-75335795b173")
+    @objid ("542deb91-9a9e-45ad-b323-433163de5e2a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -156,8 +156,9 @@ public class RequirementModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("391552b6-f339-4654-b21d-37a1d4aa728e")
+    @objid ("3d3ed754-98f0-4d49-8287-4afa022f91aa")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -166,23 +167,23 @@ public class RequirementModel extends SubModel {
      * Get the values of the 'Diagrams' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("db01ebfb-bc37-4284-b73d-e0fca67ae094")
+    @objid ("b2ff7047-e2d8-4a8c-ae62-db95d16377e7")
     public List<RequirementModelDiagram> getDiagrams() {
         List<RequirementModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
-            if (RequirementModelDiagram.canInstantiate(mObj))
-                    results.add((RequirementModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, RequirementModelDiagram.STEREOTYPE_NAME));
-            }
+        	if (RequirementModelDiagram.canInstantiate(mObj))
+        			results.add((RequirementModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, RequirementModelDiagram.STEREOTYPE_NAME));
+        	}
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}.
-     * 
+     * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("3da9cda8-78c1-4ce9-aabe-453f5243b621")
+    @objid ("ab1f45ee-2a84-46e6-9056-7579acd287bc")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -192,40 +193,41 @@ public class RequirementModel extends SubModel {
      * Get the values of the 'requirements' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("c7dfd7e7-adc3-4663-a80a-bc41c174ffd7")
+    @objid ("43972b83-d53a-4447-bdc4-d9d6bc845634")
     public List<Requirement> getRequirements() {
         List<Requirement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-            if (ImageRequirement.canInstantiate(mObj))
-                    results.add((ImageRequirement)CamelDesignerProxyFactory.instantiate(mObj, ImageRequirement.STEREOTYPE_NAME));
-            if (LocationRequirement.canInstantiate(mObj))
-                    results.add((LocationRequirement)CamelDesignerProxyFactory.instantiate(mObj, LocationRequirement.STEREOTYPE_NAME));
-            if (OSRequirement.canInstantiate(mObj))
-                    results.add((OSRequirement)CamelDesignerProxyFactory.instantiate(mObj, OSRequirement.STEREOTYPE_NAME));
-            if (PaaSRequirement.canInstantiate(mObj))
-                    results.add((PaaSRequirement)CamelDesignerProxyFactory.instantiate(mObj, PaaSRequirement.STEREOTYPE_NAME));
-            if (ProviderRequirement.canInstantiate(mObj))
-                    results.add((ProviderRequirement)CamelDesignerProxyFactory.instantiate(mObj, ProviderRequirement.STEREOTYPE_NAME));
-            if (ResourceRequirement.canInstantiate(mObj))
-                    results.add((ResourceRequirement)CamelDesignerProxyFactory.instantiate(mObj, ResourceRequirement.STEREOTYPE_NAME));
-            if (HorizontalScaleRequirement.canInstantiate(mObj))
-                    results.add((HorizontalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, HorizontalScaleRequirement.STEREOTYPE_NAME));
-            if (VerticalScaleRequirement.canInstantiate(mObj))
-                    results.add((VerticalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, VerticalScaleRequirement.STEREOTYPE_NAME));
-            if (SecurityRequirement.canInstantiate(mObj))
-                    results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
-            if (SecuritySLO.canInstantiate(mObj))
-                    results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
-            if (ServiceLevelObjective.canInstantiate(mObj))
-                    results.add((ServiceLevelObjective)CamelDesignerProxyFactory.instantiate(mObj, ServiceLevelObjective.STEREOTYPE_NAME));
-            if (OptimisationRequirement.canInstantiate(mObj))
-                    results.add((OptimisationRequirement)CamelDesignerProxyFactory.instantiate(mObj, OptimisationRequirement.STEREOTYPE_NAME));
-            }
+        	if (ImageRequirement.canInstantiate(mObj))
+        			results.add((ImageRequirement)CamelDesignerProxyFactory.instantiate(mObj, ImageRequirement.STEREOTYPE_NAME));
+        	if (LocationRequirement.canInstantiate(mObj))
+        			results.add((LocationRequirement)CamelDesignerProxyFactory.instantiate(mObj, LocationRequirement.STEREOTYPE_NAME));
+        	if (OSRequirement.canInstantiate(mObj))
+        			results.add((OSRequirement)CamelDesignerProxyFactory.instantiate(mObj, OSRequirement.STEREOTYPE_NAME));
+        	if (PaaSRequirement.canInstantiate(mObj))
+        			results.add((PaaSRequirement)CamelDesignerProxyFactory.instantiate(mObj, PaaSRequirement.STEREOTYPE_NAME));
+        	if (ProviderRequirement.canInstantiate(mObj))
+        			results.add((ProviderRequirement)CamelDesignerProxyFactory.instantiate(mObj, ProviderRequirement.STEREOTYPE_NAME));
+        	if (ResourceRequirement.canInstantiate(mObj))
+        			results.add((ResourceRequirement)CamelDesignerProxyFactory.instantiate(mObj, ResourceRequirement.STEREOTYPE_NAME));
+        	if (HorizontalScaleRequirement.canInstantiate(mObj))
+        			results.add((HorizontalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, HorizontalScaleRequirement.STEREOTYPE_NAME));
+        	if (VerticalScaleRequirement.canInstantiate(mObj))
+        			results.add((VerticalScaleRequirement)CamelDesignerProxyFactory.instantiate(mObj, VerticalScaleRequirement.STEREOTYPE_NAME));
+        	if (SecurityRequirement.canInstantiate(mObj))
+        			results.add((SecurityRequirement)CamelDesignerProxyFactory.instantiate(mObj, SecurityRequirement.STEREOTYPE_NAME));
+        	if (SecuritySLO.canInstantiate(mObj))
+        			results.add((SecuritySLO)CamelDesignerProxyFactory.instantiate(mObj, SecuritySLO.STEREOTYPE_NAME));
+        	if (ServiceLevelObjective.canInstantiate(mObj))
+        			results.add((ServiceLevelObjective)CamelDesignerProxyFactory.instantiate(mObj, ServiceLevelObjective.STEREOTYPE_NAME));
+        	if (OptimisationRequirement.canInstantiate(mObj))
+        			results.add((OptimisationRequirement)CamelDesignerProxyFactory.instantiate(mObj, OptimisationRequirement.STEREOTYPE_NAME));
+        	}
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("5cd8e245-841c-4de8-a13c-85c23ad436fc")
+    @objid ("3a1d6669-2c5d-45b8-8cf7-6942ca3cebf6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -235,8 +237,9 @@ public class RequirementModel extends SubModel {
      * Remove a value from the 'Diagrams' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("1fa2d3d1-170f-4987-922a-1887c29b5afe")
+    @objid ("7cd80fb0-bb2f-41c0-8f94-f30181952bfb")
     public boolean removeDiagrams(final RequirementModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -245,8 +248,9 @@ public class RequirementModel extends SubModel {
      * Remove a value from the 'requirements' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("52bf8ab5-3eb0-4ebc-be81-692e7fa2a407")
+    @objid ("4915f642-342a-4ed5-adc1-17674ec1b855")
     public boolean removeRequirements(final Requirement obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -255,8 +259,9 @@ public class RequirementModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e01f6523-d467-4ab9-9ba7-feb07e8c8084")
+    @objid ("7544fd5e-2ed4-4cda-a962-072c3ec45f50")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -340,7 +345,7 @@ public class RequirementModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("329ebbc6-c042-4f51-8d3e-960854ea057e")
+    @objid ("5cead1cf-6def-49cf-bdbd-0d7dc3aef299")
     protected RequirementModel(final Package elt) {
         super(elt);
     }
@@ -356,16 +361,16 @@ public class RequirementModel extends SubModel {
 
     @objid ("cda79ab4-0c73-48f6-9745-469f013ec194")
     public static final class MdaTypes {
-        @objid ("644f566f-f37a-4000-92e2-bc338a0b8cbe")
+        @objid ("87af3f22-61c4-445f-b896-d2ec2620a426")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("921895fc-1109-404c-babd-994e67c84a53")
+        @objid ("653a77a4-190e-4ac5-ad2e-13f6f7c1ebfc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1c27bcd6-9f94-4cc8-a388-ac13b219d517")
+        @objid ("32ef5716-43c0-49bf-a7b5-80b966d02ae4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8511ec79-623f-4e46-a663-f085440cc67d")
+        @objid ("e5b7f722-e243-4796-bccd-2c2fea68cca7")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a6bb7236-ef3d-41b8-a879-26c642be9cb8");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -373,11 +378,11 @@ public class RequirementModel extends SubModel {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange.importer.unit;
 
 import camel.unit.DimensionedUnit;
+import camel.unit.UnitDimension;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -33,6 +34,22 @@ public class DimensionedUnitImporter<T extends DimensionedUnit, V extends fr.sof
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
         return super.createCamelElt(owner);
+    }
+
+    @objid ("1c8e82bd-ad45-41be-bafc-91738107f0ea")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setDimension(elt);
+    }
+
+    @objid ("4b15fc22-136f-4d13-bb2b-372c4116a1b0")
+    private void setDimension(V elt) {
+        UnitDimension value = this._element.getDimension();
+        CamelElement camValue = this._process.getElement(value);
+        if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension)) {
+            elt.setDimension((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension) camValue);
+        }
     }
 
 }

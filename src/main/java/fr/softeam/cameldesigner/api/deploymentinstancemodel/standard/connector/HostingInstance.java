@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f2d290ed-f247-45bf-9ad2-1b3defc04755")
 public class HostingInstance extends ComponentRelationInstance {
-    @objid ("33dd1963-3561-4fe5-8699-7ff9e1122029")
+    @objid ("6bdfcd02-9020-4469-b024-4980ae316088")
     public static final String STEREOTYPE_NAME = "HostingInstance";
 
     /**
@@ -47,7 +47,7 @@ public class HostingInstance extends ComponentRelationInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("90b72252-cf6d-45da-bc10-41f578e5af61")
+    @objid ("5404b282-8735-4fe1-8cb2-d7aad5215d20")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HostingInstance.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class HostingInstance extends ComponentRelationInstance {
      * 
      * @return a {@link HostingInstance} proxy on the created {@link Connector}.
      */
-    @objid ("9d024d45-872c-4d6b-8015-7494cb5a9c02")
+    @objid ("84cee469-9318-4eca-92db-587601fc27e0")
     public static HostingInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HostingInstance.STEREOTYPE_NAME);
@@ -65,36 +65,34 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Connector
      * @return a {@link HostingInstance} proxy or <i>null</i>.
      */
-    @objid ("7c3cc616-c506-4327-abf4-eff95021ae1c")
+    @objid ("e10d9a88-9f14-4d96-8914-f7148b3d50dd")
     public static HostingInstance instantiate(final Connector obj) {
         return HostingInstance.canInstantiate(obj) ? new HostingInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link HostingInstance} proxy from a {@link Connector} stereotyped << HostingInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Connector}
      * @return a {@link HostingInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c0322cde-b286-435d-ab0b-c814ec4991bf")
+    @objid ("397f8250-2bb5-495c-97a9-3019fed37227")
     public static HostingInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (HostingInstance.canInstantiate(obj))
-            return new HostingInstance(obj);
+        	return new HostingInstance(obj);
         else
-            throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("HostingInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("7a388343-a134-48d9-b353-c8274c81c7c7")
+    @objid ("d8c2636e-d0f5-419c-bfdf-cbaf0b8cafbe")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,11 +109,10 @@ public class HostingInstance extends ComponentRelationInstance {
     }
 
     /**
-     * Get the underlying {@link Connector}.
-     * 
+     * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("af7fe544-c76d-4721-ad0f-b63b0555c85e")
+    @objid ("115599ea-dd14-42e1-8b98-3571addc69b8")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
@@ -125,8 +122,9 @@ public class HostingInstance extends ComponentRelationInstance {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("50cedc32-9476-40c3-862d-7aba3c2cd288")
+    @objid ("8a121d2c-b51f-4de0-851e-c6394f22d920")
     public Hosting getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HostingInstance.MdaTypes.MDAASSOCDEP)
@@ -138,7 +136,7 @@ public class HostingInstance extends ComponentRelationInstance {
         return null;
     }
 
-    @objid ("8c54fffd-65cb-4f19-9838-9b68b20ded0f")
+    @objid ("0ad33127-1e00-41c4-b904-06fc6c6de8d2")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -148,8 +146,9 @@ public class HostingInstance extends ComponentRelationInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("e46c392a-f3f8-498c-a6cd-833f8899d2a3")
+    @objid ("b00884e6-7c47-47af-b997-07506d149331")
     public void setType(final Hosting obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -177,23 +176,23 @@ public class HostingInstance extends ComponentRelationInstance {
         return result;
     }
 
-    @objid ("4711f51e-2854-4a9a-aff7-3577c4674169")
+    @objid ("43408468-5359-43d7-be89-eed5e4867580")
     protected HostingInstance(final Connector elt) {
         super(elt);
     }
 
     @objid ("0a6f0d2c-ffcc-47ac-a073-417c46822aff")
     public static final class MdaTypes {
-        @objid ("f6626e07-3a7a-40c0-8e72-61db20f7a526")
+        @objid ("a4300427-b7e6-4a63-b772-d23807613513")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("10f4d0ac-f904-436c-ac3a-17021dd86375")
+        @objid ("abe4b333-46fc-48f6-8077-9d5a103868a3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("42d4756d-29e9-4872-938b-03237154d2b8")
+        @objid ("8bac3959-30b2-488e-bc32-3d2a283b211b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("77a62bdc-c3c3-46aa-b9b8-af87d951c8a4")
+        @objid ("662b1a3a-c9f3-44d4-87c4-efa19e32c689")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "db62c499-d8f1-45e2-a427-4649858fbf35");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -201,11 +200,11 @@ public class HostingInstance extends ComponentRelationInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }
