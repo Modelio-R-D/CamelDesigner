@@ -66,7 +66,11 @@ public class MetricVariableImporter<T extends MetricVariable, V extends fr.softe
         // TODO Auto-generated method stub
         Component value = this._element.getComponent();
         if (value != null) {
-            elt.setComponent((CamelComponent) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof CamelComponent) {
+                elt.setComponent((CamelComponent) valueElt);
+        
+            }
         }
     }
 
@@ -93,8 +97,14 @@ public class MetricVariableImporter<T extends MetricVariable, V extends fr.softe
         // TODO Auto-generated method stub
         EList<camel.metric.Metric> values = this._element.getComponentMetrics();
         if (values != null) {
-            for( camel.metric.Metric component: values)
-            elt.addComponentMetrics((Metric) component);
+            for( camel.metric.Metric value: values) {
+                CamelElement valueElt = this._process.getElement(value);
+                if (valueElt instanceof Metric) {
+                    elt.addComponentMetrics((Metric) valueElt);
+            
+                }
+        
+            }
         }
     }
 

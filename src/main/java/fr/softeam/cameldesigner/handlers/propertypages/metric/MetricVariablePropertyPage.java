@@ -6,8 +6,10 @@ import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.DataType;
 
@@ -56,9 +58,15 @@ public class MetricVariablePropertyPage<T extends MetricVariable> extends Metric
                 }
             }
         }
+        else if(this._currentRow == 6){
+             ModelElement elt = getModelElt(CamelDesignerAbstractProxy.getMetricContexts(), value);
+            if (CamelComponent.canInstantiate(elt)) {
+                this._element.setMetricContext((MetricContext) MetricContext.instantiate(elt));
+            }
+        }
         
         
-        this._currentRow -= 5;
+        this._currentRow -= 6;
     }
 
     /**
@@ -87,6 +95,9 @@ public class MetricVariablePropertyPage<T extends MetricVariable> extends Metric
         
         //ComponentMetric Context
         table.addProperty("Component Metric", getCamelValue(this._element.getComponentMetrics()), getAddRemove(CamelDesignerAbstractProxy.getMetrics(), this._element.getComponentMetrics()));
+         
+        //Component
+        table.addProperty("Metric Context", getCamelName(this._element.getMetricContext()), getCamelNames(CamelDesignerAbstractProxy.getMetricContexts()));
     }
 
     @objid ("de011a31-d91f-40ad-a89c-78a0f4d6b723")

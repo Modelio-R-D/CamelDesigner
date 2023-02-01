@@ -22,7 +22,6 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -33,7 +32,7 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            ModelElement elt = (ModelElement) getModelElt(this._functionalType, value);
+            ModelElement elt = getModelElt(this._functionalType, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelAttribute.STEREOTYPE_NAME)) {
                 this._element.setFunctionalType( (CamelAttribute) elt);
             }
@@ -50,7 +49,6 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
 
     /**
      * This method handles the construction of the property table of a selected element
-     * @param MObject : the selected element
      * 
      * @param table : the property table to fulfill
      */
@@ -59,7 +57,7 @@ public class FunctionalEventPropertyPage<T extends FunctionalEvent> extends Feat
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-              //Functional Type
+        //Functional Type
         this._functionalType = CamelDesignerAbstractProxy.getMMSObject();
         table.addProperty("Functional Type", getCamelName(this._element.getFunctionalType()), getCamelNames(this._functionalType));
         

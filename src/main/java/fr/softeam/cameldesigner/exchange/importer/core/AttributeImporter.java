@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.exchange.importer.core;
 
 import camel.core.Attribute;
-import camel.mms.MmsObject;
 import camel.type.BooleanValue;
 import camel.type.DoubleValue;
 import camel.type.FloatValue;
@@ -14,10 +13,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.classifier.FeatureClassifier;
-import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
-import org.eclipse.emf.common.util.EList;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("804d7722-af37-42b3-ace8-7102790c372c")
@@ -35,19 +32,20 @@ public class AttributeImporter<T extends Attribute, V extends fr.softeam.camelde
     @objid ("665b14ab-5a4c-4175-aeb0-35fa05bfd588")
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
-        ModelElement value = this._process.getElement(owner).getElement();    
-           
+        ModelElement value = this._process.getElement(owner).getElement();
+        
         if ( value instanceof org.modelio.metamodel.uml.statik.Package)
             return fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass.create();
         if ( value instanceof org.modelio.metamodel.uml.statik.Class)
             return fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute.create();
-        else 
+        else
             return null;
     }
 
     @objid ("8c4f7bea-5e16-4322-a673-3d0db11f72cd")
     @Override
     public void setProperties(V elt) {
+        super.setProperties(elt);
         setValueType(elt);
         setUnit(elt);
         setValue(elt);
@@ -107,7 +105,7 @@ public class AttributeImporter<T extends Attribute, V extends fr.softeam.camelde
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType)
                 elt.setValueType((fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType) valueElt);
-           
+        
             }
     }
 

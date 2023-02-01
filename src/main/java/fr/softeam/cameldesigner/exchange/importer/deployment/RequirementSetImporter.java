@@ -1,7 +1,5 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.RequirementSet;
 import camel.requirement.HorizontalScaleRequirement;
 import camel.requirement.ImageRequirement;
@@ -12,10 +10,12 @@ import camel.requirement.ProviderRequirement;
 import camel.requirement.ResourceRequirement;
 import camel.requirement.SecurityRequirement;
 import camel.requirement.VerticalScaleRequirement;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8f79c839-8ac1-4479-9e73-483578667521")
 public class RequirementSetImporter<T extends RequirementSet, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet> extends FeatureImporter<T,V> {
@@ -60,13 +60,12 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
 
     @objid ("bee16844-25d9-4885-9ff9-736b7e46e329")
     private void setImageRequirement(V elt) {
-        // TODO Auto-generated method stub
         ImageRequirement value = this._element.getImageRequirement();
         if (value != null) {
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement) {
                 elt.setImageRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement) valueElt);
-
+        
             }
         }
     }
@@ -79,7 +78,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement) {
                 elt.setLocationRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.LocationRequirement) valueElt);
-
+        
             }
         }
     }
@@ -92,7 +91,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement) {
                 elt.setHorizontalScaleRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.HorizontalScaleRequirement) valueElt);
-
+        
             }
         }
     }
@@ -105,7 +104,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityRequirement) {
                 elt.setSecurityRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.SecurityRequirement) valueElt);
-
+        
             }
         }
     }
@@ -118,7 +117,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement) {
                 elt.setOsRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.OSRequirement) valueElt);
-
+        
             }
         }
     }
@@ -131,7 +130,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement) {
                 elt.setVerticalScaleRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.VerticalScaleRequirement) valueElt);
-
+        
             }
         }
     }
@@ -144,7 +143,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement) {
                 elt.setProviderRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ProviderRequirement) valueElt);
-
+        
             }
         }
     }
@@ -157,7 +156,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement) {
                 elt.setPaasRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.PaaSRequirement) valueElt);
-
+        
             }
         }
     }
@@ -170,7 +169,7 @@ public class RequirementSetImporter<T extends RequirementSet, V extends fr.softe
              CamelElement valueElt = this._process.getElement(value);
              if (valueElt instanceof fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement) {
                  elt.setResourceRequirement((fr.softeam.cameldesigner.api.requirementmodel.standard.class_.ResourceRequirement) valueElt);
-
+        
              }
          }
     }

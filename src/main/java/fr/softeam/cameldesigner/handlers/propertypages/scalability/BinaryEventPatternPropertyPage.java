@@ -82,6 +82,7 @@ public class BinaryEventPatternPropertyPage<T extends BinaryEventPattern> extend
         table.addProperty("Right Event", getCamelName(this._element.getRightEvent()), getCamelNames(this._rightEvent));
         
         table.addProperty("Lower Occurrence Bound",getNotNull(this._element.getLowerOccurrenceBound()));
+        
         table.addProperty("Upper Occurence Bound",getNotNull(this._element.getUpperOccurrenceBound()));
         
         String[] values = Arrays.stream(BinaryPatternOperatorType.values()) // create stream of enum values

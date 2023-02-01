@@ -26,6 +26,7 @@ public abstract class EventImporter<T extends Event, V extends fr.softeam.cameld
     @objid ("95b8ef70-e7be-483e-9354-c8c58fcc27d9")
     @Override
     public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
     }
 
 }

@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange;
 
 import camel.dsl.CamelDslStandaloneSetup;
+import camel.dsl.CamelDslStandaloneSetupGenerated;
 import com.google.inject.Injector;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 

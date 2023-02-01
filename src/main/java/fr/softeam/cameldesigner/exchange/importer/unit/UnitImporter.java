@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.exchange.importer.unit;
 import camel.unit.Unit;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -27,13 +28,31 @@ public abstract class UnitImporter<T extends Unit, V extends fr.softeam.cameldes
     @objid ("3ad3a965-875b-4fde-b3b7-f6e05a94a3ad")
     @Override
     public void attach(V elt, CamelElement context) {
-        super.attach(elt, context);
+        if (context instanceof UnitModel)
+            ((UnitModel) context).addUnits(elt);
     }
 
     @objid ("df6808b7-2da7-458b-9697-e3a0ef48cbd8")
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
         return super.createCamelElt(owner);
+    }
+
+    @objid ("d2d038bf-aec0-4e22-b2e0-d5105fa5f75e")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setMultipleOf(elt);
+    }
+
+    @objid ("dabd8306-c6af-4c57-ac0c-ec241bb23624")
+    private void setMultipleOf(V elt) {
+        for(Unit value : this._element.getMultipleOf()) {
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit)) {
+                elt.addMultipleOf((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit) camValue);
+            }
+        }
     }
 
 }

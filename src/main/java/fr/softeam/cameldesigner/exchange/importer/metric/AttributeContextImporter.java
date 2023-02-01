@@ -2,7 +2,6 @@ package fr.softeam.cameldesigner.exchange.importer.metric;
 
 import camel.core.Attribute;
 import camel.metric.AttributeContext;
-import camel.metric.GroupingType;
 import camel.metric.ObjectContext;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;

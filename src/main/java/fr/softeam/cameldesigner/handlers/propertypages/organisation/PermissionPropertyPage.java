@@ -1,11 +1,10 @@
 package fr.softeam.cameldesigner.handlers.propertypages.organisation;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.organisation.PermissionActionType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Permission;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Role;
@@ -41,7 +40,7 @@ public class PermissionPropertyPage<T extends Permission> extends FeaturePropert
                  this._element.setRole((Role) elt);
              }
         }
-                
+        
         else if(this._currentRow == 2){
             this._element.setStartTime(value);
         
@@ -83,6 +82,7 @@ public class PermissionPropertyPage<T extends Permission> extends FeaturePropert
         table.addProperty("Role", getCamelName(this._element.getRole()), getCamelNames(this._role));
         
         table.addProperty("Start Time", getNotNull(this._element.getStartTime()));
+        
         table.addProperty("End Time", getNotNull(this._element.getEndTime()));
         
         //Resource Filter
@@ -90,7 +90,11 @@ public class PermissionPropertyPage<T extends Permission> extends FeaturePropert
         table.addProperty("Resource Filter", getCamelName(this._element.getResourceFilter()), getCamelNames(this._resourceFilter));
         
         //Action
-        table.addProperty("Action", getNotNull(this._element.getAction()));
+        //PermissionActionType
+        String[] values = Arrays.stream(PermissionActionType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Action", getNotNull(this._element.getAction()), values);
     }
 
     @objid ("1ec36d55-58b1-487c-992a-ee9b11a63ab9")

@@ -2,6 +2,12 @@ package fr.softeam.cameldesigner.ui;
 
 import java.io.File;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.exchange.importer.AbstractImporterService;
+import fr.softeam.cameldesigner.exchange.importer.CamelImporterService;
+import fr.softeam.cameldesigner.exchange.importer.XMIImporterService;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
+import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -11,12 +17,6 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.widgets.Shell;
 import org.modelio.api.modelio.model.ITransaction;
-import fr.softeam.cameldesigner.exchange.importer.AbstractImporterService;
-import fr.softeam.cameldesigner.exchange.importer.CamelImporterService;
-import fr.softeam.cameldesigner.exchange.importer.XMIImporterService;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
-import fr.softeam.cameldesigner.ui.composite.FileChooserComposite;
-import fr.softeam.cameldesigner.ui.composite.ValidationBoutonComposite;
 
 /**
  * This class provides the Camel export dialog
@@ -27,21 +27,21 @@ public class WizardImport extends AbstractSwtWizardWindow {
     @objid ("60740ef0-15b0-4759-8c52-f220b48c041a")
     private void createContents() {
         setLabels();
-
+        
         this.shell = new Shell(getParent(), 67696 | SWT.APPLICATION_MODAL | SWT.RESIZE | SWT.TITLE);
         this.shell.setLayout( new FormLayout());
         this.shell.setText(this.frametitle);
-
+        
         // File chooser composite
         this.fileChooserComposite = new FileChooserComposite(this.shell, SWT.NONE, SWT.OPEN);
-
+        
         // Validation Composite
         this. validateComposite = new ValidationBoutonComposite(this.shell, SWT.NONE, this.cancelButton, this.validateButton);
-
+        
         this.validateComposite.getValidationButton().addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-
+        
                 if (getFileChooserComposite().getCurrentFile() != null) {
                     validationAction();
                 } else {
@@ -49,7 +49,7 @@ public class WizardImport extends AbstractSwtWizardWindow {
                 }
             }
         });
-
+        
         this.validateComposite.getCancelButton().addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -57,32 +57,32 @@ public class WizardImport extends AbstractSwtWizardWindow {
                 cancelAction();
             }
         });
-
+        
         final FormData fd_fileChooserComposite = new FormData();
         fd_fileChooserComposite.right = new FormAttachment(100, 0);
         fd_fileChooserComposite.bottom = new FormAttachment(0, 40);
         fd_fileChooserComposite.top = new FormAttachment(0, 0);
         fd_fileChooserComposite.left = new FormAttachment(0, 0);
         this.fileChooserComposite.setLayoutData(fd_fileChooserComposite);
-
+        
         final FormData fd_validateComposite = new FormData();
         fd_validateComposite.top = new FormAttachment(this.fileChooserComposite, 5);
         fd_validateComposite.bottom = new FormAttachment(100, -5);
         fd_validateComposite.left = new FormAttachment(this.fileChooserComposite, 5, SWT.LEFT);
         fd_validateComposite.right = new FormAttachment(this.fileChooserComposite, 0, SWT.RIGHT);
         this.validateComposite.setLayoutData(fd_validateComposite);
-
+        
         this.fileChooserComposite.getSearch().addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 WizardImport.this.fileChooserComposite.searchFile();
             }
         });
-
+        
         setDefaultDialog();
         this.shell.pack();
         this.shell.setMinimumSize(new Point(this.shell.getBounds().width, this.shell.getBounds().height));
-
+        
         this.validateComposite.getValidationButton().setFocus();
     }
 
@@ -90,31 +90,31 @@ public class WizardImport extends AbstractSwtWizardWindow {
     @Override
     public void validationAction() {
         File theFile = getFileChooserComposite().getCurrentFile();
-
+        
         if (theFile.exists() && theFile.isFile()) {
-
+        
             try(ITransaction t = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().createTransaction("Import") ) {
-
+        
                 AbstractImporterService importerService = null;
-
+        
                 if (theFile.getAbsolutePath().endsWith(".xmi")) {
                     importerService = new XMIImporterService();
-
+        
                 }else {
                     importerService = new CamelImporterService();
                 }
-
-
+        
+        
                 importerService.importFromFile(this.selectedElt, theFile.getAbsolutePath());
-
+        
                 t.commit();
                 completeBox();
-
-
+        
+        
             } catch (final Exception e) {
                 CamelDesignerModule.logService.error(e);
             }
-
+        
         } else {
             fileDontExist();
         }

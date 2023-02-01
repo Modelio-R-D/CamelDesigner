@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.exchange.importer.scalability;
 import camel.scalability.SingleEvent;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_.ScalabilityModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 
 @objid ("94ab341f-a2ae-4f71-bba3-5a2f8d271875")
@@ -25,6 +26,8 @@ public abstract class SingleEventImporter<T extends SingleEvent, V extends fr.so
     @objid ("ee028481-2342-4b1d-805f-0536901a5798")
     @Override
     public void attach(V elt, CamelElement context) {
+        if (context instanceof ScalabilityModel)
+            ((ScalabilityModel)context).addEvents(elt);
     }
 
 }

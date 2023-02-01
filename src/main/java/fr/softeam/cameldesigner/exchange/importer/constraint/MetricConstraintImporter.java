@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange.importer.constraint;
 
 import camel.constraint.MetricConstraint;
+import camel.metric.MetricContext;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -32,7 +33,11 @@ public class MetricConstraintImporter<T extends MetricConstraint, V extends fr.s
     @objid ("66493fbf-0f14-4383-902b-667a952d956d")
     @Override
     public void attach(V elt, CamelElement context) {
-        // TODO Auto-generated method stub
+        MetricContext metricContext = this._element.getMetricContext();
+        
+        CamelElement camelElt = this._process.getElement(metricContext);
+        if (camelElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext)
+            elt.setMetricContext((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) camelElt);
     }
 
 }

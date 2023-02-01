@@ -49,7 +49,11 @@ public class RawMetricContextImporter<T extends RawMetricContext, V extends fr.s
         // TODO Auto-generated method stub
         Sensor value = this._element.getSensor();
         if (value != null) {
-            elt.setSensor((fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor) {
+                elt.setSensor(((fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor) valueElt));
+        
+            }
         }
     }
 

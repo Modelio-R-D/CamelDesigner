@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange.importer.constraint;
 
 import camel.constraint.MetricVariableConstraint;
+import camel.metric.MetricVariable;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -32,7 +33,11 @@ public class MetricVariableConstraintImporter<T extends MetricVariableConstraint
     @objid ("4e28e761-59a2-4dfc-bf97-5b8a07f80537")
     @Override
     public void attach(V elt, CamelElement context) {
-        // TODO Auto-generated method stub
+        MetricVariable metricVariable = this._element.getMetricVariable();
+        
+        CamelElement camelElt = this._process.getElement(metricVariable);
+        if (camelElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable)
+            elt.setMetricVariable((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable) camelElt);
     }
 
 }

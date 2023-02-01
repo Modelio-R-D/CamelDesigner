@@ -1,8 +1,13 @@
 package fr.softeam.cameldesigner.exchange.importer.scalability;
 
+import camel.constraint.MetricConstraint;
+import camel.core.Attribute;
+import camel.deployment.Component;
 import camel.scalability.NonFunctionalEvent;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -32,6 +37,31 @@ public class NonFunctionalEventImporter<T extends NonFunctionalEvent, V extends 
     @objid ("cfe1bc54-6a09-4c56-a3e1-87ffdc71701d")
     @Override
     public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
+    }
+
+    @objid ("c716d8f2-2018-4fa5-b794-dffd99ecfd6c")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setMetricConstraint(elt);
+        setIsViolation(elt);
+    }
+
+    @objid ("5d2e0882-d5f7-463f-8a7e-76f701a3a07d")
+    private void setMetricConstraint(V elt) {
+        MetricConstraint value = this._element.getMetricConstraint();
+        if (value != null) {
+            elt.setMetricConstraint( (fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint) value);
+        }
+    }
+
+    @objid ("83531196-cad5-4546-808c-aac9aeb6ad04")
+    private void setIsViolation(V elt) {
+        Boolean value = this._element.isIsViolation();
+        if (value != null) {
+            elt.setIsViolation (value);
+        }
     }
 
 }

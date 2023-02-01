@@ -33,6 +33,7 @@ public abstract class MmsObjectImporter<T extends MmsObject, V extends fr.softea
         setDescription(elt);
         setURI(elt);
         setId(elt);
+        setImplemented(elt);
     }
 
     @objid ("da1b14e1-929b-4098-8d82-a5dd8568a00d")
@@ -83,6 +84,15 @@ public abstract class MmsObjectImporter<T extends MmsObject, V extends fr.softea
         String value = this._element.getDescription();
         if (value != null) {
             elt.setDescription(value);
+            
+        }
+    }
+
+    @objid ("c06d51cf-0a02-4adf-a271-81b5f0da4c2c")
+    private void setImplemented(V elt) {
+        String value = ""; // this._element.;
+        if (value != null) {
+            elt.setImplemented(Boolean.valueOf(value));
             
         }
     }

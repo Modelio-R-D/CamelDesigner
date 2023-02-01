@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.exchange.importer.unit;
 import camel.unit.UnitDimension;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.unitmodel.standard.package_.UnitModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.FeatureImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -27,7 +28,8 @@ public class UnitDimensionImporter<T extends UnitDimension, V extends fr.softeam
     @objid ("b1e026ce-6cfb-448d-9c39-cad41d2a45bb")
     @Override
     public void attach(V elt, CamelElement context) {
-        super.attach(elt, context);
+        if (context instanceof UnitModel)
+            ((UnitModel) context).addDimensions(elt);
     }
 
     @objid ("8eaf21d6-6ef0-48dc-bb72-c6c86a3e2701")

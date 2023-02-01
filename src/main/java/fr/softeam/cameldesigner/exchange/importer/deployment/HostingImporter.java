@@ -1,16 +1,16 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.api.modelio.model.IUmlModel;
-import org.modelio.metamodel.uml.statik.ConnectorEnd;
 import camel.deployment.Hosting;
 import camel.deployment.ProvidedHost;
 import camel.deployment.RequiredHost;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.api.modelio.model.IUmlModel;
+import org.modelio.metamodel.uml.statik.ConnectorEnd;
 
 @objid ("a5c688fd-bca0-4912-840f-27cd30663e90")
 public class HostingImporter<T extends Hosting, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Hosting> extends ComponentRelationImporter<T,V> {
@@ -52,28 +52,28 @@ public class HostingImporter<T extends Hosting, V extends fr.softeam.cameldesign
     private void setProvidedRequiredHost(V elt) {
         ProvidedHost source = this._element.getProvidedHost();
         RequiredHost target = this._element.getRequiredHosts().get(0);
-
+        
         if ((source != null) && (target != null)) {
-
+        
             CamelElement sourceElt = this._process.getElement(source);
             CamelElement targetElt = this._process.getElement(target);
-
+        
             if ((sourceElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort)
                      && (targetElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort)){
-
+        
                 fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort sourcePort = (fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort) sourceElt;
                 fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort targetPort = (fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort) targetElt;
-
+        
                 IUmlModel model = CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel();
                 ConnectorEnd sourceEnd = (ConnectorEnd) model.createElement("Standard.ConnectorEnd");
                 ConnectorEnd targetEnd = (ConnectorEnd) model.createElement("Standard.ConnectorEnd");
-
+        
                 sourceEnd.setSource(sourcePort.getElement());
                 sourceEnd.setTarget(targetPort.getElement());
                 sourceEnd.setOppositeOwner(targetEnd);
                 sourceEnd.setOpposite(targetEnd);
                 sourceEnd.setLink(elt.getElement());
-
+        
                 targetEnd.setLink(elt.getElement());
                 targetEnd.setOppositeOwner(sourceEnd);
                 targetEnd.setOpposite(sourceEnd);

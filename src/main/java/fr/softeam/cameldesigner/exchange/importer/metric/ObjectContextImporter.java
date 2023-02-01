@@ -54,7 +54,11 @@ public class ObjectContextImporter<T extends ObjectContext, V extends fr.softeam
         // TODO Auto-generated method stub
         Component value = this._element.getComponent();
         if (value != null) {
-            elt.setComponent((CamelComponent) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof CamelComponent) {
+                elt.setComponent((CamelComponent) valueElt);
+        
+            }
         }
     }
 
@@ -63,8 +67,12 @@ public class ObjectContextImporter<T extends ObjectContext, V extends fr.softeam
         // TODO Auto-generated method stub
         Data value = this._element.getData();
         if (value != null) {
-            elt.setData( (fr.softeam.cameldesigner.api.datamodel.standard.class_.Data) value);
-        }
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.datamodel.standard.class_.Data) {
+                elt.setData((fr.softeam.cameldesigner.api.datamodel.standard.class_.Data) valueElt);
+        
+            }
+          }
     }
 
 }

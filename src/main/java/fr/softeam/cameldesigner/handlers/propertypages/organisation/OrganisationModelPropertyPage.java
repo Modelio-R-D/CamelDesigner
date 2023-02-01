@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.organisation;
 
+import java.util.Arrays;
 import java.util.List;
+import camel.organisation.SecurityLevel;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
@@ -37,7 +39,7 @@ public class OrganisationModelPropertyPage<T extends OrganisationModel> extends 
         
         
         else if(this._currentRow == 2) {
-            
+        
              this._element.setSecurityLevel(value);
         }
         
@@ -58,8 +60,12 @@ public class OrganisationModelPropertyPage<T extends OrganisationModel> extends 
         // Organisation
         this._organisation = CamelElement.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Organisation", getCamelName(this._element.getOrganisation()), getCamelNames(this._organisation));
-          
-        table.addProperty("Security Level", getNotNull(this._element.getSecurityLevel()));
+        
+        //SecurityLevel
+        String[] values = Arrays.stream(SecurityLevel.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Security Level", getNotNull(this._element.getSecurityLevel()), values);
     }
 
     @objid ("ad561f86-ce12-4ca5-829b-3cf178c81e96")

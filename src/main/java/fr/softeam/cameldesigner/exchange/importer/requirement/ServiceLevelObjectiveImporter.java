@@ -46,7 +46,11 @@ public class ServiceLevelObjectiveImporter<T extends ServiceLevelObjective, V ex
         // TODO Auto-generated method stub
         Constraint value = this._element.getConstraint();
         if (value != null) {
-            elt.setConstraint((CamelConstraint) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof CamelConstraint) {
+                elt.setConstraint((CamelConstraint) valueElt);
+        
+            }
         }
     }
 
@@ -55,7 +59,11 @@ public class ServiceLevelObjectiveImporter<T extends ServiceLevelObjective, V ex
         // TODO Auto-generated method stub
         Event value = this._element.getViolationEvent();
         if (value != null) {
-            elt.setViolationEvent((fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event) {
+                elt.setViolationEvent((fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_.Event) valueElt);
+        
+            }
         }
     }
 

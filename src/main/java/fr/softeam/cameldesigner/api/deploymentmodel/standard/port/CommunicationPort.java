@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.port;
 
@@ -36,16 +40,29 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("25c6d854-7691-4b15-a2cb-b76b325613c6")
 public class CommunicationPort extends FeaturePort {
-    @objid ("c4a7f586-0b63-4010-993e-9051a78fdfbb")
+<<<<<<< HEAD
+    @objid ("dbe6a7aa-8195-47a7-9a03-f8f7fce83d5d")
     public static final String STEREOTYPE_NAME = "CommunicationPort";
 
-    @objid ("384953f2-d0c6-4966-820c-980ef7982ee0")
+    @objid ("312a7125-cfa8-4794-9ed0-6a5875bd76b3")
     public static final String HIGHPORTNUMBER_TAGTYPE = "highPortNumber";
 
-    @objid ("b2d2be60-7cc1-4435-94c2-41ba79772674")
+    @objid ("80849ba5-67c6-424f-94fc-c6e899eaa06e")
     public static final String ISMANDATORY_TAGTYPE = "isMandatory";
 
-    @objid ("fc1b0154-7b2c-462e-9154-ef06768955df")
+    @objid ("9eea3bbe-073c-4c81-8710-9e70b243e886")
+=======
+    @objid ("471a7b45-5dcb-4983-a3cb-c38670b5d215")
+    public static final String STEREOTYPE_NAME = "CommunicationPort";
+
+    @objid ("58d77ea0-93f8-4693-a168-d21a0fed23e8")
+    public static final String HIGHPORTNUMBER_TAGTYPE = "highPortNumber";
+
+    @objid ("57ac1310-1314-42cc-b367-a626eb987b42")
+    public static final String ISMANDATORY_TAGTYPE = "isMandatory";
+
+    @objid ("59ffca38-c7b1-4f84-b192-7f1eab0bc408")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String LOWPORTNUMBER_TAGTYPE = "lowPortNumber";
 
     /**
@@ -56,7 +73,11 @@ public class CommunicationPort extends FeaturePort {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("cc8894cc-1b1e-44e0-b0b4-c29b9ce8ae9e")
+<<<<<<< HEAD
+    @objid ("21ca9243-00ac-4997-be60-f1c6b069008d")
+=======
+    @objid ("88f3c888-dcf4-4e35-b032-07437fd4252c")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationPort.STEREOTYPE_NAME));
     }
@@ -66,7 +87,11 @@ public class CommunicationPort extends FeaturePort {
      * 
      * @return a {@link CommunicationPort} proxy on the created {@link Port}.
      */
-    @objid ("8f5ac441-dfcb-4882-959e-b762f91ab393")
+<<<<<<< HEAD
+    @objid ("84e158a2-5a5f-4d17-ada1-be1280cd2469")
+=======
+    @objid ("49658af4-dbd8-4aa0-a94c-6681810961f0")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static CommunicationPort create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationPort.STEREOTYPE_NAME);
@@ -74,36 +99,46 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Port
      * @return a {@link CommunicationPort} proxy or <i>null</i>.
      */
-    @objid ("9e47a195-6cfb-414b-bc05-d9b0f88ba3c0")
+<<<<<<< HEAD
+    @objid ("7c4f4da5-231e-44f7-a722-f318ec36c256")
+=======
+    @objid ("d6a89f3d-a929-425f-b239-e52360d58bcf")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static CommunicationPort instantiate(final Port obj) {
         return CommunicationPort.canInstantiate(obj) ? new CommunicationPort(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link CommunicationPort} proxy from a {@link Port} stereotyped << CommunicationPort >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Port}
      * @return a {@link CommunicationPort} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b36928b6-6224-4176-90ea-7bc6d766c892")
+<<<<<<< HEAD
+    @objid ("367959f9-b2c5-46fd-bc3e-9bd5eacc73c4")
+=======
+    @objid ("61618f18-0caf-4dcf-947c-e22a09d30ed1")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static CommunicationPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (CommunicationPort.canInstantiate(obj))
-            return new CommunicationPort(obj);
+        	return new CommunicationPort(obj);
         else
-            throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CommunicationPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("83213ae9-428a-4125-bd60-b1a9ab61a6ef")
+<<<<<<< HEAD
+    @objid ("7ffb593d-a73a-4578-bb2c-b33c335c71b2")
+=======
+    @objid ("b577e981-538e-4257-91c8-c6442ca83f60")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,11 +155,14 @@ public class CommunicationPort extends FeaturePort {
     }
 
     /**
-     * Get the underlying {@link Port}.
-     * 
+     * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("c08f94f9-cff7-4281-a9f7-ac1f6ea60789")
+<<<<<<< HEAD
+    @objid ("5bff8f95-d33d-4d29-809b-2fc34d4a11cf")
+=======
+    @objid ("566f10a0-e861-4989-a9cc-5de7aba38ac6")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public Port getElement() {
         return (Port)super.getElement();
@@ -135,7 +173,11 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a3bbfcf6-2eb1-44db-99d1-57bb729860bb")
+<<<<<<< HEAD
+    @objid ("a30197e6-4cb2-479f-9199-317624df592d")
+=======
+    @objid ("aa6eb631-aaa1-496e-a5a4-f9bc050966eb")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public String getHighPortNumber() {
         return this.elt.getTagValue(CommunicationPort.MdaTypes.HIGHPORTNUMBER_TAGTYPE_ELT);
     }
@@ -145,12 +187,20 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9d788e23-5a17-4a86-920d-47e37456309c")
+<<<<<<< HEAD
+    @objid ("52adb268-1649-46c1-97b4-ed47b057dce4")
+=======
+    @objid ("6b2212b2-e244-4f69-b356-d78f9e49a2ad")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public String getLowPortNumber() {
         return this.elt.getTagValue(CommunicationPort.MdaTypes.LOWPORTNUMBER_TAGTYPE_ELT);
     }
 
-    @objid ("57d76041-7e0d-431a-b06d-3176362f6917")
+<<<<<<< HEAD
+    @objid ("9deb5533-72f7-4047-9895-8e27043e75c5")
+=======
+    @objid ("c16f9a8e-18c1-4e29-9f36-b4f3c83fcb86")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -161,7 +211,11 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("836ee7f3-bb00-42c0-a2cd-6006ad728fc9")
+<<<<<<< HEAD
+    @objid ("15979204-6513-4c42-99f3-4459b3172c41")
+=======
+    @objid ("4681fc64-dd90-43e0-8bf7-b34c2f1eb6ec")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public boolean isIsMandatory() {
         return this.elt.isTagged(CommunicationPort.MdaTypes.ISMANDATORY_TAGTYPE_ELT);
     }
@@ -171,7 +225,11 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("be143f89-d1a2-4196-8d4b-ddbe63fdecf0")
+<<<<<<< HEAD
+    @objid ("4688c746-4210-43a5-bff1-a0b8f91b3af8")
+=======
+    @objid ("f965a51d-59b8-4fb6-9eee-f4a860af728e")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setHighPortNumber(final String value) {
         this.elt.putTagValue(CommunicationPort.MdaTypes.HIGHPORTNUMBER_TAGTYPE_ELT, value);
     }
@@ -181,7 +239,11 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3155549f-2072-40ca-9ee8-c566b6024ab3")
+<<<<<<< HEAD
+    @objid ("49a6ea52-d301-47ac-bfcf-8c1306743cea")
+=======
+    @objid ("5d69247f-66ba-4140-ad14-6102de398399")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setIsMandatory(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CommunicationPort.MdaTypes.ISMANDATORY_TAGTYPE_ELT, this.elt);
@@ -194,7 +256,11 @@ public class CommunicationPort extends FeaturePort {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ff35c222-d0b7-43ba-94b4-b6a2ab753bda")
+<<<<<<< HEAD
+    @objid ("06f010b6-8a94-43e4-a6d5-2657a55b50cf")
+=======
+    @objid ("3869b633-dc1c-414c-8071-c2f9711359d6")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setLowPortNumber(final String value) {
         this.elt.putTagValue(CommunicationPort.MdaTypes.LOWPORTNUMBER_TAGTYPE_ELT, value);
     }
@@ -207,32 +273,58 @@ public class CommunicationPort extends FeaturePort {
         return result;
     }
 
-    @objid ("06bc8620-fb1e-4a27-874e-892261fad0d7")
+<<<<<<< HEAD
+    @objid ("5179856b-d485-498a-8436-2b353d3dd127")
+=======
+    @objid ("5a61e573-7a93-45e5-ab44-1bbbd79b3811")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected CommunicationPort(final Port elt) {
         super(elt);
     }
 
     @objid ("4372cf5a-f8d4-4bb8-ad18-085c5dd70583")
     public static final class MdaTypes {
-        @objid ("2cdc5493-c913-4365-b1d8-2c5de622fdb7")
+<<<<<<< HEAD
+        @objid ("e266d420-bd1e-4656-8bf0-1fe2f4395584")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("140067b0-eb31-4c30-9267-16a931a73888")
+        @objid ("933c602e-128f-49e4-9f22-77eb82304850")
         public static TagType LOWPORTNUMBER_TAGTYPE_ELT;
 
-        @objid ("5eeafafb-8485-4868-9f6e-819ccfdf3fc2")
+        @objid ("6aaf383d-3717-4e24-9689-0760c8d45ed8")
         public static TagType HIGHPORTNUMBER_TAGTYPE_ELT;
 
-        @objid ("a523091c-3b2a-4916-ae53-64fafb9ab44d")
+        @objid ("d5ae51f8-27b4-438a-a0fd-65b6f9fc8e5a")
         public static TagType ISMANDATORY_TAGTYPE_ELT;
 
-        @objid ("6eaab439-e6ea-4391-8043-018ef328aef6")
+        @objid ("f031cb49-d08c-4a12-aa03-219cfe7f0761")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e8063532-44bf-4868-b63a-9c92beac15bb")
+        @objid ("80e5de32-2365-4c2a-91f5-04912f64ea0e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b728618e-6ff9-41db-9551-3ac42890d146")
+        @objid ("f71ba1b5-33ca-4507-8688-bbe81763eef6")
+=======
+        @objid ("4fab8665-f929-4131-9943-7a0a2481ce57")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("ce1a357e-f8ef-452e-ae58-d0426255095c")
+        public static TagType LOWPORTNUMBER_TAGTYPE_ELT;
+
+        @objid ("99c54257-2fff-4582-9006-e63240c1e441")
+        public static TagType HIGHPORTNUMBER_TAGTYPE_ELT;
+
+        @objid ("d1d834d0-fe9e-4324-b904-a8bbbcedc293")
+        public static TagType ISMANDATORY_TAGTYPE_ELT;
+
+        @objid ("7a9a0ef9-1a57-4a32-a1bb-46f1c0966e5b")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("7e0115ee-f89b-490d-b645-fe2dc5e5b113")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("599c954f-9335-4789-86cd-0796585f32b2")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "c3c6e0a4-b112-4a00-9c2f-964e3093c423");
             LOWPORTNUMBER_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "6a5677a8-e95a-48ca-9d2c-17c3eb64fb84");
@@ -243,11 +335,11 @@ public class CommunicationPort extends FeaturePort {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

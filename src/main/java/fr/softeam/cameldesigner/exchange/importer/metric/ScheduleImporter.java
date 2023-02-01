@@ -47,7 +47,7 @@ public class ScheduleImporter<T extends Schedule, V extends fr.softeam.cameldesi
         super.setProperties(elt);
         setStart(elt);
         setEnd(elt);
-        setTimeUnit(elt);
+        //setTimeUnit(elt);
         setRepetitions(elt);
         setInterval(elt);
     }

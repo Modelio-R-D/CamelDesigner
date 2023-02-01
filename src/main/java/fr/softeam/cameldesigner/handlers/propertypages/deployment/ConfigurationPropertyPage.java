@@ -2,8 +2,10 @@ package fr.softeam.cameldesigner.handlers.propertypages.deployment;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("51b3ddf4-b88f-4f02-b681-9acaec513993")
 public abstract class ConfigurationPropertyPage<T extends Configuration> extends FeaturePropertyPage<T> {
@@ -24,6 +26,14 @@ public abstract class ConfigurationPropertyPage<T extends Configuration> extends
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
+        
+        if(this._currentRow == 1){
+            Class elt = (Class) getModelElt(RequirementSet.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if (RequirementSet.canInstantiate(elt)) {
+                this._element.setRequirements(RequirementSet.safeInstantiate(elt));
+            }
+        }
+        this._currentRow -= 1;
     }
 
     /**
@@ -36,6 +46,9 @@ public abstract class ConfigurationPropertyPage<T extends Configuration> extends
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
+        
+        //Requirements
+        table.addProperty("Requirements", getCamelName(this._element.getRequirements()), getCamelNames(RequirementSet.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
 }

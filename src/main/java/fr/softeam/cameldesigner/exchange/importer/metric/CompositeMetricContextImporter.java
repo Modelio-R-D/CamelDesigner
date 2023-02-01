@@ -3,7 +3,6 @@ package fr.softeam.cameldesigner.exchange.importer.metric;
 import camel.metric.CompositeMetricContext;
 import camel.metric.GroupingType;
 import camel.metric.MetricContext;
-import camel.unit.Unit;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -12,10 +11,6 @@ import org.eclipse.emf.common.util.EList;
 
 @objid ("63f9c47d-37a4-4af5-a104-5632429cfab3")
 public class CompositeMetricContextImporter<T extends CompositeMetricContext, V extends fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext> extends MetricContextImporter<T,V> {
-    @objid ("374c7b09-ac96-4428-879e-4a7860406bdd")
-    public CompositeMetricContextImporter() {
-    }
-
     @objid ("a552be19-1739-480c-a55b-0ca0e6e608ce")
     @Override
     public Object accept(ICamelImporterVisitor v) {
@@ -49,7 +44,6 @@ public class CompositeMetricContextImporter<T extends CompositeMetricContext, V 
 
     @objid ("b7918c1c-fcdd-4ba1-b720-93b766b9a502")
     private void setGroupingType(V elt) {
-        // TODO Auto-generated method stub
         GroupingType value = this._element.getGroupingType();
         if (value != null) {
             elt.setGroupingType(value.getName());
@@ -58,11 +52,16 @@ public class CompositeMetricContextImporter<T extends CompositeMetricContext, V 
 
     @objid ("c7e3b604-301f-4ff0-b10d-4bae063aae6f")
     private void setComposingMetricContexts(V elt) {
-        // TODO Auto-generated method stub
         EList<MetricContext> value = this._element.getComposingMetricContexts();
         if (value != null) {
             for (MetricContext v: value)
-                elt.addComposingMetricContexts((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) value);
+                if (v != null) {
+                    CamelElement valueElt = this._process.getElement(v);
+                    if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) {
+                        elt.addComposingMetricContexts((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) valueElt);
+                
+                    }
+                  }
         }
     }
 

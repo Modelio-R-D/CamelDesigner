@@ -18,7 +18,6 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -29,7 +28,7 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            ModelElement elt = (ModelElement) getModelElt(this._metricConstraint, value);
+            ModelElement elt = getModelElt(this._metricConstraint, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricConstraint.STEREOTYPE_NAME)) {
                 this._element.setMetricConstraint( (MetricConstraint) elt);
             }
@@ -44,7 +43,6 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
 
     /**
      * This method handles the construction of the property table of a selected element
-     * @param MObject : the selected element
      * 
      * @param table : the property table to fulfill
      */
@@ -52,10 +50,12 @@ public class NonFunctionalEventPropertyPage<T extends NonFunctionalEvent> extend
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-              //Subject
+        
+        //Subject
         this._metricConstraint = CamelDesignerAbstractProxy.getMetricContexts();
         table.addProperty("Metric Constraint", getCamelName(this._element.getMetricConstraint()), getCamelNames(this._metricConstraint));
         
+        //Is violation
         table.addProperty("Is Violation",this._element.isIsViolation());
     }
 

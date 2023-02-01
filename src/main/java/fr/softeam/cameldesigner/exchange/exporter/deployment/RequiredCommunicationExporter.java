@@ -22,9 +22,11 @@ public class RequiredCommunicationExporter<T extends CommunicationPort> extends 
     @objid ("f713f73f-ac5d-4229-adb4-4c7cd38f91f2")
     @Override
     public void setProperties(CDOObject elt) {
+        super.setProperties(elt);
         if (elt instanceof camel.deployment.RequiredCommunication) {
             camel.deployment.RequiredCommunication rc = (camel.deployment.RequiredCommunication) elt;
             setIsMandatory(rc);
+            
         }
     }
 

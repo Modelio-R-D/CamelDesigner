@@ -1,8 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.scalability;
 
+import camel.deployment.SoftwareComponent;
 import camel.scalability.HorizontalScalingAction;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Organisation;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
@@ -32,6 +34,22 @@ public class HorizontalScalingActionImporter<T extends HorizontalScalingAction, 
     @objid ("628719a3-b17e-4a31-b5d1-f093906aaff1")
     @Override
     public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
+    }
+
+    @objid ("025cd155-72ab-4db1-aef3-93e6091787f8")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setCount(elt);
+    }
+
+    @objid ("87369273-7a6c-44b7-bb21-c37a4a565933")
+    private void setCount(V elt) {
+        Integer value = this._element.getCount();
+        if (value != null) {
+            elt.setCount(String.valueOf(value));
+            }
     }
 
 }

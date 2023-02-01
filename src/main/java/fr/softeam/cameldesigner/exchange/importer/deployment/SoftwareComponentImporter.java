@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.SoftwareComponent;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("1f54af6e-e4b6-40f7-9e3d-f18ac70811eb")
 public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent> extends ComponentImporter<T,V> {
@@ -70,7 +70,7 @@ public class SoftwareComponentImporter<T extends SoftwareComponent, V extends fr
             CamelElement valueElt = this._process.getElement(value);
             if (valueElt instanceof fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) {
                 elt.setRequirementSet((fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet) valueElt);
-
+        
             }
         }
     }

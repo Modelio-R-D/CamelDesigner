@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.enumeration;
 
@@ -34,7 +38,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f9e34d12-f1b6-4c81-9391-96850b3d19c2")
 public class FeatureEnumeration extends FeatureClassifier {
-    @objid ("2f0f5d05-ea33-471d-92d2-85b7ea58801f")
+<<<<<<< HEAD
+    @objid ("0a315425-03df-4e3a-ae28-cdaf14356e08")
+=======
+    @objid ("34bd4dd4-35d9-4380-8515-ac8be2ce1345")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "Feature_Enumeration";
 
     /**
@@ -45,7 +53,11 @@ public class FeatureEnumeration extends FeatureClassifier {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("641f2e20-2c12-4d3f-99ef-f6f7fd1e45f4")
+<<<<<<< HEAD
+    @objid ("208b01df-f9dd-4534-a304-b60728a7f96b")
+=======
+    @objid ("1872bd2e-d01b-4183-ab22-5fce7d2248a1")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Enumeration) && ((Enumeration) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureEnumeration.STEREOTYPE_NAME));
     }
@@ -55,7 +67,11 @@ public class FeatureEnumeration extends FeatureClassifier {
      * 
      * @return a {@link FeatureEnumeration} proxy on the created {@link Enumeration}.
      */
-    @objid ("bc9224f3-09da-4455-9ba9-3059c7e35fe4")
+<<<<<<< HEAD
+    @objid ("b26dee22-2b09-4ad5-9678-d744768e7fbd")
+=======
+    @objid ("f9b09456-8b51-48ab-b94b-ce10f95ad792")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static FeatureEnumeration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Enumeration");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, FeatureEnumeration.STEREOTYPE_NAME);
@@ -63,36 +79,46 @@ public class FeatureEnumeration extends FeatureClassifier {
     }
 
     /**
-     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Enumeration
      * @return a {@link FeatureEnumeration} proxy or <i>null</i>.
      */
-    @objid ("140a282b-cdac-472a-89b8-8dca434cf6e6")
+<<<<<<< HEAD
+    @objid ("736a5862-d19e-40a0-b111-2e6815d2f081")
+=======
+    @objid ("36513fdc-789c-465b-b2a0-b294b490d8d5")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static FeatureEnumeration instantiate(final Enumeration obj) {
         return FeatureEnumeration.canInstantiate(obj) ? new FeatureEnumeration(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link FeatureEnumeration} proxy from a {@link Enumeration} stereotyped << Feature_Enumeration >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Enumeration}
      * @return a {@link FeatureEnumeration} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("dda04420-9c1f-44d0-974d-83f94b0b6cc5")
+<<<<<<< HEAD
+    @objid ("a5ed4c48-a8c2-4761-be85-686eefc7af61")
+=======
+    @objid ("31b61086-5dd3-4860-82fb-934287f8a423")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static FeatureEnumeration safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (FeatureEnumeration.canInstantiate(obj))
-            return new FeatureEnumeration(obj);
+        	return new FeatureEnumeration(obj);
         else
-            throw new IllegalArgumentException("FeatureEnumeration: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("FeatureEnumeration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c2be03a6-9d3c-4072-ac21-46055bb29133")
+<<<<<<< HEAD
+    @objid ("a26db038-08d3-436a-87e2-bd9532a46e7d")
+=======
+    @objid ("b81542ca-ff75-45e4-9ba5-12f5a2c16da0")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -109,39 +135,63 @@ public class FeatureEnumeration extends FeatureClassifier {
     }
 
     /**
-     * Get the underlying {@link Enumeration}.
-     * 
+     * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
-    @objid ("a8ddb8e2-88ab-4d90-b001-5f1642ded785")
+<<<<<<< HEAD
+    @objid ("d59591ad-375e-4b33-8fd6-ac1b1231a5ce")
+=======
+    @objid ("e6296fc2-0c06-43fa-b5ed-8fbddd1eda15")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public Enumeration getElement() {
         return (Enumeration)super.getElement();
     }
 
-    @objid ("6b56c693-4dde-4bcf-8ca2-382af31eedf5")
+<<<<<<< HEAD
+    @objid ("67a16131-c832-49ab-85b3-19305a189479")
+=======
+    @objid ("3e91e32c-245f-4c49-92df-5f55027c7613")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("d6423a1c-bbeb-476e-a036-5cf844f3cfd2")
+<<<<<<< HEAD
+    @objid ("d446b99f-b0fc-4099-bc4c-a2b8b7ce3bdd")
+=======
+    @objid ("ad73e2f7-740b-4fec-8fe8-d854622f2d2e")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected FeatureEnumeration(final Enumeration elt) {
         super(elt);
     }
 
     @objid ("a269a5b3-0221-4ddb-b9f7-b45550b3f049")
     public static final class MdaTypes {
-        @objid ("52bff0a3-430f-4032-8026-97b7f918c1d8")
+<<<<<<< HEAD
+        @objid ("2dfe68ab-508e-41c4-841d-a0fab994e506")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1eb19022-3a93-453e-ad52-3df6eee2a086")
+        @objid ("5ba8637c-42ce-4721-8233-259b9390a3f7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1b1a59cd-7ff3-4da4-80ce-a2d2146ff5d6")
+        @objid ("916343f9-2dae-4e10-aa15-2208dfcf25ad")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5780e2c4-d907-4bfb-9030-37f5cf4da25e")
+        @objid ("26c9d769-c463-4464-b8b7-f37f03a69e2d")
+=======
+        @objid ("6f19c6c8-e624-407d-a2fd-72c73b387a1e")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("2778d5e3-f538-4dd3-8aa7-5943905fea98")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("bff4e535-850c-45d6-b7f0-2288ace528e1")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("b25b6fb6-76bd-430f-b061-f73e82781711")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "56eb7780-c162-400f-8e4b-0a5178cef153");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -149,11 +199,11 @@ public class FeatureEnumeration extends FeatureClassifier {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -74,7 +74,7 @@ public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> 
                 if (compositionOwner instanceof ModelElement) {
                     ModelElement modelioOwner = (ModelElement) compositionOwner;
                     Object instantiated = CamelDesignerProxyFactory.instantiate(modelioOwner);
-                    if (compositionOwner instanceof CamelElement) {
+                    if (instantiated  instanceof CamelElement) {
                         return process(element, (CamelElement) instantiated);
                     }
                 }

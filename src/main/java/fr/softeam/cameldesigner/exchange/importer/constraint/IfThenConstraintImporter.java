@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.importer.constraint;
 
+import camel.constraint.Constraint;
 import camel.constraint.IfThenConstraint;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
@@ -32,7 +33,11 @@ public class IfThenConstraintImporter<T extends IfThenConstraint, V extends fr.s
     @objid ("9d9e8e57-267c-46ff-a1e8-dd37311c1d57")
     @Override
     public void attach(V elt, CamelElement context) {
-        // TODO Auto-generated method stub
+        Constraint constraint = this._element.getIf();
+        
+        CamelElement camelElt = this._process.getElement(constraint);
+        if (camelElt instanceof fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint)
+            elt.setIf((fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint) camelElt);
     }
 
 }

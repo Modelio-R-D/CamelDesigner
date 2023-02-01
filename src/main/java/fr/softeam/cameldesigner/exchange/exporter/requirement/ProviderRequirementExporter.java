@@ -38,6 +38,7 @@ public class ProviderRequirementExporter<T extends ProviderRequirement> extends 
 
     @objid ("da876011-531c-42ab-a98f-66c90db6bed7")
     private void setProviderNames(camel.requirement.ProviderRequirement pr) {
+        if (this._element.getProviderNames()!=null)
         for (String name : this._element.getProviderNames()) {
             pr.getProviderNames().add(name);
         }

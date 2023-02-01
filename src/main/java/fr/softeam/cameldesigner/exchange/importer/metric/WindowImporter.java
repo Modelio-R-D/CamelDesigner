@@ -1,6 +1,7 @@
 package fr.softeam.cameldesigner.exchange.importer.metric;
 
 import camel.metric.Window;
+import camel.metric.WindowSizeType;
 import camel.metric.WindowType;
 import camel.unit.Unit;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
@@ -48,20 +49,23 @@ public class WindowImporter<T extends Window, V extends fr.softeam.cameldesigner
         setWindowType(elt);
         setMeasurementSize(elt);
         setTimeSize(elt);
+        setSizeType(elt);
     }
 
     @objid ("24bc2033-51df-40ee-99a9-e9c00d5b4ddd")
     private void setTimeUnit(V elt) {
-        // TODO Auto-generated method stub
         Unit value = this._element.getTimeUnit();
         if (value != null) {
-            elt.setTimeUnit((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit) {
+                elt.setTimeUnit((fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Unit)valueElt);
+        
+            }
         }
     }
 
     @objid ("88fc7018-1b18-4e15-80ac-9109be975740")
     private void setWindowType(V elt) {
-        // TODO Auto-generated method stub
         WindowType value = this._element.getWindowType();
         if (value != null) {
             elt.setWindowType(value.getName());
@@ -70,7 +74,6 @@ public class WindowImporter<T extends Window, V extends fr.softeam.cameldesigner
 
     @objid ("9ce4ffb3-8ebf-4b0c-b5da-be845e3bba83")
     private void setMeasurementSize(V elt) {
-        // TODO Auto-generated method stub
         Long value = this._element.getMeasurementSize();
         if (value != null) {
             elt.setMeasurementSize(String.valueOf(value));
@@ -79,10 +82,17 @@ public class WindowImporter<T extends Window, V extends fr.softeam.cameldesigner
 
     @objid ("ee7211c8-a7fd-4a1f-8f3e-3e2a4866d41b")
     private void setTimeSize(V elt) {
-        // TODO Auto-generated method stub
         Long value = this._element.getTimeSize();
         if (value != null) {
             elt.setTimeSize(String.valueOf(value));
+        }
+    }
+
+    @objid ("6f6d9ccf-ae25-4171-897a-adc90c3d6bf0")
+    private void setSizeType(V elt) {
+        WindowSizeType value = this._element.getSizeType();
+        if (value != null) {
+            elt.setSizeType(value.getLiteral());
         }
     }
 

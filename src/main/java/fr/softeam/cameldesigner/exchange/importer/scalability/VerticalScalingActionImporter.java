@@ -32,6 +32,7 @@ public class VerticalScalingActionImporter<T extends VerticalScalingAction, V ex
     @objid ("6b5462d1-afac-4716-9e73-7d70994fa59f")
     @Override
     public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
     }
 
 }

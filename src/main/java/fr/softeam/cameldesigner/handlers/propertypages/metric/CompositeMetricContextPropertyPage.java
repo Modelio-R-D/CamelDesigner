@@ -1,11 +1,17 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
+<<<<<<< HEAD
+=======
+import java.util.Arrays;
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
+import camel.metric.GroupingType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
+import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.statik.Class;
 
@@ -39,9 +45,15 @@ public class CompositeMetricContextPropertyPage<T extends CompositeMetricContext
                 }
             }
         }
+        else if(this._currentRow == 3){
+             Class elt = (Class) getModelElt(Window.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+             if (Window.canInstantiate(elt)) {
+                 this._element.setWindow(Window.instantiate(elt));
+             }
+        }
         
         
-        this._currentRow -= 2;
+        this._currentRow -= 3;
     }
 
     /**
@@ -56,10 +68,16 @@ public class CompositeMetricContextPropertyPage<T extends CompositeMetricContext
         super.update(table);
         
         //Grouping Type
-        table.addProperty("Grouping Type", this._element.getGroupingType());
+        String[] values = Arrays.stream(GroupingType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Grouping Type", getNotNull(this._element.getGroupingType()), values);
         
         //Composing Metric Context
         table.addProperty("Composing Metric Context", getCamelValue(this._element.getComposingMetricContexts()), getAddRemove(CamelDesignerAbstractProxy.getMetricContexts(), this._element.getComposingMetricContexts()));
+        
+        //Window
+        table.addProperty("Window", getCamelName(this._element.getWindow()), getCamelNames(Window.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
     @objid ("1d5516ca-839e-4001-9f94-e732c05bc2a8")

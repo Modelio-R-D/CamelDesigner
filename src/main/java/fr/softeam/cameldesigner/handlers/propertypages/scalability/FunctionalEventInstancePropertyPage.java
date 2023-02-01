@@ -17,7 +17,6 @@ public class FunctionalEventInstancePropertyPage<T extends FunctionalEventInstan
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -28,7 +27,7 @@ public class FunctionalEventInstancePropertyPage<T extends FunctionalEventInstan
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            ModelElement elt = (ModelElement) getModelElt(this._componentInstance, value);
+            ModelElement elt = getModelElt(this._componentInstance, value);
             if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ComponentInstance.STEREOTYPE_NAME)) {
                 this._element.setComponentInstance( (ComponentInstance) elt);
             }
@@ -37,7 +36,6 @@ public class FunctionalEventInstancePropertyPage<T extends FunctionalEventInstan
 
     /**
      * This method handles the construction of the property table of a selected element
-     * @param MObject : the selected element
      * 
      * @param table : the property table to fulfill
      */

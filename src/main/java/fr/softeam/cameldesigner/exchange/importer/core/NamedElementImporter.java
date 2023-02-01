@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.common.util.EList;
 import camel.core.NamedElement;
 import camel.mms.MmsObject;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.common.util.EList;
 
 @objid ("1841f351-6417-46a7-aa5e-a351bae5ee5c")
 public abstract class NamedElementImporter<T extends NamedElement, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.ExpendableElement> extends CamelElementImporter<T,V> {
@@ -50,15 +50,13 @@ public abstract class NamedElementImporter<T extends NamedElement, V extends fr.
 
     @objid ("a7ccca6d-d449-4f8b-be7c-ef829a33121a")
     private void setAnnotations(V elt) {
-        // TODO Auto-generated method stub
         EList<MmsObject> value = this._element.getAnnotations();
         if (value != null) {
             for (MmsObject obj: value) {
-            CamelElement valueElt = this._process.getElement(obj);
-            if (valueElt instanceof fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject) {
-                elt.addAnnotations((fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject) valueElt);
-
-            }
+                CamelElement valueElt = this._process.getElement(obj);
+                if (valueElt instanceof fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject) {
+                    elt.addAnnotations((fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject) valueElt);
+                }
             }
         }
     }

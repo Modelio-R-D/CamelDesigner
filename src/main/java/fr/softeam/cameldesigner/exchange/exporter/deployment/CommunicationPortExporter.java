@@ -55,7 +55,7 @@ public abstract class CommunicationPortExporter<T extends CommunicationPort> ext
 
     @objid ("50d71aed-41da-4516-82aa-9473e2399c94")
     private void setPortNumber(camel.deployment.CommunicationPort cp) {
-        String content = this._element.getName();
+        String content = this._element.getLowPortNumber();
         if (content != null) {
             cp.setPortNumber(Integer.valueOf(content));
         }

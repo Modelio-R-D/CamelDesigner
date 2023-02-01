@@ -55,7 +55,11 @@ public class OptimisationRequirementImporter<T extends OptimisationRequirement, 
         // TODO Auto-generated method stub
         MetricContext value = this._element.getMetricContext();
         if (value != null) {
-            elt.setMetricContext((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) {
+                elt.setMetricContext((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) valueElt);
+        
+            }
         }
     }
 
@@ -64,7 +68,11 @@ public class OptimisationRequirementImporter<T extends OptimisationRequirement, 
         // TODO Auto-generated method stub
         camel.metric.MetricVariable value = this._element.getMetricVariable();
         if (value != null) {
-            elt.setMetricVariable((MetricVariable) value);
+            CamelElement valueElt = this._process.getElement(value);
+            if (valueElt instanceof MetricVariable) {
+                elt.setMetricVariable((MetricVariable) valueElt);
+        
+            }
         }
     }
 

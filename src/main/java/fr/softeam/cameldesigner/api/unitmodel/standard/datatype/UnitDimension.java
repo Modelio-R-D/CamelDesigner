@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.unitmodel.standard.datatype;
 
@@ -36,7 +40,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1707f141-4e9c-4725-b618-05f025f22d01")
 public class UnitDimension extends FeatureDataType {
-    @objid ("bd52deee-7870-4c60-a4ab-b40db37473aa")
+<<<<<<< HEAD
+    @objid ("3dd7cf3c-deb1-4402-9cd2-a97690dd73ce")
+=======
+    @objid ("c5eab56d-6dce-4f59-a783-0ce5ad1a62b2")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "UnitDimension";
 
     /**
@@ -47,7 +55,11 @@ public class UnitDimension extends FeatureDataType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("429e3f14-2c5c-4d31-8b5c-6dd08f5f4a16")
+<<<<<<< HEAD
+    @objid ("982faa9c-d7d5-44c1-b4a1-10f7dded984c")
+=======
+    @objid ("ddaa6e9f-ad70-479b-a67e-ec4a2b8f1bb7")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, UnitDimension.STEREOTYPE_NAME));
     }
@@ -57,7 +69,11 @@ public class UnitDimension extends FeatureDataType {
      * 
      * @return a {@link UnitDimension} proxy on the created {@link DataType}.
      */
-    @objid ("06353244-c260-4a57-9e78-81679a081390")
+<<<<<<< HEAD
+    @objid ("51b37ad3-0f68-4042-9443-139e41a7116d")
+=======
+    @objid ("bb21253c-400a-4617-a01d-005069a9ad02")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static UnitDimension create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, UnitDimension.STEREOTYPE_NAME);
@@ -65,36 +81,46 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a DataType
      * @return a {@link UnitDimension} proxy or <i>null</i>.
      */
-    @objid ("c25a7650-0519-4441-b1c4-202e6ab0cb9f")
+<<<<<<< HEAD
+    @objid ("001cf68e-ed23-4776-943d-cb4083eca55e")
+=======
+    @objid ("9a94a2c6-d44b-4ab7-ab02-05b4f2c671a3")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static UnitDimension instantiate(final DataType obj) {
         return UnitDimension.canInstantiate(obj) ? new UnitDimension(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link UnitDimension} proxy from a {@link DataType} stereotyped << UnitDimension >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link DataType}
      * @return a {@link UnitDimension} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4700da69-e1d0-4aef-aa34-59da6058feeb")
+<<<<<<< HEAD
+    @objid ("2f37cb24-ae9c-451c-91d7-4ee47c3ecd26")
+=======
+    @objid ("fffaae27-69be-4678-9705-53a6d6d40ec8")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static UnitDimension safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (UnitDimension.canInstantiate(obj))
-            return new UnitDimension(obj);
+        	return new UnitDimension(obj);
         else
-            throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("UnitDimension: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8daa8319-7fc0-4a6f-bab3-8b33d0944927")
+<<<<<<< HEAD
+    @objid ("fdd107d6-e161-4024-bb16-ed24c95b23a9")
+=======
+    @objid ("862264b0-6ede-4e69-ad62-cd64291581a7")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +137,24 @@ public class UnitDimension extends FeatureDataType {
     }
 
     /**
-     * Get the underlying {@link DataType}.
-     * 
+     * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("163f6b6d-373d-44a3-ad62-489d7a0e3f9d")
+<<<<<<< HEAD
+    @objid ("9453e7d6-0820-4d3b-bc4c-6565326e6423")
+=======
+    @objid ("55ff4455-c955-4abd-8ca9-98e8a95db3fe")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("b8058740-f5d0-4e6c-8523-829c94ced016")
+<<<<<<< HEAD
+    @objid ("a3af32d0-4e05-4811-8d74-a913d72d1134")
+=======
+    @objid ("5d8a0eda-6255-41e0-9b93-ac8b7cd27769")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -135,23 +168,40 @@ public class UnitDimension extends FeatureDataType {
         return result;
     }
 
-    @objid ("9012d94d-ad81-4d4d-8be8-5c82b40ae1dc")
+<<<<<<< HEAD
+    @objid ("082941fa-77fb-4fbb-af61-09b6042f0a15")
+=======
+    @objid ("cde13aee-6f5a-4361-a510-d02b7713eb14")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected UnitDimension(final DataType elt) {
         super(elt);
     }
 
     @objid ("75da9eb1-b40f-49c3-9600-695ba46ea42f")
     public static final class MdaTypes {
-        @objid ("0199fcba-7395-4d72-b8df-0ad759e39a21")
+<<<<<<< HEAD
+        @objid ("ed2360f6-7d41-4117-a1e2-4cde607db710")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e5e4a856-0ef9-43c3-8d88-a8cdd0e2e4bc")
+        @objid ("08b1f436-f0b6-4ab2-b753-6082fda0d0a6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ad6b46ec-b000-48a4-82a5-0ddf7714fcb6")
+        @objid ("73201dea-e2f3-494b-a1ef-9c20906efa9f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f6ba41a0-f918-4a67-81a8-b4b8b3fcb53e")
+        @objid ("677cee28-bb62-4079-ae38-58f19df08e18")
+=======
+        @objid ("662220cc-6faf-453d-bcf9-885c2d1aa347")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("e1adfb4d-781b-44e1-8168-4467a1eb7da4")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("ef9c9d98-27cb-435d-abb3-c6ebe0858952")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("c1d8d4e8-f924-4400-a9c8-e42818bc23f6")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ce437f2d-07f2-4127-9702-da4eb627b157");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -159,11 +209,11 @@ public class UnitDimension extends FeatureDataType {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

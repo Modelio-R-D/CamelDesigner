@@ -1,6 +1,5 @@
 package fr.softeam.cameldesigner.handlers.propertypages.requirement;
 
-import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.requirementmodel.standard.enumeration.ImageRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;

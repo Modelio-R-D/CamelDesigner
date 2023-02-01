@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +40,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("73ef4e61-0be5-40e6-8c65-2c42095a3cd4")
 public abstract class ConstraintModelDiagram extends AbstractCamelDiagram {
-    @objid ("96db90cd-c99d-44a4-ba4e-368a32485797")
+<<<<<<< HEAD
+    @objid ("25e764ee-a89e-4de6-b704-9c31c509ef93")
+=======
+    @objid ("2d2f81e2-686f-492f-bec6-9e41fa473377")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "ConstraintModelDiagram";
 
     /**
@@ -47,12 +55,20 @@ public abstract class ConstraintModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4e42b788-3eb3-4b85-8e4f-494247965c18")
+<<<<<<< HEAD
+    @objid ("5e1b34eb-67c4-4e34-9e50-4719a2d6ebae")
+=======
+    @objid ("f3ef4c10-5ff9-4e70-958b-879d10ba3d07")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ConstraintModelDiagram.STEREOTYPE_NAME));
     }
 
-    @objid ("c6fe5bf8-51b6-4fb0-92b4-977c8e59a521")
+<<<<<<< HEAD
+    @objid ("56720b23-1701-406c-9464-a654e5bd41cd")
+=======
+    @objid ("9b35cb28-938f-4361-b532-c72f33b5bfc8")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -69,17 +85,24 @@ public abstract class ConstraintModelDiagram extends AbstractCamelDiagram {
     }
 
     /**
-     * Get the underlying {@link ClassDiagram}.
-     * 
+     * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("5d5db81e-e98a-4864-89f1-77e231f90507")
+<<<<<<< HEAD
+    @objid ("0a67a5ea-94cc-4d87-bcdb-f3e955b2db5d")
+=======
+    @objid ("547ef2d6-a944-4def-ad78-8816b166f929")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("eec0b817-055c-48cc-962a-bc8724be4604")
+<<<<<<< HEAD
+    @objid ("01e8ed63-53ff-4dde-884d-7cdfb3a0b0dd")
+=======
+    @objid ("45af5431-2c7f-4b9f-80f9-aefb9d08340f")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +115,40 @@ public abstract class ConstraintModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("ac3e9be8-4eec-407e-acd3-00d408b55157")
+<<<<<<< HEAD
+    @objid ("863d0221-59bf-4547-a388-f09d96760369")
+=======
+    @objid ("c725df6f-3419-448f-8368-0c7ef65de509")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected ConstraintModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("f2dc5f5a-e2e0-4d73-94bc-bce60436b972")
     public static final class MdaTypes {
-        @objid ("ac28a61a-5005-42a8-9ceb-979deddb6a00")
+<<<<<<< HEAD
+        @objid ("48ff83cc-87e0-4f2e-8850-be7309a7e0c2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eaa27420-beea-4ba9-80b8-9f0cac93e65c")
+        @objid ("3c574804-8449-438e-aa4a-45a32a0beb4f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c194ef0e-eb4d-4828-93e6-a15d0d6951d5")
+        @objid ("dfa6bfd4-e451-42ef-b784-49626cf72e05")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("bcd35966-69bd-413f-95fe-913c304880ac")
+        @objid ("62f64f89-4cb0-4e1e-9318-759b1b8903ec")
+=======
+        @objid ("97cd639f-ee4a-4028-92b8-c1b8f80be83c")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("c32bd266-fcab-40b5-b8a2-f6d00cf12ef6")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("1bbb671c-a8c1-4f8c-9085-1d5e3fbab43a")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("1a9e3b0e-9a7b-4151-9e78-c200a7545abe")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "62499a4d-4037-4aef-bb40-8b5495465a22");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -116,11 +156,11 @@ public abstract class ConstraintModelDiagram extends AbstractCamelDiagram {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

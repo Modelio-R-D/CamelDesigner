@@ -48,7 +48,6 @@ public class SensorImporter<T extends Sensor, V extends fr.softeam.cameldesigner
 
     @objid ("9f1aec94-ba24-4ddb-860a-dcac646737f0")
     private void setIsPush(V elt) {
-        // TODO Auto-generated method stub
         Boolean value = this._element.isIsPush();
         if (value != null) {
             elt.setIsPush(value);
@@ -57,7 +56,6 @@ public class SensorImporter<T extends Sensor, V extends fr.softeam.cameldesigner
 
     @objid ("2082bd56-463e-4458-a7aa-041f4cd035ff")
     private void setConfiguration(V elt) {
-        // TODO Auto-generated method stub
         String value = this._element.getConfiguration();
         if (value != null) {
             elt.setConfiguration(value);

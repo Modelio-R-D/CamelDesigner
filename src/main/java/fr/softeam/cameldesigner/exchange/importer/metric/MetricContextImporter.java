@@ -48,7 +48,6 @@ public class MetricContextImporter<T extends MetricContext, V extends fr.softeam
     public void setProperties(V elt) {
         super.setProperties(elt);
         setMetric(elt);
-        setWindow(elt);
         setSchedule(elt);
         setObjectContext(elt);
     }
@@ -58,16 +57,9 @@ public class MetricContextImporter<T extends MetricContext, V extends fr.softeam
         // TODO Auto-generated method stub
         Metric value = this._element.getMetric();
         if (value != null) {
-            elt.setMetric((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric) value);
-        }
-    }
-
-    @objid ("29740fc3-ebd4-4bfe-870d-cf7108512de8")
-    private void setWindow(V elt) {
-        // TODO Auto-generated method stub
-        Window value = this._element.getWindow();
-        if (value != null) {
-            elt.setWindow((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric))
+                elt.setMetric((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric)camValue);
         }
     }
 
@@ -76,7 +68,9 @@ public class MetricContextImporter<T extends MetricContext, V extends fr.softeam
         // TODO Auto-generated method stub
         camel.metric.Schedule value = this._element.getSchedule();
         if (value != null) {
-            elt.setSchedule((Schedule) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof Schedule))
+                elt.setSchedule( (Schedule) camValue);
         }
     }
 
@@ -85,7 +79,9 @@ public class MetricContextImporter<T extends MetricContext, V extends fr.softeam
         // TODO Auto-generated method stub
         ObjectContext value = this._element.getObjectContext();
         if (value != null) {
-            elt.setObjectContext((fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext) value);
+            CamelElement camValue = this._process.getElement(value);
+            if ((camValue != null) && (camValue instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext))
+                elt.setObjectContext((fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext) camValue);
         }
     }
 

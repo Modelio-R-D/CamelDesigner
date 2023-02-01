@@ -51,7 +51,20 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
             }
         }
         
-        this._currentRow -= 3;
+        else if(this._currentRow == 4){
+            this._element.setMinValue(value);
+        
+        }
+        else if(this._currentRow == 5){
+            this._element.setMaxValue(value);
+        }
+        else if(this._currentRow == 6){
+            this._element.setMinInclusive(Boolean.valueOf(value));   
+        }
+        else if(this._currentRow == 7){
+            this._element.setMaxInclusive(Boolean.valueOf(value));  
+        }
+        this._currentRow -= 7;
     }
 
     /**
@@ -86,6 +99,11 @@ public class AttributeAttributePropertyPage<T extends AttributeAttribute> extend
             value = getCamelName(unit.getElement());
         }
         table.addProperty("Unit", value, getCamelNames(CamelDesignerAbstractProxy.getUnits()));
+            
+        table.addProperty("Min Value", getNotNull(this._element.getMinValue()));
+        table.addProperty("Max Value", getNotNull(this._element.getMaxValue()));
+        table.addProperty("Min Inclusive", this._element.isMinInclusive());
+        table.addProperty("Max Inclusive", this._element.isMaxInclusive());
     }
 
     @objid ("7845573e-61c1-45d8-b8b6-1826903ef6d0")

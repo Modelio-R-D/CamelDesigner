@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.class_;
 
@@ -36,7 +40,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("14701eb6-66e6-421f-bc02-e050f9e15799")
 public class SecuritySLO extends ServiceLevelObjective {
-    @objid ("03b0374d-1b4a-4e14-9261-9c0f6a29e240")
+<<<<<<< HEAD
+    @objid ("c945b468-8f7d-4c38-bd60-10e10c2e7eae")
+=======
+    @objid ("03ea2587-b6af-411c-b041-333f4fcedea2")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "SecuritySLO";
 
     /**
@@ -47,7 +55,11 @@ public class SecuritySLO extends ServiceLevelObjective {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e6087fae-b253-47aa-a040-4b4bfade67cf")
+<<<<<<< HEAD
+    @objid ("a3ace848-5efd-4e73-ba08-e62a647f2c98")
+=======
+    @objid ("03a8eaca-1973-41e9-8187-97ccc410fe9b")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecuritySLO.STEREOTYPE_NAME));
     }
@@ -57,7 +69,11 @@ public class SecuritySLO extends ServiceLevelObjective {
      * 
      * @return a {@link SecuritySLO} proxy on the created {@link Class}.
      */
-    @objid ("d1ec2bf7-4edc-4f58-8770-d04369ac0f3d")
+<<<<<<< HEAD
+    @objid ("579c21bb-b49c-4c31-aea8-ad971db7411f")
+=======
+    @objid ("544e9104-e5b7-410b-9264-994bfa56deb8")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static SecuritySLO create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecuritySLO.STEREOTYPE_NAME);
@@ -65,36 +81,46 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Class
      * @return a {@link SecuritySLO} proxy or <i>null</i>.
      */
-    @objid ("cfe5574d-0770-4170-a2e6-ef692d3d41b1")
+<<<<<<< HEAD
+    @objid ("c5f09578-1571-400d-9f46-0c99b6e4b6f3")
+=======
+    @objid ("74f542c4-e994-4f60-804a-d45fe267dc76")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static SecuritySLO instantiate(final Class obj) {
         return SecuritySLO.canInstantiate(obj) ? new SecuritySLO(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link SecuritySLO} proxy from a {@link Class} stereotyped << SecuritySLO >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Class}
      * @return a {@link SecuritySLO} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("03be0cb6-c407-47d8-bf2e-aeb20a57be6e")
+<<<<<<< HEAD
+    @objid ("68746887-b486-4ba3-8460-26ca22ef8953")
+=======
+    @objid ("2fdf192b-fabf-460e-8279-5f675afedc83")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static SecuritySLO safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecuritySLO.canInstantiate(obj))
-            return new SecuritySLO(obj);
+        	return new SecuritySLO(obj);
         else
-            throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("SecuritySLO: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e2233a90-9a63-4d21-b518-94029d0d6dd2")
+<<<<<<< HEAD
+    @objid ("aa657672-bc77-416a-aed7-159dce204fbc")
+=======
+    @objid ("9f406000-594a-4974-ae0d-df27839b5293")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,17 +137,24 @@ public class SecuritySLO extends ServiceLevelObjective {
     }
 
     /**
-     * Get the underlying {@link Class}.
-     * 
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("bd00f19a-13e8-4eec-8149-485f36b7d6e3")
+<<<<<<< HEAD
+    @objid ("9cd345c0-0f77-4c4c-85a7-8453a9fab948")
+=======
+    @objid ("d2fdaa73-2d69-4ec7-8722-611bcbd9313b")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("5574c8f8-cbdb-47f1-b5e4-807d88a93e31")
+<<<<<<< HEAD
+    @objid ("4e4ad8dc-3846-4d43-b31d-ef4ca056c726")
+=======
+    @objid ("4709f081-0e8d-46e4-969c-afa0bf2f323c")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -135,23 +168,40 @@ public class SecuritySLO extends ServiceLevelObjective {
         return result;
     }
 
-    @objid ("e629c4ba-c826-4925-888f-69f8ae414c67")
+<<<<<<< HEAD
+    @objid ("ba259cd3-864b-4f8b-984a-055a9c4fdbae")
+=======
+    @objid ("d3afaa59-3f23-4cf5-bbba-6e27cf3b5d58")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected SecuritySLO(final Class elt) {
         super(elt);
     }
 
     @objid ("617e4bcc-2615-4bc6-b9f6-51075bd242b2")
     public static final class MdaTypes {
-        @objid ("840db501-9296-46a3-9fc9-730d375da413")
+<<<<<<< HEAD
+        @objid ("ed5d952b-3604-4f10-874f-6ee15f5c86b9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0765b8c2-6f0e-4cc4-8f53-f25eb740b02e")
+        @objid ("a8c2a77c-f6b9-4f2f-b255-7daa6185219e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fc02e6f8-7580-43ea-94bd-ef8f6200aaae")
+        @objid ("95ede8c3-3297-483a-8aef-511e7c95d8a5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("313be88e-1b1e-4f5c-b40d-b9eff0f6fa5c")
+        @objid ("9e68358b-f265-4a75-b8c5-dbff9739296f")
+=======
+        @objid ("5c8f12a1-f8ae-4502-b772-cda9694ced8c")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("424eedcb-1b80-443f-b8c0-9b71e5330b5b")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("f8bec446-facf-4b6a-a0ec-ae4643ff12fb")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("ac9fec85-b9f6-4748-aa72-0a1b87f8b4d1")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8fcb0a39-47f5-4d53-9540-bede515f2431");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -159,11 +209,11 @@ public class SecuritySLO extends ServiceLevelObjective {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

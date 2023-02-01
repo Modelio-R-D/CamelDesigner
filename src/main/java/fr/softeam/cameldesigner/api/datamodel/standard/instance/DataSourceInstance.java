@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.instance;
 
@@ -39,7 +43,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7596aa7f-0bb2-4518-8c82-6822a15475d0")
 public class DataSourceInstance extends FeatureInstance {
-    @objid ("57e290d7-efe9-41de-803a-43512f643e28")
+<<<<<<< HEAD
+    @objid ("7fd1ef42-37b1-441f-96fe-7d733c931368")
+=======
+    @objid ("14b66e78-b234-44dc-b073-a1548a56c31c")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "DataSourceInstance";
 
     /**
@@ -50,7 +58,11 @@ public class DataSourceInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("18216e0c-4d04-4f75-89a7-a3b976543fcc")
+<<<<<<< HEAD
+    @objid ("6d1e6095-6589-41fe-8562-768950ca0767")
+=======
+    @objid ("02147b15-095b-4527-b605-31f85163e024")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataSourceInstance.STEREOTYPE_NAME));
     }
@@ -60,7 +72,11 @@ public class DataSourceInstance extends FeatureInstance {
      * 
      * @return a {@link DataSourceInstance} proxy on the created {@link Instance}.
      */
-    @objid ("f13dcd89-797a-4581-a623-fc171e46ed08")
+<<<<<<< HEAD
+    @objid ("04f036c6-d240-4881-a348-8a0b0bc8295d")
+=======
+    @objid ("8c514a68-ed72-4452-845b-5c6b09924207")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static DataSourceInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Instance");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataSourceInstance.STEREOTYPE_NAME);
@@ -68,36 +84,46 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
-     * 
      * @param obj a Instance
      * @return a {@link DataSourceInstance} proxy or <i>null</i>.
      */
-    @objid ("c897bfbd-0bd9-488e-8f89-c3c2b699ccf7")
+<<<<<<< HEAD
+    @objid ("8226a6c6-023c-4d64-a63f-3a4d4b75b7a6")
+=======
+    @objid ("821770c1-f7f9-489d-a360-1e346b536afb")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static DataSourceInstance instantiate(final Instance obj) {
         return DataSourceInstance.canInstantiate(obj) ? new DataSourceInstance(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype.
+     * Tries to instantiate a {@link DataSourceInstance} proxy from a {@link Instance} stereotyped << DataSourceInstance >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * 
      * @param obj a {@link Instance}
      * @return a {@link DataSourceInstance} proxy.
-     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5b62716b-a56f-4bf0-9a7d-91550fa1be7b")
+<<<<<<< HEAD
+    @objid ("d44457d8-1590-405f-b4b6-0efff202c2d8")
+=======
+    @objid ("9ddfc7d8-5c42-49c8-bd70-fc7d5c434619")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static DataSourceInstance safeInstantiate(final Instance obj) throws IllegalArgumentException {
         if (DataSourceInstance.canInstantiate(obj))
-            return new DataSourceInstance(obj);
+        	return new DataSourceInstance(obj);
         else
-            throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("DataSourceInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("63183797-a223-4a52-b257-a8d3906fafbb")
+<<<<<<< HEAD
+    @objid ("3f8c8182-61be-41fd-a360-f396eab6bdf2")
+=======
+    @objid ("e92ed6bc-e90c-48cb-8407-b51b273ec258")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,11 +140,14 @@ public class DataSourceInstance extends FeatureInstance {
     }
 
     /**
-     * Get the underlying {@link Instance}.
-     * 
+     * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("4bf6263d-5e45-48aa-b33c-08cf61fdd2f2")
+<<<<<<< HEAD
+    @objid ("58dbe2d2-af15-449c-bbaf-54e35e7c123d")
+=======
+    @objid ("d7970096-b74f-44ca-9ccd-0c757009ddc9")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -128,8 +157,13 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("73f8ca13-23a0-4a70-a051-fbda7a95a80c")
+<<<<<<< HEAD
+    @objid ("27916dce-1366-42ee-aabd-170540c52257")
+=======
+    @objid ("305a634f-88b1-46cf-b9a8-0afdff4eea33")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public DataInstanceModel getParent() {
         return (DataInstanceModel)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getOwner(), DataInstanceModel.STEREOTYPE_NAME);
     }
@@ -138,8 +172,13 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("8186b9f8-c20c-48a0-8ce7-ba5d520a9c55")
+<<<<<<< HEAD
+    @objid ("6b41ee78-c2a2-40a6-9162-eacfea47ec7d")
+=======
+    @objid ("2ab3a7a0-a4e4-448d-b5f3-baf83237b9e8")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public SoftwareComponentInstance getSoftwareComponentInstance() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataSourceInstance.MdaTypes.MDAASSOCDEP)
@@ -155,13 +194,22 @@ public class DataSourceInstance extends FeatureInstance {
      * Get the value to the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("eea467c1-3be7-414e-b0ab-b00a37de7f2d")
+<<<<<<< HEAD
+    @objid ("4e970449-e9a1-4436-99bc-a26a21e1f68b")
+=======
+    @objid ("8eb1b73a-758a-42ca-9207-a246108b12b3")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public DataSource getType() {
         return (DataSource)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), DataSource.STEREOTYPE_NAME);
     }
 
-    @objid ("4e3efba7-8826-4808-a458-e931a376706e")
+<<<<<<< HEAD
+    @objid ("6dff8f00-6eb4-4e88-b2cc-436d274fd91f")
+=======
+    @objid ("57f943b8-dfcb-44aa-8e73-50e02f870314")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -171,8 +219,13 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'parent' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("30914e26-c9b4-4d7d-a2b8-80621fd53bbb")
+<<<<<<< HEAD
+    @objid ("a4c49bd4-05fa-49de-9bd2-217458388051")
+=======
+    @objid ("9a0df71c-4e26-44eb-8e78-3f90818f121c")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setParent(final DataInstanceModel obj) {
         ((Instance) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -181,8 +234,13 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'softwareComponentInstance' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("139a814b-6394-4918-95e0-abfba0539c5d")
+<<<<<<< HEAD
+    @objid ("f4b76744-5afb-448a-81e4-7c5b9c3eab77")
+=======
+    @objid ("56062cc9-3a55-4597-9215-eb6ec9973337")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setSoftwareComponentInstance(final SoftwareComponentInstance obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -206,8 +264,13 @@ public class DataSourceInstance extends FeatureInstance {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ec6c56fa-cde5-4fc4-bd42-ab9a730c39fa")
+<<<<<<< HEAD
+    @objid ("b8078197-27dd-4e03-82a1-97c7cc35ab82")
+=======
+    @objid ("ea296958-824e-432c-95f4-479f3bcdfdf1")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public void setType(final DataSource obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
     }
@@ -220,23 +283,40 @@ public class DataSourceInstance extends FeatureInstance {
         return result;
     }
 
-    @objid ("504e7e6e-8b42-4be1-804b-9f68821fee6d")
+<<<<<<< HEAD
+    @objid ("a7f6a9da-5634-4a81-97d5-8a5ba912d5c2")
+=======
+    @objid ("be8662dd-ef68-42ae-863b-d50afa063e3e")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected DataSourceInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("f274074b-7683-49b4-b45f-098faac6eaa7")
     public static final class MdaTypes {
-        @objid ("fbbdbdc7-67b1-4d15-8652-9682674f73c8")
+<<<<<<< HEAD
+        @objid ("55592f0d-90f5-4a4e-b375-07daff236cdd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("aa46b344-b5ca-46bd-bc5c-05cd67d69fb9")
+        @objid ("9d7726f5-e6ac-4bf5-a899-2b1d7722a03d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("aa8cf02c-61c2-4cc1-9c5f-31d6f4b7eb19")
+        @objid ("9c8f4c83-61c0-48db-978b-ce9eb66fba17")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ec0ddb5a-81a3-4bb8-ac23-127a367c9389")
+        @objid ("d579531a-992d-49ed-beea-9a8cd6d0c6e6")
+=======
+        @objid ("cae39efe-a23a-478c-95df-0c768c98abdd")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("4d47d5db-731b-4a79-b03e-3dc581791f4a")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("99a0a581-16e1-44de-a14e-431fbd616ddc")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("fb7e3c29-6902-4a5c-b803-884d121ee451")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b72705cc-1db6-46cb-8f6e-de0c711a1997");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -244,11 +324,11 @@ public class DataSourceInstance extends FeatureInstance {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

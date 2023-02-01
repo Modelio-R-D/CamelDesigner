@@ -35,10 +35,10 @@ public class ImageRequirementExporter<T extends ImageRequirement> extends HardRe
 
     @objid ("b57df064-e977-4cb8-9be0-4e45010d9b9e")
     private void setImages(camel.requirement.ImageRequirement elt) {
-        elt.getImages().clear();
-        for(String image : this._element.getImages()) {
-            elt.getImages().add(image);
-        }
+        //        elt.getImages().clear();
+                for(String image : this._element.getImages()) {
+                    elt.getImages().add(image);
+                }
     }
 
 }

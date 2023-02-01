@@ -1,15 +1,15 @@
 package fr.softeam.cameldesigner.exchange.importer.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
-import org.modelio.metamodel.uml.statik.Package;
 import camel.core.MeasurableAttribute;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.AttributeClass;
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.MeasurableAttributeClass;
 import fr.softeam.cameldesigner.api.metricmodel.standard.package_.MetricTypeModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
+import org.modelio.metamodel.uml.statik.Package;
 
 @objid ("140dee83-8c43-420a-9d7c-64075ff03fc9")
 public class MeasurableAttributeImporter<T extends MeasurableAttribute, V extends fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelAttribute> extends QualityAttributeImporter<T,V> {
@@ -46,7 +46,7 @@ public class MeasurableAttributeImporter<T extends MeasurableAttribute, V extend
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
         CamelElement camOwner = this._process.getElement(owner);
-
+        
         if (camOwner != null) {
             if (camOwner.getElement() instanceof Package) {
                     return MeasurableAttributeClass.create();
@@ -54,7 +54,6 @@ public class MeasurableAttributeImporter<T extends MeasurableAttribute, V extend
                 return MeasurableAttributeAttribute.create();
             }
         }
-
         return null;
     }
 

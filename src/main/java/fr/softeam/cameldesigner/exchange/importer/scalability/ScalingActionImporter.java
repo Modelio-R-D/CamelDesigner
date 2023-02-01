@@ -1,8 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.scalability;
 
+import camel.deployment.SoftwareComponent;
+import camel.metric.MetricInstance;
 import camel.scalability.ScalingAction;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
+import fr.softeam.cameldesigner.api.scalabilitymodel.standard.package_.ScalabilityModel;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import fr.softeam.cameldesigner.exchange.importer.core.ActionImporter;
 import org.eclipse.emf.cdo.CDOObject;
@@ -33,6 +36,23 @@ public abstract class ScalingActionImporter<T extends ScalingAction, V extends f
     @objid ("e5b4878f-b625-4f46-b324-2f3224d11c17")
     @Override
     public void attach(V elt, CamelElement context) {
+        if (context instanceof ScalabilityModel)
+            ((ScalabilityModel)context).addActions(elt);
+    }
+
+    @objid ("9b4fb9a1-1905-4cd8-9499-ed24a7bc1c3a")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setSoftwareComponent(elt);
+    }
+
+    @objid ("78976296-dbb4-42cc-a145-ccfa9d57894f")
+    private void setSoftwareComponent(V elt) {
+        SoftwareComponent value = this._element.getSoftwareComponent();
+        if (value != null) {
+            elt.setSoftwareComponent((fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent) value);
+            }
     }
 
 }

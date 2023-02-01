@@ -6,7 +6,6 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.ObjectContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.statik.Class;
@@ -34,28 +33,22 @@ public class MetricContextPropertyPage<T extends MetricContext> extends FeatureP
             }
         }
         
-        else if(this._currentRow == 2){
-            Class elt = (Class) getModelElt(Window.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if (Window.canInstantiate(elt)) {
-                this._element.setWindow(Window.instantiate(elt));
-            }
-        }
         
-        else if(this._currentRow == 3){
+        else if(this._currentRow == 2){
             Class elt = (Class) getModelElt(Schedule.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if (Schedule.canInstantiate(elt)) {
                 this._element.setSchedule(Schedule.instantiate(elt));
             }
         }
         
-        else if(this._currentRow == 4){
+        else if(this._currentRow == 3){
             Class elt = (Class) getModelElt(ObjectContext.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if (ObjectContext.canInstantiate(elt)) {
                 this._element.setObjectContext(ObjectContext.instantiate(elt));
             }
         }
         
-        this._currentRow -= 4;
+        this._currentRow -= 3;
     }
 
     /**
@@ -72,8 +65,6 @@ public class MetricContextPropertyPage<T extends MetricContext> extends FeatureP
         //Metric
         table.addProperty("Metric", getCamelName(this._element.getMetric()), getCamelNames(CamelDesignerAbstractProxy.getMetrics()));
         
-        //Window
-        table.addProperty("Window", getCamelName(this._element.getWindow()), getCamelNames(Window.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
         
         //Schedule
         table.addProperty("Schedule", getCamelName(this._element.getSchedule()), getCamelNames(Schedule.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));

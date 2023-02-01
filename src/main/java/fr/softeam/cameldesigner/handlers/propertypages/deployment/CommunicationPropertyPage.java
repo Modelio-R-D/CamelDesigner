@@ -4,9 +4,12 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.Configuration;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.connector.Communication;
+import fr.softeam.cameldesigner.api.requirementmodel.standard.class_.CommunicationRequirement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("997dc0f2-cc54-46d2-9a22-b6fc22929b80")
 public class CommunicationPropertyPage<T extends Communication> extends ComponentRelationPropertyPage<T> {
@@ -47,7 +50,13 @@ public class CommunicationPropertyPage<T extends Communication> extends Componen
             this._element.setRequiredPortConfiguration((Configuration) elt);
             }
         }
-        this._currentRow -= 2;
+        else if(this._currentRow == 3){
+             Class elt = (Class) getModelElt(CommunicationRequirement.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+             if (CommunicationRequirement.canInstantiate(elt)) {
+                 this._element.setRequirement(CommunicationRequirement.safeInstantiate(elt));
+             }
+        }
+        this._currentRow -= 3;
     }
 
     /**
@@ -69,6 +78,9 @@ public class CommunicationPropertyPage<T extends Communication> extends Componen
         //Required Port Configuration
         this._requiredPortConfiguration = Configuration.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Required Port Configuration", getCamelName(this._element.getRequiredPortConfiguration()), getCamelNames(this._requiredPortConfiguration));
+            
+        //Requirement
+        table.addProperty("Requirement", getCamelName(this._element.getRequirement()), getCamelNames(CommunicationRequirement.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
 }

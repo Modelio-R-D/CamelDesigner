@@ -3,6 +3,7 @@ package fr.softeam.cameldesigner.handlers.propertypages.metric;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector.CommunicationInstance;
 import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.ComponentInstance;
 import fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricObjectBinding;
@@ -17,6 +18,9 @@ public class MetricObjectBindingPropertyPage<T extends MetricObjectBinding> exte
 
     @objid ("92053952-fd7d-471a-bca1-934b4ed7f30a")
     private List<ModelElement> _componentInstance = null;
+
+    @objid ("44ff79ab-0670-456d-8f3d-5a58e615a5a4")
+    private List<ModelElement> _communicationInstance = null;
 
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
@@ -47,7 +51,15 @@ public class MetricObjectBindingPropertyPage<T extends MetricObjectBinding> exte
         
         
         }
-        this._currentRow -= 2;
+        else if(this._currentRow == 3) {
+            ModelElement elt = getModelElt(this._communicationInstance, value);
+            if (elt.isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationInstance.STEREOTYPE_NAME)) {
+                this._element.setCommunicationInstance((CommunicationInstance) elt);
+            }
+               
+               
+               }
+        this._currentRow -= 3;
     }
 
     /**
@@ -68,6 +80,10 @@ public class MetricObjectBindingPropertyPage<T extends MetricObjectBinding> exte
         //Component Instance
         this._componentInstance = ComponentInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
         table.addProperty("Component Instance", getCamelName(this._element.getComponentInstance()), getCamelNames(this._componentInstance));
+          
+              //Communication Instance
+        this._communicationInstance = CommunicationInstance.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+        table.addProperty("Communication Instance", getCamelName(this._element.getCommunicationInstance()), getCamelNames(this._communicationInstance));
     }
 
     @objid ("e809ff60-1829-4af8-b303-0df19ca65718")

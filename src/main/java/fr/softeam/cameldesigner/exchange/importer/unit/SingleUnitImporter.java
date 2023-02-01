@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.unit;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.unit.SingleUnit;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("6b8d2c4d-1934-43f3-b941-338280f6580b")
 public class SingleUnitImporter<T extends SingleUnit, V extends fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit> extends DimensionedUnitImporter<T,V> {

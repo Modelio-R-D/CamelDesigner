@@ -1,6 +1,8 @@
 package fr.softeam.cameldesigner.exchange.importer.scalability;
 
+import camel.metric.MetricInstance;
 import camel.scalability.NonFunctionalEventInstance;
+import camel.scalability.StatusType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -32,6 +34,22 @@ public class NonFunctionalEventInstanceImporter<T extends NonFunctionalEventInst
     @objid ("83a595ca-5750-4f25-af33-112ed16ea1c6")
     @Override
     public void attach(V elt, CamelElement context) {
+        super.attach(elt, context);
+    }
+
+    @objid ("e02887f6-351b-4636-bd7f-b92a4469d43b")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setMetricInstance(elt);
+    }
+
+    @objid ("ba8e6d46-1b86-406b-aab9-f956aae869bf")
+    private void setMetricInstance(V elt) {
+        MetricInstance value = this._element.getMetricInstance();
+        if (value != null) {
+            elt.setMetricInstance((fr.softeam.cameldesigner.api.metricmodel.standard.instance.MetricInstance) value);
+        }
     }
 
 }

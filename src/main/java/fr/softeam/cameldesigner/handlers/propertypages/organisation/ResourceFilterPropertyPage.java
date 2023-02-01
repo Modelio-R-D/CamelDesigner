@@ -1,5 +1,7 @@
 package fr.softeam.cameldesigner.handlers.propertypages.organisation;
 
+import java.util.Arrays;
+import camel.organisation.ResourcePattern;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ResourceFilter;
 import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
@@ -10,7 +12,6 @@ public class ResourceFilterPropertyPage<T extends ResourceFilter> extends Featur
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-     * @param MObject : the selected element
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -21,9 +22,7 @@ public class ResourceFilterPropertyPage<T extends ResourceFilter> extends Featur
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-            
            this._element.setResourcePattern(value);
-                 
         }
         
         this._currentRow -= 1;
@@ -40,7 +39,11 @@ public class ResourceFilterPropertyPage<T extends ResourceFilter> extends Featur
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Resource Pattern", getNotNull(this._element.getResourcePattern()));
+        //ResourcePattern
+        String[] values = Arrays.stream(ResourcePattern.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Resource Pattern", getNotNull(this._element.getResourcePattern()), values);
     }
 
     @objid ("903dc9d5-69c9-43d7-8ba0-24060c40f0f3")

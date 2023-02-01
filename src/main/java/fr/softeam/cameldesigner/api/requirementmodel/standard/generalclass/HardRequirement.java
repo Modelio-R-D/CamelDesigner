@@ -1,8 +1,12 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.12
+ * Module: CamelDesigner v1.0.13
 
- * This file was generated on 7/21/22 2:51 PM by Modelio Studio.
+<<<<<<< HEAD
+ * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+=======
+ * This file was generated on 10/19/22 4:24 PM by Modelio Studio.
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
@@ -35,7 +39,11 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("892ed9c7-a02c-433e-a591-388ee6839707")
 public abstract class HardRequirement extends Requirement {
-    @objid ("902767bf-6399-4f1e-b444-cd06c927429d")
+<<<<<<< HEAD
+    @objid ("0f2dfcf9-13fc-45b3-b96c-84c4daff15f5")
+=======
+    @objid ("183220fc-e066-4795-b9ea-352939ba3c0f")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static final String STEREOTYPE_NAME = "HardRequirement";
 
     /**
@@ -46,12 +54,20 @@ public abstract class HardRequirement extends Requirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("26575a7c-b22f-449d-8a08-048a72cf2bc9")
+<<<<<<< HEAD
+    @objid ("d7d9f2e8-ba5f-4e2e-a5f5-9a288d4a7f6e")
+=======
+    @objid ("825c4782-7f78-4134-9461-889200897b58")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof GeneralClass) && ((GeneralClass) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HardRequirement.STEREOTYPE_NAME));
     }
 
-    @objid ("a9dfef70-07b4-4ae1-9305-ca53560ec465")
+<<<<<<< HEAD
+    @objid ("1e133c4e-c767-415d-8da4-cbcc36306199")
+=======
+    @objid ("8ad5d0d3-10f9-4541-a991-33ddb7db9b0d")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -68,17 +84,24 @@ public abstract class HardRequirement extends Requirement {
     }
 
     /**
-     * Get the underlying {@link GeneralClass}.
-     * 
+     * Get the underlying {@link GeneralClass}. 
      * @return the GeneralClass represented by this proxy, never null.
      */
-    @objid ("ab663767-7487-4944-a04c-60cc4f0d784f")
+<<<<<<< HEAD
+    @objid ("97679b15-30fc-45be-b54b-3cb503ca27ad")
+=======
+    @objid ("1295e5d9-9d25-405a-88a6-05297641247e")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public GeneralClass getElement() {
         return (GeneralClass)super.getElement();
     }
 
-    @objid ("68baa411-28c8-4957-9041-aa7b42b647ae")
+<<<<<<< HEAD
+    @objid ("aae83408-cc37-4e09-8458-c1aace6c795c")
+=======
+    @objid ("d25c2198-0bd8-41b8-883e-b7f5be936594")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +115,40 @@ public abstract class HardRequirement extends Requirement {
         return result;
     }
 
-    @objid ("359d23ad-9010-47d4-94cb-bbdbf2449ea9")
+<<<<<<< HEAD
+    @objid ("7f6a4c98-9ebf-48a2-9057-2b92be5cd94f")
+=======
+    @objid ("c2e4a1fc-4838-4cb1-bd3d-20ce661e190d")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     protected HardRequirement(final GeneralClass elt) {
         super(elt);
     }
 
     @objid ("024b0a43-76f9-4df6-8a5c-e5e800794153")
     public static final class MdaTypes {
-        @objid ("e636679e-07e0-489b-ae80-07550ae30b7a")
+<<<<<<< HEAD
+        @objid ("2be43d5b-3e82-4892-8f7a-0fbb433c4a86")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3488e91e-7826-455c-9615-64825e17c870")
+        @objid ("50e15911-36d7-4be5-88ea-037a3f6cf620")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("38ba3c3d-0870-4a59-aa34-d0e2f9353019")
+        @objid ("c697f9a9-9aad-43c8-b235-2c3df7b93d89")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b6401bbf-f1ff-4011-8872-2cf5fd1de519")
+        @objid ("dffbb56d-39de-42dd-b786-76631a5ef646")
+=======
+        @objid ("66595d8f-b3ef-49ec-bf36-13c056347cef")
+        public static Stereotype STEREOTYPE_ELT;
+
+        @objid ("5f4a1fe7-a466-4e20-bfce-017571d7a8c5")
+        private static Stereotype MDAASSOCDEP;
+
+        @objid ("9c517215-5c5c-439c-8f0e-ff1c8c355d3a")
+        private static TagType MDAASSOCDEP_ROLE;
+
+        @objid ("f4609a2d-5fb9-4c38-951c-4d8fbee77640")
+>>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "2955347c-7823-427d-af9e-c725897bba1c");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
@@ -116,11 +156,11 @@ public abstract class HardRequirement extends Requirement {
         }
 
 
-static {
-        if(CamelDesignerModule.getInstance() != null) {
-            init(CamelDesignerModule.getInstance().getModuleContext());
-        }
-    }
+	static {
+		if(CamelDesignerModule.getInstance() != null) {
+			init(CamelDesignerModule.getInstance().getModuleContext());
+		}
+	}
     }
 
 }

@@ -1,10 +1,10 @@
 package fr.softeam.cameldesigner.exchange.importer.deployment;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.deployment.ScriptConfiguration;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("4e6223f5-7a07-4578-96d0-376f84f4037d")
 public class ScriptConfiguationImporter<T extends ScriptConfiguration, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration> extends ConfigurationImporter<T,V> {

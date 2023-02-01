@@ -7,6 +7,7 @@ import camel.deployment.RequiredCommunication;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.Data;
 import fr.softeam.cameldesigner.api.datamodel.standard.class_.DataSource;
+import fr.softeam.cameldesigner.api.deploymentmodel.standard.class_.RequirementSet;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort;
 import org.eclipse.emf.cdo.CDOObject;
@@ -98,9 +99,19 @@ public class SoftwareComponentExporter<T extends SoftwareComponent> extends Came
 
     @objid ("8719c000-0387-47fb-9d5c-e4f96b9977b1")
     private void setRequirementSet(camel.deployment.SoftwareComponent sc) {
+        RequirementSet value = this._element.getRequirementSet();
+        if (value != null){
+            CDOObject valueElt = this._process.getElement(value);
+            if (valueElt instanceof camel.deployment.RequirementSet) {
+                sc.setRequirementSet((camel.deployment.RequirementSet) valueElt);
+        }
+        }
+        
+        /*
         CDOObject rs =  this._process.getElement(this._element.getRequirementSet());
         if ((rs != null) &&  (rs instanceof camel.deployment.RequirementSet))
             sc.setRequirementSet((camel.deployment.RequirementSet) rs);
+        */
     }
 
 }

@@ -25,7 +25,6 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
         if (elt instanceof camel.metric.MetricContext) {
             camel.metric.MetricContext context = (camel.metric.MetricContext) elt;
             setMetric(context);
-            setWindow(context);
             setSchedule(context);
             setObjectContext(context);
         }
@@ -53,13 +52,6 @@ public abstract class MetricContextExporter<T extends MetricContext> extends Fea
         CDOObject schedule = this._process.getElement(this._element.getSchedule());
         if ((schedule != null) &&  (schedule instanceof camel.metric.Schedule))
             context.setSchedule((camel.metric.Schedule) schedule);
-    }
-
-    @objid ("019b30e4-8b81-4051-a6d3-0bca7611e48f")
-    private void setWindow(camel.metric.MetricContext context) {
-        CDOObject window = this._process.getElement(this._element.getWindow());
-        if ((window != null) &&  (window instanceof camel.metric.Window))
-            context.setWindow((camel.metric.Window) window);
     }
 
     @objid ("86a87fa4-8ed5-47a3-9058-ca21fa3ce8e6")
