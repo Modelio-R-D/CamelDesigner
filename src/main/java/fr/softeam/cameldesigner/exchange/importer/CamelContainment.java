@@ -262,13 +262,8 @@ public class CamelContainment {
             childs.addAll((List<CDOObject>) super.visitCommunication(communicationImporter));
             
             Communication cdoElt = communicationImporter.getElement();
-<<<<<<< HEAD
             //childs.add(cdoElt.getProvidedPortConfiguration());
             //childs.add(cdoElt.getRequiredPortConfiguration());
-=======
-            childs.add(cdoElt.getProvidedPortConfiguration());
-            childs.add(cdoElt.getRequiredPortConfiguration());
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
             return childs;
         }
 

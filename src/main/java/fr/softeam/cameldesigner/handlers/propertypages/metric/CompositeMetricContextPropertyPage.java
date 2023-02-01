@@ -1,9 +1,5 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
-<<<<<<< HEAD
-=======
-import java.util.Arrays;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import camel.metric.GroupingType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
@@ -68,10 +64,7 @@ public class CompositeMetricContextPropertyPage<T extends CompositeMetricContext
         super.update(table);
         
         //Grouping Type
-        String[] values = Arrays.stream(GroupingType.values()) // create stream of enum values
-                .map(e -> e.toString())  // convert enum stream to String stream
-                .toArray(String[]::new);
-        table.addProperty("Grouping Type", getNotNull(this._element.getGroupingType()), values);
+        table.addProperty("Grouping Type", this._element.getGroupingType());
         
         //Composing Metric Context
         table.addProperty("Composing Metric Context", getCamelValue(this._element.getComposingMetricContexts()), getAddRemove(CamelDesignerAbstractProxy.getMetricContexts(), this._element.getComposingMetricContexts()));

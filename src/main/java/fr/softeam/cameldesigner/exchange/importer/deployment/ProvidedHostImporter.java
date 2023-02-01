@@ -8,10 +8,7 @@ import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareC
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.VM;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
-<<<<<<< HEAD
 import org.modelio.metamodel.uml.statik.PortOrientation;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 
 @objid ("5221827d-0a23-49e8-bb2e-da41b27f0d60")
 public class ProvidedHostImporter<T extends ProvidedHost, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort> extends HostingPortImporter<T,V> {

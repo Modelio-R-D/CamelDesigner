@@ -6,10 +6,7 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
-<<<<<<< HEAD
 import org.modelio.metamodel.uml.statik.PortOrientation;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 
 @objid ("8a2ae908-8870-4d42-980a-f7c72d0912d4")
 public class RequiredHostImporter<T extends RequiredHost, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort> extends HostingPortImporter<T,V> {

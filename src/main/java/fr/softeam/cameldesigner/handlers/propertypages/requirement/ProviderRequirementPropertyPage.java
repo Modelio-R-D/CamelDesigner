@@ -22,21 +22,10 @@ public class ProviderRequirementPropertyPage<T extends ProviderRequirement> exte
         super.changeProperty(row, value);
         
         if(this._currentRow == 1){
-<<<<<<< HEAD
-        
-           this._element.setProviderNames(Arrays.asList(value.split(this._eltSeparator)));
-        
-        }
-        else if(this._currentRow == 2){
-        
-            this._element.setCloudType(value);
-        
-=======
            this._element.setProviderNames(Arrays.asList(value.split(this._eltSeparator)));
         }
         else if(this._currentRow == 2){
             this._element.setCloudType(value);
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         }
         
         this._currentRow -= 2;

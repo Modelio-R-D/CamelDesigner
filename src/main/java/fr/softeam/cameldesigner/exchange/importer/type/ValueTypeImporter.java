@@ -32,7 +32,6 @@ public abstract class ValueTypeImporter<T extends ValueType, V extends fr.softea
 
     @objid ("65af6e22-6ed8-47c1-aa1d-dffcba13b801")
     public ValueTypeImporter() {
-<<<<<<< HEAD
     }
 
     @objid ("2a00b5ae-183f-4103-b355-812298a74c26")
@@ -48,8 +47,6 @@ public abstract class ValueTypeImporter<T extends ValueType, V extends fr.softea
         if (value != null) {
             elt.setPrimitiveType(value.getLiteral());
         }
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     }
 
 }

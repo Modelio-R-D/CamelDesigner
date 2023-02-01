@@ -167,15 +167,11 @@ import camel.security.SecurityDomain;
 import camel.security.SecurityMetricInstance;
 import camel.security.SecurityModel;
 import camel.security.SecuritySLO;
-<<<<<<< HEAD
 import camel.type.BooleanValueType;
 import camel.type.Range;
 import camel.type.RangeUnion;
 import camel.type.StringValue;
 import camel.type.StringValueType;
-=======
-import camel.type.Range;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import camel.type.TypeModel;
 import camel.type.ValueType;
 import camel.unit.CompositeUnit;
@@ -358,14 +354,10 @@ import fr.softeam.cameldesigner.exchange.importer.security.SecurityDomainImporte
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityMetricInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecuritySLOImporter;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.importer.type.BooleanValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeUnionImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.StringValueTypeImporter;
-=======
-import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.ValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
@@ -915,7 +907,6 @@ public interface ICamelImporterVisitor {
 
     @objid ("e95b3728-4ec2-4791-96f1-a58fd4fbec39")
     Object visitTypeModel(TypeModelImporter<? extends TypeModel,? extends fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel> typeModelImporter);
-<<<<<<< HEAD
 
     @objid ("bd4db05a-83c9-47ad-9ab5-a6beee69a3f1")
     Object visitStringValueTypeImporter(StringValueTypeImporter<? extends StringValueType,? extends fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType> stringValueTypeImporter);
@@ -925,7 +916,5 @@ public interface ICamelImporterVisitor {
 
     @objid ("43d8e255-effe-4bcd-a127-954c67e5b896")
     Object visitRangeUnionImporter(RangeUnionImporter<? extends RangeUnion,? extends fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion> rangeUnionImporter);
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 
 }

@@ -2,13 +2,10 @@ package fr.softeam.cameldesigner.exchange.importer;
 
 import java.util.HashMap;
 import java.util.Map;
-<<<<<<< HEAD
 import camel.constraint.impl.IfThenConstraintImpl;
 import camel.constraint.impl.LogicalConstraintImpl;
 import camel.constraint.impl.MetricConstraintImpl;
 import camel.constraint.impl.MetricVariableConstraintImpl;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import camel.core.impl.AttributeImpl;
 import camel.core.impl.CamelModelImpl;
 import camel.core.impl.FeatureImpl;
@@ -96,15 +93,11 @@ import camel.requirement.impl.ResourceRequirementImpl;
 import camel.requirement.impl.SecurityRequirementImpl;
 import camel.requirement.impl.ServiceLevelObjectiveImpl;
 import camel.requirement.impl.VerticalScaleRequirementImpl;
-<<<<<<< HEAD
 import camel.type.impl.BooleanValueTypeImpl;
 import camel.type.impl.IntValueImpl;
 import camel.type.impl.RangeImpl;
 import camel.type.impl.StringValueImpl;
 import camel.type.impl.StringValueTypeImpl;
-=======
-import camel.type.impl.RangeImpl;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import camel.type.impl.TypeModelImpl;
 import camel.type.impl.ValueImpl;
 import camel.unit.impl.CompositeUnitImpl;
@@ -114,13 +107,10 @@ import camel.unit.impl.SingleUnitImpl;
 import camel.unit.impl.UnitDimensionImpl;
 import camel.unit.impl.UnitModelImpl;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.importer.constraint.IfThenConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.LogicalConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.MetricConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.MetricVariableConstraintImporter;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import fr.softeam.cameldesigner.exchange.importer.core.AttributeImporter;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelElementImporter;
 import fr.softeam.cameldesigner.exchange.importer.core.CamelModelImporter;
@@ -209,14 +199,10 @@ import fr.softeam.cameldesigner.exchange.importer.requirement.ResourceRequiremen
 import fr.softeam.cameldesigner.exchange.importer.requirement.SecurityRequirementImporter;
 import fr.softeam.cameldesigner.exchange.importer.requirement.ServiceLevelObjectiveImporter;
 import fr.softeam.cameldesigner.exchange.importer.requirement.VerticalScaleRequirementImporter;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.importer.type.BooleanValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.IntValueImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.StringValueTypeImporter;
-=======
-import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.ValueImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
@@ -260,7 +246,6 @@ static {
         _factory.put(QualityAttributeImpl.class, QualityAttributeImporter.class);
         _factory.put(MeasurableAttributeImpl.class, MeasurableAttributeImporter.class);
 
-<<<<<<< HEAD
         // CONSTRAINT
         _factory.put(IfThenConstraintImpl.class, IfThenConstraintImporter.class);
         _factory.put(LogicalConstraintImpl.class, LogicalConstraintImporter.class);
@@ -268,10 +253,6 @@ static {
         _factory.put(MetricVariableConstraintImpl.class, MetricVariableConstraintImporter.class);
 
         // EXECUTION
-=======
-        // TYPE
-        _factory.put(ValueImpl.class, ValueImporter.class);
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 
         // METADATA
 
@@ -379,11 +360,7 @@ static {
         // SCALABILITY
         // SECURITY
 
-        //TYPE
-        _factory.put(TypeModelImpl.class, TypeModelImporter.class);
-        _factory.put(RangeImpl.class, RangeImporter.class);
 
-<<<<<<< HEAD
         // TYPE
         _factory.put(TypeModelImpl.class, TypeModelImporter.class);
         _factory.put(RangeImpl.class, RangeImporter.class);
@@ -398,15 +375,5 @@ static {
         _factory.put(UnitDimensionImpl.class, UnitDimensionImporter.class);
         _factory.put(UnitModelImpl.class, UnitModelImporter.class);
 
-=======
-        //UNIT
-        _factory.put(CompositeUnitImpl.class, CompositeUnitImporter.class);
-        _factory.put(DimensionedUnitImpl.class, DimensionedUnitImporter.class);
-        _factory.put(DimensionlessImpl.class, DimensionlessImporter.class);
-        _factory.put(SingleUnitImpl.class, SingleUnitImporter.class);
-        _factory.put(UnitDimensionImpl.class, UnitDimensionImporter.class);
-        _factory.put(UnitModelImpl.class, UnitModelImporter.class);
-
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     }
 }

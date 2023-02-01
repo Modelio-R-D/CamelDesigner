@@ -3,12 +3,11 @@ package fr.softeam.cameldesigner.exchange.importer.metadata;
 import camel.mms.MmsConcept;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
-import fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("8e6da850-4801-4580-80f0-ea03bdaa333d")
-public class MmsConceptImporter<T extends MmsConcept, V extends MmsConcept> extends MmsObjectImporter<T,V> {
+public class MmsConceptImporter<T extends MmsConcept, V extends fr.softeam.cameldesigner.api.metadatamodel.standard.class_.MmsConcept> extends MmsObjectImporter<T,V> {
     @objid ("9adba51a-3733-4c74-8921-3e053fb47c21")
     public MmsConceptImporter() {
     }

@@ -1,13 +1,9 @@
 package fr.softeam.cameldesigner.exchange.importer.scalability;
 
-<<<<<<< HEAD
 import camel.scalability.BinaryPatternOperatorType;
 import camel.scalability.Event;
 import camel.scalability.UnaryEventPattern;
 import camel.scalability.UnaryPatternOperatorType;
-=======
-import camel.scalability.UnaryEventPattern;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;

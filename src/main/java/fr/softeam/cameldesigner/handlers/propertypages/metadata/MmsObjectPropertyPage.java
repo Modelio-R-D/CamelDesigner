@@ -28,15 +28,11 @@ public abstract class MmsObjectPropertyPage<T extends MmsObject> extends NamedEl
             this._element.setUri(value);
         }
         
-<<<<<<< HEAD
         else if(this._currentRow == 3){
             this._element.setImplemented(Boolean.valueOf(value));
         }
         
         this._currentRow -= 3;
-=======
-        this._currentRow -= 2;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     }
 
     /**

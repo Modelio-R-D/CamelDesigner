@@ -167,14 +167,10 @@ import camel.security.SecurityDomain;
 import camel.security.SecurityMetricInstance;
 import camel.security.SecurityModel;
 import camel.security.SecuritySLO;
-<<<<<<< HEAD
 import camel.type.BooleanValueType;
 import camel.type.Range;
 import camel.type.RangeUnion;
 import camel.type.StringValue;
-=======
-import camel.type.Range;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import camel.type.ValueType;
 import camel.unit.CompositeUnit;
 import camel.unit.DimensionedUnit;
@@ -189,10 +185,7 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.CamelComponent;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import fr.softeam.cameldesigner.api.typemodel.standard.package_.TypeModel;
 import fr.softeam.cameldesigner.exchange.importer.constraint.AttributeConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.CamelConstraintImporter;
@@ -362,14 +355,10 @@ import fr.softeam.cameldesigner.exchange.importer.security.SecurityDomainImporte
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityMetricInstanceImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecurityModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.security.SecuritySLOImporter;
-<<<<<<< HEAD
 import fr.softeam.cameldesigner.exchange.importer.type.BooleanValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeUnionImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.StringValueTypeImporter;
-=======
-import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.ValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
@@ -1457,7 +1446,6 @@ public class DefaultCamelVisitor implements ICamelImporterVisitor {
         return visitModel(typeModelImporter);
     }
 
-<<<<<<< HEAD
     @objid ("77cf91bc-7b2e-4b6c-a7e5-bebf1cdb1f5f")
     @Override
     public Object visitStringValueTypeImporter(StringValueTypeImporter<? extends camel.type.StringValueType,? extends StringValueType> stringValueTypeImporter) {
@@ -1476,6 +1464,4 @@ public class DefaultCamelVisitor implements ICamelImporterVisitor {
         return visitValueType(rangeUnionImporter);
     }
 
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 }

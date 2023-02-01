@@ -12,10 +12,6 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
      * to a new value.
-<<<<<<< HEAD
-     * @param MObject : the selected element
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
      * 
      * @param row : the row of the changed property
      * @param value : the new value of the property
@@ -38,22 +34,13 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
         }
         
         else if(this._currentRow == 2) {
-<<<<<<< HEAD
-            for (String v: value.split(this._eltSeparator)){
-        
-=======
             for (String v : value.split(this._eltSeparator)){
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
                 if (value.startsWith(this._add)) {
                     this._element.addAlternativeName(v);
                 }else {
                     this._element.removeAlternativeName(v);
                 }
             }
-<<<<<<< HEAD
-        
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
         }
         
         this._currentRow -= 2;
@@ -61,10 +48,6 @@ public class GeographicalRegionPropertyPage<T extends GeographicalRegion> extend
 
     /**
      * This method handles the construction of the property table of a selected element
-<<<<<<< HEAD
-     * @param MObject : the selected element
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
      * 
      * @param table : the property table to fulfill
      */

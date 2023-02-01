@@ -65,10 +65,7 @@ public class CommunicationPortImporter<T extends CommunicationPort, V extends fr
     @objid ("7278f294-fa86-4d92-b7e2-6f3b01c3a342")
     @Override
     public void attach(V elt, CamelElement context) {
-<<<<<<< HEAD
         super.attach(elt, context);
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     }
 
 }

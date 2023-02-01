@@ -6,10 +6,7 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
 import org.eclipse.emf.cdo.CDOObject;
-<<<<<<< HEAD
 import org.modelio.metamodel.uml.statik.PortOrientation;
-=======
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
 
 @objid ("0ecf37a1-897f-4fa1-87bc-3668dba17a5b")
 public class ProvidedCommunicationImporter<T extends ProvidedCommunication, V extends fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort> extends CommunicationPortImporter<T,V> {
