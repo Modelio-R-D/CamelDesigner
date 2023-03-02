@@ -47,7 +47,6 @@ public class CompositeMetricImporter<T extends CompositeMetric, V extends fr.sof
 
     @objid ("62e73243-b2b3-48ee-af96-0c8d4a6fb23d")
     private void setFormula(V elt) {
-        // TODO Auto-generated method stub
         String value = this._element.getFormula();
         if (value != null) {
             elt.setFormula(value);
@@ -56,11 +55,13 @@ public class CompositeMetricImporter<T extends CompositeMetric, V extends fr.sof
 
     @objid ("c652b45e-fb2f-41d8-914e-116db2dfbf06")
     private void setComponentMetrics(V elt) {
-        // TODO Auto-generated method stub
         EList<Metric> values = this._element.getComponentMetrics();
         if (values != null) {
-            for( Metric component: values)
-            elt.addComponentMetrics((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric) component);
+            for( Metric component: values) {
+                CamelElement valueElt = this._process.getElement(component);
+                if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric)
+                    elt.addComponentMetrics((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric) component);
+            }
         }
     }
 

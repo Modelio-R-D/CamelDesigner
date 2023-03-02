@@ -2,124 +2,56 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-<<<<<<< HEAD
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/MathParser.org-mXparser-4.1.1.jar"/>
-=======
-        <PathEntry path="lib/registry-3.7.0.jar"/>
-        <PathEntry path="lib/xtext-2.12.0.jar"/>
-        <PathEntry path="lib/inject-1.0.0.jar"/>
-        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
-        <PathEntry path="lib/state-1.1.0.jar"/>
-        <PathEntry path="lib/java-2.0.17.jar"/>
-        <PathEntry path="lib/net4j-4.6.0.jar"/>
-        <PathEntry path="lib/osgi-3.12.100.jar"/>
-        <PathEntry path="lib/common-3.9.0.jar"/>
-        <PathEntry path="lib/ecore-2.13.0.jar"/>
-        <PathEntry path="lib/uml-5.2.200.jar"/>
-        <PathEntry path="lib/log4j-1.2.15.jar"/>
-        <PathEntry path="lib/runtime-3.13.0.jar"/>
-        <PathEntry path="lib/edit-2.12.0.jar"/>
-        <PathEntry path="lib/net4j-4.1.500.jar"/>
-        <PathEntry path="lib/app-1.3.400.jar"/>
-        <PathEntry path="lib/pivot-1.3.0.jar"/>
-        <PathEntry path="lib/jobs-3.9.3.jar"/>
-        <PathEntry path="lib/completeocl-1.3.0.jar"/>
-        <PathEntry path="lib/common-2.13.0.jar"/>
-        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/base-1.3.0.jar"/>
-        <PathEntry path="lib/security-4.3.200.jar"/>
-        <PathEntry path="lib/cli-1.2.0.jar"/>
-        <PathEntry path="lib/expressions-4.3.200.jar"/>
-        <PathEntry path="lib/common-1.4.200.jar"/>
-        <PathEntry path="lib/xmi-2.13.0.jar"/>
-        <PathEntry path="lib/preferences-3.7.0.jar"/>
-        <PathEntry path="lib/common-4.6.0.jar"/>
-        <PathEntry path="lib/api-1.7.2.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/tcp-4.1.500.jar"/>
-        <PathEntry path="lib/runtime-3.2.0.jar"/>
-        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/util-3.7.0.jar"/>
-        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/contenttype-3.6.0.jar"/>
-        <PathEntry path="lib/ocl-3.6.200.jar"/>
-        <PathEntry path="lib/ecore-3.6.200.jar"/>
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
-        <PathEntry path="lib/annotation-2.1.150.jar"/>
-        <PathEntry path="lib/api-1.7.2.jar"/>
-        <PathEntry path="lib/app-1.3.400.jar"/>
-        <PathEntry path="lib/base-1.3.0.jar"/>
-        <PathEntry path="lib/cdo-4.6.0.jar"/>
-        <PathEntry path="lib/change-2.11.0.jar"/>
-        <PathEntry path="lib/cli-1.2.0.jar"/>
-        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/common-1.4.200.jar"/>
-        <PathEntry path="lib/common-2.13.0.jar"/>
-        <PathEntry path="lib/common-3.9.0.jar"/>
-        <PathEntry path="lib/common-4.6.0.jar"/>
-        <PathEntry path="lib/completeocl-1.3.0.jar"/>
-        <PathEntry path="lib/contenttype-3.6.0.jar"/>
-        <PathEntry path="lib/ecore-2.13.0.jar"/>
-        <PathEntry path="lib/ecore-3.6.200.jar"/>
-        <PathEntry path="lib/edit-2.12.0.jar"/>
-        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
-        <PathEntry path="lib/expressions-4.3.200.jar"/>
-        <PathEntry path="lib/gson-2.8.9.jar"/>
-<<<<<<< HEAD
-        <PathEntry path="lib/inject-1.0.0.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
-        <PathEntry path="lib/java-2.0.17.jar"/>
-        <PathEntry path="lib/jobs-3.9.3.jar"/>
-        <PathEntry path="lib/log4j-1.2.15.jar"/>
-        <PathEntry path="lib/multibindings-3.0.0.jar"/>
-        <PathEntry path="lib/net4j-4.1.500.jar"/>
-        <PathEntry path="lib/net4j-4.6.0.jar"/>
-        <PathEntry path="lib/ocl-3.6.200.jar"/>
-        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
-        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/osgi-3.12.100.jar"/>
-        <PathEntry path="lib/pivot-1.3.0.jar"/>
-        <PathEntry path="lib/preferences-3.7.0.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
-        <PathEntry path="lib/runtime-3.13.0.jar"/>
-        <PathEntry path="lib/runtime-3.2.0.jar"/>
-        <PathEntry path="lib/security-4.3.200.jar"/>
-        <PathEntry path="lib/state-1.1.0.jar"/>
-        <PathEntry path="lib/tcp-4.1.500.jar"/>
-        <PathEntry path="lib/uml-5.2.200.jar"/>
-        <PathEntry path="lib/util-2.12.0.jar"/>
-        <PathEntry path="lib/util-3.7.0.jar"/>
-        <PathEntry path="lib/xmi-2.13.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
-=======
+        <PathEntry path="lib/inject-1.0.0.jar"/>
+        <PathEntry path="lib/com.google.guava-21.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/oclstdlib-1.3.0.jar"/>
+        <PathEntry path="lib/state-1.1.0.jar"/>
+        <PathEntry path="lib/java-2.0.17.jar"/>
+        <PathEntry path="lib/net4j-4.6.0.jar"/>
+        <PathEntry path="lib/osgi-3.12.100.jar"/>
+        <PathEntry path="lib/common-3.9.0.jar"/>
+        <PathEntry path="lib/ecore-2.13.0.jar"/>
+        <PathEntry path="lib/uml-5.2.200.jar"/>
+        <PathEntry path="lib/log4j-1.2.15.jar"/>
+        <PathEntry path="lib/runtime-3.13.0.jar"/>
+        <PathEntry path="lib/edit-2.12.0.jar"/>
+        <PathEntry path="lib/net4j-4.1.500.jar"/>
+        <PathEntry path="lib/multibindings-3.0.0.jar"/>
+        <PathEntry path="lib/app-1.3.400.jar"/>
+        <PathEntry path="lib/pivot-1.3.0.jar"/>
+        <PathEntry path="lib/jobs-3.9.3.jar"/>
+        <PathEntry path="lib/completeocl-1.3.0.jar"/>
+        <PathEntry path="lib/common-2.13.0.jar"/>
+        <PathEntry path="lib/oclinecore-1.3.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/base-1.3.0.jar"/>
+        <PathEntry path="lib/security-4.3.200.jar"/>
+        <PathEntry path="lib/cli-1.2.0.jar"/>
+        <PathEntry path="lib/expressions-4.3.200.jar"/>
+        <PathEntry path="lib/common-1.4.200.jar"/>
+        <PathEntry path="lib/xmi-2.13.0.jar"/>
+        <PathEntry path="lib/preferences-3.7.0.jar"/>
+        <PathEntry path="lib/common-4.6.0.jar"/>
+        <PathEntry path="lib/api-1.7.2.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/tcp-4.1.500.jar"/>
+        <PathEntry path="lib/runtime-3.2.0.jar"/>
+        <PathEntry path="lib/essentialocl-1.3.0.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/util-3.7.0.jar"/>
+        <PathEntry path="lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/contenttype-3.6.0.jar"/>
+        <PathEntry path="lib/ocl-3.6.200.jar"/>
+        <PathEntry path="lib/ecore-3.6.200.jar"/>
+        <PathEntry path="lib/annotation-2.1.150.jar"/>
+        <PathEntry path="lib/change-2.11.0.jar"/>
+        <PathEntry path="lib/cdo-4.6.0.jar"/>
+        <PathEntry path="lib/util-2.12.0.jar"/>
+        <PathEntry path="lib/gson-2.8.9.jar"/>
         <PathEntry path="lib/MathParser.org-mXparser-4.1.1.jar"/>
->>>>>>> 9c44adba44776142ee16d43febeb7dda124a6cb5
     </ClassPath>
     <Profiles>
         <Profile uid="28a1b85d-93b2-47f7-845a-f4883b71ded5" id="CamelCore">
@@ -621,24 +553,24 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Precedes" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Precedes.label" uid="4ec7a091-2d58-4b40-8d19-05e45baeacde" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="Precedes" metaclass="Standard.Substitution" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Precedes.label" uid="4ec7a091-2d58-4b40-8d19-05e45baeacde" is-abstract="false">
+                <Icon path="res/icon/gui/Precedes_24.png"/>
+                <Image path="res/icon/gui/Precedes_48.png"/>
             </Stereotype>
-            <Stereotype name="Parallel" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Parallel.label" uid="d9ae85a6-7add-441a-90e4-b7487a23979d" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="Parallel" metaclass="Standard.Constraint" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Parallel.label" uid="d9ae85a6-7add-441a-90e4-b7487a23979d" is-abstract="false">
+                <Icon path="res/icon/gui/Parallel_24.png"/>
+                <Image path="res/icon/gui/Parallel_48.png"/>
             </Stereotype>
-            <Stereotype name="Sequence" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Sequence.label" uid="ca145da8-ff7e-4edb-9b3c-d3bef9c006f2" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="Sequence" metaclass="Standard.Constraint" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Sequence.label" uid="ca145da8-ff7e-4edb-9b3c-d3bef9c006f2" is-abstract="false">
+                <Icon path="res/icon/gui/Sequence_24.png"/>
+                <Image path="res/icon/gui/Sequence_48.png"/>
             </Stereotype>
-            <Stereotype name="Conditional" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Conditional.label" uid="a9789ea2-f51f-4aec-af7f-8aebf9cb152e" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="Conditional" metaclass="Standard.Substitution" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Conditional.label" uid="a9789ea2-f51f-4aec-af7f-8aebf9cb152e" is-abstract="false">
+                <Icon path="res/icon/gui/Conditional_24.png"/>
+                <Image path="res/icon/gui/Conditional_48.IMAGE.png"/>
             </Stereotype>
-            <Stereotype name="Switch" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Switch.label" uid="58186976-c426-4fa2-bc5c-50c3175a707c" is-abstract="false">
-                <Icon path=""/>
+            <Stereotype name="Switch" metaclass="Standard.Constraint" owner-stereotype="mref#'' {1ff10997-aa56-4f9b-b413-f32fadcc29bb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Switch.label" uid="58186976-c426-4fa2-bc5c-50c3175a707c" is-abstract="false">
+                <Icon path="res/icon/gui/Switch_48.ICON.png"/>
                 <Image path=""/>
                 <TagTypes>
                     <TagType name="values" uid="744ae373-9518-4481-9be3-b9b7fcb11d66" label="%tagtype.values.label" parameter-card="*" is-hidden="false" is-signed="false"/>
@@ -2778,6 +2710,48 @@
                     <HParameter name="name" value="WindowCriterion"/>
                 </Handler>
             </Tool>
+            <Tool id="Precedes" label="%tool.Precedes.label" tooltip="%tool.Precedes.tooltip" image="res/icon/gui/Precedes_24.png">
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Scope-target metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Handler class="Link">
+                    <HParameter name="stereotype" value="CamelDesigner#Precedes"/>
+                    <HParameter name="metaclass" value="Standard.Substitution"/>
+                    <HParameter name="name" value="Precedes"/>
+                </Handler>
+            </Tool>
+            <Tool id="Parallel" label="%tool.Parallel.label" tooltip="%tool.Parallel.tooltip" image="res/icon/gui/Parallel_24.png">
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Handler class="AttachedBox">
+                    <HParameter name="stereotype" value="CamelDesigner#Parallel"/>
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="Parallel"/>
+                </Handler>
+            </Tool>
+            <Tool id="Sequence" label="%tool.Sequence.label" tooltip="%tool.Sequence.tooltip" image="res/icon/gui/Sequence_24.png">
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Handler class="AttachedBox">
+                    <HParameter name="stereotype" value="CamelDesigner#Sequence"/>
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="Sequence"/>
+                </Handler>
+            </Tool>
+            <Tool id="Conditional" label="%tool.Conditional.label" tooltip="%tool.Conditional.tooltip" image="res/icon/gui/Conditional_24.png">
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Scope-target metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Handler class="Link">
+                    <HParameter name="stereotype" value="CamelDesigner#Conditional"/>
+                    <HParameter name="metaclass" value="Standard.Substitution"/>
+                    <HParameter name="name" value="Conditional"/>
+                </Handler>
+            </Tool>
+            <Tool id="Switch" label="%tool.Switch.label" tooltip="%tool.Switch.tooltip" image="res/icon/gui/Switch_24.png">
+                <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
+                <Handler class="AttachedBox">
+                    <HParameter name="stereotype" value="CamelDesigner#Switch"/>
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="Switch"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Camel_Model_diagram" group="%group.Create diagram.label" group-image="res/icon/gui/CamelDiagram.png"/>
@@ -2959,6 +2933,11 @@
                     <ToolRef refid="CREATE_DRAWING_LINE" group="%group.Free_Drawing.label"/>
                     <ToolRef refid="CREATE_DRAWING_RECTANGLE" group="%group.Free_Drawing.label"/>
                     <ToolRef refid="CREATE_DRAWING_ELLIPSE" group="%group.Free_Drawing.label"/>
+                    <ToolRef refid="Parallel" group="%group.ControlFlow_Relation.label"/>
+                    <ToolRef refid="Precedes" group="%group.ControlFlow_Relation.label"/>
+                    <ToolRef refid="Sequence" group="%group.ControlFlow_Relation.label"/>
+                    <ToolRef refid="Switch" group="%group.ControlFlow_Relation.label"/>
+                    <ToolRef refid="Conditional" group="%group.ControlFlow_Relation.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentTypeModelDiagram"/>

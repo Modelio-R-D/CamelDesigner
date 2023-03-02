@@ -63,7 +63,9 @@ public class ImportProcess implements IElementProcess<CamelElement,CDOObject> {
             if(genMap.containsKey(element)) {
                 return genMap.get(element);
             }else {
-                return process(element, (CDOObject)element.eContainer());
+                CDOObject container = (CDOObject)element.eContainer();
+                if (container != null)
+                    return process(element, container);
             }
         }
         return null;

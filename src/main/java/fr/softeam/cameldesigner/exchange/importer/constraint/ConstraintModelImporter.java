@@ -30,4 +30,9 @@ public class ConstraintModelImporter<T extends ConstraintModel, V extends fr.sof
         return null;
     }
 
+    @objid ("68739c78-8683-4687-8e15-14f467142658")
+    @Override
+    public void setProperties(V elt) {
+    }
+
 }

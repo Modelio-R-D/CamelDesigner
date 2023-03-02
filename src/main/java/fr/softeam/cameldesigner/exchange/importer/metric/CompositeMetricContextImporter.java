@@ -59,10 +59,13 @@ public class CompositeMetricContextImporter<T extends CompositeMetricContext, V 
                     CamelElement valueElt = this._process.getElement(v);
                     if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) {
                         elt.addComposingMetricContexts((fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext) valueElt);
-                
                     }
-                  }
+                }
         }
+    }
+
+    @objid ("69abc27d-34fc-481a-925b-77cae633473b")
+    public CompositeMetricContextImporter() {
     }
 
 }

@@ -2,6 +2,7 @@ package fr.softeam.cameldesigner.exchange.importer;
 
 import java.util.HashMap;
 import java.util.Map;
+import camel.constraint.impl.ConstraintModelImpl;
 import camel.constraint.impl.IfThenConstraintImpl;
 import camel.constraint.impl.LogicalConstraintImpl;
 import camel.constraint.impl.MetricConstraintImpl;
@@ -94,12 +95,9 @@ import camel.requirement.impl.SecurityRequirementImpl;
 import camel.requirement.impl.ServiceLevelObjectiveImpl;
 import camel.requirement.impl.VerticalScaleRequirementImpl;
 import camel.type.impl.BooleanValueTypeImpl;
-import camel.type.impl.IntValueImpl;
 import camel.type.impl.RangeImpl;
-import camel.type.impl.StringValueImpl;
 import camel.type.impl.StringValueTypeImpl;
 import camel.type.impl.TypeModelImpl;
-import camel.type.impl.ValueImpl;
 import camel.unit.impl.CompositeUnitImpl;
 import camel.unit.impl.DimensionedUnitImpl;
 import camel.unit.impl.DimensionlessImpl;
@@ -107,6 +105,7 @@ import camel.unit.impl.SingleUnitImpl;
 import camel.unit.impl.UnitDimensionImpl;
 import camel.unit.impl.UnitModelImpl;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.exchange.importer.constraint.ConstraintModelImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.IfThenConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.LogicalConstraintImporter;
 import fr.softeam.cameldesigner.exchange.importer.constraint.MetricConstraintImporter;
@@ -200,11 +199,9 @@ import fr.softeam.cameldesigner.exchange.importer.requirement.SecurityRequiremen
 import fr.softeam.cameldesigner.exchange.importer.requirement.ServiceLevelObjectiveImporter;
 import fr.softeam.cameldesigner.exchange.importer.requirement.VerticalScaleRequirementImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.BooleanValueTypeImporter;
-import fr.softeam.cameldesigner.exchange.importer.type.IntValueImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.RangeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.StringValueTypeImporter;
 import fr.softeam.cameldesigner.exchange.importer.type.TypeModelImporter;
-import fr.softeam.cameldesigner.exchange.importer.type.ValueImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.CompositeUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.DimensionedUnitImporter;
 import fr.softeam.cameldesigner.exchange.importer.unit.DimensionlessImporter;
@@ -251,6 +248,7 @@ static {
         _factory.put(LogicalConstraintImpl.class, LogicalConstraintImporter.class);
         _factory.put(MetricConstraintImpl.class, MetricConstraintImporter.class);
         _factory.put(MetricVariableConstraintImpl.class, MetricVariableConstraintImporter.class);
+        _factory.put(ConstraintModelImpl.class, ConstraintModelImporter.class);
 
         // EXECUTION
 

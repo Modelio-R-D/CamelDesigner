@@ -13,6 +13,7 @@ import org.modelio.api.modelio.diagram.ILinkPath;
 import org.modelio.api.modelio.diagram.tools.DefaultAttachedBoxTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
+import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("542becab-4637-4324-b50a-ac6d2ffcbca1")
 public class MetricVariableConstraintTool extends DefaultAttachedBoxTool {
@@ -29,6 +30,9 @@ public class MetricVariableConstraintTool extends DefaultAttachedBoxTool {
         try( ITransaction transaction = session.createTransaction("Metric Variable Constraint")){
         
             MetricVariableConstraint camelElt = MetricVariableConstraint.create();
+            MetricVariable var = MetricVariable.instantiate((Class) originNode.getElement());
+            camelElt.setMetricVariable(var);
+        
             diagramHandle.unmask(camelElt.getElement(), point.x, point.y);
         
             diagramHandle.save();

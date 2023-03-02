@@ -27,7 +27,6 @@ public abstract class CamelConstraintImporter<T extends Constraint, V extends fr
     @objid ("f15c3b9d-8d4c-4fe6-ab72-f28f09914731")
     @Override
     public CamelElement createCamelElt(CDOObject owner) {
-        // TODO Auto-generated method stub
         return null;
     }
 

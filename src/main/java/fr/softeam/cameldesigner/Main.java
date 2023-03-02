@@ -8,26 +8,28 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.cameldesigner.profiler.data.Category;
 import fr.softeam.cameldesigner.profiler.data.ProvidingInfo;
 
 @objid ("d64ecd5a-d540-43fa-86ec-a3f3fb2afaa4")
 public class Main {
     @objid ("a1a5e766-fff7-4655-a517-3e0e8b3def39")
-    private static final String _URL = "http://217.172.12.140:7878";
+    private static final String _URL = "http://192.168.25.56:7889";
 
     @objid ("119ac78b-f7b5-4833-a0a7-8376ef105877")
     private static String code = "1";
 
     @objid ("d72fc10f-4888-49a1-be53-a504d109a8c2")
     public static void main(String[] args) {
-        //        ProvidingInfo info = new ProvidingInfo();
-        //        info.setComponentName("component-1");
-        //        info.getCategories().add(Category.GPU);
-        //        info.setLanguage("Java");
-        //        info.setRepository("https://github.com/Supervisor/supervisor");
-        //        pushAnalyse(info);
-        //        
-        //        getResponseAnalyse();
+                ProvidingInfo info = new ProvidingInfo();
+                info.setComponentName("component-1");
+                info.getCategories().add(Category.GPU);
+                info.setLanguage("C");
+                info.setRepository("https://github.com/jdtotow/tme");
+                pushAnalyse(info);
+                
+                getResponseAnalyse();
     }
 
     @objid ("4b02b658-c672-42c8-a7e5-b71d5e33e816")
@@ -177,7 +179,7 @@ public class Main {
     @objid ("52969b0a-acaf-492c-8fb2-403cf7f9d89d")
     public static void getResponseAnalyse() {
         try {
-        
+        	System.out.println("collection of data");
             URL url = new URL(_URL + "/collect?code=" + code );
         
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -190,7 +192,7 @@ public class Main {
             if (responsecode != 200) {
                 throw new RuntimeException("HttpResponseCode: " + responsecode);
             } else {
-        
+            	
                 String inline = "";
                 Scanner scanner = new Scanner(url.openStream());
         
@@ -198,7 +200,7 @@ public class Main {
                 while (scanner.hasNext()) {
                     inline += scanner.nextLine();
                 }
-        
+                System.out.println(inline);
                 //Close the scanner
                 scanner.close();
         

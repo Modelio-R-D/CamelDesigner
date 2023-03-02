@@ -99,11 +99,9 @@ public class WizardImport extends AbstractSwtWizardWindow {
         
                 if (theFile.getAbsolutePath().endsWith(".xmi")) {
                     importerService = new XMIImporterService();
-        
                 }else {
                     importerService = new CamelImporterService();
                 }
-        
         
                 importerService.importFromFile(this.selectedElt, theFile.getAbsolutePath());
         

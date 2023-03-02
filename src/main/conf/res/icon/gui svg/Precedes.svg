@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   sodipodi:docname="Precedes.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\Precedes_24.png"
+   inkscape:export-xdpi="18.036316"
+   inkscape:export-ydpi="18.036316"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Generic-GCP</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="1.84375"
+     inkscape:cx="-13.016949"
+     inkscape:cy="92.474576"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0"
+     inkscape:pagecheckerboard="0" />
+  <title
+     id="title2">Generic-GCP</title>
+  <path
+     style="fill:#ff9955;fill-opacity:1;stroke-width:0.202048"
+     d="m 38.534494,128.56847 c -3.176343,-0.56351 -6.259862,-2.26763 -8.167187,-4.51362 C 29.55233,123.09515 26.424228,117.37524 15.85799,97.52375 1.0699076,69.740402 1.0568306,69.715194 0.56043259,68.033188 0.02993659,66.235642 0.00666559,62.788142 0.51228559,60.901387 0.80277359,59.817418 4.4929986,52.2726 14.048622,33.225756 26.728916,7.9506368 27.234283,6.98417 28.586187,5.4241609 30.20178,3.5598657 32.193698,2.3225957 34.726044,1.6104276 36.198356,1.1963703 36.891518,1.18597 62.811381,1.1890389 c 28.942115,0.00346 27.555265,-0.051665 30.335515,1.2049755 1.81728,0.8213911 3.63914,2.1654422 4.73169,3.4907287 0.66684,0.8088912 5.136194,8.9800949 14.896324,27.2345649 7.669,14.343437 14.12787,26.597751 14.35304,27.231832 0.97213,2.737616 1.01765,6.353161 0.11388,9.045318 -0.20033,0.596725 -6.26268,12.864322 -13.4719,27.261312 -10.28961,20.54867 -13.32367,26.44106 -14.112444,27.40757 -1.29728,1.5896 -3.25475,2.94675 -5.52469,3.83042 l -1.8097,0.7045 -26.65388,0.0267 c -14.659629,0.0147 -26.870257,-0.0117 -27.134724,-0.0585 z"
+     id="path8"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="C:\Users\ammoussaoui\modelio\eclipse\modules\CamelDesigner\src\main\conf\res\icon\gui\DataMeasurement_48.png"
+     inkscape:export-xdpi="36.074654"
+     inkscape:export-ydpi="36.074654" />
+  <path
+     d="M 33.644063,89.559322 V 35.728818 h 6.003911 v 53.830504 z m 52.033898,0 L 51.055406,62.644066 85.677961,35.728818 Z M 79.67405,62.644066 Z m 0,14.018363 V 48.625712 L 61.562251,62.644066 Z"
+     id="path2993"
+     style="stroke-width:0.105934" />
+</svg>
