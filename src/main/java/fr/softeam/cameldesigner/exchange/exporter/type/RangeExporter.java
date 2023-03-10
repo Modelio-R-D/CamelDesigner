@@ -27,7 +27,9 @@ public class RangeExporter<T extends Range> extends ValueTypeExporter<T> {
     @objid ("22ee8ad9-d281-459d-ab08-d4b4edde428f")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.type.TypeModel) && (elt instanceof camel.type.ValueType)) {
+            ((camel.type.TypeModel) context).getValueTypes().add((camel.type.ValueType) elt);
+        }
     }
 
 }

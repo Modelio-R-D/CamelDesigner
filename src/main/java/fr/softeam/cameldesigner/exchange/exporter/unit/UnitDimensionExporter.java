@@ -1,5 +1,6 @@
 package fr.softeam.cameldesigner.exchange.exporter.unit;
 
+import camel.unit.UnitFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.standard.datatype.FeatureDataType;
 import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension;
@@ -7,7 +8,7 @@ import fr.softeam.cameldesigner.exchange.exporter.core.FeatureDataTypeExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("7f76c9b0-58cd-4121-ac7e-345119a3521a")
-public abstract class UnitDimensionExporter<T extends UnitDimension> extends FeatureDataTypeExporter<FeatureDataType> {
+public class UnitDimensionExporter<T extends UnitDimension> extends FeatureDataTypeExporter<FeatureDataType> {
     @objid ("47ef0429-cf4c-4f4d-a975-4b03c261e7f8")
     public UnitDimensionExporter(T elt) {
         super(elt);
@@ -16,7 +17,7 @@ public abstract class UnitDimensionExporter<T extends UnitDimension> extends Fea
     @objid ("8d0453a8-242e-4e6e-a5a1-abeeb51cdfbc")
     @Override
     public CDOObject createCamelElt(CDOObject context) {
-        return super.createCamelElt(context);
+        return UnitFactory.eINSTANCE.createUnitDimension();
     }
 
     @objid ("1edd0a7b-fe48-461a-b797-5e5f87148def")

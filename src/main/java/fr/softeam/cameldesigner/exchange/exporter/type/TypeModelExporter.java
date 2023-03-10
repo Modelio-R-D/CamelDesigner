@@ -28,7 +28,11 @@ public class TypeModelExporter<T extends TypeModel> extends SubModelExporter<T> 
     @objid ("a3084f03-d73e-47d8-8be7-7a919251b4b7")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.type.TypeModel)) {
+            ((camel.core.CamelModel) context).getTypeModels().add((camel.type.TypeModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

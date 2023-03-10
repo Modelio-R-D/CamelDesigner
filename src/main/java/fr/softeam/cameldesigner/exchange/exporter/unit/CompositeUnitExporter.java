@@ -22,12 +22,22 @@ public class CompositeUnitExporter<T extends CompositeUnit> extends DimensionedU
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.unit.CompositeUnit) {
+            camel.unit.CompositeUnit cmc = (camel.unit.CompositeUnit) elt;
+            setFormula(cmc);
+        }
     }
 
     @objid ("098fcdea-911f-487e-8bef-da096b1b1e87")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("3d27713d-b71e-4bb8-938f-9aa759f7aae3")
+    private void setFormula(camel.unit.CompositeUnit cmc) {
+        String formula = this._element.getFormula();
+            cmc.setFormula(formula);
     }
 
 }

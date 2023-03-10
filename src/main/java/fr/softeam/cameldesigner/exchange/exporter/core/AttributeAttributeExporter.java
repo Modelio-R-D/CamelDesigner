@@ -8,11 +8,13 @@ import camel.type.FloatValue;
 import camel.type.IntValue;
 import camel.type.StringValue;
 import camel.type.TypeFactory;
+import camel.type.Value;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.ValueType;
 import fr.softeam.cameldesigner.utils.PrimitiveTypeUtils;
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EDataType;
 import org.modelio.metamodel.uml.statik.DataType;
 
 @objid ("6063c182-30b1-4068-9c62-e00f2180ae02")
@@ -37,6 +39,10 @@ public class AttributeAttributeExporter<T extends AttributeAttribute> extends Ca
             setValue(att);
             setValueType(att);
             setUnit(att);
+            setMinValue(att);
+            setMaxValue(att);
+            setMinInclusive(att);
+            setMaxInclusive(att);
         }
     }
 
@@ -110,6 +116,35 @@ public class AttributeAttributeExporter<T extends AttributeAttribute> extends Ca
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("9859b445-4467-4077-9e99-a83cd202c04e")
+    private void setMaxInclusive(Attribute att) {
+        Boolean content = this._element.isMaxInclusive();
+        if (content != null)
+            att.setMaxInclusive(content);
+    }
+
+    @objid ("8c11d614-a551-424f-a8ec-e3540e57824c")
+    private void setMinInclusive(Attribute att) {
+        Boolean content = this._element.isMinInclusive();
+        if (content != null)
+            att.setMinInclusive(content);
+    }
+
+    @objid ("f76f1e8f-58c4-4a40-88fd-8be8fd63a008")
+    private void setMaxValue(Attribute att) {
+        /*
+         *    CDOObject content = this._process.getElement(this._element.getMaxValue());
+         *     if (content != null) {
+              att.setMaxValue((Value)content);
+          }
+         */
+    }
+
+    @objid ("54b11c03-89f1-4488-abae-4856195193c4")
+    private void setMinValue(Attribute att) {
+        // TODO Auto-generated method stub
     }
 
 }

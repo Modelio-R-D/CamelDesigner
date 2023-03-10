@@ -5,7 +5,7 @@
   <!-- definition -->
   <groupId>fr.softeam</groupId>
   <artifactId>cameldesigner</artifactId>
-  <version>1.0.14</version>
+  <version>1.0.15</version>
   <name>CamelDesigner</name>
   <repositories>
       <repository>
@@ -307,12 +307,6 @@
             <type>jar</type>
         </dependency>
 
-        <dependency>
-            <groupId>org.eclipse.xtext</groupId>
-            <artifactId>CamelDSLExporter</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>
 
         <dependency>
             <groupId>org.eclipse.core</groupId>
@@ -374,6 +368,18 @@
             <groupId>org.mariuszgromada.math</groupId>
             <artifactId>MathParser.org-mXparser</artifactId>
             <version>4.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>camel</groupId>
+            <artifactId>camel</artifactId>
+            <version>5.5.0-SNAPSHOT</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>camel</groupId>
+            <artifactId>camel.dsl</artifactId>
+            <version>5.5.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

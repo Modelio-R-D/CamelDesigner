@@ -7,6 +7,7 @@
 package fr.softeam.cameldesigner.api.typemodel.standard.package_;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -17,6 +18,12 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.CamelModel;
 import fr.softeam.cameldesigner.api.camelcore.standard.package_.SubModel;
 import fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram.TypeModelDiagram;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.BooleanValue;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.DoubleValue;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.FloatValue;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.IntValue;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.StringValue;
+import fr.softeam.cameldesigner.api.typemodel.standard.class_.Value;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.CamelList;
 import fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range;
@@ -75,9 +82,10 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Package
      * @return a {@link TypeModel} proxy or <i>null</i>.
      */
@@ -87,26 +95,26 @@ public class TypeModel extends SubModel {
     }
 
     /**
-     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TypeModel} proxy from a {@link Package} stereotyped << TypeModel >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Package}
      * @return a {@link TypeModel} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("6c825c73-ad1b-46bc-94e5-3ba8e8eaf02a")
     public static TypeModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TypeModel.canInstantiate(obj))
-        	return new TypeModel(obj);
+            return new TypeModel(obj);
         else
-        	throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TypeModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("9030d82a-c4df-4643-8578-9734aa96d0c6")
     public void addDiagrams(final TypeModelDiagram obj) {
@@ -118,7 +126,6 @@ public class TypeModel extends SubModel {
      * Add a value to the 'valueTypes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("248fe012-9242-48aa-9d83-c29e2c202f15")
     public void addValueTypes(final ValueType obj) {
@@ -146,7 +153,6 @@ public class TypeModel extends SubModel {
      * Get the value to the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("aa7017b0-f428-4091-8870-212ad223603a")
     public CamelModel getCamelModel() {
@@ -157,20 +163,20 @@ public class TypeModel extends SubModel {
      * Get the values of the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("71792bb8-de59-4ac4-b61e-b3641ec9eacb")
     public List<TypeModelDiagram> getDiagrams() {
         List<TypeModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
-        	if (TypeModelDiagram.canInstantiate(mObj))
-        			results.add((TypeModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, TypeModelDiagram.STEREOTYPE_NAME));
-        	}
+            if (TypeModelDiagram.canInstantiate(mObj))
+                    results.add((TypeModelDiagram)CamelDesignerProxyFactory.instantiate(mObj, TypeModelDiagram.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
     /**
-     * Get the underlying {@link Package}. 
+     * Get the underlying {@link Package}.
+     * 
      * @return the Package represented by this proxy, never null.
      */
     @objid ("9398944e-cd18-43ad-b756-de9055f2b684")
@@ -183,23 +189,22 @@ public class TypeModel extends SubModel {
      * Get the values of the 'valueTypes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("f2788a9b-0666-486e-8efa-af74dcfc46e3")
     public List<ValueType> getValueTypes() {
         List<ValueType> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
-        	if (CamelList.canInstantiate(mObj))
-        			results.add((CamelList)CamelDesignerProxyFactory.instantiate(mObj, CamelList.STEREOTYPE_NAME));
-        	if (BooleanValueType.canInstantiate(mObj))
-        			results.add((BooleanValueType)CamelDesignerProxyFactory.instantiate(mObj, BooleanValueType.STEREOTYPE_NAME));
-        	if (StringValueType.canInstantiate(mObj))
-        			results.add((StringValueType)CamelDesignerProxyFactory.instantiate(mObj, StringValueType.STEREOTYPE_NAME));
-        	if (RangeUnion.canInstantiate(mObj))
-        			results.add((RangeUnion)CamelDesignerProxyFactory.instantiate(mObj, RangeUnion.STEREOTYPE_NAME));
-        	if (Range.canInstantiate(mObj))
-        			results.add((Range)CamelDesignerProxyFactory.instantiate(mObj, Range.STEREOTYPE_NAME));
-        	}
+            if (CamelList.canInstantiate(mObj))
+                    results.add((CamelList)CamelDesignerProxyFactory.instantiate(mObj, CamelList.STEREOTYPE_NAME));
+            if (BooleanValueType.canInstantiate(mObj))
+                    results.add((BooleanValueType)CamelDesignerProxyFactory.instantiate(mObj, BooleanValueType.STEREOTYPE_NAME));
+            if (StringValueType.canInstantiate(mObj))
+                    results.add((StringValueType)CamelDesignerProxyFactory.instantiate(mObj, StringValueType.STEREOTYPE_NAME));
+            if (RangeUnion.canInstantiate(mObj))
+                    results.add((RangeUnion)CamelDesignerProxyFactory.instantiate(mObj, RangeUnion.STEREOTYPE_NAME));
+            if (Range.canInstantiate(mObj))
+                    results.add((Range)CamelDesignerProxyFactory.instantiate(mObj, Range.STEREOTYPE_NAME));
+            }
         return Collections.unmodifiableList(results);
     }
 
@@ -213,7 +218,6 @@ public class TypeModel extends SubModel {
      * Remove a value from the 'Diagrams' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("39c8827a-032f-4229-aff6-f58c762d7778")
     public boolean removeDiagrams(final TypeModelDiagram obj) {
@@ -224,7 +228,6 @@ public class TypeModel extends SubModel {
      * Remove a value from the 'valueTypes' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("bfadecbb-7c2a-4054-9e0b-80ba0eb32dc7")
     public boolean removeValueTypes(final ValueType obj) {
@@ -235,7 +238,6 @@ public class TypeModel extends SubModel {
      * Set the value of the 'camelModel' role.<p>
      * Role description:
      * null
-     * 
      */
     @objid ("e54c9390-e8de-41ee-b06f-ad3bfcbc7cf5")
     public void setCamelModel(final CamelModel obj) {
@@ -247,6 +249,7 @@ public class TypeModel extends SubModel {
     public List<CamelElement> getChilds() {
         List<CamelElement> result = new ArrayList<>();
         result.addAll(super.getChilds());
+        result.addAll(getValueTypes());
         return result;
     }
 
@@ -274,11 +277,11 @@ public class TypeModel extends SubModel {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

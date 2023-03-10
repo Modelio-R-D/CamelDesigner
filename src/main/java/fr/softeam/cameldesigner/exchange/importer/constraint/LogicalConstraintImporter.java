@@ -40,4 +40,16 @@ public class LogicalConstraintImporter<T extends LogicalConstraint, V extends fr
             elt.addConstraints((fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint) camelElt);
     }
 
+    @objid ("f6ed3fd8-972f-4cb9-87f6-f3369cca973e")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setLogicalOperator(elt);
+    }
+
+    @objid ("9153249b-3cbf-4dcf-b41d-03fd2dde9409")
+    private void setLogicalOperator(V elt) {
+        elt.setLogicalOperator(this._element.getLogicalOperator().toString());
+    }
+
 }
