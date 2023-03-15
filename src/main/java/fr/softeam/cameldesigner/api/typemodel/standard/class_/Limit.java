@@ -74,9 +74,10 @@ public class Limit {
     }
 
     /**
-     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype.
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
+     * 
      * @param obj a Class
      * @return a {@link Limit} proxy or <i>null</i>.
      */
@@ -86,19 +87,20 @@ public class Limit {
     }
 
     /**
-     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link Limit} proxy from a {@link Class} stereotyped << Limit >> checking its metaclass and its stereotype.
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * 
      * @param obj a {@link Class}
      * @return a {@link Limit} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
+     * @throws java.lang.IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("de4ca448-be4c-4440-a478-f0e3d1fe5dd5")
     public static Limit safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Limit.canInstantiate(obj))
-        	return new Limit(obj);
+            return new Limit(obj);
         else
-        	throw new IllegalArgumentException("Limit: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("Limit: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("2155859d-62dd-4592-8639-8087088df8c8")
@@ -118,7 +120,8 @@ public class Limit {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
+     * 
      * @return the Class represented by this proxy, never null.
      */
     @objid ("2e4b3947-dcfb-469c-96c0-45ec7a86ca59")
@@ -207,11 +210,11 @@ public class Limit {
         }
 
 
-	static {
-		if(CamelDesignerModule.getInstance() != null) {
-			init(CamelDesignerModule.getInstance().getModuleContext());
-		}
-	}
+static {
+        if(CamelDesignerModule.getInstance() != null) {
+            init(CamelDesignerModule.getInstance().getModuleContext());
+        }
+    }
     }
 
 }

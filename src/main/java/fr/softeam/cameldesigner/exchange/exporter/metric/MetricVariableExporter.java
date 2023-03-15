@@ -32,6 +32,7 @@ public class MetricVariableExporter<T extends MetricVariable> extends MetricExpo
             setOnNodeCandidates(cMetric);
             setFormula(cMetric);
             setComponentMetrics(cMetric);
+            setMetricContext(cMetric);
         }
     }
 
@@ -75,6 +76,13 @@ public class MetricVariableExporter<T extends MetricVariable> extends MetricExpo
     @objid ("4947ca44-8c6b-4bef-a221-d40516c83a5e")
     private void setCurrentConfiguration(camel.metric.MetricVariable cMetric) {
         cMetric.setCurrentConfiguration(this._element.isCurrentConfiguration());
+    }
+
+    @objid ("1662481d-581c-4fce-8933-c4fb12d7f9dc")
+    private void setMetricContext(camel.metric.MetricVariable cMetric) {
+        CDOObject mc = this._process.getElement(this._element.getMetricContext());
+        if ((mc != null) &&  (mc instanceof camel.metric.MetricContext))
+            cMetric.setMetricContext((camel.metric.MetricContext) mc);
     }
 
 }

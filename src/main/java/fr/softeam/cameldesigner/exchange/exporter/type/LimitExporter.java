@@ -3,12 +3,14 @@ package fr.softeam.cameldesigner.exchange.exporter.type;
 import camel.type.TypeFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.typemodel.standard.class_.Limit;
+import fr.softeam.cameldesigner.exchange.exporter.core.CamelElementExporter;
 import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("a9644f1c-997d-4ddc-a3fc-da5f83c5ad6d")
 public class LimitExporter<T extends Limit> {
     @objid ("29d076d5-3f3e-45de-874e-2962c8f59a57")
     public LimitExporter(T elt) {
+        // TODO Auto-generated constructor stub
     }
 
     @objid ("3b1d64a1-bc22-4aa5-8f5e-281dae28dafe")

@@ -1,7 +1,4 @@
 #!/bin/bash 
-call mvn  install:install-file -Dfile=./src/main/lib/com.google.guava-21.0.0-SNAPSHOT.jar -DgroupId=org.eclipse.orbit.bundles  -DartifactId=com.google.guava  -Dversion=21.0.0-SNAPSHOT  -Dpackaging=jar; 
-call mvn  install:install-file -Dfile=./src/main/lib/inject-3.0.0.jar -DgroupId=com.google  -DartifactId=inject  -Dversion=3.0.0  -Dpackaging=jar; 
-call mvn  install:install-file -Dfile=./src/main/lib/multibindings-3.0.0.jar -DgroupId=com.google.inject  -DartifactId=multibindings  -Dversion=3.0.0  -Dpackaging=jar; 
 call mvn  install:install-file -Dfile=./src/main/lib/inject-1.0.0.jar -DgroupId=javax  -DartifactId=inject  -Dversion=1.0.0  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/java-2.0.17.jar -DgroupId=lpg.runtime  -DartifactId=java  -Dversion=2.0.17  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/runtime-3.2.0.jar -DgroupId=org.antlr  -DartifactId=runtime  -Dversion=3.2.0  -Dpackaging=jar 
@@ -46,5 +43,5 @@ call mvn  install:install-file -Dfile=./src/main/lib/state-1.1.0.jar -DgroupId=o
 call mvn  install:install-file -Dfile=./src/main/lib/xtext-2.12.0.jar -DgroupId=org.eclipse  -DartifactId=xtext  -Dversion=2.12.0  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/util-2.12.0.jar -DgroupId=org.eclipse.xtext  -DartifactId=util  -Dversion=2.12.0  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/api-1.7.2.jar -DgroupId=org.slf4j  -DartifactId=api  -Dversion=1.7.2  -Dpackaging=jar 
-call mvn  install:install-file -Dfile=./src/main/lib/CamelDSLExporter-3.0.0-SNAPSHOT.jar  -DgroupId=org.eclipse.xtext  -DartifactId=CamelDSLExporter  -Dversion=3.0.0-SNAPSHOT  -Dpackaging=jar 
-
+call mvn  install:install-file -Dfile=./src/main/lib/camel-5.5.0-SNAPSHOT.jar  -DgroupId=camel  -DartifactId=camel  -Dversion=5.5.0-SNAPSHOT  -Dpackaging=jar 
+call mvn  install:install-file -Dfile=./src/main/lib/camel.dsl-5.5.0-SNAPSHOT.jar  -DgroupId=camel  -DartifactId=camel-dsl  -Dversion=5.5.0-SNAPSHOT  -Dpackaging=jar 

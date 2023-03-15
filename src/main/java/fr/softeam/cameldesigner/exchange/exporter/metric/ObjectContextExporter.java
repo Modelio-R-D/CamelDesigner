@@ -27,6 +27,7 @@ public class ObjectContextExporter<T extends ObjectContext> extends FeatureExpor
             camel.metric.ObjectContext oc = (camel.metric.ObjectContext) elt;
             setComponent(oc);
             setData(oc);
+            setCommunicationInstance(oc);
         }
     }
 
@@ -52,6 +53,13 @@ public class ObjectContextExporter<T extends ObjectContext> extends FeatureExpor
         CDOObject comp = this._process.getElement(this._element.getComponent());
         if ((comp != null) &&  (comp instanceof camel.deployment.Component))
             oc.setComponent((camel.deployment.Component) comp);
+    }
+
+    @objid ("77fe7652-d684-4c24-8d23-52f8180697f9")
+    private void setCommunicationInstance(camel.metric.ObjectContext oc) {
+        CDOObject com = this._process.getElement(this._element.getCommunication());
+        if ((com != null) && (com instanceof camel.deployment.Communication))
+            oc.setCommunication((camel.deployment.Communication) com);
     }
 
 }

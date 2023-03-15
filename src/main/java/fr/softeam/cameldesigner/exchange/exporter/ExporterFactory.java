@@ -2,6 +2,8 @@ package fr.softeam.cameldesigner.exchange.exporter;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
+import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.ConstraintModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeAttributeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureClassExporter;
@@ -17,12 +19,12 @@ import fr.softeam.cameldesigner.exchange.exporter.data.DataTypeModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.BuildConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.ClusterConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.CommunicationExporter;
-import fr.softeam.cameldesigner.exchange.exporter.deployment.CommunicationPortExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.ContainerConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.ContainerExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.DeploymentTypeModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.EventConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.HostingExporter;
-import fr.softeam.cameldesigner.exchange.exporter.deployment.HostingPortExporter;
+import fr.softeam.cameldesigner.exchange.exporter.deployment.ImageConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.LocationCouplingExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.PaaSConfigurationExporter;
 import fr.softeam.cameldesigner.exchange.exporter.deployment.PaaSExporter;
@@ -127,7 +129,15 @@ import fr.softeam.cameldesigner.exchange.exporter.security.SecurityDomainExporte
 import fr.softeam.cameldesigner.exchange.exporter.security.SecurityMetricInstanceExporter;
 import fr.softeam.cameldesigner.exchange.exporter.security.SecurityModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.security.SecuritySLOExporter;
+import fr.softeam.cameldesigner.exchange.exporter.type.BooleanValueTypeExporter;
+import fr.softeam.cameldesigner.exchange.exporter.type.RangeExporter;
+import fr.softeam.cameldesigner.exchange.exporter.type.RangeUnionExporter;
+import fr.softeam.cameldesigner.exchange.exporter.type.StringValueTypeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.TypeModelExporter;
+import fr.softeam.cameldesigner.exchange.exporter.unit.CompositeUnitExporter;
+import fr.softeam.cameldesigner.exchange.exporter.unit.DimensionlessExporter;
+import fr.softeam.cameldesigner.exchange.exporter.unit.SingleUnitExporter;
+import fr.softeam.cameldesigner.exchange.exporter.unit.UnitDimensionExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.UnitModelExporter;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -369,6 +379,8 @@ public class ExporterFactory {
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration.STEREOTYPE_NAME: return new PaaSConfigurationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration.STEREOTYPE_NAME: return new ScriptConfigurationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration.STEREOTYPE_NAME: return new ServerlessConfigurationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ContainerConfiguration.STEREOTYPE_NAME: return new ContainerConfigurationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ContainerConfiguration.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ImageConfiguration.STEREOTYPE_NAME: return new ImageConfigurationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ImageConfiguration.instantiate(obj));
             default:
                 break;
             }
@@ -406,6 +418,7 @@ public class ExporterFactory {
             case fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel.STEREOTYPE_NAME: return new DataInstanceModelExporter<>(fr.softeam.cameldesigner.api.datamodel.standard.package_.DataInstanceModel.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel.STEREOTYPE_NAME: return new DeploymentInstanceModelExporter<>(fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.package_.DeploymentInstanceModel.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel.STEREOTYPE_NAME: return new DeploymentTypeModelExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.package_.DeploymentTypeModel.instantiate(obj));
+            //case fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel.STEREOTYPE_NAME: return new ConstraintModelExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.package_.ConstraintModel.instantiate(obj));
             case fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel.STEREOTYPE_NAME: return new ExecutionModelExporter<>(fr.softeam.cameldesigner.api.executionmodel.standard.package_.ExecutionModel.instantiate(obj));
             case fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel.STEREOTYPE_NAME: return new LocationModelExporter<>(fr.softeam.cameldesigner.api.locationmodel.standard.package_.LocationModel.instantiate(obj));
             case fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel.STEREOTYPE_NAME: return new MetaDataModelExporter<>(fr.softeam.cameldesigner.api.metadatamodel.standard.package_.MetaDataModel.instantiate(obj));
@@ -442,16 +455,18 @@ public class ExporterFactory {
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.instantiate(obj);
-            //                case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.instantiate(obj);
-            default:
+                       //               case fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.STEREOTYPE_NAME: return new SecurityMetricInstanceExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.List.instantiate(obj);
+                             //case fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.STEREOTYPE_NAME: return new StringValueTypeExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.StringValueType.instantiate(obj));
+                            //type
+                            case fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.STEREOTYPE_NAME: return new BooleanValueTypeExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.BooleanValueType.instantiate(obj));
+                            case fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.STEREOTYPE_NAME: return new RangeUnionExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.RangeUnion.instantiate(obj));
+                            case fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.STEREOTYPE_NAME: return new RangeExporter<>(fr.softeam.cameldesigner.api.typemodel.standard.datatype.Range.instantiate(obj));
+                            //unit
+                            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.STEREOTYPE_NAME: return new UnitDimensionExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.UnitDimension.instantiate(obj));
+                            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.STEREOTYPE_NAME: return new DimensionlessExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.instantiate(obj));
+                            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.STEREOTYPE_NAME: return new SingleUnitExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.instantiate(obj));
+                            case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.STEREOTYPE_NAME: return new CompositeUnitExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.instantiate(obj));
+            default:  
                 break;
             }
             return IDefaultModelVisitor.super.visitDataType(obj);

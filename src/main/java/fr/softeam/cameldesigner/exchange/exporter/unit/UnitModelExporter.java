@@ -28,7 +28,11 @@ public class UnitModelExporter<T extends UnitModel> extends SubModelExporter<T> 
     @objid ("a8e2b5fa-4777-4bd5-810d-c35f0dc7a332")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
-        super.attach(elt, context);
+        if ((context instanceof camel.core.CamelModel) && (elt instanceof camel.unit.UnitModel)) {
+            ((camel.core.CamelModel) context).getUnitModels().add((camel.unit.UnitModel) elt);
+        }else {
+            super.attach(elt, context);
+        }
     }
 
 }

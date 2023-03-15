@@ -1,5 +1,7 @@
 package fr.softeam.cameldesigner.exchange.importer.constraint;
 
+import java.util.Date;
+import camel.constraint.ComparisonOperatorType;
 import camel.constraint.UnaryConstraint;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
@@ -19,6 +21,36 @@ public abstract class UnaryConstraintImporter<T extends UnaryConstraint, V exten
     @objid ("dd412d04-a8ec-48a9-bcae-e1780ec6419f")
     public UnaryConstraintImporter(T elt) {
         super(elt);
+    }
+
+    @objid ("ce1311b4-b045-4084-bf1d-42a583b844f3")
+    @Override
+    public void setProperties(V elt) {
+        super.setProperties(elt);
+        setValidity(elt);
+        setComparisonOperator(elt);
+        setThreshold(elt);
+    }
+
+    @objid ("8315b108-1ecd-480d-9992-b6c7201fda93")
+    private void setThreshold(V elt) {
+        elt.setThreshold(String.valueOf(this._element.getThreshold()));
+    }
+
+    @objid ("ed2b904c-5230-4786-b031-0ae8429bca65")
+    private void setComparisonOperator(V elt) {
+        ComparisonOperatorType value = this._element.getComparisonOperator();
+        if (value != null) {
+            elt.setComparisonOperator(value.toString());
+        }
+    }
+
+    @objid ("0dff364e-21c0-4c04-ba05-98c9003a7319")
+    private void setValidity(V elt) {
+        Date value = this._element.getValidity();
+        if (value != null) {
+            elt.setValidity(value.toString());
+        }
     }
 
 }

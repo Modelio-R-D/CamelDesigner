@@ -8,7 +8,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.cameldesigner.profiler.data.Category;
 import fr.softeam.cameldesigner.profiler.data.ProvidingInfo;
 
@@ -22,14 +21,14 @@ public class Main {
 
     @objid ("d72fc10f-4888-49a1-be53-a504d109a8c2")
     public static void main(String[] args) {
-                ProvidingInfo info = new ProvidingInfo();
-                info.setComponentName("component-1");
-                info.getCategories().add(Category.GPU);
-                info.setLanguage("C");
-                info.setRepository("https://github.com/jdtotow/tme");
-                pushAnalyse(info);
-                
-                getResponseAnalyse();
+        ProvidingInfo info = new ProvidingInfo();
+        info.setComponentName("component-1");
+        info.getCategories().add(Category.GPU);
+        info.setLanguage("C");
+        info.setRepository("https://github.com/jdtotow/tme");
+        pushAnalyse(info);
+        
+        getResponseAnalyse();
     }
 
     @objid ("4b02b658-c672-42c8-a7e5-b71d5e33e816")
@@ -179,7 +178,7 @@ public class Main {
     @objid ("52969b0a-acaf-492c-8fb2-403cf7f9d89d")
     public static void getResponseAnalyse() {
         try {
-        	System.out.println("collection of data");
+            System.out.println("collection of data");
             URL url = new URL(_URL + "/collect?code=" + code );
         
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -192,7 +191,7 @@ public class Main {
             if (responsecode != 200) {
                 throw new RuntimeException("HttpResponseCode: " + responsecode);
             } else {
-            	
+                
                 String inline = "";
                 Scanner scanner = new Scanner(url.openStream());
         

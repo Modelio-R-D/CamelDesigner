@@ -26,6 +26,7 @@ public abstract class MmsObjectExporter<T extends MmsObject> extends NamedElemen
             camel.mms.MmsObject mo = (camel.mms.MmsObject) elt;
             setId(mo);
             setURI(mo);
+            setImplemented(mo);
         }
     }
 
@@ -51,6 +52,13 @@ public abstract class MmsObjectExporter<T extends MmsObject> extends NamedElemen
         String content = this._element.getId();
         if (content != null)
             mo.setId(content);
+    }
+
+    @objid ("5ff51634-ec56-4d2c-8b83-ab58629dcea2")
+    private void setImplemented(camel.mms.MmsObject mo) {
+        Boolean content = this._element.isImplemented();
+        if (content != null)
+            mo.setImplemented(content);
     }
 
 }
