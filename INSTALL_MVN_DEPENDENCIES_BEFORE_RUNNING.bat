@@ -1,4 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
+call mvn install:install-file -Dfile=./src/main/lib/mathParser.org-mXparser-jdk18-4.1.1.jar -DgroupId=org.mariuszgromada.math  -DartifactId=mathParser.org-mXparser  -Dversion=4.1.1  -Dpackaging=jar  
+call mvn install:install-file -Dfile=./src/main/lib/com.google.guava-21.0.0.jar -DgroupId=com.google  -DartifactId=guava  -Dversion=21.0.0  -Dpackaging=jar  
+call mvn  install:install-file -Dfile=./src/main/lib/inject-3.0.0.jar -DgroupId=com.google  -DartifactId=inject  -Dversion=3.0.0  -Dpackaging=jar  
 call mvn  install:install-file -Dfile=./src/main/lib/inject-1.0.0.jar -DgroupId=javax  -DartifactId=inject  -Dversion=1.0.0  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/java-2.0.17.jar -DgroupId=lpg.runtime  -DartifactId=java  -Dversion=2.0.17  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/runtime-3.2.0.jar -DgroupId=org.antlr  -DartifactId=runtime  -Dversion=3.2.0  -Dpackaging=jar 

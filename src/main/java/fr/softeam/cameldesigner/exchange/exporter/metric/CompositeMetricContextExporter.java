@@ -6,7 +6,6 @@ import camel.metric.GroupingType;
 import camel.metric.MetricFactory;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.CompositeMetricContext;
-import fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import org.eclipse.emf.cdo.CDOObject;
 
