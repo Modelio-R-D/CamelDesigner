@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -36,10 +36,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("facd10dc-f6ab-44d0-b526-c83be089740a")
 public class ExternalIdentifier extends FeatureClass {
-    @objid ("1a833325-dfd2-4dc1-b8a8-e380ac1bb8b8")
+    @objid ("47fa65b2-6b6b-444b-b4ce-3da21e419b50")
     public static final String STEREOTYPE_NAME = "ExternalIdentifier";
 
-    @objid ("39a92309-0c8a-4b44-8f5a-8e951c7b50b7")
+    @objid ("5a17990f-7782-45e9-967b-7f10076128fe")
     public static final String IDENTIFIER_TAGTYPE = "identifier";
 
     /**
@@ -50,7 +50,7 @@ public class ExternalIdentifier extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("88c613ed-f81c-4343-a553-f4c5916e668d")
+    @objid ("5f698f8a-0219-452f-97e2-0a89808826c8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ExternalIdentifier.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public class ExternalIdentifier extends FeatureClass {
      * 
      * @return a {@link ExternalIdentifier} proxy on the created {@link Class}.
      */
-    @objid ("d8dd8c37-15b5-4ae3-b866-ed7bd0cf6aa0")
+    @objid ("e9d8e756-1c0b-4764-8916-333fab5448da")
     public static ExternalIdentifier create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ExternalIdentifier.STEREOTYPE_NAME);
@@ -74,7 +74,7 @@ public class ExternalIdentifier extends FeatureClass {
      * @param obj a Class
      * @return a {@link ExternalIdentifier} proxy or <i>null</i>.
      */
-    @objid ("d3fdeda4-475f-485b-b8e4-0ab8b0dc8523")
+    @objid ("1a567e5d-ebae-4ce4-b6e8-6c071846d51d")
     public static ExternalIdentifier instantiate(final Class obj) {
         return ExternalIdentifier.canInstantiate(obj) ? new ExternalIdentifier(obj) : null;
     }
@@ -87,7 +87,7 @@ public class ExternalIdentifier extends FeatureClass {
      * @return a {@link ExternalIdentifier} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f7efa94c-a4a3-4e0d-bf68-6efe5e7d1037")
+    @objid ("21674582-5f6a-4cf6-9752-a67959018bda")
     public static ExternalIdentifier safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ExternalIdentifier.canInstantiate(obj))
         	return new ExternalIdentifier(obj);
@@ -95,7 +95,7 @@ public class ExternalIdentifier extends FeatureClass {
         	throw new IllegalArgumentException("ExternalIdentifier: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("670389db-0100-4097-b0ba-107f00431831")
+    @objid ("2dcdde5f-9f69-4bc5-9a61-012fde36e8e8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class ExternalIdentifier extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d697b6ec-f90b-4a52-85d7-a659f5e2b353")
+    @objid ("7adcdd51-e721-49c2-bb52-b2a3b7f707cb")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -126,12 +126,12 @@ public class ExternalIdentifier extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8ebd2bad-5d09-4753-b5f4-8541d0fb66da")
+    @objid ("c3f41b3e-9310-4b1a-939d-cc45ea8b2e5c")
     public String getIdentifier() {
         return this.elt.getTagValue(ExternalIdentifier.MdaTypes.IDENTIFIER_TAGTYPE_ELT);
     }
 
-    @objid ("91858a55-c87b-4d08-b851-bf30935e24bc")
+    @objid ("bccd5d72-846f-4ac7-929c-9820f7c9d699")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -142,7 +142,7 @@ public class ExternalIdentifier extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a53af2d1-0d7c-4b37-b2ea-e4a5a902dab3")
+    @objid ("084dcc82-0628-4ada-844b-bcf3943cb66c")
     public void setIdentifier(final String value) {
         this.elt.putTagValue(ExternalIdentifier.MdaTypes.IDENTIFIER_TAGTYPE_ELT, value);
     }
@@ -155,26 +155,26 @@ public class ExternalIdentifier extends FeatureClass {
         return result;
     }
 
-    @objid ("de3faa1f-d3cf-46d0-b931-8b404fe32699")
+    @objid ("96f687f7-9d6d-4979-a7b9-51d5fdf7505f")
     protected ExternalIdentifier(final Class elt) {
         super(elt);
     }
 
     @objid ("c29cec98-a116-4fff-9165-be962105e0ad")
     public static final class MdaTypes {
-        @objid ("4949246e-137a-4c78-ae23-5f7a1aea8758")
+        @objid ("45e1abff-a388-4922-be39-0cfff37ac1bd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("715dcd0c-5c1e-48f5-b1cb-230f07a4e41c")
+        @objid ("a0b5081a-aeab-44ab-addb-5116a2e26e00")
         public static TagType IDENTIFIER_TAGTYPE_ELT;
 
-        @objid ("6ca2fbe0-c2f9-4f33-b27d-3e7f7c8c815f")
+        @objid ("32f245d7-4739-41aa-937b-1e134f46d380")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d8a3063f-a61e-4c5f-9f5b-b05a6476cc0b")
+        @objid ("bd2ac597-7271-4a85-9dff-031baf3307ba")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("35fd3413-9626-4c78-843e-2ef125bd6e04")
+        @objid ("ef60eac4-259e-4bcf-80f9-8bef3756285b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9e9641f0-08c0-4453-a828-314b9d3e7682");
             IDENTIFIER_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "79f66d2e-b870-4d06-81b9-8851077fb522");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.typemodel.standard.datatype;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("418feac3-a018-487d-af79-66ed2a10b317")
 public class RangeUnion extends ValueType {
-    @objid ("89f978d9-2d4f-4de7-a0f1-3b0c73878f2a")
+    @objid ("a75c8796-92e9-4248-802f-c524a0c64f64")
     public static final String STEREOTYPE_NAME = "RangeUnion";
 
     /**
@@ -46,7 +46,7 @@ public class RangeUnion extends ValueType {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6d5ceb26-0198-4013-9c72-ec9e8f5d033a")
+    @objid ("c02762ed-93a3-44a2-9ff7-cecf05009ace")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && ((DataType) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RangeUnion.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class RangeUnion extends ValueType {
      * 
      * @return a {@link RangeUnion} proxy on the created {@link DataType}.
      */
-    @objid ("7ff01518-589b-4cf1-88c2-78cc3838c808")
+    @objid ("c698024f-c265-4dfb-98ca-a75edc56d934")
     public static RangeUnion create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.DataType");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RangeUnion.STEREOTYPE_NAME);
@@ -70,7 +70,7 @@ public class RangeUnion extends ValueType {
      * @param obj a DataType
      * @return a {@link RangeUnion} proxy or <i>null</i>.
      */
-    @objid ("bc6c1595-5cdb-43d4-ad01-3c5bd68029c5")
+    @objid ("f6ebfc8c-93b0-4b25-b090-9584a86533ca")
     public static RangeUnion instantiate(final DataType obj) {
         return RangeUnion.canInstantiate(obj) ? new RangeUnion(obj) : null;
     }
@@ -83,7 +83,7 @@ public class RangeUnion extends ValueType {
      * @return a {@link RangeUnion} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3de4f73e-4c3e-40a8-bb5b-5787af5e323a")
+    @objid ("f95f8719-70b9-47db-981a-12d9cfc16456")
     public static RangeUnion safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (RangeUnion.canInstantiate(obj))
         	return new RangeUnion(obj);
@@ -91,7 +91,7 @@ public class RangeUnion extends ValueType {
         	throw new IllegalArgumentException("RangeUnion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("40fc9b52-605c-4fd4-ae7c-f3a9bcd120a0")
+    @objid ("ee44239f-72f1-49b5-b5ee-6aac6950a003")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,13 +111,13 @@ public class RangeUnion extends ValueType {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("4614e43e-1ced-450a-b1af-453d321d09e5")
+    @objid ("effd3a31-f62e-418b-b9a1-a4d136dbad96")
     @Override
     public DataType getElement() {
         return (DataType)super.getElement();
     }
 
-    @objid ("26377827-728d-4285-94f1-cc7fd97bd408")
+    @objid ("74cf4b2e-ce97-4e41-8f4b-9e84c107bfce")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class RangeUnion extends ValueType {
         return result;
     }
 
-    @objid ("35acd4ed-d8b4-4c5b-8017-142bbf95e830")
+    @objid ("07e65abd-9af8-495f-93e6-9c2ec4aaf9cb")
     protected RangeUnion(final DataType elt) {
         super(elt);
     }
 
     @objid ("a86c3c8e-3fec-4d3f-8ea5-0137b2bd07d5")
     public static final class MdaTypes {
-        @objid ("0edfcdc5-d66e-4f4a-827f-f612fa2c27c6")
+        @objid ("42268c95-7888-40cf-bdc7-828342a46b8b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("53c0e1f4-9611-4bcd-be16-35eb1cb7dd52")
+        @objid ("8f5f0e3d-63f6-482e-a546-3c3a1bf030b8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("71a35755-6159-4c8a-b17b-0bcc44b48e41")
+        @objid ("6dc977bb-b995-4274-a494-8e8f4e489ca5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("91a44c03-3d72-4d1c-a880-49087c83f920")
+        @objid ("396c5e7f-95a3-40d7-add6-61397dd2d914")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "aeb307d4-49c6-4201-b285-a8ba93b291fb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

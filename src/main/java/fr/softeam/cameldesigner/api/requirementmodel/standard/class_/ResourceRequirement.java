@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a2fe5307-a14d-44f3-b715-fa81339f2064")
 public class ResourceRequirement extends HardRequirement {
-    @objid ("0a0d22af-5dd2-464d-8f42-c5ab6d812acd")
+    @objid ("09a564fd-3000-4ab5-bc4d-f88f95a8a346")
     public static final String STEREOTYPE_NAME = "ResourceRequirement";
 
     /**
@@ -47,7 +47,7 @@ public class ResourceRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9fd9bc3f-1705-4381-879f-9b6b7d1aecde")
+    @objid ("5db3df29-8d93-403e-a097-cb701702db21")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ResourceRequirement.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class ResourceRequirement extends HardRequirement {
      * 
      * @return a {@link ResourceRequirement} proxy on the created {@link Class}.
      */
-    @objid ("8394cf8a-05d8-4269-ac18-266705696d1f")
+    @objid ("3743dfc7-750a-44ba-85f9-5de4880c78a3")
     public static ResourceRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ResourceRequirement.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class ResourceRequirement extends HardRequirement {
      * @param obj a Class
      * @return a {@link ResourceRequirement} proxy or <i>null</i>.
      */
-    @objid ("14a3cfb0-b0f6-4eee-8f46-c64823a7e5ba")
+    @objid ("6ec1c3c9-8741-4790-9ad3-f1480ab882ba")
     public static ResourceRequirement instantiate(final Class obj) {
         return ResourceRequirement.canInstantiate(obj) ? new ResourceRequirement(obj) : null;
     }
@@ -84,7 +84,7 @@ public class ResourceRequirement extends HardRequirement {
      * @return a {@link ResourceRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3c990ece-50e6-4771-84a3-98dc48b5e22a")
+    @objid ("c93d39dd-0324-4f26-9ea1-98e327bf62f9")
     public static ResourceRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ResourceRequirement.canInstantiate(obj))
         	return new ResourceRequirement(obj);
@@ -92,7 +92,7 @@ public class ResourceRequirement extends HardRequirement {
         	throw new IllegalArgumentException("ResourceRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fea7d2c9-a4b5-45dc-a830-13eade592038")
+    @objid ("6d955563-a43f-4136-a225-6ca05e36a168")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class ResourceRequirement extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("8cfc98e0-5e7f-4cfc-99f3-3df4577074d6")
+    @objid ("2c916533-7133-4f25-95b8-12cdaaac5ab7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("217d8ee2-fd2b-4a9b-8bd5-472b6598ebfd")
+    @objid ("2191ee0c-d616-4aa8-b1b7-aaf588518880")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class ResourceRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("572f0a51-ff99-496a-9623-20d7a3fc9b84")
+    @objid ("048cbd70-d45d-43f3-a7e7-f4d5f85504cd")
     protected ResourceRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("c4f4ed2f-02b0-404f-90a5-c2cd9dcca0a9")
     public static final class MdaTypes {
-        @objid ("386b1c32-55a4-48ed-97b8-7724f5c4832f")
+        @objid ("72d13487-30c4-4524-b1bb-60cda3eddab4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("447a8513-dfea-49a6-8e3e-9050933b6f8b")
+        @objid ("4d336e55-70dd-4b50-ab1a-9fcf6f6e02db")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d955457a-81a3-44a0-aebb-7ba704a4034a")
+        @objid ("d3848bf5-74bf-4232-a13a-abfa7fe22ec4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("54f0883a-ae2e-4fd5-b0cc-254488ff4882")
+        @objid ("11dfbee0-ecf8-446f-80b4-109581d6deef")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4e76597a-e007-4596-abfe-591ce920815d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

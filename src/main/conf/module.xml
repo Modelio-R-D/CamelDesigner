@@ -2,21 +2,6 @@
 <Module id="${project.name}" class="fr.softeam.cameldesigner.impl.CamelDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="dc1688c2-8bd2-4585-a786-b1b5877996d7" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
-        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
         <PathEntry path="lib/inject-1.0.0.jar"/>
@@ -65,7 +50,7 @@
         <PathEntry path="lib/gson-2.8.9.jar"/>
         <PathEntry path="lib/mathParser.org-mXparser-4.1.1.jar"/>
         <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/guava-21.0.0.jar"/>
+        <PathEntry path="lib/guava-21.0.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
     </ClassPath>
     <Profiles>

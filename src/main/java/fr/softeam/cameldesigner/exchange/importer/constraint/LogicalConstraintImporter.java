@@ -1,11 +1,11 @@
 package fr.softeam.cameldesigner.exchange.importer.constraint;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import org.eclipse.emf.cdo.CDOObject;
 import camel.constraint.Constraint;
 import camel.constraint.LogicalConstraint;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
 import fr.softeam.cameldesigner.exchange.importer.ICamelImporterVisitor;
+import org.eclipse.emf.cdo.CDOObject;
 
 @objid ("561a92c2-f915-400c-9b8b-5728c1229d8b")
 public class LogicalConstraintImporter<T extends LogicalConstraint, V extends fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint> extends CompositeConstraintImporter<T,V> {
@@ -34,7 +34,7 @@ public class LogicalConstraintImporter<T extends LogicalConstraint, V extends fr
     @Override
     public void attach(V elt, CamelElement context) {
         Constraint constraint = this._element.getConstraints().get(0);
-
+        
         CamelElement camelElt = this._process.getElement(constraint);
         if (camelElt instanceof fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint)
             elt.addConstrained((fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint) camelElt);

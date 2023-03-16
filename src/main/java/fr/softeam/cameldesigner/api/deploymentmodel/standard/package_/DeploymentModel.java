@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.package_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6e4c7b4b-d381-4e52-a43d-fcb0cea6173f")
 public abstract class DeploymentModel extends SubModel {
-    @objid ("15fc65a4-fb17-4f8f-ad83-777d7ff7ef0a")
+    @objid ("13eab05f-1403-4af6-9194-fb9388ed147e")
     public static final String STEREOTYPE_NAME = "DeploymentModel";
 
     /**
@@ -48,12 +48,12 @@ public abstract class DeploymentModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("36c1bd47-c0f0-4139-9488-a8089b0fd56f")
+    @objid ("3fe55114-6be5-4bdf-91e2-cb3b9bcfef35")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DeploymentModel.STEREOTYPE_NAME));
     }
 
-    @objid ("67ef497d-1e56-4cfb-af0c-181f056b5a3e")
+    @objid ("a05090ff-b92c-4979-ab10-54fb2c385ada")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -75,7 +75,7 @@ public abstract class DeploymentModel extends SubModel {
      * null
      * 
      */
-    @objid ("5c765401-b401-4038-ab24-dafb9e7ae32d")
+    @objid ("0ef1452c-da78-411c-bbe5-074e81f26e2d")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -84,13 +84,13 @@ public abstract class DeploymentModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("741fcb14-2287-4eed-b139-e979b0626f43")
+    @objid ("d3a3144c-6396-4bff-bf77-6bf2dd9acc28")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("c54ad241-c0b7-4612-b967-22c9d7eae966")
+    @objid ("3a299f1e-2d3a-4375-bae3-2ad83a0a09de")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -102,7 +102,7 @@ public abstract class DeploymentModel extends SubModel {
      * null
      * 
      */
-    @objid ("e99c78a4-9066-48b9-842a-8511330ca450")
+    @objid ("87bea198-7eb6-4f41-ae3e-e2190c5900f1")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -115,23 +115,23 @@ public abstract class DeploymentModel extends SubModel {
         return result;
     }
 
-    @objid ("af8e23a0-a122-4477-bbaf-1735551aa9f7")
+    @objid ("7a5b9043-83ee-45cc-bd00-e829ecd2734d")
     protected DeploymentModel(final Package elt) {
         super(elt);
     }
 
     @objid ("bcfd6f5c-46e7-47aa-9a4b-79a22339b9f4")
     public static final class MdaTypes {
-        @objid ("4040be53-8757-4e9d-97f5-e4410a31406a")
+        @objid ("82aafc21-f18a-4783-b647-9ccca860e5a2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f825cd5c-be13-49d8-8762-ab4ec181b017")
+        @objid ("9f482f78-0357-4d83-8c29-67c2404ca427")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("78a6dd68-3681-4718-a63c-16e1c7b40a4e")
+        @objid ("b0f9272d-e2ce-4f2d-84b8-afcfe6ee9a72")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("31faf84c-4920-41c2-91b6-5ba307b2f1d5")
+        @objid ("36d81007-8fc3-4e27-9f4e-51b4bf1ea295")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7d620068-3fc6-4fec-8829-0444c0c3186f");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

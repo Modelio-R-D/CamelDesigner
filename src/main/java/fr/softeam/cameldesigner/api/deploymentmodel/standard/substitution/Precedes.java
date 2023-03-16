@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.substitution;
 
@@ -14,7 +14,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
-import fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance.SoftwareComponentInstance;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
@@ -38,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("53b9cb61-464b-46ce-b210-66c4ec16be2a")
 public class Precedes extends Feature {
-    @objid ("7c8f14c2-8320-4a73-b0fe-25f74c9c1ba6")
+    @objid ("f86cf7d3-f793-4e69-9329-2735b61dba31")
     public static final String STEREOTYPE_NAME = "Precedes";
 
     /**
@@ -49,7 +48,7 @@ public class Precedes extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9f15e8f5-a2e2-46d0-a4c5-e367a5365ce3")
+    @objid ("8afd761a-c29c-4269-afd4-aabbaf90ae4f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Substitution) && ((Substitution) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Precedes.STEREOTYPE_NAME));
     }
@@ -59,7 +58,7 @@ public class Precedes extends Feature {
      * 
      * @return a {@link Precedes} proxy on the created {@link Substitution}.
      */
-    @objid ("d55f7fb0-873e-444b-a712-228c4a3f0c8a")
+    @objid ("e178d303-1a06-409e-b74d-262085535704")
     public static Precedes create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Substitution");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Precedes.STEREOTYPE_NAME);
@@ -73,7 +72,7 @@ public class Precedes extends Feature {
      * @param obj a Substitution
      * @return a {@link Precedes} proxy or <i>null</i>.
      */
-    @objid ("b0da4d6d-a6b4-4d2f-a284-ef4238dfdb0a")
+    @objid ("0ca58fa8-b7fe-448d-842d-2e90e16920cf")
     public static Precedes instantiate(final Substitution obj) {
         return Precedes.canInstantiate(obj) ? new Precedes(obj) : null;
     }
@@ -86,7 +85,7 @@ public class Precedes extends Feature {
      * @return a {@link Precedes} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("bfbb903c-9328-424f-82d3-60d4360c1668")
+    @objid ("a7d83acb-d1b2-43db-ae6e-d9f449a528c3")
     public static Precedes safeInstantiate(final Substitution obj) throws IllegalArgumentException {
         if (Precedes.canInstantiate(obj))
         	return new Precedes(obj);
@@ -97,11 +96,11 @@ public class Precedes extends Feature {
     /**
      * Add a value to the 'precededComponents' role.<p>
      * Role description:
-     * null
+     * <Enter note text here>
      * 
      */
-    @objid ("732c39bb-1df7-4a74-97e1-31c3c837482f")
-    public void addPrecededComponents(final SoftwareComponentInstance obj) {
+    @objid ("4c93aa2b-1309-46e3-ab29-42201eba3881")
+    public void addPrecededComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
             Dependency d = session.getModel().createDependency(this.elt, obj.getElement(), Precedes.MdaTypes.MDAASSOCDEP);
@@ -110,7 +109,7 @@ public class Precedes extends Feature {
         }
     }
 
-    @objid ("64bc4495-15f3-45a9-8eb3-cc053ac1df30")
+    @objid ("09ee4084-84b1-470a-b332-93b79e2c91a4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,7 +131,7 @@ public class Precedes extends Feature {
      * null
      * 
      */
-    @objid ("b37c2995-7acb-48bc-96d4-ae57078383e8")
+    @objid ("0b5fd205-c76a-483f-9e04-3fad51cc5c88")
     public SoftwareComponent getComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Precedes.MdaTypes.MDAASSOCDEP)
@@ -150,7 +149,7 @@ public class Precedes extends Feature {
      * Get the underlying {@link Substitution}. 
      * @return the Substitution represented by this proxy, never null.
      */
-    @objid ("1f00aaa2-4aa8-4a56-b9a8-926e4e9cf650")
+    @objid ("699a52c1-493a-44b2-94ed-75dd5b88bfa7")
     @Override
     public Substitution getElement() {
         return (Substitution)super.getElement();
@@ -159,23 +158,25 @@ public class Precedes extends Feature {
     /**
      * Get the values of the 'precededComponents' role.<p>
      * Role description:
-     * null
+     * <Enter note text here>
      * 
      */
-    @objid ("4d9a78ae-94e8-4547-91b8-5c87e68d1fa0")
-    public List<SoftwareComponentInstance> getPrecededComponents() {
-        List<SoftwareComponentInstance> results = new ArrayList<>();
+    @objid ("43ac5d8b-ef99-442b-b6bc-33b01bc3d91c")
+    public List<SoftwareComponent> getPrecededComponents() {
+        List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
            if (d.isStereotyped(Precedes.MdaTypes.MDAASSOCDEP)
               && Objects.equals(d.getTagValue(Precedes.MdaTypes.MDAASSOCDEP_ROLE), "precededComponents")){
-              if (SoftwareComponentInstance.canInstantiate(d.getDependsOn()))
-                results.add((SoftwareComponentInstance)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponentInstance.MdaTypes.STEREOTYPE_ELT.getName()));
+              if (Sensor.canInstantiate(d.getDependsOn()))
+                results.add((Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName()));
+              if (SoftwareComponent.canInstantiate(d.getDependsOn()))
+                results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName()));
            }
         }
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("b4fa962b-56e8-4182-bda7-ea27502039cc")
+    @objid ("85547d88-82c5-4e0d-81de-d1bac216d1e8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -184,11 +185,11 @@ public class Precedes extends Feature {
     /**
      * Remove a value from the 'precededComponents' role.<p>
      * Role description:
-     * null
+     * <Enter note text here>
      * 
      */
-    @objid ("bcd44c15-1f82-4621-a742-b79ab54b8e2b")
-    public boolean removePrecededComponents(final SoftwareComponentInstance obj) {
+    @objid ("f600c594-7110-4c78-aa60-bb92facebd35")
+    public boolean removePrecededComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
             if (d.isStereotyped(Precedes.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(Precedes.MdaTypes.MDAASSOCDEP_ROLE), "precededComponents")) 
@@ -207,7 +208,7 @@ public class Precedes extends Feature {
      * null
      * 
      */
-    @objid ("4914b31f-7001-4411-8504-18e5cd5eb35b")
+    @objid ("e6b9637e-5333-4b8c-8ffd-0ba9028414e7")
     public void setComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -227,23 +228,23 @@ public class Precedes extends Feature {
         }
     }
 
-    @objid ("0fcd7d04-921a-4d4c-81d0-6b26fcb2fb43")
+    @objid ("3d4bb6b5-969a-4f60-b2e7-a7a5fbfe9e71")
     protected Precedes(final Substitution elt) {
         super(elt);
     }
 
     @objid ("c57a9949-4899-4611-bf8e-9d12b19267bc")
     public static final class MdaTypes {
-        @objid ("4b35d52f-875f-47b0-92f7-522b4135179f")
+        @objid ("a341953e-e75a-4fe5-9bd0-435a7422591f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("56a2f20b-b0b2-46d4-b360-7fda59c65b7c")
+        @objid ("94660952-575b-4ded-834f-62240f539df5")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("57956ec3-9cf6-43a9-a674-312b5b06d792")
+        @objid ("8e4468fc-0623-4cca-91ad-04c25cd0e7b8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9f16d38c-d7ff-47ae-abd7-e68aaaa497e1")
+        @objid ("48c97513-2198-4082-bf7f-0bdf53fa918d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4ec7a091-2d58-4b40-8d19-05e45baeacde");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

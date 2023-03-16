@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -36,13 +36,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("01bf9d90-3138-4d31-84e2-99a064932b6c")
 public class Function extends FeatureClass {
-    @objid ("2313f504-402c-4970-ab80-970e3b4e7ff9")
+    @objid ("cf9fbb05-efa4-419a-a059-90860b509c52")
     public static final String STEREOTYPE_NAME = "Function";
 
-    @objid ("204efd56-dc29-4773-9754-5a3780358aea")
+    @objid ("d5e221bb-d3cb-40ab-9230-91316a248b76")
     public static final String ARGUMENTS_TAGTYPE = "arguments";
 
-    @objid ("fec39a1a-deff-4902-8141-8d60ce98d97a")
+    @objid ("a844b231-65e7-43b2-a70f-52975fd0af08")
     public static final String EXPRESSION_TAGTYPE = "expression";
 
     /**
@@ -53,7 +53,7 @@ public class Function extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f96c78b1-c8ed-46c9-a6c6-dc53374eec4a")
+    @objid ("06229f20-cda8-482e-91b0-3a99bc799555")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Function.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class Function extends FeatureClass {
      * 
      * @return a {@link Function} proxy on the created {@link Class}.
      */
-    @objid ("459c91c0-e4d0-43c1-bac0-ba5e84fe9298")
+    @objid ("ef77c2f8-c0d6-41f6-ad05-3f963caba8c3")
     public static Function create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Function.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class Function extends FeatureClass {
      * @param obj a Class
      * @return a {@link Function} proxy or <i>null</i>.
      */
-    @objid ("c01cff30-e479-4824-999e-d4182d76fc7f")
+    @objid ("93e80ee8-3aaf-461f-9517-d14293b7a9b2")
     public static Function instantiate(final Class obj) {
         return Function.canInstantiate(obj) ? new Function(obj) : null;
     }
@@ -90,7 +90,7 @@ public class Function extends FeatureClass {
      * @return a {@link Function} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("3a0b0e26-31ce-4e6b-9cee-c0116f33afc3")
+    @objid ("98f29586-926b-4478-8ebf-528e4e9c2d01")
     public static Function safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Function.canInstantiate(obj))
         	return new Function(obj);
@@ -98,7 +98,7 @@ public class Function extends FeatureClass {
         	throw new IllegalArgumentException("Function: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0d7427d9-464d-4124-9bb9-030712d03333")
+    @objid ("846cc569-1445-4e2c-bcdc-d19523d80941")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -119,7 +119,7 @@ public class Function extends FeatureClass {
      * <p>Property description:<br/>
      * <i>null</i></p>
      */
-    @objid ("fa75fcd4-4aa1-4717-abb2-ccccab0c89c9")
+    @objid ("5979986a-1bf3-41b5-9471-2ee551b7654f")
     public List<String> getArguments() {
         return this.elt.getTagValues(Function.MdaTypes.ARGUMENTS_TAGTYPE_ELT);
     }
@@ -128,7 +128,7 @@ public class Function extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("045c69f4-56cf-4f81-864e-b71cac0bdaf9")
+    @objid ("933a4a66-2f8b-4911-afdd-43cfa03caf2e")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -139,12 +139,12 @@ public class Function extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cf12ce7a-c085-4315-985d-09eac852e583")
+    @objid ("1775e52c-01ab-4a62-96bd-14e1c87d6348")
     public String getExpression() {
         return this.elt.getTagValue(Function.MdaTypes.EXPRESSION_TAGTYPE_ELT);
     }
 
-    @objid ("bffa81ca-b252-4056-b423-7f39cde7150e")
+    @objid ("61945d80-baff-4976-abcb-167d447c8799")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -155,7 +155,7 @@ public class Function extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2cffec35-4d25-4a94-b1e7-d52fb3b1fb0c")
+    @objid ("607281aa-a507-480b-99fd-a9c1d7a79156")
     public void setArguments(final List<String> values) {
         this.elt.putTagValues(Function.MdaTypes.ARGUMENTS_TAGTYPE_ELT, values);
     }
@@ -165,7 +165,7 @@ public class Function extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("79cb86b6-a268-46b6-8816-a9401fa7fa14")
+    @objid ("76c9c734-c285-43d7-8f28-4523f7f37492")
     public void setExpression(final String value) {
         this.elt.putTagValue(Function.MdaTypes.EXPRESSION_TAGTYPE_ELT, value);
     }
@@ -178,29 +178,29 @@ public class Function extends FeatureClass {
         return result;
     }
 
-    @objid ("d81d099e-68f6-41e1-a143-9737fdb5ad07")
+    @objid ("4ed9eaa0-195f-40c1-80ca-177137c6d8a2")
     protected Function(final Class elt) {
         super(elt);
     }
 
     @objid ("9eab8954-1b48-4a6e-93ae-bfc5ed9fb0dc")
     public static final class MdaTypes {
-        @objid ("4de8ade7-9af8-485c-9f40-9fbc481d7a90")
+        @objid ("ff6f20d1-645b-4770-93de-0fc8ea053f1b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("73deac30-6406-4aee-a270-3c367c2cc482")
+        @objid ("ca8f1ce3-a123-40b9-8f66-6ce5edfa3f37")
         public static TagType EXPRESSION_TAGTYPE_ELT;
 
-        @objid ("43452b8c-b0d3-445c-b239-a791dfe6bd1e")
+        @objid ("04069577-3759-43ae-b225-877a8e0fc567")
         public static TagType ARGUMENTS_TAGTYPE_ELT;
 
-        @objid ("37f7cbdc-a05c-459c-9957-a90a3e03e5d7")
+        @objid ("d55c909f-4245-471e-b345-d9021e7cde52")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1d3d20af-621f-43b3-b7ec-346a8748aaa6")
+        @objid ("8dc6e209-99e2-4177-8764-b1d1deceabe0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7e61ebad-ea0e-452e-a201-ed43e3133deb")
+        @objid ("0afa9bcb-2ba2-4614-9bb2-c35a1b37c16b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "2ce13037-e3af-417d-9c03-54d155a1d933");
             EXPRESSION_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "8e19ff42-15d1-4aa8-b24d-934d6c6f8774");

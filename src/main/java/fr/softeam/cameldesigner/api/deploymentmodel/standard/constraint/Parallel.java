@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.constraint;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("4c244d09-57a9-4a83-bf17-30176a65e25c")
 public class Parallel extends Feature {
-    @objid ("14d2429c-5871-4f02-a24c-8b7573a16ea9")
+    @objid ("7ce2c94f-1e46-444a-9c5a-cc3f043458ed")
     public static final String STEREOTYPE_NAME = "Parallel";
 
     /**
@@ -48,7 +48,7 @@ public class Parallel extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b38ef4e9-33a5-4ba9-8a0e-697d97a9baa5")
+    @objid ("8b8587c6-808d-4b9e-9d4f-5159228087a0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Parallel.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class Parallel extends Feature {
      * 
      * @return a {@link Parallel} proxy on the created {@link Constraint}.
      */
-    @objid ("9ba269db-e9d4-4fc3-9d1a-218f082fe5ce")
+    @objid ("6ac68d96-b1ff-48f1-8359-092327aae749")
     public static Parallel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Parallel.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class Parallel extends Feature {
      * @param obj a Constraint
      * @return a {@link Parallel} proxy or <i>null</i>.
      */
-    @objid ("4f81b3a5-deca-4521-ac73-3cf782d3b73a")
+    @objid ("366bbd2e-9c61-462e-84f9-e6db885c20ad")
     public static Parallel instantiate(final Constraint obj) {
         return Parallel.canInstantiate(obj) ? new Parallel(obj) : null;
     }
@@ -85,7 +85,7 @@ public class Parallel extends Feature {
      * @return a {@link Parallel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("be65fa20-d06f-4a74-b483-4f00a406050a")
+    @objid ("f5c55d1e-8267-41e5-b3a5-9b60449dcd97")
     public static Parallel safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (Parallel.canInstantiate(obj))
         	return new Parallel(obj);
@@ -99,7 +99,7 @@ public class Parallel extends Feature {
      * null
      * 
      */
-    @objid ("ed4141a6-0dca-45c7-94e0-5757ea7b0d38")
+    @objid ("a052b7df-9106-4fa2-989c-03480e91ce4d")
     public void addComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -109,7 +109,7 @@ public class Parallel extends Feature {
         }
     }
 
-    @objid ("09575853-d810-429c-a2bd-6978cedf4867")
+    @objid ("99630329-3dea-4460-ab02-1cc655323136")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -131,7 +131,7 @@ public class Parallel extends Feature {
      * null
      * 
      */
-    @objid ("fc2ec113-d9d2-47a1-9c08-6f82edf723e7")
+    @objid ("254ef71f-ed9f-4ec6-9bc0-f1f48d300e55")
     public List<SoftwareComponent> getComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -150,13 +150,13 @@ public class Parallel extends Feature {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("fcc75db5-2e1c-4e7f-bf89-0b8209d1aa5f")
+    @objid ("2a64ab20-ad4a-4cf1-82c4-421f33e975dc")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("e466f0f3-5630-45e7-9872-735db0b02533")
+    @objid ("88dbac85-a4a8-4ef3-8772-fa22e2098e53")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -168,7 +168,7 @@ public class Parallel extends Feature {
      * null
      * 
      */
-    @objid ("68773149-a055-4c9e-bf72-4636e938c866")
+    @objid ("9131b067-236d-4668-9eff-f4c764aa13f6")
     public boolean removeComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -182,23 +182,23 @@ public class Parallel extends Feature {
         return false;
     }
 
-    @objid ("9d93dfdb-6e62-46f6-8b83-abbea6b4e264")
+    @objid ("814eba4f-df82-4e87-94af-4c1f9617a3dc")
     protected Parallel(final Constraint elt) {
         super(elt);
     }
 
     @objid ("0e0eaff4-fbfa-4eff-bde8-1b82a6b4da65")
     public static final class MdaTypes {
-        @objid ("73ac73e5-2857-458a-b6f0-f192d4dbc73a")
+        @objid ("3473c29e-c109-441f-a441-3ac039cb06ca")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e111d37b-ffca-4b69-a9c1-1240a918831b")
+        @objid ("99fde3c5-1d85-4196-9e38-e8ef446d94c1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4e699031-edfb-4e5f-954e-7b5dc28eb16c")
+        @objid ("b5ead744-5c51-43d5-8a94-9cc486a5234c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f61a0b1e-05f4-43f2-af15-46414a16f49c")
+        @objid ("8e937a29-d59c-4857-bc55-612426edabcd")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d9ae85a6-7add-441a-90e4-b7487a23979d");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
