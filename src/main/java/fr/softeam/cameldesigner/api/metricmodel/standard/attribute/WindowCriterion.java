@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.attribute;
 
@@ -40,16 +40,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("900e62c9-b5b3-47e5-bd4f-56f2ac5dc7a3")
 public class WindowCriterion extends ExpendableElement {
-    @objid ("051aeaea-ae16-42bb-8b44-ee672aaeff2f")
+    @objid ("27c7b1cb-32da-4200-872e-a84cd448504a")
     public static final String STEREOTYPE_NAME = "WindowCriterion";
 
-    @objid ("3d8be6ae-630c-4fa9-8a58-f1e4a45346ff")
+    @objid ("57eac916-68c4-4a30-b9e4-a8c17ed0c798")
     public static final String ASCENDING_TAGTYPE = "ascending";
 
-    @objid ("8286abeb-bc34-4e75-a882-89f5f63dc4bb")
+    @objid ("78894611-3b8e-41ea-8d67-8acdd34ccec0")
     public static final String CUSTOM_TAGTYPE = "custom";
 
-    @objid ("0d455807-4791-4a06-8ceb-80d9e84667d7")
+    @objid ("ee2c4ebc-5947-4cdc-b827-087a1ea69219")
     public static final String TYPE_TAGTYPE = "type";
 
     /**
@@ -60,7 +60,7 @@ public class WindowCriterion extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5f7b66a6-d8f5-406d-bd49-58274095d0b7")
+    @objid ("fb179bec-ca04-401b-94a1-818bad8b0071")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && ((Attribute) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, WindowCriterion.STEREOTYPE_NAME));
     }
@@ -70,7 +70,7 @@ public class WindowCriterion extends ExpendableElement {
      * 
      * @return a {@link WindowCriterion} proxy on the created {@link Attribute}.
      */
-    @objid ("a6f31fac-b09e-4a26-b243-95b551a44061")
+    @objid ("3276c405-f36c-4b7c-9b6d-55c2346c4411")
     public static WindowCriterion create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Attribute");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, WindowCriterion.STEREOTYPE_NAME);
@@ -84,7 +84,7 @@ public class WindowCriterion extends ExpendableElement {
      * @param obj a Attribute
      * @return a {@link WindowCriterion} proxy or <i>null</i>.
      */
-    @objid ("bded9f85-bf01-4a50-97e7-3c0731ffdec6")
+    @objid ("5e2738ce-3dd6-4573-a385-3b164841d1ea")
     public static WindowCriterion instantiate(final Attribute obj) {
         return WindowCriterion.canInstantiate(obj) ? new WindowCriterion(obj) : null;
     }
@@ -97,7 +97,7 @@ public class WindowCriterion extends ExpendableElement {
      * @return a {@link WindowCriterion} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("81e923b7-a86a-4f73-96be-085763be4d81")
+    @objid ("8ebfdbff-64d5-4a3f-b84a-cf3fc72768b9")
     public static WindowCriterion safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (WindowCriterion.canInstantiate(obj))
         	return new WindowCriterion(obj);
@@ -105,7 +105,7 @@ public class WindowCriterion extends ExpendableElement {
         	throw new IllegalArgumentException("WindowCriterion: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fd404082-d905-40a9-a8b6-5134559bfe36")
+    @objid ("fd60285b-afc0-43a0-b073-3c9a497f1e89")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +126,7 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("51ffa914-c1ee-4d1a-92b1-c0f39777dd3f")
+    @objid ("45701e1c-b1fd-4ed5-bebb-f528401a87c3")
     public String getCustom() {
         return this.elt.getTagValue(WindowCriterion.MdaTypes.CUSTOM_TAGTYPE_ELT);
     }
@@ -135,7 +135,7 @@ public class WindowCriterion extends ExpendableElement {
      * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("32ef807d-0b0c-4d3a-9f0c-8e02fd01ce83")
+    @objid ("7f9f97b1-f937-4584-ba54-bc30e79e2215")
     @Override
     public Attribute getElement() {
         return (Attribute)super.getElement();
@@ -147,7 +147,7 @@ public class WindowCriterion extends ExpendableElement {
      * null
      * 
      */
-    @objid ("76b506cc-7c9d-4106-a500-61b39e283c11")
+    @objid ("7c2eb73e-a9fe-4642-b0f5-d851ed04a0c7")
     public Metric getMetric() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(WindowCriterion.MdaTypes.MDAASSOCDEP)
@@ -172,12 +172,12 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ecacfdea-b315-478c-b838-11df637bc3ff")
+    @objid ("2d147394-08a8-4030-a0ef-5b3292f339a8")
     public String getType() {
         return this.elt.getTagValue(WindowCriterion.MdaTypes.TYPE_TAGTYPE_ELT);
     }
 
-    @objid ("89102485-9fca-4719-999d-e3b77897b845")
+    @objid ("faebe471-6bef-4f10-ac8d-45317c33a7b1")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -188,7 +188,7 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c72e375c-adba-4c67-8058-2a040b5fd8a1")
+    @objid ("e3d7df22-e32f-49b6-be6e-aa29e52f6dc9")
     public boolean isAscending() {
         return this.elt.isTagged(WindowCriterion.MdaTypes.ASCENDING_TAGTYPE_ELT);
     }
@@ -198,7 +198,7 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("520167c3-9327-4842-84dd-1e3bc013a43e")
+    @objid ("614f7148-b138-4ffc-bf0c-1ed48f0a3b8e")
     public void setAscending(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(WindowCriterion.MdaTypes.ASCENDING_TAGTYPE_ELT, this.elt);
@@ -211,7 +211,7 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1ddbc744-d4ff-412d-a827-3c1442d86b41")
+    @objid ("d3fd6248-70bb-4004-bcd8-ef50c599b7c9")
     public void setCustom(final String value) {
         this.elt.putTagValue(WindowCriterion.MdaTypes.CUSTOM_TAGTYPE_ELT, value);
     }
@@ -222,7 +222,7 @@ public class WindowCriterion extends ExpendableElement {
      * null
      * 
      */
-    @objid ("e008b9b8-d57d-4cd9-aa72-78816d7abcbd")
+    @objid ("ab6c4603-00ca-4485-a167-75f2ec0014d6")
     public void setMetric(final Metric obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -247,37 +247,37 @@ public class WindowCriterion extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b99d2ad1-22be-4e2a-80a6-07732e81d4cf")
+    @objid ("6f4d9f3c-cc33-417e-9d4c-c00654ec5a23")
     public void setType(final String value) {
         this.elt.putTagValue(WindowCriterion.MdaTypes.TYPE_TAGTYPE_ELT, value);
     }
 
-    @objid ("7753d6eb-0a61-4601-ae18-d9955e7b89c7")
+    @objid ("487208dc-b394-481c-a809-20efd154f6b0")
     protected WindowCriterion(final Attribute elt) {
         super(elt);
     }
 
     @objid ("47b38b02-d301-4be9-b91c-62870fa9c181")
     public static final class MdaTypes {
-        @objid ("e127a824-9079-4cf3-bb8b-ad1f3f41dd3f")
+        @objid ("6f27e87f-c542-4fe3-959e-49d680f49d3e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7742dbd4-44c2-4df3-80e8-d03ec6d1793f")
+        @objid ("e71a3b09-2407-4cf1-a2f8-98141c4d379d")
         public static TagType TYPE_TAGTYPE_ELT;
 
-        @objid ("1cb67e9c-eb28-4fb8-b1d8-be54cce8c2ba")
+        @objid ("03c1a3c1-513e-45fa-be3a-cd70e5be2bb3")
         public static TagType CUSTOM_TAGTYPE_ELT;
 
-        @objid ("afc60d99-e842-404c-9560-0d2a93e636f7")
+        @objid ("ca6ddde5-1e3f-4182-91ae-9da36df485a6")
         public static TagType ASCENDING_TAGTYPE_ELT;
 
-        @objid ("f90f5e65-31d4-4b06-ac3c-c889f8eabd42")
+        @objid ("58a08879-0fbd-4390-9029-b10f3054d6f3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("58d8b608-5867-47f1-9965-b866011ed12b")
+        @objid ("3ddbad78-f501-40a9-a3a8-4b0a2711933c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6b0a86e0-12a1-40a8-9071-4a45544dbb9a")
+        @objid ("891472f8-2732-4905-86b2-0930f6962986")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "81e92e20-6f60-47fa-b9ab-2fac27914b51");
             TYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d7a1a6cc-9105-4915-939e-c0387b259400");

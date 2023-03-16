@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -36,19 +36,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("95142f12-2b2c-454b-909a-53110f0aaecc")
 public abstract class CamelAttribute extends ExpendableElement {
-    @objid ("d14f5841-cd31-4f20-9d0d-131d604248c1")
+    @objid ("a410ab3c-1bcf-4c49-ad97-23a96ef1e8d5")
     public static final String STEREOTYPE_NAME = "CamelAttribute";
 
-    @objid ("700af6aa-a398-4336-98db-17a652a334cd")
+    @objid ("25a1724f-3698-496b-af66-1cb7e9f9f9af")
     public static final String MAXINCLUSIVE_TAGTYPE = "maxInclusive";
 
-    @objid ("419af08c-3c85-4653-89e6-2995aa379635")
+    @objid ("157da5a3-2f8a-4a7a-bbb9-a2d0f9846583")
     public static final String MAXVALUE_TAGTYPE = "maxValue";
 
-    @objid ("17d52411-005b-4140-9825-8e86355164aa")
+    @objid ("f52b4ba4-6032-4882-8459-367b9c76d154")
     public static final String MININCLUSIVE_TAGTYPE = "minInclusive";
 
-    @objid ("df7afca9-1be5-4d6a-beb6-8a1e6dd95747")
+    @objid ("c145129c-87bd-4b2b-b463-52aabdb5c64e")
     public static final String MINVALUE_TAGTYPE = "minValue";
 
     /**
@@ -59,7 +59,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("90620703-3bcf-4d96-a2bf-f5cd4f454b4e")
+    @objid ("68e55b18-f858-414a-bf3a-42c0ea10c9b3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelAttribute.STEREOTYPE_NAME));
     }
@@ -70,7 +70,7 @@ public abstract class CamelAttribute extends ExpendableElement {
             AttributeClass.canInstantiate(obj) ? AttributeClass.instantiate(obj) : null;
     }
 
-    @objid ("1b3dca77-1bbf-4e08-84b5-8d8f88c6adc6")
+    @objid ("5742d02c-3358-4a40-8c61-e50652ec9618")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -90,7 +90,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("1828b41d-216a-470a-940f-d7828af2d6ee")
+    @objid ("c6748aec-1ef2-47fa-a2e1-5fc702b6171b")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -101,7 +101,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a4ad747d-b7d8-4961-abcd-63f812b05b39")
+    @objid ("bb56cceb-2c22-4e10-a270-70cae6193dc5")
     public String getMaxValue() {
         return this.elt.getTagValue(CamelAttribute.MdaTypes.MAXVALUE_TAGTYPE_ELT);
     }
@@ -111,12 +111,12 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fc1bb451-c719-410c-b67c-231c5879adc6")
+    @objid ("2ee30089-7b7b-48f8-8cb0-4f59e5c36c06")
     public String getMinValue() {
         return this.elt.getTagValue(CamelAttribute.MdaTypes.MINVALUE_TAGTYPE_ELT);
     }
 
-    @objid ("00c722d2-41ea-4522-932e-742f5b36b888")
+    @objid ("5e4f989c-50af-4bca-a635-2ac9f0fa807d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -127,7 +127,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("266a208a-6753-4848-8acf-a993bde24f26")
+    @objid ("981ed974-0bd8-43ad-b034-1f1b51e018fd")
     public boolean isMaxInclusive() {
         return this.elt.isTagged(CamelAttribute.MdaTypes.MAXINCLUSIVE_TAGTYPE_ELT);
     }
@@ -137,7 +137,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("36624294-865c-4c41-8472-e447c705c44b")
+    @objid ("996aa5bb-33a7-4d5a-bc5e-a7a12dd88b77")
     public boolean isMinInclusive() {
         return this.elt.isTagged(CamelAttribute.MdaTypes.MININCLUSIVE_TAGTYPE_ELT);
     }
@@ -147,7 +147,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3078e28c-f14d-4c10-9b2a-32b9937d41da")
+    @objid ("3311b29d-8393-4386-953d-552de7f09a9f")
     public void setMaxInclusive(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CamelAttribute.MdaTypes.MAXINCLUSIVE_TAGTYPE_ELT, this.elt);
@@ -160,7 +160,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cbf2e142-cc92-4262-94ae-184bd2a5029e")
+    @objid ("a2ff2e96-f39e-4949-a955-3b2d89ba7ff1")
     public void setMaxValue(final String value) {
         this.elt.putTagValue(CamelAttribute.MdaTypes.MAXVALUE_TAGTYPE_ELT, value);
     }
@@ -170,7 +170,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7db344b1-8b0d-426e-8c07-e43e89063ad9")
+    @objid ("8589afcd-177b-4f53-96ca-6b3594684f91")
     public void setMinInclusive(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CamelAttribute.MdaTypes.MININCLUSIVE_TAGTYPE_ELT, this.elt);
@@ -183,7 +183,7 @@ public abstract class CamelAttribute extends ExpendableElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ac57e52f-2966-4c38-b0aa-018c7141216a")
+    @objid ("c59a118f-dd62-44b1-bef6-351352b14169")
     public void setMinValue(final String value) {
         this.elt.putTagValue(CamelAttribute.MdaTypes.MINVALUE_TAGTYPE_ELT, value);
     }
@@ -206,35 +206,35 @@ public abstract class CamelAttribute extends ExpendableElement {
     @objid ("dfa12e10-a0f9-4768-872b-ef51ea1a5db9")
     public abstract void setValueType(final ValueType obj);
 
-    @objid ("86c4bcf9-04de-4790-8aa9-f8e9f4f46793")
+    @objid ("9f947a4a-34a5-4dec-9d61-b374af161b28")
     protected CamelAttribute(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("b2b5f006-86dd-4eba-8d2f-bb3d0fc4f4f7")
     public static final class MdaTypes {
-        @objid ("2dcee710-6bfb-42b9-ad85-bc9145a916ad")
+        @objid ("7ff4441f-3959-409b-aaee-eefb04d9d361")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4271782d-faa0-4f91-a9c8-1d92caa46c46")
+        @objid ("81b707f6-bef7-4085-89fc-b5dac465f891")
         public static TagType MININCLUSIVE_TAGTYPE_ELT;
 
-        @objid ("27777198-ff3e-4ad0-95ea-c9586b311bec")
+        @objid ("f818a2e5-2d1e-439a-a91f-5f14226e7960")
         public static TagType MAXINCLUSIVE_TAGTYPE_ELT;
 
-        @objid ("4c2a0356-d885-42af-944e-5d3c29926290")
+        @objid ("13b20738-45b6-43c4-8bf1-ee6c68203317")
         public static TagType MINVALUE_TAGTYPE_ELT;
 
-        @objid ("d9a612de-8722-459e-83ed-fe9d67d5291a")
+        @objid ("268391fd-fe98-4c4b-b034-415a1a0a2bbe")
         public static TagType MAXVALUE_TAGTYPE_ELT;
 
-        @objid ("7e003f56-0681-4aca-97d6-aa2ef15738bf")
+        @objid ("3d31ced0-3404-4ebb-a30b-758b7d4af4fe")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("abd30a7d-0ef2-43ab-ab6e-6b3d5b77d9d6")
+        @objid ("f58ed2c4-06c5-4510-b979-d8c997d115a4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e8e7aa85-538e-46c1-a0d3-b51fa8b2679e")
+        @objid ("af94c40b-ecf1-4c3e-8fab-ca7035a62747")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "342512a5-ad9b-48b8-a454-5fd44237b8f2");
             MININCLUSIVE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "1468f9d7-f3e5-4acf-b1a7-610abfa949e5");

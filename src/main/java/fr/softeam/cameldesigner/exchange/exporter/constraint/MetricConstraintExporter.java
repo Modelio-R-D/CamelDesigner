@@ -22,12 +22,23 @@ public class MetricConstraintExporter<T extends MetricConstraint> extends Constr
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.constraint.MetricConstraint) {
+            camel.constraint.MetricConstraint metConst = (camel.constraint.MetricConstraint) elt;
+            setMetricContext(metConst);
+        }
     }
 
     @objid ("89efa030-7cd1-495e-ada9-ea8adce62697")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("9c964c2e-7b2b-4de5-8aa3-fd1134221bef")
+    private void setMetricContext(camel.constraint.MetricConstraint metConst) {
+        CDOObject metContext =  this._process.getElement(this._element.getMetricContext());
+        if ((metContext != null) &&  (metContext instanceof camel.metric.MetricContext))
+            metConst.setMetricContext((camel.metric.MetricContext) metContext);
     }
 
 }

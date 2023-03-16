@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1cafb6a7-d466-4de2-a97f-7137b1fa5b8b")
 public class Cause extends FeatureClass {
-    @objid ("f40c4a3a-b58a-4827-886d-fc090bcc94f3")
+    @objid ("02a06376-ba38-41b8-8de0-3342f7e49172")
     public static final String STEREOTYPE_NAME = "Cause";
 
     /**
@@ -51,7 +51,7 @@ public class Cause extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("09723cd2-7189-45bd-a772-51c8d3d9b789")
+    @objid ("04ad8ba6-c313-4d26-a7e3-ac0f1726920f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Cause.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class Cause extends FeatureClass {
      * 
      * @return a {@link Cause} proxy on the created {@link Class}.
      */
-    @objid ("3b3636e8-b56b-4dac-b598-2e6e7095e950")
+    @objid ("96001df6-ffca-46b0-b6ec-8a2e0a583df1")
     public static Cause create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Cause.STEREOTYPE_NAME);
@@ -75,7 +75,7 @@ public class Cause extends FeatureClass {
      * @param obj a Class
      * @return a {@link Cause} proxy or <i>null</i>.
      */
-    @objid ("6163f122-acc5-45a8-a316-dafd7cdab24f")
+    @objid ("aa1cd808-acba-4e85-b4e7-7092dc3ca7cd")
     public static Cause instantiate(final Class obj) {
         return Cause.canInstantiate(obj) ? new Cause(obj) : null;
     }
@@ -88,7 +88,7 @@ public class Cause extends FeatureClass {
      * @return a {@link Cause} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("aeb90472-aa09-484e-a104-48671a9b0903")
+    @objid ("da304f27-f52e-4e44-9117-45e4c95fb81d")
     public static Cause safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Cause.canInstantiate(obj))
         	return new Cause(obj);
@@ -102,13 +102,13 @@ public class Cause extends FeatureClass {
      * null
      * 
      */
-    @objid ("ee1c3703-fcd2-410c-9668-57cb361c6bf5")
+    @objid ("5209e05d-6967-477c-9d0b-df009b5d83a5")
     public void addEventInstances(final EventInstance obj) {
         if (obj!=null)
           ((Class) this.elt).getDeclared().add(obj.getElement());
     }
 
-    @objid ("917b2683-7cc1-48e8-b8d7-366ba56bb513")
+    @objid ("d0eb4b42-772b-4725-a8c6-f70af597f63b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,7 +128,7 @@ public class Cause extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("1287c83c-72ac-4408-8f03-4b1b0cc942cf")
+    @objid ("13e814eb-60c6-4c4f-99a7-b27ad13588c3")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -140,7 +140,7 @@ public class Cause extends FeatureClass {
      * null
      * 
      */
-    @objid ("63b4ea19-3808-4b92-8fb8-74103ebc6b3f")
+    @objid ("f3b287b2-9416-4976-8b36-f8b6fdcb8a75")
     public List<EventInstance> getEventInstances() {
         List<EventInstance> results = new ArrayList<>();
         for (Instance mObj : ((Class) this.elt).getDeclared()){
@@ -152,7 +152,7 @@ public class Cause extends FeatureClass {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("62f9a128-d91f-4077-9a0b-111a09e3bddf")
+    @objid ("71fab7ee-ec63-4f91-b65d-2cbdcc0a12e9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -164,7 +164,7 @@ public class Cause extends FeatureClass {
      * null
      * 
      */
-    @objid ("a3c8c3fa-2b09-4863-ad49-3e8c7e5e6863")
+    @objid ("ca95ea2d-dfb4-4e78-89db-9d5af0021056")
     public boolean removeEventInstances(final EventInstance obj) {
         return (obj!=null)? ((Class) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -177,23 +177,23 @@ public class Cause extends FeatureClass {
         return result;
     }
 
-    @objid ("3ac15908-d5b4-42fe-bfb2-d5e2616dcd19")
+    @objid ("3df35180-a6e2-44e3-bc60-41e6541739c3")
     protected Cause(final Class elt) {
         super(elt);
     }
 
     @objid ("4715c654-3715-48a5-94ee-f2e266c99336")
     public static final class MdaTypes {
-        @objid ("9c8b86b6-e31d-4a49-bc22-d2aa479e7ba4")
+        @objid ("626970c1-a540-40fa-b44c-0148082654f8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("210da31a-2d7d-46d8-9e0a-64064bc0d29e")
+        @objid ("d8b4782a-29be-424c-874d-5170ef9912da")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("416dae09-d23b-4480-bb6a-02fd46544a57")
+        @objid ("eb0bddae-1ce9-47f2-8b75-1787ce8a8987")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b6d87a09-ba64-479c-8fa4-f54ba16f6cd0")
+        @objid ("c7e39567-8961-4326-8752-ea1678f4aec6")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fc44bcb6-59df-49ef-9ed6-13f1d2b85393");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,8 +2,11 @@ package fr.softeam.cameldesigner.exchange.exporter;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
-import fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit;
-import fr.softeam.cameldesigner.exchange.exporter.constraint.ConstraintModelExporter;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.AttributeConstraintExporter;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.IfThenConstraintExporter;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.LogicalConstraintExporter;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.MetricConstraintExporter;
+import fr.softeam.cameldesigner.exchange.exporter.constraint.MetricVariableConstraintExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeAttributeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.AttributeClassExporter;
 import fr.softeam.cameldesigner.exchange.exporter.core.FeatureClassExporter;
@@ -132,7 +135,6 @@ import fr.softeam.cameldesigner.exchange.exporter.security.SecuritySLOExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.BooleanValueTypeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.RangeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.RangeUnionExporter;
-import fr.softeam.cameldesigner.exchange.exporter.type.StringValueTypeExporter;
 import fr.softeam.cameldesigner.exchange.exporter.type.TypeModelExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.CompositeUnitExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.DimensionlessExporter;
@@ -140,6 +142,7 @@ import fr.softeam.cameldesigner.exchange.exporter.unit.SingleUnitExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.UnitDimensionExporter;
 import fr.softeam.cameldesigner.exchange.exporter.unit.UnitModelExporter;
 import org.modelio.metamodel.mda.ModuleComponent;
+import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.Element;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -466,7 +469,7 @@ public class ExporterFactory {
                             case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.STEREOTYPE_NAME: return new DimensionlessExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.Dimensionless.instantiate(obj));
                             case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.STEREOTYPE_NAME: return new SingleUnitExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.SingleUnit.instantiate(obj));
                             case fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.STEREOTYPE_NAME: return new CompositeUnitExporter<>(fr.softeam.cameldesigner.api.unitmodel.standard.datatype.CompositeUnit.instantiate(obj));
-            default:  
+            default:
                 break;
             }
             return IDefaultModelVisitor.super.visitDataType(obj);
@@ -478,12 +481,12 @@ public class ExporterFactory {
             switch (this.stName) {
             case fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort.STEREOTYPE_NAME: return new FeaturePortExporter<>(fr.softeam.cameldesigner.api.camelcore.standard.port.FeaturePort.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.STEREOTYPE_NAME:
-                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE) 
+                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE)
                     return new RequiredCommunicationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.instantiate(obj));
                 else
                     return new ProvidedCommunicationExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.CommunicationPort.instantiate(obj));
-            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.STEREOTYPE_NAME: 
-                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE) 
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.STEREOTYPE_NAME:
+                if (obj.getDirection().getValue()==PortOrientation.IN_VALUE)
                     return new RequiredHostExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.instantiate(obj));
                 else
                     return new ProvidedHostExporter<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.port.HostingPort.instantiate(obj));
@@ -508,6 +511,21 @@ public class ExporterFactory {
         @objid ("01f3699a-1ac5-46c7-9665-632a0405ccca")
         public final void setStereotype(final String stName) {
             this.stName = stName;
+        }
+
+        @objid ("7a2fa996-a064-4b22-9ad1-bcbb3f279d88")
+        @Override
+        public final Object visitConstraint(Constraint obj) {
+            switch (this.stName) {
+            case fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint.STEREOTYPE_NAME: return new MetricConstraintExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricConstraint.instantiate(obj));
+            case fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.AttributeConstraint.STEREOTYPE_NAME: return new AttributeConstraintExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.AttributeConstraint.instantiate(obj));
+            case fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.IfThenConstraint.STEREOTYPE_NAME: return new IfThenConstraintExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.IfThenConstraint.instantiate(obj));
+            case fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint.STEREOTYPE_NAME: return new MetricVariableConstraintExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.MetricVariableConstraint.instantiate(obj));
+            case fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint.STEREOTYPE_NAME: return new LogicalConstraintExporter<>(fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint.instantiate(obj));
+            default:
+                break;
+            }
+            return IDefaultModelVisitor.super.visitConstraint(obj);
         }
 
     }

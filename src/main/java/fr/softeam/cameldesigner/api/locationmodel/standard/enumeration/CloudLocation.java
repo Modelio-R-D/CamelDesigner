@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.enumeration;
 
@@ -37,10 +37,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ec445b98-cb41-4e0b-8577-5f1b03d78177")
 public class CloudLocation extends Location {
-    @objid ("8b1be1e2-62af-4ee8-bff6-22fbbda5f14e")
+    @objid ("fc8f630a-596b-4460-b73f-be3526bac834")
     public static final String STEREOTYPE_NAME = "CloudLocation";
 
-    @objid ("d739b9d1-e782-4e28-b610-926c6e76d0ba")
+    @objid ("3dea2f04-b94e-408a-9265-eaa7fdb337be")
     public static final String ISASSIGNABLE_TAGTYPE = "isAssignable";
 
     /**
@@ -51,7 +51,7 @@ public class CloudLocation extends Location {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("dd541f33-378f-4c72-9cb6-1e32e45ce92f")
+    @objid ("c16aac57-77ed-451c-b5e2-67e83a0a57ff")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Enumeration) && ((Enumeration) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CloudLocation.STEREOTYPE_NAME));
     }
@@ -61,7 +61,7 @@ public class CloudLocation extends Location {
      * 
      * @return a {@link CloudLocation} proxy on the created {@link Enumeration}.
      */
-    @objid ("18a40bdf-f3ca-4a1f-a830-08d25fcce0b9")
+    @objid ("a3c31379-f765-41fd-adf7-4b5b21994c83")
     public static CloudLocation create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Enumeration");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CloudLocation.STEREOTYPE_NAME);
@@ -75,7 +75,7 @@ public class CloudLocation extends Location {
      * @param obj a Enumeration
      * @return a {@link CloudLocation} proxy or <i>null</i>.
      */
-    @objid ("7c147761-0d91-4f5e-84c3-f1cc83f319f1")
+    @objid ("b70d5240-9231-4f04-888a-9a402664834c")
     public static CloudLocation instantiate(final Enumeration obj) {
         return CloudLocation.canInstantiate(obj) ? new CloudLocation(obj) : null;
     }
@@ -88,7 +88,7 @@ public class CloudLocation extends Location {
      * @return a {@link CloudLocation} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2bcdc7a6-6cdf-4cde-9b20-020e7dfc020a")
+    @objid ("c9dde722-983e-4f2a-a0d7-a94773024209")
     public static CloudLocation safeInstantiate(final Enumeration obj) throws IllegalArgumentException {
         if (CloudLocation.canInstantiate(obj))
         	return new CloudLocation(obj);
@@ -102,13 +102,13 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("095f610f-cd49-4224-9468-68c4fb14d678")
+    @objid ("d79e2eb5-409e-4c83-a25c-9bcbaec8872a")
     public void addSubLocations(final CloudLocation obj) {
         if (obj!=null)
           ((Enumeration) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("114f23f4-44e9-4997-9bf6-fbbe8e4d7318")
+    @objid ("6803fbd4-c555-475e-814a-52754b4aefd0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,7 +128,7 @@ public class CloudLocation extends Location {
      * Get the underlying {@link Enumeration}. 
      * @return the Enumeration represented by this proxy, never null.
      */
-    @objid ("d41597c1-fc01-4e18-b9cb-44b78b41979b")
+    @objid ("89813f4f-1c64-41b2-9964-4214a74bade3")
     @Override
     public Enumeration getElement() {
         return (Enumeration)super.getElement();
@@ -140,7 +140,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("248519f0-c044-472b-91a9-4357880dcd0c")
+    @objid ("1601c9cc-b814-4c23-b301-dd380f6ecc0a")
     public GeographicalRegion getGeographicalRegion() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CloudLocation.MdaTypes.MDAASSOCDEP)
@@ -158,7 +158,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("fa9bbe45-86bf-4cfb-9b58-125aa622ec7a")
+    @objid ("da4e2ff6-bb71-4e3c-9ada-3e49f082dbe9")
     public CloudLocation getParent() {
         return (CloudLocation)CamelDesignerProxyFactory.instantiate(((Enumeration) this.elt).getOwner(), CloudLocation.STEREOTYPE_NAME);
     }
@@ -169,7 +169,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("6e387433-446e-4b3e-a58c-66605e08a521")
+    @objid ("9652f137-9c8a-4da4-a2a4-d6f0ea182c57")
     public List<CloudLocation> getSubLocations() {
         List<CloudLocation> results = new ArrayList<>();
         for (ModelTree mObj : ((Enumeration) this.elt).getOwnedElement()){
@@ -179,7 +179,7 @@ public class CloudLocation extends Location {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("da2b7dbb-92b3-4f14-907e-b6b2045d0da8")
+    @objid ("1fb1a177-bd3c-4eaf-afde-a7cb6d22e558")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -190,7 +190,7 @@ public class CloudLocation extends Location {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9dd08309-efbf-4ce8-a85d-f745e49d13ea")
+    @objid ("9717ad30-d65d-4661-a70b-d0ac4b03aa28")
     public boolean isIsAssignable() {
         return this.elt.isTagged(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT);
     }
@@ -201,7 +201,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("73c4718b-43cd-44ca-bccc-b0802815e9e2")
+    @objid ("0e83fea4-c78d-4cf2-9091-70ddce1d8552")
     public boolean removeSubLocations(final CloudLocation obj) {
         return (obj!=null)? ((Enumeration) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -212,7 +212,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("4db7c8e6-3925-46aa-8a73-4fa22fafaba4")
+    @objid ("71360ca2-50e3-4739-b5b5-f1783a5adf75")
     public void setGeographicalRegion(final GeographicalRegion obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -237,7 +237,7 @@ public class CloudLocation extends Location {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e875de75-0ade-4937-9e0c-411a3d371ba9")
+    @objid ("85598107-5128-4bbf-909e-890edf08bead")
     public void setIsAssignable(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(CloudLocation.MdaTypes.ISASSIGNABLE_TAGTYPE_ELT, this.elt);
@@ -251,7 +251,7 @@ public class CloudLocation extends Location {
      * null
      * 
      */
-    @objid ("8cb113bf-8175-4fd8-bf98-4f7383919966")
+    @objid ("91d17c32-b119-4f62-91f3-7f22fd6ecaa1")
     public void setParent(final CloudLocation obj) {
         ((Enumeration) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -265,26 +265,26 @@ public class CloudLocation extends Location {
         return result;
     }
 
-    @objid ("48581540-5688-422f-a877-6c58a9750a0c")
+    @objid ("e74e1a1f-1fd3-499f-a8f5-8142b2b5e9bc")
     protected CloudLocation(final Enumeration elt) {
         super(elt);
     }
 
     @objid ("2601abe9-713a-4dc1-b7a9-b34987ddef2b")
     public static final class MdaTypes {
-        @objid ("a207a556-a14c-4581-a4a8-738978a2f029")
+        @objid ("798fb777-897f-4fa8-898d-24b1f39a1ad4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2da35f95-463f-4083-b562-057a83f62a5e")
+        @objid ("1acbfcb9-d2f3-4990-8358-0629e4600bb9")
         public static TagType ISASSIGNABLE_TAGTYPE_ELT;
 
-        @objid ("90905c55-1e5a-40e7-99b8-8e013dbe36ec")
+        @objid ("d7e194f8-b92e-4b74-98b5-ab5a14be8a3a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6aaca353-f1b6-4d5f-b450-5761b271f024")
+        @objid ("b24c87b7-063a-42db-80a8-27cac8516338")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("24a52f61-4181-4f20-8826-e7148182296f")
+        @objid ("416b33dd-c039-427a-afc5-49800d8e2026")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "230c406e-effa-4238-9937-957af3c1a96d");
             ISASSIGNABLE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "9636ddd4-581e-40c7-98e9-2ce66cca47e8");

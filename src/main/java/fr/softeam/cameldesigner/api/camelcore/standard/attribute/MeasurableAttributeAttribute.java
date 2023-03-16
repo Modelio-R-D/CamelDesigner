@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.attribute;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("64d9c99b-c8af-4882-b63d-a30a40d1dd03")
 public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
-    @objid ("10ce59b8-9ef0-4d3c-836d-f816556ee8b4")
+    @objid ("d2f5b2d4-8e0f-4d0b-be40-415d9d766e7f")
     public static final String STEREOTYPE_NAME = "MeasurableAttribute_Attribute";
 
     /**
@@ -46,7 +46,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5a2b14fb-f07c-4590-8f58-72df749c2f37")
+    @objid ("a7af28ad-c806-4e63-99e0-6d3267ca1b99")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && ((Attribute) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MeasurableAttributeAttribute.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * 
      * @return a {@link MeasurableAttributeAttribute} proxy on the created {@link Attribute}.
      */
-    @objid ("0a13defd-d22d-4bbe-942a-20779963997b")
+    @objid ("dbb62b9c-7f76-4cb2-8d16-0722e64b778e")
     public static MeasurableAttributeAttribute create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Attribute");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MeasurableAttributeAttribute.STEREOTYPE_NAME);
@@ -70,7 +70,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * @param obj a Attribute
      * @return a {@link MeasurableAttributeAttribute} proxy or <i>null</i>.
      */
-    @objid ("69628a0f-db34-422f-8614-0fe88c5f5a1f")
+    @objid ("b25c587f-a1b3-4a07-98ad-307af313d8ef")
     public static MeasurableAttributeAttribute instantiate(final Attribute obj) {
         return MeasurableAttributeAttribute.canInstantiate(obj) ? new MeasurableAttributeAttribute(obj) : null;
     }
@@ -83,7 +83,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * @return a {@link MeasurableAttributeAttribute} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("20a185b1-3d01-4491-beb0-5b118fcdd77c")
+    @objid ("207306f7-a972-4a3f-8eaa-fd36367cfdd8")
     public static MeasurableAttributeAttribute safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (MeasurableAttributeAttribute.canInstantiate(obj))
         	return new MeasurableAttributeAttribute(obj);
@@ -97,7 +97,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * null
      * 
      */
-    @objid ("3c3fd3bd-cfa4-4526-9950-bb311e97378f")
+    @objid ("6106b641-6a75-495a-b3b6-17531ea4ae0d")
     public void addSensors(final Sensor obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -107,7 +107,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
         }
     }
 
-    @objid ("1350d555-3bec-4c4d-9d5b-91da927d7901")
+    @objid ("a1a4dc3f-334e-41b5-8eef-f6eb72d83ca3")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -127,7 +127,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("8fe74af0-f860-4a11-9a5a-27a351a45412")
+    @objid ("c0ef4e16-6fb2-4888-979b-8f8d11b27361")
     @Override
     public Attribute getElement() {
         return (Attribute)super.getElement();
@@ -139,7 +139,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * null
      * 
      */
-    @objid ("c714afd0-11b2-40d5-a7d0-0df2f4394d3f")
+    @objid ("601dac33-4b3f-4f4d-8f1a-2bc175954266")
     public List<Sensor> getSensors() {
         List<Sensor> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -152,7 +152,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("ffa32875-0e45-4484-9da9-1addabdd2f55")
+    @objid ("a8e0c9ad-6f2f-48b8-965d-23e7dbd53dff")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -164,7 +164,7 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
      * null
      * 
      */
-    @objid ("c4ef5d40-fd9d-4f54-884c-c88f06a3603c")
+    @objid ("afba2f85-a0e8-498d-a628-ae79fb6a3f6f")
     public boolean removeSensors(final Sensor obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -178,23 +178,23 @@ public class MeasurableAttributeAttribute extends QualityAttributeAttribute {
         return false;
     }
 
-    @objid ("92ce312d-304f-423c-aaaf-66b58f2af2e9")
+    @objid ("4edf2fa5-0b58-4ad5-8683-41df033e1768")
     protected MeasurableAttributeAttribute(final Attribute elt) {
         super(elt);
     }
 
     @objid ("dd33b21d-72fe-4210-844d-e9819ab9d4aa")
     public static final class MdaTypes {
-        @objid ("22cf84de-98ee-495b-b68e-114ea9eb4bca")
+        @objid ("5be69cf4-22c5-4c5a-a54e-141807a2083a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7424be2a-a286-4742-81dc-f6ccd23ceabc")
+        @objid ("704d11e8-b83f-4352-af70-3e343f698bf4")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("be253346-579d-40c8-8db7-2bda7ff62d4b")
+        @objid ("fd31d2df-b458-4fc1-aa66-46f139500400")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("919fe9eb-c398-4224-84fb-16f83d751806")
+        @objid ("7110b5c3-3b6f-45ff-9a01-8d666b1269d8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0904c020-0de8-4170-8d49-131f2ce38022");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

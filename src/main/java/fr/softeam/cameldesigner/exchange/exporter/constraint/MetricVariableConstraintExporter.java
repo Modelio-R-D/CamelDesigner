@@ -22,12 +22,23 @@ public class MetricVariableConstraintExporter<T extends MetricVariableConstraint
     @Override
     public void setProperties(CDOObject elt) {
         super.setProperties(elt);
+        if (elt instanceof camel.constraint.MetricVariableConstraint) {
+            camel.constraint.MetricVariableConstraint metVarConst = (camel.constraint.MetricVariableConstraint) elt;
+            setMetricVariable(metVarConst);
+        }
     }
 
     @objid ("1272e2d4-fadc-4f11-8ee1-a94fce2d5e58")
     @Override
     public void attach(CDOObject elt, CDOObject context) {
         super.attach(elt, context);
+    }
+
+    @objid ("51793a54-4bfa-45df-9093-26aa85f08d48")
+    private void setMetricVariable(camel.constraint.MetricVariableConstraint metConst) {
+        CDOObject metVar =  this._process.getElement(this._element.getMetricVariable());
+        if ((metVar != null) &&  (metVar instanceof camel.metric.MetricContext))
+            metConst.setMetricVariable((camel.metric.MetricVariable) metVar);
     }
 
 }

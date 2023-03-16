@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("6b8aa5ee-f997-4cf1-b7ce-1eb33e152b7e")
 public class SecurityRequirement extends HardRequirement {
-    @objid ("e08f861e-385b-4bd4-8c8b-909219bd8fe0")
+    @objid ("58dd2f0b-bb92-4784-abb8-d40023ebaf69")
     public static final String STEREOTYPE_NAME = "SecurityRequirement";
 
     /**
@@ -48,7 +48,7 @@ public class SecurityRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c3034bdc-ead7-443f-ae8f-cfe454e0426c")
+    @objid ("033c93e7-45bb-4582-a4c6-10fa288e28a0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityRequirement.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class SecurityRequirement extends HardRequirement {
      * 
      * @return a {@link SecurityRequirement} proxy on the created {@link Class}.
      */
-    @objid ("bfb97878-d44d-4d30-bcff-8b23d72ac9a1")
+    @objid ("4e8fc7c0-09f5-482f-9d97-e3881b7ab580")
     public static SecurityRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityRequirement.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class SecurityRequirement extends HardRequirement {
      * @param obj a Class
      * @return a {@link SecurityRequirement} proxy or <i>null</i>.
      */
-    @objid ("02da0a49-6e78-411e-a8ae-74f82c53fe29")
+    @objid ("324527ea-3647-4721-93ef-ff0f44519485")
     public static SecurityRequirement instantiate(final Class obj) {
         return SecurityRequirement.canInstantiate(obj) ? new SecurityRequirement(obj) : null;
     }
@@ -85,7 +85,7 @@ public class SecurityRequirement extends HardRequirement {
      * @return a {@link SecurityRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("398ca98c-ca62-4771-b2aa-f7390eae6a0c")
+    @objid ("923852ed-8161-466d-ac96-94109e97d8d9")
     public static SecurityRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (SecurityRequirement.canInstantiate(obj))
         	return new SecurityRequirement(obj);
@@ -99,7 +99,7 @@ public class SecurityRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("d4f67c60-6d20-49b7-abad-aec3ee9013ac")
+    @objid ("568676a3-9f91-4de6-a493-16994012d322")
     public void addSecurityControls(final SecurityControl obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -109,7 +109,7 @@ public class SecurityRequirement extends HardRequirement {
         }
     }
 
-    @objid ("430157d7-1042-456d-9dbb-00f428ce3618")
+    @objid ("c0a03499-51cb-4309-8bb7-774495af1751")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -129,7 +129,7 @@ public class SecurityRequirement extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("fc15806a-fb84-4334-a3a1-18b521d1a396")
+    @objid ("b773f5bd-aae3-4186-a663-f2f180d3b464")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -141,7 +141,7 @@ public class SecurityRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("22a1ff4a-6f11-4466-ae23-8f8b273d5865")
+    @objid ("6e02269f-e917-4c96-9055-c5b4d1c54b39")
     public List<SecurityControl> getSecurityControls() {
         List<SecurityControl> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -154,7 +154,7 @@ public class SecurityRequirement extends HardRequirement {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("5d1a32c1-64eb-4d2b-a622-dd5f2c5fbaaa")
+    @objid ("3af2bcdd-b8d3-4bc0-a4e9-e97902e069db")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -166,7 +166,7 @@ public class SecurityRequirement extends HardRequirement {
      * null
      * 
      */
-    @objid ("117e1903-4b3a-40f5-b9d6-1d6810d950de")
+    @objid ("aca44c2f-1cbe-4f86-b307-c2d51f336644")
     public boolean removeSecurityControls(final SecurityControl obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -188,23 +188,23 @@ public class SecurityRequirement extends HardRequirement {
         return result;
     }
 
-    @objid ("18760a5c-95a9-40fb-86e4-cd9bc876e667")
+    @objid ("993bbbed-2418-4ce0-893c-f425826ecc46")
     protected SecurityRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("9b57abca-226e-4023-b549-3dc9186ae82b")
     public static final class MdaTypes {
-        @objid ("7a4b3b7a-ed7a-4cd4-a44c-cde2b2567525")
+        @objid ("f31aaae4-b528-40fd-aac4-c223de308dd0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("cbda3474-74e7-45e4-a79b-7f6542db2cf8")
+        @objid ("568a66d0-9b6d-4589-ba34-cdc17c472e8d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4099323b-0d72-4ab3-8022-cd8ca3e762f8")
+        @objid ("574022fb-e38b-46a3-acdd-d42a7f0923d0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8f7c8160-bf21-4f5f-98c0-9f18a7c1a1bb")
+        @objid ("4ac8eefc-4c9d-45f8-9726-e3fa39b60783")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "c104b35e-2578-4138-94df-ff26daad8dc7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

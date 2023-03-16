@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -39,10 +39,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("63aa1a3f-c5f3-4c42-becc-dcda24f024a0")
 public class ClusterConfiguration extends Configuration {
-    @objid ("ad43a6b2-753d-4521-af7f-1139a27ad968")
+    @objid ("20ac333a-1a85-4d16-9fa1-0843f89d13fe")
     public static final String STEREOTYPE_NAME = "ClusterConfiguration";
 
-    @objid ("a0676cf6-29f1-4ad2-8075-b62581d33260")
+    @objid ("e5de10f8-3cb6-4fe4-9b16-41cb5c5c37da")
     public static final String DOWNLOADURL_TAGTYPE = "downloadURL";
 
     /**
@@ -53,7 +53,7 @@ public class ClusterConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("85135024-94a7-4de8-93fc-2e3cb83ec927")
+    @objid ("877ce604-9fc1-4cac-80a0-727f7dd36234")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ClusterConfiguration.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class ClusterConfiguration extends Configuration {
      * 
      * @return a {@link ClusterConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("5257d74b-b618-47f2-a41a-1fdda1045381")
+    @objid ("1e3ce093-72bd-4bf7-8037-84af7567d571")
     public static ClusterConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ClusterConfiguration.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class ClusterConfiguration extends Configuration {
      * @param obj a Artifact
      * @return a {@link ClusterConfiguration} proxy or <i>null</i>.
      */
-    @objid ("7fc4ae6c-954c-4945-81e7-964cafe1d158")
+    @objid ("c88be351-a803-40eb-b671-9d667758f21c")
     public static ClusterConfiguration instantiate(final Artifact obj) {
         return ClusterConfiguration.canInstantiate(obj) ? new ClusterConfiguration(obj) : null;
     }
@@ -90,7 +90,7 @@ public class ClusterConfiguration extends Configuration {
      * @return a {@link ClusterConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fe6f23e0-dd30-453b-a402-02bee762019f")
+    @objid ("76351607-5306-4f08-803b-622f8024a4d2")
     public static ClusterConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ClusterConfiguration.canInstantiate(obj))
         	return new ClusterConfiguration(obj);
@@ -104,13 +104,13 @@ public class ClusterConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("c43f2621-da6b-4dab-97c3-550b911bba63")
+    @objid ("befe4369-c5cd-47ba-9cb6-0133adba16da")
     public void addConfigParameters(final AttributeAttribute obj) {
         if (obj!=null)
           ((Artifact) this.elt).getOwnedAttribute().add(obj.getElement());
     }
 
-    @objid ("287bbcbf-7075-483b-8e0d-70afa679fa92")
+    @objid ("ae6ad2f2-3bd6-4f0d-8632-c3963d21c79e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,7 +132,7 @@ public class ClusterConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("27ff8025-1aef-4fa6-8afb-750de7c594f0")
+    @objid ("6ff1ca0a-00b4-4c69-b159-cbe66a3204ce")
     public List<AttributeAttribute> getConfigParameters() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Artifact) this.elt).getOwnedAttribute()){
@@ -151,7 +151,7 @@ public class ClusterConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e99bb726-7987-49d4-89d9-0f0e1f776e58")
+    @objid ("6fd56db5-23cb-45e3-bc20-671b1ef54e06")
     public String getDownloadURL() {
         return this.elt.getTagValue(ClusterConfiguration.MdaTypes.DOWNLOADURL_TAGTYPE_ELT);
     }
@@ -160,13 +160,13 @@ public class ClusterConfiguration extends Configuration {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("4b98390f-01bd-4021-abc9-5a7549881968")
+    @objid ("ed2096b8-1416-45ca-b77f-72216991e650")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
     }
 
-    @objid ("c4fc75b8-7394-40cf-865f-e0c096c4d019")
+    @objid ("1b4d7021-1c4a-425a-bfaf-6d948bc05175")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -178,7 +178,7 @@ public class ClusterConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("1f9fbb9e-277f-4426-a9fe-601df94e4014")
+    @objid ("54703e82-951d-4f5f-b0b1-7165dd8308d9")
     public boolean removeConfigParameters(final AttributeAttribute obj) {
         return (obj!=null)? ((Artifact) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -188,7 +188,7 @@ public class ClusterConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3cb14af5-2dd7-4e0c-94bb-bbb7205c248a")
+    @objid ("636df7dc-3742-43b5-96b5-9ed86b564e46")
     public void setDownloadURL(final String value) {
         this.elt.putTagValue(ClusterConfiguration.MdaTypes.DOWNLOADURL_TAGTYPE_ELT, value);
     }
@@ -201,26 +201,26 @@ public class ClusterConfiguration extends Configuration {
         return result;
     }
 
-    @objid ("fd0c35cf-ba65-4a48-bb88-9c07a4bdc105")
+    @objid ("500cb3e1-04f1-49fe-80f5-81c8734758ad")
     protected ClusterConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("6a9ae6c0-8629-45e2-ab3b-cb4a2ca54edb")
     public static final class MdaTypes {
-        @objid ("2ad71d36-fc74-4123-bcab-26ad6842dbb0")
+        @objid ("fbba2f3d-0689-4db6-8f25-36580a3bc0c9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d6a389ab-a7d5-4b4c-895f-1d810f6a2692")
+        @objid ("a519e1a2-bb70-4849-9460-2ba284a5e217")
         public static TagType DOWNLOADURL_TAGTYPE_ELT;
 
-        @objid ("719d9853-6fa9-45c1-a852-01344f903d0b")
+        @objid ("78e2d748-a56a-4ffc-aba6-bef98f5eff9f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8c5046f7-e9b7-4e61-b102-48fd85bf8e36")
+        @objid ("b5a437d7-06ec-49e5-9194-c226d317fb20")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f148ec84-7d6f-45b9-ac94-7a0bdbeda0ff")
+        @objid ("cc6a54ac-f8ef-4058-869d-30d3e04be154")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "b8d5ac50-75fd-4e01-9d50-04e6139e072c");
             DOWNLOADURL_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "33966f3f-93c8-4e48-88fc-3e4ca226da16");

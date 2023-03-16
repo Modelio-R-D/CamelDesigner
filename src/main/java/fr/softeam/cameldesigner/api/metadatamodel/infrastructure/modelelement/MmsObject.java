@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement;
 
@@ -43,16 +43,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("5b8e0066-83d4-4b26-bada-7dcae35d5e7d")
 public abstract class MmsObject extends NamedElement {
-    @objid ("c3a47c9c-54e8-453f-a9ad-9418138f3c9f")
+    @objid ("54c9a126-1af9-45cc-962f-56e57f352340")
     public static final String STEREOTYPE_NAME = "MmsObject";
 
-    @objid ("56249430-5a7f-44e4-89c8-33cf24fff887")
+    @objid ("576d4620-311f-4597-8d5f-4480ba17865d")
     public static final String ID_TAGTYPE = "id";
 
-    @objid ("b8cac343-5f21-4b1e-b33d-1a1ddf8d6a1b")
+    @objid ("96db24d9-cbcc-47a3-af15-4291a345b387")
     public static final String IMPLEMENTED_TAGTYPE = "implemented";
 
-    @objid ("714fab1d-38ae-4ceb-92ae-7cbb49a7773f")
+    @objid ("b5e05ddd-de59-4af8-97fb-f9316e33d97d")
     public static final String URI_TAGTYPE = "uri";
 
     /**
@@ -63,7 +63,7 @@ public abstract class MmsObject extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4986e74b-6783-4c28-be0a-0a2f8182fc96")
+    @objid ("ee32edf1-d306-4437-bce8-e08260b18e47")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MmsObject.STEREOTYPE_NAME));
     }
@@ -76,7 +76,7 @@ public abstract class MmsObject extends NamedElement {
                     MmsPropertyInstance.canInstantiate(obj) ?  MmsPropertyInstance.instantiate((AttributeLink)obj) : null;
     }
 
-    @objid ("5c726870-6409-4826-8da8-bd4dd0e54f41")
+    @objid ("eb0be126-97a9-4f25-bf83-88469bd70106")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -96,7 +96,7 @@ public abstract class MmsObject extends NamedElement {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("f62936ca-cc93-496d-a08e-8ac0e47ff9b3")
+    @objid ("63c1173f-5d36-4d34-af9c-5d395da5bb05")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -107,7 +107,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e79231d3-04dd-4f8e-9fa4-f3b3a3634535")
+    @objid ("0edd4000-f3cf-4373-aa39-c30ff41ab779")
     public String getId() {
         return this.elt.getTagValue(MmsObject.MdaTypes.ID_TAGTYPE_ELT);
     }
@@ -117,12 +117,12 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("097089b5-f1bd-49db-95c2-d1818dbfea7f")
+    @objid ("957f19ba-4d4b-429d-a3bc-014287e11835")
     public String getUri() {
         return this.elt.getTagValue(MmsObject.MdaTypes.URI_TAGTYPE_ELT);
     }
 
-    @objid ("1f5b1ce4-1e33-43cc-afbf-37fd46a4e2f9")
+    @objid ("b702f89d-b09b-4570-b242-89cec5369612")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -133,7 +133,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b17e869f-40a7-4a3b-8b64-57bb9585bacb")
+    @objid ("909a4b98-9cb9-4a10-9610-d8e50b8d32a0")
     public boolean isImplemented() {
         return this.elt.isTagged(MmsObject.MdaTypes.IMPLEMENTED_TAGTYPE_ELT);
     }
@@ -143,7 +143,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2aa0fd3a-23f2-4366-9bd7-f64cc2bfb7d2")
+    @objid ("e701b5f9-1971-467f-9f9b-b2e67d6292aa")
     public void setId(final String value) {
         this.elt.putTagValue(MmsObject.MdaTypes.ID_TAGTYPE_ELT, value);
     }
@@ -153,7 +153,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("82b6a4ce-bd3a-495f-b1de-72905d9ac7df")
+    @objid ("829b9e61-b77e-48ec-b10e-df7798a5bdba")
     public void setImplemented(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(MmsObject.MdaTypes.IMPLEMENTED_TAGTYPE_ELT, this.elt);
@@ -166,7 +166,7 @@ public abstract class MmsObject extends NamedElement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9386265a-2dc4-4782-82a2-96826687ed5c")
+    @objid ("0d704a01-65c1-4f21-bb1b-bd4c2bdc4956")
     public void setUri(final String value) {
         this.elt.putTagValue(MmsObject.MdaTypes.URI_TAGTYPE_ELT, value);
     }
@@ -179,32 +179,32 @@ public abstract class MmsObject extends NamedElement {
         return result;
     }
 
-    @objid ("d06c5aab-a19d-4f29-8faf-96a06351e293")
+    @objid ("9eabc7e5-375e-48bd-9a93-e7be843058b7")
     protected MmsObject(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("2f90ab01-c906-4902-9288-e931e22fb14d")
     public static final class MdaTypes {
-        @objid ("932858e6-e45d-401e-91d3-7a59b3a20865")
+        @objid ("0ce2ec8f-9762-4f68-af9b-1c3fb78bc7b9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9b656db4-7aac-48df-947a-7e2dfd281d21")
+        @objid ("3ff0d143-9a4b-4e9f-a4a0-6f05b30ce0c7")
         public static TagType ID_TAGTYPE_ELT;
 
-        @objid ("9226767d-a1a7-4f7e-907f-08e784c922db")
+        @objid ("b8fb5e14-6e1a-4fbf-b7b9-1f9ab2f3eccd")
         public static TagType URI_TAGTYPE_ELT;
 
-        @objid ("6b10e709-7c97-4324-9483-379908c5ad19")
+        @objid ("0f3bad81-ffa4-4fda-b0d8-a31bb8e85f7b")
         public static TagType IMPLEMENTED_TAGTYPE_ELT;
 
-        @objid ("252a257f-b808-488d-8a63-fc99af8df017")
+        @objid ("a73708f9-efc3-4ae8-8e8d-61d7fe7b72f4")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c5798edb-8a58-4ac5-824f-70e3e5b37855")
+        @objid ("559b2e98-bdc9-4a0d-ab6b-cb7f83e7e8bb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("68327eff-5cb2-4a9c-b841-f4eb11a5d170")
+        @objid ("b8a0c40e-2b63-443b-8d73-fab0fdbdc937")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "907f72a5-eb52-4908-953e-7f9a66b9939d");
             ID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a139c9cf-4b74-454a-b4cd-b0363a008c40");

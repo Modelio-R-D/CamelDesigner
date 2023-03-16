@@ -1,5 +1,7 @@
 package fr.softeam.cameldesigner.exchange.exporter;
 
+import java.util.ArrayList;
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerProxyFactory;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelElement;
@@ -107,6 +109,15 @@ public class GenerateProcess implements IElementProcess<CDOObject,CamelElement> 
             return null;
         }
         return processedElement;
+    }
+
+    @objid ("01a2270d-09a8-4ec3-ae8e-0725396faf3f")
+    public List<CDOObject> getElements(List<? extends CamelElement> elements) {
+        List<CDOObject> result = new ArrayList<>();
+        for (CamelElement elt : elements) {
+            result.add(getElement(elt));
+        }
+        return result;
     }
 
 }

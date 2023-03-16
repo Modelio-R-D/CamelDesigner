@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.port;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("bf141fb2-a5e7-4adf-9870-921e4a516048")
 public class HostingPort extends FeaturePort {
-    @objid ("f1a655d7-206d-4470-9fd4-51ba4b4cdfd7")
+    @objid ("00941176-3dfa-4b56-9ea2-9c4b0dc5e694")
     public static final String STEREOTYPE_NAME = "HostingPort";
 
     /**
@@ -47,7 +47,7 @@ public class HostingPort extends FeaturePort {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4a4b2acb-0b96-41a6-a474-442146c654ac")
+    @objid ("d0ba7767-4647-4c21-9510-db2a485c03cc")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Port) && ((Port) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HostingPort.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class HostingPort extends FeaturePort {
      * 
      * @return a {@link HostingPort} proxy on the created {@link Port}.
      */
-    @objid ("ebfd1866-43a3-4f92-88ec-4f40151dfdc0")
+    @objid ("ac3c571d-a596-4d70-852b-1a7b479386db")
     public static HostingPort create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Port");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HostingPort.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class HostingPort extends FeaturePort {
      * @param obj a Port
      * @return a {@link HostingPort} proxy or <i>null</i>.
      */
-    @objid ("9cbb2da2-69f3-4151-841b-dee31ebe137e")
+    @objid ("816e4e0f-6be6-4d94-8056-07e7ced40609")
     public static HostingPort instantiate(final Port obj) {
         return HostingPort.canInstantiate(obj) ? new HostingPort(obj) : null;
     }
@@ -84,7 +84,7 @@ public class HostingPort extends FeaturePort {
      * @return a {@link HostingPort} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("7fb950fa-de0f-4e74-9dc4-f426251d8dde")
+    @objid ("150252f7-d820-429e-ba56-ccc80a95007b")
     public static HostingPort safeInstantiate(final Port obj) throws IllegalArgumentException {
         if (HostingPort.canInstantiate(obj))
         	return new HostingPort(obj);
@@ -92,7 +92,7 @@ public class HostingPort extends FeaturePort {
         	throw new IllegalArgumentException("HostingPort: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3305d0fb-384d-4483-bab6-1e6fef0215b3")
+    @objid ("d105ba63-e52b-4657-ae42-6e34abf44ba2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class HostingPort extends FeaturePort {
      * Get the underlying {@link Port}. 
      * @return the Port represented by this proxy, never null.
      */
-    @objid ("116f2758-184b-45d1-977e-7ed37d565a4e")
+    @objid ("237c4836-db7e-4e36-ab30-23f7adfc3533")
     @Override
     public Port getElement() {
         return (Port)super.getElement();
     }
 
-    @objid ("2dceeaf4-1374-4563-b981-a9c1272914c3")
+    @objid ("cf6d3355-5c9c-4d43-b7ec-b560434c695a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -132,23 +132,23 @@ public class HostingPort extends FeaturePort {
         return result;
     }
 
-    @objid ("3ce0a639-4d5f-475d-a51a-336245fc829e")
+    @objid ("7b383d15-ec7c-4111-9125-87edfc8a38ed")
     protected HostingPort(final Port elt) {
         super(elt);
     }
 
     @objid ("98fe20f6-f33e-4b62-b8ea-1f4b27c8cf6e")
     public static final class MdaTypes {
-        @objid ("743454e8-4ccf-49e7-b193-01eda288543c")
+        @objid ("99ac9d5f-0eb6-4043-ab07-e091a4acc618")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1dc1bcbf-4365-4b16-b720-589c595b5257")
+        @objid ("7f1519c9-4bc6-46c1-a5af-bee02a7262a1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b519d786-38b3-4794-83ec-dafa7051c894")
+        @objid ("ed028d07-271b-447c-83a6-a6f05f8be021")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c6dbc5fb-a695-4179-83bf-742559c83f93")
+        @objid ("eae5fd0d-7320-47e9-8440-904ff133f815")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0672a25d-20e7-4566-b187-f3f3572d73c3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

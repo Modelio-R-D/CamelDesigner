@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.classifier;
 
@@ -131,7 +131,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2d7f6e37-5b08-4a69-88e8-d8b0a19ca96a")
 public abstract class FeatureClassifier extends Feature {
-    @objid ("c1dc4d11-b9d4-4425-8891-0d2f7587b679")
+    @objid ("056de799-bf37-41e6-94e1-b01170c0fdce")
     public static final String STEREOTYPE_NAME = "Feature_Classifier";
 
     /**
@@ -142,7 +142,7 @@ public abstract class FeatureClassifier extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c307c06d-113c-464c-a54d-fcd9a476dd6d")
+    @objid ("1bfac0af-f7a4-4a49-95b5-e208b3f58f8c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Classifier) && ((Classifier) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeatureClassifier.STEREOTYPE_NAME));
     }
@@ -153,7 +153,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("e5ea130e-198d-485b-aa71-a74e2d9e604e")
+    @objid ("ac706c9c-8c4a-417f-a99d-13489d17dd4f")
     public void addAttributes(final AttributeAttribute obj) {
         if (obj!=null)
           ((Classifier) this.elt).getOwnedAttribute().add(obj.getElement());
@@ -165,13 +165,13 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("fdff4ac4-ad40-456c-88af-b066734c8c69")
+    @objid ("0394e55b-66d3-4abf-ab9f-0617e92a347e")
     public void addSubFeatures(final FeatureClassifier obj) {
         if (obj!=null)
           ((Classifier) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("b6a66fc5-c1e7-48a1-9dd2-96c042892b93")
+    @objid ("d6c3e252-8ef2-4f58-8bf0-25b77ecfaec2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -193,7 +193,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("daa03967-6034-48ae-b48d-6131922e5a23")
+    @objid ("5ba4de29-27f5-4581-96ac-2301d682a527")
     public List<AttributeAttribute> getAttributes() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Classifier) this.elt).getOwnedAttribute()){
@@ -211,7 +211,7 @@ public abstract class FeatureClassifier extends Feature {
      * Get the underlying {@link Classifier}. 
      * @return the Classifier represented by this proxy, never null.
      */
-    @objid ("56d1a5e1-aaa1-4bc2-b962-ec17a26bc46c")
+    @objid ("dab66820-397b-4b65-9322-dafe14badd9b")
     @Override
     public Classifier getElement() {
         return (Classifier)super.getElement();
@@ -223,7 +223,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("139d07a8-30a0-4320-bcf9-2b9c2cfded8e")
+    @objid ("f9e51bc2-0fce-4721-bb56-e22e88a6c694")
     public FeatureClassifier getParent() {
         return (FeatureClassifier)CamelDesignerProxyFactory.instantiate(((Classifier) this.elt).getOwner(), FeatureClassifier.STEREOTYPE_NAME);
     }
@@ -234,7 +234,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("76c62dd3-641b-4e39-80ac-fa03656a697a")
+    @objid ("fdad43c5-7628-483f-93f3-b34e57432aa1")
     public List<FeatureClassifier> getSubFeatures() {
         List<FeatureClassifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Classifier) this.elt).getOwnedElement()){
@@ -422,7 +422,7 @@ public abstract class FeatureClassifier extends Feature {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("7d0381bb-69eb-4deb-973d-4679e97541ab")
+    @objid ("8bc40992-f55f-415e-a712-2f9639a83c14")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -434,7 +434,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("a6bd8305-012a-42ec-b3b6-430225795442")
+    @objid ("7c45f6c6-9ff3-49aa-869a-e72ef7019267")
     public boolean removeAttributes(final AttributeAttribute obj) {
         return (obj!=null)? ((Classifier) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -445,7 +445,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("84f5d931-3c1a-484c-9e6d-5450b6502e8c")
+    @objid ("2410545f-e111-47d1-87d2-a3ff98dc15c4")
     public boolean removeSubFeatures(final FeatureClassifier obj) {
         return (obj!=null)? ((Classifier) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -456,7 +456,7 @@ public abstract class FeatureClassifier extends Feature {
      * null
      * 
      */
-    @objid ("fe225cb4-d77a-4f6d-a18d-bb02f3216187")
+    @objid ("88d5723d-a303-4c87-afee-eb9d6ffa8c72")
     public void setParent(final FeatureClassifier obj) {
         ((Classifier) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -471,23 +471,23 @@ public abstract class FeatureClassifier extends Feature {
         return result;
     }
 
-    @objid ("09b57c5e-65c6-42d2-89a9-3de9b1793e1e")
+    @objid ("1b41e226-6a3b-47bf-bd2e-28816bec41f3")
     protected FeatureClassifier(final Classifier elt) {
         super(elt);
     }
 
     @objid ("625f1330-cd2e-4a07-af63-465f510059f1")
     public static final class MdaTypes {
-        @objid ("a8c67c82-ab68-44a1-a5ac-b940e2297c89")
+        @objid ("aac87b5c-6ec9-404d-a14b-34ffa316d60d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a013e084-c8f7-429e-b757-e6b89afb66b6")
+        @objid ("1562bc06-d07c-47d7-9303-618f7538c1ff")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("be7165e6-0c84-4c89-9c38-4baf618d14d3")
+        @objid ("3482491c-33d4-4d5d-a846-8890eaeec51f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("15c647aa-8716-4090-8665-67ef749a407d")
+        @objid ("c503c204-c2e3-43b8-b367-45fb7d7d6215")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7c5a3627-4282-427f-93a3-957cdca1adb7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

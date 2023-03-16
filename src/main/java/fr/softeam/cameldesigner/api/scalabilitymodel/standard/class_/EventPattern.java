@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.class_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1376376d-c30d-492b-b270-8ae507dd5d21")
 public abstract class EventPattern extends Event {
-    @objid ("d9dac50c-1475-48cb-8acf-dc972dd8dc6d")
+    @objid ("f4163e07-2e67-4774-aba7-b591e522adc3")
     public static final String STEREOTYPE_NAME = "EventPattern";
 
     /**
@@ -47,12 +47,12 @@ public abstract class EventPattern extends Event {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("63434f3e-4535-40f4-99c2-857959f0dba0")
+    @objid ("4fd1383c-60ba-463f-81a0-b76ca52a9705")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventPattern.STEREOTYPE_NAME));
     }
 
-    @objid ("2a5fea40-41ba-4d89-8315-3b22f4d2386d")
+    @objid ("066b789c-d8cf-4f2d-8e26-0072cd8cbdff")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,7 +72,7 @@ public abstract class EventPattern extends Event {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("67c9c054-3065-4be0-98f2-231ac5e469be")
+    @objid ("af3aa58e-8583-4e4a-8221-bc4d8c53c10b")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -84,7 +84,7 @@ public abstract class EventPattern extends Event {
      * null
      * 
      */
-    @objid ("516acfe3-4b9b-4bc0-98ac-17b10f540ca1")
+    @objid ("6b68924a-924f-4637-b61d-9248de69a51b")
     public Timer getTimer() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(EventPattern.MdaTypes.MDAASSOCDEP)
@@ -96,7 +96,7 @@ public abstract class EventPattern extends Event {
         return null;
     }
 
-    @objid ("0e36854a-cc9c-4d72-9bf6-2db57133d89f")
+    @objid ("43ecec3c-1df9-4652-8b68-8c074db541f4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -108,7 +108,7 @@ public abstract class EventPattern extends Event {
      * null
      * 
      */
-    @objid ("62745a93-5549-460d-b677-fc207903261d")
+    @objid ("a9e9a543-5351-4c30-9dff-bd4e6aee1835")
     public void setTimer(final Timer obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -136,23 +136,23 @@ public abstract class EventPattern extends Event {
         return result;
     }
 
-    @objid ("dae2e27c-c8af-4304-ad37-e6456850c211")
+    @objid ("10dd4b38-f829-432b-93ca-ea4ad8eb790b")
     protected EventPattern(final Class elt) {
         super(elt);
     }
 
     @objid ("dd1011e3-255f-4c6a-a51e-162a33438d4c")
     public static final class MdaTypes {
-        @objid ("d68448a1-08c4-4e41-adc6-5f427bcc06f4")
+        @objid ("e2569f69-c90a-4059-a5aa-60893914e261")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eac554b1-e6d9-4a32-bcf3-75d00629ef33")
+        @objid ("338333af-a170-474b-acd6-592bae69b45b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("70b72602-6459-4ce1-af37-63753421a31c")
+        @objid ("d255ead4-71ab-4506-8c04-9f0dd7386d71")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9b9996c9-1044-444f-a9f6-fff63fb5acae")
+        @objid ("b99799c7-3d96-47c3-9617-0df8f8e39fe8")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "46e221ca-8a8f-458b-8018-009a273cc009");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

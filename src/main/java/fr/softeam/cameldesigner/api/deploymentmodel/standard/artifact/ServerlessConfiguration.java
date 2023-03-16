@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -41,13 +41,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("db495a2b-edb1-4bc6-b8dc-73585d54cb3e")
 public class ServerlessConfiguration extends Configuration {
-    @objid ("033657a4-b00e-4168-8171-457693aeb448")
+    @objid ("e75cd3c6-afaf-4828-b9a6-e6d6301066f5")
     public static final String STEREOTYPE_NAME = "ServerlessConfiguration";
 
-    @objid ("0f675f82-3cff-443b-9dbc-729e89df236d")
+    @objid ("afa16a86-b38c-465c-8c4a-9c194c687a39")
     public static final String BINARYCODEURL_TAGTYPE = "binaryCodeURL";
 
-    @objid ("b92ee066-dac8-45a0-bcac-1982667b029b")
+    @objid ("52cda173-a74e-4ac7-8f7e-d5231e686c8f")
     public static final String CONTINUOUSDEPLOYMENT_TAGTYPE = "continuousDeployment";
 
     /**
@@ -58,7 +58,7 @@ public class ServerlessConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d6a18d86-5ba2-467d-a475-0545f00122d8")
+    @objid ("e6293c8c-c6be-4b8c-afdd-2551279ad63d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ServerlessConfiguration.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public class ServerlessConfiguration extends Configuration {
      * 
      * @return a {@link ServerlessConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("61dae0fc-eda1-4702-ab08-e9a82dca8bb0")
+    @objid ("2bd32f40-63f7-4ec3-b11b-fbc0cb9013a3")
     public static ServerlessConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ServerlessConfiguration.STEREOTYPE_NAME);
@@ -82,7 +82,7 @@ public class ServerlessConfiguration extends Configuration {
      * @param obj a Artifact
      * @return a {@link ServerlessConfiguration} proxy or <i>null</i>.
      */
-    @objid ("ee3deaed-50c2-445b-bb0f-48be6ea94662")
+    @objid ("1f328c9f-f5a9-4116-ae02-5db63018469f")
     public static ServerlessConfiguration instantiate(final Artifact obj) {
         return ServerlessConfiguration.canInstantiate(obj) ? new ServerlessConfiguration(obj) : null;
     }
@@ -95,7 +95,7 @@ public class ServerlessConfiguration extends Configuration {
      * @return a {@link ServerlessConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("abef1a49-1355-4407-ba5b-e2f7d3122a0d")
+    @objid ("26e794b4-9157-407b-b56f-6957ea415ce7")
     public static ServerlessConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ServerlessConfiguration.canInstantiate(obj))
         	return new ServerlessConfiguration(obj);
@@ -109,13 +109,13 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("2e5695d8-999d-4c53-a744-5b540acb3d45")
+    @objid ("ed5d3858-8e74-4325-befa-16dd066a0cc3")
     public void addEnvironmentConfigParams(final AttributeAttribute obj) {
         if (obj!=null)
           ((Artifact) this.elt).getOwnedAttribute().add(obj.getElement());
     }
 
-    @objid ("707e39be-b2ea-4964-9b79-4da55fb6520d")
+    @objid ("75de4219-025a-4bc3-ae25-acce18bc9895")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class ServerlessConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c02070df-cc38-4367-aa84-8792d1776585")
+    @objid ("5bd3adca-dffb-4ab0-a08a-2fdae2cb35b3")
     public String getBinaryCodeURL() {
         return this.elt.getTagValue(ServerlessConfiguration.MdaTypes.BINARYCODEURL_TAGTYPE_ELT);
     }
@@ -147,7 +147,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("167a51fe-b2f0-426c-b519-96a441063dd4")
+    @objid ("40765f02-2820-48d5-8a33-5dd73a438253")
     public BuildConfiguration getBuildConfiguration() {
           for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
            if (BuildConfiguration.canInstantiate(obj))
@@ -160,7 +160,7 @@ public class ServerlessConfiguration extends Configuration {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("8cb7ca8f-375d-47b5-a3a7-f724798a0dd0")
+    @objid ("b7189c08-cbb8-4179-aec9-53932a62bb16")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -172,7 +172,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("e0ca8bb1-675d-45bc-9a03-22288fea6d28")
+    @objid ("e1e47dcb-8eeb-4739-a1ea-b2062f9e913a")
     public List<AttributeAttribute> getEnvironmentConfigParams() {
         List<AttributeAttribute> results = new ArrayList<>();
         for (Attribute mObj : ((Artifact) this.elt).getOwnedAttribute()){
@@ -192,7 +192,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("b309b1d6-e7f4-49d5-96fd-8a16c6d7bf85")
+    @objid ("02f4e455-d52b-46be-b648-3886686283c7")
     public EventConfiguration getEventConfiguration() {
           for (Artifact obj : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
            if (EventConfiguration.canInstantiate(obj))
@@ -201,7 +201,7 @@ public class ServerlessConfiguration extends Configuration {
           return null;
     }
 
-    @objid ("0d70bbc1-c404-436a-b2bb-a83a18a2248a")
+    @objid ("fb60281d-918a-4eb2-926b-4e4936d3afcf")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -212,7 +212,7 @@ public class ServerlessConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("08efb600-065a-4fe1-bd99-feb8db3bacfd")
+    @objid ("87a4af81-17df-450e-8d76-609d07f1e9ef")
     public boolean isContinuousDeployment() {
         return this.elt.isTagged(ServerlessConfiguration.MdaTypes.CONTINUOUSDEPLOYMENT_TAGTYPE_ELT);
     }
@@ -223,7 +223,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("d79b96d0-b78c-4adf-9994-6ba28a0797d7")
+    @objid ("d4ecf206-e09b-49c3-864d-3dd218e54279")
     public boolean removeEnvironmentConfigParams(final AttributeAttribute obj) {
         return (obj!=null)? ((Artifact) this.elt).getOwnedAttribute().remove(obj.getElement()) : false;
     }
@@ -233,7 +233,7 @@ public class ServerlessConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("71ec1d6d-8b4b-408a-9481-3423fba7f048")
+    @objid ("cc96d7c9-2aac-4b59-8db4-c7fc401c53c3")
     public void setBinaryCodeURL(final String value) {
         this.elt.putTagValue(ServerlessConfiguration.MdaTypes.BINARYCODEURL_TAGTYPE_ELT, value);
     }
@@ -244,7 +244,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("80a52f25-5c25-4911-9c17-7cab4812f557")
+    @objid ("45199e6d-03c0-4b61-9887-c5381aa9b356")
     public void setBuildConfiguration(final BuildConfiguration obj) {
         // Remove existing BuildConfigurations
         for (Artifact e : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
@@ -263,7 +263,7 @@ public class ServerlessConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6da243b8-a7b8-407a-b645-e4dbf8cc2de6")
+    @objid ("b64316e4-6eae-4ef4-8c16-bc51761bb382")
     public void setContinuousDeployment(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(ServerlessConfiguration.MdaTypes.CONTINUOUSDEPLOYMENT_TAGTYPE_ELT, this.elt);
@@ -277,7 +277,7 @@ public class ServerlessConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("1eab681a-dc53-4b25-97db-27ee3c087650")
+    @objid ("af66a3d9-0e93-4a86-863b-5e19899b4182")
     public void setEventConfiguration(final EventConfiguration obj) {
         // Remove existing EventConfigurations
         for (Artifact e : ((Artifact) this.elt).getOwnedElement(Artifact.class)) {
@@ -299,29 +299,29 @@ public class ServerlessConfiguration extends Configuration {
         return result;
     }
 
-    @objid ("0757375c-71a9-4290-9e34-f952425a15be")
+    @objid ("e5e2db63-0a16-4530-8279-1cb5d015cadc")
     protected ServerlessConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("96beea79-8c81-4296-8902-a428d2abe0d8")
     public static final class MdaTypes {
-        @objid ("79cfaf39-25f0-470b-ac02-652f097ee595")
+        @objid ("e94e8e6e-4e8c-4aee-a042-f4a107ecc79b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e609fa8e-f464-4666-bd99-9a93608d048d")
+        @objid ("d0a0861c-f3cf-4f1c-a056-ace82e4580e2")
         public static TagType BINARYCODEURL_TAGTYPE_ELT;
 
-        @objid ("69d45e7d-1601-4bdb-8e65-70499d3aaacf")
+        @objid ("16777808-eea5-4b72-a47b-f78e813c8f81")
         public static TagType CONTINUOUSDEPLOYMENT_TAGTYPE_ELT;
 
-        @objid ("045c3493-40d9-4d15-98a4-afa021b6d236")
+        @objid ("f6b3b15e-244d-4663-9895-75f94f027485")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("423ee200-7b93-406d-b4bc-441480ca8734")
+        @objid ("1ea799b2-cb48-4d08-b9e4-7b384e08ff6d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b135d5a3-70af-431e-9450-8ad12de9a9b7")
+        @objid ("8795a6bd-b2a8-4c68-b0c1-2d97200dfc6a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9f4ca31f-e397-4c28-b2d2-031f838cfe99");
             BINARYCODEURL_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "a9a8e449-cba1-4eb1-86c5-d6776d809a5f");

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.executionmodel.standard.class_;
 
@@ -48,13 +48,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("b33e67d3-9fd0-4004-abdd-b08e7227aa1d")
 public class HistoryRecord extends FeatureClass {
-    @objid ("aed7ad94-a393-494c-820d-822533f31d77")
+    @objid ("08b3cfe1-0429-4e90-97e8-52964a7cfb4a")
     public static final String STEREOTYPE_NAME = "HistoryRecord";
 
-    @objid ("49b95621-ccd9-48cb-ad4e-2b7cdfed8c17")
+    @objid ("8c760532-2f31-4a1e-975c-4c617e7f00f8")
     public static final String ENDTIME_TAGTYPE = "endTime";
 
-    @objid ("26fb254d-94ce-48fc-bf31-5344bb665105")
+    @objid ("fe469340-d1d3-4bb0-ae96-19ed38984261")
     public static final String STARTTIME_TAGTYPE = "startTime";
 
     /**
@@ -65,7 +65,7 @@ public class HistoryRecord extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("bf9cd618-1ba4-4910-8632-213d4f87ef5f")
+    @objid ("0c4e7ad4-5c73-4989-b266-866454870448")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, HistoryRecord.STEREOTYPE_NAME));
     }
@@ -75,7 +75,7 @@ public class HistoryRecord extends FeatureClass {
      * 
      * @return a {@link HistoryRecord} proxy on the created {@link Class}.
      */
-    @objid ("cb7d15cf-3d7f-4815-bdf1-e59ceef851a0")
+    @objid ("5c1c12d6-3551-4033-a499-ba82af6c5bb1")
     public static HistoryRecord create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, HistoryRecord.STEREOTYPE_NAME);
@@ -89,7 +89,7 @@ public class HistoryRecord extends FeatureClass {
      * @param obj a Class
      * @return a {@link HistoryRecord} proxy or <i>null</i>.
      */
-    @objid ("4312dd6f-cf41-4d62-a7ad-b871198658e5")
+    @objid ("e43205bf-824e-4649-8c35-afca05486df6")
     public static HistoryRecord instantiate(final Class obj) {
         return HistoryRecord.canInstantiate(obj) ? new HistoryRecord(obj) : null;
     }
@@ -102,7 +102,7 @@ public class HistoryRecord extends FeatureClass {
      * @return a {@link HistoryRecord} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("61c63670-4cde-4005-97be-232f552054c9")
+    @objid ("45ee0677-8732-4082-a2d1-2fcbc60cb110")
     public static HistoryRecord safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (HistoryRecord.canInstantiate(obj))
         	return new HistoryRecord(obj);
@@ -116,13 +116,13 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("dbcfc6cd-5071-4680-983d-3c4c675fff46")
+    @objid ("573e57c1-9799-4522-b44e-763e85a79054")
     public void addInfos(final HistoryInfo obj) {
         if (obj!=null)
           ((Class) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("c890c54f-95f3-42eb-91ba-fa3ff80b8f6c")
+    @objid ("fd7e0c33-7ff8-42ab-aa22-ddbabf7d812f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -144,7 +144,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("c39a0ef8-42f7-412a-94c6-4d36eb6fcaf0")
+    @objid ("79c0e50f-0bf0-4fd4-abeb-cf6aa58b798c")
     public Cause getCause() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -164,7 +164,7 @@ public class HistoryRecord extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("7e17dd03-a29b-478b-b2e6-5e220a1150f5")
+    @objid ("6c7533fb-511d-4553-8b68-d590706fff2f")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -175,7 +175,7 @@ public class HistoryRecord extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6de445d4-c194-4cf0-be42-c767d20c71b1")
+    @objid ("f43d062d-5359-4a3b-a5a5-511e59cee93c")
     public String getEndTime() {
         return this.elt.getTagValue(HistoryRecord.MdaTypes.ENDTIME_TAGTYPE_ELT);
     }
@@ -186,7 +186,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("9e2013d2-9391-4d59-a07c-f80e1bb5e958")
+    @objid ("886f5f75-c2b2-47fa-8c58-8c3c63f08a9d")
     public DataInstanceModel getFromDataInstanceModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -204,7 +204,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("b5e67962-bf7a-4f3a-b3ea-618f6091b29f")
+    @objid ("10135b59-a6fd-4f8d-a2a8-67bb36f2bb5f")
     public DeploymentInstanceModel getFromDeploymentInstanceModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -222,7 +222,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("d077b576-a54e-49dd-97d3-99357850fc2f")
+    @objid ("747c13dd-510c-47bd-88ae-9c8c6eba5936")
     public List<HistoryInfo> getInfos() {
         List<HistoryInfo> results = new ArrayList<>();
         for (ModelTree mObj : ((Class) this.elt).getOwnedElement()){
@@ -237,7 +237,7 @@ public class HistoryRecord extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("37d8efc4-ef3f-4445-bdb6-1771d380659b")
+    @objid ("65f41459-b11b-4f97-9025-29269bd6d7e9")
     public String getStartTime() {
         return this.elt.getTagValue(HistoryRecord.MdaTypes.STARTTIME_TAGTYPE_ELT);
     }
@@ -248,7 +248,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("ad782814-c133-42e4-88d4-c2ccafcbf947")
+    @objid ("63d534e5-7261-4254-98de-afd1bc902b39")
     public DataInstanceModel getToDataInstanceModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -266,7 +266,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("fa4aef31-4eb2-413f-8906-3ad890f0e879")
+    @objid ("cf3137be-45f6-4389-930a-1179628a1da0")
     public DeploymentInstanceModel getToDeploymentInstanceModel() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -284,7 +284,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("b1451668-5f44-4c51-a4c7-1ec3686ad3ca")
+    @objid ("e65446d5-6d8e-4f1e-87c5-673a0b0e43c2")
     public MmsObject getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(HistoryRecord.MdaTypes.MDAASSOCDEP)
@@ -302,7 +302,7 @@ public class HistoryRecord extends FeatureClass {
         return null;
     }
 
-    @objid ("89f71b82-dc07-4af4-809e-514f6b8fb698")
+    @objid ("270ba5a8-307a-43fe-b50f-f980a18705b4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -314,7 +314,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("f469cac5-da1d-4c8c-8525-f0c3c8dc569e")
+    @objid ("a08d049b-fee4-4ed3-a5f2-9282fcaeb38a")
     public boolean removeInfos(final HistoryInfo obj) {
         return (obj!=null)? ((Class) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -325,7 +325,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("8c7529d6-9ea2-4545-b659-452701c01a6a")
+    @objid ("ead434c0-6330-42da-8c8d-2c100ca866f6")
     public void setCause(final Cause obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -350,7 +350,7 @@ public class HistoryRecord extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b3d18c87-d63c-45eb-a7a4-98e9a2e0ae56")
+    @objid ("f368baa6-ca75-489c-bb99-f51ba8c72117")
     public void setEndTime(final String value) {
         this.elt.putTagValue(HistoryRecord.MdaTypes.ENDTIME_TAGTYPE_ELT, value);
     }
@@ -361,7 +361,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("5afdcbbe-1e13-4998-8e8b-edfbbda18aa8")
+    @objid ("9df18c67-e313-4e0f-808c-f22569fcfd2e")
     public void setFromDataInstanceModel(final DataInstanceModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -387,7 +387,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("146ba2ba-8fcf-4e8b-98f4-491f6646b3b6")
+    @objid ("2698ad10-8b80-48ed-bfc4-fa66e60b09bd")
     public void setFromDeploymentInstanceModel(final DeploymentInstanceModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -412,7 +412,7 @@ public class HistoryRecord extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c8ca24f9-98f3-425e-b0e6-9fa9b579c8d2")
+    @objid ("2e6a34fe-cf4d-4566-996d-a8ab5ea8a28a")
     public void setStartTime(final String value) {
         this.elt.putTagValue(HistoryRecord.MdaTypes.STARTTIME_TAGTYPE_ELT, value);
     }
@@ -423,7 +423,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("cce24026-1f3c-4ba8-be61-b91389b29122")
+    @objid ("8a0041bf-ec06-4c0e-8fbb-38feb68cfa9d")
     public void setToDataInstanceModel(final DataInstanceModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -449,7 +449,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("b8a54fe6-b60c-461e-9769-131da7d82d4a")
+    @objid ("ed10d81d-2585-4874-88df-907d137482ee")
     public void setToDeploymentInstanceModel(final DeploymentInstanceModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -475,7 +475,7 @@ public class HistoryRecord extends FeatureClass {
      * null
      * 
      */
-    @objid ("8cbf080e-abfb-4b90-9514-9a72a0702b12")
+    @objid ("ab42c8a6-c1e7-4c68-b0eb-e8a041afd5ed")
     public void setType(final MmsObject obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -503,29 +503,29 @@ public class HistoryRecord extends FeatureClass {
         return result;
     }
 
-    @objid ("d4e4d041-b0b7-4220-8e7b-352e18241bb1")
+    @objid ("ca162f74-768e-427a-b265-0d12af8c9c52")
     protected HistoryRecord(final Class elt) {
         super(elt);
     }
 
     @objid ("462585e9-30df-4f59-b5c8-ec375790a32b")
     public static final class MdaTypes {
-        @objid ("aa9a8205-2fdc-4fe9-a34f-622f178bf212")
+        @objid ("1611b8ce-8f53-4570-beca-1aeb92056303")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5b1edd67-4ea1-48ef-95c2-8e46fbf6d2eb")
+        @objid ("fc50c0c0-0216-4613-88dc-75aaf11627b1")
         public static TagType STARTTIME_TAGTYPE_ELT;
 
-        @objid ("b579da28-8058-457e-bbb2-01b94560ee53")
+        @objid ("5d8f4221-3289-4d3e-b8c7-a823508c1c85")
         public static TagType ENDTIME_TAGTYPE_ELT;
 
-        @objid ("b3271700-0b70-4fc1-8e80-37d1074e7d91")
+        @objid ("c5912fb1-b520-476b-86b6-d094cd591daf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7458f383-c3cc-46ec-a23d-068a5417f90e")
+        @objid ("9147dc9a-405b-47ee-888f-074e138fd9b9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("484dc56e-f06c-46ba-b854-2f37a36365a8")
+        @objid ("69aec4e6-954d-45b6-be1d-aa919cd5f32d")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "fe3e6072-933d-456c-bd5a-77cd25aeb183");
             STARTTIME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d4316e17-4ce7-49fa-8ef0-c2743e111a0b");

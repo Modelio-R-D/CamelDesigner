@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.connector;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("355d42b2-d4dd-49ae-bfd1-58fbf281ecd1")
 public class CommunicationInstance extends ComponentRelationInstance {
-    @objid ("bd7a7042-1d99-4730-bd1b-895c075d9914")
+    @objid ("cdc81551-6fd8-4eaf-a3a9-4c2e8711546e")
     public static final String STEREOTYPE_NAME = "CommunicationInstance";
 
     /**
@@ -48,7 +48,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c9c7a0e1-49fc-49a7-b060-5f082638d2cd")
+    @objid ("78eb0ae1-4634-4026-bbcf-b7fcbd7bfa3f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Connector) && ((Connector) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationInstance.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * 
      * @return a {@link CommunicationInstance} proxy on the created {@link Connector}.
      */
-    @objid ("1e3b27ed-c124-4ac9-ad6a-076d7ddd1f4e")
+    @objid ("97be4899-22f9-453a-be9e-a9f21314f8d3")
     public static CommunicationInstance create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Connector");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationInstance.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * @param obj a Connector
      * @return a {@link CommunicationInstance} proxy or <i>null</i>.
      */
-    @objid ("b1878b74-6cb1-42e4-ba56-48a2b3164fcc")
+    @objid ("78438039-f0e5-496f-86d9-ba5e6f44e3c9")
     public static CommunicationInstance instantiate(final Connector obj) {
         return CommunicationInstance.canInstantiate(obj) ? new CommunicationInstance(obj) : null;
     }
@@ -85,7 +85,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * @return a {@link CommunicationInstance} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a682932d-5468-4e54-a0c0-dd516c2561e5")
+    @objid ("d0cb7de2-1de2-4628-9413-935285e293f9")
     public static CommunicationInstance safeInstantiate(final Connector obj) throws IllegalArgumentException {
         if (CommunicationInstance.canInstantiate(obj))
         	return new CommunicationInstance(obj);
@@ -93,7 +93,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
         	throw new IllegalArgumentException("CommunicationInstance: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e3eb066a-d07e-407d-9371-e79f249958f7")
+    @objid ("d69a1fc6-5112-404a-8ca5-e9281d366b5c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * Get the underlying {@link Connector}. 
      * @return the Connector represented by this proxy, never null.
      */
-    @objid ("90ae4f28-c2e7-43c1-84d0-52be775f1086")
+    @objid ("156bf000-7a65-45dd-a4cd-9fb0d8c39840")
     @Override
     public Connector getElement() {
         return (Connector)super.getElement();
@@ -125,7 +125,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * null
      * 
      */
-    @objid ("71355f4f-9ba2-47f6-8cc6-c56eba4eb96a")
+    @objid ("cb21a356-a354-4e70-a4db-23baa6a3a61e")
     public DeploymentInstanceModel getParent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationInstance.MdaTypes.MDAASSOCDEP)
@@ -143,7 +143,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * null
      * 
      */
-    @objid ("449806b0-a703-4cb1-813f-90b744253b88")
+    @objid ("e4eb6476-1334-4d2b-9200-0d4380a73408")
     public Communication getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(CommunicationInstance.MdaTypes.MDAASSOCDEP)
@@ -155,7 +155,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
         return null;
     }
 
-    @objid ("1b46cb67-da36-482d-a173-7cb016bebb53")
+    @objid ("5a2b90d2-c700-41bf-b265-b174072e995c")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -167,7 +167,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * null
      * 
      */
-    @objid ("79ba0671-08a0-4a29-93c2-56b9124d7587")
+    @objid ("dcf5f844-2d60-4316-9bc1-a719c74f131e")
     public void setParent(final DeploymentInstanceModel obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -193,7 +193,7 @@ public class CommunicationInstance extends ComponentRelationInstance {
      * null
      * 
      */
-    @objid ("99136898-719b-41f8-8f53-0b4958dd18a3")
+    @objid ("4a26c2fb-db11-467e-a903-05eaa7d8c255")
     public void setType(final Communication obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -221,23 +221,23 @@ public class CommunicationInstance extends ComponentRelationInstance {
         return result;
     }
 
-    @objid ("a056715c-1a5e-4e12-bd4b-de2a0caf65ef")
+    @objid ("9eaed956-2f98-40c2-b588-e42ae257e4cb")
     protected CommunicationInstance(final Connector elt) {
         super(elt);
     }
 
     @objid ("cf21fdd9-ead8-4cfe-914e-4a923f9c983f")
     public static final class MdaTypes {
-        @objid ("294a56af-8545-4344-8e9f-d4b41bd0b5b6")
+        @objid ("4287802a-0159-4119-a960-0ae3005e7fb6")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3941188e-56f6-407a-948b-a928c67594b0")
+        @objid ("44714c6f-640e-491b-b256-ce8ad111ecb7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9bd66f4e-f560-48f6-9e52-e69676a110ba")
+        @objid ("21509fc1-d836-42c3-8ce9-9209030837c5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d7ce6b9d-b834-478b-95eb-b9a0e1ca062f")
+        @objid ("8313ec48-8858-418a-b474-c05fb080f65a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "479fff80-8075-4f90-b7f8-e148699ee433");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

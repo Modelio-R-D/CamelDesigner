@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -40,10 +40,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("0f0eceac-8159-46e5-b1f0-1e1cd9fd9b49")
 public class CompositeMetric extends Metric {
-    @objid ("848d1b58-42c3-4f0d-b730-7654e8d97b66")
+    @objid ("7ec242ff-a6b4-48d6-8171-54725359a93a")
     public static final String STEREOTYPE_NAME = "CompositeMetric";
 
-    @objid ("e44b1dc5-7a3d-47cd-9304-ab8498620ce7")
+    @objid ("ee75d5d6-52dd-48eb-8d64-2621a8c40319")
     public static final String FORMULA_TAGTYPE = "formula";
 
     /**
@@ -54,7 +54,7 @@ public class CompositeMetric extends Metric {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("99753909-e36e-4f7e-a54d-8ba08bb82840")
+    @objid ("0a166f80-4c96-4ba0-aa79-5b8c01470337")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CompositeMetric.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class CompositeMetric extends Metric {
      * 
      * @return a {@link CompositeMetric} proxy on the created {@link Class}.
      */
-    @objid ("a52305fa-8ba0-48bd-906a-d5762ba4210d")
+    @objid ("4f3421c1-8386-430d-b555-7bf31fdfe609")
     public static CompositeMetric create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CompositeMetric.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class CompositeMetric extends Metric {
      * @param obj a Class
      * @return a {@link CompositeMetric} proxy or <i>null</i>.
      */
-    @objid ("b2d8d4af-e251-4148-adfd-3df44ddb08fd")
+    @objid ("70f5abae-e705-483b-bc38-47af0da82b21")
     public static CompositeMetric instantiate(final Class obj) {
         return CompositeMetric.canInstantiate(obj) ? new CompositeMetric(obj) : null;
     }
@@ -91,7 +91,7 @@ public class CompositeMetric extends Metric {
      * @return a {@link CompositeMetric} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8995dcd4-249c-40cc-a3b4-5c634927d0db")
+    @objid ("c5710d60-9e19-488c-b2bc-040345476508")
     public static CompositeMetric safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CompositeMetric.canInstantiate(obj))
         	return new CompositeMetric(obj);
@@ -105,7 +105,7 @@ public class CompositeMetric extends Metric {
      * null
      * 
      */
-    @objid ("53d626b7-a28c-4cf5-b8ec-a4a69e0755aa")
+    @objid ("06ff61e9-4d91-438e-9844-173c7670d6d3")
     public void addComponentMetrics(final Metric obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -115,7 +115,7 @@ public class CompositeMetric extends Metric {
         }
     }
 
-    @objid ("1e6d7ae5-14cd-49f1-a70f-028589650290")
+    @objid ("78cdc004-57f8-4a84-bba3-7b76fb03b6f9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -137,7 +137,7 @@ public class CompositeMetric extends Metric {
      * null
      * 
      */
-    @objid ("0df1f89c-bb3a-4a3b-93e7-5f225158df8c")
+    @objid ("ba9f193c-74b1-478b-af88-dcbf1fb4cef6")
     public List<Metric> getComponentMetrics() {
         List<Metric> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -162,7 +162,7 @@ public class CompositeMetric extends Metric {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("880f3a46-5cdd-4d8d-b3f7-895281fa07da")
+    @objid ("0ad1f945-0c8d-4f02-96cc-4f1d33e6ba8c")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -173,12 +173,12 @@ public class CompositeMetric extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b07a3c51-6589-4bbe-b915-6bc3397751cf")
+    @objid ("b3ed9d37-b75f-482b-90b7-671aca50ca2d")
     public String getFormula() {
         return this.elt.getTagValue(CompositeMetric.MdaTypes.FORMULA_TAGTYPE_ELT);
     }
 
-    @objid ("4d05bf56-1c7c-48fc-8004-3ca17954559e")
+    @objid ("e9d97f1b-a5ee-4161-9af4-e7d3471f4a7b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -190,7 +190,7 @@ public class CompositeMetric extends Metric {
      * null
      * 
      */
-    @objid ("1b1e330a-c688-4a80-bd95-47209cc976d5")
+    @objid ("a651bc82-f84b-4f5b-bb64-4397a83085c2")
     public boolean removeComponentMetrics(final Metric obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -209,7 +209,7 @@ public class CompositeMetric extends Metric {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("85eb74e1-ead6-4190-9567-7bbe9de84a53")
+    @objid ("ab0a8117-410e-44da-b8a2-5ae01faff313")
     public void setFormula(final String value) {
         this.elt.putTagValue(CompositeMetric.MdaTypes.FORMULA_TAGTYPE_ELT, value);
     }
@@ -222,26 +222,26 @@ public class CompositeMetric extends Metric {
         return result;
     }
 
-    @objid ("79b41fc9-5a9a-4c93-9e40-59f9a26db232")
+    @objid ("89cc357d-e9e0-454f-961c-1764a4d49864")
     protected CompositeMetric(final Class elt) {
         super(elt);
     }
 
     @objid ("b52a26f6-5581-4431-a657-8c340315e64d")
     public static final class MdaTypes {
-        @objid ("49828de9-bfde-4c23-91a3-38389a6c3450")
+        @objid ("2052618f-5df6-464b-b985-7b14f77a9fce")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c7897650-417d-4c3f-b854-fc2949ff70c5")
+        @objid ("f9bf98ef-a6af-40f9-882d-1c5e08ca3266")
         public static TagType FORMULA_TAGTYPE_ELT;
 
-        @objid ("7762cdda-4677-48dd-a05a-a81c31a1179c")
+        @objid ("a4e40066-91f0-40fc-a61e-2f0e4baaa87f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d7aeedc8-edac-46d7-9c8b-d60b824f3280")
+        @objid ("182cfd51-8c86-4633-87ff-d37792911cff")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("506f7897-a25d-43c5-90c2-320d9bb157f3")
+        @objid ("c038bf4a-6c0f-4c38-9aa6-7e85cf6f1f77")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "680d667b-9545-40d8-9c12-84675bc68fc4");
             FORMULA_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "851d14e4-ea15-4582-a92c-96160e350212");

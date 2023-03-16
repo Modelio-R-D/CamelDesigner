@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -38,7 +38,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("0839abd9-e1c0-4f4c-877c-67000617ef5e")
 public abstract class ExpendableElement extends NamedElement {
-    @objid ("24c99089-cf31-4d3b-90c4-ad9d3230825b")
+    @objid ("5b847d63-6d6e-44a4-8519-9ed6450f9fdf")
     public static final String STEREOTYPE_NAME = "ExpendableElement";
 
     /**
@@ -49,7 +49,7 @@ public abstract class ExpendableElement extends NamedElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5cce6a1a-d4f6-464d-aebf-3e597e9eaf5f")
+    @objid ("9e44b060-5328-465c-bc52-d0277e9d6ab0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ExpendableElement.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public abstract class ExpendableElement extends NamedElement {
      * null
      * 
      */
-    @objid ("07432c71-df68-43ba-b0a1-525984cb4833")
+    @objid ("05c92f15-0462-452c-a900-02a83fb224f9")
     public void addAnnotations(final MmsObject obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -70,7 +70,7 @@ public abstract class ExpendableElement extends NamedElement {
         }
     }
 
-    @objid ("fe2cfe5e-3750-48f1-bbcb-940cc99fdbe0")
+    @objid ("9d81ba49-6448-4816-a1e1-06cb1630250c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -92,7 +92,7 @@ public abstract class ExpendableElement extends NamedElement {
      * null
      * 
      */
-    @objid ("745b540a-c166-4c8f-82a8-e27203eee736")
+    @objid ("8d7dbdf2-6bd5-4e9f-b157-72670a38e0f2")
     public List<MmsObject> getAnnotations() {
         List<MmsObject> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -115,13 +115,13 @@ public abstract class ExpendableElement extends NamedElement {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("8323bb64-feca-4689-b047-3413f6e42f10")
+    @objid ("dbfb0650-f8a4-4656-bd1a-f770a9c38832")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("0a1d9c98-bddb-4f8e-a1a2-38f78750b119")
+    @objid ("86d7673a-87f1-48b8-95cd-bbc29c4d69b3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -133,7 +133,7 @@ public abstract class ExpendableElement extends NamedElement {
      * null
      * 
      */
-    @objid ("10f50d86-69a0-4c76-ad84-8ecb04cd1803")
+    @objid ("4d719f1f-8081-44ac-a226-b4ddbe6209ce")
     public boolean removeAnnotations(final MmsObject obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -147,23 +147,23 @@ public abstract class ExpendableElement extends NamedElement {
         return false;
     }
 
-    @objid ("f12b74b3-f012-4d95-a553-fbf3c1fb2a42")
+    @objid ("2dd32bef-67c0-4fd1-91e0-2ba8090b2a4d")
     protected ExpendableElement(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("cbcfe587-f4d9-4299-85a2-20ec2c0d6d7f")
     public static final class MdaTypes {
-        @objid ("10529804-8d19-4a85-a9ca-fd7dfc32d145")
+        @objid ("cd1be3cb-7ff9-4807-a363-87e9902bb831")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ef3390c5-d573-477b-bd89-a299d5d1f078")
+        @objid ("61a6c66d-217f-482b-8d7a-cbb8cddb7e9d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("89c22f51-22d3-405a-a708-7067fe03e9aa")
+        @objid ("83aaba80-5f68-42d0-9ed7-4c31aae4247e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8874023d-ce93-465a-bf1d-d49874939941")
+        @objid ("f6250198-b708-4c8a-ac84-6bdac6665f88")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "f81fdaa1-17e1-49a4-bf1f-60c18563c100");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

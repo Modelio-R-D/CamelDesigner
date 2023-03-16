@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -36,22 +36,22 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("31fa8681-d65e-4083-b411-1e6026f8e582")
 public class BuildConfiguration extends FeatureArtifact {
-    @objid ("3fece705-46a9-4ef0-a60e-39b0bf26b703")
+    @objid ("60afe3bb-3039-4768-a83d-47d12757e957")
     public static final String STEREOTYPE_NAME = "BuildConfiguration";
 
-    @objid ("6e1fd371-4539-4897-9650-863f068f0705")
+    @objid ("dcc463c1-cffe-497f-a249-6591e5a22b47")
     public static final String ARTIFACTID_TAGTYPE = "artifactId";
 
-    @objid ("85d44150-2de0-4bee-b03a-8d47b63282fa")
+    @objid ("25111386-9751-4d21-80b5-91ffcdc9cef3")
     public static final String BUILDFRAMEWORK_TAGTYPE = "buildFramework";
 
-    @objid ("a351941d-7981-413d-bae0-5ad16e2f509e")
+    @objid ("83cf2f4b-9d43-4278-867d-ee72ede582b9")
     public static final String EXCLUDE_TAGTYPE = "exclude";
 
-    @objid ("c3978d00-7ca7-42b6-83e3-a8f9748684cb")
+    @objid ("608f77e0-f8ef-4e65-9a73-0b7f120fbcef")
     public static final String INCLUDE_TAGTYPE = "include";
 
-    @objid ("884cc604-53f2-4a93-96e9-5b4fde4cef8e")
+    @objid ("c1010909-1c53-43ec-92bb-7be69b826a8f")
     public static final String SOURCECODEURL_TAGTYPE = "sourceCodeURL";
 
     /**
@@ -62,7 +62,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("c340da40-5fc2-4eb1-bb1c-cc8150a44324")
+    @objid ("8c50e0f0-9cc4-48c7-9953-43e521113e43")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, BuildConfiguration.STEREOTYPE_NAME));
     }
@@ -72,7 +72,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * 
      * @return a {@link BuildConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("a4f9b014-8c7a-4cf2-a1da-8865142f4b92")
+    @objid ("d115fd0c-c7d7-4154-9725-dae9110317ca")
     public static BuildConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, BuildConfiguration.STEREOTYPE_NAME);
@@ -86,7 +86,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * @param obj a Artifact
      * @return a {@link BuildConfiguration} proxy or <i>null</i>.
      */
-    @objid ("ed79c9d8-9174-4303-b553-eb2908315228")
+    @objid ("679182ce-e285-4f38-8d75-aabb4f6af79f")
     public static BuildConfiguration instantiate(final Artifact obj) {
         return BuildConfiguration.canInstantiate(obj) ? new BuildConfiguration(obj) : null;
     }
@@ -99,7 +99,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * @return a {@link BuildConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5da2b00e-64c8-4568-b57b-e589d4d8a1f2")
+    @objid ("a2ccd999-4420-42cf-8655-99ab86eca2c3")
     public static BuildConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (BuildConfiguration.canInstantiate(obj))
         	return new BuildConfiguration(obj);
@@ -107,7 +107,7 @@ public class BuildConfiguration extends FeatureArtifact {
         	throw new IllegalArgumentException("BuildConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("93dfb6e3-d54b-4457-a039-36a110a4e064")
+    @objid ("b7faaf65-d755-497c-be4d-edc111f9def1")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -128,7 +128,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("97c5318e-f5ea-4371-a209-b4bcf3c83a42")
+    @objid ("169d5335-b229-4897-b766-91812d00f4ae")
     public String getArtifactId() {
         return this.elt.getTagValue(BuildConfiguration.MdaTypes.ARTIFACTID_TAGTYPE_ELT);
     }
@@ -138,7 +138,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fbe7be71-f007-4047-976c-6bdd1a291360")
+    @objid ("6ea7efd4-1813-4766-adf2-e42056d753aa")
     public String getBuildFramework() {
         return this.elt.getTagValue(BuildConfiguration.MdaTypes.BUILDFRAMEWORK_TAGTYPE_ELT);
     }
@@ -147,7 +147,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("0424dea7-bd9a-486d-9f01-d7722d52817e")
+    @objid ("12066275-1ff9-4f85-8356-397fdaf51d01")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -158,7 +158,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4555f939-e3d8-4e7c-b1e3-ce792e1b8687")
+    @objid ("2558920d-6777-470a-92b3-bc5baf6f4af7")
     public String getExclude() {
         return this.elt.getTagValue(BuildConfiguration.MdaTypes.EXCLUDE_TAGTYPE_ELT);
     }
@@ -168,7 +168,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("de6c7979-4692-477a-a180-3ae1fa5c322e")
+    @objid ("78cb8448-ea43-4019-bdab-c9639afbe4e3")
     public String getInclude() {
         return this.elt.getTagValue(BuildConfiguration.MdaTypes.INCLUDE_TAGTYPE_ELT);
     }
@@ -178,12 +178,12 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("aa2dc55c-1cda-4fb0-9070-7954adc50a32")
+    @objid ("70b496d7-838c-4f56-a7f6-3971208f6c01")
     public String getSourceCodeURL() {
         return this.elt.getTagValue(BuildConfiguration.MdaTypes.SOURCECODEURL_TAGTYPE_ELT);
     }
 
-    @objid ("b27ecc22-a66a-453f-bf8f-ccd29f9d7c0a")
+    @objid ("e7251113-8edf-4d66-a467-4d43ece76f62")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -194,7 +194,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("07628091-ec0d-4c7d-9791-320fcf847b01")
+    @objid ("fed9485f-11c8-4a51-a42e-1cc89be8b8cc")
     public void setArtifactId(final String value) {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.ARTIFACTID_TAGTYPE_ELT, value);
     }
@@ -204,7 +204,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fa1bc09a-369e-4954-957e-1e33d5551460")
+    @objid ("89e24ee1-4f1b-4524-b747-0e6c639d3fc7")
     public void setBuildFramework(final String value) {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.BUILDFRAMEWORK_TAGTYPE_ELT, value);
     }
@@ -214,7 +214,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("63795f6c-050c-4bef-95cd-4abd8f8e7f36")
+    @objid ("c79f94a7-5261-4706-b737-c056a9813810")
     public void setExclude(final String value) {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.EXCLUDE_TAGTYPE_ELT, value);
     }
@@ -224,7 +224,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8d24bff3-4ba5-4d59-b337-9592cf2af64c")
+    @objid ("66f620a1-4796-4d82-8869-61bf83d9ad64")
     public void setInclude(final String value) {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.INCLUDE_TAGTYPE_ELT, value);
     }
@@ -234,7 +234,7 @@ public class BuildConfiguration extends FeatureArtifact {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("84dd7a7a-72d3-40e4-9202-2d14ebdaf73a")
+    @objid ("9f208d82-eae6-49fa-8e22-5700cd3228a3")
     public void setSourceCodeURL(final String value) {
         this.elt.putTagValue(BuildConfiguration.MdaTypes.SOURCECODEURL_TAGTYPE_ELT, value);
     }
@@ -247,38 +247,38 @@ public class BuildConfiguration extends FeatureArtifact {
         return result;
     }
 
-    @objid ("a984898b-433f-4fac-9feb-e6f5c1eb3dfb")
+    @objid ("67ecba18-922a-4665-9c55-c16abbb9addb")
     protected BuildConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("5c80b392-068d-47de-a15f-f92421a05377")
     public static final class MdaTypes {
-        @objid ("9f2ed065-8cf3-473c-9b96-a93b4e615944")
+        @objid ("f37347e7-d284-4eab-ba5f-3481a075a444")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5055ff44-ff11-4417-bf78-ef2bfd724691")
+        @objid ("16409910-c732-4c9e-be8b-8c4d4c2617f2")
         public static TagType ARTIFACTID_TAGTYPE_ELT;
 
-        @objid ("36b94a83-25d2-486f-94e5-899f779131c2")
+        @objid ("5387831e-1f92-458f-8b61-46b118f85b34")
         public static TagType BUILDFRAMEWORK_TAGTYPE_ELT;
 
-        @objid ("00e76def-62cb-4515-aa7e-dae546215301")
+        @objid ("fc71e8c0-c61f-49de-8545-188b4ef5b445")
         public static TagType SOURCECODEURL_TAGTYPE_ELT;
 
-        @objid ("076865ad-b0b4-4502-90bb-c702fc6f4fae")
+        @objid ("f57df706-10c6-4534-a358-679b01087d38")
         public static TagType INCLUDE_TAGTYPE_ELT;
 
-        @objid ("d83939fd-4835-4a58-b811-2d13c9c217bb")
+        @objid ("a9c1a683-cce4-40ad-81c2-58796b3239e5")
         public static TagType EXCLUDE_TAGTYPE_ELT;
 
-        @objid ("d3bbf458-d134-4128-9581-2529019d7e2f")
+        @objid ("3de82aae-c732-4e67-9d09-0c82c9beccfc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6f253e03-e7de-45a7-92ac-cad3cf898399")
+        @objid ("c2e641e7-9176-4c9e-b520-1cdbdc35d268")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("736d7e5b-0608-4b33-a409-def266b827c9")
+        @objid ("7428df18-3367-40d6-9891-5f73ab9e5299")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "72bbf7a5-04d3-40d1-8b20-3489ec93b45a");
             ARTIFACTID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "95dcdeef-f3a8-4b72-8658-7469cc386bd1");

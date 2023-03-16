@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -34,7 +34,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("4039df5b-6637-44a0-b422-e2f658a79b78")
 public class CommunicationRequirement extends HardRequirement {
-    @objid ("d11f9426-717e-4336-b4ac-1ee5f3bb25ac")
+    @objid ("ef99b55e-3b90-4b18-8ba0-3226bb3bc07d")
     public static final String STEREOTYPE_NAME = "CommunicationRequirement";
 
     /**
@@ -45,7 +45,7 @@ public class CommunicationRequirement extends HardRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("efa483bc-6d50-4526-bd1f-245fb919f67d")
+    @objid ("ce78833c-d274-4ea8-9799-4f0420b71e06")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CommunicationRequirement.STEREOTYPE_NAME));
     }
@@ -55,7 +55,7 @@ public class CommunicationRequirement extends HardRequirement {
      * 
      * @return a {@link CommunicationRequirement} proxy on the created {@link Class}.
      */
-    @objid ("e0a23e1e-34e6-4a95-9c9b-4b801684c8f6")
+    @objid ("c3b6ced4-5b4b-4409-a256-ea5b4148f068")
     public static CommunicationRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, CommunicationRequirement.STEREOTYPE_NAME);
@@ -69,7 +69,7 @@ public class CommunicationRequirement extends HardRequirement {
      * @param obj a Class
      * @return a {@link CommunicationRequirement} proxy or <i>null</i>.
      */
-    @objid ("6451c4ae-4985-40f5-8054-a0dad50744eb")
+    @objid ("cb1e787d-d5e7-4532-8f94-a41596bcd019")
     public static CommunicationRequirement instantiate(final Class obj) {
         return CommunicationRequirement.canInstantiate(obj) ? new CommunicationRequirement(obj) : null;
     }
@@ -82,7 +82,7 @@ public class CommunicationRequirement extends HardRequirement {
      * @return a {@link CommunicationRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b04ad506-02ac-417f-83e7-32b49b7fa683")
+    @objid ("420ee77f-4d1f-4048-900e-32009297ba77")
     public static CommunicationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CommunicationRequirement.canInstantiate(obj))
         	return new CommunicationRequirement(obj);
@@ -90,7 +90,7 @@ public class CommunicationRequirement extends HardRequirement {
         	throw new IllegalArgumentException("CommunicationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9899b5a9-b15e-4e1e-bfc5-271cac24f01d")
+    @objid ("3da0cfea-cee7-42d7-8e42-dd31b17cc28b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -110,35 +110,35 @@ public class CommunicationRequirement extends HardRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("42222f35-392f-4b59-82a8-940bbfa97a6f")
+    @objid ("31b83bc8-261d-4fe4-b510-18dc5f9f3b23")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("94b1abe6-17a9-447f-a5e5-f163db4b8dc6")
+    @objid ("75178594-a921-42a5-ad27-ad4613dab931")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("ec863207-6be0-4c96-87f0-ac247a998356")
+    @objid ("bf4964bd-84b5-4d1f-9ae1-705cd1fc0a6e")
     protected CommunicationRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("d2f08d28-0c46-4738-b9ae-bf1bba9bcb27")
     public static final class MdaTypes {
-        @objid ("b44b8c9d-9c1a-4848-8290-17bed3da15cb")
+        @objid ("c9c8d1ce-c1c7-4744-b919-02bc3aee9517")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ef0adbf9-6daa-41d3-80ab-b109ebba5e99")
+        @objid ("024e1e46-ccd9-475a-9990-c8cb20136480")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("580f9fca-aead-4eb8-9c5e-5109920537ee")
+        @objid ("6c467eb0-28c1-42b0-a015-0030a2ac63f2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7083c749-16de-45be-aebc-6bda292237dc")
+        @objid ("758b2309-3339-4499-80e9-fc01321ad455")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "d79c9f3a-4dfe-472a-b36d-70326b490551");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

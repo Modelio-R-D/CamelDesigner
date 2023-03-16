@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v1.0.13
+ * Module: CamelDesigner v1.0.16
 
- * This file was generated on 1/25/23 3:26 PM by Modelio Studio.
+ * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("b0754957-bc68-473c-a808-aac4f2fd0421")
 public abstract class Metric extends FeatureClass {
-    @objid ("9929957e-2d82-429b-b021-bc5dbdec5b32")
+    @objid ("395eb986-8eb3-4e35-b2c3-b6c8754495fe")
     public static final String STEREOTYPE_NAME = "Metric";
 
     /**
@@ -48,7 +48,7 @@ public abstract class Metric extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f1d81d90-b6a6-487f-821a-06390fe1a914")
+    @objid ("871f4751-9b68-41ac-827f-9d3085626c00")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Metric.STEREOTYPE_NAME));
     }
@@ -60,7 +60,7 @@ public abstract class Metric extends FeatureClass {
                 RawMetric.canInstantiate(obj) ?  RawMetric.instantiate(obj) : null;
     }
 
-    @objid ("983909e6-8319-43c1-a9e1-98cb7d77cf9b")
+    @objid ("151b194b-6434-408e-a926-d54ec78d8b42")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -80,7 +80,7 @@ public abstract class Metric extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("19146cdb-0cb2-4c25-8b3a-492dfdf2014d")
+    @objid ("6e3ed21e-9f2c-4410-9e63-d9823f75abd7")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -92,7 +92,7 @@ public abstract class Metric extends FeatureClass {
      * null
      * 
      */
-    @objid ("7448fe3c-8e17-4031-8344-5c593ed36bc1")
+    @objid ("380b0039-3728-49fc-944d-48df80115979")
     public MetricTemplate getMetricTemplate() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Metric.MdaTypes.MDAASSOCDEP)
@@ -104,7 +104,7 @@ public abstract class Metric extends FeatureClass {
         return null;
     }
 
-    @objid ("845eb986-3303-41fb-8369-51b43fd7f773")
+    @objid ("9a5b0bed-a753-46cb-815e-346a9379736e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -116,7 +116,7 @@ public abstract class Metric extends FeatureClass {
      * null
      * 
      */
-    @objid ("1e2a8f9c-3852-4047-a471-81da04b06d40")
+    @objid ("563ae685-d5f4-45bc-bfd4-499c9b735632")
     public void setMetricTemplate(final MetricTemplate obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -144,23 +144,23 @@ public abstract class Metric extends FeatureClass {
         return result;
     }
 
-    @objid ("66b5ced7-cbb9-4cbe-9f56-c827a9fab6e0")
+    @objid ("11588740-a45b-43df-93b4-a2b226f573c4")
     protected Metric(final Class elt) {
         super(elt);
     }
 
     @objid ("7453f2c0-0edc-453a-bbfc-bbc62bf7a06d")
     public static final class MdaTypes {
-        @objid ("fbbfd734-6c2b-4625-8345-3bf8b356f606")
+        @objid ("99242a4a-ad92-4d1d-b446-8ad0ddecb7a2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("11aa5823-23b9-4a9c-8367-80f09992d3f5")
+        @objid ("9ae3999e-2306-4988-aa0c-b772006392f2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("eafe7990-ff01-44d9-89ed-e1855d3d554b")
+        @objid ("e8030b4a-2813-4885-9bab-7328a9c67217")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6b03a6c9-3381-40ab-9e53-8cb424f13153")
+        @objid ("42fd404a-c73f-4314-82fb-cca6c3a609ce")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1603af9c-7b21-4da2-96b7-6607aa8066cc");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");
