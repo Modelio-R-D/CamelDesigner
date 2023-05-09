@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.substitution;
 
@@ -42,7 +42,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2cf05ec1-353b-44b5-92fc-db3ca6558f81")
 public class Conditional extends Feature {
-    @objid ("b33d5c29-3307-43a6-a4dd-54236ce098be")
+    @objid ("8485ed77-7307-4666-8c1d-86ebf42a7fb3")
     public static final String STEREOTYPE_NAME = "Conditional";
 
     /**
@@ -53,7 +53,7 @@ public class Conditional extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9a09f810-610e-4424-8737-865deccde9b6")
+    @objid ("729901fc-f282-4992-8e87-449fc2d81aab")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Substitution) && ((Substitution) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Conditional.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class Conditional extends Feature {
      * 
      * @return a {@link Conditional} proxy on the created {@link Substitution}.
      */
-    @objid ("d62d0e15-a152-4fcc-903e-da7df2e9bc89")
+    @objid ("b64fcf16-d256-4517-b82c-c3699d62795b")
     public static Conditional create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Substitution");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Conditional.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class Conditional extends Feature {
      * @param obj a Substitution
      * @return a {@link Conditional} proxy or <i>null</i>.
      */
-    @objid ("9ba386d7-d947-4183-b583-b559f3ce22ef")
+    @objid ("ccdb9f67-3295-473b-90ad-354c8341d32a")
     public static Conditional instantiate(final Substitution obj) {
         return Conditional.canInstantiate(obj) ? new Conditional(obj) : null;
     }
@@ -90,7 +90,7 @@ public class Conditional extends Feature {
      * @return a {@link Conditional} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("24039628-e41a-4054-9d97-8a8b9c0f868f")
+    @objid ("fe91d0f4-e95e-4544-898e-6ac3269c12e3")
     public static Conditional safeInstantiate(final Substitution obj) throws IllegalArgumentException {
         if (Conditional.canInstantiate(obj))
         	return new Conditional(obj);
@@ -98,7 +98,7 @@ public class Conditional extends Feature {
         	throw new IllegalArgumentException("Conditional: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("32d78ad3-b278-4376-8a69-a86b1c5234ee")
+    @objid ("414add21-aa74-4535-bbbc-b7469780ddda")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,7 +120,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("168377d2-7170-4818-9ace-1320dd0895cd")
+    @objid ("4e12a4f4-0ed6-4487-9a7f-82f97d7bfb7a")
     public CamelConstraint getConstraint() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Conditional.MdaTypes.MDAASSOCDEP)
@@ -144,7 +144,7 @@ public class Conditional extends Feature {
      * Get the underlying {@link Substitution}. 
      * @return the Substitution represented by this proxy, never null.
      */
-    @objid ("ac6af798-7d36-44a4-bc1f-ccb6fbbc874e")
+    @objid ("7fd3e409-6ac1-420a-89be-a3684ab52be4")
     @Override
     public Substitution getElement() {
         return (Substitution)super.getElement();
@@ -156,7 +156,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("64469ca6-cab4-450b-82df-d6787a1f3667")
+    @objid ("3428c170-7198-439c-936f-ba62ddaaaf6a")
     public SoftwareComponent getFirstComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Conditional.MdaTypes.MDAASSOCDEP)
@@ -176,7 +176,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("41085fed-5265-4ae9-b71b-8fccd3ba3429")
+    @objid ("85c65837-cb48-48a9-80b0-6e441309fe82")
     public SoftwareComponent getSecondComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Conditional.MdaTypes.MDAASSOCDEP)
@@ -190,7 +190,7 @@ public class Conditional extends Feature {
         return null;
     }
 
-    @objid ("2c8fe545-0656-4c8f-a068-4f7554aff556")
+    @objid ("7877e8d7-ef05-40ea-b4a4-028720d8efad")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -202,7 +202,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("9f2b46c9-b05b-4b0d-9dcd-130472d2b8ec")
+    @objid ("8cd637ee-0373-4307-9a3e-db3bc5fb8d1e")
     public void setConstraint(final CamelConstraint obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -228,7 +228,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("5205420b-49ac-4e7a-bc7f-669ee5bf647a")
+    @objid ("1a863b2b-dcfd-43c6-b031-56ddbb91e897")
     public void setFirstComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -254,7 +254,7 @@ public class Conditional extends Feature {
      * null
      * 
      */
-    @objid ("bc1be119-8e21-4e90-a0bb-9acaa3bbccb8")
+    @objid ("59377153-3251-47e7-b336-25cbf839395a")
     public void setSecondComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -274,23 +274,23 @@ public class Conditional extends Feature {
         }
     }
 
-    @objid ("2a96bbc7-193a-4dd0-a0fe-ce957357fe0b")
+    @objid ("0478e916-ceb1-4e4a-905b-ad2027c92ba4")
     protected Conditional(final Substitution elt) {
         super(elt);
     }
 
     @objid ("7706f5b3-6f8a-42b0-9058-a4df5486b4a4")
     public static final class MdaTypes {
-        @objid ("8848a2db-ea6b-43fd-adbb-d198905caa8b")
+        @objid ("545b8a7c-fcea-42c5-81dc-1902c0d313c3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c82a4d22-bb44-4704-b34b-77c13a9541ab")
+        @objid ("cf5301aa-cf80-41e1-aa84-f47283a9b800")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("98b02f75-9f65-4d62-8506-92232c96ce31")
+        @objid ("c9346e5b-dbd9-47da-b71c-424a77eff107")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3b3c66d8-b8e7-47b5-bfa5-da231258bc26")
+        @objid ("e76e3344-c366-490a-83e0-ea8a358cb042")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "a9789ea2-f51f-4aec-af7f-8aebf9cb152e");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.component;
 
@@ -35,7 +35,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("7ab7afe3-013e-4c06-af79-866889291e60")
 public class VM extends CamelComponent {
-    @objid ("da7b5058-073c-47fd-97f7-c2e7299116e6")
+    @objid ("4bb31950-d420-4877-ac3b-c81fb6a0fd9a")
     public static final String STEREOTYPE_NAME = "VM";
 
     /**
@@ -46,7 +46,7 @@ public class VM extends CamelComponent {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7a1c23c0-be36-48d2-b31b-baed985ecf3c")
+    @objid ("2a752b2b-af0b-4090-8054-5d20599f03de")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Component) && ((Component) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, VM.STEREOTYPE_NAME));
     }
@@ -56,7 +56,7 @@ public class VM extends CamelComponent {
      * 
      * @return a {@link VM} proxy on the created {@link Component}.
      */
-    @objid ("5acb9fbc-c2b7-4af8-a348-6fac7cc71bbc")
+    @objid ("a2c7bd91-a35f-4927-b831-4a9697744620")
     public static VM create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Component");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, VM.STEREOTYPE_NAME);
@@ -70,7 +70,7 @@ public class VM extends CamelComponent {
      * @param obj a Component
      * @return a {@link VM} proxy or <i>null</i>.
      */
-    @objid ("ca7bbd68-bc2a-4213-ab2e-d42ed93efe1e")
+    @objid ("43217dfe-9078-4431-8b89-d78562e00d48")
     public static VM instantiate(final Component obj) {
         return VM.canInstantiate(obj) ? new VM(obj) : null;
     }
@@ -83,7 +83,7 @@ public class VM extends CamelComponent {
      * @return a {@link VM} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f679606c-0502-4d37-baee-f1dcb7518abc")
+    @objid ("67dda28c-ac38-46d3-abec-cef7b228ab1f")
     public static VM safeInstantiate(final Component obj) throws IllegalArgumentException {
         if (VM.canInstantiate(obj))
         	return new VM(obj);
@@ -91,7 +91,7 @@ public class VM extends CamelComponent {
         	throw new IllegalArgumentException("VM: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("d715af68-3ef2-43b3-9d0a-309f47df4779")
+    @objid ("1e389154-8c75-4534-b1e6-d64e61d7b9d8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,13 +111,13 @@ public class VM extends CamelComponent {
      * Get the underlying {@link Component}. 
      * @return the Component represented by this proxy, never null.
      */
-    @objid ("31007011-65aa-43ee-b254-9f074e576e72")
+    @objid ("836f542c-4f00-4227-b1cd-533be2d89507")
     @Override
     public Component getElement() {
         return (Component)super.getElement();
     }
 
-    @objid ("1a6a8c27-0692-473a-a5e0-9f914d39de29")
+    @objid ("da5c6dd6-f968-4d38-ad98-a3575e931755")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class VM extends CamelComponent {
         return result;
     }
 
-    @objid ("a86262e2-d7d8-4124-9e85-370b9138ee09")
+    @objid ("e4870af0-b66d-468a-a5b9-9826d4a24ff5")
     protected VM(final Component elt) {
         super(elt);
     }
 
     @objid ("b498c9c3-0245-4fb1-97a6-fbac3113e3fd")
     public static final class MdaTypes {
-        @objid ("573cb30b-5184-44bd-b2d3-5a906caf7c15")
+        @objid ("e1313289-d2d2-4009-9a63-edf961f97b1b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("51afc27d-ebe3-4fc5-9315-829cf32ff4cd")
+        @objid ("cf567e46-7fa7-424e-8296-5364c312affa")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c7ad13d2-ec35-4691-9572-f006534365cc")
+        @objid ("287a599a-4067-4eaa-896c-c0cd5290522a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("fabc20d1-8fd4-4361-b7a5-487d9b47b63a")
+        @objid ("98f3a0a4-1c87-4b13-ac31-c63bd34a3ec3")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8bd1ea8d-6714-4a3b-9da9-c914064d8440");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

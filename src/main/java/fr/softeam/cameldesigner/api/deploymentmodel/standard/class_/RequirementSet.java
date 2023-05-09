@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.class_;
 
@@ -45,7 +45,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e40108e4-3b57-462c-a46e-00c47710d45a")
 public class RequirementSet extends FeatureClass {
-    @objid ("b4f85523-a2f7-4425-b445-34237de7adab")
+    @objid ("97980038-3f65-4a8c-bf68-cbf8f9cb1084")
     public static final String STEREOTYPE_NAME = "RequirementSet";
 
     /**
@@ -56,7 +56,7 @@ public class RequirementSet extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8adeceb5-1663-46d6-9fc3-5f1d08d1f1af")
+    @objid ("c6280377-dbcd-40de-8b0c-c4b8c8d8ccd3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RequirementSet.STEREOTYPE_NAME));
     }
@@ -66,7 +66,7 @@ public class RequirementSet extends FeatureClass {
      * 
      * @return a {@link RequirementSet} proxy on the created {@link Class}.
      */
-    @objid ("772ef7f7-a215-4bff-8537-59000dda6d52")
+    @objid ("7f2c34bd-0e4e-4158-b3bb-3f0b9e4bb1c3")
     public static RequirementSet create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RequirementSet.STEREOTYPE_NAME);
@@ -80,7 +80,7 @@ public class RequirementSet extends FeatureClass {
      * @param obj a Class
      * @return a {@link RequirementSet} proxy or <i>null</i>.
      */
-    @objid ("d93cc926-c0de-4793-97e8-2f86bc3aa128")
+    @objid ("3684b19e-9d17-4492-a07c-f6017730259b")
     public static RequirementSet instantiate(final Class obj) {
         return RequirementSet.canInstantiate(obj) ? new RequirementSet(obj) : null;
     }
@@ -93,7 +93,7 @@ public class RequirementSet extends FeatureClass {
      * @return a {@link RequirementSet} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1754d68d-9811-4de2-9059-0896fabc7d5e")
+    @objid ("eb94c6ea-4eda-492a-9590-3eaa528c98b8")
     public static RequirementSet safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RequirementSet.canInstantiate(obj))
         	return new RequirementSet(obj);
@@ -101,7 +101,7 @@ public class RequirementSet extends FeatureClass {
         	throw new IllegalArgumentException("RequirementSet: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e121ca50-c626-44ce-93af-df137e9949e2")
+    @objid ("7e7cfe12-6582-4e6c-bfd9-cb05ff13faef")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,7 +121,7 @@ public class RequirementSet extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("0c2bf052-38bd-4dcc-a251-59c8ff888851")
+    @objid ("8f89dff2-098b-4121-ac66-69e741f6c42e")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -133,7 +133,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("8ee393df-0337-48ac-b47a-cee911c7aff2")
+    @objid ("b571a7e8-b371-4c58-8f68-32f879d57e7a")
     public HorizontalScaleRequirement getHorizontalScaleRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -151,7 +151,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("b837066d-23aa-4e6a-a3ec-53efd3c1b8bb")
+    @objid ("c765782d-b61b-44b2-b14e-21d6e7bbf412")
     public ImageRequirement getImageRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -169,7 +169,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("93766960-f4d3-4124-8ee9-7aa634da36d8")
+    @objid ("931a8d8b-4c98-4573-acef-791122517123")
     public LocationRequirement getLocationRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -187,7 +187,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("cedecd3f-a94c-402a-81e0-928e827d633d")
+    @objid ("9b65bc55-1130-45f2-aa6d-3089914a7d85")
     public OSRequirement getOsRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -205,7 +205,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("8a74ef37-a8ef-47fb-8a4c-862a826022d0")
+    @objid ("b39589e0-d1d5-4d82-8510-044339f30c61")
     public PaaSRequirement getPaasRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -223,7 +223,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("a9be6a31-69cb-4346-bccf-23ca19a04093")
+    @objid ("bfb414fb-3c5f-4ba2-b48d-ba808e097996")
     public ProviderRequirement getProviderRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -241,7 +241,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("a1b32a8c-f542-4943-a8b6-d99fafeb0d25")
+    @objid ("903e074c-9ba0-4f90-8057-80079c5807f5")
     public ResourceRequirement getResourceRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -259,7 +259,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("ab6ef576-9e49-4b82-bd6a-83d3bb1d529e")
+    @objid ("c554aa63-d890-43c0-8bc4-da674a936f28")
     public SecurityRequirement getSecurityRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -277,7 +277,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("142f7d16-f815-4288-beb1-12086d83daec")
+    @objid ("3db5a328-b7c7-410f-9363-30a4bde78f7d")
     public VerticalScaleRequirement getVerticalScaleRequirement() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(RequirementSet.MdaTypes.MDAASSOCDEP)
@@ -289,7 +289,7 @@ public class RequirementSet extends FeatureClass {
         return null;
     }
 
-    @objid ("fcef440a-5fc6-422c-ad1f-88aa0cc5981c")
+    @objid ("61866da3-4410-4805-9a28-ee78e47a9a2a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -301,7 +301,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("ff156012-4513-4b83-a60a-24edc137e621")
+    @objid ("1c47242d-1eeb-4682-83bd-3cad15f987cc")
     public void setHorizontalScaleRequirement(final HorizontalScaleRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -327,7 +327,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("630403b7-eba4-49cd-85a7-4b3e6d3a9ef3")
+    @objid ("ac0142d4-7389-4a11-9c28-ce48a0fd04d3")
     public void setImageRequirement(final ImageRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -353,7 +353,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("a07af5e8-6720-49dc-8636-164bcc287f25")
+    @objid ("76db94c2-e7fe-4836-a565-5d20e7b6e79f")
     public void setLocationRequirement(final LocationRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -379,7 +379,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("1a85cebc-192d-4dd0-afe1-b2fe9b80f145")
+    @objid ("077bf76d-1905-410e-8c2a-5c76a4c25023")
     public void setOsRequirement(final OSRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -405,7 +405,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("5bfa6371-abbe-4f61-9504-d4c09c4fcee6")
+    @objid ("7901473c-dff6-4569-81a4-6f4eb509757a")
     public void setPaasRequirement(final PaaSRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -431,7 +431,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("9f151056-41e6-48f0-ac50-d417749ee85c")
+    @objid ("e4d25e5f-0016-49b8-8c6f-b0b7657a8133")
     public void setProviderRequirement(final ProviderRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -457,7 +457,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("69da6e87-0a2f-4869-b983-0d55779e7ecb")
+    @objid ("20b5c7c6-2995-45a4-bd74-74905620a7ad")
     public void setResourceRequirement(final ResourceRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -483,7 +483,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("86c924e7-cee4-4071-9435-ab4835b47201")
+    @objid ("15ca8ac9-1837-4207-bfbc-df397ddff1de")
     public void setSecurityRequirement(final SecurityRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -509,7 +509,7 @@ public class RequirementSet extends FeatureClass {
      * null
      * 
      */
-    @objid ("0f3b84ec-d450-4aef-9b89-ef325ac17a07")
+    @objid ("d1b16d6f-fab8-4cb3-99bc-2a4f5a92dc22")
     public void setVerticalScaleRequirement(final VerticalScaleRequirement obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -537,23 +537,23 @@ public class RequirementSet extends FeatureClass {
         return result;
     }
 
-    @objid ("0e898363-3553-4f5e-bea4-5313f8356f33")
+    @objid ("1bcedf0d-06f1-4096-9f84-68a9190acfb2")
     protected RequirementSet(final Class elt) {
         super(elt);
     }
 
     @objid ("56f9723e-57a0-4b68-946b-a3f85b1617ce")
     public static final class MdaTypes {
-        @objid ("5155bd2b-4047-4528-a508-cfc4046b0afb")
+        @objid ("02ee5975-c0e4-4534-8b5c-1020697624d9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1917a5d3-3554-4005-aa8b-c1e49c565ae9")
+        @objid ("1dee366d-34a6-4ce4-9bf7-e196f617578f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2efc79e1-50e1-4970-a947-81315b5b30ec")
+        @objid ("7e7ef020-211d-4d45-b7ae-e9a90d91bfb0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8bf4cf19-9028-412c-b79f-62c48cc38526")
+        @objid ("fb04617c-441c-4f69-841f-6ec2498bee81")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "513b1519-9560-4cd7-9dd4-f071d5fe54e8");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

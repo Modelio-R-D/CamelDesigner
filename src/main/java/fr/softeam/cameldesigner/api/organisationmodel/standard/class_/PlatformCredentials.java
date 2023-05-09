@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -35,10 +35,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("071d211c-2384-4a4a-8cac-c38f32bd4c25")
 public class PlatformCredentials extends Credentials {
-    @objid ("dfbc1ba3-3215-4118-8e53-469bc811278b")
+    @objid ("5c6dab74-1505-4fb5-9978-1a34591adad8")
     public static final String STEREOTYPE_NAME = "PlatformCredentials";
 
-    @objid ("6fbd2629-3109-432a-98e4-5ffc6e22f2a3")
+    @objid ("b725530b-1ec4-4925-8ab4-13c76b5388e6")
     public static final String PASSWORD_TAGTYPE = "password";
 
     /**
@@ -49,7 +49,7 @@ public class PlatformCredentials extends Credentials {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("607924cd-d3eb-4f1f-b3c6-fed5d6dc668f")
+    @objid ("ee1947dc-eef6-4baa-a4ed-76288e0a3835")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, PlatformCredentials.STEREOTYPE_NAME));
     }
@@ -59,7 +59,7 @@ public class PlatformCredentials extends Credentials {
      * 
      * @return a {@link PlatformCredentials} proxy on the created {@link Class}.
      */
-    @objid ("69821ed6-66ad-4fe1-93e0-c284a4152847")
+    @objid ("250fbb1e-7c55-4a46-8cfb-4866d1a0bec8")
     public static PlatformCredentials create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, PlatformCredentials.STEREOTYPE_NAME);
@@ -73,7 +73,7 @@ public class PlatformCredentials extends Credentials {
      * @param obj a Class
      * @return a {@link PlatformCredentials} proxy or <i>null</i>.
      */
-    @objid ("e54e8914-8708-4f32-836d-b00e6a841907")
+    @objid ("4c977ed8-c33e-43d9-8686-876e6e21f647")
     public static PlatformCredentials instantiate(final Class obj) {
         return PlatformCredentials.canInstantiate(obj) ? new PlatformCredentials(obj) : null;
     }
@@ -86,7 +86,7 @@ public class PlatformCredentials extends Credentials {
      * @return a {@link PlatformCredentials} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5ccf506d-31ab-4ccd-9904-54759e55c8e7")
+    @objid ("20da693c-0b3b-480c-91a7-23b2516ca98b")
     public static PlatformCredentials safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PlatformCredentials.canInstantiate(obj))
         	return new PlatformCredentials(obj);
@@ -94,7 +94,7 @@ public class PlatformCredentials extends Credentials {
         	throw new IllegalArgumentException("PlatformCredentials: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("dcb179e8-ad67-4e4c-b0b4-241bd40f0ff8")
+    @objid ("34ee702b-57bb-45ed-9da8-eb5676b4d0cb")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,7 +114,7 @@ public class PlatformCredentials extends Credentials {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("4979cd28-01db-495d-91f2-098b012acc43")
+    @objid ("25924f40-9058-4f92-8b22-6512539ee737")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -125,12 +125,12 @@ public class PlatformCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("07b04fb5-1e36-472c-ba24-4fba67ec71e7")
+    @objid ("871650a6-b635-4ae9-b8f7-e1ba53562600")
     public String getPassword() {
         return this.elt.getTagValue(PlatformCredentials.MdaTypes.PASSWORD_TAGTYPE_ELT);
     }
 
-    @objid ("61866ee9-5c1e-4a30-be37-781a3a242602")
+    @objid ("e38316d7-372c-4846-ad21-0c8c36cee36a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -141,7 +141,7 @@ public class PlatformCredentials extends Credentials {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("804e9e83-1ee6-4c05-bd61-63b69ca152b6")
+    @objid ("01564d0e-bc70-439b-8018-7ba87b112cfe")
     public void setPassword(final String value) {
         this.elt.putTagValue(PlatformCredentials.MdaTypes.PASSWORD_TAGTYPE_ELT, value);
     }
@@ -154,26 +154,26 @@ public class PlatformCredentials extends Credentials {
         return result;
     }
 
-    @objid ("6a770772-c0e6-45a7-b48b-922b46a48e07")
+    @objid ("f117ee1a-1036-4f4b-ba5c-d113926a7ea2")
     protected PlatformCredentials(final Class elt) {
         super(elt);
     }
 
     @objid ("92fe8b7b-826a-496c-8b51-48154e382f82")
     public static final class MdaTypes {
-        @objid ("ac97283a-e629-45de-8801-08eaa0c98b99")
+        @objid ("a15750f0-9779-4754-b5b3-90b38142dddb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("82eeb1b3-d05e-4bd7-beeb-bb2d1a18d9c4")
+        @objid ("267897ac-eee6-43e2-b818-f5bbb26c781b")
         public static TagType PASSWORD_TAGTYPE_ELT;
 
-        @objid ("0323dbec-82e0-4a0b-8c1c-77510e65c2c6")
+        @objid ("410bab37-51e0-4b9d-84c6-10ee3cfa720e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("37e3a292-daa7-437d-8b37-a0ef8b5e7998")
+        @objid ("6e99b46a-61ab-47d9-bf04-99fbd44be30c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0911441a-4a7e-4100-b3c5-802687341169")
+        @objid ("df999093-3769-4dea-bed4-5d19189fd518")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "18028ade-34c8-4575-802c-163035bf0bb0");
             PASSWORD_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "82175de9-34de-4e30-ba3e-d13cdf0653d1");

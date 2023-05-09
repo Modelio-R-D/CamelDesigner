@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.locationmodel.standard.package_;
 
@@ -42,7 +42,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e06f1e35-8aba-474b-985b-73a18abd3a7a")
 public class LocationModel extends SubModel {
-    @objid ("c1f6dcef-3043-4694-a012-1d577034c0d9")
+    @objid ("9872575e-de34-44aa-a961-eac825e1eada")
     public static final String STEREOTYPE_NAME = "LocationModel";
 
     /**
@@ -53,7 +53,7 @@ public class LocationModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a4c13394-223a-4c70-a72a-055b02053991")
+    @objid ("b2557a2f-a499-45b8-b94a-dcb881c98723")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, LocationModel.STEREOTYPE_NAME));
     }
@@ -63,7 +63,7 @@ public class LocationModel extends SubModel {
      * 
      * @return a {@link LocationModel} proxy on the created {@link Package}.
      */
-    @objid ("a576fc33-230b-4ebb-a138-6212b50d5d0a")
+    @objid ("fee982a9-5c4a-4ab5-a633-dd46513f0253")
     public static LocationModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, LocationModel.STEREOTYPE_NAME);
@@ -77,7 +77,7 @@ public class LocationModel extends SubModel {
      * @param obj a Package
      * @return a {@link LocationModel} proxy or <i>null</i>.
      */
-    @objid ("c720e56c-cdbf-433c-8b27-03dd9f5be2a1")
+    @objid ("835652fe-6db0-4567-afb3-b8590eca2f84")
     public static LocationModel instantiate(final Package obj) {
         return LocationModel.canInstantiate(obj) ? new LocationModel(obj) : null;
     }
@@ -90,7 +90,7 @@ public class LocationModel extends SubModel {
      * @return a {@link LocationModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2145128c-5e30-4a4d-b3d3-a6fcd2d98a53")
+    @objid ("5f1c57bd-32d6-46a7-9da0-58bf37bfab7a")
     public static LocationModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (LocationModel.canInstantiate(obj))
         	return new LocationModel(obj);
@@ -104,7 +104,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("ebb7edca-0ad3-4555-a044-5d3ea4cc3a09")
+    @objid ("43c41c61-00b9-45ce-bac2-ab904a70d9d3")
     public void addCloudLocations(final CloudLocation obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -116,7 +116,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("2e8f8dc2-6442-4b87-abb0-8d4eecb4f06f")
+    @objid ("f116dfe6-67e0-4c9d-9a9e-e747010ae7d2")
     public void addDiagrams(final LocationModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -128,13 +128,13 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("de248126-ecb0-4a98-8835-bf74f42253d1")
+    @objid ("b1cd39af-5603-4fa7-aa08-74e9a97581ad")
     public void addRegions(final GeographicalRegion obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("fd016fd3-113c-4906-bf05-d64d7281346f")
+    @objid ("f2d3feed-a092-4c8a-b2c3-a2505a66c5d6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -156,7 +156,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("8555ce39-60b6-47cc-a72f-01f236c66e49")
+    @objid ("a014272c-78bf-406e-99f5-280768ec08d1")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -167,7 +167,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("ce48110b-c945-40ff-a84a-f1a43355a101")
+    @objid ("7a205776-4e08-4b16-b43b-ed32ec1cc933")
     public List<CloudLocation> getCloudLocations() {
         List<CloudLocation> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -183,7 +183,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("04f1d049-f095-49b1-acd1-e700cdeeab0b")
+    @objid ("4c781a9e-984c-4d8e-9fdf-8f87a65c7a61")
     public List<LocationModelDiagram> getDiagrams() {
         List<LocationModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
@@ -197,7 +197,7 @@ public class LocationModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("b4a3a22b-9850-4ed9-97c3-7c3972d9872b")
+    @objid ("b068f0be-5c41-475e-b9de-69b69b113f71")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -209,7 +209,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("526548b9-e07f-48ac-ad49-5b0a90a77ff8")
+    @objid ("aaefc446-b320-4c2a-b4c1-b21dd995ec3a")
     public List<GeographicalRegion> getRegions() {
         List<GeographicalRegion> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -219,7 +219,7 @@ public class LocationModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("30bdab5b-ebe1-48e3-801f-d3e9cfa02719")
+    @objid ("b8f5e7b9-d12d-4cbf-a33d-2f38f8449287")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -231,7 +231,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("3ac1159d-d593-44ae-aa2c-dddbab1cc376")
+    @objid ("dc540444-ec0d-4ff7-b303-61f44a857745")
     public boolean removeCloudLocations(final CloudLocation obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -242,7 +242,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("4fad1984-b315-438d-afcf-99cf4be0114b")
+    @objid ("58ea5a7b-8c83-4a42-bb9a-ef128299b902")
     public boolean removeDiagrams(final LocationModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -253,7 +253,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("c567fc55-b1b2-4b6e-b6c9-2aaeb88e6b86")
+    @objid ("849cd14a-660c-4f4d-8dc2-6f22428e78bf")
     public boolean removeRegions(final GeographicalRegion obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -264,7 +264,7 @@ public class LocationModel extends SubModel {
      * null
      * 
      */
-    @objid ("347c9c69-7ec5-4063-9a3d-b19cee5c070c")
+    @objid ("91c54e44-782b-422c-81b6-315475bd6442")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -279,23 +279,23 @@ public class LocationModel extends SubModel {
         return result;
     }
 
-    @objid ("780a34e3-3aa6-4020-ab63-b30ffbd2bcf2")
+    @objid ("64d0a507-3415-4dfb-9533-eb1f3af8d1f3")
     protected LocationModel(final Package elt) {
         super(elt);
     }
 
     @objid ("a2ca82c4-fc32-4a3b-bda6-79e19816d45c")
     public static final class MdaTypes {
-        @objid ("bbf23d6f-a306-48a1-991a-11e1194b349f")
+        @objid ("9dbb9d54-2039-4d4e-b906-8c334df0947b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d81d5e40-6f10-4717-a937-47e22ec9bdcb")
+        @objid ("b2aa2856-9127-4ca7-8b0b-979aeddcc2a8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e2625cf9-d270-44f8-949a-58ac0a50a82b")
+        @objid ("66647f63-22af-4afd-811d-7db0cddceba8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9cc290f1-491f-4a24-b6d0-590cd9e0b427")
+        @objid ("6e92baf8-2e05-411e-8d1a-feb6c54e9541")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ae1d1599-c214-4ba0-9176-8cd1277e2ae1");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.package_;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("51d9d8d2-09df-43a4-afb2-46e9551ee43b")
 public abstract class MetricModel extends SubModel {
-    @objid ("f099673c-9b1c-4b53-af84-b239e978062e")
+    @objid ("0e40d8b8-4ef8-418d-b050-4749e0e54918")
     public static final String STEREOTYPE_NAME = "MetricModel";
 
     /**
@@ -47,12 +47,12 @@ public abstract class MetricModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f210eb7e-314a-4581-ac6a-f1723327fa80")
+    @objid ("e3a622fe-c967-4594-b02b-50f054abc012")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricModel.STEREOTYPE_NAME));
     }
 
-    @objid ("7f88e8f3-7b5d-48ef-87e3-79f50af483e2")
+    @objid ("6f845993-faca-4150-af5f-5c06f6801d0b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,13 +72,13 @@ public abstract class MetricModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("2ee748a1-c25e-4e12-bd67-64a6415f25f3")
+    @objid ("82bb72d1-90a8-4805-ac52-1f1ffdc849a8")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
     }
 
-    @objid ("ca3610a4-301e-40f5-bb71-37616cbfd1c6")
+    @objid ("c0dfc71d-0aa5-42b8-8014-c4030769fe39")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +92,23 @@ public abstract class MetricModel extends SubModel {
         return result;
     }
 
-    @objid ("c6a00ee9-227c-47a0-8ab9-4065161a8ec5")
+    @objid ("baca04a2-463a-4968-b29c-eaa4e49047b7")
     protected MetricModel(final Package elt) {
         super(elt);
     }
 
     @objid ("e2df5621-cc23-4f96-99f5-e13e4b7f8425")
     public static final class MdaTypes {
-        @objid ("02110165-ae1a-447b-a2c8-4a92b78db33b")
+        @objid ("2637b2eb-baf0-49e5-bec8-ba4942f39b59")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4156e025-88de-44af-a265-f6a9f94cd0a7")
+        @objid ("71c912a6-72e2-4730-84bf-4f8323ca45cf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a625e282-aba0-492c-bef5-8954bacd033b")
+        @objid ("aedf8cc3-3dad-45af-9d4e-fb0c31e3718e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("31f2598f-a6ca-418a-abff-d23d724097aa")
+        @objid ("bd3f0900-eb22-4941-8b5f-de8d61e869ef")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e9c199d4-1f22-4720-a79c-39ebaf36e7bb");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

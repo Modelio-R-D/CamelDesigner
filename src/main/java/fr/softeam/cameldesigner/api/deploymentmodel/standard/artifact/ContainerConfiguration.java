@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -171,16 +171,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a519dc9c-8511-467e-8f44-e3456ff54618")
 public class ContainerConfiguration extends Configuration {
-    @objid ("ce1df05a-52ac-413d-9f9d-8ecfe2605feb")
+    @objid ("a2780dff-5b6b-4048-a7d3-992c574ad8aa")
     public static final String STEREOTYPE_NAME = "ContainerConfiguration";
 
-    @objid ("cad84417-2a3a-4351-b7b0-72b07fa943d2")
+    @objid ("276eec82-17ab-438f-b148-e1c8a407b745")
     public static final String IMAGEID_TAGTYPE = "imageId";
 
-    @objid ("6be822fd-e067-4077-88a1-328acafa6f82")
+    @objid ("136603aa-8f8c-4aed-adb9-170ed7c63eed")
     public static final String STARTCOMMAND_NOTETYPE = "startCommand";
 
-    @objid ("a72e64eb-559d-460e-9883-b2ca7ee4492d")
+    @objid ("0c36c130-1c94-4daf-9e74-e2f37bbe1b73")
     public static final String UPDATECOMMAND_NOTETYPE = "updateCommand";
 
     /**
@@ -191,7 +191,7 @@ public class ContainerConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3c19538a-b6cc-47ca-ad2e-1b8a243a0a29")
+    @objid ("203fc01e-62ac-475a-aace-a65bdcc0e285")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ContainerConfiguration.STEREOTYPE_NAME));
     }
@@ -201,7 +201,7 @@ public class ContainerConfiguration extends Configuration {
      * 
      * @return a {@link ContainerConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("d1e1e328-b531-43c2-acbd-5957e0fa5a15")
+    @objid ("31e25f95-de70-4abf-9927-b01f3adfdaf9")
     public static ContainerConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ContainerConfiguration.STEREOTYPE_NAME);
@@ -215,7 +215,7 @@ public class ContainerConfiguration extends Configuration {
      * @param obj a Artifact
      * @return a {@link ContainerConfiguration} proxy or <i>null</i>.
      */
-    @objid ("1183b74f-0d22-4131-badc-df39feffafbe")
+    @objid ("1189c613-6d5a-4cd4-89d9-cff14160c19b")
     public static ContainerConfiguration instantiate(final Artifact obj) {
         return ContainerConfiguration.canInstantiate(obj) ? new ContainerConfiguration(obj) : null;
     }
@@ -228,7 +228,7 @@ public class ContainerConfiguration extends Configuration {
      * @return a {@link ContainerConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("aa736a6a-b678-4b67-89bd-3f2dde578d86")
+    @objid ("d0f00cb9-706c-4cbd-a031-cb3c9e142782")
     public static ContainerConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ContainerConfiguration.canInstantiate(obj))
         	return new ContainerConfiguration(obj);
@@ -236,7 +236,7 @@ public class ContainerConfiguration extends Configuration {
         	throw new IllegalArgumentException("ContainerConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("eedea089-db63-4aec-ac2d-1c848fe95137")
+    @objid ("0a10ad5a-1473-4c1f-a11a-441292264c18")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -256,7 +256,7 @@ public class ContainerConfiguration extends Configuration {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("3666a5bf-d48f-49c0-b8fe-510e565eeb6f")
+    @objid ("bbade60d-b8f4-4a1e-bd69-30f9d375ccd7")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -268,7 +268,7 @@ public class ContainerConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("8b6e703c-3fd3-4798-a575-482e19d06b7b")
+    @objid ("c317e4bc-b614-4d8b-af7a-8cc98eb8e504")
     public Feature getEnvironment() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(ContainerConfiguration.MdaTypes.MDAASSOCDEP)
@@ -557,7 +557,7 @@ public class ContainerConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("27475449-f612-48a6-bd89-bd55815d81ed")
+    @objid ("87aa419c-15f6-491c-8f87-7d89abc905aa")
     public String getImageId() {
         return this.elt.getTagValue(ContainerConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT);
     }
@@ -567,7 +567,7 @@ public class ContainerConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("a0d606d9-5083-45af-8936-50ceefeae251")
+    @objid ("3d4c65be-4490-4fca-bcc3-6c0b99d470aa")
     public String getStartCommandNote() {
         return this.elt.getNoteContent(ContainerConfiguration.MdaTypes.STARTCOMMAND_NOTETYPE_ELT);
     }
@@ -577,12 +577,12 @@ public class ContainerConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("73e302e2-74f7-4c10-9028-cdcac0cfab4d")
+    @objid ("68217dde-06e3-43ce-8881-b9d74273482b")
     public String getUpdateCommandNote() {
         return this.elt.getNoteContent(ContainerConfiguration.MdaTypes.UPDATECOMMAND_NOTETYPE_ELT);
     }
 
-    @objid ("7663b08e-11b5-43a5-9082-4ffd90e519fe")
+    @objid ("2b41e69a-6899-48a1-b668-83c5b7029749")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -594,7 +594,7 @@ public class ContainerConfiguration extends Configuration {
      * null
      * 
      */
-    @objid ("da65b2ed-5b35-412a-871d-aac4ba55091a")
+    @objid ("c9b14f2a-1c69-46f2-927f-939854512e61")
     public void setEnvironment(final Feature obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -619,7 +619,7 @@ public class ContainerConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("648f6540-1f16-4414-bc40-9245c415277b")
+    @objid ("b376e35f-0065-420a-9d70-7d178320ebdc")
     public void setImageId(final String value) {
         this.elt.putTagValue(ContainerConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT, value);
     }
@@ -629,7 +629,7 @@ public class ContainerConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("a1d0c8cd-a22d-4f34-bb00-f8cfe76355d9")
+    @objid ("025702d7-d0c4-48c2-8b82-208bb91be441")
     public void setStartCommandNote(final String value) {
         this.elt.putNoteContent(ContainerConfiguration.MdaTypes.STARTCOMMAND_NOTETYPE_ELT, value);
     }
@@ -639,37 +639,37 @@ public class ContainerConfiguration extends Configuration {
      * <p>Note description:
      * <br/><i>null</i></p>
      */
-    @objid ("a55f68f5-430d-4511-ac77-04fe21e95168")
+    @objid ("0353ad97-f49a-4031-ae43-705b5a943462")
     public void setUpdateCommandNote(final String value) {
         this.elt.putNoteContent(ContainerConfiguration.MdaTypes.UPDATECOMMAND_NOTETYPE_ELT, value);
     }
 
-    @objid ("5a24a5e0-be49-4a63-a1d2-a8d695878abd")
+    @objid ("e405443c-4cdb-4d71-aec0-7e571c43dd83")
     protected ContainerConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("4a5c856d-f4b0-4d7b-89fe-fa3fcb6c8aeb")
     public static final class MdaTypes {
-        @objid ("97339cdf-d851-4697-b76b-aea54fd0fe2c")
+        @objid ("b8cef8e8-43cb-4be1-8b7a-a489e63d3a56")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("148429d3-10be-49ff-b557-051f96d67dcf")
+        @objid ("fb113d1b-a322-4e80-a2e8-607ec17a7754")
         public static TagType IMAGEID_TAGTYPE_ELT;
 
-        @objid ("49db3507-af1b-4d3e-99dd-c61b47cd3c31")
+        @objid ("9d4cd5ce-3ac3-4cb7-aeb5-7d426503e2e4")
         public static NoteType STARTCOMMAND_NOTETYPE_ELT;
 
-        @objid ("f30f379a-2d2d-488d-9e1c-5867fc701462")
+        @objid ("47bbbc95-9080-4049-be72-b9d677ad0fc7")
         public static NoteType UPDATECOMMAND_NOTETYPE_ELT;
 
-        @objid ("fe9842e0-37b0-45be-9aa5-9dade399232d")
+        @objid ("9f09b18f-3cce-4ea2-a97d-fb2187d3e569")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c216bde8-9e61-432d-9259-16b5be782bb3")
+        @objid ("0157753d-3d3f-4255-9bc8-a6be0933dd1b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("fae71ca9-921b-4e29-a120-49cf44a2be4d")
+        @objid ("e1cee939-52e3-4248-ae8d-969c761bc948")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "20c23411-2764-477e-bda1-1fea947d0e02");
             IMAGEID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "703ce2ad-9323-48f3-a8f7-b1d983bbf5a1");

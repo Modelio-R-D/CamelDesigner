@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.constraint;
 
@@ -40,10 +40,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("a3e93b35-d5bc-4f82-b5cf-4e2109bf44fb")
 public class Switch extends Feature {
-    @objid ("1ed5a5dc-704e-4fd8-9914-16664c763c76")
+    @objid ("70be3b1b-b5e3-402e-acd2-74ebbf6463e4")
     public static final String STEREOTYPE_NAME = "Switch";
 
-    @objid ("8962bd44-b089-4db8-8822-b51b3cc68ac2")
+    @objid ("cc7e4e47-845e-44a7-90f2-a913211f2e14")
     public static final String VALUES_TAGTYPE = "values";
 
     /**
@@ -54,7 +54,7 @@ public class Switch extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d71d472b-9f91-46c7-a38a-45e23878d16e")
+    @objid ("7ed7f6d9-4268-4c2f-bd30-6a53fd978a72")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Switch.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class Switch extends Feature {
      * 
      * @return a {@link Switch} proxy on the created {@link Constraint}.
      */
-    @objid ("17ea8b56-2e8c-412c-85dc-77d80ee17465")
+    @objid ("57c43697-0e83-45db-9233-dc734cb18b3f")
     public static Switch create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Switch.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class Switch extends Feature {
      * @param obj a Constraint
      * @return a {@link Switch} proxy or <i>null</i>.
      */
-    @objid ("7a5bff39-204d-4c65-9b34-432d6b1e81ec")
+    @objid ("ed711593-93a5-4b4b-be18-bbb6bc1b407e")
     public static Switch instantiate(final Constraint obj) {
         return Switch.canInstantiate(obj) ? new Switch(obj) : null;
     }
@@ -91,7 +91,7 @@ public class Switch extends Feature {
      * @return a {@link Switch} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("00522b77-c67d-4aef-8804-3ed0b5d55714")
+    @objid ("baaaab87-8870-4550-bb81-abf5cde931b1")
     public static Switch safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (Switch.canInstantiate(obj))
         	return new Switch(obj);
@@ -105,7 +105,7 @@ public class Switch extends Feature {
      * null
      * 
      */
-    @objid ("3988b87e-2b68-4511-bf19-135c083e5a66")
+    @objid ("f688b274-87f3-4d14-8353-587edb2c353c")
     public void addComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -115,7 +115,7 @@ public class Switch extends Feature {
         }
     }
 
-    @objid ("86d14489-77d5-4b7c-b73d-b8e23a887664")
+    @objid ("7bdc11d6-08a2-4ce8-acd9-28c53b4482fe")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -137,7 +137,7 @@ public class Switch extends Feature {
      * null
      * 
      */
-    @objid ("ddd9aed1-19b1-46f3-9e11-3ceee37995a5")
+    @objid ("0d1b0dd3-ad60-4dfa-a3d2-eeca1b293c05")
     public List<SoftwareComponent> getComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -156,7 +156,7 @@ public class Switch extends Feature {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("21928760-ae44-4771-8bf2-e4ca29009ac5")
+    @objid ("895623c6-a96a-4c91-8964-7daff7d03671")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -168,7 +168,7 @@ public class Switch extends Feature {
      * null
      * 
      */
-    @objid ("c2964d62-f911-4dbc-a8b9-27440f366e4f")
+    @objid ("1a8f469b-c093-4125-9bd5-9b7859c7267c")
     public MetricContext getMetricContext() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(Switch.MdaTypes.MDAASSOCDEP)
@@ -187,12 +187,12 @@ public class Switch extends Feature {
      * <p>Property description:<br/>
      * <i>null</i></p>
      */
-    @objid ("8bae49eb-5e91-473f-b0e4-ee75e915ec9f")
+    @objid ("cdf0ff5e-910c-4ea1-b3d0-946cab8a7333")
     public List<String> getValues() {
         return this.elt.getTagValues(Switch.MdaTypes.VALUES_TAGTYPE_ELT);
     }
 
-    @objid ("cffe8cc0-2ddf-4b7e-91bc-38c0ce6b3f3b")
+    @objid ("05206ce8-cd07-43be-8a64-074d92a64ef3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -204,7 +204,7 @@ public class Switch extends Feature {
      * null
      * 
      */
-    @objid ("64616f0a-eef5-4fc1-a7b9-5d67dc3bea83")
+    @objid ("26d911c6-007a-4d8c-960f-fb545bde9c8b")
     public boolean removeComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -224,7 +224,7 @@ public class Switch extends Feature {
      * null
      * 
      */
-    @objid ("b989a1a7-fa8f-43a2-b94e-ef13a236d624")
+    @objid ("93cef11a-94eb-4529-a362-5454cb5c333e")
     public void setMetricContext(final MetricContext obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -249,31 +249,31 @@ public class Switch extends Feature {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4086c10e-ddf5-4078-a88c-3539f2ac593a")
+    @objid ("ea930e1c-086a-4962-9606-9fe40ed1a359")
     public void setValues(final List<String> values) {
         this.elt.putTagValues(Switch.MdaTypes.VALUES_TAGTYPE_ELT, values);
     }
 
-    @objid ("24a4a478-22fd-4ff4-93be-a692310bc8cc")
+    @objid ("19e98324-1d67-47a0-b753-a03e275572fe")
     protected Switch(final Constraint elt) {
         super(elt);
     }
 
     @objid ("aa99b253-e0b8-4432-9e4c-4ee801b20e09")
     public static final class MdaTypes {
-        @objid ("c711a084-971c-460d-a2ef-c1a9ee0ca94c")
+        @objid ("aebcd7d7-c2f7-44a3-9e7c-14b1fb9fc3ba")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8fdfd7ff-f625-4189-b5da-3e8775c0bcb0")
+        @objid ("5345664f-2493-4a9d-9b69-cdb7aa5ac8f6")
         public static TagType VALUES_TAGTYPE_ELT;
 
-        @objid ("c8495a1a-2104-4e30-a446-b4ca0014693c")
+        @objid ("e648a412-3ae7-468b-913e-9efc18487f7e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("24ff6f5a-79c7-4763-85a4-61073e51fde5")
+        @objid ("0db47d28-e19d-483e-8289-804dd059843c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d6023d13-b21c-458b-a661-f04720418289")
+        @objid ("f7e41adc-c8b7-4b6a-9695-8eab60042dde")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "58186976-c426-4fa2-bc5c-50c3175a707c");
             VALUES_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "744ae373-9518-4481-9be3-b9b7fcb11d66");

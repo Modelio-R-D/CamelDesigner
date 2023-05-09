@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact;
 
@@ -33,10 +33,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("82c11738-5187-43e6-abdf-7b4bb3893339")
 public class ImageConfiguration extends Configuration {
-    @objid ("c66739e8-262e-4eab-91ef-4ad6595ff51b")
+    @objid ("ee0edf8a-903a-4ebb-ba60-1c41f706c144")
     public static final String STEREOTYPE_NAME = "ImageConfiguration";
 
-    @objid ("09638067-bb8d-42d4-8287-931fb4df9a4f")
+    @objid ("323163c1-b91c-408b-8845-95147499a926")
     public static final String IMAGEID_TAGTYPE = "imageId";
 
     /**
@@ -47,7 +47,7 @@ public class ImageConfiguration extends Configuration {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("63f4db60-ad48-45d7-8c84-6fd11f0f17fa")
+    @objid ("34535aec-d428-4873-b1bc-573f955f7d31")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Artifact) && ((Artifact) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ImageConfiguration.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class ImageConfiguration extends Configuration {
      * 
      * @return a {@link ImageConfiguration} proxy on the created {@link Artifact}.
      */
-    @objid ("beab43b2-de36-41a8-aed5-f7b2be21ea60")
+    @objid ("6f08f507-d7a2-4ec7-8219-551a8b2a574c")
     public static ImageConfiguration create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Artifact");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, ImageConfiguration.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class ImageConfiguration extends Configuration {
      * @param obj a Artifact
      * @return a {@link ImageConfiguration} proxy or <i>null</i>.
      */
-    @objid ("0a22e8ed-1e8e-4689-b6cc-47039b0cd2ab")
+    @objid ("66b8db87-41d0-4f27-9c96-6f9999e6a0fc")
     public static ImageConfiguration instantiate(final Artifact obj) {
         return ImageConfiguration.canInstantiate(obj) ? new ImageConfiguration(obj) : null;
     }
@@ -84,7 +84,7 @@ public class ImageConfiguration extends Configuration {
      * @return a {@link ImageConfiguration} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("100a6a91-91ca-41ef-ac12-6ebaa8c594ca")
+    @objid ("e62f1439-1c77-497d-9b2e-fa66b4759ca4")
     public static ImageConfiguration safeInstantiate(final Artifact obj) throws IllegalArgumentException {
         if (ImageConfiguration.canInstantiate(obj))
         	return new ImageConfiguration(obj);
@@ -92,7 +92,7 @@ public class ImageConfiguration extends Configuration {
         	throw new IllegalArgumentException("ImageConfiguration: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("67fecb55-6393-4808-b5b2-229dbbb53984")
+    @objid ("22c5cab7-c92a-4911-ad2c-f62f13a6e67b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,7 +112,7 @@ public class ImageConfiguration extends Configuration {
      * Get the underlying {@link Artifact}. 
      * @return the Artifact represented by this proxy, never null.
      */
-    @objid ("bf8a3f95-fc2f-4303-a85c-5ee9f99591c3")
+    @objid ("5d97e7e0-fb0e-4313-a4ae-20301a783fb2")
     @Override
     public Artifact getElement() {
         return (Artifact)super.getElement();
@@ -123,12 +123,12 @@ public class ImageConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("aeffd204-f662-4e47-9d1b-1bab246e4d47")
+    @objid ("a584e0bf-5a4f-4e2f-aefc-70110ff0bda8")
     public String getImageId() {
         return this.elt.getTagValue(ImageConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT);
     }
 
-    @objid ("b78e3e91-6cbb-4e56-90da-015512a9c962")
+    @objid ("e82c4df3-69a4-4849-8571-7cadd8eb7493")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -139,31 +139,31 @@ public class ImageConfiguration extends Configuration {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("37445dd0-5d91-46a8-a0fb-374115fc39e9")
+    @objid ("361ca482-79da-4b60-9b57-f2c8f06de3f7")
     public void setImageId(final String value) {
         this.elt.putTagValue(ImageConfiguration.MdaTypes.IMAGEID_TAGTYPE_ELT, value);
     }
 
-    @objid ("ff978c21-acae-46a9-81d9-1ced58771971")
+    @objid ("6e9a6124-1423-47d8-834f-101d896fabe7")
     protected ImageConfiguration(final Artifact elt) {
         super(elt);
     }
 
     @objid ("5ad67535-b375-43df-a0cf-c68e9322dfbb")
     public static final class MdaTypes {
-        @objid ("98e650cf-bfb8-4b63-bde8-8b04834711fe")
+        @objid ("67757c00-eca9-4e38-8bf8-aa45ed505700")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("afb3bcd6-9b25-4fcb-a7e5-35b9070bc5bf")
+        @objid ("1143d187-2f43-448a-b5d8-e914eb39fe9a")
         public static TagType IMAGEID_TAGTYPE_ELT;
 
-        @objid ("936db0c6-f786-494b-bd35-78c8cb98e5a4")
+        @objid ("4aea25b6-9255-4edf-bf4b-7a72c830d2b6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9e41d464-3965-4b80-b2c2-dcfdde3f03d5")
+        @objid ("09bfea11-2d94-4cfe-9b97-ea28315efe0e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0bbbb58b-27c8-4cba-956b-68e1f290e236")
+        @objid ("d0a790cf-e83d-4d37-873e-3f2be2c769c7")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9d1d3479-da13-4330-b60e-b43e96415c48");
             IMAGEID_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "62b358eb-ce0c-4c71-9a18-d959cb6840b6");

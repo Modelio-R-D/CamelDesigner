@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.generalclass;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("cd14264b-97fa-49a6-bb0d-db04d8c66386")
 public abstract class Requirement extends FeatureClassifier {
-    @objid ("41fca407-090e-4ac5-895c-c8540e84d1a2")
+    @objid ("90065f0a-94c9-42b9-a418-8e04dfa12a42")
     public static final String STEREOTYPE_NAME = "Requirement";
 
     /**
@@ -47,12 +47,12 @@ public abstract class Requirement extends FeatureClassifier {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("784cb63b-40c6-474f-808f-f77f7e66335b")
+    @objid ("ebefc3b5-ed07-4a0d-92c4-b43cff686510")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof GeneralClass) && ((GeneralClass) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Requirement.STEREOTYPE_NAME));
     }
 
-    @objid ("2ca86566-396f-4c08-a6ef-3d6e28e1ade3")
+    @objid ("04117365-b225-4eb4-b255-b6fc0ee94ac7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -72,13 +72,13 @@ public abstract class Requirement extends FeatureClassifier {
      * Get the underlying {@link GeneralClass}. 
      * @return the GeneralClass represented by this proxy, never null.
      */
-    @objid ("ece02539-813f-478e-a4f0-658a0c3b0b36")
+    @objid ("e9e94389-bd7f-4207-9586-852d7fbc0376")
     @Override
     public GeneralClass getElement() {
         return (GeneralClass)super.getElement();
     }
 
-    @objid ("8593b372-0179-4d79-b0b4-94fbd5bd4c04")
+    @objid ("558ae756-731f-468b-a2a9-de93bb02ff56")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -92,23 +92,23 @@ public abstract class Requirement extends FeatureClassifier {
         return result;
     }
 
-    @objid ("50dc012c-2f98-4fc0-8d92-65765c2d25a9")
+    @objid ("69ef1c32-a09a-4c25-89d2-1faa065d66d7")
     protected Requirement(final GeneralClass elt) {
         super(elt);
     }
 
     @objid ("d168a813-2ca0-4031-921a-6b0cec2ba4ee")
     public static final class MdaTypes {
-        @objid ("9d1af6c7-2ba4-4b16-be0a-fd2898b22d2e")
+        @objid ("333bc574-21a9-4780-ac87-04fca78c67c7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6243e346-395c-4fbe-9f16-2a06aa9c70ba")
+        @objid ("04f2b2cf-1160-401e-b5a7-a81c9e71d67f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f44e4851-ab09-4b58-8940-91a78cbff293")
+        @objid ("26a698c3-f7b4-4d98-ba31-ea176ed0ed3f")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e6bce179-7b23-460c-825b-f4a37f0080ac")
+        @objid ("6359471d-db45-4154-b8f6-ce6f07cb6abe")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "f14398cc-a1c7-4953-9874-f7819f1ec4f7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

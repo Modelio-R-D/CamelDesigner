@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/15/23 5:37 PM by Modelio Studio.
+ * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.scalabilitymodel.standard.instance;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("73801d4a-bc99-45e4-9e2d-04f8cfc021bf")
 public abstract class EventInstance extends FeatureInstance {
-    @objid ("605f5a9b-0855-47e4-8ffa-e0256b780ec8")
+    @objid ("b4ca19a3-59ea-47cb-8606-fa301c532bed")
     public static final String STEREOTYPE_NAME = "EventInstance";
 
-    @objid ("629de141-b063-45cf-8621-d60aaeef1cc6")
+    @objid ("40db251f-7064-4eed-8411-f97ee338ad37")
     public static final String LAYER_TAGTYPE = "layer";
 
-    @objid ("785b449e-dac4-441f-91e0-4288773f6e22")
+    @objid ("ea86acd8-90f4-4b3a-ab86-af7d648cf669")
     public static final String STATUS_TAGTYPE = "status";
 
     /**
@@ -56,12 +56,12 @@ public abstract class EventInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("74650d5b-618c-4310-8b9a-bbabe2f50b33")
+    @objid ("4af8b310-a422-4612-a868-2ff059412fb5")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, EventInstance.STEREOTYPE_NAME));
     }
 
-    @objid ("a79e7594-4300-4400-a157-a0c9b44e0f2a")
+    @objid ("cebeb6f8-9801-449e-8b89-5536d6df2b89")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -81,7 +81,7 @@ public abstract class EventInstance extends FeatureInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("d456f184-e415-42c1-b198-316f5ed3cd50")
+    @objid ("b280e74d-998a-4d44-9bc7-f1f3755b12d8")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -92,7 +92,7 @@ public abstract class EventInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("22135b93-64a7-486c-97e0-779acd5c75dd")
+    @objid ("4c395bad-755e-4a57-8fad-78cfa513dcae")
     public String getLayer() {
         return this.elt.getTagValue(EventInstance.MdaTypes.LAYER_TAGTYPE_ELT);
     }
@@ -102,7 +102,7 @@ public abstract class EventInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5054d4b3-510d-4775-aad6-916e18164832")
+    @objid ("87481bd0-e675-439c-84c8-81d5d3f492d4")
     public String getStatus() {
         return this.elt.getTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT);
     }
@@ -113,12 +113,12 @@ public abstract class EventInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("ccd45453-c279-467c-92de-2ec69983d106")
+    @objid ("5fcedbbf-d1b7-4f6e-b8f3-aff6ded50be1")
     public Event getType() {
         return (Event)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), Event.STEREOTYPE_NAME);
     }
 
-    @objid ("481261e1-ba6a-47e4-8727-d1083ad4349a")
+    @objid ("30ed4ad5-5b56-461e-9178-46e62055b273")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -129,7 +129,7 @@ public abstract class EventInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2bd4ff82-a5b1-4ab0-9208-9018e2c7a0c9")
+    @objid ("cc5ad858-dfd4-435c-8f49-f13d105b1b8c")
     public void setLayer(final String value) {
         this.elt.putTagValue(EventInstance.MdaTypes.LAYER_TAGTYPE_ELT, value);
     }
@@ -139,7 +139,7 @@ public abstract class EventInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ee4b08a9-6168-419c-b4ac-5d156c167573")
+    @objid ("7b42d290-9fae-4aaa-b070-c1023b3827fd")
     public void setStatus(final String value) {
         this.elt.putTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT, value);
     }
@@ -150,7 +150,7 @@ public abstract class EventInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("d0057f6a-e181-46c9-a582-0bd2cbc639fa")
+    @objid ("092243f4-f122-46ff-b11b-913c5826d124")
     public void setType(final Event obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
     }
@@ -219,29 +219,29 @@ public abstract class EventInstance extends FeatureInstance {
         this.elt.putTagValue(EventInstance.MdaTypes.STATUS_TAGTYPE_ELT, value.toString());
     }
 
-    @objid ("93592c5c-fcbf-4dcb-a285-8f42973e8c14")
+    @objid ("ce407b36-edbd-442e-9e56-0e74ddc45dd1")
     protected EventInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("98e63d06-3db8-4a94-99e6-5c82f0f8ac06")
     public static final class MdaTypes {
-        @objid ("15d742ff-1a6f-42ea-99b2-99dfe0e2000f")
+        @objid ("bab482d4-8fa2-486e-9f56-262c231c26fe")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("de5097e8-c727-4112-978f-7f9eb8ec3158")
+        @objid ("c6493ee0-9e40-41fd-b679-08e21f612aa7")
         public static TagType STATUS_TAGTYPE_ELT;
 
-        @objid ("a0164fd4-5902-4fd3-8e5d-9814ce9df138")
+        @objid ("fb608760-fa80-409c-8925-f1269e349009")
         public static TagType LAYER_TAGTYPE_ELT;
 
-        @objid ("285f15d8-c035-4808-813b-773ac6e3dd92")
+        @objid ("b11cfa14-ada7-436f-9e6c-5fd1f69d720e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e5968dbb-45e4-4db9-9d7d-be548d68cd1f")
+        @objid ("4ef86b24-3d28-4edb-9939-aee7a9212a85")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e5eb8500-4553-42e5-a4c2-54f4752e2237")
+        @objid ("32fbde3b-f27b-4caf-aba5-128e7b49cd12")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "7cddc4dd-ed72-4a04-85c5-54fe85e4ef38");
             STATUS_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "4747fc7f-ba00-4b26-b582-d03b1ba48082");
