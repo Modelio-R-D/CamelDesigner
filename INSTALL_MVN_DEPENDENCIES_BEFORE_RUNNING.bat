@@ -47,4 +47,4 @@ call mvn  install:install-file -Dfile=./src/main/lib/xtext-2.12.0.jar -DgroupId=
 call mvn  install:install-file -Dfile=./src/main/lib/util-2.12.0.jar -DgroupId=org.eclipse.xtext  -DartifactId=util  -Dversion=2.12.0  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/api-1.7.2.jar -DgroupId=org.slf4j  -DartifactId=api  -Dversion=1.7.2  -Dpackaging=jar 
 call mvn  install:install-file -Dfile=./src/main/lib/camel-5.5.0-SNAPSHOT.jar  -DgroupId=camel  -DartifactId=camel  -Dversion=5.5.0-SNAPSHOT  -Dpackaging=jar 
-call mvn  install:install-file -Dfile=./src/main/lib/camel.dsl-5.5.0-SNAPSHOT.jar  -DgroupId=camel  -DartifactId=camel-dsl  -Dversion=5.5.0-SNAPSHOT  -Dpackaging=jar 
+call mvn  install:install-file -Dfile=./src/main/lib/camel-dsl-5.5.0-SNAPSHOT.jar  -DgroupId=camel  -DartifactId=camel-dsl  -Dversion=5.5.0-SNAPSHOT  -Dpackaging=jar 

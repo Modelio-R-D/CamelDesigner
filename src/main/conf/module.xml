@@ -17,6 +17,26 @@
         <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
         <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.core-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe2.runtime-2.9.1-SNAPSHOT.jar"/>
+        <PathEntry path="lib/org.eclipse.emf.mwe.utils-1.3.21-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-5.5.0-SNAPSHOT.jar"/>
+        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
         <PathEntry path="lib/registry-3.7.0.jar"/>
         <PathEntry path="lib/xtext-2.12.0.jar"/>
         <PathEntry path="lib/inject-1.0.0.jar"/>
@@ -62,11 +82,11 @@
         <PathEntry path="lib/change-2.11.0.jar"/>
         <PathEntry path="lib/cdo-4.6.0.jar"/>
         <PathEntry path="lib/util-2.12.0.jar"/>
+        <PathEntry path="lib/guava-21.0.jar"/>
         <PathEntry path="lib/gson-2.8.9.jar"/>
         <PathEntry path="lib/mathParser.org-mXparser-4.1.1.jar"/>
-        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
-        <PathEntry path="lib/guava-21.0.0.jar"/>
         <PathEntry path="lib/inject-3.0.0.jar"/>
+        <PathEntry path="lib/camel-dsl-5.5.0-SNAPSHOT.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="28a1b85d-93b2-47f7-845a-f4883b71ded5" id="CamelCore">
@@ -1367,6 +1387,15 @@
                 </TagTypes>
             </Stereotype>
         </Profile>
+        <Profile uid="65a416e4-f807-4f99-a5ef-623e9591577c" id="Profiler">
+            <Stereotype name="Profiler_Component" metaclass="Standard.Component" owner-stereotype="mref#'' {e66ca9e8-6d1c-46bd-9d9d-e1e16675fada} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Profiler_Component.label" uid="8b37e349-f8bc-45ae-a0e0-2351c6b20c27" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="code" uid="5d61cdca-d377-47ba-8838-f16bfe1856e1" label="%tagtype.code.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+        </Profile>
     </Profiles>
     <Parameters>
         <Parameter id="IP_Adresse" group="%group.CPIntegration.label" uid="b443f835-0cd3-49ae-a5f6-749f85955403" type="String" default-value="" label="%parameter.IP_Adresse.label">
@@ -1443,6 +1472,7 @@
                 </Handler>
             </Command>
             <Command id="Deployment_Type_Model" label="%command.Deployment_Type_Model.label" tooltip="%command.Deployment_Type_Model.tooltip" image="res/icon/gui/DeploymentTypeModel_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.commands.createsubmodel.CreateDeploymentTypeModelCommand"/>
             </Command>
             <Command id="Deployment_Type_Model_diagram" label="%command.Deployment_Type_Model_diagram.label" tooltip="%command.Deployment_Type_Model_diagram.tooltip" image="res/icon/gui/DeploymentTypeModelDiagram_24.png" modify-model="true">
@@ -1852,6 +1882,7 @@
                 </Handler>
             </Tool>
             <Tool id="Deployment_Instance_Model" label="%tool.Deployment_Instance_Model.label" tooltip="%tool.Deployment_Instance_Model.tooltip" image="res/icon/gui/DeploymentInstanceModel_24.png">
+                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#CamelModel"/>
                 <Handler class="fr.softeam.cameldesigner.handlers.tools.core.CreateDeploymentInstanceModelTool">
                     <HParameter name="stereotype" value="CamelDesigner#DeploymentInstanceModel"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
@@ -2716,7 +2747,7 @@
                 </Handler>
             </Tool>
             <Tool id="WindowCriterion" label="%tool.WindowCriterion.label" tooltip="%tool.WindowCriterion.tooltip" image="res/icon/gui/WindowCriterion_24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="CamelDesigner#MetricTypeModel"/>
+                <Scope-source metaclass="Standard.Class" stereotype="CamelDesigner#WindowProcessing"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="CamelDesigner#WindowCriterion"/>
                     <HParameter name="metaclass" value="Standard.Attribute"/>
@@ -2726,7 +2757,7 @@
             <Tool id="Precedes" label="%tool.Precedes.label" tooltip="%tool.Precedes.tooltip" image="res/icon/gui/Precedes_24.png">
                 <Scope-source metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
                 <Scope-target metaclass="Standard.Component" stereotype="CamelDesigner#SoftwareComponent"/>
-                <Handler class="Link">
+                <Handler class="org.modelio.api.modelio.diagram.tools.standard.GenericLinkTool">
                     <HParameter name="stereotype" value="CamelDesigner#Precedes"/>
                     <HParameter name="metaclass" value="Standard.Substitution"/>
                     <HParameter name="name" value="Precedes"/>

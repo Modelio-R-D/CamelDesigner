@@ -343,6 +343,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.9</version>
@@ -356,22 +362,16 @@
         </dependency>
 
         <dependency>
-            <groupId>camel</groupId>
-            <artifactId>camel-dsl</artifactId>
-            <version>5.5.0-SNAPSHOT</version>
+            <groupId>com.google</groupId>
+            <artifactId>inject</artifactId>
+            <version>3.0.0</version>
             <type>jar</type>
         </dependency>
 
         <dependency>
-            <groupId>com.google</groupId>
-            <artifactId>guava</artifactId>
-            <version>21.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google</groupId>
-            <artifactId>inject</artifactId>
-            <version>3.0.0</version>
+            <groupId>camel</groupId>
+            <artifactId>camel-dsl</artifactId>
+            <version>5.5.0-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
 

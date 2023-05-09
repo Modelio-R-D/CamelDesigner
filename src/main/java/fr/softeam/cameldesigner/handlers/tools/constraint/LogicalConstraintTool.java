@@ -2,6 +2,9 @@ package fr.softeam.cameldesigner.handlers.tools.constraint;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
+import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint;
+import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
@@ -13,9 +16,6 @@ import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.metamodel.uml.infrastructure.Constraint;
 import org.modelio.vcore.smkernel.mapi.MObject;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.CamelConstraint;
-import fr.softeam.cameldesigner.api.constraintmodel.standard.constraint.LogicalConstraint;
-import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 
 @objid ("7616b101-4de1-40cd-9a7e-6aaf488e8be6")
 public class LogicalConstraintTool extends DefaultMultiLinkTool {
@@ -44,20 +44,20 @@ public class LogicalConstraintTool extends DefaultMultiLinkTool {
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic lastNode, final List<IDiagramGraphic> otherNodes, final List<LinkRouterKind> routerKinds, final List<ILinkPath> paths, final Rectangle rectangle) {
         IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
-
+        
         try( ITransaction transaction = session.createTransaction("Logical Constraint")){
-
+        
             LogicalConstraint camelElt = LogicalConstraint.create();
-
+        
             for(IDiagramGraphic otherNode : otherNodes) {
                 camelElt.addConstrained(CamelConstraint.instantiate((Constraint) otherNode.getElement()));
             }
-
+        
             List<IDiagramGraphic> graph = diagramHandle.unmask(camelElt.getElement(), rectangle.x, rectangle.y);
-
+        
             if((graph != null) &&  (graph.size() > 0) && (graph.get(0) instanceof IDiagramNode))
                 ((IDiagramNode)graph.get(0)).setBounds(rectangle);
-
+        
             diagramHandle.save();
             diagramHandle.close();
             transaction.commit ();

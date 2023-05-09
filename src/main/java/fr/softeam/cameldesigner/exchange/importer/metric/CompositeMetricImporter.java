@@ -60,7 +60,7 @@ public class CompositeMetricImporter<T extends CompositeMetric, V extends fr.sof
             for( Metric component: values) {
                 CamelElement valueElt = this._process.getElement(component);
                 if (valueElt instanceof fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric)
-                    elt.addComponentMetrics((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric) component);
+                    elt.addComponentMetrics((fr.softeam.cameldesigner.api.metricmodel.standard.class_.Metric) valueElt);
             }
         }
     }

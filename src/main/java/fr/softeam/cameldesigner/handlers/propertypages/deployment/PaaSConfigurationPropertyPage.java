@@ -32,7 +32,7 @@ public class PaaSConfigurationPropertyPage<T extends PaaSConfiguration> extends 
         case 3 :
             this._element.setEndpoint(value);
             break;
-            
+        
         case 4 :
             this._element.setDownloadURL(value);
             break;
