@@ -1,7 +1,6 @@
 package fr.softeam.cameldesigner.impl;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.cameldesigner.profiler.ProfilerDaemon;
 import org.modelio.api.module.AbstractJavaModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
@@ -26,16 +25,13 @@ public class CamelDesignerModule extends AbstractJavaModule {
     @objid ("637a5b96-f694-4b69-9e73-fdb2e8297735")
     public static CamelLogService logService;
 
-    @objid ("0a9d8ed3-7a82-45a2-ae22-dfa5a1347615")
-    public static ProfilerDaemon daemon;
-
     @objid ("58ad7d4c-51e4-476c-b15e-443b4b46efb7")
     public CamelDesignerModule(final IModuleContext moduleContext) {
         super(moduleContext);
         
         CamelDesignerModule.instance = this;
         CamelDesignerModule.logService = new CamelLogService(this.getModuleContext().getLogService(), this);
-        CamelDesignerModule.daemon = new ProfilerDaemon();
+        
         this.lifeCycleHandler  = new CamelDesignerLifeCycleHandler(this);
         this.peerModule = new CamelDesignerPeerModule(this, moduleContext.getPeerConfiguration());
         init();
@@ -99,7 +95,7 @@ public class CamelDesignerModule extends AbstractJavaModule {
     @objid ("ddbc46ba-b0a2-4b83-a992-693c23594931")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+            default: return null;
         }
     }
 

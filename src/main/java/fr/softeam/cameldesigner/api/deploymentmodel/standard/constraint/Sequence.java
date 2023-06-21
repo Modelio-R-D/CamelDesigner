@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentmodel.standard.constraint;
 
@@ -16,6 +16,7 @@ import fr.softeam.cameldesigner.api.ICamelDesignerPeerModule;
 import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.Feature;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
+import fr.softeam.cameldesigner.api.profiler.standard.component.ProfilerComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -35,9 +36,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("d9a378e5-4189-4afa-b730-192dcefc8515")
+@objid ("9219c05c-152d-4e53-ae48-5ebe1107dcaa")
 public class Sequence extends Feature {
-    @objid ("2e47881c-28fe-4b43-9181-003316b57a4b")
+    @objid ("486bd680-4819-44fc-b68f-47cf386d0236")
     public static final String STEREOTYPE_NAME = "Sequence";
 
     /**
@@ -48,7 +49,7 @@ public class Sequence extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("cf87fc51-f2ca-45c0-9ae0-091aa399c57a")
+    @objid ("206aa4b0-f8d0-4863-ba66-d8379ecac893")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, Sequence.STEREOTYPE_NAME));
     }
@@ -58,7 +59,7 @@ public class Sequence extends Feature {
      * 
      * @return a {@link Sequence} proxy on the created {@link Constraint}.
      */
-    @objid ("092afd0b-945e-40cd-9bf4-f1cf70da60c1")
+    @objid ("7d861f1c-ff32-4455-9d93-5e245ec30c00")
     public static Sequence create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, Sequence.STEREOTYPE_NAME);
@@ -72,7 +73,7 @@ public class Sequence extends Feature {
      * @param obj a Constraint
      * @return a {@link Sequence} proxy or <i>null</i>.
      */
-    @objid ("42fc00fa-d895-48a1-a885-9175e962a3b1")
+    @objid ("afbd9fbe-5549-4bcb-b53a-cbc29f9fa204")
     public static Sequence instantiate(final Constraint obj) {
         return Sequence.canInstantiate(obj) ? new Sequence(obj) : null;
     }
@@ -85,7 +86,7 @@ public class Sequence extends Feature {
      * @return a {@link Sequence} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e1925ca2-e0e2-454f-9374-34aca9f54039")
+    @objid ("048d3e43-ed79-450e-970b-aae9d6e1eaff")
     public static Sequence safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (Sequence.canInstantiate(obj))
         	return new Sequence(obj);
@@ -99,7 +100,7 @@ public class Sequence extends Feature {
      * null
      * 
      */
-    @objid ("726e8f9e-610e-4a80-87a8-65ed4f7ff674")
+    @objid ("34f44f2d-bcc8-4b8c-869f-b0bc495bf77d")
     public void addComponents(final SoftwareComponent obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -109,7 +110,7 @@ public class Sequence extends Feature {
         }
     }
 
-    @objid ("155daf51-a66d-46fa-a21b-7e467056c897")
+    @objid ("dbcb97a0-c930-4cb2-b849-d3baef05d8f8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -131,7 +132,7 @@ public class Sequence extends Feature {
      * null
      * 
      */
-    @objid ("e098e380-91e8-437a-95d7-c785a5112205")
+    @objid ("7c0681f6-4bfe-4f77-b081-e2b45ab45cc8")
     public List<SoftwareComponent> getComponents() {
         List<SoftwareComponent> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -139,6 +140,8 @@ public class Sequence extends Feature {
               && Objects.equals(d.getTagValue(Sequence.MdaTypes.MDAASSOCDEP_ROLE), "components")){
               if (Sensor.canInstantiate(d.getDependsOn()))
                 results.add((Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName()));
+              if (ProfilerComponent.canInstantiate(d.getDependsOn()))
+                results.add((ProfilerComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ProfilerComponent.MdaTypes.STEREOTYPE_ELT.getName()));
               if (SoftwareComponent.canInstantiate(d.getDependsOn()))
                 results.add((SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName()));
            }
@@ -150,13 +153,13 @@ public class Sequence extends Feature {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("a6b20050-c886-4ee5-b896-70b7d15bfb92")
+    @objid ("dbabcb24-2094-4a38-ab5c-5d60d07a0464")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("6543515f-2a09-4536-b3bc-61500797b8fc")
+    @objid ("116739f9-9db5-4a48-97db-112e2cf8e0e3")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -168,7 +171,7 @@ public class Sequence extends Feature {
      * null
      * 
      */
-    @objid ("f56222ea-2d67-4cfe-8adb-5c5a9b99eacb")
+    @objid ("4542768d-5def-4f38-85f3-122c866a6a53")
     public boolean removeComponents(final SoftwareComponent obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -182,23 +185,23 @@ public class Sequence extends Feature {
         return false;
     }
 
-    @objid ("f50bf1e6-3b82-4792-911b-401516ed824c")
+    @objid ("73ddd5d9-db3b-4872-8583-b718750a8757")
     protected Sequence(final Constraint elt) {
         super(elt);
     }
 
-    @objid ("6110076e-f449-4d1e-8f10-0279448e369b")
+    @objid ("3ee55fbd-d058-4be3-b341-32ce6d6b6602")
     public static final class MdaTypes {
-        @objid ("eb94eec1-7608-44a1-8e8e-04c790103f4f")
+        @objid ("27777995-138f-40ac-a4e5-fe938603a992")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c01cb38b-c368-4a5d-88de-fd5ccdc00434")
+        @objid ("e75ab56e-1c9c-4409-aed1-3f346214f844")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2e01ef4b-53f1-479a-b0c7-5524d2d6adb9")
+        @objid ("f132f089-2d08-416f-b88d-ffe859814084")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("856712fd-fd0a-43da-b22c-7ed2d961446d")
+        @objid ("eeb2efc5-b5f9-4488-baff-63b2ca9b965e")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "ca145da8-ff7e-4edb-9b3c-d3bef9c006f2");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

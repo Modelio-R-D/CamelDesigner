@@ -10,6 +10,7 @@ import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricContext;
 import fr.softeam.cameldesigner.api.metricmodel.standard.class_.MetricVariable;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.DataType;
 
@@ -59,9 +60,15 @@ public class MetricVariablePropertyPage<T extends MetricVariable> extends Metric
             }
         }
         else if(this._currentRow == 6){
-             ModelElement elt = getModelElt(CamelDesignerAbstractProxy.getMetricContexts(), value);
-            if (CamelComponent.canInstantiate(elt)) {
-                this._element.setMetricContext((MetricContext) MetricContext.instantiate(elt));
+            /*
+            ModelElement elt = getModelElt(CamelDesignerAbstractProxy.getMetricContexts(), value);
+            if (MetricContext.canInstantiate(elt)) {
+                this._element.setMetricContext((MetricContext) MetricContext.safeinstantiate(elt));
+            }
+            */
+            Class elt = (Class) getModelElt(CamelDesignerAbstractProxy.getMetricContexts(), value);
+            if (MetricContext.canInstantiate(elt)) {
+                this._element.setMetricContext(MetricContext.instantiate(elt));
             }
         }
         

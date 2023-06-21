@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.class_;
 
@@ -41,10 +41,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("791b2878-7c50-4215-a525-604369238537")
 public class DataResourceFilter extends ResourceFilter {
-    @objid ("15831944-55b7-4828-b823-00d5116820fc")
+    @objid ("eda1c7da-bb28-4165-9c9c-2678674a1ed2")
     public static final String STEREOTYPE_NAME = "DataResourceFilter";
 
-    @objid ("98d93549-c671-43b1-bbf6-1ad05f9b427e")
+    @objid ("fdc14f27-9dd3-4a5f-a0f8-700538725c4a")
     public static final String EVERYDATA_TAGTYPE = "everyData";
 
     /**
@@ -55,7 +55,7 @@ public class DataResourceFilter extends ResourceFilter {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("72e13d66-b48c-494d-9341-3b9050e66a28")
+    @objid ("8281d938-565d-4aad-9e8d-7d437b12c449")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataResourceFilter.STEREOTYPE_NAME));
     }
@@ -65,7 +65,7 @@ public class DataResourceFilter extends ResourceFilter {
      * 
      * @return a {@link DataResourceFilter} proxy on the created {@link Class}.
      */
-    @objid ("ed3c46e5-ffdf-4064-8784-ae1f3b8516de")
+    @objid ("1e575952-ef7d-47b4-9209-0fe17d071e36")
     public static DataResourceFilter create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataResourceFilter.STEREOTYPE_NAME);
@@ -79,7 +79,7 @@ public class DataResourceFilter extends ResourceFilter {
      * @param obj a Class
      * @return a {@link DataResourceFilter} proxy or <i>null</i>.
      */
-    @objid ("2edbe98d-9df5-4d4b-acec-cfa74d3d8b08")
+    @objid ("83e1caa0-4eb7-4f9a-b03a-ed7328a99884")
     public static DataResourceFilter instantiate(final Class obj) {
         return DataResourceFilter.canInstantiate(obj) ? new DataResourceFilter(obj) : null;
     }
@@ -92,7 +92,7 @@ public class DataResourceFilter extends ResourceFilter {
      * @return a {@link DataResourceFilter} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a4e62aa7-1ba3-4af8-812d-731be74cb964")
+    @objid ("2afd2b02-dd4c-4492-a5c3-5d2b18233463")
     public static DataResourceFilter safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataResourceFilter.canInstantiate(obj))
         	return new DataResourceFilter(obj);
@@ -106,7 +106,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("cb5d8f6c-337d-45fe-ab78-886579a8942a")
+    @objid ("72db73a8-9309-4aad-a9cd-81260148340c")
     public void addData(final Data obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -122,7 +122,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("c640e3e0-5211-4049-84eb-665b8af14358")
+    @objid ("7f676d60-bafb-4142-b00a-72a922c8ee92")
     public void addDataInstances(final DataInstance obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -138,7 +138,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("c69905b9-fc95-4d66-9fd8-8e5d96122e23")
+    @objid ("10a3fd84-67f6-48d0-aa37-52554e61ddd4")
     public void addLocations(final Location obj) {
         if (obj != null) {
             IModelingSession session = CamelDesignerModule.getInstance().getModuleContext().getModelingSession();
@@ -148,7 +148,7 @@ public class DataResourceFilter extends ResourceFilter {
         }
     }
 
-    @objid ("85d2830f-52a4-4cde-9164-35ddf4dfce0b")
+    @objid ("8b5b8d85-ad24-439a-ae45-0af025c6899c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -170,7 +170,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("94174306-b75f-4192-882c-27484df3f981")
+    @objid ("e2ea9e8e-e3a0-4dcd-ac50-c27267d62e00")
     public List<Data> getData() {
         List<Data> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -189,7 +189,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("7ed3931e-15f2-4edb-8ef4-47a595605251")
+    @objid ("d10a7893-7db1-4792-b9cb-e3311e8d21c8")
     public List<DataInstance> getDataInstances() {
         List<DataInstance> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -208,7 +208,7 @@ public class DataResourceFilter extends ResourceFilter {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("98a533a3-2f16-4e02-a1ab-676365f061ca")
+    @objid ("bc6dcdc4-7872-4302-8324-b3e09410c73f")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -220,7 +220,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("2c4784bd-eb6d-4108-a0d0-3e56edce861e")
+    @objid ("73b1b12a-c895-4a43-8a15-32d82ea6b2bc")
     public List<Location> getLocations() {
         List<Location> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -235,7 +235,7 @@ public class DataResourceFilter extends ResourceFilter {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("1b39c0f1-b995-4d5f-97f9-9d11a32d6833")
+    @objid ("3b807092-37f6-4f6f-a513-e8f3c8ce43a9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -246,7 +246,7 @@ public class DataResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bfd99a9b-7617-49dd-a6d2-34963a311ee9")
+    @objid ("c9dfa24e-b20a-4039-a7ba-b81024b4f3a5")
     public boolean isEveryData() {
         return this.elt.isTagged(DataResourceFilter.MdaTypes.EVERYDATA_TAGTYPE_ELT);
     }
@@ -257,7 +257,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("f6ca96f0-2165-4259-bbb2-2ec28884f126")
+    @objid ("f1608d4b-5e82-42eb-a6e2-ecaab013a7ba")
     public boolean removeData(final Data obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -277,7 +277,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("9d015475-5cca-4c1d-bc2e-3a5c2ef4c0d7")
+    @objid ("719ac02d-8ba0-45c6-b9d6-b9efd19b155d")
     public boolean removeDataInstances(final DataInstance obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -297,7 +297,7 @@ public class DataResourceFilter extends ResourceFilter {
      * null
      * 
      */
-    @objid ("a0a8df8f-5e73-48ae-80c7-a013d0945f69")
+    @objid ("6bbd5b6a-d10b-4546-8bfb-85e6fec691fe")
     public boolean removeLocations(final Location obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -316,7 +316,7 @@ public class DataResourceFilter extends ResourceFilter {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7f8c0924-f280-4dc6-9bbf-791918ae0499")
+    @objid ("077f9f8a-91c4-4afc-a4e3-cfdc6c147c28")
     public void setEveryData(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(DataResourceFilter.MdaTypes.EVERYDATA_TAGTYPE_ELT, this.elt);
@@ -332,26 +332,26 @@ public class DataResourceFilter extends ResourceFilter {
         return result;
     }
 
-    @objid ("166189ce-c55b-4806-abfd-94fe8c7b8fdf")
+    @objid ("06f49b8c-1e22-4a7f-9d58-5f6250458b44")
     protected DataResourceFilter(final Class elt) {
         super(elt);
     }
 
     @objid ("a60319da-e29b-4af0-b3aa-4b4d80f83f8b")
     public static final class MdaTypes {
-        @objid ("70f0c76d-629c-4d9a-bc82-8c910942159e")
+        @objid ("93eae42f-9245-4db1-aa08-16fa7433204a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("aac208ef-1dbb-42d9-8dd2-856cacb0c95c")
+        @objid ("78d12ce6-2a33-42bc-8b99-e51572e91fa1")
         public static TagType EVERYDATA_TAGTYPE_ELT;
 
-        @objid ("7d01022e-b91e-4d28-8f40-7b0f9d8659ba")
+        @objid ("26148089-50bf-49bf-a852-ccc2177c9632")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1e7ef549-005b-4639-8ac2-ffb81d0006da")
+        @objid ("ac78c1e5-de9e-44da-90a2-73799351a514")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0175f3d8-f2b6-4cfc-bfc5-18b4f2174a1c")
+        @objid ("de9c88f6-5216-41f1-a17e-6ca90d0390dc")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "db53c8ff-ef9a-4bc2-bbfa-af051fcaa66d");
             EVERYDATA_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "224a9d86-f0da-48c2-aee2-621dc2822fd3");

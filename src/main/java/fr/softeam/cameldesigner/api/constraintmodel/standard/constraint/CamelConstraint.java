@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -39,7 +39,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("fee51019-906e-4485-9a50-f01a00d74979")
 public abstract class CamelConstraint extends ExpendableElement {
-    @objid ("b0ce5528-260c-46f9-8515-464c8e37a6f4")
+    @objid ("ff5472f4-6b15-458e-ac01-4e5a34544e26")
     public static final String STEREOTYPE_NAME = "CamelConstraint";
 
     /**
@@ -50,7 +50,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7248e247-a93d-463c-84ad-68405fd98cba")
+    @objid ("bdfd1909-3431-4d95-beb1-c741788cdb44")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelConstraint.STEREOTYPE_NAME));
     }
@@ -67,7 +67,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("f488d7ca-634c-4dd7-aa69-66c7852b1fc8")
+    @objid ("cc6a126c-25e2-4879-9bc4-9a0267770a01")
     public void addElseConstraint(final IfThenConstraint obj) {
         if (obj!=null)
           ((Constraint) this.elt).getConstraintDefinition().add(obj.getElement());
@@ -79,7 +79,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("1584c1c8-35bb-49e8-9cda-f307f9e00b44")
+    @objid ("e69ab89c-5c5a-4ff3-aec1-ab74e81fc620")
     public void addIfConstraint(final IfThenConstraint obj) {
         if (obj!=null)
           ((Constraint) this.elt).getConstraintDefinition().add(obj.getElement());
@@ -91,7 +91,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("3fdaac50-572a-411f-a4e8-e60583bc25c9")
+    @objid ("00a07f69-1f9e-4985-94d5-47a83fbee492")
     public void addLogicalConstraint(final LogicalConstraint obj) {
         if (obj!=null)
           ((Constraint) this.elt).getConstrainedElement().add(obj.getElement());
@@ -103,13 +103,13 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("577468b9-657a-4c6b-96ad-c0f2216e62ec")
+    @objid ("94aa4297-0ba9-4fbf-88fd-db81519a5195")
     public void addThenConstraint(final IfThenConstraint obj) {
         if (obj!=null)
           ((Constraint) this.elt).getConstraintDefinition().add(obj.getElement());
     }
 
-    @objid ("bf0ca029-2deb-494d-a74e-1742c2beee1f")
+    @objid ("6698130a-9e87-451a-8b0d-56cee220c507")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -129,7 +129,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("62f27f28-3271-419b-bcc7-b780d4fdf2af")
+    @objid ("72dba7ee-cfde-487a-897f-4a352a201204")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -141,7 +141,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("a69182dc-9932-4b7d-a36b-8e0f580323bc")
+    @objid ("e8656542-b56a-49d9-bb64-352ac96bdc7e")
     public List<IfThenConstraint> getElseConstraint() {
         List<IfThenConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Constraint) this.elt).getConstraintDefinition()){
@@ -157,7 +157,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("74fbbb37-3d6d-4857-8919-3b4f1c0798f2")
+    @objid ("de4e1d44-34d1-4f53-bc37-04282f9565ef")
     public List<IfThenConstraint> getIfConstraint() {
         List<IfThenConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Constraint) this.elt).getConstraintDefinition()){
@@ -173,7 +173,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("3c822573-6184-4575-98bf-31f07a4bf2dc")
+    @objid ("6e296b2b-e3f5-4a74-8e4c-4895182cfcf3")
     public List<LogicalConstraint> getLogicalConstraint() {
         List<LogicalConstraint> results = new ArrayList<>();
         for (UmlModelElement mObj : ((Constraint) this.elt).getConstrainedElement()){
@@ -189,7 +189,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("70dbc850-90d6-47dc-b1ea-e4bb9ae5479e")
+    @objid ("12698870-07ce-472b-b102-891b4323cd40")
     public List<IfThenConstraint> getThenConstraint() {
         List<IfThenConstraint> results = new ArrayList<>();
         for (Constraint mObj : ((Constraint) this.elt).getConstraintDefinition()){
@@ -199,7 +199,7 @@ public abstract class CamelConstraint extends ExpendableElement {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("7f87027d-d7db-4cc1-9d8f-5d89be85bfee")
+    @objid ("629bcbcd-9821-47b4-8abd-3c19af262ef4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -211,7 +211,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("a070fd36-b868-4f40-8ea4-c26cee663fc7")
+    @objid ("652fa9c2-e453-4aef-847c-397c890f5984")
     public boolean removeElseConstraint(final IfThenConstraint obj) {
         return (obj!=null)? ((Constraint) this.elt).getConstraintDefinition().remove(obj.getElement()) : false;
     }
@@ -222,7 +222,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("eb05d323-10e8-40af-bb99-0e317bb3f6d1")
+    @objid ("55401297-a9a0-4461-a15a-0d3cb51d7982")
     public boolean removeIfConstraint(final IfThenConstraint obj) {
         return (obj!=null)? ((Constraint) this.elt).getConstraintDefinition().remove(obj.getElement()) : false;
     }
@@ -233,7 +233,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("68cf98c2-7bdf-4587-8c4d-a687842c628b")
+    @objid ("8795b6dd-423a-4894-aaa9-34b685b528cf")
     public boolean removeLogicalConstraint(final LogicalConstraint obj) {
         return (obj!=null)? ((Constraint) this.elt).getConstrainedElement().remove(obj.getElement()) : false;
     }
@@ -244,7 +244,7 @@ public abstract class CamelConstraint extends ExpendableElement {
      * null
      * 
      */
-    @objid ("69071018-2c1e-4c81-b94c-60982a0042d9")
+    @objid ("637cef20-5e3c-49f1-8665-2c1321f061d6")
     public boolean removeThenConstraint(final IfThenConstraint obj) {
         return (obj!=null)? ((Constraint) this.elt).getConstraintDefinition().remove(obj.getElement()) : false;
     }
@@ -257,23 +257,23 @@ public abstract class CamelConstraint extends ExpendableElement {
         return result;
     }
 
-    @objid ("7a8abe7e-ec60-4ab2-b1f8-e93909dbf18f")
+    @objid ("cc482441-d9a7-45c3-b463-85696497da7e")
     protected CamelConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("c2b5b585-3d59-484d-8c6a-ed96326a9e5e")
     public static final class MdaTypes {
-        @objid ("f78e746f-10ce-46eb-bd6f-a8e7aabe3a9c")
+        @objid ("f7aca5ff-1bfe-4351-9db2-64a453cea8b7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2d081264-1326-4655-a868-d202b7e1a87f")
+        @objid ("87ce73a8-a3ef-456b-bdbc-60e87cb6abf4")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5fda5a82-1add-4be3-9f18-33173abe72ec")
+        @objid ("85435e30-c247-4950-a2d6-793b774e8af6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5ce9b041-602d-436e-b842-80bf610b3318")
+        @objid ("0d57551d-5ecb-4427-93fc-e19b4bf15e75")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "4afa0df7-c748-4db8-b9a7-a082a8419c00");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

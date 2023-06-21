@@ -1,5 +1,8 @@
 package fr.softeam.cameldesigner.handlers.propertypages.metric;
 
+import java.util.Arrays;
+import camel.metric.CriterionType;
+import camel.metric.WindowType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerAbstractProxy;
 import fr.softeam.cameldesigner.api.metricmodel.standard.attribute.WindowCriterion;
@@ -50,7 +53,13 @@ public class WindowCriterionPropertyPage<T extends WindowCriterion> extends Expe
         
         //Metric
         table.addProperty("Metric", getCamelName(this._element.getMetric()), getCamelNames(CamelDesignerAbstractProxy.getMetrics()));
-        table.addProperty("Type", getNotNull(this._element.getType()));
+        
+        // Type
+        String[] values = Arrays.stream(CriterionType.values()) // create stream of enum values
+                .map(e -> e.toString())  // convert enum stream to String stream
+                .toArray(String[]::new);
+        table.addProperty("Type", getNotNull(this._element.getType()), values);
+        
         table.addProperty("Custom", getNotNull(this._element.getCustom()));
         table.addProperty("Ascending",this._element.isAscending());
     }

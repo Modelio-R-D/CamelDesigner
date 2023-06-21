@@ -10,7 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.cameldesigner.api.CamelDesignerParameters;
+import fr.softeam.cameldesigner.api.camelcore.standard.attribute.AttributeAttribute;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
+import fr.softeam.cameldesigner.api.metadatamodel.infrastructure.modelelement.MmsObject;
+import fr.softeam.cameldesigner.api.profiler.standard.component.ProfilerComponent;
 import fr.softeam.cameldesigner.profiler.data.Category;
 import fr.softeam.cameldesigner.profiler.data.ProvidingInfo;
 import org.modelio.api.module.IModule;
@@ -24,27 +27,31 @@ public class CPIntegration extends DefaultModuleCommandHandler {
     @objid ("d9362e0a-9c2c-494c-bc41-7a353321f32f")
     private String _URL = null;
 
+    @objid ("cf50ed43-5f68-4315-ba53-2a8e6cbffdb3")
+    private final String _catAnnotationName = "categorie";
+
+    @objid ("d6a4c751-7f33-44fb-b51a-7f2fb775f7dd")
+    private final String _langAnnotationName = "language";
+
+    @objid ("cb640dc2-d650-4975-8e71-fb725fc488cf")
+    private final String _repAnnotationName = "repository";
+
     @objid ("c5c5d3d2-6014-467b-a003-4f10ea7e6be1")
     @Override
     public void actionPerformed(final List<MObject> selectedElements, final IModule module) {
-        SoftwareComponent sc = SoftwareComponent.instantiate(((Component)selectedElements.get(0)));
+        SoftwareComponent sc = SoftwareComponent.instantiate(((Component) selectedElements.get(0)));
         
         if (sc != null) {
         
             IModuleUserConfiguration configuration = module.getModuleContext().getConfiguration();
             this._URL = "http://" + configuration.getParameterValue(CamelDesignerParameters.IPADRESSE) + ":" + configuration.getParameterValue(CamelDesignerParameters.PORT);
         
-            ProvidingInfo info = new ProvidingInfo();
-            info.setComponentName(sc.getName());
-            info.getCategories().add(Category.GPU);
-            info.setLanguage("Java");
-            info.setRepository("https://github.com/Supervisor/supervisor");
+            ProvidingInfo info = getInfos(sc);
         
+            String response = pushAnalyse(info);
         
-            String code = pushAnalyse(info);
-        
-            if (code != null) {
-                getResponseAnalyse(code);
+            if (response != null) {
+                setCode(response, sc);
             }
         }
     }
@@ -62,7 +69,7 @@ public class CPIntegration extends DefaultModuleCommandHandler {
     }
 
     @objid ("c6cbe72f-e9ed-4355-bd32-98961b548a26")
-    public void getResponseAnalyse(String code) {
+    private void getResponseAnalyse(String code) {
         try {
         
             URL url = new URL(_URL + "/collect?code=" + code );
@@ -88,42 +95,19 @@ public class CPIntegration extends DefaultModuleCommandHandler {
         
                 //Close the scanner
                 scanner.close();
-        
-                //                //Using the JSON simple library parse the string into a json object
-                //                JSONParser parse = new JSONParser();
-                //                JSONObject data_obj = (JSONObject) parse.parse(inline);
-                //
-                //                //Get the required object from the above created object
-                //                JSONObject obj = (JSONObject) data_obj.get("Global");
-                //
-                //                //Get the required data using its key
-                //                System.out.println(obj.get("TotalRecovered"));
-                //
-                //                JSONArray arr = (JSONArray) data_obj.get("Countries");
-                //
-                //                for (int i = 0; i < arr.size(); i++) {
-                //
-                //                    JSONObject new_obj = (JSONObject) arr.get(i);
-                //
-                //                    if (new_obj.get("Slug").equals("albania")) {
-                //                        System.out.println("Total Recovered: " + new_obj.get("TotalRecovered"));
-                //                        break;
-                //                    }
-                //                }
             }
-        
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @objid ("fa22bf0f-e5c5-4d61-8ded-73df768d3d47")
-    public String pushAnalyse(ProvidingInfo info) {
+    private String pushAnalyse(ProvidingInfo info) {
         String result = null;
         URL url;
         
         try {
-            url = new URL(_URL + "/analyse");
+            url = new URL(this._URL + "/analyse");
         
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             http.setRequestMethod("POST");
@@ -157,15 +141,53 @@ public class CPIntegration extends DefaultModuleCommandHandler {
                 }
                 br.close();
                 System.out.println(sb.toString());
+                result = sb.toString();
             }
         
         
             stream.close();
             http.disconnect();
         } catch (Exception e) {
-           return null;
+            return null;
         }
         return result;
+    }
+
+    @objid ("44e33ca3-062e-40e8-9a78-6b1db733931b")
+    private ProvidingInfo getInfos(SoftwareComponent sc) {
+        ProvidingInfo info = new ProvidingInfo();
+        
+        info.setComponentName(sc.getName());
+        
+        for (AttributeAttribute attribut : sc.getAttributes()) {
+        
+            for(MmsObject annotation : attribut.getAnnotations()) {
+        
+                if (annotation.getName().equals(this._catAnnotationName)){
+                    info.getCategories().add(Category.valueOf(attribut.getElement().getValue()));
+                } else if (annotation.getName().equals(this._langAnnotationName)){
+                    info.setLanguage(attribut.getElement().getValue());
+                } else if (annotation.getName().equals(this._repAnnotationName)){
+                    info.setRepository(attribut.getElement().getValue());
+                }
+            }
+        
+        }
+        return info;
+    }
+
+    @objid ("02b496a5-75b8-4332-b471-7bb4e97fd9b2")
+    private void setCode(String response, SoftwareComponent sc) {
+        String[] splt = response.split("code");
+        if (splt.length == 2) {
+            String temp = splt[1];
+            temp.replaceFirst("\"", "");
+            String code = temp.split("\"")[0];
+            Component comp = sc.getElement();
+            comp.getExtension().add(ProfilerComponent.MdaTypes.STEREOTYPE_ELT);
+            ProfilerComponent pc = ProfilerComponent.instantiate(comp);
+            pc.setCode(code);
+        }
     }
 
 }

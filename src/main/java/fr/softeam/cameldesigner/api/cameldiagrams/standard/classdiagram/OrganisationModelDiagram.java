@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("8d78609e-ed7f-45f1-93ed-a1fab4832f6e")
 public class OrganisationModelDiagram extends AbstractCamelDiagram {
-    @objid ("45d496ef-7ecc-409d-b61c-75448c6b161c")
+    @objid ("efa6600d-fd42-4816-9738-021819d72163")
     public static final String STEREOTYPE_NAME = "OrganisationModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4ef18850-052c-4cb1-8f84-31e5d14c539a")
+    @objid ("afc27c7b-3522-4d6e-9c21-ba17dbb57c67")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OrganisationModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link OrganisationModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("fbc8b079-4642-4f85-80ea-8114821be355")
+    @objid ("6fd38565-732c-40ea-8cae-d43ba04eccab")
     public static OrganisationModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, OrganisationModelDiagram.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
      * @param obj a ClassDiagram
      * @return a {@link OrganisationModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("18bb4317-3548-4b1d-a1b7-d08965118e61")
+    @objid ("1a16b5bb-509a-473d-a9c9-d1ea5cef987e")
     public static OrganisationModelDiagram instantiate(final ClassDiagram obj) {
         return OrganisationModelDiagram.canInstantiate(obj) ? new OrganisationModelDiagram(obj) : null;
     }
@@ -84,7 +84,7 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
      * @return a {@link OrganisationModelDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4b41fe43-87a7-4e3c-a961-f22ad4914977")
+    @objid ("e0deacfc-c8de-4d2b-b686-12964f48d401")
     public static OrganisationModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (OrganisationModelDiagram.canInstantiate(obj))
         	return new OrganisationModelDiagram(obj);
@@ -92,7 +92,7 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
         	throw new IllegalArgumentException("OrganisationModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fa8e935d-4937-4b90-a18d-e7cd39c61858")
+    @objid ("7c7d4df9-1d4f-4459-9919-ee3ee0e5a4fb")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
      * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("f505058e-ee12-4318-805f-808333bf992b")
+    @objid ("ae7fb65d-4b6c-4746-8537-efe8501bf601")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("b9e09408-8ee3-48b9-91f8-aec7d55cbed0")
+    @objid ("71f2de8d-6e55-4c69-867f-92b2898ba4f4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class OrganisationModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("6216547b-2ea7-4fd1-a128-1c6f521fdc61")
+    @objid ("337a24d1-3868-487b-a05e-8641c3fc341b")
     protected OrganisationModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("194a89db-0a89-413a-af39-44bf5446c768")
     public static final class MdaTypes {
-        @objid ("d90e1a64-35b2-49f1-b3a9-f55aca20b910")
+        @objid ("1ae3570e-e828-41ed-a2a8-9ec3806839b0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("413795ac-f2c7-48e1-a8de-9890584d56f3")
+        @objid ("858bef86-11de-4541-a16a-0e1373e98221")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("69fd0637-7b0b-468b-862b-1f369141accd")
+        @objid ("ed77cb7c-39ab-4293-8141-493c46bf484c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ac8b828f-25c9-4965-bbdb-e0ca40424b3f")
+        @objid ("0ebc4615-42b8-4970-991e-271ee0870bc3")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "866330db-6440-4bbe-bd93-4bb567e8f1e7");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

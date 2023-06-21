@@ -11,6 +11,7 @@ import fr.softeam.cameldesigner.handlers.propertypages.core.FeaturePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Connector;
 
 @objid ("ae234d54-dfee-4e08-a5fe-b50eaa0bd6b9")
 public class ObjectContextPropertyPage<T extends ObjectContext> extends FeaturePropertyPage<T> {
@@ -42,7 +43,7 @@ public class ObjectContextPropertyPage<T extends ObjectContext> extends FeatureP
         }
         
         else if(this._currentRow == 3){
-            Class elt = (Class) getModelElt(Communication.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            Connector elt = (Connector) getModelElt(Communication.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if (Communication.canInstantiate(elt)) {
                 this._element.setCommunication((Communication) Communication.instantiate(elt));
             }

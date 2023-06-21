@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.organisationmodel.standard.package_;
 
@@ -53,19 +53,19 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("810daecb-641e-4da1-a7ce-19926a94c42e")
 public class OrganisationModel extends SubModel {
-    @objid ("dc9010dc-4647-4109-9f91-f66eed2c1ddf")
+    @objid ("e27a66eb-9c00-472e-83f1-abc4e6652128")
     public static final String STEREOTYPE_NAME = "OrganisationModel";
 
-    @objid ("3591192f-b8ce-42d7-9493-d302db4b8692")
+    @objid ("882437ed-1a6d-4cb7-83fe-42cdce422f4c")
     public static final String ORGANISATIONEMAIL_TAGTYPE = "organisationEmail";
 
-    @objid ("0991b12d-c377-457a-b19f-b80bcf5195e5")
+    @objid ("be56053f-f1c0-431c-a793-08014627247d")
     public static final String ORGANISATIONNAME_TAGTYPE = "organisationName";
 
-    @objid ("317b6e7a-a997-448b-97b0-8107b9eb0732")
+    @objid ("61380b17-ca6d-47a4-bb30-8d2cde161261")
     public static final String ORGANISATIONWEBSITE_TAGTYPE = "organisationWebsite";
 
-    @objid ("4a072687-58d5-4e02-88df-5349b51f0116")
+    @objid ("eccab8e3-1abd-4233-9bc5-d4f734621584")
     public static final String SECURITYLEVEL_TAGTYPE = "securityLevel";
 
     /**
@@ -76,7 +76,7 @@ public class OrganisationModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f86eb664-cb18-443b-89dd-6a38c12d9b3a")
+    @objid ("5017eed1-ee27-4672-8ee3-8a274300bae2")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OrganisationModel.STEREOTYPE_NAME));
     }
@@ -86,7 +86,7 @@ public class OrganisationModel extends SubModel {
      * 
      * @return a {@link OrganisationModel} proxy on the created {@link Package}.
      */
-    @objid ("0065a231-c5f6-4bc7-a35d-8bbbc8f4487c")
+    @objid ("ac40ec78-bd49-4a15-9b87-866d83ef6225")
     public static OrganisationModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, OrganisationModel.STEREOTYPE_NAME);
@@ -100,7 +100,7 @@ public class OrganisationModel extends SubModel {
      * @param obj a Package
      * @return a {@link OrganisationModel} proxy or <i>null</i>.
      */
-    @objid ("b12305a7-e5d4-441d-9db3-e979abd260cd")
+    @objid ("03a15ba9-82dc-48e3-b29c-a61360b1073a")
     public static OrganisationModel instantiate(final Package obj) {
         return OrganisationModel.canInstantiate(obj) ? new OrganisationModel(obj) : null;
     }
@@ -113,7 +113,7 @@ public class OrganisationModel extends SubModel {
      * @return a {@link OrganisationModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("40e09d07-7361-4329-824a-40203532879d")
+    @objid ("28f6f7f2-e163-4aa3-a8aa-595ab29cf9c1")
     public static OrganisationModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (OrganisationModel.canInstantiate(obj))
         	return new OrganisationModel(obj);
@@ -127,7 +127,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("56611850-638c-4e2f-899e-4b4b15f12ef7")
+    @objid ("bfb91e35-08e1-40f9-be02-867fe926fa50")
     public void addDiagrams(final OrganisationModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -139,7 +139,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("73a3863c-020a-47e6-bb36-36a408d59272")
+    @objid ("96045df1-6c98-4905-9524-0115a265db07")
     public void addExternalIdentifiers(final ExternalIdentifier obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -151,7 +151,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("7d613bcf-75d9-4dd6-a7ee-2e285c122a03")
+    @objid ("33377616-76c1-42c7-9865-9321dc4e6a2f")
     public void addPermissions(final Permission obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -163,7 +163,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("aca20987-9bdd-44d3-880c-9e90fcdff643")
+    @objid ("002ab5ba-f536-4284-85c2-1f6ea7b40806")
     public void addResourceFilters(final ResourceFilter obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -175,7 +175,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("8ba41163-33a8-430e-8d38-7e610875ea58")
+    @objid ("59945087-e21d-464c-ac33-74ec027f48ad")
     public void addRoles(final Role obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -187,7 +187,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("a706d59e-0786-4a9b-82e0-ac4bf222de44")
+    @objid ("0dfba281-919a-4f1f-b0d9-1387a7461573")
     public void addRolesAssignements(final RoleAssignment obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -199,7 +199,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("eb2d8af2-0b6b-4c32-81a6-fd4491ce50f3")
+    @objid ("0bc48cfc-5a0e-4334-9c22-ca6d6d074f9a")
     public void addUserGroups(final UserGroup obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -211,13 +211,13 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("d9a8e943-7732-472a-9df1-4a6c516cc4c9")
+    @objid ("0caefcce-be86-4290-bb95-53d67627ceab")
     public void addUsers(final User obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("bb5531d6-0a47-41b9-97ed-4e88480024f5")
+    @objid ("2dda6193-e1a2-423a-a039-1a5f1d3a5dcf")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -239,7 +239,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("2603f1ad-be6e-4420-b994-38b91c6a0758")
+    @objid ("3cf35bfa-ddeb-43cf-b193-ac66219cf4a9")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -250,7 +250,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("06712ae2-8fee-473f-882b-b5758b148de8")
+    @objid ("3c89071e-4930-480a-b548-c73e4023fc2b")
     public List<OrganisationModelDiagram> getDiagrams() {
         List<OrganisationModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
@@ -264,7 +264,7 @@ public class OrganisationModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("084abaec-5d67-4b70-8f5a-937fd412321f")
+    @objid ("b077a7d3-f61f-4535-905a-6875f2590613")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -276,7 +276,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("2102e9a8-c9dd-468e-864d-280aebe2edba")
+    @objid ("c905abdc-dda2-490b-b170-c6b503e4f278")
     public List<ExternalIdentifier> getExternalIdentifiers() {
         List<ExternalIdentifier> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -292,7 +292,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("c39e8160-3b0c-4419-9d11-078a17cb0e03")
+    @objid ("c8961d78-67b6-45c2-b021-e8698d46b3e3")
     public Organisation getOrganisation() {
           for (Class obj : ((Package) this.elt).getOwnedElement(Class.class)) {
            if (Organisation.canInstantiate(obj))
@@ -306,7 +306,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("59b49c8a-1de6-44c2-8e08-3b7869522b7e")
+    @objid ("d83f7d99-90c3-416b-bdc0-ca4513d831d2")
     public String getOrganisationEmail() {
         return this.elt.getTagValue(OrganisationModel.MdaTypes.ORGANISATIONEMAIL_TAGTYPE_ELT);
     }
@@ -316,7 +316,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("706c12ee-2dad-425a-87d3-e83c15a340b5")
+    @objid ("8d02e7f7-2051-4652-87b2-84bf1de71b40")
     public String getOrganisationName() {
         return this.elt.getTagValue(OrganisationModel.MdaTypes.ORGANISATIONNAME_TAGTYPE_ELT);
     }
@@ -326,7 +326,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("178a56cd-651b-4e3f-b634-ac0421f09295")
+    @objid ("d4efecaf-4e7d-4a31-87dc-01ee99b6a6f3")
     public String getOrganisationWebsite() {
         return this.elt.getTagValue(OrganisationModel.MdaTypes.ORGANISATIONWEBSITE_TAGTYPE_ELT);
     }
@@ -337,7 +337,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("74bb2287-61f1-492f-adef-41c4eb0f6599")
+    @objid ("ee6a11f5-68ea-40d0-b2ad-3fd2a14c11f7")
     public List<Permission> getPermissions() {
         List<Permission> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -353,7 +353,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("2e6774e9-b4b8-4989-aaf0-7c3af22475fb")
+    @objid ("295f4c36-229c-4c8d-a767-e12a3423810b")
     public List<ResourceFilter> getResourceFilters() {
         List<ResourceFilter> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -375,7 +375,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("0ae85c9f-0314-4dcf-92c4-3b1844c8fb76")
+    @objid ("327dc774-0d46-4e00-b4ab-f0cbf1eab2f9")
     public List<Role> getRoles() {
         List<Role> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -391,7 +391,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("1cd24145-44dc-4f5b-8b9b-b3faeae16e2f")
+    @objid ("7e564f62-0da1-4eb6-ae22-1966b7e6f2d9")
     public List<RoleAssignment> getRolesAssignements() {
         List<RoleAssignment> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -406,7 +406,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d682d5ca-37df-4d54-b103-e1d89fd9e63b")
+    @objid ("d4f9d52e-e61d-4a66-bed5-48fbfd090547")
     public String getSecurityLevel() {
         return this.elt.getTagValue(OrganisationModel.MdaTypes.SECURITYLEVEL_TAGTYPE_ELT);
     }
@@ -417,7 +417,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("47cef9cb-ce7d-46db-a29b-86afa28a0611")
+    @objid ("62300949-8e5f-4fc2-89ec-6ce808cda857")
     public List<UserGroup> getUserGroups() {
         List<UserGroup> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -433,7 +433,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("e69547d6-be2d-4e88-94c4-e02c8a61319a")
+    @objid ("588fb43b-7803-43ac-bec5-2eaf5c311e7e")
     public List<User> getUsers() {
         List<User> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -443,7 +443,7 @@ public class OrganisationModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("5bc8b712-ace7-4169-9477-bd6c1403609b")
+    @objid ("d0d5a198-b25d-427b-ac53-19c15c08a210")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -455,7 +455,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("c72f8dc5-8295-4852-a3aa-62b893e70f4c")
+    @objid ("db065b02-75be-4388-a13a-8adcc41bf511")
     public boolean removeDiagrams(final OrganisationModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -466,7 +466,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("153b5d64-bf09-41ca-aebc-9f9970563e0d")
+    @objid ("f545007a-e517-417e-872c-aecc7ed5e35f")
     public boolean removeExternalIdentifiers(final ExternalIdentifier obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -477,7 +477,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("8ad2ee17-604f-4236-8486-29ae65cfb060")
+    @objid ("e4976fe0-7c60-4179-af64-b023a32f5a42")
     public boolean removePermissions(final Permission obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -488,7 +488,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("a1fc1388-defd-4304-b429-7f42159a5bc6")
+    @objid ("91abe4ac-c699-46bc-aa05-ba4052268e16")
     public boolean removeResourceFilters(final ResourceFilter obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -499,7 +499,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("0c6ce9b4-60bc-4571-9668-b1845d0f7248")
+    @objid ("348e279a-2376-4c10-93d6-acd2e0a8392f")
     public boolean removeRoles(final Role obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -510,7 +510,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("e331a5e8-724e-4358-834b-5b9a63d743b2")
+    @objid ("dc4497f6-5964-4710-8795-3c5a81365728")
     public boolean removeRolesAssignements(final RoleAssignment obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -521,7 +521,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("41222ecd-1a1c-475d-b8ae-9353d2e5bccd")
+    @objid ("fc55b704-9adb-49bc-9957-55da629e1069")
     public boolean removeUserGroups(final UserGroup obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -532,7 +532,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("35263e83-c18e-448f-832f-fa123ef69896")
+    @objid ("16cd741a-fd9c-4fcb-be17-e9410aaa836b")
     public boolean removeUsers(final User obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -543,7 +543,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("3d4518aa-154b-4a27-a251-8370bdcd0b50")
+    @objid ("07fe6b7e-c4b8-4988-80e8-abb6c8d7bde4")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -554,7 +554,7 @@ public class OrganisationModel extends SubModel {
      * null
      * 
      */
-    @objid ("b0e10a48-380f-4d66-a2f9-e88f0f319217")
+    @objid ("40f464ed-6093-440c-9f9f-71f7795e473e")
     public void setOrganisation(final Organisation obj) {
         // Remove existing Organisations
         for (Class e : ((Package) this.elt).getOwnedElement(Class.class)) {
@@ -573,7 +573,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fa7c94a4-0f4f-4da9-a9eb-454404796c58")
+    @objid ("0f57d72b-49cb-4c4c-8819-2e3409036d65")
     public void setOrganisationEmail(final String value) {
         this.elt.putTagValue(OrganisationModel.MdaTypes.ORGANISATIONEMAIL_TAGTYPE_ELT, value);
     }
@@ -583,7 +583,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a7b7b5ee-f132-4b0c-bf6d-f1012f04f6f9")
+    @objid ("5dee705f-b902-45bd-b098-685333700e52")
     public void setOrganisationName(final String value) {
         this.elt.putTagValue(OrganisationModel.MdaTypes.ORGANISATIONNAME_TAGTYPE_ELT, value);
     }
@@ -593,7 +593,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c8f7e34f-7ccb-422f-b102-0059c672f3f6")
+    @objid ("02211f50-d752-45e6-9e91-41ec2bca01a0")
     public void setOrganisationWebsite(final String value) {
         this.elt.putTagValue(OrganisationModel.MdaTypes.ORGANISATIONWEBSITE_TAGTYPE_ELT, value);
     }
@@ -603,7 +603,7 @@ public class OrganisationModel extends SubModel {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3fcee831-048a-4cbc-a54d-f62fa608ec84")
+    @objid ("970c7b0a-103a-4b82-8737-35b4902bb720")
     public void setSecurityLevel(final String value) {
         this.elt.putTagValue(OrganisationModel.MdaTypes.SECURITYLEVEL_TAGTYPE_ELT, value);
     }
@@ -624,35 +624,35 @@ public class OrganisationModel extends SubModel {
         return result;
     }
 
-    @objid ("cdf2194a-5ab3-47a1-9350-eb5bead19265")
+    @objid ("a93f40bf-20ff-4bd5-b52e-6637784c6915")
     protected OrganisationModel(final Package elt) {
         super(elt);
     }
 
     @objid ("eb1c285b-2873-4f8e-af1e-f7afc841bfe9")
     public static final class MdaTypes {
-        @objid ("532d4f3c-ffc9-4cfb-b594-acd5d787cb20")
+        @objid ("d784d124-b649-4113-aef8-46ecab86687a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("0e3c0906-f82d-4d72-bbb6-2f703d5e16fe")
+        @objid ("72e2b791-7c26-4f12-a83e-793149b4151d")
         public static TagType ORGANISATIONNAME_TAGTYPE_ELT;
 
-        @objid ("e3ee3297-febd-4099-b5ac-e88410bd23c3")
+        @objid ("05ddf889-ef84-48de-8b5f-b7420c02f204")
         public static TagType ORGANISATIONEMAIL_TAGTYPE_ELT;
 
-        @objid ("27ab2eb4-5d4b-43ca-a9f2-6734f00c286e")
+        @objid ("5b00a29f-046d-4636-bdea-8d4a3e04fbaa")
         public static TagType ORGANISATIONWEBSITE_TAGTYPE_ELT;
 
-        @objid ("96b55409-f517-4292-a8ae-80a5e0440600")
+        @objid ("69916081-ea92-429d-b272-47fcaf5b9568")
         public static TagType SECURITYLEVEL_TAGTYPE_ELT;
 
-        @objid ("9b96f8f9-1ac4-42d1-b360-63abf63bf8bd")
+        @objid ("5547911f-1f8e-4b7e-ba84-107de366d67d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("34772f8d-88a8-412b-807d-582169901d82")
+        @objid ("7d5af85a-56be-4d64-84d8-ff9751312cdf")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("981375d4-fdb8-40e7-95ff-2c80c2e43602")
+        @objid ("e3f41279-a557-40d4-a271-2c84521e81cc")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "e44c4759-0924-40bc-95d9-3cf51944eccf");
             ORGANISATIONNAME_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "f8f457b3-49af-40e8-8af6-d2a7c8a961ae");

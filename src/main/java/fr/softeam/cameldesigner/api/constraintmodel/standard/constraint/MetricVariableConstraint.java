@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("41d4f52d-cd09-4afb-ac80-64b41afa7a0c")
 public class MetricVariableConstraint extends UnaryConstraint {
-    @objid ("1e02da5d-67b1-42a9-80a1-6c37d2197050")
+    @objid ("500f6492-ebf7-4849-9760-50a23693cda4")
     public static final String STEREOTYPE_NAME = "MetricVariableConstraint";
 
     /**
@@ -48,7 +48,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9e732006-679a-47af-9fc6-35bbdddfee41")
+    @objid ("16fa7556-a4c0-455f-843d-6a18270c14c7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, MetricVariableConstraint.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * 
      * @return a {@link MetricVariableConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("9ac1f7bd-2105-45e8-9e0d-105fee1ec501")
+    @objid ("2a0f40ea-82c3-49e9-afc6-c50bc611f7bc")
     public static MetricVariableConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, MetricVariableConstraint.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * @param obj a Constraint
      * @return a {@link MetricVariableConstraint} proxy or <i>null</i>.
      */
-    @objid ("1631b568-ded1-4716-9061-7b33ebd1c32d")
+    @objid ("139658da-f39d-4acf-90da-387fe7e792b1")
     public static MetricVariableConstraint instantiate(final Constraint obj) {
         return MetricVariableConstraint.canInstantiate(obj) ? new MetricVariableConstraint(obj) : null;
     }
@@ -85,7 +85,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * @return a {@link MetricVariableConstraint} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("386dc904-4e09-4a5a-9e84-89beb2d59080")
+    @objid ("4d4c7cd0-46a7-4fac-a840-6607f742f93d")
     public static MetricVariableConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (MetricVariableConstraint.canInstantiate(obj))
         	return new MetricVariableConstraint(obj);
@@ -93,7 +93,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
         	throw new IllegalArgumentException("MetricVariableConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0d11de7c-6efb-43e5-bb5c-8e5522681c07")
+    @objid ("76af92db-12bf-49e3-8557-0b10e026c0d7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("7933c65c-c661-46cd-a623-0b935af31876")
+    @objid ("a49c591a-f709-4c6d-be27-49d191331feb")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
@@ -125,7 +125,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("f4237b4a-6c68-45cb-ba4f-7bb964106ac3")
+    @objid ("f7d45855-b917-420e-8096-4281b8ba756a")
     public MetricVariable getMetricVariable() {
           for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
            if (MetricVariable.canInstantiate(obj))
@@ -134,7 +134,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
           return null;
     }
 
-    @objid ("c6e0e378-e316-4ae3-a0fe-0e4a0b1d38a9")
+    @objid ("110d8b6a-f011-4a50-aba0-0304ea14ff34")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -146,7 +146,7 @@ public class MetricVariableConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("0fa1b55d-4f98-49ee-8b05-545a5189c97f")
+    @objid ("e9ba90a3-4711-44ff-b4a8-9ba66c7a9d89")
     public void setMetricVariable(final MetricVariable obj) {
         // Remove existing MetricVariables
         for (Class e : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
@@ -167,23 +167,23 @@ public class MetricVariableConstraint extends UnaryConstraint {
         return result;
     }
 
-    @objid ("2eea504a-e896-4ce4-9def-44c0fe16a3ab")
+    @objid ("c77e1e9a-bdf9-48a0-9cce-8597e14c57c7")
     protected MetricVariableConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("8e6247ec-54b4-4782-a3c3-abf501857d20")
     public static final class MdaTypes {
-        @objid ("bf60b393-36cc-4cf2-bf80-f4cf1cbe9d34")
+        @objid ("ca2f1502-e376-4f6b-a380-8b88ab950d8c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6b052877-a1f6-49d5-a8f6-d9c8810a73b9")
+        @objid ("0134a2c6-f35e-4e80-bdfe-99e3521ad817")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("830a8469-5a9d-46fc-ad52-f07aed941d9e")
+        @objid ("417c1c5b-5676-46a6-91d9-f02edaa48992")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c346b13f-8d36-4e60-8713-8c5e181eb228")
+        @objid ("987f9a79-99ec-4fc0-979a-1b02dd1483a2")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "80ac8ced-a3d3-4519-b015-f0726e46e256");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.securitymodel.standard.package_;
 
@@ -50,7 +50,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("558acef6-15e9-4032-97b3-66eea7c497d6")
 public class SecurityModel extends SubModel {
-    @objid ("6f744cc8-eb27-4bfd-b331-1cae7de5017e")
+    @objid ("eb8cc916-1c5d-4f09-bf59-ddd1b5c093f7")
     public static final String STEREOTYPE_NAME = "SecurityModel";
 
     /**
@@ -61,7 +61,7 @@ public class SecurityModel extends SubModel {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9a791e4b-c7ac-43bf-974c-65ec14a77f8e")
+    @objid ("68092654-ec37-42a5-8a66-9c4acf45a320")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, SecurityModel.STEREOTYPE_NAME));
     }
@@ -71,7 +71,7 @@ public class SecurityModel extends SubModel {
      * 
      * @return a {@link SecurityModel} proxy on the created {@link Package}.
      */
-    @objid ("e7853383-5b61-4313-b0db-f4ddfcbf03b7")
+    @objid ("11bc3681-f7b5-4b5f-8ebe-9dd1d95ae2d7")
     public static SecurityModel create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Package");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, SecurityModel.STEREOTYPE_NAME);
@@ -85,7 +85,7 @@ public class SecurityModel extends SubModel {
      * @param obj a Package
      * @return a {@link SecurityModel} proxy or <i>null</i>.
      */
-    @objid ("cb8857e5-74af-4194-a2b5-e1143c220d9e")
+    @objid ("5c3c1016-c4c7-4a7a-a92d-08c0ad424ca5")
     public static SecurityModel instantiate(final Package obj) {
         return SecurityModel.canInstantiate(obj) ? new SecurityModel(obj) : null;
     }
@@ -98,7 +98,7 @@ public class SecurityModel extends SubModel {
      * @return a {@link SecurityModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("dca70733-a9ab-4903-ade5-837a1bc14857")
+    @objid ("fed8b91c-a969-47c3-8304-4d56e67824ec")
     public static SecurityModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (SecurityModel.canInstantiate(obj))
         	return new SecurityModel(obj);
@@ -112,7 +112,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("2c54e90b-979b-4678-af2d-4add25bfc195")
+    @objid ("6f982625-ba00-443b-bca7-d2427a89b406")
     public void addCompositeSecurityInstances(final CompositeSecurityMetric obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -124,7 +124,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("edfb88e0-68ec-4b33-a770-067657f56db3")
+    @objid ("b8356b7d-470f-4aeb-870e-80ad597a42f8")
     public void addDiagrams(final SecurityModelDiagram obj) {
         if (obj!=null)
           ((Package) this.elt).getProduct().add(obj.getElement());
@@ -136,7 +136,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("208e3e9d-03b8-4f08-a484-c704ab8ee0e6")
+    @objid ("4dd4d680-ed8f-4b3c-aa94-f8edc69adb99")
     public void addRawSecurityMetrics(final RawSecurityMetric obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -148,7 +148,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("fc088283-7997-414f-a78f-0e4bccb09e33")
+    @objid ("91371ff2-2e35-48c4-b1ea-a3556f3ce264")
     public void addSecurityAttributes(final SecurityAttribute obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -160,7 +160,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("9476b41c-e85b-4766-ab8a-632599c5cabc")
+    @objid ("a08a9348-abb3-47c7-ab78-8f59c75de8b4")
     public void addSecurityControls(final SecurityControl obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -172,7 +172,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("ef991d1e-6284-42e3-a483-d130b605db9c")
+    @objid ("6e0a858d-e239-4c69-88f0-d03ee0854ed6")
     public void addSecurityDomains(final SecurityDomain obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -184,7 +184,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("e3614ae9-6588-47bc-9d14-20b3be80a483")
+    @objid ("2af613d3-80a7-45b6-9deb-3ab61fc4ba1f")
     public void addSecurityMetricInstances(final SecurityMetricInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -196,7 +196,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("82e34218-3fc0-4705-b814-98af4013212e")
+    @objid ("7245d63e-c306-49c1-99bc-a24466da6cb5")
     public void addSecurityRequirements(final SecurityRequirement obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -208,13 +208,13 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("4217ff24-eb86-457b-b5fb-36729a670875")
+    @objid ("ba341350-42a3-40ac-bbe2-1861ab0ea313")
     public void addSecuritySLOs(final SecuritySLO obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("8c615a43-1aeb-44d0-8024-56cb6ec5d575")
+    @objid ("7ff30f8b-4a28-4ebf-a7ac-db414ef6b833")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -236,7 +236,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("f6969daa-c8d9-411c-b82a-4a650205f75b")
+    @objid ("a123085d-b67f-4165-bd1a-214cd1a1b379")
     public CamelModel getCamelModel() {
         return (CamelModel)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), CamelModel.STEREOTYPE_NAME);
     }
@@ -247,7 +247,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("07fff6ce-1be5-4ceb-93ea-d364dbd6b514")
+    @objid ("78373a65-d506-4207-9472-6c3baad02361")
     public List<CompositeSecurityMetric> getCompositeSecurityInstances() {
         List<CompositeSecurityMetric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -263,7 +263,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("5b740cfd-939f-410d-b7c9-0febaad7fbac")
+    @objid ("acfea70c-26d2-4067-b430-655f081673e9")
     public List<SecurityModelDiagram> getDiagrams() {
         List<SecurityModelDiagram> results = new ArrayList<>();
         for (AbstractDiagram mObj : ((Package) this.elt).getProduct()){
@@ -277,7 +277,7 @@ public class SecurityModel extends SubModel {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("50bd806c-0d59-4729-a2f1-5042a5cf2017")
+    @objid ("9732cb19-82ea-44c6-83bf-20047c89587c")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -289,7 +289,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("9b7f0308-d092-458d-8a0d-036320b267d7")
+    @objid ("87c74bf4-ac0d-4dce-a70b-a09e5fdf9c77")
     public List<RawSecurityMetric> getRawSecurityMetrics() {
         List<RawSecurityMetric> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -305,7 +305,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("6cdb4ab8-5e2a-4da8-b190-11764fbfc385")
+    @objid ("de58a765-46de-4ca9-aec7-c5ee365589dd")
     public List<SecurityAttribute> getSecurityAttributes() {
         List<SecurityAttribute> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -323,7 +323,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("fb6719d7-9a6e-4875-8f16-53fcbaf937d3")
+    @objid ("c2bcda64-08a6-4b51-9515-5a69d4ae18c4")
     public List<SecurityControl> getSecurityControls() {
         List<SecurityControl> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -339,7 +339,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("b2c59fa4-df2a-4f01-81bd-15663d5e69ae")
+    @objid ("79bff42f-7847-405f-8cde-1f90de121936")
     public List<SecurityDomain> getSecurityDomains() {
         List<SecurityDomain> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -355,7 +355,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("bb8e0aee-3658-4fe4-a331-86d0ac1d70d7")
+    @objid ("f3a80494-dd1b-4249-9384-90e5bb16accf")
     public List<SecurityMetricInstance> getSecurityMetricInstances() {
         List<SecurityMetricInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -371,7 +371,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("d77ef52b-9d62-403b-83c6-fa2598a66f35")
+    @objid ("2fd83f0c-32a2-4c54-815e-b7dbf7598a42")
     public List<SecurityRequirement> getSecurityRequirements() {
         List<SecurityRequirement> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -387,7 +387,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("b18df586-3214-4a7e-a00a-a68da2e95dee")
+    @objid ("9ba57668-0c47-4c77-a480-e289a1ba9a47")
     public List<SecuritySLO> getSecuritySLOs() {
         List<SecuritySLO> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -397,7 +397,7 @@ public class SecurityModel extends SubModel {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("fbda041a-00ad-4067-b626-1a0337f1c5bb")
+    @objid ("dd155a7b-b6aa-47dc-a4f5-48e4ea4d5da5")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -409,7 +409,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("92c23bb8-7526-431c-8bfe-e72bc4bb8835")
+    @objid ("8d82ff5a-b97d-434e-a473-ef304f1a7bed")
     public boolean removeCompositeSecurityInstances(final CompositeSecurityMetric obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -420,7 +420,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("45f36efe-c151-4a17-a0be-08ba265b6add")
+    @objid ("d448ffb0-31d2-4341-9303-c256d8b177b9")
     public boolean removeDiagrams(final SecurityModelDiagram obj) {
         return (obj!=null)? ((Package) this.elt).getProduct().remove(obj.getElement()) : false;
     }
@@ -431,7 +431,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("b03c92dc-b2f5-4398-a19f-c00abd420120")
+    @objid ("d6477aaf-33ad-420c-a7cd-6c3563f9be92")
     public boolean removeRawSecurityMetrics(final RawSecurityMetric obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -442,7 +442,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("033a9946-6a53-4edf-82b5-c1fcf3f76311")
+    @objid ("fad7b9a7-fec9-4ef6-8588-aff8cc8a3006")
     public boolean removeSecurityAttributes(final SecurityAttribute obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -453,7 +453,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("5b03a9a0-3fed-4dac-b280-8f04bd0ec5f7")
+    @objid ("94d52881-9c6e-4beb-9c3b-375d52e74e8f")
     public boolean removeSecurityControls(final SecurityControl obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -464,7 +464,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("6cad20da-c3de-4945-b8f6-8b4c9f9823cf")
+    @objid ("813e1846-c88e-46af-8ab2-4fb9a96bd8eb")
     public boolean removeSecurityDomains(final SecurityDomain obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -475,7 +475,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("63696e5a-dc79-4b2a-8128-c7b67e0eba64")
+    @objid ("035e5968-9568-4a55-9d23-50f3d3fc9d16")
     public boolean removeSecurityMetricInstances(final SecurityMetricInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -486,7 +486,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("13d25c2e-5250-4519-8e4a-3c10c6b96bb8")
+    @objid ("9773031f-b36c-48cd-9ab0-64c2a1e24a20")
     public boolean removeSecurityRequirements(final SecurityRequirement obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -497,7 +497,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("0097f717-766d-4afe-8c90-d1d091cb5092")
+    @objid ("f7c215f3-8f6c-4b5b-853a-b5e75876f253")
     public boolean removeSecuritySLOs(final SecuritySLO obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -508,7 +508,7 @@ public class SecurityModel extends SubModel {
      * null
      * 
      */
-    @objid ("687af992-c075-4cad-9c0a-a64fbe7931d3")
+    @objid ("223c65ad-8798-49f0-9f90-c881ccc1c81d")
     public void setCamelModel(final CamelModel obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
@@ -529,23 +529,23 @@ public class SecurityModel extends SubModel {
         return result;
     }
 
-    @objid ("e38ba9b6-61c1-414e-bc12-e8cf50f25952")
+    @objid ("580cb46c-c2b5-4de1-8f7e-f91efc38697f")
     protected SecurityModel(final Package elt) {
         super(elt);
     }
 
     @objid ("2405f496-8209-4c75-b1e1-0df64f112617")
     public static final class MdaTypes {
-        @objid ("f1bc3e76-2d52-4735-ab01-962c95730557")
+        @objid ("b02004f8-c3fc-4661-85e8-a6f78fc4e419")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d31b145a-95c4-464d-b478-d27584ff9e8b")
+        @objid ("298a76f9-b59e-432a-b6c7-5de77ceff6a0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("08532023-9793-49e8-8122-1700169973ad")
+        @objid ("4d0eca36-da53-4610-a55c-3be3a5b0ffec")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("04a467ae-894d-4990-b8a8-60a5e51eda98")
+        @objid ("1f1409ad-33fe-4b9f-a52c-666e757028d6")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "61f4f16b-0ac0-4a06-a279-b5b28dc86d01");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.requirementmodel.standard.class_;
 
@@ -40,10 +40,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("49b9e421-351d-46a3-bbb6-78228aca457c")
 public class OptimisationRequirement extends SoftRequirement {
-    @objid ("bda9d3c6-1d30-415b-9ef2-465839a6873f")
+    @objid ("8085b5b7-5a2b-4f09-b4a0-79f16b8010e8")
     public static final String STEREOTYPE_NAME = "OptimisationRequirement";
 
-    @objid ("e9859dff-7100-4c74-aed6-e5cc26809a76")
+    @objid ("364fcaee-693a-4761-a334-5d035f9657ad")
     public static final String MINIMISE_TAGTYPE = "minimise";
 
     /**
@@ -54,7 +54,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a4fb2a14-49a8-483e-983c-288fa6efdab5")
+    @objid ("5363db88-8864-4779-93de-9f34d341f9bd")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, OptimisationRequirement.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * 
      * @return a {@link OptimisationRequirement} proxy on the created {@link Class}.
      */
-    @objid ("768d2993-333f-4a4f-a571-6c7fe3409441")
+    @objid ("45143902-8965-4da1-8fe1-9e3aa6d13868")
     public static OptimisationRequirement create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, OptimisationRequirement.STEREOTYPE_NAME);
@@ -78,7 +78,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * @param obj a Class
      * @return a {@link OptimisationRequirement} proxy or <i>null</i>.
      */
-    @objid ("e1265e04-1ca9-4ace-b89f-bb51c216b06a")
+    @objid ("912f183e-a744-490c-a1c0-a3554230d60f")
     public static OptimisationRequirement instantiate(final Class obj) {
         return OptimisationRequirement.canInstantiate(obj) ? new OptimisationRequirement(obj) : null;
     }
@@ -91,7 +91,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * @return a {@link OptimisationRequirement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8e9d95e4-3cf3-4499-bbbf-49649387fcce")
+    @objid ("c793fc7d-d921-4ff1-a675-c54e12f1d530")
     public static OptimisationRequirement safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (OptimisationRequirement.canInstantiate(obj))
         	return new OptimisationRequirement(obj);
@@ -99,7 +99,7 @@ public class OptimisationRequirement extends SoftRequirement {
         	throw new IllegalArgumentException("OptimisationRequirement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bd9a3922-75bc-4935-85f8-9c634a6bf241")
+    @objid ("58af69ab-65fb-4e46-8bdc-2c57722caad2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -119,7 +119,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("cbbf6e83-defe-494a-9483-53d1d2326ffd")
+    @objid ("4e596156-0465-48e2-8d8f-0805d8a9fb50")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -131,7 +131,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * null
      * 
      */
-    @objid ("75a417a0-0de2-4171-bcf2-1d1ed7e88478")
+    @objid ("5dce6049-2c22-4ecc-8e74-370ea7d7aa41")
     public MetricContext getMetricContext() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(OptimisationRequirement.MdaTypes.MDAASSOCDEP)
@@ -151,7 +151,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * null
      * 
      */
-    @objid ("4dcde89d-c922-44e1-b79b-473035c4df65")
+    @objid ("1c12d27a-f0d9-4abf-8a0f-bf85d275111c")
     public MetricVariable getMetricVariable() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(OptimisationRequirement.MdaTypes.MDAASSOCDEP)
@@ -163,7 +163,7 @@ public class OptimisationRequirement extends SoftRequirement {
         return null;
     }
 
-    @objid ("62c132ef-d3b5-4584-8c73-bb1521a00841")
+    @objid ("9728fcfa-8949-42f5-8b85-1564b623b8cf")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -174,7 +174,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ebc56862-2807-4f66-b15a-25dd9db06c2e")
+    @objid ("30d6cd41-934d-4f40-acd8-81b7c25bea57")
     public boolean isMinimise() {
         return this.elt.isTagged(OptimisationRequirement.MdaTypes.MINIMISE_TAGTYPE_ELT);
     }
@@ -185,7 +185,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * null
      * 
      */
-    @objid ("e65e0f6b-7d63-40d8-996d-e4a2b01db043")
+    @objid ("c238f16e-c3ab-49a7-8e83-28d7ab7cea16")
     public void setMetricContext(final MetricContext obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -211,7 +211,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * null
      * 
      */
-    @objid ("56da3f0e-576e-4550-a981-738fe7b5cc5f")
+    @objid ("5e3eb8c7-1f5d-43c0-ab58-b1a4c4fa9520")
     public void setMetricVariable(final MetricVariable obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -236,7 +236,7 @@ public class OptimisationRequirement extends SoftRequirement {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ae1c3416-284f-48b1-bc5e-b8d353351d13")
+    @objid ("f5031d28-4ace-40bd-82f9-37c07adcb7da")
     public void setMinimise(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(OptimisationRequirement.MdaTypes.MINIMISE_TAGTYPE_ELT, this.elt);
@@ -252,26 +252,26 @@ public class OptimisationRequirement extends SoftRequirement {
         return result;
     }
 
-    @objid ("9e0f5b69-ccd9-4b1d-b6eb-21bf250e467b")
+    @objid ("17754c20-aee5-48e3-bb8a-381f13e9ce32")
     protected OptimisationRequirement(final Class elt) {
         super(elt);
     }
 
     @objid ("1977922d-e804-46aa-9701-85d9dc5c7714")
     public static final class MdaTypes {
-        @objid ("93e7abb1-4597-4620-81ec-d3de8a17d009")
+        @objid ("01e4ae8f-81d1-4154-95ee-6ca34ff2ed18")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bb89e2d2-179a-43f1-9354-8ca5a07bc09b")
+        @objid ("46cf2b77-5b1c-4a5b-a09f-b8f68a76a9d7")
         public static TagType MINIMISE_TAGTYPE_ELT;
 
-        @objid ("a39f34da-ac5a-4f5e-8379-b6044751eed1")
+        @objid ("62cd0571-e451-440f-9760-a90bea91b751")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("81a20ed6-70f8-43ee-849e-1ac6bb9cf0ae")
+        @objid ("dc3b4b69-917f-4a65-9570-f472ab898de7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4ad26d04-ad1f-4d93-9f15-c2aede5a0dd3")
+        @objid ("835f3439-648c-48e3-b264-fa485c83cf53")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "5032b63e-764b-4afb-8636-29fe5cee73f0");
             MINIMISE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "bc674ab8-644b-456a-875e-c51eb68d068f");

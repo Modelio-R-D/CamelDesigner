@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.deploymentinstancemodel.standard.instance;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("5558f77d-42a8-4e10-8393-56d67ba21511")
 public abstract class ComponentInstance extends FeatureInstance {
-    @objid ("312ab6e2-4933-466d-8577-4e8068775341")
+    @objid ("21daba00-dc5a-4d3c-b5d7-beab1634e072")
     public static final String STEREOTYPE_NAME = "ComponentInstance";
 
-    @objid ("843d0a80-6e27-4ca4-b988-0b1c7fe6795c")
+    @objid ("d9a5f45a-ec04-4028-b034-05cea8170269")
     public static final String DESTROYEDON_TAGTYPE = "destroyedOn";
 
-    @objid ("837a62f5-7a8c-42e4-8481-8d51b8e1bf8c")
+    @objid ("295e0704-f6b7-4300-bf85-63b6514e54b2")
     public static final String INSTANTIATEDON_TAGTYPE = "instantiatedOn";
 
     /**
@@ -57,7 +57,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("62f1c2f7-61af-4e33-a361-b2f2b4d6c9e1")
+    @objid ("ad082b2b-a10a-4056-8639-6e5d15479deb")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Instance) && ((Instance) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, ComponentInstance.STEREOTYPE_NAME));
     }
@@ -68,7 +68,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("37e6bbde-4ed1-4e9f-a5e8-0a1b981334d1")
+    @objid ("9614e603-b902-487f-ba10-8301a9afc450")
     public void addProvidedCommunicationInstances(final CommunicationPort obj) {
         if (obj!=null)
           ((Instance) this.elt).getPart().add(obj.getElement());
@@ -80,13 +80,13 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("9412fc4a-c61c-4ca7-a51e-6bb9e3d6f579")
+    @objid ("6984d2d5-5aef-4f34-8b99-d18e9c3d47b8")
     public void addProvidedHostInstances(final HostingPort obj) {
         if (obj!=null)
           ((Instance) this.elt).getPart().add(obj.getElement());
     }
 
-    @objid ("5f049c1b-bac6-485b-82c5-a525b6c97c1a")
+    @objid ("3dbccd59-d5e7-4e37-af08-a31bfa0f529f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -107,7 +107,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("01f69fca-fdb4-400a-8f3e-4443f91ade18")
+    @objid ("55e75cd1-1c10-49de-96f4-5721b3a3d627")
     public String getDestroyedOn() {
         return this.elt.getTagValue(ComponentInstance.MdaTypes.DESTROYEDON_TAGTYPE_ELT);
     }
@@ -116,7 +116,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * Get the underlying {@link Instance}. 
      * @return the Instance represented by this proxy, never null.
      */
-    @objid ("9b22454c-8da4-41ba-9a3b-976150ba62f9")
+    @objid ("85464b19-567b-4759-a028-9442c4378bb8")
     @Override
     public Instance getElement() {
         return (Instance)super.getElement();
@@ -127,7 +127,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("999610fc-73b2-431d-8b10-fc31df0c931e")
+    @objid ("b953609a-e617-43e5-9a6e-2673f7c9b00d")
     public String getInstantiatedOn() {
         return this.elt.getTagValue(ComponentInstance.MdaTypes.INSTANTIATEDON_TAGTYPE_ELT);
     }
@@ -138,7 +138,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("66e5255f-696f-46c4-a5d2-f102a4707399")
+    @objid ("0c3c260d-0034-4dba-83a3-4b88e31020f0")
     public List<CommunicationPort> getProvidedCommunicationInstances() {
         List<CommunicationPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart()){
@@ -154,7 +154,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("af4be4d4-1ce2-4bb9-a354-b4eecd021ad9")
+    @objid ("2e383456-4214-4667-9654-0ea21a958f4f")
     public List<HostingPort> getProvidedHostInstances() {
         List<HostingPort> results = new ArrayList<>();
         for (BindableInstance mObj : ((Instance) this.elt).getPart()){
@@ -170,12 +170,12 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("9314b673-a269-4aaa-add8-9eead727ebe1")
+    @objid ("04d9d3a5-545e-4011-9b6d-d4acec3a81ec")
     public CamelComponent getType() {
         return (CamelComponent)CamelDesignerProxyFactory.instantiate(((Instance) this.elt).getBase(), CamelComponent.STEREOTYPE_NAME);
     }
 
-    @objid ("b5b87104-7ea1-4d37-8397-c3b9de466a5c")
+    @objid ("ce39c5d9-7674-4057-aace-fb09bcb678f8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -187,7 +187,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("41872076-2df5-4f73-b3c4-823cdd9c2432")
+    @objid ("93253915-077f-4ad3-9f90-9e8714e6b816")
     public boolean removeProvidedCommunicationInstances(final CommunicationPort obj) {
         return (obj!=null)? ((Instance) this.elt).getPart().remove(obj.getElement()) : false;
     }
@@ -198,7 +198,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("f2a33e58-499f-495d-aea7-f50c5a4d4096")
+    @objid ("575afd53-a2dc-44f3-b10d-0253c7fadfb3")
     public boolean removeProvidedHostInstances(final HostingPort obj) {
         return (obj!=null)? ((Instance) this.elt).getPart().remove(obj.getElement()) : false;
     }
@@ -208,7 +208,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("330aa852-8abd-4240-a731-e66af36f3c5d")
+    @objid ("b835696f-5508-4035-89c2-f0291a1372d4")
     public void setDestroyedOn(final String value) {
         this.elt.putTagValue(ComponentInstance.MdaTypes.DESTROYEDON_TAGTYPE_ELT, value);
     }
@@ -218,7 +218,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("05b7b38b-ccd2-4cd8-8347-bec8395343a6")
+    @objid ("20c98bbe-ddd1-4e26-8d48-e515854ebdb6")
     public void setInstantiatedOn(final String value) {
         this.elt.putTagValue(ComponentInstance.MdaTypes.INSTANTIATEDON_TAGTYPE_ELT, value);
     }
@@ -229,7 +229,7 @@ public abstract class ComponentInstance extends FeatureInstance {
      * null
      * 
      */
-    @objid ("fa938681-1f39-45eb-9932-9ba929918206")
+    @objid ("0f93e578-37f0-48fc-8757-58a80aefc071")
     public void setType(final CamelComponent obj) {
         ((Instance) this.elt).setBase((obj != null) ? obj.getElement() : null);
     }
@@ -242,29 +242,29 @@ public abstract class ComponentInstance extends FeatureInstance {
         return result;
     }
 
-    @objid ("211f27d3-11b1-4749-aa43-a0818bd9f813")
+    @objid ("63457eba-b9de-4f76-8686-cd381441945a")
     protected ComponentInstance(final Instance elt) {
         super(elt);
     }
 
     @objid ("410e6123-df3d-46bd-81d2-a929ad0d6a01")
     public static final class MdaTypes {
-        @objid ("b5d8c1c5-57a6-48c2-b9d5-51531cd1d9b5")
+        @objid ("9082cfef-f5b8-49be-9182-832105f4cf52")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("80066b3e-5563-44b1-a423-03e882e6048a")
+        @objid ("dd9ac122-0782-4808-b077-2742c8e48251")
         public static TagType INSTANTIATEDON_TAGTYPE_ELT;
 
-        @objid ("55511b76-ea19-427f-9bb0-fb2e9610c65c")
+        @objid ("38c2e4f5-0138-47b1-b2d4-ebece6808068")
         public static TagType DESTROYEDON_TAGTYPE_ELT;
 
-        @objid ("d67c6c85-fb91-4492-ba70-ee953f79da78")
+        @objid ("4c7a8ac7-d6a8-47fa-86ca-801cf69a0cd7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5a5e1a16-2e3e-4984-a564-447c9e71f781")
+        @objid ("eab13cb1-9435-4de6-80db-0a88cd5249c9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5c6f4d7a-4b39-462f-9773-471ed20696cc")
+        @objid ("bd55e5b6-fa63-432c-b27e-9d8f5b4e3ca9")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "aba476b3-2629-42d6-9138-1bf866332333");
             INSTANTIATEDON_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "e6ac56dd-6986-41e3-944d-c5fad2bd2b84");

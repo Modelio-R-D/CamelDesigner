@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.standard.package_;
 
@@ -61,7 +61,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("2c4ed9c5-ea74-49d5-9198-5847748ef92e")
 public abstract class FeaturePackage extends Feature {
-    @objid ("b2c4a51c-fe43-4cc9-a6b6-060a4fc5785c")
+    @objid ("85ff3acb-13db-41f4-ad49-ec17bed67356")
     public static final String STEREOTYPE_NAME = "Feature_Package";
 
     /**
@@ -72,7 +72,7 @@ public abstract class FeaturePackage extends Feature {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("4e338805-2c24-4893-8eb7-82ee1413a00c")
+    @objid ("b13f9707-a345-48fa-b1ea-580411e34835")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && ((Package) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, FeaturePackage.STEREOTYPE_NAME));
     }
@@ -83,7 +83,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("347806a1-ffe5-4f15-b188-3b8da9b7101c")
+    @objid ("931eec25-24c4-40e4-a5c2-2288fbd556e9")
     public void addAttributes(final AttributeClass obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
@@ -95,7 +95,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("e7d700d0-96e7-4b54-bf69-bd914484e332")
+    @objid ("dbceeb9d-12d7-480e-ad2c-6a4ffdad9be2")
     public void addInstances(final AttributeInstance obj) {
         if (obj!=null)
           ((Package) this.elt).getDeclared().add(obj.getElement());
@@ -107,13 +107,13 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("4bdfa513-5cd2-4d41-8b80-2a92e60c67e2")
+    @objid ("35fe3c7a-f9e7-485d-ad5c-ff633a88fc03")
     public void addSubFeatures(final FeaturePackage obj) {
         if (obj!=null)
           ((Package) this.elt).getOwnedElement().add(obj.getElement());
     }
 
-    @objid ("f7be833b-e942-4c17-9dcf-9c9cedd4beed")
+    @objid ("d9cd69c4-0b76-46dc-9cd9-8eb56390982f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -135,7 +135,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("240d71af-e8e4-45fc-a71c-4d5dfc8cc092")
+    @objid ("8b91f7b1-59b8-4519-8e25-c80b13b0d5d2")
     public List<AttributeClass> getAttributes() {
         List<AttributeClass> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -157,7 +157,7 @@ public abstract class FeaturePackage extends Feature {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("079e4501-795a-420d-ba7c-12a6b37ad3e4")
+    @objid ("00acae1f-b5be-4ad3-9859-43a2f050adf9")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -169,7 +169,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("e1a2542d-4b61-4ffe-9aae-1a073aad9949")
+    @objid ("06f7bf25-d857-494a-b021-0c623165f6fa")
     public List<AttributeInstance> getInstances() {
         List<AttributeInstance> results = new ArrayList<>();
         for (Instance mObj : ((Package) this.elt).getDeclared()){
@@ -189,7 +189,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("321c5aee-5777-49d9-aa90-12820a193cc4")
+    @objid ("3cbe5ddf-b1db-43a5-9d3b-b78be2836e65")
     public FeaturePackage getParent() {
         return (FeaturePackage)CamelDesignerProxyFactory.instantiate(((Package) this.elt).getOwner(), FeaturePackage.STEREOTYPE_NAME);
     }
@@ -200,7 +200,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("51a9ddcc-77fe-4614-86f4-dfe81dc9316c")
+    @objid ("d20f0502-6c4e-4fbb-8522-777618702cec")
     public List<FeaturePackage> getSubFeatures() {
         List<FeaturePackage> results = new ArrayList<>();
         for (ModelTree mObj : ((Package) this.elt).getOwnedElement()){
@@ -240,7 +240,7 @@ public abstract class FeaturePackage extends Feature {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("decf023f-deda-483d-bc49-2c9468ce4dd7")
+    @objid ("d7e45e74-a587-4e23-8e66-4c8d61cb69d4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -252,7 +252,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("bc8234d7-ab51-43bc-981b-845723aecc64")
+    @objid ("677b3e74-4d58-4fc2-bc90-c926f2e2cc8d")
     public boolean removeAttributes(final AttributeClass obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -263,7 +263,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("230eb2b5-1730-4468-a939-eb1bfb49a393")
+    @objid ("3e3607fb-5e7d-495b-a923-8ba39e68dc43")
     public boolean removeInstances(final AttributeInstance obj) {
         return (obj!=null)? ((Package) this.elt).getDeclared().remove(obj.getElement()) : false;
     }
@@ -274,7 +274,7 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("f871bead-0a62-4be3-aa42-0f3c6f6b35e0")
+    @objid ("cdffe347-0126-4cc6-a55f-22633f5eece5")
     public boolean removeSubFeatures(final FeaturePackage obj) {
         return (obj!=null)? ((Package) this.elt).getOwnedElement().remove(obj.getElement()) : false;
     }
@@ -285,28 +285,28 @@ public abstract class FeaturePackage extends Feature {
      * null
      * 
      */
-    @objid ("7891400c-f985-4a07-bcb3-2b9f41635d5f")
+    @objid ("7a1b2d9f-c48a-4843-826e-d53ba4da67f7")
     public void setParent(final FeaturePackage obj) {
         ((Package) this.elt).setOwner((obj != null) ? obj.getElement() : null);
     }
 
-    @objid ("520d7b6f-8b9b-483d-8e3a-e4f2a20f5864")
+    @objid ("a03bcc6b-df46-4160-b5b5-5e13aab7d0cc")
     protected FeaturePackage(final Package elt) {
         super(elt);
     }
 
     @objid ("21c2bdec-ab84-4154-b5ff-90933f016c05")
     public static final class MdaTypes {
-        @objid ("133cde32-b362-4686-bf80-2453bcd60953")
+        @objid ("bb13e714-cfe6-4c26-b4cb-72646c35d083")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("74e3f61c-ff68-4c74-92e5-43b7d1bf084a")
+        @objid ("70399151-9c13-4f98-a6b6-1f4a2b15dd40")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("082df5d9-eb40-42ea-aa11-89c36ef8f521")
+        @objid ("41d24659-52dc-4214-a9a7-2b5433ce9342")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5b7301f5-766e-40a2-a6fb-865a6c259d3f")
+        @objid ("f803987e-caa0-4d6a-af72-8588fc3985a4")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9a524454-5126-4778-9cec-5eae95e4f160");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

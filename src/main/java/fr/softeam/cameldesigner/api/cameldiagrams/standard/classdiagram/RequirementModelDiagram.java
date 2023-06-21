@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.cameldiagrams.standard.classdiagram;
 
@@ -36,7 +36,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("c0f09b77-0e4b-430d-a7da-01382979d1a3")
 public class RequirementModelDiagram extends AbstractCamelDiagram {
-    @objid ("c2aff50c-f795-42b7-9543-e42af3c1cc0f")
+    @objid ("d93b67b7-b5ec-46a3-a825-52a4ffbd4c58")
     public static final String STEREOTYPE_NAME = "RequirementModelDiagram";
 
     /**
@@ -47,7 +47,7 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2bdf5152-31b5-4a06-806a-3ef09935874e")
+    @objid ("95f6ccd0-6cb0-4e6f-a0cd-ebb12f661d71")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ClassDiagram) && ((ClassDiagram) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, RequirementModelDiagram.STEREOTYPE_NAME));
     }
@@ -57,7 +57,7 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
      * 
      * @return a {@link RequirementModelDiagram} proxy on the created {@link ClassDiagram}.
      */
-    @objid ("628b40cf-4dee-44fa-bc23-67cf85eedf28")
+    @objid ("231ae8e9-1293-4356-a198-cc8dc294d7e9")
     public static RequirementModelDiagram create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.ClassDiagram");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, RequirementModelDiagram.STEREOTYPE_NAME);
@@ -71,7 +71,7 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
      * @param obj a ClassDiagram
      * @return a {@link RequirementModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("c3b035b2-e786-40ec-af68-9a71d2b57df1")
+    @objid ("bf000677-c599-4bf5-bb36-2602d88a781d")
     public static RequirementModelDiagram instantiate(final ClassDiagram obj) {
         return RequirementModelDiagram.canInstantiate(obj) ? new RequirementModelDiagram(obj) : null;
     }
@@ -84,7 +84,7 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
      * @return a {@link RequirementModelDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f59d8217-ca0c-4d93-9e55-4d3e71885cc0")
+    @objid ("49cd4af7-ba2b-4c38-83fe-7e93ac2401fd")
     public static RequirementModelDiagram safeInstantiate(final ClassDiagram obj) throws IllegalArgumentException {
         if (RequirementModelDiagram.canInstantiate(obj))
         	return new RequirementModelDiagram(obj);
@@ -92,7 +92,7 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
         	throw new IllegalArgumentException("RequirementModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c797cdc7-e97a-4510-b9c6-9764a6b14608")
+    @objid ("f3124a90-64ae-4e2f-a26d-07d06864da19")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,13 +112,13 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
      * Get the underlying {@link ClassDiagram}. 
      * @return the ClassDiagram represented by this proxy, never null.
      */
-    @objid ("1aa1d758-545d-4161-a955-add52f80fa24")
+    @objid ("997cc84c-0cc8-4ab6-86d3-22313df4c75d")
     @Override
     public ClassDiagram getElement() {
         return (ClassDiagram)super.getElement();
     }
 
-    @objid ("0a1d8ae1-1b94-45f3-9bc6-3259e934244d")
+    @objid ("6cfdc37d-d197-4a8a-a91c-8e030e5abbdf")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -131,23 +131,23 @@ public class RequirementModelDiagram extends AbstractCamelDiagram {
         return result;
     }
 
-    @objid ("f91216f4-708f-44cb-a94e-1d46f98389a0")
+    @objid ("e1d1823f-3334-42f2-88b8-7b371c0326fd")
     protected RequirementModelDiagram(final ClassDiagram elt) {
         super(elt);
     }
 
     @objid ("b49732d9-0960-4c1f-a15a-9b345f5f99f2")
     public static final class MdaTypes {
-        @objid ("976bcd61-d324-4021-95ea-0f0e8faafb44")
+        @objid ("5a7acae1-8fb3-49dc-8fc4-d2b9266d73f7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1b801d2c-9cec-4d31-b75b-d13123dfb6db")
+        @objid ("ceff6e6f-11c0-4958-89f5-00aedd765710")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ad1500fb-034c-4245-8c43-7560b7d28452")
+        @objid ("94d8d65c-d98f-4b61-9aaa-ee8bb6d40270")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4309e528-f962-447d-88a3-a3920cc8789c")
+        @objid ("4ab4a210-c5c6-4411-bb4b-688c648100c3")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "f8879e00-7139-4923-a7ff-67ebdb678e5b");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

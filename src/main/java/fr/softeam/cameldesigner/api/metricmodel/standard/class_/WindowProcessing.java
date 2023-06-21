@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.metricmodel.standard.class_;
 
@@ -34,10 +34,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("f113e6c8-cd00-4d66-8cb5-a656505426b9")
 public class WindowProcessing extends FeatureClass {
-    @objid ("57855d69-9c2c-4a5d-a041-5daa6e996b3c")
+    @objid ("1e7b23f3-bfb2-40fc-94d7-a50a5cb9e7b9")
     public static final String STEREOTYPE_NAME = "WindowProcessing";
 
-    @objid ("7de4832c-c467-47de-a872-99be15abd14a")
+    @objid ("dd6e643f-cc06-4e61-bc64-3c505f7325db")
     public static final String PROCESSINGTYPE_TAGTYPE = "processingType";
 
     /**
@@ -48,7 +48,7 @@ public class WindowProcessing extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e181006d-2b59-4eb7-92d3-7430e4b17704")
+    @objid ("03dac4c1-6b5e-4aba-9ab6-42d9ac721a4b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, WindowProcessing.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class WindowProcessing extends FeatureClass {
      * 
      * @return a {@link WindowProcessing} proxy on the created {@link Class}.
      */
-    @objid ("23df3fe6-1510-410f-a91a-df2a7fd2fdcd")
+    @objid ("d9bc8551-948a-40a3-97f4-d916327b7ffc")
     public static WindowProcessing create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, WindowProcessing.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class WindowProcessing extends FeatureClass {
      * @param obj a Class
      * @return a {@link WindowProcessing} proxy or <i>null</i>.
      */
-    @objid ("dd4c610a-98c7-4318-8076-70bea6bfda10")
+    @objid ("ea50fb44-2c14-46c9-bcad-52ed7801f93c")
     public static WindowProcessing instantiate(final Class obj) {
         return WindowProcessing.canInstantiate(obj) ? new WindowProcessing(obj) : null;
     }
@@ -85,7 +85,7 @@ public class WindowProcessing extends FeatureClass {
      * @return a {@link WindowProcessing} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c5bebe51-cf09-4e46-86c6-06c7161d4abe")
+    @objid ("4ff51cfb-3de3-4eca-b13d-f22b90487a92")
     public static WindowProcessing safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (WindowProcessing.canInstantiate(obj))
         	return new WindowProcessing(obj);
@@ -93,7 +93,7 @@ public class WindowProcessing extends FeatureClass {
         	throw new IllegalArgumentException("WindowProcessing: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0ff7ab10-4f26-4d58-bccc-473103802f9f")
+    @objid ("c1243726-c194-44db-9b76-ff3ddd0083da")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,7 +113,7 @@ public class WindowProcessing extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e5588e55-5c14-4c31-ac1b-9b64ee703468")
+    @objid ("6e8da05f-8135-4bb3-aa93-77d10b976a19")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -124,12 +124,12 @@ public class WindowProcessing extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("52489ecc-b55e-4a83-9e6c-bc619cda4d77")
+    @objid ("8a882ea8-4089-4b1f-9816-1099e6fae211")
     public String getProcessingType() {
         return this.elt.getTagValue(WindowProcessing.MdaTypes.PROCESSINGTYPE_TAGTYPE_ELT);
     }
 
-    @objid ("31fe2898-13af-4087-8b3e-6f7cee51331c")
+    @objid ("b9b6e728-901c-4c1b-8c17-109a0d650c61")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -140,31 +140,31 @@ public class WindowProcessing extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("26080eb7-b86c-4950-a549-14fa836efe97")
+    @objid ("aa53005a-0cdc-4e53-8b51-b4745b0a2bd1")
     public void setProcessingType(final String value) {
         this.elt.putTagValue(WindowProcessing.MdaTypes.PROCESSINGTYPE_TAGTYPE_ELT, value);
     }
 
-    @objid ("55f50f76-2716-4f12-a2ae-3362c3b4e4d1")
+    @objid ("f849e3ee-8994-488d-b688-1f0b353aea6f")
     protected WindowProcessing(final Class elt) {
         super(elt);
     }
 
     @objid ("dbccbbf4-b3b0-492c-9045-169706c9165d")
     public static final class MdaTypes {
-        @objid ("78190a87-87e1-49a9-b7fd-b4fcfcf875ba")
+        @objid ("08949446-753e-47df-b91b-4a9a5eeba7d2")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d60de215-0bbf-4839-b049-79796f1422a2")
+        @objid ("29fd61bf-4603-4744-9076-d69be828913a")
         public static TagType PROCESSINGTYPE_TAGTYPE_ELT;
 
-        @objid ("c58cea36-82b6-4425-8d69-889290ce597c")
+        @objid ("01ce82b1-d8ba-4e65-89af-253908d4eb45")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("129aea18-db37-4be5-9710-c70894e74efb")
+        @objid ("175ea7ac-6566-4ffd-8e7b-3ee3568fbd8d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b0383ddb-eda6-4634-8339-7857755d2008")
+        @objid ("4e9b6be7-c6ff-41c8-a344-52c9bcbebf6f")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "8e163b3c-95f2-4ae0-8a90-6158935ad859");
             PROCESSINGTYPE_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "d2dd7a1c-3777-4b6b-b26b-cebed9a58fa7");

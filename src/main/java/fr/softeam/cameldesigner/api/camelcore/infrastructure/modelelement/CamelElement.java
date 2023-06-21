@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement;
 
@@ -35,13 +35,13 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("e19016d0-0edb-4a41-bbf9-7506c03fcd5e")
 public abstract class CamelElement {
-    @objid ("b648bf09-6934-40e8-a2e0-2c19c9d791e9")
+    @objid ("f3b23cb2-6244-4970-b50f-b3be128c6d09")
     public static final String STEREOTYPE_NAME = "CamelElement";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("0f9237cc-3b99-4e76-b233-c0a41566f82c")
+    @objid ("63192fc5-2670-49c6-97a5-c117af90c3a6")
     protected final ModelElement elt;
 
     /**
@@ -52,7 +52,7 @@ public abstract class CamelElement {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0ea06c89-3d02-4e35-bbd4-9441575d2b06")
+    @objid ("2615981a-2c33-4f7f-a075-5f929cd1ff25")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && ((ModelElement) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, CamelElement.STEREOTYPE_NAME));
     }
@@ -64,7 +64,7 @@ public abstract class CamelElement {
                 Annotation.canInstantiate(obj) ? Annotation.instantiate((Dependency)obj) : null;
     }
 
-    @objid ("43c69035-03cb-43a9-988c-9cdcecab3179")
+    @objid ("4d8f82f0-3dcf-4a86-9bdc-775f8ced1bbc")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -84,12 +84,12 @@ public abstract class CamelElement {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("04e2bede-fd7d-409f-a0a4-9f43873c5d57")
+    @objid ("f63ce9ba-87a8-40ab-8d43-00435a12cd3b")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("681027f5-8999-4d06-88cc-8147f981f1c0")
+    @objid ("2309ede9-f07f-4173-b765-76b3756def2a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -100,23 +100,23 @@ public abstract class CamelElement {
         return new ArrayList<>();
     }
 
-    @objid ("29050444-621f-42f4-8dd5-140db12e9018")
+    @objid ("b6cbfa7d-a7e0-4a65-b4e3-c82da00f31d1")
     protected CamelElement(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("1755d7a2-ba56-47fd-b0d2-652ed674f106")
     public static final class MdaTypes {
-        @objid ("a76f5ce6-1a78-4b45-8521-24f89e4ffb04")
+        @objid ("8cc81b72-a5b3-4e12-acb3-d695704b9841")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("48d859d2-b7d7-40ae-b157-25547f262f5e")
+        @objid ("802d0c72-e25e-4991-bc72-b0c974a4d7a7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2405ee2b-add9-453d-8d85-24469df76879")
+        @objid ("a2db323f-59d6-4869-beb9-8ec5b32e2bec")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6856f37e-64fd-4140-b37e-99b4164f5fac")
+        @objid ("1ceef321-6186-4e34-8e06-db1a5db42a6c")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "9aef4bd8-fa92-4231-9295-3eb5a619ceab");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.constraintmodel.standard.constraint;
 
@@ -37,7 +37,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("ad18d989-4bc1-47c9-9b74-61ab5b5e050f")
 public class AttributeConstraint extends UnaryConstraint {
-    @objid ("d39d9b22-206d-4107-befd-535f8a2fd32d")
+    @objid ("86aea7c6-2048-4335-b83b-f3201cbd1465")
     public static final String STEREOTYPE_NAME = "AttributeConstraint";
 
     /**
@@ -48,7 +48,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("57146b3e-de0f-44cc-b76e-b1037bc2f10a")
+    @objid ("58638dcb-8649-4392-8dc7-c702e2112538")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Constraint) && ((Constraint) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, AttributeConstraint.STEREOTYPE_NAME));
     }
@@ -58,7 +58,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * 
      * @return a {@link AttributeConstraint} proxy on the created {@link Constraint}.
      */
-    @objid ("3a7fefe6-4f53-4bff-a97b-761bdedc073c")
+    @objid ("5c88aa7f-ab5c-47a4-88d1-42376e904d74")
     public static AttributeConstraint create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Constraint");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, AttributeConstraint.STEREOTYPE_NAME);
@@ -72,7 +72,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * @param obj a Constraint
      * @return a {@link AttributeConstraint} proxy or <i>null</i>.
      */
-    @objid ("9b156f46-ecf7-429f-8326-af93f31507a6")
+    @objid ("d6a351e7-988b-4eaf-9f42-c8cfcaaf3ded")
     public static AttributeConstraint instantiate(final Constraint obj) {
         return AttributeConstraint.canInstantiate(obj) ? new AttributeConstraint(obj) : null;
     }
@@ -85,7 +85,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * @return a {@link AttributeConstraint} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6041799f-8eeb-4aa0-a2cf-584030e9d1a2")
+    @objid ("ba156bea-4381-4dbe-a651-0833a6076dc5")
     public static AttributeConstraint safeInstantiate(final Constraint obj) throws IllegalArgumentException {
         if (AttributeConstraint.canInstantiate(obj))
         	return new AttributeConstraint(obj);
@@ -93,7 +93,7 @@ public class AttributeConstraint extends UnaryConstraint {
         	throw new IllegalArgumentException("AttributeConstraint: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("40bd07ed-f18c-4f9c-9f0c-ff23495ba64f")
+    @objid ("1971cdad-dee9-4c91-8457-21cc9584d42c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,7 +115,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("bb74fc40-5bb8-4809-ba06-7c691ae4aa5c")
+    @objid ("beb09715-4a00-42f3-9633-9a4994658899")
     public AttributeContext getAttributeContext() {
           for (Class obj : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
            if (AttributeContext.canInstantiate(obj))
@@ -128,13 +128,13 @@ public class AttributeConstraint extends UnaryConstraint {
      * Get the underlying {@link Constraint}. 
      * @return the Constraint represented by this proxy, never null.
      */
-    @objid ("e49f7712-76ec-4fff-9dc4-3762b5f21546")
+    @objid ("2ba4810e-f261-4374-bfb4-cd5c3069beba")
     @Override
     public Constraint getElement() {
         return (Constraint)super.getElement();
     }
 
-    @objid ("cdfb8fcf-58b7-4d97-b444-2d83ef0b6a85")
+    @objid ("dddefd3d-3df8-4f48-89cd-b4c091e1f915")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -146,7 +146,7 @@ public class AttributeConstraint extends UnaryConstraint {
      * null
      * 
      */
-    @objid ("605ed9b4-79af-45aa-a1ab-7e716d065586")
+    @objid ("cc8e30d7-fbe3-429d-aa67-1d6e3d2b7be1")
     public void setAttributeContext(final AttributeContext obj) {
         // Remove existing AttributeContexts
         for (Class e : ((Constraint) this.elt).getConstrainedElement(Class.class)) {
@@ -167,23 +167,23 @@ public class AttributeConstraint extends UnaryConstraint {
         return result;
     }
 
-    @objid ("00b1b551-dc35-4572-91ce-603ac966c111")
+    @objid ("87750ce2-88cd-4d49-94f8-f7a5f2398815")
     protected AttributeConstraint(final Constraint elt) {
         super(elt);
     }
 
     @objid ("d22fc638-bd9d-4514-a93a-6f08c279f3bd")
     public static final class MdaTypes {
-        @objid ("3dc296f3-32d6-472d-9e1e-9027263de476")
+        @objid ("1f686629-86f7-4138-bff9-d9e6471f5b61")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("82491f3b-9dbc-442b-b450-3700b4cf9d1c")
+        @objid ("cb141137-464e-4fa8-9e6b-50c490d627f0")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d70d3d60-3b32-4cd9-886b-1d4cf5295793")
+        @objid ("1ed54182-6195-4247-abc3-251d5ac651bd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("aeb6c049-6fa3-4d3b-9a81-136ae1547e3e")
+        @objid ("0327be3c-ad56-4e6c-ac78-272a632d646b")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "310d656e-d693-4ec1-b186-66894464b4b3");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

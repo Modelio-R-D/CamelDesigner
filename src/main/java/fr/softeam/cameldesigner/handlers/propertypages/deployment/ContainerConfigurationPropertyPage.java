@@ -32,15 +32,6 @@ public class ContainerConfigurationPropertyPage<T extends ContainerConfiguration
                 this._element.setUpdateCommandNote(value);
             
             }
-         else 
-             if(this._currentRow == 4){
-                 Class elt = (Class) getModelElt(Feature.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-                 if (Feature.canInstantiate(elt)) {
-                     this._element.setEnvironment(Feature.instantiate(elt));
-                 }                
-             }
-        
-        this._currentRow -= 4;
     }
 
     @objid ("78de7cfa-fdf0-4c06-b532-255aa21d698b")
@@ -51,7 +42,6 @@ public class ContainerConfigurationPropertyPage<T extends ContainerConfiguration
         table.addProperty("Image id", getNotNull(this._element.getImageId()));
         table.addProperty("Start Command", getNotNull(this._element.getStartCommandNote()));
         table.addProperty("Update Command", getNotNull(this._element.getUpdateCommandNote()));
-        table.addProperty("Environment", getCamelName(this._element.getEnvironment()), getCamelNames(Feature.MdaTypes.STEREOTYPE_ELT.getExtendedElement()));
     }
 
 }

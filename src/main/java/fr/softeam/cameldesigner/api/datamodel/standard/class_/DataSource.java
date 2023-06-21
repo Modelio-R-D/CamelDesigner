@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: CamelDesigner v1.0.16
 
- * This file was generated on 3/16/23 3:21 PM by Modelio Studio.
+ * This file was generated on 3/28/23 4:09 PM by Modelio Studio.
  */
 package fr.softeam.cameldesigner.api.datamodel.standard.class_;
 
@@ -17,6 +17,7 @@ import fr.softeam.cameldesigner.api.camelcore.infrastructure.modelelement.CamelE
 import fr.softeam.cameldesigner.api.camelcore.standard.class_.FeatureClass;
 import fr.softeam.cameldesigner.api.deploymentmodel.standard.component.SoftwareComponent;
 import fr.softeam.cameldesigner.api.metricmodel.standard.component.Sensor;
+import fr.softeam.cameldesigner.api.profiler.standard.component.ProfilerComponent;
 import fr.softeam.cameldesigner.impl.CamelDesignerModule;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
@@ -38,10 +39,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("1f333d16-724c-4e8d-a1b3-e82caab2b1f4")
 public class DataSource extends FeatureClass {
-    @objid ("329a8980-0cc7-494a-a573-3b80c12ba0e5")
+    @objid ("72349693-ebaa-4e47-938c-ca51b6679f8c")
     public static final String STEREOTYPE_NAME = "DataSource";
 
-    @objid ("15c31e3d-02e5-4c49-9a6e-4dc648c56ddf")
+    @objid ("13375584-fd9a-4643-a36b-23788eb0d44e")
     public static final String EXTERNAL_TAGTYPE = "external";
 
     /**
@@ -52,7 +53,7 @@ public class DataSource extends FeatureClass {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("15c203c9-a208-4ede-bd4b-b695f97f1dde")
+    @objid ("8ca84812-897a-491d-9a48-cb5758883556")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && ((Class) elt).isStereotyped(ICamelDesignerPeerModule.MODULE_NAME, DataSource.STEREOTYPE_NAME));
     }
@@ -62,7 +63,7 @@ public class DataSource extends FeatureClass {
      * 
      * @return a {@link DataSource} proxy on the created {@link Class}.
      */
-    @objid ("822acf56-e92e-41a1-ba14-ac7a9445eb8c")
+    @objid ("42add5da-2905-462b-9395-c5e29b2a79f4")
     public static DataSource create() {
         ModelElement e = (ModelElement)CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Class");
         e.addStereotype(ICamelDesignerPeerModule.MODULE_NAME, DataSource.STEREOTYPE_NAME);
@@ -76,7 +77,7 @@ public class DataSource extends FeatureClass {
      * @param obj a Class
      * @return a {@link DataSource} proxy or <i>null</i>.
      */
-    @objid ("f42edab5-6100-422e-8bd6-44d3105289d3")
+    @objid ("ac6ee574-9d53-4b75-9627-04dc668d5e44")
     public static DataSource instantiate(final Class obj) {
         return DataSource.canInstantiate(obj) ? new DataSource(obj) : null;
     }
@@ -89,7 +90,7 @@ public class DataSource extends FeatureClass {
      * @return a {@link DataSource} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("af6480fd-db19-4d84-9a57-b5bc97bafef2")
+    @objid ("6c4d4089-dc96-4f75-973a-3b285324cbbd")
     public static DataSource safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (DataSource.canInstantiate(obj))
         	return new DataSource(obj);
@@ -97,7 +98,7 @@ public class DataSource extends FeatureClass {
         	throw new IllegalArgumentException("DataSource: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("5fc89209-4bdd-4e8c-8e4c-d9f7c78f035d")
+    @objid ("35f64312-517b-47e6-88fe-1d7522e33849")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,7 +118,7 @@ public class DataSource extends FeatureClass {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("de881fa4-e9d9-47c8-ac0a-9dc5564ab05e")
+    @objid ("4448c8c6-b178-448e-bbc3-89974c84a6f8")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -129,13 +130,15 @@ public class DataSource extends FeatureClass {
      * null
      * 
      */
-    @objid ("23d3126f-7a53-407f-b227-62d233d826dd")
+    @objid ("b22f493e-add6-4b24-9b0a-1cd386cbd29f")
     public SoftwareComponent getSoftwareComponent() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(DataSource.MdaTypes.MDAASSOCDEP)
                   && Objects.equals(d.getTagValue(DataSource.MdaTypes.MDAASSOCDEP_ROLE), "SoftwareComponent")){
                   if (Sensor.canInstantiate(d.getDependsOn()))
                      return (Sensor)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), Sensor.MdaTypes.STEREOTYPE_ELT.getName());
+                  if (ProfilerComponent.canInstantiate(d.getDependsOn()))
+                     return (ProfilerComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), ProfilerComponent.MdaTypes.STEREOTYPE_ELT.getName());
                   if (SoftwareComponent.canInstantiate(d.getDependsOn()))
                      return (SoftwareComponent)CamelDesignerProxyFactory.instantiate(d.getDependsOn(), SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getName());
               }
@@ -143,7 +146,7 @@ public class DataSource extends FeatureClass {
         return null;
     }
 
-    @objid ("889e1087-3a88-48f7-aeaa-2148b3d6d196")
+    @objid ("974e00ec-cad5-4074-9130-7dea281862b6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -154,7 +157,7 @@ public class DataSource extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("25f29ac4-82d4-4463-93ef-7fab5996e673")
+    @objid ("01ddaf5a-fd94-4439-9f17-900682661b52")
     public boolean isExternal() {
         return this.elt.isTagged(DataSource.MdaTypes.EXTERNAL_TAGTYPE_ELT);
     }
@@ -164,7 +167,7 @@ public class DataSource extends FeatureClass {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8221367a-319d-4460-85cb-abd921d0b8a8")
+    @objid ("910b5d69-d3e0-4cb3-b95f-a7f897d19555")
     public void setExternal(final boolean value) {
         if (value)
           CamelDesignerModule.getInstance().getModuleContext().getModelingSession().getModel().createTaggedValue(DataSource.MdaTypes.EXTERNAL_TAGTYPE_ELT, this.elt);
@@ -178,7 +181,7 @@ public class DataSource extends FeatureClass {
      * null
      * 
      */
-    @objid ("ee4cd92e-18e3-464b-b5a1-044edd1cddd4")
+    @objid ("2732c64a-4e03-471d-b154-a899c6ed0f69")
     public void setSoftwareComponent(final SoftwareComponent obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -206,26 +209,26 @@ public class DataSource extends FeatureClass {
         return result;
     }
 
-    @objid ("c39d5a37-4cb1-4fb1-8f15-eaa65e943851")
+    @objid ("d7551a35-bebe-42c8-8c22-5ff8c88dbb7f")
     protected DataSource(final Class elt) {
         super(elt);
     }
 
     @objid ("a70d5efb-a707-47d2-9505-b57f05717b88")
     public static final class MdaTypes {
-        @objid ("50cb42f0-f59e-4edb-8bcf-23fdebf087b6")
+        @objid ("e190471e-1cd3-40d6-8792-01443ea75139")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("946e8b06-fc4b-4adb-8cba-372f98ad96f8")
+        @objid ("2239f3b3-8fba-4faf-bcd0-6c43a41c42bb")
         public static TagType EXTERNAL_TAGTYPE_ELT;
 
-        @objid ("161e8cb2-72b1-4066-bea6-d1f63f3d978f")
+        @objid ("6f96d591-81b9-4172-9fd2-1f11f9d89e03")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c4f5ab09-648a-4711-8775-63c0b9560543")
+        @objid ("cbd6b07f-3c73-478a-8428-1415fcae45e1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("8282b5ad-30c9-4a93-918e-da28136e9739")
+        @objid ("a001d6f9-b973-4fae-beff-08b836eba068")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "074f2086-e176-45fc-80c7-81fd2336ac7f");
             EXTERNAL_TAGTYPE_ELT = ctx.getModelingSession().findElementById(TagType.class, "05736a3c-caa6-4f52-b966-63ac2100cca2");

@@ -190,11 +190,13 @@ import fr.softeam.cameldesigner.handlers.propertypages.deployment.BuildConfigura
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.ClusterConfigurationPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.CommunicationPortPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.CommunicationPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.deployment.ContainerConfigurationPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.ContainerPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.DeploymentTypeModelPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.EventConfigurationPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.HostingPortPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.HostingPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.deployment.ImageConfigurationPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.LocationCouplingPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.PaaSConfigurationPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.deployment.PaaSPropertyPage;
@@ -262,6 +264,8 @@ import fr.softeam.cameldesigner.handlers.propertypages.metric.RawMetricContextPr
 import fr.softeam.cameldesigner.handlers.propertypages.metric.RawMetricPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.metric.SchedulePropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.metric.SensorPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.metric.WindowCriterionPropertyPage;
+import fr.softeam.cameldesigner.handlers.propertypages.metric.WindowProcessingPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.metric.WindowPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.organisation.CloudCredentialsPropertyPage;
 import fr.softeam.cameldesigner.handlers.propertypages.organisation.CloudProviderPropertyPage;
@@ -648,6 +652,7 @@ public class CamelDesignerPropertyPageFactory {
             case fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext.STEREOTYPE_NAME: return new RawMetricContextPropertyPage<>(fr.softeam.cameldesigner.api.metricmodel.standard.class_.RawMetricContext.instantiate(obj));
             case fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule.STEREOTYPE_NAME: return new SchedulePropertyPage<>(fr.softeam.cameldesigner.api.metricmodel.standard.class_.Schedule.instantiate(obj));
             case fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window.STEREOTYPE_NAME: return new WindowPropertyPage<>(fr.softeam.cameldesigner.api.metricmodel.standard.class_.Window.instantiate(obj));
+            case fr.softeam.cameldesigner.api.metricmodel.standard.class_.WindowProcessing.STEREOTYPE_NAME: return new WindowProcessingPropertyPage<>(fr.softeam.cameldesigner.api.metricmodel.standard.class_.WindowProcessing.instantiate(obj));
             case fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ExternalIdentifier.STEREOTYPE_NAME: return new ExternalIdentifierPropertyPage<>(fr.softeam.cameldesigner.api.organisationmodel.standard.class_.ExternalIdentifier.instantiate(obj));
             case fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Permission.STEREOTYPE_NAME: return new PermissionPropertyPage<>(fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Permission.instantiate(obj));
             case fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Entity.STEREOTYPE_NAME: return new EntityPropertyPage<>(fr.softeam.cameldesigner.api.organisationmodel.standard.class_.Entity.instantiate(obj));
@@ -727,6 +732,8 @@ public class CamelDesignerPropertyPageFactory {
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration.STEREOTYPE_NAME: return new PaaSConfigurationPropertyPage<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.PaaSConfiguration.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration.STEREOTYPE_NAME: return new ScriptConfigurationPropertyPage<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ScriptConfiguration.instantiate(obj));
             case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration.STEREOTYPE_NAME: return new ServerlessConfigurationPropertyPage<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ServerlessConfiguration.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ImageConfiguration.STEREOTYPE_NAME: return new ImageConfigurationPropertyPage<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ImageConfiguration.instantiate(obj));
+            case fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ContainerConfiguration.STEREOTYPE_NAME: return new ContainerConfigurationPropertyPage<>(fr.softeam.cameldesigner.api.deploymentmodel.standard.artifact.ContainerConfiguration.instantiate(obj));
             default:
                 break;
             }
@@ -741,6 +748,7 @@ public class CamelDesignerPropertyPageFactory {
             case fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute.STEREOTYPE_NAME: return new QualityAttributeAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.attribute.QualityAttributeAttribute.instantiate(obj));
             case fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute.STEREOTYPE_NAME: return new MeasurableAttributeAttributePropertyPage<>(fr.softeam.cameldesigner.api.camelcore.standard.attribute.MeasurableAttributeAttribute.instantiate(obj));
             case fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty.STEREOTYPE_NAME: return new MmsPropertyPropertyPage<>(fr.softeam.cameldesigner.api.metadatamodel.standard.attribute.MmsProperty.instantiate(obj));
+            case fr.softeam.cameldesigner.api.metricmodel.standard.attribute.WindowCriterion.STEREOTYPE_NAME: return new WindowCriterionPropertyPage<>(fr.softeam.cameldesigner.api.metricmodel.standard.attribute.WindowCriterion.instantiate(obj));
             default:
                 break;
             }

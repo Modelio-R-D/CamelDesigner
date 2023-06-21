@@ -34,14 +34,13 @@ public class ImageRequirementPropertyPage<T extends ImageRequirement> extends Ha
               //Images
         String images = "";
         if(this._element.getImages()!=null) {
-        	for(String image: this._element.getImages()) {
-        		images +=    image  + " ";
-        	}
-        	table.addProperty("Images", getNotNull(images));
+            for(String image: this._element.getImages()) {
+                images +=    image  + " ";
+            }
+            table.addProperty("Images", getNotNull(images));
         }
         else 
-        	table.addProperty("Images", "");
-
+            table.addProperty("Images", "");
     }
 
     @objid ("4315868d-faf8-4b41-aa92-6d173d5141f6")
